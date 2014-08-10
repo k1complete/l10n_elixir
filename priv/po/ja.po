@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: l 10n_elixir\n"
-"PO-Revision-Date: 2014-08-10 16:13+0900\n"
+"PO-Revision-Date: 2014-08-10 17:17+0900\n"
 "Last-Translator: 小田 照敬 <EMAIL@ADDRESS>\n"
 "Language-Team: Japanese\n"
 "Language: ja\n"
@@ -28,6 +28,8 @@ msgid ""
 "The same as `cp_r/3`, but raises `File.CopyError` if it fails.\n"
 "Returns the list of copied files otherwise.\n"
 msgstr ""
+"`cp_r/3`と同じですが、失敗すると`File.CopyError`を引き起します。\n"
+"さもなければコピーされたファイルのリストを返します。\n"
 
 #. TRANSLATORS: def File.cp!(source, destination, callback \\ fn _, _ -> true end)
 #: lib/elixir/lib/file.ex:426
@@ -35,6 +37,8 @@ msgid ""
 "The same as `cp/3`, but raises `File.CopyError` if it fails.\n"
 "Returns the list of copied files otherwise.\n"
 msgstr ""
+"`cp/3`と同じですが、失敗すると`File.CopyError`を引き起します。\n"
+"さもなければコピーされたファイルのリストを返します。\n"
 
 #. TRANSLATORS: def File.copy!(source, destination, bytes_count \\ :infinity)
 #: lib/elixir/lib/file.ex:380
@@ -42,11 +46,13 @@ msgid ""
 "The same as `copy/3` but raises an `File.CopyError` if it fails.\n"
 "Returns the `bytes_copied` otherwise.\n"
 msgstr ""
+"`copy/3`と同じですが、失敗すると`File.CopyError`を引き起します。\n"
+"さもなければ、`bytes_copied`(コピーされたバイト数)を返します。\n"
 
 #. TRANSLATORS: def File.cd!(path)
 #: lib/elixir/lib/file.ex:1023
 msgid "The same as `cd/1`, but raises an exception if it fails.\n"
-msgstr ""
+msgstr "`cd/1`と同じですが、失敗すると例外を引き起します。\n"
 
 #. TRANSLATORS: def Enum.sort_by(collection, mapper, sorter \\ :erlang.make_fun(:erlang, :"=<", 2))
 #: lib/elixir/lib/enum.ex:1613
@@ -88,6 +94,36 @@ msgid ""
 "    [\"monster\", \"some\", \"kind\", \"of\"]\n"
 "\n"
 msgstr ""
+"`sorter`関数によって`collection`をmapperで処理された結果でソートします。\n"
+"\n"
+"この関数は、`mapper`関数を使ってコレクションのそれぞれの要素をマップし\n"
+"ます。コレクションはそれからデフォルトは`<=/2`である`sorter`関数を使っ\n"
+"てマップされた要素でソートされます。\n"
+"\n"
+"それが各の比較において要素ごとに一度だけ比較計算をするという点で\n"
+"`sort_by/3`は`sort/2`と違います。もし同じ関数が両方の要素で呼ばれているならば\n"
+"`sort_by/3`を使うことでよりコンパクトになります。\n"
+"\n"
+"この技術は [Schwartzian\n"
+"Transform](https://en.wikipedia.org/wiki/Schwartzian_transform) として\n"
+"知られています。あるいは、Lispのdecorate-sort-undecorate イディオムとし\n"
+"て知られています。`mapper`がオリジナルの`collection`のデコレーション、\n"
+"それから`sorter`はソートのデコレレーションとして、そして最後にソートさ\n"
+"れた順番以外は`correction`はデコレーションされずにオリジナルの要素のま\n"
+"まです。\n"
+"\n"
+"## 例\n"
+"\n"
+"デフォルトの `sorter` である `<=/2` を使います: \n"
+"\n"
+"    iex> Enum.sort_by [\"some\", \"kind\", \"of\", \"monster\"], &byte_size/1\n"
+"    [\"of\", \"some\", \"kind\", \"monster\"]\n"
+"\n"
+"カスタム`sorter`として上書きます: \n"
+"\n"
+"    iex> Enum.sort_by [\"some\", \"kind\", \"of\", \"monster\"], &byte_size/1, &>=/2\n"
+"    [\"monster\", \"some\", \"kind\", \"of\"]\n"
+"\n"
 
 #. TRANSLATORS: def Enum.sort(collection, fun)
 #: lib/elixir/lib/enum.ex:1572
