@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: l 10n_elixir\n"
-"PO-Revision-Date: 2014-08-13 22:31+0900\n"
+"PO-Revision-Date: 2014-08-14 21:35+0900\n"
 "Last-Translator: 小田 照敬 <EMAIL@ADDRESS>\n"
 "Language-Team: Japanese\n"
 "Language: ja\n"
@@ -1457,6 +1457,12 @@ msgid ""
 "it is not loaded. Check `Code.ensure_loaded/1` for more\n"
 "information.\n"
 msgstr ""
+"`module`がロードされていて、与えられた`arity`の公開`function`が\n"
+"含まれていると真を返し、さもなくば偽を返します。\n"
+"\n"
+"この関数はモジュールがロードされていないときに、ロードを\n"
+"しないことに注意してください。さらなる情報は`Code.ensure_loaded/1`\n"
+"をチェックしてください。\n"
 
 #. TRANSLATORS: def Node.set_cookie(node \\ Node.self(), cookie)
 #: lib/elixir/lib/node.ex:247
@@ -1470,6 +1476,13 @@ msgid ""
 "This function will raise `FunctionClauseError` if the given `node` is not "
 "alive.\n"
 msgstr ""
+"`node`のマジッククッキーをアトム`cookie`にセットします。\n"
+"\n"
+"デフォルトノードは`Node.self`で、ローカルノードです。`node`がローカルノー\n"
+"ドなら、関数は他のすべての不明なノードのクッキーを`cookie`にセットします。\n"
+"\n"
+"与えられた`node`が生きていないとき、この関数は`FunctionClauseError`を引\n"
+"き起します。\n"
 
 #. TRANSLATORS: def Process.group_leader(pid, leader)
 #: lib/elixir/lib/process.ex:315
@@ -1478,11 +1491,14 @@ msgid ""
 "processes\n"
 "started from a certain shell should have a group leader other than `:init`.\n"
 msgstr ""
+"`pid`のグループリーダーを`leader`にセットします。一般的に、特定のシェル\n"
+"からスタートするプロセスが`:init`以外のグループリーダーをを持っていなけ\n"
+"ればならないとき、これが使われます。\n"
 
 #. TRANSLATORS: def IO.ANSI.primary_font()
 #: lib/elixir/lib/io/ansi.ex:80
 msgid "Sets primary (default) font"
-msgstr ""
+msgstr "プライマリ(default)フォントをセットします。"
 
 #. TRANSLATORS: def System.tmp_dir()
 #: lib/elixir/lib/system.ex:164
@@ -1500,6 +1516,18 @@ msgid ""
 "\n"
 "Returns `nil` if none of the above are writable.\n"
 msgstr ""
+"書き込み可能なテンポラリディレクトリ\n"
+"\n"
+"書き込み可能なテンポラリディレクトリを返します。\n"
+"以下の順序でディレクトリを探します:\n"
+"\n"
+"  1. TMPDIR環境変数によるディレクトリ名\n"
+"  2. TEMP環境変数によるディレクトリ名\n"
+"  3. TMP環境変数によるディレクトリ名\n"
+"  4. Windowsでは`C:\\TMP`、Linuxでは`/tmp`\n"
+"  5. 最後にカレントワーキングディレクトリ\n"
+"\n"
+"上の全てが書込み不可だった場合、`nil`を返します。\n"
 
 #. TRANSLATORS: def System.tmp_dir!()
 #: lib/elixir/lib/system.ex:178
@@ -1509,6 +1537,10 @@ msgid ""
 "Same as `tmp_dir/0` but raises `RuntimeError`\n"
 "instead of returning `nil` if no temp dir is set.\n"
 msgstr ""
+"書き込み可能なテンポラリディレクトリ、エラーで例外\n"
+"\n"
+"`tmp_dir/0`と同じですが、もしテンポラリディレクトリが\n"
+"無い場合、`nil`を返すかわりに、`RuntimeError`を引き起します。\n"
 
 #. TRANSLATORS: defmacro Kernel.var!(var, context \\ nil)
 #: lib/elixir/lib/kernel.ex:2525
