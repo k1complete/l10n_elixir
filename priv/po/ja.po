@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: l 10n_elixir\n"
-"PO-Revision-Date: 2014-08-14 21:35+0900\n"
+"PO-Revision-Date: 2014-08-15 23:27+0900\n"
 "Last-Translator: 小田 照敬 <EMAIL@ADDRESS>\n"
 "Language-Team: Japanese\n"
 "Language: ja\n"
@@ -1551,6 +1551,11 @@ msgid ""
 "\n"
 "Check `Kernel.SpecialForms.quote/2` for more information.\n"
 msgstr ""
+"quoteの内側で使われた時、その変数が衛生的(hygienized)であってはならない\n"
+"とマークします。引数はunquoteされた変数か、標準タプルフォームの`{name,\n"
+"meta, context}`です。\n"
+"\n"
+"更なる情報は、`Kernel.SpecialForms.quote/2`をチェックしてください。\n"
 
 #. TRANSLATORS: defmacro Kernel.alias!(alias)
 #: lib/elixir/lib/kernel.ex:2555
@@ -1561,6 +1566,11 @@ msgid ""
 "\n"
 "Check `Kernel.SpecialForms.quote/2` for more information.\n"
 msgstr ""
+"quoteの内側で使われた時、その別名が衛生的(hygienezed)で当ってはならない\n"
+"とマークします。これは別名はマクロで展開された時に展開されるだろうこと\n"
+"を意味します。\n"
+"\n"
+"更なる情報は、`Kernel.SpecialForms.quote/2`をチェックしてください。\n"
 
 #. TRANSLATORS: def Agent.update(agent, fun, timeout \\ 5000)
 #: lib/elixir/lib/agent.ex:248
