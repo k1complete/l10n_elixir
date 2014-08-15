@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: l 10n_elixir\n"
-"PO-Revision-Date: 2014-08-15 23:29+0900\n"
+"PO-Revision-Date: 2014-08-15 23:40+0900\n"
 "Last-Translator: 小田 照敬 <EMAIL@ADDRESS>\n"
 "Language-Team: Japanese\n"
 "Language: ja\n"
@@ -1583,6 +1583,14 @@ msgid ""
 "A timeout can also be specified (it has a default value of 5000).\n"
 "This function always returns `:ok`.\n"
 msgstr ""
+"エージェントステートを更新します。\n"
+"\n"
+"エージェントステートを関数にわたしてその関数を呼び出す`agent`へ\n"
+"`fun`関数は送信されます。\n"
+"関数は新しいステートを返さなければなりません。\n"
+"\n"
+"タイムアウトを指定することもできます(デフォルト値は5000です)。\n"
+"この関数は常に`:ok`を返します。\n"
 
 #. TRANSLATORS: def Agent.update(agent, module, fun, args, timeout \\ 5000)
 #: lib/elixir/lib/agent.ex:260
@@ -1593,6 +1601,10 @@ msgid ""
 "instead of an anonymous function. The state is added as first\n"
 "argument to the given list of args.\n"
 msgstr ""
+"エージェントステートを更新します。\n"
+"\n"
+"`update/3`と同じですが、無名関数のかわりにモジュール、関数、引数を指定\n"
+"します。ステートは与えられた引数リストの最初の引数として追加されます。\n"
 
 #. TRANSLATORS: def File.touch(path, time \\ :calendar.local_time())
 #: lib/elixir/lib/file.ex:308
@@ -1600,6 +1612,8 @@ msgid ""
 "Updates modification time (mtime) and access time (atime) of\n"
 "the given file. File is created if it doesn’t exist.\n"
 msgstr ""
+"与えられたファイルの変更時刻(mtime)とアクセス時刻(atime)を更新します。\n"
+"存在しない場合、ファイルは作成されます。\n"
 
 #. TRANSLATORS: def Application.unload(app)
 #: lib/elixir/lib/application.ex:279
@@ -1609,6 +1623,11 @@ msgid ""
 "It will also unload all `:included_applications`.\n"
 "Note that the function does not purge the application modules.\n"
 msgstr ""
+"与えられた`app`をアンロードします。\n"
+"\n"
+"それは`:included_applications`全てをもアンロードします。\n"
+"関数はアプリケーションモジュールをパージしないことに\n"
+"注意してください。\n"
 
 #. TRANSLATORS: def Macro.validate(expr)
 #: lib/elixir/lib/macro.ex:315
