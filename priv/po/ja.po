@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: l 10n_elixir\n"
-"PO-Revision-Date: 2014-08-16 10:28+0900\n"
+"PO-Revision-Date: 2014-08-16 13:33+0900\n"
 "Last-Translator: 小田 照敬 <EMAIL@ADDRESS>\n"
 "Language-Team: Japanese\n"
 "Language: ja\n"
@@ -1921,6 +1921,14 @@ msgid ""
 "exist,\n"
 "unless it is specified as `name` (atom).\n"
 msgstr ""
+"イベント`manager`へイベント通知を送ります。\n"
+"\n"
+"イベントマネージャはそれぞれインストールされたイベントハンドラのために\n"
+"`handle_event/2`を呼び出します。\n"
+"\n"
+"`notify`は非同期で通知を送信したらす直ちに戻ります。`notify`はもし\n"
+"`name`(アトム)として指定されないかぎり、指定されたイベントマネージャが\n"
+"存在しないときでも失敗しないでしょう。\n"
 
 #. TRANSLATORS: def GenServer.cast(server, request)
 #: lib/elixir/lib/gen_server.ex:363
@@ -1932,6 +1940,11 @@ msgid ""
 "the\n"
 "server to handle the request.\n"
 msgstr ""
+"非同期要求を`server`へ送ります。\n"
+"\n"
+"送信先のノードやサーバが存在しなくても気にせず、この関数は直ちに`:ok`を\n"
+"返します。リクエストをハンドルするためにサーバでは`handle_cast/2`が呼ば\n"
+"れるでしょう。\n"
 
 #. TRANSLATORS: def File.rmdir!(path)
 #: lib/elixir/lib/file.ex:723
@@ -1939,6 +1952,8 @@ msgid ""
 "Same as `rmdir/1`, but raises an exception in case of failure. Otherwise `:"
 "ok`.\n"
 msgstr ""
+"`rmdir/1`と同じですが、失敗すると例外を引き起します。さもなくば`:ok`を\n"
+"返します。\n"
 
 #. TRANSLATORS: def File.rm_rf!(path)
 #: lib/elixir/lib/file.ex:826
@@ -1946,6 +1961,8 @@ msgid ""
 "Same as `rm_rf/1` but raises `File.Error` in case of failures,\n"
 "otherwise the list of files or directories removed.\n"
 msgstr ""
+"`rm_rf/1`と同じですが、失敗すると`File.Error`を引き起します。\n"
+"さもなくば削除されたファイルやディレクトリのリストを返します。\n"
 
 #. TRANSLATORS: def File.rm!(path)
 #: lib/elixir/lib/file.ex:692
@@ -1953,6 +1970,8 @@ msgid ""
 "Same as `rm/1`, but raises an exception in case of failure. Otherwise `:"
 "ok`.\n"
 msgstr ""
+"`rm/1`と同じですが、失敗すると例外を引き起します。さもなくば`:ok`を返し\n"
+"ます。\n"
 
 #. TRANSLATORS: def File.open!(path, modes, function)
 #: lib/elixir/lib/file.ex:972
@@ -1961,6 +1980,9 @@ msgid ""
 "\n"
 "Returns the function result otherwise.\n"
 msgstr ""
+"`open/3`と同じですが、オープンできないとエラーを引き起します。\n"
+"\n"
+"さもないと関数の実行結果を返します。\n"
 
 #. TRANSLATORS: def File.open!(path, modes \\ [])
 #: lib/elixir/lib/file.ex:957
@@ -1969,6 +1991,9 @@ msgid ""
 "\n"
 "Returns the `io_device` otherwise.\n"
 msgstr ""
+"`open/2`と同じですが、オープンできないとエラーを引き起します。\n"
+"\n"
+"さもなければ`io_device`を返します。\n"
 
 #. TRANSLATORS: def File.mkdir_p!(path)
 #: lib/elixir/lib/file.ex:198
@@ -1976,6 +2001,8 @@ msgid ""
 "Same as `mkdir_p/1`, but raises an exception in case of failure. Otherwise `:"
 "ok`.\n"
 msgstr ""
+"`mkdir_p/1`と同じですが、失敗すると例外を引き起します。さもなくば\n"
+"`:ok`を返します。\n"
 
 #. TRANSLATORS: def File.mkdir!(path)
 #: lib/elixir/lib/file.ex:145
@@ -1983,6 +2010,8 @@ msgid ""
 "Same as `mkdir/1`, but raises an exception in case of failure. Otherwise `:"
 "ok`.\n"
 msgstr ""
+"`mkdir/1`と同じですが、失敗すると例外を引き起します。さもなくば\n"
+"`:ok`を返します。\n"
 
 #. TRANSLATORS: def File.chown!(path, uid)
 #: lib/elixir/lib/file.ex:1182
@@ -1990,6 +2019,8 @@ msgid ""
 "Same as `chown/2`, but raises an exception in case of failure. Otherwise `:"
 "ok`.\n"
 msgstr ""
+"`chown/2`と同じですが、失敗すると例外を引き起します。さもなくば\n"
+"`:ok`を返します。\n"
 
 #. TRANSLATORS: def File.chmod!(path, mode)
 #: lib/elixir/lib/file.ex:1136
@@ -1997,6 +2028,8 @@ msgid ""
 "Same as `chmod/2`, but raises an exception in case of failure. Otherwise `:"
 "ok`.\n"
 msgstr ""
+"`chmod/2`と同じですが、失敗すると例外を引き起します。さもなくば\n"
+"`:ok`を返します。\n"
 
 #. TRANSLATORS: def File.chgrp!(path, gid)
 #: lib/elixir/lib/file.ex:1159
@@ -2004,51 +2037,53 @@ msgid ""
 "Same as `chgrp/2`, but raises an exception in case of failure. Otherwise `:"
 "ok`.\n"
 msgstr ""
+"`chgrp/2`と同じですが、失敗すると例外を引き起します。さもなくば\n"
+"`:ok`を返します。\n"
 
 #. TRANSLATORS: def IO.ANSI.font_9()
 #: lib/elixir/lib/io/ansi.ex:84
 msgid "Sets alternative font 9"
-msgstr ""
+msgstr "選択肢フォント9にセットします。"
 
 #. TRANSLATORS: def IO.ANSI.font_8()
 #: lib/elixir/lib/io/ansi.ex:84
 msgid "Sets alternative font 8"
-msgstr ""
+msgstr "選択肢フォント8にセットします。"
 
 #. TRANSLATORS: def IO.ANSI.font_7()
 #: lib/elixir/lib/io/ansi.ex:84
 msgid "Sets alternative font 7"
-msgstr ""
+msgstr "選択肢フォント7にセットします。"
 
 #. TRANSLATORS: def IO.ANSI.font_6()
 #: lib/elixir/lib/io/ansi.ex:84
 msgid "Sets alternative font 6"
-msgstr ""
+msgstr "選択肢フォント6にセットします。"
 
 #. TRANSLATORS: def IO.ANSI.font_5()
 #: lib/elixir/lib/io/ansi.ex:84
 msgid "Sets alternative font 5"
-msgstr ""
+msgstr "選択肢フォント5にセットします。"
 
 #. TRANSLATORS: def IO.ANSI.font_4()
 #: lib/elixir/lib/io/ansi.ex:84
 msgid "Sets alternative font 4"
-msgstr ""
+msgstr "選択肢フォント4にセットします。"
 
 #. TRANSLATORS: def IO.ANSI.font_3()
 #: lib/elixir/lib/io/ansi.ex:84
 msgid "Sets alternative font 3"
-msgstr ""
+msgstr "選択肢フォント3にセットします。"
 
 #. TRANSLATORS: def IO.ANSI.font_2()
 #: lib/elixir/lib/io/ansi.ex:84
 msgid "Sets alternative font 2"
-msgstr ""
+msgstr "選択肢フォント2にセットします。"
 
 #. TRANSLATORS: def IO.ANSI.font_1()
 #: lib/elixir/lib/io/ansi.ex:84
 msgid "Sets alternative font 1"
-msgstr ""
+msgstr "選択肢フォント1にセットします。"
 
 #. TRANSLATORS: def GenEvent.sync_notify(manager, event)
 #: lib/elixir/lib/gen_event.ex:371
@@ -2060,11 +2095,17 @@ msgid ""
 "\n"
 "See `notify/2` for more info.\n"
 msgstr ""
+"同期イベント通知をイベント`manager`へ送信します。\n"
+"\n"
+"言い替えると、この関数は、イベントマネージャで各々のインストールされた\n"
+"イベントハンドラ`handle_event/2`が呼び出されたあと、`:ok`を返すだけです。\n"
+"\n"
+"更なる情報は、`notify/2`を参照してください。\n"
 
 #. TRANSLATORS: def IO.ANSI.home()
 #: lib/elixir/lib/io/ansi.ex:132
 msgid "Send cursor home"
-msgstr ""
+msgstr "カーソルをホームへセットします。"
 
 #. TRANSLATORS: def Process.send(dest, msg, options)
 #: lib/elixir/lib/process.ex:127
@@ -2087,6 +2128,23 @@ msgid ""
 "    :noconnect\n"
 "\n"
 msgstr ""
+"与えられたプロセスへメッセージを送信します。\n"
+"\n"
+"`:noconnect`オプションが使われ、送信するメッセージがもう一つのノードへ\n"
+"の自動接続を要求するならば、メッセージは送信されず、`:noconnect`が返さ\n"
+"れます。\n"
+"\n"
+"`:nosuspend`オプションが使われ、送信するメッセージが送信者をサスペンド\n"
+"させることにことになる場合、メッセージは送信されず、`:nosuspend`が返さ\n"
+"れます。\n"
+"\n"
+"さもなくば、メッセージは送信され、`:ok`が返されます。\n"
+"\n"
+"## 例\n"
+"\n"
+"    iex> Process.send({:name, :node_does_not_exist}, :hi, [:noconnect])\n"
+"    :noconnect\n"
+"\n"
 
 #. TRANSLATORS: def Kernel.send(dest, msg)
 #: lib/elixir/lib/kernel.ex:562
@@ -2105,6 +2163,19 @@ msgid ""
 "    :hello\n"
 "\n"
 msgstr ""
+"与えられた`dest`へメッセージを送信し、そのメッセージを返します。\n"
+"\n"
+"`dest`はリモートまたはローカルのpid、(ローカル)ポート、ローカルレジスター\n"
+"された名前もしくは他のノードで登録された名前のタプル`{registered_name,\n"
+"node}`です。\n"
+"\n"
+"コンパイラにより、インライン化されます。\n"
+"\n"
+"## 例\n"
+"\n"
+"    iex> send self(), :hello\n"
+"    :hello\n"
+"\n"
 
 #. TRANSLATORS: def Port.list()
 #: lib/elixir/lib/port.ex:83
@@ -2113,6 +2184,9 @@ msgid ""
 "\n"
 "Inlined by the compiler.\n"
 msgstr ""
+"http://www.erlang.org/doc/man/erlang.html#ports-0 を参照してください。\n"
+"\n"
+"コンパイラによりインライン化されます。\n"
 
 #. TRANSLATORS: def Port.info(port, item)
 #: lib/elixir/lib/port.ex:74
