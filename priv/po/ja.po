@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: l 10n_elixir\n"
-"PO-Revision-Date: 2014-08-16 18:38+0900\n"
+"PO-Revision-Date: 2014-08-16 19:02+0900\n"
 "Last-Translator: 小田 照敬 <EMAIL@ADDRESS>\n"
 "Language-Team: Japanese\n"
 "Language: ja\n"
@@ -2973,6 +2973,12 @@ msgid ""
 "\n"
 "Allowed in guard tests. Inlined by the compiler.\n"
 msgstr ""
+"マップのサイズを返します。\n"
+"\n"
+"このオペレーションは定数時間で実行されます。\n"
+"\n"
+"ガード中のテストに使うことができます。コンパイラによりインライン化され\n"
+"ます。\n"
 
 #. TRANSLATORS: def Regex.source(regex)
 #: lib/elixir/lib/regex.ex:249
@@ -2985,6 +2991,13 @@ msgid ""
 "    \"foo\"\n"
 "\n"
 msgstr ""
+"正規表現のソースをバイナリとして返します。\n"
+"\n"
+"## 例\n"
+"\n"
+"    iex> Regex.source(~r(foo))\n"
+"    \"foo\"\n"
+"\n"
 
 #. TRANSLATORS: def Regex.opts(regex)
 #: lib/elixir/lib/regex.ex:262
@@ -2997,6 +3010,13 @@ msgid ""
 "    \"m\"\n"
 "\n"
 msgstr ""
+"正規表現オプションを文字列として返します。\n"
+"\n"
+"## 例\n"
+"\n"
+"    iex> Regex.opts(~r(foo)m)\n"
+"    \"m\"\n"
+"\n"
 
 #. TRANSLATORS: def Process.whereis(name)
 #: lib/elixir/lib/process.ex:298
@@ -3006,13 +3026,18 @@ msgid ""
 "\n"
 "See http://www.erlang.org/doc/man/erlang.html#whereis-1 for more info.\n"
 msgstr ""
+"pidまたはnameで登録されたポート識別子を返します。nameが登録されていない\n"
+"とき、`nil`を返します。\n"
+"\n"
+"更なる情報は http://www.erlang.org/doc/man/erlang.html#whereis-1 を参照\n"
+"してください。\n"
 
 #. TRANSLATORS: def Process.group_leader()
 #: lib/elixir/lib/process.ex:306
 msgid ""
 "Returns the pid of the group leader for the process which evaluates the "
 "function.\n"
-msgstr ""
+msgstr "関数を評価しているプロセスのグループリーダのpidを返します。\n"
 
 #. TRANSLATORS: def Kernel.self()
 #: lib/elixir/lib/kernel.ex:572
@@ -3021,6 +3046,9 @@ msgid ""
 "\n"
 "Allowed in guard clauses. Inlined by the compiler.\n"
 msgstr ""
+"呼び出したプロセスのpid(プロセス識別子)を返します。\n"
+"\n"
+"ガード節の中で使用できます。コンパイラによりインライン化されます。\n"
 
 #. TRANSLATORS: def Node.spawn(node, fun)
 #: lib/elixir/lib/node.ex:161
@@ -3033,6 +3061,14 @@ msgid ""
 "\n"
 "Inlined by the compiler.\n"
 msgstr ""
+"`node`で`fun`の適用により新しいプロセスを開始してそのpidを返します。\n"
+"もし`node`が存在しないなら、返されたpidは役にたちません。\n"
+"\n"
+"有効なオプションのリストについては\n"
+"http://www.erlang.org/doc/man/erlang.html#spawn-2 をチェックしてくださ\n"
+"い。\n"
+"\n"
+"コンパイラによりインライン化されます。\n"
 
 #. TRANSLATORS: def Node.spawn(node, fun, opts)
 #: lib/elixir/lib/node.ex:176
