@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: l 10n_elixir\n"
-"PO-Revision-Date: 2014-08-15 23:40+0900\n"
+"PO-Revision-Date: 2014-08-16 10:28+0900\n"
 "Last-Translator: 小田 照敬 <EMAIL@ADDRESS>\n"
 "Language-Team: Japanese\n"
 "Language: ja\n"
@@ -1637,6 +1637,10 @@ msgid ""
 "Check the `type:Macro.t` for the specification of a valid\n"
 "quoted expression.\n"
 msgstr ""
+"与えられた式がquoteされた式として正しいか検証します。\n"
+"\n"
+"正しいquoteされた式の仕様については`type:Macro.t`をチェック\n"
+"してください。\n"
 
 #. TRANSLATORS: def Stream.transform(enum, acc, reducer)
 #: lib/elixir/lib/stream.ex:596
@@ -1667,46 +1671,70 @@ msgid ""
 "    [1,2,3]\n"
 "\n"
 msgstr ""
+"既存のストリームを変換します。\n"
+"\n"
+"アキュムレータとそれぞれのストリームアイテムとアキュムレータを受けとり、\n"
+"新しいストリーム(しばしばリスト)と新しいアキュムレータを含むタプルか、\n"
+"最初の要素が`:halt`で次の要素がアキュムレータとなるタプルを返す関数を\n"
+"期待します。\n"
+"\n"
+"注: この関数は、`Enum.flat_map_reduce/3`がフラットリストとアキュムレー\n"
+"タを返すこと対してストリームだけを返ことを除いては似ています。\n"
+"\n"
+"## 例\n"
+"\n"
+"このモジュールで定義される関数の多くを実装するための基礎として使うこと\n"
+"ができるように、`Stream.transform/3`は便利です。例えば、\n"
+"`Stream.take(enum, n)`は以下の様に実装できます:\n"
+"\n"
+"    iex> enum = 1..100\n"
+"    iex> n = 3\n"
+"    iex> stream = Stream.transform(enum, 0, fn i, acc ->\n"
+"    ...>   if acc < n, do: {[i], acc + 1}, else: {:halt, acc}\n"
+"    ...> end)\n"
+"    iex> Enum.to_list(stream)\n"
+"    [1,2,3]\n"
+"\n"
 
 #. TRANSLATORS: def IO.ANSI.yellow()
 #: lib/elixir/lib/io/ansi.ex:104
 msgid "Sets foreground color to yellow"
-msgstr ""
+msgstr "前面色を黄色にセットします。"
 
 #. TRANSLATORS: def IO.ANSI.white()
 #: lib/elixir/lib/io/ansi.ex:104
 msgid "Sets foreground color to white"
-msgstr ""
+msgstr "前面色を白にセットします"
 
 #. TRANSLATORS: def IO.ANSI.red()
 #: lib/elixir/lib/io/ansi.ex:104
 msgid "Sets foreground color to red"
-msgstr ""
+msgstr "前面色を赤にセットします"
 
 #. TRANSLATORS: def IO.ANSI.magenta()
 #: lib/elixir/lib/io/ansi.ex:104
 msgid "Sets foreground color to magenta"
-msgstr ""
+msgstr "前面色をマゼンタにセットします"
 
 #. TRANSLATORS: def IO.ANSI.green()
 #: lib/elixir/lib/io/ansi.ex:104
 msgid "Sets foreground color to green"
-msgstr ""
+msgstr "前面色を緑にセットします"
 
 #. TRANSLATORS: def IO.ANSI.cyan()
 #: lib/elixir/lib/io/ansi.ex:104
 msgid "Sets foreground color to cyan"
-msgstr ""
+msgstr "前面色をシアンにセットします"
 
 #. TRANSLATORS: def IO.ANSI.blue()
 #: lib/elixir/lib/io/ansi.ex:104
 msgid "Sets foreground color to blue"
-msgstr ""
+msgstr "前面色を青にセットします"
 
 #. TRANSLATORS: def IO.ANSI.black()
 #: lib/elixir/lib/io/ansi.ex:104
 msgid "Sets foreground color to black"
-msgstr ""
+msgstr "前面色を黒にセットします"
 
 #. TRANSLATORS: def Code.compiler_options(opts)
 #: lib/elixir/lib/code.ex:361
@@ -1731,6 +1759,26 @@ msgid ""
 "    generated\n"
 "\n"
 msgstr ""
+"コンパイラオプションをセットします。\n"
+"\n"
+"これらのオプションはElixirコードサーバに保存されるときからグローバルに\n"
+"有効になります。\n"
+"\n"
+"指定できるオプションは以下のとおりです:\n"
+"\n"
+"  * `:docs` - `true`にすると、コンパイルされたモジュールでドキュメントを\n"
+"    保持します。デフォルトは`true`です。\n"
+"\n"
+"  * `:debug_info` - `true`にすると、コンパイルされたモジュールで\n"
+"    デバッグ情報を保持します。これは開発者にオリジナルのソースコードを\n"
+"    再構築することを許します。デフォルトは`false`です。\n"
+"\n"
+"  * `:ignore_module_conflict` - `true`にすると、定義済のモジュールを\n"
+"     エラーを引き起すことなしに上書きします。デフォルトは`false`です。\n"
+"\n"
+"  * `:warnings_as_errors` - 警告が発生したときに、それを原因にコンパイラを\n"
+"     失敗させます。\n"
+"\n"
 
 #. TRANSLATORS: def Process.flag(flag, value)
 #: lib/elixir/lib/process.ex:337
@@ -1740,6 +1788,12 @@ msgid ""
 "\n"
 "See http://www.erlang.org/doc/man/erlang.html#process_flag-2 for more info.\n"
 msgstr ""
+"特定のフラグをこの関数を呼び出したプロセスにセットします。\n"
+"そのフラグの古い値を返します。\n"
+"\n"
+"更なる情報は\n"
+"http://www.erlang.org/doc/man/erlang.html#process_flag-2\n"
+"を参照してください。\n"
 
 #. TRANSLATORS: def Process.flag(pid, flag, value)
 #: lib/elixir/lib/process.ex:349
@@ -1750,46 +1804,53 @@ msgid ""
 "\n"
 "See http://www.erlang.org/doc/man/erlang.html#process_flag-3 for more info.\n"
 msgstr ""
+"`flag/2`と同じマナーで、特定のフラグを`pid`プロセスにセットします。\n"
+"そのフラグの古い値を返します。`flag`の許された値は`flag/2`のサブセット\n"
+"である`save_calls`だけです。\n"
+"\n"
+"更なる情報は\n"
+" http://www.erlang.org/doc/man/erlang.html#process_flag-3 \n"
+"を参照してください。\n"
 
 #. TRANSLATORS: def IO.ANSI.yellow_background()
 #: lib/elixir/lib/io/ansi.ex:107
 msgid "Sets background color to yellow"
-msgstr ""
+msgstr "背景色を黄色にセットします"
 
 #. TRANSLATORS: def IO.ANSI.white_background()
 #: lib/elixir/lib/io/ansi.ex:107
 msgid "Sets background color to white"
-msgstr ""
+msgstr "背景色を白にセットします"
 
 #. TRANSLATORS: def IO.ANSI.red_background()
 #: lib/elixir/lib/io/ansi.ex:107
 msgid "Sets background color to red"
-msgstr ""
+msgstr "背景色を赤にセットします"
 
 #. TRANSLATORS: def IO.ANSI.magenta_background()
 #: lib/elixir/lib/io/ansi.ex:107
 msgid "Sets background color to magenta"
-msgstr ""
+msgstr "背景色をマゼンタにセットします"
 
 #. TRANSLATORS: def IO.ANSI.green_background()
 #: lib/elixir/lib/io/ansi.ex:107
 msgid "Sets background color to green"
-msgstr ""
+msgstr "背景色を緑にセットします"
 
 #. TRANSLATORS: def IO.ANSI.cyan_background()
 #: lib/elixir/lib/io/ansi.ex:107
 msgid "Sets background color to cyan"
-msgstr ""
+msgstr "背景色をシアンにセットします"
 
 #. TRANSLATORS: def IO.ANSI.blue_background()
 #: lib/elixir/lib/io/ansi.ex:107
 msgid "Sets background color to blue"
-msgstr ""
+msgstr "背景色を青にセットします"
 
 #. TRANSLATORS: def IO.ANSI.black_background()
 #: lib/elixir/lib/io/ansi.ex:107
 msgid "Sets background color to black"
-msgstr ""
+msgstr "背景色を黒にセットします"
 
 #. TRANSLATORS: def Process.exit(pid, reason)
 #: lib/elixir/lib/process.ex:100
@@ -1821,6 +1882,30 @@ msgid ""
 "    Process.exit(pid, :kill)\n"
 "\n"
 msgstr ""
+"与えられたreasonとともにexitシグナルをpidに送ります。\n"
+"\n"
+"reasonが`:normal`または`:kill`を除いた任意の語なら、以下の振舞いが適用\n"
+"されます:\n"
+"\n"
+"  1. pidがexitをトラップなければ、pidは与えられたreasonで終了します。\n"
+"\n"
+"  2. pidがexitをトラップしていたら、exitシグナルは`{:EXIT, from, reason}`\n"
+"     というメッセージに変換され、pidのメッセージキューに配送されます。\n"
+"\n"
+"  3. reasonがアトム`:normal`なら、pidは終了しないでしょう。もし\n"
+"     pidがexitをトラップしていたら、exitシグナルは`{:EXIT, from, :normal}`と\n"
+"     いうメッセージに変換され、メッセージキューに配送されます。\n"
+"\n"
+"  4. reasonがアトム`:kill`なら、つまり、`exit(pid, :kill)`が呼ばれたら、\n"
+"     exitをトラップ出来ないシグナルがpidへ送られ、pidは無条件で\n"
+"     exit reasonとして`:killed`で終了します。\n"
+"\n"
+"コンパイラによりインライン化されます。\n"
+"\n"
+"## 例\n"
+"\n"
+"    Process.exit(pid, :kill)\n"
+"\n"
 
 #. TRANSLATORS: def GenEvent.notify(manager, event)
 #: lib/elixir/lib/gen_event.ex:360
