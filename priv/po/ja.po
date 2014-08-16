@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: l 10n_elixir\n"
-"PO-Revision-Date: 2014-08-16 21:01+0900\n"
+"PO-Revision-Date: 2014-08-16 21:39+0900\n"
 "Last-Translator: 小田 照敬 <EMAIL@ADDRESS>\n"
 "Language-Team: Japanese\n"
 "Language: ja\n"
@@ -3234,6 +3234,16 @@ msgid ""
 "    5\n"
 "\n"
 msgstr ""
+"utf8文字列中のunicode書記素の数を返します。\n"
+"\n"
+"## 例\n"
+"\n"
+"    iex> String.length(\"elixir\")\n"
+"    6\n"
+"\n"
+"    iex> String.length(\"եոգլի\")\n"
+"    5\n"
+"\n"
 
 #. TRANSLATORS: def Set.size(set)
 #: lib/elixir/lib/set.ex:251
@@ -3246,6 +3256,13 @@ msgid ""
 "    3\n"
 "\n"
 msgstr ""
+"`set`の要素の数を返します。\n"
+"\n"
+"## 例\n"
+"\n"
+"    iex> Set.size(Enum.into([1, 2, 3], set_impl.new))\n"
+"    3\n"
+"\n"
 
 #. TRANSLATORS: def Dict.size(dict)
 #: lib/elixir/lib/dict.ex:328
@@ -3259,6 +3276,14 @@ msgid ""
 "    2\n"
 "\n"
 msgstr ""
+"`dict`の要素の数を返します。\n"
+"\n"
+"## 例\n"
+"\n"
+"    iex> dict = Enum.into([a: 1, b: 2], dict_impl.new)\n"
+"    iex> Dict.size(dict)\n"
+"    2\n"
+"\n"
 
 #. TRANSLATORS: def Kernel.byte_size(binary)
 #: lib/elixir/lib/kernel.ex:154
@@ -3280,6 +3305,22 @@ msgid ""
 "    3\n"
 "\n"
 msgstr ""
+"`bitstring`を格納するために必要なバイト数を返します。\n"
+"\n"
+"これは、もし`bitstring`のbit数が8で割り切れない場合、結果として生じるバ\n"
+"イト数は切り上げられます。このオペレーションは定数時間で実行されます。\n"
+"\n"
+"ガード中でテストに使うことができます。コンパイラによってインライン化さ\n"
+"れます。\n"
+"\n"
+"## 例\n"
+"\n"
+"    iex> byte_size(<<433::16, 3::3>>)\n"
+"    3\n"
+"\n"
+"    iex> byte_size(<<1, 2, 3>>)\n"
+"    3\n"
+"\n"
 
 #. TRANSLATORS: def Enum.min(collection)
 #: lib/elixir/lib/enum.ex:1144
@@ -3293,6 +3334,14 @@ msgid ""
 "    1\n"
 "\n"
 msgstr ""
+"最小の値を返します。\n"
+"もしコレクションが空なら、`EmptyError`を引き起します。\n"
+"\n"
+"## 例\n"
+"\n"
+"    iex> Enum.min([1, 2, 3])\n"
+"    1\n"
+"\n"
 
 #. TRANSLATORS: def Enum.min_by(collection, fun)
 #: lib/elixir/lib/enum.ex:1159
@@ -3307,6 +3356,14 @@ msgid ""
 "    \"a\"\n"
 "\n"
 msgstr ""
+"与えられた関数により計算した値が最小となる要素を返します。\n"
+"もしコレクションが空なら、`EmptyError`を引き起します。\n"
+"\n"
+"## 例\n"
+"\n"
+"    iex> Enum.min_by([\"a\", \"aa\", \"aaa\"], fn(x) -> String.length(x) end)\n"
+"    \"a\"\n"
+"\n"
 
 #. TRANSLATORS: def Enum.max(collection)
 #: lib/elixir/lib/enum.ex:1058
@@ -3320,6 +3377,14 @@ msgid ""
 "    3\n"
 "\n"
 msgstr ""
+"最大の値を返します。\n"
+"もしコレクションが空なら、`EmptyError`を引き起します。\n"
+"\n"
+"## 例\n"
+"\n"
+"    iex> Enum.max([1, 2, 3])\n"
+"    3\n"
+"\n"
 
 #. TRANSLATORS: def Enum.max_by(collection, fun)
 #: lib/elixir/lib/enum.ex:1073
@@ -3334,6 +3399,14 @@ msgid ""
 "    \"aaa\"\n"
 "\n"
 msgstr ""
+"与えられた関数により計算した値が最大となる要素を返します。\n"
+"もしコレクションが空なら、`EmptyError`を引き起します。\n"
+"\n"
+"## 例\n"
+"\n"
+"    iex> Enum.max_by([\"a\", \"aa\", \"aaa\"], fn(x) -> String.length(x) end)\n"
+"    \"aaa\"\n"
+"\n"
 
 #. TRANSLATORS: defmacro Kernel.SpecialForms.__MODULE__()
 #: lib/elixir/lib/kernel/special_forms.ex:605
@@ -3343,6 +3416,10 @@ msgid ""
 "Although the module can be accessed in the `__ENV__`, this macro\n"
 "is a convenient shortcut.\n"
 msgstr ""
+"現在のモジュール名をアトムとして返します。さもなくば`nil`を返します。\n"
+"\n"
+"`__ENV__`の中でモジュールはアクセスできますが、このマクロは\n"
+"便利なショートカットです。\n"
 
 #. TRANSLATORS: defmacro Kernel.SpecialForms.__ENV__()
 #: lib/elixir/lib/kernel/special_forms.ex:597
@@ -3352,6 +3429,10 @@ msgid ""
 "In the environment you can access the current filename,\n"
 "line numbers, set up aliases, the current function and others.\n"
 msgstr ""
+"`Macro.Env`構造体として現在の環境情報を返します。\n"
+"\n"
+"環境では現在のファイル名、行番号、セットアップされた別名、\n"
+"および現在の関数などにアクセスできます。\n"
 
 #. TRANSLATORS: defmacro Kernel.SpecialForms.__DIR__()
 #: lib/elixir/lib/kernel/special_forms.ex:613
@@ -3361,6 +3442,10 @@ msgid ""
 "Although the directory can be accessed as `Path.dirname(__ENV__.file)`,\n"
 "this macro is a convenient shortcut.\n"
 msgstr ""
+"バイナリとして現在のディレクトリを返します。\n"
+"\n"
+"そのディレクトリには`Path.dirname(__ENV__.file)`としてもアクセスできま\n"
+"すが、このマクロは便利なショートカットです。\n"
 
 #. TRANSLATORS: defmacro Kernel.SpecialForms.__CALLER__()
 #: lib/elixir/lib/kernel/special_forms.ex:621
@@ -3370,6 +3455,10 @@ msgid ""
 "In the environment you can access the filename, line numbers,\n"
 "set up aliases, the function and others.\n"
 msgstr ""
+"`Macro.Env`構造体として現在の呼び出し側の環境を返します。\n"
+"\n"
+"環境では現在のファイル名、行番号、セットアップされた別名、\n"
+"および現在の関数などにアクセスできます。\n"
 
 #. TRANSLATORS: def Enum.count(collection, fun)
 #: lib/elixir/lib/enum.ex:455
@@ -3383,6 +3472,13 @@ msgid ""
 "    2\n"
 "\n"
 msgstr ""
+"コレクションの中で`fun`が`true`を返す要素の数を返します。\n"
+"\n"
+"## 例\n"
+"\n"
+"    iex> Enum.count([1, 2, 3, 4, 5], fn(x) -> rem(x, 2) == 0 end)\n"
+"    2\n"
+"\n"
 
 #. TRANSLATORS: def Enum.count(collection)
 #: lib/elixir/lib/enum.ex:429
@@ -3395,6 +3491,13 @@ msgid ""
 "    3\n"
 "\n"
 msgstr ""
+"コレクションのサイズを返します。\n"
+"\n"
+"## 例\n"
+"\n"
+"    iex> Enum.count([1, 2, 3])\n"
+"    3\n"
+"\n"
 
 #. TRANSLATORS: def Node.get_cookie()
 #: lib/elixir/lib/node.ex:256
