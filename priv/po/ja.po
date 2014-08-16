@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: l 10n_elixir\n"
-"PO-Revision-Date: 2014-08-16 13:40+0900\n"
+"PO-Revision-Date: 2014-08-16 13:48+0900\n"
 "Last-Translator: 小田 照敬 <EMAIL@ADDRESS>\n"
 "Language-Team: Japanese\n"
 "Language: ja\n"
@@ -2288,6 +2288,8 @@ msgid ""
 "Same as `write_stat/3` but raises an exception if it fails.\n"
 "Returns `:ok` otherwise.\n"
 msgstr ""
+"`write_state/3`と同じですが、失敗すると例外を引き起します。\n"
+"さもなくば`:ok`を返します。\n"
 
 #. TRANSLATORS: def File.write!(path, content, modes \\ [])
 #: lib/elixir/lib/file.ex:624
@@ -2295,6 +2297,8 @@ msgid ""
 "Same as `write/3` but raises an exception if it fails, returns `:ok` "
 "otherwise.\n"
 msgstr ""
+"`write/3`と同じですが、失敗すると例外を引き起します。さもなくば`:ok`を\n"
+"返します。\n"
 
 #. TRANSLATORS: def File.touch!(path, time \\ :calendar.local_time())
 #: lib/elixir/lib/file.ex:328
@@ -2302,6 +2306,8 @@ msgid ""
 "Same as `touch/2` but raises an exception if it fails.\n"
 "Returns `:ok` otherwise.\n"
 msgstr ""
+"`touch/2`と同じですが、失敗すると例外を引き起します。さもなくば\n"
+"`:ok`を返します。\n"
 
 #. TRANSLATORS: def File.stat!(path, opts \\ [])
 #: lib/elixir/lib/file.ex:271
@@ -2309,11 +2315,13 @@ msgid ""
 "Same as `stat/2` but returns the `File.Stat` directly and\n"
 "throws `File.Error` if an error is returned.\n"
 msgstr ""
+"`stat/2`と同じですが、もしエラーが帰って来たら`File.Stat`を直接返さず、\n"
+"`File.Errorを投げます。\n"
 
 #. TRANSLATORS: defmacro Record.defrecordp(name, tag \\ nil, kv)
 #: lib/elixir/lib/record.ex:178
 msgid "Same as `defrecord/3` but generates private macros.\n"
-msgstr ""
+msgstr "`defrecord/3`と同じですが、プライベートマクロを生成します。\n"
 
 #. TRANSLATORS: def Process.get(key, default \\ nil)
 #: lib/elixir/lib/process.ex:41
