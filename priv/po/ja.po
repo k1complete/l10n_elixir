@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: l 10n_elixir\n"
-"PO-Revision-Date: 2014-08-16 13:48+0900\n"
+"PO-Revision-Date: 2014-08-16 14:22+0900\n"
 "Last-Translator: 小田 照敬 <EMAIL@ADDRESS>\n"
 "Language-Team: Japanese\n"
 "Language: ja\n"
@@ -2326,7 +2326,7 @@ msgstr "`defrecord/3`と同じですが、プライベートマクロを生成�
 #. TRANSLATORS: def Process.get(key, default \\ nil)
 #: lib/elixir/lib/process.ex:41
 msgid "Returns the value for the given `key`.\n"
-msgstr ""
+msgstr "与えられた`key`の値を返します。\n"
 
 #. TRANSLATORS: def Application.get_env(app, key, default \\ nil)
 #: lib/elixir/lib/application.ex:129
@@ -2336,6 +2336,10 @@ msgid ""
 "If the specified application is not loaded, or the configuration parameter\n"
 "does not exist, the function returns the `default` value.\n"
 msgstr ""
+"`app`の環境の中の`key`に対応する値を返します。\n"
+"\n"
+"もし指定されたアプリケーションがロードされていない場合、あるいは、コン\n"
+"フィグレーションパラメータが存在しない場合、`default`の値を返します。\n"
 
 #. TRANSLATORS: def Application.fetch_env(app, key)
 #: lib/elixir/lib/application.ex:143
@@ -2345,6 +2349,10 @@ msgid ""
 "If the specified application is not loaded, or the configuration parameter\n"
 "does not exist, the function returns `:error`.\n"
 msgstr ""
+"`app`の環境の`key`に対応する値を返します。\n"
+"\n"
+"もし指定されたアプリケーションがロードされていない場合、あるいは、コン\n"
+"フィグレーションパラメータが存在しない場合、`:error`を返します。\n"
 
 #. TRANSLATORS: def Dict.get(dict, key, default \\ nil)
 #: lib/elixir/lib/dict.ex:364
@@ -2362,6 +2370,18 @@ msgid ""
 "    iex> Dict.get(dict, :b, 3)\n"
 "    3\n"
 msgstr ""
+"`dict`の`key`に関連付けられた値を返します。もし`dict`が`key`を含んでい\n"
+"ない場合、`default`(それも提供されていない場合は`nil`)を返します。\n"
+"\n"
+"## 例\n"
+"\n"
+"    iex> dict = Enum.into([a: 1], dict_impl.new)\n"
+"    iex> Dict.get(dict, :a)\n"
+"    1\n"
+"    iex> Dict.get(dict, :b)\n"
+"    nil\n"
+"    iex> Dict.get(dict, :b, 3)\n"
+"    3\n"
 
 #. TRANSLATORS: def Dict.fetch!(dict, key)
 #: lib/elixir/lib/dict.ex:398
@@ -2376,6 +2396,15 @@ msgid ""
 "    1\n"
 "\n"
 msgstr ""
+"`dict`中の`key`に関連した値を返します。もし`dict`が`key`を含んでいない\n"
+"場合、`KeyError`を引き起します。\n"
+"\n"
+"## 例\n"
+"\n"
+"    iex> dict = Enum.into([a: 1], dict_impl.new)\n"
+"    iex> Dict.fetch!(dict, :a)\n"
+"    1\n"
+"\n"
 
 #. TRANSLATORS: def Dict.pop(dict, key, default \\ nil)
 #: lib/elixir/lib/dict.ex:521
@@ -2401,6 +2430,25 @@ msgid ""
 "    {3,[a: 1]}\n"
 "\n"
 msgstr ""
+"`dict`の中の`key`に関連した値と`key`を取り除いた`dict`を返します。\n"
+"\n"
+"## Examples\n"
+"\n"
+"    iex> dict = Enum.into([a: 1], dict_impl.new)\n"
+"    iex> {v, dict} = Dict.pop dict, :a\n"
+"    iex> {v, Enum.sort(dict)}\n"
+"    {1,[]}\n"
+"\n"
+"    iex> dict = Enum.into([a: 1], dict_impl.new)\n"
+"    iex> {v, dict} = Dict.pop dict, :b\n"
+"    iex> {v, Enum.sort(dict)}\n"
+"    {nil,[a: 1]}\n"
+"\n"
+"    iex> dict = Enum.into([a: 1], dict_impl.new)\n"
+"    iex> {v, dict} = Dict.pop dict, :b, 3\n"
+"    iex> {v, Enum.sort(dict)}\n"
+"    {3,[a: 1]}\n"
+"\n"
 
 #. TRANSLATORS: def System.put_env(dict)
 #: lib/elixir/lib/system.ex:297
@@ -2410,6 +2458,10 @@ msgid ""
 "Sets a new value for each environment variable corresponding\n"
 "to each key in `dict`.\n"
 msgstr ""
+"複数の環境変数をセットします。\n"
+"\n"
+"`dict`の中のそれぞれのキーに一致しているそれぞれの環境変数に\n"
+"新しい値をセットします。\n"
 
 #. TRANSLATORS: def System.put_env(varname, value)
 #: lib/elixir/lib/system.ex:285
@@ -2418,6 +2470,9 @@ msgid ""
 "\n"
 "Sets a new `value` for the environment variable `varname`.\n"
 msgstr ""
+"環境変数の値をセットします。\n"
+"\n"
+"環境変数`varname`に新しい`value`をセットします。\n"
 
 #. TRANSLATORS: def Regex.scan(regex, string, options \\ [])
 #: lib/elixir/lib/regex.ex:304
@@ -2446,6 +2501,31 @@ msgid ""
 "    []\n"
 "\n"
 msgstr ""
+"`run/3`と同じですが、正規表現にマッチしたもの全てを集めるため何回かスキャ\n"
+"ンします。\n"
+"\n"
+"それぞれのリストの最初の要素はマッチを表現し、それぞれのリストの次の要\n"
+"素はキャプチャされたコンテンツを表現する、リストのリストを返します。\n"
+"\n"
+"\n"
+"## オプション\n"
+"\n"
+"  * `:return`  - `:index`をセットするとindexを返します。デフォルト\n"
+"                 は`:binary`です。\n"
+"  * `:capture` - 結果にキャプチャを含めます。可能なキャプチャの値\n"
+"                 を見るために`Regex`のドキュメントをチェックしてください。\n"
+"\n"
+"## 例\n"
+"\n"
+"    iex> Regex.scan(~r/c(d|e)/, \"abcd abce\")\n"
+"    [[\"cd\", \"d\"], [\"ce\", \"e\"]]\n"
+"\n"
+"    iex> Regex.scan(~r/c(?:d|e)/, \"abcd abce\")\n"
+"    [[\"cd\"], [\"ce\"]]\n"
+"\n"
+"    iex> Regex.scan(~r/e/, \"abcd\")\n"
+"    []\n"
+"\n"
 
 #. TRANSLATORS: def Regex.run(regex, string, options \\ [])
 #: lib/elixir/lib/regex.ex:196
@@ -2472,11 +2552,32 @@ msgid ""
 "    [{2,2},{3,1}]\n"
 "\n"
 msgstr ""
+"最初にマッチするまで、与えられた文字列に対して正規表現を走らせます。全\n"
+"てのキャプチャされたリストまたは、マッチがなかった場合は`nil`を返します。\n"
+"\n"
+"## オプション\n"
+"\n"
+"  * `:return`  - `:index`をセットするとindexを返します。デフォルト\n"
+"                 は`:binary`です。\n"
+"  * `:capture` - 結果にキャプチャを含めます。可能なキャプチャの値\n"
+"                 を見るために`Regex`のドキュメントをチェックしてください。\n"
+"\n"
+"## 例\n"
+"\n"
+"    iex> Regex.run(~r/c(d)/, \"abcd\")\n"
+"    [\"cd\", \"d\"]\n"
+"\n"
+"    iex> Regex.run(~r/e/, \"abcd\")\n"
+"    nil\n"
+"\n"
+"    iex> Regex.run(~r/c(d)/, \"abcd\", return: :index)\n"
+"    [{2,2},{3,1}]\n"
+"\n"
 
 #. TRANSLATORS: def Regex.re_pattern(regex)
 #: lib/elixir/lib/regex.ex:236
 msgid "Returns the underlying `re_pattern` in the regular expression.\n"
-msgstr ""
+msgstr "正規表現で根底にある`re_pattern`を返します。\n"
 
 #. TRANSLATORS: def Stream.run(stream)
 #: lib/elixir/lib/stream.ex:431
