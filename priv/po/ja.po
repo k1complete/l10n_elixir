@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: l 10n_elixir\n"
-"PO-Revision-Date: 2014-08-17 10:31+0900\n"
+"PO-Revision-Date: 2014-08-17 12:46+0900\n"
 "Last-Translator: 小田 照敬 <EMAIL@ADDRESS>\n"
 "Language-Team: Japanese\n"
 "Language: ja\n"
@@ -3813,6 +3813,13 @@ msgid ""
 "The module must have a corresponding beam file\n"
 "which can be located by the runtime system.\n"
 msgstr ""
+"モジュールのbeamコードから全ての有効なコールバックを返します。\n"
+"\n"
+"戻って来た結果は最初の要素がspec nameとarityで次の要素がspecとなるタプ\n"
+"ルのリストです。\n"
+"\n"
+"モジュールは実行時システムによって配置された対応するbeamファイルを\n"
+"持っていなければなりません。\n"
 
 #. TRANSLATORS: def Kernel.is_boolean(term)
 #: lib/elixir/lib/kernel.ex:291
@@ -3823,6 +3830,10 @@ msgid ""
 "\n"
 "Allowed in guard tests. Inlined by the compiler.\n"
 msgstr ""
+"もし`term`がアトム`true`またはアトム`false`のいずれか(すなわちboolean)\n"
+"ならば`true`を返します。さもなければflseを返します。\n"
+"\n"
+"ガード中のテストで使えます。コンパイラによりインライン化されます。\n"
 
 #. TRANSLATORS: def Kernel.is_number(term)
 #: lib/elixir/lib/kernel.ex:353
@@ -3832,6 +3843,10 @@ msgid ""
 "\n"
 "Allowed in guard tests. Inlined by the compiler.\n"
 msgstr ""
+"`term`が整数か浮動小数点数のいずれかなら`true`を返します。さもなければ\n"
+"`false`を返します。\n"
+"\n"
+"ガード中のテストで使えます。コンパイラによりインライン化されます。\n"
 
 #. TRANSLATORS: def Kernel.is_integer(term)
 #: lib/elixir/lib/kernel.ex:332
@@ -3840,6 +3855,9 @@ msgid ""
 "\n"
 "Allowed in guard tests. Inlined by the compiler.\n"
 msgstr ""
+"`term`が整数なら`true`を返します。さもなければ`false`を返します。\n"
+"\n"
+"ガード中のテストで使えます。コンパイラによりインライン化されます。\n"
 
 #. TRANSLATORS: def Kernel.is_atom(term)
 #: lib/elixir/lib/kernel.ex:258
@@ -3848,6 +3866,9 @@ msgid ""
 "\n"
 "Allowed in guard tests. Inlined by the compiler.\n"
 msgstr ""
+"`term`がアトムなら`true`を返します。さもなければ`false`を返します。\n"
+"\n"
+"ガード中のテストで使えます。コンパイラによりインライン化されます。\n"
 
 #. TRANSLATORS: def Kernel.is_tuple(term)
 #: lib/elixir/lib/kernel.ex:393
@@ -3856,6 +3877,9 @@ msgid ""
 "\n"
 "Allowed in guard tests. Inlined by the compiler.\n"
 msgstr ""
+"`term`がタプルなら`true`を返します。さもなければ`false`を返します。\n"
+"\n"
+"ガード中のテストで使えます。コンパイラによりインライン化されます。\n"
 
 #. TRANSLATORS: def Kernel.is_reference(term)
 #: lib/elixir/lib/kernel.ex:383
@@ -3864,6 +3888,9 @@ msgid ""
 "\n"
 "Allowed in guard tests. Inlined by the compiler.\n"
 msgstr ""
+"`term`がリファレンスなら`true`を返します。さもなければ`false`を返します。\n"
+"\n"
+"ガード中のテストで使えます。コンパイラによりインライン化されます。\n"
 
 #. TRANSLATORS: def Kernel.is_port(term)
 #: lib/elixir/lib/kernel.ex:373
@@ -3872,6 +3899,9 @@ msgid ""
 "\n"
 "Allowed in guard tests. Inlined by the compiler.\n"
 msgstr ""
+"`term`がポート識別子なら`true`を返します。さもなければ`false`を返します。\n"
+"\n"
+"ガード中のテストで使えます。コンパイラによりインライン化されます。\n"
 
 #. TRANSLATORS: def Kernel.is_pid(term)
 #: lib/elixir/lib/kernel.ex:363
@@ -3881,6 +3911,10 @@ msgid ""
 "\n"
 "Allowed in guard tests. Inlined by the compiler.\n"
 msgstr ""
+"`term`がpid(プロセス識別子)なら`true`を返します。さもなければ`false`を\n"
+"返します。\n"
+"\n"
+"ガード中のテストで使えます。コンパイラによりインライン化されます。\n"
 
 #. TRANSLATORS: def Kernel.is_map(term)
 #: lib/elixir/lib/kernel.ex:403
@@ -3889,6 +3923,9 @@ msgid ""
 "\n"
 "Allowed in guard tests. Inlined by the compiler.\n"
 msgstr ""
+"`term`がマップなら`true`を返します。さもなければ`false`を返します。\n"
+"\n"
+"ガード中のテストで使えます。コンパイラによりインライン化されます。\n"
 
 #. TRANSLATORS: def Kernel.is_list(term)
 #: lib/elixir/lib/kernel.ex:342
@@ -3898,6 +3935,10 @@ msgid ""
 "\n"
 "Allowed in guard tests. Inlined by the compiler.\n"
 msgstr ""
+"`term`が0個以上の要素をもつリストなら`true`を返します。さもなければ\n"
+"`false`を返します。\n"
+"\n"
+"ガード中のテストで使えます。コンパイラによりインライン化されます。\n"
 
 #. TRANSLATORS: def Kernel.is_function(term)
 #: lib/elixir/lib/kernel.ex:311
@@ -3906,6 +3947,9 @@ msgid ""
 "\n"
 "Allowed in guard tests. Inlined by the compiler.\n"
 msgstr ""
+"`term`が関数なら`true`を返します。さもなければ`false`を返します。\n"
+"\n"
+"ガード中のテストで使えます。コンパイラによりインライン化されます。\n"
 
 #. TRANSLATORS: def Kernel.is_function(term, arity)
 #: lib/elixir/lib/kernel.ex:322
@@ -3916,6 +3960,10 @@ msgid ""
 "\n"
 "Allowed in guard tests. Inlined by the compiler.\n"
 msgstr ""
+"`term`が引数の数が`arity`個で適用可能な関数なら`true`を返します。さもな\n"
+"ければ`false`を返します。\n"
+"\n"
+"ガード中のテストで使えます。コンパイラによりインライン化されます。\n"
 
 #. TRANSLATORS: def Kernel.is_float(term)
 #: lib/elixir/lib/kernel.ex:301
@@ -3925,6 +3973,9 @@ msgid ""
 "\n"
 "Allowed in guard tests. Inlined by the compiler.\n"
 msgstr ""
+"`term`が浮動小数点数なら`true`を返します。さもなければ`false`を返します。\n"
+"\n"
+"ガード中のテストで使えます。コンパイラによりインライン化されます。\n"
 
 #. TRANSLATORS: def Kernel.is_bitstring(term)
 #: lib/elixir/lib/kernel.ex:280
@@ -3934,6 +3985,10 @@ msgid ""
 "\n"
 "Allowed in guard tests. Inlined by the compiler.\n"
 msgstr ""
+"`term`がビット列(バイナリを含ふくみます)なら`true`を返します。さもなけ\n"
+"れば`false`を返します。\n"
+"\n"
+"ガード中のテストで使えます。コンパイラによりインライン化されます。\n"
 
 #. TRANSLATORS: def Kernel.is_binary(term)
 #: lib/elixir/lib/kernel.ex:270
@@ -3944,6 +3999,11 @@ msgid ""
 "\n"
 "Allowed in guard tests. Inlined by the compiler.\n"
 msgstr ""
+"`term`がバイナリなら`true`を返します。さもなければ`false`を返します。\n"
+"\n"
+"バイナリは常に完全なバイトの数を含みます。\n"
+"\n"
+"ガード中のテストで使えます。コンパイラによりインライン化されます。\n"
 
 #. TRANSLATORS: def Kernel.--(left, right)
 #: lib/elixir/lib/kernel.ex:884
