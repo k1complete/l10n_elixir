@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: l 10n_elixir\n"
-"PO-Revision-Date: 2014-08-23 21:50+0900\n"
+"PO-Revision-Date: 2014-08-23 22:05+0900\n"
 "Last-Translator: 小田 照敬 <EMAIL@ADDRESS>\n"
 "Language-Team: Japanese\n"
 "Language: ja\n"
@@ -8071,6 +8071,9 @@ msgid ""
 "\n"
 "See `start_link/1` for more information.\n"
 msgstr ""
+"イベントマネージャプロセスをリンクせずに(監督ツリーの外側で)開始します。\n"
+"\n"
+"詳細は `start_link/1` を参照してください。\n"
 
 #. TRANSLATORS: def Agent.start(module, fun, args, options \\ [])
 #: lib/elixir/lib/agent.ex:181
@@ -8080,6 +8083,10 @@ msgid ""
 "Similar to `start/2` but a module, function and args are expected\n"
 "instead of an anonymous function.\n"
 msgstr ""
+"与えられたモジュールと関数、引数でエージェントを開始します。\n"
+"\n"
+"`start/2`と似ていますが、無名関数の替わりに、\n"
+"モジュール、関数、引数を期待しています。\n"
 
 #. TRANSLATORS: def Agent.start(fun, options \\ [])
 #: lib/elixir/lib/agent.ex:170
@@ -8088,6 +8095,9 @@ msgid ""
 "\n"
 "See `start_link/2` for more information.\n"
 msgstr ""
+"エージェントプロセスをリンクなし(監督ツリーの外側)で開始します。\n"
+"\n"
+"詳細は `start_link/2` を参照してください。\n"
 
 #. TRANSLATORS: def Agent.start_link(module, fun, args, options \\ [])
 #: lib/elixir/lib/agent.ex:160
@@ -8098,6 +8108,11 @@ msgid ""
 "Same as `start_link/2` but a module, function and args are expected\n"
 "instead of an anonymous function.\n"
 msgstr ""
+"与えられたモジュール、関数、引数で現在のプロセスにリンクされた\n"
+"エージェントを開始します。\n"
+"\n"
+"`start_link/2`と同じですが、無名関数の替わりに、モジュール、関数、引数\n"
+"を期待しています。\n"
 
 #. TRANSLATORS: def Agent.start_link(fun, options \\ [])
 #: lib/elixir/lib/agent.ex:148
