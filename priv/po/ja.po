@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: l 10n_elixir\n"
-"PO-Revision-Date: 2014-08-23 22:05+0900\n"
+"PO-Revision-Date: 2014-08-24 18:25+0900\n"
 "Last-Translator: 小田 照敬 <EMAIL@ADDRESS>\n"
 "Language-Team: Japanese\n"
 "Language: ja\n"
@@ -7427,7 +7427,7 @@ msgstr ""
 "割りを果します。要求される関数は、変換を行う`to_string`の実装だけです。\n"
 "\n"
 "`to_string`関数は自動的にKernelによりインポートされ、このプロトコルが実\n"
-"行します。文字列中に挿入された式もto_string の引数なり実行されます。例\n"
+"行します。文字列中に挿入された式も `to_string` の引数になり実行されます。例\n"
 "えば、`\"foo#{bar}\"`は`\"foo\" <> to_string(bar)`と同じです。\n"
 
 #. TRANSLATORS: Elixir.List.Chars Summary
