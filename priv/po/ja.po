@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: l 10n_elixir\n"
-"PO-Revision-Date: 2014-08-25 21:22+0900\n"
+"PO-Revision-Date: 2014-08-26 12:54+0900\n"
 "Last-Translator: 小田 照敬 <EMAIL@ADDRESS>\n"
 "Language-Team: Japanese\n"
 "Language: ja\n"
@@ -8198,6 +8198,15 @@ msgid ""
 "The reply sent by the task will be in the format `{ref, msg}`,\n"
 "where `ref` is the monitoring reference held by the task.\n"
 msgstr ""
+"待機することができるタスクを開始します。\n"
+"\n"
+"この関数は、呼び出し側プロセスによりリンクされ、モニタされる、\n"
+"プロセスを生成します。関連した情報を含む`Task`構造体が返されます。\n"
+"\n"
+"## Taskのメッセージフォーマット\n"
+"\n"
+"タスクによって送られる応答は`{ref, msg}`というフォーマットです。\n"
+"`ref`はタスクによって保持されるモニタリファレンスです。\n"
 
 #. TRANSLATORS: def Task.Supervisor.async(supervisor, module, fun, args)
 #: lib/elixir/lib/task/supervisor.ex:57
@@ -8207,6 +8216,10 @@ msgid ""
 "The `supervisor` must be a reference as defined in `Task.Supervisor`.\n"
 "For more information on tasks, check the `Task` module.\n"
 msgstr ""
+"待機することができるタスクを開始します。\n"
+"\n"
+"`supervisor`は、`Task.Supervisor`で定義されたリファレンスでなければなり\n"
+"ません。タスクについての詳細は、`Task`モジュールをチェックしてください。\n"
 
 #. TRANSLATORS: def Task.async(mod, fun, args)
 #: lib/elixir/lib/task.ex:146
@@ -8216,6 +8229,10 @@ msgid ""
 "Similar to `async/1`, but the task is specified by the given\n"
 "module, function and arguments.\n"
 msgstr ""
+"待機することができるタスクを開始します。\n"
+"\n"
+"`async/1`と似ていますが、タスクは与えられたモジュール、関数\n"
+"および引数により指定されます。\n"
 
 #. TRANSLATORS: def GenServer.start(module, args, options \\ [])
 #: lib/elixir/lib/gen_server.ex:314
