@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: l 10n_elixir\n"
-"PO-Revision-Date: 2014-08-27 19:54+0900\n"
+"PO-Revision-Date: 2014-08-27 19:56+0900\n"
 "Last-Translator: 小田 照敬 <EMAIL@ADDRESS>\n"
 "Language-Team: Japanese\n"
 "Language: ja\n"
@@ -9016,6 +9016,10 @@ msgid ""
 "Before terminating, the event manager will call `terminate(:stop, ...)`\n"
 "for each installed event handler.\n"
 msgstr ""
+"イベント`manager`を終了します。\n"
+"\n"
+"終了する前に、イベントマネージャは、インストールされたイベントハンドラ\n"
+"それぞれの`terminate(:stop, ...)`を呼び出します。\n"
 
 #. TRANSLATORS: def GenEvent.start_link(options \\ [])
 #: lib/elixir/lib/gen_event.ex:249
