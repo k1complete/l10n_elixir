@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: l 10n_elixir\n"
-"PO-Revision-Date: 2014-09-02 22:31+0900\n"
+"PO-Revision-Date: 2014-09-02 22:35+0900\n"
 "Last-Translator: 小田 照敬 <EMAIL@ADDRESS>\n"
 "Language-Team: Japanese\n"
 "Language: ja\n"
@@ -12526,6 +12526,14 @@ msgid ""
 "    for instance, `{:error, :estale}` if reading from an\n"
 "    NFS volume\n"
 msgstr ""
+"IOデバイスから行を読みます。以下を返します:\n"
+"\n"
+"  * `data` - LF(あるいはend of file)で終了された行の文字のリスト\n"
+"\n"
+"  * `:eof` - end of fileに到達したことを示します\n"
+"\n"
+"  * `{:error, reason}` - 他のエラーの場合;\n"
+"    例えば、もしNFSボリュームから読まれたなら、`{:error, :estale}`などです。\n"
 
 #. TRANSLATORS: def IO.binread(device \\ :erlang.group_leader(), chars_or_line)
 #: lib/elixir/lib/io.ex:106
