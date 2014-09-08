@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: l 10n_elixir\n"
-"PO-Revision-Date: 2014-09-07 20:29+0900\n"
+"PO-Revision-Date: 2014-09-08 19:29+0900\n"
 "Last-Translator: 小田 照敬 <EMAIL@ADDRESS>\n"
 "Language-Team: Japanese\n"
 "Language: ja\n"
@@ -14351,6 +14351,13 @@ msgid ""
 "\n"
 "A timeout can also be specified (it has a default value of 5000).\n"
 msgstr ""
+"一つのオペレーションで、エージェントステートを取得して更新します。\n"
+"\n"
+"`fun`関数は、エージェントステートを渡して実行する`agent`に送られます。\n"
+"関数は、最初の要素は返される値(即ち`get`した値)で、二つめの要素は\n"
+"新しいステートとなる、二つの要素のタプルを返さなくてはなりません。\n"
+"\n"
+"タイムアウトも指定することができます(デフォルト値は5000です)。\n"
 
 #. TRANSLATORS: def Agent.get_and_update(agent, module, fun, args, timeout \\ 5000)
 #: lib/elixir/lib/agent.ex:234
@@ -14361,6 +14368,11 @@ msgid ""
 "instead of an anonymous function. The state is added as first\n"
 "argument to the given list of args.\n"
 msgstr ""
+"一つのオペレーションで、エージェントステートを取得して更新します。\n"
+"\n"
+"`get_and_update/3`と同じですが、無名関数の替りに、モジュール、関数、そ\n"
+"して引数が期待されます。ステートは与えられた引数リストの最初の引数とし\n"
+"て追加されます。\n"
 
 #. TRANSLATORS: def Agent.get(agent, fun, timeout \\ 5000)
 #: lib/elixir/lib/agent.ex:195
@@ -14373,6 +14385,12 @@ msgid ""
 "\n"
 "A timeout can also be specified (it has a default value of 5000).\n"
 msgstr ""
+"与えられた関数によってエージェントの値を取得します。\n"
+"\n"
+"`fun`関数は、エージェントステートを渡して実行する`agent`に送られます。\n"
+"関数の実行結果が返されます。\n"
+"\n"
+"タイムアウトも指定することができます(デフォルト値は5000です)。\n"
 
 #. TRANSLATORS: def Agent.get(agent, module, fun, args, timeout \\ 5000)
 #: lib/elixir/lib/agent.ex:207
@@ -14383,6 +14401,11 @@ msgid ""
 "instead of an anonymous function. The state is added as first\n"
 "argument to the given list of args.\n"
 msgstr ""
+"与えられた関数によってエージェントの値を取得します。\n"
+"\n"
+"`get/3`と同じですが、無名関数の替りに、モジュール、関数、そ\n"
+"して引数が期待されます。ステートは与えられた引数リストの最初の引数とし\n"
+"て追加されます。\n"
 
 #. TRANSLATORS: def Access.get_and_update(container, key, fun)
 #: lib/elixir/lib/access.ex:44
