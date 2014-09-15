@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: l 10n_elixir\n"
-"PO-Revision-Date: 2014-09-15 19:13+0900\n"
+"PO-Revision-Date: 2014-09-15 20:34+0900\n"
 "Last-Translator: 小田 照敬 <EMAIL@ADDRESS>\n"
 "Language-Team: Japanese\n"
 "Language: ja\n"
@@ -15205,6 +15205,10 @@ msgid ""
 "Changes the list of command line arguments. Use it with caution,\n"
 "as it destroys any previous argv information.\n"
 msgstr ""
+"コマンドライン引数を変更します。\n"
+"\n"
+"コマンドライン引数のリストを変更します。\n"
+"以前のargv情報は全て破壊されますので、注意して使用してください。\n"
 
 #. TRANSLATORS: def Keyword.merge(d1, d2)
 #: lib/elixir/lib/keyword.ex:356
