@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: l 10n_elixir\n"
-"PO-Revision-Date: 2014-09-21 20:11+0900\n"
+"PO-Revision-Date: 2014-09-22 09:00+0900\n"
 "Last-Translator: 小田 照敬 <EMAIL@ADDRESS>\n"
 "Language-Team: Japanese\n"
 "Language: ja\n"
@@ -17409,6 +17409,15 @@ msgid ""
 "    :ok = Application.ensure_started(:my_test_dep)\n"
 "\n"
 msgstr ""
+"与えられた`app`が開始しているのを確実にします。\n"
+"\n"
+"`start/2`と同じですが、そのアプリケーションが既に開始していたら、\n"
+"`:ok`を返します。これは、スクリプト中やテストのセットアップで\n"
+"テストアプリケーションを明示的に開始させる必要がある場合に、\n"
+"便利です:\n"
+"\n"
+"    :ok = Application.ensure_started(:my_test_dep)\n"
+"\n"
 
 #. TRANSLATORS: def Application.ensure_all_started(app, type \\ :temporary)
 #: lib/elixir/lib/application.ex:205
@@ -17419,6 +17428,11 @@ msgid ""
 "`:applications` in the `.app` file in case they were not previously\n"
 "started.\n"
 msgstr ""
+"与えられた`app`とそれが依存しているアプリケーションが開始していることを\n"
+"確実にします。\n"
+"\n"
+"`start/2`と同じですが、`.app`ファイルに`:applications`でリストされている\n"
+"アプリケーションも、まだ開始していない場合には、開始します。\n"
 
 #. TRANSLATORS: def Base.encode64(data)
 #: lib/elixir/lib/base.ex:234
@@ -17431,6 +17445,13 @@ msgid ""
 "    \"Zm9vYmFy\"\n"
 "\n"
 msgstr ""
+"バイナリ文字列をbase64エンコード文字列にエンコードします。\n"
+"\n"
+"## 例\n"
+"\n"
+"    iex> Base.encode64(\"foobar\")\n"
+"    \"Zm9vYmFy\"\n"
+"\n"
 
 #. TRANSLATORS: def Regex.escape(string)
 #: lib/elixir/lib/regex.ex:586
@@ -17446,6 +17467,16 @@ msgid ""
 "    \"\\\\\\\\what\\\\ if\"\n"
 "\n"
 msgstr ""
+"正規表現に文字通りにマッチした文字列をエスケープします。\n"
+"\n"
+"## 例\n"
+"\n"
+"    iex> Regex.escape(\".\")\n"
+"    \"\\\\.\"\n"
+"\n"
+"    iex> Regex.escape(\"\\\\what if\")\n"
+"    \"\\\\\\\\what\\\\ if\"\n"
+"\n"
 
 #. TRANSLATORS: def System.get_pid()
 #: lib/elixir/lib/system.ex:277
@@ -17457,6 +17488,12 @@ msgid ""
 "\n"
 "See http://www.erlang.org/doc/man/os.html#getpid-0 for more info.\n"
 msgstr ""
+"Erlang VM自体のプロセス識別子です。\n"
+"\n"
+"そのオペレーティングシステム環境で最も一般的に使われるフォーマット\n"
+"で、現在のErlangエミュレータのプロセス識別子を返します。\n"
+"\n"
+"詳細は http://www.erlang.org/doc/man/os.html#getpid-0 を参照してください。\n"
 
 #. TRANSLATORS: def System.get_env(varname)
 #: lib/elixir/lib/system.ex:261
