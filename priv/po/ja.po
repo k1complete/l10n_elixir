@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: l 10n_elixir\n"
-"PO-Revision-Date: 2014-09-28 10:41+0900\n"
+"PO-Revision-Date: 2014-09-28 11:34+0900\n"
 "Last-Translator: 小田 照敬 <EMAIL@ADDRESS>\n"
 "Language-Team: Japanese\n"
 "Language: ja\n"
@@ -23596,6 +23596,12 @@ msgid ""
 "when the stream is created via `stream/2`. Passing a stream without\n"
 "an id leads to an argument error.\n"
 msgstr ""
+"与えられた`:id`で現在動いている全てのストリームをキャンセルします。\n"
+"\n"
+"ストリームをキャンセルするために、\n"
+"`stream/2`で作成したときの、`:id`が渡されなければなりません。\n"
+"\n"
+"idなしでストリームを渡すと、引数エラーになります。\n"
 
 #. TRANSLATORS: def GenServer.multi_call(nodes \\ nodes(), name, request, timeout \\ :infinity)
 #: lib/elixir/lib/gen_server.ex:396
@@ -23616,6 +23622,23 @@ msgid ""
 "will\n"
 "then be discarded when they arrive to a terminated process.\n"
 msgstr ""
+"指定された`nodes`で`name`としてローカルに登録された全てのサーバ\n"
+"を呼び出します。\n"
+"\n"
+"`request`は最初にそれぞれのノードへ送られ、それから、応答を待ちます。\n"
+"この関数は、最初の要素として応答したノードとその応答を、2番目の\n"
+"要素として全ての悪いノードを含む、\n"
+"タプルを返します。\n"
+"悪いノードは、\n"
+"存在しなかかったか、与えられた`name`のサーバが存在しなかったか、応答が\n"
+"なかったノードのリストです。\n"
+"\n"
+"nodesはrequestが送られる、ノード名のリストです。デフォルト値は\n"
+"知っている全てのノード(nodes())です。\n"
+"\n"
+"(タイムアウトの後での)遲い応答が、呼び出し側のメッセージ\n"
+"キューを汚染することを避けるために、実際の呼び出しには仲介者プロセスが使われます。\n"
+"遲い応答が終了したプロセスに届いたとき、それらは捨てられます。\n"
 
 #. TRANSLATORS: def Kernel.rem(left, right)
 #: lib/elixir/lib/kernel.ex:526
@@ -23632,6 +23655,17 @@ msgid ""
 "    1\n"
 "\n"
 msgstr ""
+"整数で割った余りを計算します。\n"
+"\n"
+"引数の一つが整数でないなら、エラーを上げます。\n"
+"\n"
+"ガードテストで使えます。コンパイラによりインライン化されます。\n"
+"\n"
+"## 例\n"
+"\n"
+"    iex> rem(5, 2)\n"
+"    1\n"
+"\n"
 
 #. TRANSLATORS: defmacro Kernel.SpecialForms.super(args)
 #: lib/elixir/lib/kernel/special_forms.ex:1353
@@ -23639,6 +23673,9 @@ msgid ""
 "Calls the overriden function when overriding it with `defoverridable`.\n"
 "See `Kernel.defoverridable` for more information and documentation.\n"
 msgstr ""
+"`defoverridable`でオーバライドしたときに、オーバライドされた関数を呼び\n"
+"出します。\n"
+"詳細とトキュメントは`Kernel.defoverridable`を参照してください。\n"
 
 #. TRANSLATORS: def Macro.unpipe(expr)
 #: lib/elixir/lib/macro.ex:58
@@ -23647,6 +23684,9 @@ msgid ""
 "\n"
 "Raises if the pipeline is ill-formed.\n"
 msgstr ""
+"パイプライン式をリストにします。\n"
+"\n"
+"パイプラインが不適格なら、エラーを上げます。\n"
 
 #. TRANSLATORS: def Path.absname(path, relative_to)
 #: lib/elixir/lib/path.ex:60
@@ -23666,11 +23706,25 @@ msgid ""
 "    \"bar/../x\"\n"
 "\n"
 msgstr ""
+"`relative_to`から`path`へパスを組み立てます。\n"
+"もし`path`が既に絶対パスなら、`relative_to`は無視されます。\n"
+"`relative_to/2`も参照してください。\n"
+"\n"
+"`expand/2`と違い、`..`、`.`、`~`の解決を試みません。\n"
+"\n"
+"## 例\n"
+"\n"
+"    iex> Path.absname(\"foo\", \"bar\")\n"
+"    \"bar/foo\"\n"
+"\n"
+"    iex> Path.absname(\"../x\", \"bar\")\n"
+"    \"bar/../x\"\n"
+"\n"
 
 #. TRANSLATORS: def IO.ANSI.bright()
 #: lib/elixir/lib/io/ansi.ex:50
 msgid "Bright (increased intensity) or Bold"
-msgstr ""
+msgstr "高輝度/太文字に設定"
 
 #. TRANSLATORS: defmacro Kernel.or(left, right)
 #: lib/elixir/lib/kernel.ex:1118
@@ -23686,6 +23740,16 @@ msgid ""
 "    true\n"
 "\n"
 msgstr ""
+"ブール代数のor です。ショートサーキットなので、\n"
+"booleanであることを最初の引数だけに要求します。\n"
+"\n"
+"ガードテストで使えます。\n"
+"\n"
+"## 例\n"
+"\n"
+"    iex> true or false\n"
+"    true\n"
+"\n"
 
 #. TRANSLATORS: def Kernel.not(arg)
 #: lib/elixir/lib/kernel.ex:900
@@ -23700,6 +23764,15 @@ msgid ""
 "    true\n"
 "\n"
 msgstr ""
+"ブール代数のnot です。引数はbooleanでなくてはなりません。\n"
+"\n"
+"ガードテストで使えます。コンパイラによりインライン化されます。\n"
+"\n"
+"## 例\n"
+"\n"
+"    iex> not false\n"
+"    true\n"
+"\n"
 
 #. TRANSLATORS: defmacro Kernel.and(left, right)
 #: lib/elixir/lib/kernel.ex:1134
@@ -23715,32 +23788,42 @@ msgid ""
 "    false\n"
 "\n"
 msgstr ""
+"ブール代数のand です。ショートサーキットなので、\n"
+"booleanであることを最初の引数だけに要求します。\n"
+"\n"
+"ガードテストで使えます。\n"
+"\n"
+"## 例\n"
+"\n"
+"    iex> true and false\n"
+"    false\n"
+"\n"
 
 #. TRANSLATORS: def IO.ANSI.blink_off()
 #: lib/elixir/lib/io/ansi.ex:97
 msgid "Blink: off"
-msgstr ""
+msgstr "ブリンク: off"
 
 #. TRANSLATORS: def IO.ANSI.blink_slow()
 #: lib/elixir/lib/io/ansi.ex:62
 msgid "Blink: Slow. Less than 150 per minute"
-msgstr ""
+msgstr "ブリンク: Slow. 150回/分未満"
 
 #. TRANSLATORS: def IO.ANSI.blink_rapid()
 #: lib/elixir/lib/io/ansi.ex:65
 msgid ""
 "Blink: Rapid. MS-DOS ANSI.SYS; 150 per minute or more; not widely supported"
-msgstr ""
+msgstr "Blink: Rapid. MS-DOS ANSI.SYS; 150回/分以上; 広くはサポートされていません"
 
 #. TRANSLATORS: defmacro Bitwise.bxor(left, right)
 #: lib/elixir/lib/bitwise.ex:90
 msgid "Bitwise xor.\n"
-msgstr ""
+msgstr "Bitwise xor.\n"
 
 #. TRANSLATORS: defmacro Bitwise.^^^(left, right)
 #: lib/elixir/lib/bitwise.ex:97
 msgid "Bitwise xor as operator.\n"
-msgstr ""
+msgstr "演算子としてのBitwise xorです。\n"
 
 #. TRANSLATORS: defmacro Bitwise.bor(left, right)
 #: lib/elixir/lib/bitwise.ex:76
@@ -23750,7 +23833,7 @@ msgstr ""
 #. TRANSLATORS: defmacro Bitwise.|||(left, right)
 #: lib/elixir/lib/bitwise.ex:83
 msgid "Bitwise or as operator.\n"
-msgstr ""
+msgstr "演算子としてのBitwise or です。\n"
 
 #. TRANSLATORS: defmacro Bitwise.bnot(expr)
 #: lib/elixir/lib/bitwise.ex:48
@@ -23760,17 +23843,17 @@ msgstr ""
 #. TRANSLATORS: defmacro Bitwise.~~~(expr)
 #: lib/elixir/lib/bitwise.ex:55
 msgid "Bitwise not as operator.\n"
-msgstr ""
+msgstr "演算子としてのBitwise notです。\n"
 
 #. TRANSLATORS: defmacro Bitwise.band(left, right)
 #: lib/elixir/lib/bitwise.ex:62
 msgid "Bitwise and.\n"
-msgstr ""
+msgstr "Bitwise and.\n"
 
 #. TRANSLATORS: defmacro Bitwise.&&&(left, right)
 #: lib/elixir/lib/bitwise.ex:69
 msgid "Bitwise and as operator.\n"
-msgstr ""
+msgstr "演算子としてのBitwise andです。\n"
 
 #. TRANSLATORS: def Kernel.+(value)
 #: lib/elixir/lib/kernel.ex:791
@@ -23785,6 +23868,15 @@ msgid ""
 "    1\n"
 "\n"
 msgstr ""
+"算術的単項プラスです。\n"
+"\n"
+"ガードテストで使えます。コンパイラによりインライン化されます。\n"
+"\n"
+"## 例\n"
+"\n"
+"    iex> +1\n"
+"    1\n"
+"\n"
 
 #. TRANSLATORS: def Kernel.-(value)
 #: lib/elixir/lib/kernel.ex:807
@@ -23799,6 +23891,15 @@ msgid ""
 "    -2\n"
 "\n"
 msgstr ""
+"算術的単項マイナスです。\n"
+"\n"
+"ガードテストで使えます。コンパイラによりインライン化されます。\n"
+"\n"
+"## 例\n"
+"\n"
+"    iex> -2\n"
+"    -2\n"
+"\n"
 
 #. TRANSLATORS: def Kernel.+(left, right)
 #: lib/elixir/lib/kernel.ex:759
@@ -23813,6 +23914,15 @@ msgid ""
 "    3\n"
 "\n"
 msgstr ""
+"算術的加算です。\n"
+"\n"
+"ガードテストで使えます。コンパイラによりインライン化されます。\n"
+"\n"
+"## 例\n"
+"\n"
+"    iex> 1 + 2\n"
+"    3\n"
+"\n"
 
 #. TRANSLATORS: def Kernel.*(left, right)
 #: lib/elixir/lib/kernel.ex:823
@@ -23827,6 +23937,15 @@ msgid ""
 "    2\n"
 "\n"
 msgstr ""
+"算術的乗算です。\n"
+"\n"
+"ガードテストで使えます。コンパイラによりインライン化されます。\n"
+"\n"
+"## 例\n"
+"\n"
+"    iex> 1 * 2\n"
+"    2\n"
+"\n"
 
 #. TRANSLATORS: def Kernel.-(left, right)
 #: lib/elixir/lib/kernel.ex:775
@@ -23841,6 +23960,15 @@ msgid ""
 "    -1\n"
 "\n"
 msgstr ""
+"算術的減算です。\n"
+"\n"
+"ガードテストで使えます。コンパイラによりインライン化されます。\n"
+"\n"
+"## 例\n"
+"\n"
+"    iex> 1 - 2\n"
+"    -1\n"
+"\n"
 
 #. TRANSLATORS: def Kernel./(left, right)
 #: lib/elixir/lib/kernel.ex:845
@@ -23861,26 +23989,41 @@ msgid ""
 "    2.0\n"
 "\n"
 msgstr ""
+"算術的除算です。\n"
+"\n"
+"結果は常に浮動少数点数です。自然数の除算と余りには、\n"
+"`div`と`rem`を使ってください。\n"
+"\n"
+"ガードテストで使えます。コンパイラによりインライン化されます。\n"
+"\n"
+"## 例\n"
+"\n"
+"    iex> 1 / 2\n"
+"    0.5\n"
+"\n"
+"    iex> 2 / 1\n"
+"    2.0\n"
+"\n"
 
 #. TRANSLATORS: defmacro Bitwise.bsr(left, right)
 #: lib/elixir/lib/bitwise.ex:118
 msgid "Arithmetic bitshift right.\n"
-msgstr ""
+msgstr "算術的右ビットシフトです。\n"
 
 #. TRANSLATORS: defmacro Bitwise.>>>(left, right)
 #: lib/elixir/lib/bitwise.ex:125
 msgid "Arithmetic bitshift right as operator.\n"
-msgstr ""
+msgstr "演算子としての算術的右ビットシフトです。\n"
 
 #. TRANSLATORS: defmacro Bitwise.bsl(left, right)
 #: lib/elixir/lib/bitwise.ex:104
 msgid "Arithmetic bitshift left.\n"
-msgstr ""
+msgstr "算術的左ビットシフトです。\n"
 
 #. TRANSLATORS: defmacro Bitwise.<<<(left, right)
 #: lib/elixir/lib/bitwise.ex:111
 msgid "Arithmetic bitshift left as operator.\n"
-msgstr ""
+msgstr "演算子としての算術的左ビットシフトです。\n"
 
 #. TRANSLATORS: defmacro Bitwise.__using__(options)
 #: lib/elixir/lib/bitwise.ex:31
@@ -23892,6 +24035,12 @@ msgid ""
 "  * `:skip_operators` - skip operators\n"
 "\n"
 msgstr ""
+"開発者に、彼らのプログラムで、\n"
+"このモジュールに以下のオプションを使うことを許します:\n"
+"\n"
+"  * `:only_operators` - 演算子のみインクルードします\n"
+"  * `:skip_operators` - 演算子をスキップします\n"
+"\n"
 
 #. TRANSLATORS: def StringIO.contents(pid)
 #: lib/elixir/lib/string_io.ex:54
@@ -23906,6 +24055,15 @@ msgid ""
 "    {\"in\", \"out\"}\n"
 "\n"
 msgstr ""
+"現在のバッファを返します。\n"
+"\n"
+"## 例\n"
+"\n"
+"    iex> {:ok, pid} = StringIO.open(\"in\")\n"
+"    iex> IO.write(pid, \"out\")\n"
+"    iex> StringIO.contents(pid)\n"
+"    {\"in\", \"out\"}\n"
+"\n"
 
 #. TRANSLATORS: Elixir.Enum Summary
 #: lib/elixir/lib/enum.ex:143
