@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: l 10n_elixir\n"
-"PO-Revision-Date: 2014-09-30 14:27+0900\n"
+"PO-Revision-Date: 2014-09-30 16:00+0900\n"
 "Last-Translator: 小田 照敬 <EMAIL@ADDRESS>\n"
 "Language-Team: Japanese\n"
 "Language: ja\n"
@@ -28430,6 +28430,41 @@ msgid ""
 "    depends on the error\n"
 "\n"
 msgstr ""
+"イベント`manager`へ新しいイベントハンドラを追加します。\n"
+"\n"
+"イベントマネージャは、イベントハンドラと内部ステートの初期化を\n"
+"するために、`args`で`init/1`コールバックを呼び出します。\n"
+"\n"
+"`init/1`が完全に成功したことを示す正しい値を返したら、イベントマネージャ\n"
+"はそのイベントハンドラを追加し、この関数は`:ok`を返します。もしコールバッ\n"
+"クが`reason`で失敗したり、`{:error, reason}`を返したら、イベントハンド\n"
+"ラは無視され、それぞれ、`{:EXIT, reason}`か`{:error, reason}`を返します。\n"
+"\n"
+"## リンクされたハンドラ\n"
+"\n"
+"ハンドラを追加するとき、`:link`オプションを`true`にすることができます。\n"
+"これは、イベントハンドラと呼び出し側プロセスをリンクすることを意味します。\n"
+"\n"
+"もし呼び出し側プロセスがあとで`reason`で終了したら、イベントマネージャは、\n"
+"引数`{:stop, reason}`で`terminate/2`コールバックを呼び出すことにより、\n"
+"イベントハンドラを削除しようとします。\n"
+"もしイベントハンドラがあとで削除されたら、イベントマネージャは\n"
+"`{:gen_event_EXIT, handler, reason}`メッセージを呼出し側プロセスへ\n"
+"送ります。reasonは以下のいずれかです:\n"
+"\n"
+"  * `:normal` - イベントハンドラが`remove_handler/3`の\n"
+"     呼び出しのために削除されたか、あるいは、`:remove_handler`が\n"
+"     コールバック関数から返されたとき\n"
+"\n"
+"  * `:shutdown` - イベントマネージャが終了することに\n"
+"    よって、イベントハンドラが削除たとき\n"
+"\n"
+"  * `{:swapped, new_handler, pid}` - 他のハンドラによって、\n"
+"    イベントハンドラのプロセスpidが置き換えられたとき\n"
+"\n"
+"  * a term - エラーの為にイベントハンドラが削除されたとき。\n"
+"    termはエラーに依存します\n"
+"\n"
 
 #. TRANSLATORS: def IO.ANSI.Docs.print_heading(heading, options \\ [])
 #: lib/elixir/lib/io/ansi/docs.ex:41
@@ -28438,6 +28473,9 @@ msgid ""
 "\n"
 "See `default_options/0` for docs on the supported options.\n"
 msgstr ""
+"ドキュメントのヘッド(即ち、関数のシグネチャ)をプリントします\n"
+"\n"
+"サポートされたオプションは`default_options/0`のドキュメントを参照してください。\n"
 
 #. TRANSLATORS: def IO.ANSI.Docs.print(doc, options \\ [])
 #: lib/elixir/lib/io/ansi/docs.ex:57
@@ -28447,6 +28485,10 @@ msgid ""
 "In addition to the printing string, takes a set of options\n"
 "defined in `default_options/1`.\n"
 msgstr ""
+"ドキュメントの本体をプリントします。\n"
+"\n"
+"プリントする文字列に加えて、`default_options/1`で定義された一連の\n"
+"オプションも取ります。\n"
 
 #. TRANSLATORS: def Kernel.div(left, right)
 #: lib/elixir/lib/kernel.ex:172
@@ -28463,16 +28505,27 @@ msgid ""
 "    2\n"
 "\n"
 msgstr ""
+"整数の除算を実行します。\n"
+"\n"
+"引数の一つが整数でないなら、エラーを上げます。\n"
+"\n"
+"ガードテストで使えます。コンパイラによりインライン化されます。\n"
+"\n"
+"## 例\n"
+"\n"
+"    iex> div(5, 2)\n"
+"    2\n"
+"\n"
 
 #. TRANSLATORS: def Macro.pipe(expr, call_args, position)
 #: lib/elixir/lib/macro.ex:74
 msgid "Pipes `expr` into the `call_args` at the given `position`.\n"
-msgstr ""
+msgstr "与えられた`position`の`call_args`へ`expr`をパイプします。\n"
 
 #. TRANSLATORS: def Macro.prewalk(ast, fun)
 #: lib/elixir/lib/macro.ex:152
 msgid "Performs a depth-first, pre-order traversal of quoted expressions.\n"
-msgstr ""
+msgstr "quoteされた式の、深さ優先行き掛け順(DFS,pre-order)探索を実行します。\n"
 
 #. TRANSLATORS: def Macro.prewalk(ast, acc, fun)
 #: lib/elixir/lib/macro.ex:161
@@ -28480,11 +28533,13 @@ msgid ""
 "Performs a depth-first, pre-order traversal of quoted expressions\n"
 "using an accumulator.\n"
 msgstr ""
+"quoteされた式をアキュムレータ付きで、深さ優先\n"
+"行き掛け順(DFS,pre-order)探索を実行します。\n"
 
 #. TRANSLATORS: def Macro.postwalk(ast, fun)
 #: lib/elixir/lib/macro.ex:205
 msgid "Performs a depth-first, post-order traversal of quoted expressions.\n"
-msgstr ""
+msgstr "quoteされた式の、深さ優先帰り掛け順(DFS,post-order)探索を実行します。\n"
 
 #. TRANSLATORS: def Macro.postwalk(ast, acc, fun)
 #: lib/elixir/lib/macro.ex:214
@@ -28492,6 +28547,8 @@ msgid ""
 "Performs a depth-first, post-order traversal of quoted expressions\n"
 "using an accumulator.\n"
 msgstr ""
+"quoteされた式をアキュムレータ付きで、深さ優先\n"
+"帰り掛け順(DFS,post-order)探索を実行します。\n"
 
 #. TRANSLATORS: def URI.decode(uri)
 #: lib/elixir/lib/uri.ex:236
@@ -28504,6 +28561,13 @@ msgid ""
 "    \"http://elixir-lang.org\"\n"
 "\n"
 msgstr ""
+"URIをパーセントアンエスケープします。\n"
+"\n"
+"## 例\n"
+"\n"
+"    iex> URI.decode(\"http%3A%2F%2Felixir-lang.org\")\n"
+"    \"http://elixir-lang.org\"\n"
+"\n"
 
 #. TRANSLATORS: def URI.encode(str, predicate \\ &(char_unescaped? / 1))
 #: lib/elixir/lib/uri.ex:194
@@ -28518,11 +28582,20 @@ msgid ""
 "    \"ftp://s-ite.tld/?value=put%20it+%D0%B9\"\n"
 "\n"
 msgstr ""
+"URIをパーセントエスケープします。\n"
+"文字が現状のまま残されるかどうかを決めるための1引数の`predicate`関数\n"
+"を受け付けます。\n"
+"\n"
+"## 例\n"
+"\n"
+"    iex> URI.encode(\"ftp://s-ite.tld/?value=put it+й\")\n"
+"    \"ftp://s-ite.tld/?value=put%20it+%D0%B9\"\n"
+"\n"
 
 #. TRANSLATORS: def container[key]
 #: lib/elixir/lib/access.ex:33
 msgid "Accesses the given key in the container.\n"
-msgstr ""
+msgstr "コンテナに与えられたキーでアクセスします。\n"
 
 #. TRANSLATORS: def Enum.partition(collection, fun)
 #: lib/elixir/lib/enum.ex:1214
