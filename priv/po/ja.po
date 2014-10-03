@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: l 10n_elixir\n"
-"PO-Revision-Date: 2014-10-03 19:43+0900\n"
+"PO-Revision-Date: 2014-10-03 19:45+0900\n"
 "Last-Translator: 小田 照敬 <EMAIL@ADDRESS>\n"
 "Language-Team: Japanese\n"
 "Language: ja\n"
@@ -23828,7 +23828,7 @@ msgstr "演算子としてのBitwise xorです。\n"
 #. TRANSLATORS: defmacro Bitwise.bor(left, right)
 #: lib/elixir/lib/bitwise.ex:76
 msgid "Bitwise or.\n"
-msgstr ""
+msgstr "Bitwise orです。\n"
 
 #. TRANSLATORS: defmacro Bitwise.|||(left, right)
 #: lib/elixir/lib/bitwise.ex:83
@@ -23838,7 +23838,7 @@ msgstr "演算子としてのBitwise or です。\n"
 #. TRANSLATORS: defmacro Bitwise.bnot(expr)
 #: lib/elixir/lib/bitwise.ex:48
 msgid "Bitwise not.\n"
-msgstr ""
+msgstr "Bitwise notです。\n"
 
 #. TRANSLATORS: defmacro Bitwise.~~~(expr)
 #: lib/elixir/lib/bitwise.ex:55
@@ -23848,7 +23848,7 @@ msgstr "演算子としてのBitwise notです。\n"
 #. TRANSLATORS: defmacro Bitwise.band(left, right)
 #: lib/elixir/lib/bitwise.ex:62
 msgid "Bitwise and.\n"
-msgstr "Bitwise and.\n"
+msgstr "Bitwise andです。\n"
 
 #. TRANSLATORS: defmacro Bitwise.&&&(left, right)
 #: lib/elixir/lib/bitwise.ex:69
