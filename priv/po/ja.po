@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: l 10n_elixir\n"
-"PO-Revision-Date: 2014-10-03 19:45+0900\n"
+"PO-Revision-Date: 2014-10-05 21:31+0900\n"
 "Last-Translator: 小田 照敬 <EMAIL@ADDRESS>\n"
 "Language-Team: Japanese\n"
 "Language: ja\n"
@@ -101,9 +101,8 @@ msgstr ""
 "てマップされた要素でソートされます。\n"
 "\n"
 "それが各の比較において要素ごとに一度だけ比較計算をするという点で\n"
-"`sort_by/3`は`sort/2`と違います。もし同じ関数が両方の要素で呼ばれているなら"
-"ば\n"
-"`sort_by/3`を使うことでよりコンパクトになります。\n"
+"`sort_by/3`は`sort/2`と違います。もし同じ関数が両方の要素で呼ばれている\n"
+"ならば`sort_by/3`を使うことでよりコンパクトになります。\n"
 "\n"
 "この技術は [Schwartzian\n"
 "Transform](https://en.wikipedia.org/wiki/Schwartzian_transform) として\n"
@@ -117,14 +116,12 @@ msgstr ""
 "\n"
 "デフォルトの `sorter` である `<=/2` を使います: \n"
 "\n"
-"    iex> Enum.sort_by [\"some\", \"kind\", \"of\", \"monster\"], "
-"&byte_size/1\n"
+"    iex> Enum.sort_by [\"some\", \"kind\", \"of\", \"monster\"], &byte_size/1\n"
 "    [\"of\", \"some\", \"kind\", \"monster\"]\n"
 "\n"
 "カスタム`sorter`として上書きます: \n"
 "\n"
-"    iex> Enum.sort_by [\"some\", \"kind\", \"of\", \"monster\"], "
-"&byte_size/1, &>=/2\n"
+"    iex> Enum.sort_by [\"some\", \"kind\", \"of\", \"monster\"], &byte_size/1, &>=/2\n"
 "    [\"monster\", \"some\", \"kind\", \"of\"]\n"
 "\n"
 
@@ -2845,9 +2842,8 @@ msgstr "`app_dir/1`の内側に与えられたパスを追加して返します�
 
 #. TRANSLATORS: def Protocol.consolidated?(protocol)
 #: lib/elixir/lib/protocol.ex:232
-#, fuzzy
 msgid "Returns true if the protocol was consolidated.\n"
-msgstr "プロトコルが合成されていればtrueを返します。\n"
+msgstr "プロトコルが合成(consolidate)されていればtrueを返します。\n"
 
 #. TRANSLATORS: def Exception.exception?(arg1)
 #: lib/elixir/lib/exception.ex:37
@@ -4516,7 +4512,6 @@ msgstr ""
 
 #. TRANSLATORS: def Kernel.LexicalTracker.remotes(arg)
 #: lib/elixir/lib/kernel/lexical_tracker.ex:20
-#, fuzzy
 msgid "Returns all remotes linked to in this lexical scope.\n"
 msgstr "このレキシカルスコープの中につながる全てのリモートを返します。\n"
 
@@ -4573,7 +4568,6 @@ msgstr ""
 
 #. TRANSLATORS: def Module.LocalsTracker.reachable(ref)
 #: lib/elixir/lib/module/locals_tracker.ex:67
-#, fuzzy
 msgid ""
 "Returns all locals that are reachable.\n"
 "\n"
@@ -7326,7 +7320,6 @@ msgstr "これはElixirブートプロセスにより実行されるAPIです。
 
 #. TRANSLATORS: def Supervisor.terminate_child(supervisor, pid_or_child_id)
 #: lib/elixir/lib/supervisor.ex:293
-#, fuzzy
 msgid ""
 "Terminates the given pid or child id.\n"
 "\n"
@@ -12553,7 +12546,6 @@ msgstr ""
 
 #. TRANSLATORS: def OptionParser.to_argv(enum)
 #: lib/elixir/lib/option_parser.ex:251
-#, fuzzy
 msgid ""
 "Receives a key-value enumerable and convert it to argv.\n"
 "\n"
@@ -12570,7 +12562,7 @@ msgid ""
 "    [\"--bool\", \"--no-bool\"]\n"
 "\n"
 msgstr ""
-"キー-値 enumerableを受け取り、argvに変換します。\n"
+"キーバリュー enumerableを受け取り、argvに変換します。\n"
 "\n"
 "キーはアトムでなくてはなりません。値がnilとなるキーは\n"
 "捨てられ、値が真偽値となるキーは`--key`あるいは`--no-key`に\n"
@@ -24264,7 +24256,7 @@ msgstr ""
 "    [a: 2, b: 4]\n"
 "\n"
 "\n"
-"`Enum`文字ゅーるは熱心(eager)であることに注意してください。\n"
+"`Enum`モジュールは熱心(eager)であることに注意してください。\n"
 "それらは与えられたコレクションの列挙を常に始めます。\n"
 "`Stream`モジュールはコレクションの遅延列挙と無限のストリームを提供します。\n"
 "\n"
@@ -29566,7 +29558,7 @@ msgstr "並列にファイルをrequireすることに責任をもつモジュ�
 #. TRANSLATORS: Elixir.Kernel.ParallelCompiler Summary
 #: lib/elixir/lib/kernel/parallel_compiler.ex:1
 msgid "A module responsible for compiling files in parallel.\n"
-msgstr "並列にファイルをコンパイルすることに責任を持つ文字ゅーるです。\n"
+msgstr "並列にファイルをコンパイルすることに責任を持つモジュールです。\n"
 
 #. TRANSLATORS: Elixir.Application Summary
 #: lib/elixir/lib/application.ex:1
