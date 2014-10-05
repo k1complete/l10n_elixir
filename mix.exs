@@ -12,7 +12,7 @@ defmodule L10nElixir.Mixfile do
   #
   # Type `mix help compile.app` for more information
   def application do
-    [applications: [:logger]]
+    [applications: [:exgettext, :l10n_iex, :logger]]
   end
 
   # Dependencies can be hex.pm packages:
@@ -25,6 +25,9 @@ defmodule L10nElixir.Mixfile do
   #
   # Type `mix help deps` for more examples and options
   defp deps do
-    [{:exgettext, path: "../"}]
+    [
+	{:exgettext, path: "../"},
+	{:l10n_iex, path: "../l10n_iex"}
+    ]
   end
 end
