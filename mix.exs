@@ -3,8 +3,8 @@ defmodule L10nElixir.Mixfile do
 
   def project do
     [app: :l10n_elixir,
-     version: "0.0.2",
-     elixir: "~> 1.0.0",
+     version: "0.0.3",
+     elixir: "~> 1.0.1",
      compilers: Mix.compilers ++ [:po],
      deps: deps]
   end
