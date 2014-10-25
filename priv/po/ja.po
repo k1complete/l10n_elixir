@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: l 10n_elixir\n"
-"PO-Revision-Date: 2014-10-13 09:26+0900\n"
+"PO-Revision-Date: 2014-10-25 22:44+0900\n"
 "Last-Translator: 小田 照敬 <EMAIL@ADDRESS>\n"
 "Language-Team: Japanese\n"
 "Language: ja\n"
@@ -139,7 +139,7 @@ msgstr ""
 "\n"
 
 #. TRANSLATORS: def File.touch(path, time \\ :calendar.local_time())
-#: lib/file.ex:314
+#: lib/file.ex:320
 msgid ""
 "Updates modification time (mtime) and access time (atime) of\n"
 "the given file. File is created if it doesn’t exist.\n"
@@ -190,7 +190,7 @@ msgstr ""
 "\n"
 
 #. TRANSLATORS: def GenEvent.ack_notify(manager, event)
-#: lib/gen_event.ex:428
+#: lib/gen_event.ex:425
 msgid ""
 "Sends a ack event notification to the event `manager`.\n"
 "\n"
@@ -262,7 +262,7 @@ msgstr ""
 "この関数を使ってはいけません。\n"
 
 #. TRANSLATORS: def File.write_stat(path, stat, opts \\ [])
-#: lib/file.ex:291
+#: lib/file.ex:297
 msgid ""
 "Writes the given `File.Stat` back to the filesystem at the given\n"
 "path. Returns `:ok` or `{:error, reason}`.\n"
@@ -281,7 +281,7 @@ msgstr ""
 "引数はchardataであることを期待しています。\n"
 
 #. TRANSLATORS: def File.write(path, content, modes \\ [])
-#: lib/file.ex:622
+#: lib/file.ex:628
 msgid ""
 "Writes `content` to the file `path`.\n"
 "\n"
@@ -339,7 +339,7 @@ msgstr ""
 "そのほか有効なオプションについて`File.open/2`をチェックしてください\n"
 
 #. TRANSLATORS: defmacro Kernel.|>(left, right)
-#: lib/kernel.ex:2371
+#: lib/kernel.ex:2372
 msgid ""
 "`|>` is the pipe operator.\n"
 "\n"
@@ -435,7 +435,7 @@ msgstr ""
 "\n"
 
 #. TRANSLATORS: defmacro Kernel.use(module, opts \\ [])
-#: lib/kernel.ex:3256
+#: lib/kernel.ex:3259
 msgid ""
 "`use` is a simple mechanism for using a given module into\n"
 "the current context.\n"
@@ -746,19 +746,19 @@ msgstr ""
 "\n"
 
 #. TRANSLATORS: def File.ls!(path \\ ".")
-#: lib/file.ex:1086
+#: lib/file.ex:1092
 msgid ""
 "The same as `ls/1` but raises `File.Error`\n"
 "in case of an error.\n"
 msgstr "`ls/1`と同じですが、エラーのとき`File.Error`例外を上げます。\n"
 
 #. TRANSLATORS: def File.cwd!()
-#: lib/file.ex:1017
+#: lib/file.ex:1023
 msgid "The same as `cwd/0`, but raises an exception if it fails.\n"
 msgstr "`cwd/0`と同じですが、失敗すると例外を上げます。\n"
 
 #. TRANSLATORS: def File.cp_r!(source, destination, callback \\ fn _, _ -> true end)
-#: lib/file.ex:503
+#: lib/file.ex:509
 msgid ""
 "The same as `cp_r/3`, but raises `File.CopyError` if it fails.\n"
 "Returns the list of copied files otherwise.\n"
@@ -767,7 +767,7 @@ msgstr ""
 "さもなければコピーされたファイルのリストを返します。\n"
 
 #. TRANSLATORS: def File.cp!(source, destination, callback \\ fn _, _ -> true end)
-#: lib/file.ex:432
+#: lib/file.ex:438
 msgid ""
 "The same as `cp/3`, but raises `File.CopyError` if it fails.\n"
 "Returns the list of copied files otherwise.\n"
@@ -776,7 +776,7 @@ msgstr ""
 "さもなければコピーされたファイルのリストを返します。\n"
 
 #. TRANSLATORS: def File.copy!(source, destination, bytes_count \\ :infinity)
-#: lib/file.ex:386
+#: lib/file.ex:392
 msgid ""
 "The same as `copy/3` but raises an `File.CopyError` if it fails.\n"
 "Returns the `bytes_copied` otherwise.\n"
@@ -785,7 +785,7 @@ msgstr ""
 "さもなければ、`bytes_copied`(コピーされたバイト数)を返します。\n"
 
 #. TRANSLATORS: def File.cd!(path)
-#: lib/file.ex:1039
+#: lib/file.ex:1045
 msgid "The same as `cd/1`, but raises an exception if it fails.\n"
 msgstr "`cd/1`と同じですが、失敗すると例外を上げます。\n"
 
@@ -903,7 +903,7 @@ msgstr ""
 "\n"
 
 #. TRANSLATORS: def File.rm(path)
-#: lib/file.ex:664
+#: lib/file.ex:670
 msgid ""
 "Tries to delete the file `path`.\n"
 "\n"
@@ -953,7 +953,7 @@ msgstr ""
 "\n"
 
 #. TRANSLATORS: def File.rmdir(path)
-#: lib/file.ex:721
+#: lib/file.ex:727
 msgid ""
 "Tries to delete the dir at `path`.\n"
 "Returns `:ok` if successful, or `{:error, reason}` if an error occurs.\n"
@@ -1432,7 +1432,7 @@ msgstr ""
 "無い場合、`nil`を返すかわりに、`RuntimeError`を上げます。\n"
 
 #. TRANSLATORS: defmacro Kernel.var!(var, context \\ nil)
-#: lib/kernel.ex:2527
+#: lib/kernel.ex:2528
 msgid ""
 "When used inside quoting, marks that the variable should\n"
 "not be hygienized. The argument can be either a variable\n"
@@ -1447,7 +1447,7 @@ msgstr ""
 "更なる情報は、`Kernel.SpecialForms.quote/2`をチェックしてください。\n"
 
 #. TRANSLATORS: defmacro Kernel.alias!(alias)
-#: lib/kernel.ex:2557
+#: lib/kernel.ex:2558
 msgid ""
 "When used inside quoting, marks that the alias should not\n"
 "be hygienezed. This means the alias will be expanded when\n"
@@ -1542,7 +1542,7 @@ msgstr ""
 "で、`name`と`value`はどちらも文字列として与えられます。\n"
 
 #. TRANSLATORS: def GenEvent.notify(manager, event)
-#: lib/gen_event.ex:379
+#: lib/gen_event.ex:376
 msgid ""
 "Sends an event notification to the event `manager`.\n"
 "\n"
@@ -1868,7 +1868,7 @@ msgstr ""
 "エージェントが与えられた`timeout`以内に停止されたら`:ok`を返します。\n"
 
 #. TRANSLATORS: def StringIO.close(pid)
-#: lib/string_io.ex:70
+#: lib/string_io.ex:88
 msgid ""
 "Stops the IO device and returns remaining buffers.\n"
 "\n"
@@ -1974,7 +1974,7 @@ msgstr ""
 "ことに注意してください。\n"
 
 #. TRANSLATORS: def GenEvent.start(options \\ [])
-#: lib/gen_event.ex:265
+#: lib/gen_event.ex:262
 msgid ""
 "Starts an event manager process without links (outside of a supervision "
 "tree).\n"
@@ -2655,7 +2655,7 @@ msgstr ""
 "\n"
 
 #. TRANSLATORS: def File.open(path, modes, function)
-#: lib/file.ex:946
+#: lib/file.ex:952
 msgid ""
 "Similar to `open/2` but expects a function as last argument.\n"
 "\n"
@@ -2746,7 +2746,7 @@ msgid "Shortcut to `chunk(coll, n, n)`.\n"
 msgstr "`chunk(coll, n, n)`へのショートカットです。\n"
 
 #. TRANSLATORS: def File.cd(path)
-#: lib/file.ex:1031
+#: lib/file.ex:1037
 msgid ""
 "Sets the current working directory.\n"
 "\n"
@@ -3068,7 +3068,7 @@ msgid "Sets primary (default) font"
 msgstr "プライマリ(default)フォントをセットします。"
 
 #. TRANSLATORS: def GenEvent.sync_notify(manager, event)
-#: lib/gen_event.ex:413
+#: lib/gen_event.ex:410
 msgid ""
 "Sends a sync event notification to the event `manager`.\n"
 "\n"
@@ -3376,7 +3376,7 @@ msgstr ""
 "コンパイラによりインライン化されます。\n"
 
 #. TRANSLATORS: def File.rmdir!(path)
-#: lib/file.ex:729
+#: lib/file.ex:735
 msgid ""
 "Same as `rmdir/1`, but raises an exception in case of failure. Otherwise `:"
 "ok`.\n"
@@ -3385,7 +3385,7 @@ msgstr ""
 "返します。\n"
 
 #. TRANSLATORS: def File.rm_rf!(path)
-#: lib/file.ex:832
+#: lib/file.ex:838
 msgid ""
 "Same as `rm_rf/1` but raises `File.Error` in case of failures,\n"
 "otherwise the list of files or directories removed.\n"
@@ -3394,7 +3394,7 @@ msgstr ""
 "さもなくば削除されたファイルやディレクトリのリストを返します。\n"
 
 #. TRANSLATORS: def File.rm!(path)
-#: lib/file.ex:698
+#: lib/file.ex:704
 msgid ""
 "Same as `rm/1`, but raises an exception in case of failure. Otherwise `:"
 "ok`.\n"
@@ -3403,7 +3403,7 @@ msgstr ""
 "ます。\n"
 
 #. TRANSLATORS: def File.open!(path, modes, function)
-#: lib/file.ex:979
+#: lib/file.ex:985
 msgid ""
 "Same as `open/3` but raises an error if file could not be opened.\n"
 "\n"
@@ -3414,7 +3414,7 @@ msgstr ""
 "さもないと関数の実行結果を返します。\n"
 
 #. TRANSLATORS: def File.open!(path, modes \\ [])
-#: lib/file.ex:964
+#: lib/file.ex:970
 msgid ""
 "Same as `open/2` but raises an error if file could not be opened.\n"
 "\n"
@@ -3443,7 +3443,7 @@ msgstr ""
 "`:ok`を返します。\n"
 
 #. TRANSLATORS: def File.chown!(path, uid)
-#: lib/file.ex:1198
+#: lib/file.ex:1204
 msgid ""
 "Same as `chown/2`, but raises an exception in case of failure. Otherwise `:"
 "ok`.\n"
@@ -3452,7 +3452,7 @@ msgstr ""
 "`:ok`を返します。\n"
 
 #. TRANSLATORS: def File.chmod!(path, mode)
-#: lib/file.ex:1152
+#: lib/file.ex:1158
 msgid ""
 "Same as `chmod/2`, but raises an exception in case of failure. Otherwise `:"
 "ok`.\n"
@@ -3461,7 +3461,7 @@ msgstr ""
 "`:ok`を返します。\n"
 
 #. TRANSLATORS: def File.chgrp!(path, gid)
-#: lib/file.ex:1175
+#: lib/file.ex:1181
 msgid ""
 "Same as `chgrp/2`, but raises an exception in case of failure. Otherwise `:"
 "ok`.\n"
@@ -3638,7 +3638,7 @@ msgstr ""
 "コンパイラによりインライン化されます。\n"
 
 #. TRANSLATORS: def Regex.split(regex, string, options \\ [])
-#: lib/regex.ex:368
+#: lib/regex.ex:369
 msgid ""
 "Splits the given target into the number of parts specified.\n"
 "\n"
@@ -3843,7 +3843,7 @@ msgid "Sets background color to black"
 msgstr "背景色を黒にセットします"
 
 #. TRANSLATORS: def Kernel.macro_exported?(module, macro, arity)
-#: lib/kernel.ex:2398
+#: lib/kernel.ex:2399
 msgid ""
 "Returns true if the `module` is loaded and contains a\n"
 "public `macro` with the given `arity`, otherwise false.\n"
@@ -3860,7 +3860,7 @@ msgstr ""
 "をチェックしてください。\n"
 
 #. TRANSLATORS: def Kernel.function_exported?(module, function, arity)
-#: lib/kernel.ex:2385
+#: lib/kernel.ex:2386
 msgid ""
 "Returns true if the `module` is loaded and contains a\n"
 "public `function` with the given `arity`, otherwise false.\n"
@@ -4172,7 +4172,7 @@ msgstr ""
 "\n"
 
 #. TRANSLATORS: def Regex.re_pattern(regex)
-#: lib/regex.ex:243
+#: lib/regex.ex:244
 msgid "Returns the underlying `re_pattern` in the regular expression.\n"
 msgstr "正規表現で根底にある`re_pattern`を返します。\n"
 
@@ -4255,7 +4255,7 @@ msgstr ""
 "ます。\n"
 
 #. TRANSLATORS: def Regex.source(regex)
-#: lib/regex.ex:257
+#: lib/regex.ex:258
 msgid ""
 "Returns the regex source as a binary.\n"
 "\n"
@@ -4274,7 +4274,7 @@ msgstr ""
 "\n"
 
 #. TRANSLATORS: def Regex.opts(regex)
-#: lib/regex.ex:271
+#: lib/regex.ex:272
 msgid ""
 "Returns the regex options as a string.\n"
 "\n"
@@ -4913,7 +4913,7 @@ msgstr ""
 "\n"
 
 #. TRANSLATORS: def Regex.named_captures(regex, string, options \\ [])
-#: lib/regex.ex:232
+#: lib/regex.ex:233
 msgid ""
 "Returns the given captures as a map or `nil` if no captures are\n"
 "found. The option `:return` can be set to `:index` to get indexes\n"
@@ -5342,7 +5342,7 @@ msgstr ""
 "\n"
 
 #. TRANSLATORS: defmacro Kernel.binding(context \\ nil)
-#: lib/kernel.ex:2099
+#: lib/kernel.ex:2100
 msgid ""
 "Returns the binding for the given context as a keyword list.\n"
 "\n"
@@ -5388,7 +5388,7 @@ msgstr ""
 "\n"
 
 #. TRANSLATORS: def File.ls(path \\ ".")
-#: lib/file.ex:1074
+#: lib/file.ex:1080
 msgid ""
 "Returns list of files in the given directory.\n"
 "\n"
@@ -5566,7 +5566,7 @@ msgstr ""
 "\n"
 
 #. TRANSLATORS: def File.stat(path, opts \\ [])
-#: lib/file.ex:263
+#: lib/file.ex:269
 msgid ""
 "Returns information about the `path`. If it exists, it\n"
 "returns a `{:ok, info}` tuple, where info is a\n"
@@ -5577,7 +5577,13 @@ msgid ""
 "\n"
 "The accepted options are:\n"
 "\n"
-"  * `:time` - `:local | :universal | :posix`; default: `:local`\n"
+"  * `:time` - configures how the file timestamps are returned\n"
+"\n"
+"The values for `:time` can be:\n"
+"\n"
+"  * `:local` - returns a `{date, time}` tuple using the machine time\n"
+"  * `:universal` - returns a `{date, time}` tuple in UTC\n"
+"  * `:posix` - returns the time as integer seconds since epoch\n"
 "\n"
 msgstr ""
 "`path`についての、情報を返します。もしあれば、infoが`File.Stat`構造体と\n"
@@ -5588,7 +5594,14 @@ msgstr ""
 "\n"
 "以下のオプションを受け付けます:\n"
 "\n"
-"  * `:time` - `:local | :universal | :posix`; default: `:local`\n"
+"  * `:time` - ファイルのタイムタンプを\n"
+"             どのように返すかを構成します\n"
+"\n"
+"`:time`の値は以下のものが可能です:\n"
+"\n"
+"  * `:local` - マシンタイムを使い、`{date, time}`タプルを返します。\n"
+"  * `:universal` - UTCの`{date, time}`タプルを返します。\n"
+"  * `:posix` - epochからの整数の秒数として時刻を返します。\n"
 "\n"
 
 #. TRANSLATORS: def String.codepoints(string)
@@ -5903,7 +5916,7 @@ msgid ""
 "  * `size/1`\n"
 "\n"
 "All functions, except `reduce/3`, are required by the Dict behaviour.\n"
-"`reduce/3` must be implemtented as per the Enumerable protocol.\n"
+"`reduce/3` must be implemented as per the Enumerable protocol.\n"
 "\n"
 "Based on these functions, `Dict` generates default implementations\n"
 "for the following functions:\n"
@@ -7073,9 +7086,9 @@ msgid ""
 "    File.read!(\"invalid.txt\")\n"
 "    #=> raises File.Error\n"
 "\n"
-"In general, a developer should use the former in case he wants\n"
+"In general, a developer should use the former in case they want\n"
 "to react if the file does not exist. The latter should be used\n"
-"when the developer expects his software to fail in case the\n"
+"when the developer expects their software to fail in case the\n"
 "file cannot be read (i.e. it is literally an exception).\n"
 "\n"
 "## Processes and raw files\n"
@@ -7426,7 +7439,7 @@ msgstr ""
 "キーの比較は`===`演算子を使って実装されなければなりません。\n"
 
 #. TRANSLATORS: def GenEvent.stop(manager)
-#: lib/gen_event.ex:513
+#: lib/gen_event.ex:510
 msgid ""
 "Terminates the event `manager`.\n"
 "\n"
@@ -7439,7 +7452,7 @@ msgstr ""
 "それぞれの`terminate(:stop, ...)`を呼び出します。\n"
 
 #. TRANSLATORS: def GenEvent.start_link(options \\ [])
-#: lib/gen_event.ex:255
+#: lib/gen_event.ex:252
 msgid ""
 "Starts an event manager linked to the current process.\n"
 "\n"
@@ -7823,7 +7836,7 @@ msgid "Terminates the child with the given `pid`.\n"
 msgstr "与えられた`pid`の子プロセスを終了します。\n"
 
 #. TRANSLATORS: def URI.query_decoder(q)
-#: lib/uri.ex:114
+#: lib/uri.ex:116
 msgid ""
 "Returns an iterator function over the query string that decodes\n"
 "the query string in steps.\n"
@@ -8197,7 +8210,7 @@ msgstr ""
 "\n"
 
 #. TRANSLATORS: def URI.default_port(scheme)
-#: lib/uri.ex:25
+#: lib/uri.ex:27
 msgid ""
 "Returns the default port for a given scheme.\n"
 "\n"
@@ -8726,7 +8739,7 @@ msgstr ""
 "\n"
 
 #. TRANSLATORS: def GenEvent.stream(manager, options \\ [])
-#: lib/gen_event.ex:298
+#: lib/gen_event.ex:295
 msgid ""
 "Returns a stream that consumes events from the `manager`.\n"
 "\n"
@@ -8757,7 +8770,7 @@ msgstr ""
 "\n"
 
 #. TRANSLATORS: defmacro Kernel...(first, last)
-#: lib/kernel.ex:2250
+#: lib/kernel.ex:2251
 msgid ""
 "Returns a range with the specified start and end.\n"
 "Includes both ends.\n"
@@ -9526,7 +9539,7 @@ msgid ""
 msgstr "`register/2`を使って登録された、名前のリストを返します。\n"
 
 #. TRANSLATORS: def Regex.names(regex)
-#: lib/regex.ex:285
+#: lib/regex.ex:286
 msgid ""
 "Returns a list of names in the regex.\n"
 "\n"
@@ -9818,6 +9831,35 @@ msgstr ""
 "    '3FF'\n"
 "\n"
 
+#. TRANSLATORS: defmacro Kernel.is_nil(term)
+#: lib/kernel.ex:1894
+msgid ""
+"Returns `true` if `term` is nil; otherwise returns `false`.\n"
+"\n"
+"Allowed in guard clauses.\n"
+"\n"
+"## Examples\n"
+"\n"
+"    iex> is_nil(1)\n"
+"    false\n"
+"\n"
+"    iex> is_nil(nil)\n"
+"    true\n"
+"\n"
+msgstr ""
+"`term`がnilなら`true`を、さもなければ`false`を返します。\n"
+"\n"
+"ガード節で使えます。\n"
+"\n"
+"## 例\n"
+"\n"
+"    iex> is_nil(1)\n"
+"    false\n"
+"\n"
+"    iex> is_nil(nil)\n"
+"    true\n"
+"\n"
+
 #. TRANSLATORS: def Kernel.is_boolean(term)
 #: lib/kernel.ex:291
 msgid ""
@@ -10003,7 +10045,7 @@ msgstr ""
 "ガード中のテストで使えます。コンパイラによりインライン化されます。\n"
 
 #. TRANSLATORS: def Regex.match?(regex, string)
-#: lib/regex.ex:157
+#: lib/regex.ex:158
 msgid ""
 "Returns a boolean indicating whether there was a match or not.\n"
 "\n"
@@ -10239,7 +10281,7 @@ msgid "Sets alternative font 1"
 msgstr "選択肢フォント1にセットします。"
 
 #. TRANSLATORS: def Module.split(module)
-#: lib/module.ex:854
+#: lib/module.ex:853
 msgid ""
 "Split the given module name into binary parts.\n"
 "\n"
@@ -10260,7 +10302,7 @@ msgstr ""
 "\n"
 
 #. TRANSLATORS: def Regex.run(regex, string, options \\ [])
-#: lib/regex.ex:201
+#: lib/regex.ex:202
 msgid ""
 "Runs the regular expression against the given string until the first match.\n"
 "It returns a list with all captures or `nil` if no match occurred.\n"
@@ -10423,8 +10465,8 @@ msgid ""
 "\n"
 "## Examples\n"
 "\n"
-"    iex> String.graphemes(\"Ā̀stute\")\n"
-"    [\"Ā̀\",\"s\",\"t\",\"u\",\"t\",\"e\"]\n"
+"    iex> String.graphemes(\"Ńaïve\")\n"
+"    [\"Ń\", \"a\", \"ï\", \"v\", \"e\"]\n"
 "\n"
 msgstr ""
 "[Unicode Text Segmentation](http://www.unicode.org/reports/tr29/)\n"
@@ -10433,8 +10475,8 @@ msgstr ""
 "\n"
 "## 例\n"
 "\n"
-"    iex> String.graphemes(\"Ā̀stute\")\n"
-"    [\"Ā̀\",\"s\",\"t\",\"u\",\"t\",\"e\"]\n"
+"    iex> String.graphemes(\"Ńaïve\")\n"
+"    [\"Ń\", \"a\", \"ï\", \"v\", \"e\"]\n"
 "\n"
 
 #. TRANSLATORS: def System.put_env(dict)
@@ -10645,7 +10687,7 @@ msgstr ""
 "い。\n"
 
 #. TRANSLATORS: def File.write_stat!(path, stat, opts \\ [])
-#: lib/file.ex:300
+#: lib/file.ex:306
 msgid ""
 "Same as `write_stat/3` but raises an exception if it fails.\n"
 "Returns `:ok` otherwise.\n"
@@ -10654,7 +10696,7 @@ msgstr ""
 "さもなくば`:ok`を返します。\n"
 
 #. TRANSLATORS: def File.write!(path, content, modes \\ [])
-#: lib/file.ex:630
+#: lib/file.ex:636
 msgid ""
 "Same as `write/3` but raises an exception if it fails, returns `:ok` "
 "otherwise.\n"
@@ -10663,7 +10705,7 @@ msgstr ""
 "返します。\n"
 
 #. TRANSLATORS: def File.touch!(path, time \\ :calendar.local_time())
-#: lib/file.ex:334
+#: lib/file.ex:340
 msgid ""
 "Same as `touch/2` but raises an exception if it fails.\n"
 "Returns `:ok` otherwise.\n"
@@ -10672,7 +10714,7 @@ msgstr ""
 "`:ok`を返します。\n"
 
 #. TRANSLATORS: def File.stat!(path, opts \\ [])
-#: lib/file.ex:277
+#: lib/file.ex:283
 msgid ""
 "Same as `stat/2` but returns the `File.Stat` directly and\n"
 "throws `File.Error` if an error is returned.\n"
@@ -10681,7 +10723,7 @@ msgstr ""
 "`File.Errorを投げます。\n"
 
 #. TRANSLATORS: def File.stream!(path, modes \\ [], line_or_bytes \\ :line)
-#: lib/file.ex:1133
+#: lib/file.ex:1139
 msgid ""
 "Returns a `File.Stream` for the given `path` with the given `modes`.\n"
 "\n"
@@ -10978,7 +11020,7 @@ msgstr ""
 "`[]`が使われなければならない。\n"
 
 #. TRANSLATORS: def GenEvent.remove_handler(manager, handler, args)
-#: lib/gen_event.ex:463
+#: lib/gen_event.ex:460
 msgid ""
 "Removes an event handler from the event `manager`.\n"
 "\n"
@@ -10994,7 +11036,7 @@ msgstr ""
 "ます。\n"
 
 #. TRANSLATORS: def GenEvent.call(manager, handler, request, timeout \\ 5000)
-#: lib/gen_event.ex:444
+#: lib/gen_event.ex:441
 msgid ""
 "Makes a synchronous call to the event `handler` installed in `manager`.\n"
 "\n"
@@ -11235,7 +11277,7 @@ msgstr ""
 "funcは囲んでいる関数の名前です。無名関数を、func/airtyに変換します。\n"
 
 #. TRANSLATORS: def File.rm_rf(path)
-#: lib/file.ex:757
+#: lib/file.ex:763
 msgid ""
 "Remove files and directories recursively at the given `path`.\n"
 "Symlinks are not followed but simply removed, non-existing\n"
@@ -11544,7 +11586,7 @@ msgstr ""
 "\n"
 
 #. TRANSLATORS: def Module.register_attribute(module, new, opts)
-#: lib/module.ex:830
+#: lib/module.ex:829
 msgid ""
 "Registers an attribute. By registering an attribute, a developer\n"
 "is able to customize how Elixir will store and accumulate the\n"
@@ -11773,7 +11815,7 @@ msgstr ""
 "\n"
 
 #. TRANSLATORS: def Module.delete_attribute(module, key)
-#: lib/module.ex:792
+#: lib/module.ex:791
 msgid ""
 "Deletes all attributes that match the given key.\n"
 "\n"
@@ -11843,7 +11885,8 @@ msgid ""
 "the\n"
 "    first newline, though the matched text may continue over the newline\n"
 "\n"
-"  * `ungreedy` (r) - inverts the \"greediness\" of the regexp\n"
+"  * `ungreedy` (U) - inverts the \"greediness\" of the regexp\n"
+"    (the previous `r` option is deprecated in favor of `U`)\n"
 "\n"
 "The options not available are:\n"
 "\n"
@@ -11921,11 +11964,11 @@ msgstr ""
 "     そして、`#`でコメントを区切るのを許します。\n"
 "\n"
 "  * `firstline` (f) - マッチしたテキストが改行を越えて続くかもしれないが、\n"
-"    先頭固定ではないパターンでも、最初の改行あるいはその前でマッチすること"
-"を\n"
+"    先頭固定ではないパターンでも、最初の改行あるいはその前でマッチすることを\n"
 "    強制します。\n"
 "\n"
-"  * `ungreedy` (r) - 正規表現の\"欲張り\"を反転します。\n"
+"  * `ungreedy` (U) - 正規表現の\"欲張り\"を反転します。\n"
+"     (以前の`r`オプションはdeprecatedで、`U`を使ってください)\n"
 "\n"
 "有効ではないオプションは以下の通りです:\n"
 "\n"
@@ -11945,11 +11988,9 @@ msgstr ""
 "     (これはデフォルトです)\n"
 "\n"
 "  * `:first` - 常に文字列の部分が完全にマッチした最初のサブパターンだけ\n"
-"    キャプチャします; 全ての明確にキャプチャされたサブパターンは放棄されま"
-"す\n"
+"    キャプチャします; 全ての明確にキャプチャされたサブパターンは放棄されます\n"
 "\n"
-"  * `:all_but_first`- 最初のサブパターン以外、すなわち全ての明確にキャプチャ"
-"された\n"
+"  * `:all_but_first`- 最初のサブパターン以外、すなわち全ての明確にキャプチャされた\n"
 "    サブパターンで、文字列の完全なマッチしている部分ではないものです\n"
 "\n"
 "  * `:none` - 全てのサブパターン返しません\n"
@@ -11987,7 +12028,7 @@ msgstr ""
 "関数は引数としてexitステータスコードを受け取らなくてはなりません。\n"
 
 #. TRANSLATORS: def URI.default_port(scheme, port)
-#: lib/uri.ex:61
+#: lib/uri.ex:63
 msgid ""
 "Registers a scheme with a default port.\n"
 "\n"
@@ -12296,7 +12337,7 @@ msgid "Receives a stacktrace entry and formats it into a string.\n"
 msgstr "スタックトレースエントリを受け取り、文字列にフォーマットします。\n"
 
 #. TRANSLATORS: def Regex.replace(regex, string, replacement, options \\ [])
-#: lib/regex.ex:454
+#: lib/regex.ex:455
 msgid ""
 "Receives a regex, a binary and a replacement, returns a new\n"
 "binary where the all matches are replaced by replacement.\n"
@@ -13109,7 +13150,7 @@ msgid "Default background color"
 msgstr "背景色をデフォルトに戻す"
 
 #. TRANSLATORS: defmacro Kernel.defprotocol(name, list2)
-#: lib/kernel.ex:3172
+#: lib/kernel.ex:3175
 msgid ""
 "Defines a protocol.\n"
 "\n"
@@ -13758,7 +13799,7 @@ msgstr ""
 "標準の`Kernel.def/*`マクロが取り替えられます。\n"
 
 #. TRANSLATORS: defmacro Kernel.defmodule(alias, list2)
-#: lib/kernel.ex:2617
+#: lib/kernel.ex:2618
 msgid ""
 "Defines a module given by name with the given contents.\n"
 "\n"
@@ -13852,7 +13893,7 @@ msgstr ""
 "ないし、自動的なエイリアスのセットアップもしません。\n"
 
 #. TRANSLATORS: defmacro Kernel.defmacro(call, expr \\ nil)
-#: lib/kernel.ex:2801
+#: lib/kernel.ex:2802
 msgid ""
 "Defines a macro with the given name and contents.\n"
 "\n"
@@ -13891,7 +13932,7 @@ msgstr ""
 "\n"
 
 #. TRANSLATORS: defmacro Kernel.defmacrop(call, expr \\ nil)
-#: lib/kernel.ex:2811
+#: lib/kernel.ex:2812
 msgid ""
 "Defines a macro that is private. Private macros are\n"
 "only accessible from the same module in which they are defined.\n"
@@ -13904,7 +13945,7 @@ msgstr ""
 "詳細は `defmacro/2` をチェックしてください。\n"
 
 #. TRANSLATORS: defmacro Kernel.def(call, expr \\ nil)
-#: lib/kernel.ex:2755
+#: lib/kernel.ex:2756
 msgid ""
 "Defines a function with the given name and contents.\n"
 "\n"
@@ -13950,7 +13991,7 @@ msgstr ""
 "\n"
 
 #. TRANSLATORS: defmacro Kernel.defp(call, expr \\ nil)
-#: lib/kernel.ex:2778
+#: lib/kernel.ex:2779
 msgid ""
 "Defines a function that is private. Private functions are\n"
 "only accessible from within the module in which they are defined.\n"
@@ -14236,7 +14277,7 @@ msgstr ""
 "デバイスがEOFになったら空文字列を返します。\n"
 
 #. TRANSLATORS: defmacro Kernel.@(expr)
-#: lib/kernel.ex:1991
+#: lib/kernel.ex:1992
 msgid ""
 "Read and write attributes of th current module.\n"
 "\n"
@@ -14649,7 +14690,7 @@ msgstr ""
 "ドされた後も定着することを意味します。\n"
 
 #. TRANSLATORS: def Module.put_attribute(module, key, value)
-#: lib/module.ex:730
+#: lib/module.ex:729
 msgid ""
 "Puts an Erlang attribute to the given module with the given\n"
 "key and value. The semantics of putting the attribute depends\n"
@@ -14816,7 +14857,7 @@ msgstr ""
 "ください。\n"
 
 #. TRANSLATORS: defmacro Kernel.if(condition, clauses)
-#: lib/kernel.ex:2150
+#: lib/kernel.ex:2151
 msgid ""
 "Provides an `if` macro. This macro expects the first argument to\n"
 "be a condition and the rest are keyword arguments.\n"
@@ -14889,7 +14930,7 @@ msgstr ""
 "もし二つ以上の節を比較したいなら、`cond/1`マクロを使うことができます。\n"
 
 #. TRANSLATORS: defmacro Kernel.||(left, right)
-#: lib/kernel.ex:2312
+#: lib/kernel.ex:2313
 msgid ""
 "Provides a short-circuit operator that evaluates and returns the second\n"
 "expression only if the first one does not evaluate to true (i.e. it\n"
@@ -14936,7 +14977,7 @@ msgstr ""
 "さい。\n"
 
 #. TRANSLATORS: defmacro Kernel.&&(left, right)
-#: lib/kernel.ex:2278
+#: lib/kernel.ex:2279
 msgid ""
 "Provides a short-circuit operator that evaluates and returns\n"
 "the second expression only if the first one evaluates to true\n"
@@ -15173,7 +15214,7 @@ msgstr ""
 "\n"
 
 #. TRANSLATORS: def URI.decode(uri)
-#: lib/uri.ex:236
+#: lib/uri.ex:238
 msgid ""
 "Percent-unescape a URI.\n"
 "\n"
@@ -15192,7 +15233,7 @@ msgstr ""
 "\n"
 
 #. TRANSLATORS: def URI.encode(str, predicate \\ &(char_unescaped? / 1))
-#: lib/uri.ex:194
+#: lib/uri.ex:196
 msgid ""
 "Percent-escape a URI.\n"
 "Accepts `predicate` function as an argument to specify if char can be left "
@@ -15239,7 +15280,7 @@ msgstr ""
 "\n"
 
 #. TRANSLATORS: def File.open(path, modes \\ [])
-#: lib/file.ex:913
+#: lib/file.ex:919
 msgid ""
 "Opens the given `path` according to the given list of modes.\n"
 "\n"
@@ -15491,7 +15532,7 @@ msgstr ""
 "帰り掛け順(DFS,post-order)探索を実行します。\n"
 
 #. TRANSLATORS: def URI.parse(uri)
-#: lib/uri.ex:292
+#: lib/uri.ex:294
 msgid ""
 "Parses a URI into components.\n"
 "\n"
@@ -15734,7 +15775,7 @@ msgstr ""
 "\n"
 
 #. TRANSLATORS: def URI.normalize_scheme(scheme)
-#: lib/uri.ex:24
+#: lib/uri.ex:26
 msgid "Normalizes the scheme according to the spec by downcasing it.\n"
 msgstr "小文字化することにより仕様に従って、schemeを正規化します。\n"
 
@@ -16019,10 +16060,10 @@ msgstr ""
 "ストリームでは、最初の要素をプリントし、それからそれを2倍したものを\n"
 "プリントしています。この例ではリストは一度だけ列挙されました!\n"
 "\n"
-"それが、ストリームが構成可能だと最初に言ったときに、意味したものなのです。\n"
-"`Stream.map/2`を複数回呼び出し、ストリームを効果的に構成し、それはlazyである\n"
-"ことに注意してください。計算の実行は`Enum`モジュールの関数を呼び出した\n"
-"時にだけ行われます。\n"
+"それが、ストリームが構成可能だと最初に言ったときに、意味したものなので\n"
+"す。`Stream.map/2`を複数回呼び出し、ストリームを効果的に構成し、それは\n"
+"lazyであることに注意してください。計算の実行は`Enum`モジュールの関数を\n"
+"呼び出した時にだけ行われます。\n"
 "\n"
 "## ストリームの作成\n"
 "\n"
@@ -16032,8 +16073,9 @@ msgstr ""
 "  * `IO.stream/2`         - 入力行のストリーム、一つずつ。\n"
 "  * `URI.query_decoder/1` - query stringのデコード、二つずつ。\n"
 "\n"
-"このモジュールも、`Stream.cycle/1`、`Stream.unfold/2`、`Stream.resource/3`など\n"
-"のストリームを作成する、多くの便利な関数を提供します。\n"
+"このモジュールも、`Stream.cycle/1`、`Stream.unfold/2`、\n"
+"`Stream.resource/3`などのストリームを作成する、多くの便利な関数を提供し\n"
+"ます。\n"
 "\n"
 "このモジュールの関数はenumerableを返すことが保証されていることに\n"
 "注意してください。\n"
@@ -16438,7 +16480,7 @@ msgstr ""
 "    \"[1! 2! 3! ...]\"\n"
 
 #. TRANSLATORS: defmacro Kernel.defoverridable(tuples)
-#: lib/kernel.ex:3218
+#: lib/kernel.ex:3221
 msgid ""
 "Makes the given functions in the current module overridable. An overridable\n"
 "function is lazily defined, allowing a developer to customize it.\n"
@@ -17294,7 +17336,7 @@ msgid "Gets the message for an exception.\n"
 msgstr "例外のメッセージを取得します。\n"
 
 #. TRANSLATORS: def File.cwd()
-#: lib/file.ex:997
+#: lib/file.ex:1003
 msgid ""
 "Gets the current working directory.\n"
 "\n"
@@ -18825,7 +18867,7 @@ msgstr "Erlangポートに関連する関数です。\n"
 msgid ""
 "Functions handling IO.\n"
 "\n"
-"Many functions in this module expects an IO device as argument.\n"
+"Many functions in this module expect an IO device as an argument.\n"
 "An IO device must be a pid or an atom representing a process.\n"
 "For convenience, Elixir provides `:stdio` and `:stderr` as\n"
 "shortcuts to Erlang's `:standard_io` and `:standard_error`.\n"
@@ -18835,7 +18877,7 @@ msgid ""
 "it will do a conversion to string via the `String.Chars` protocol\n"
 "(as shown in typespecs).\n"
 "\n"
-"The functions starting with `bin*` expects iodata as argument,\n"
+"The functions starting with `bin*` expect iodata as an argument,\n"
 "i.e. binaries or lists of bytes and binaries.\n"
 "\n"
 "## IO devices\n"
@@ -19233,7 +19275,7 @@ msgid "Functions for working with floating point numbers.\n"
 msgstr "浮動小数点数で動く関数です。\n"
 
 #. TRANSLATORS: def URI.encode_query(l)
-#: lib/uri.ex:83
+#: lib/uri.ex:85
 msgid ""
 "Encodes an enumerable into a query string.\n"
 "\n"
@@ -19447,7 +19489,7 @@ msgstr ""
 "\n"
 
 #. TRANSLATORS: defmacro Kernel.unless(clause, options)
-#: lib/kernel.ex:2177
+#: lib/kernel.ex:2178
 msgid ""
 "Evaluates and returns the do-block passed in as a second argument\n"
 "unless clause evaluates to true.\n"
@@ -19915,7 +19957,7 @@ msgstr ""
 "\n"
 
 #. TRANSLATORS: def Regex.escape(string)
-#: lib/regex.ex:598
+#: lib/regex.ex:599
 msgid ""
 "Escapes a string to be literally matched in a regex.\n"
 "\n"
@@ -20450,7 +20492,7 @@ msgstr ""
 #. TRANSLATORS: def List.foldr(list, acc, function)
 #: lib/list.ex:116
 msgid ""
-"Folds (reduces) the given list to the right with\n"
+"Folds (reduces) the given list from the right with\n"
 "a function. Requires an accumulator.\n"
 "\n"
 "## Examples\n"
@@ -20459,7 +20501,7 @@ msgid ""
 "    -2\n"
 "\n"
 msgstr ""
-"与えられたリストを、関数で右へフォールド(reduce)ます。\n"
+"与えられたリストを、関数で右からフォールド(reduce)ます。\n"
 "アキュムレータは必須です。\n"
 "\n"
 "## 例\n"
@@ -20471,7 +20513,7 @@ msgstr ""
 #. TRANSLATORS: def List.foldl(list, acc, function)
 #: lib/list.ex:101
 msgid ""
-"Folds (reduces) the given list to the left with\n"
+"Folds (reduces) the given list from the left with\n"
 "a function. Requires an accumulator.\n"
 "\n"
 "## Examples\n"
@@ -20483,7 +20525,7 @@ msgid ""
 "    2\n"
 "\n"
 msgstr ""
-"与えられたリストを、関数で左へフォールド(reduce)ます。\n"
+"与えられたリストを、関数で左からフォールド(reduce)ます。\n"
 "アキュムレータは必須です。\n"
 "\n"
 "## 例\n"
@@ -20569,6 +20611,31 @@ msgstr ""
 "    Path.relative(\"usr/local/bin\")    #=> \"usr/local/bin\"\n"
 "    Path.relative(\"D:bar.ex\")         #=> \"bar.ex\"\n"
 "    Path.relative(\"/bar/foo.ex\")      #=> \"bar/foo.ex\"\n"
+"\n"
+
+#. TRANSLATORS: def StringIO.flush(pid)
+#: lib/string_io.ex:72
+msgid ""
+"Flushes output buffer.\n"
+"\n"
+"## Examples\n"
+"\n"
+"    iex> {:ok, pid} = StringIO.open(\"in\")\n"
+"    iex> IO.write(pid, \"out\")\n"
+"    iex> StringIO.flush(pid)\n"
+"    \"out\"\n"
+"    iex> StringIO.contents(pid)\n"
+"    {\"in\", \"\"}\n"
+"\n"
+msgstr ""
+"出力バッファをフラッシュします。\n"
+"\n"
+"## 例\n"
+"\n"
+"    iex> {:ok, pid} = StringIO.open(\"in\")\n"
+"    iex> IO.write(pid, \"out\")\n"
+"    iex> StringIO.contents(pid)\n"
+"    {\"in\", \"out\"}\n"
 "\n"
 
 #. TRANSLATORS: Elixir.Enumerable Summary
@@ -20688,7 +20755,7 @@ msgstr ""
 "例は`run/1`を参照してください。\n"
 
 #. TRANSLATORS: defmacro Kernel.sigil_w(arg1, modifiers)
-#: lib/kernel.ex:3484
+#: lib/kernel.ex:3487
 msgid ""
 "Handles the sigil ~w. It returns a list of \"words\" split by whitespace.\n"
 "\n"
@@ -20732,7 +20799,7 @@ msgstr ""
 "\n"
 
 #. TRANSLATORS: defmacro Kernel.sigil_s(arg1, list2)
-#: lib/kernel.ex:3378
+#: lib/kernel.ex:3381
 msgid ""
 "Handles the sigil ~s. It returns a string as if it was double quoted\n"
 "string, unescaping characters and replacing interpolations.\n"
@@ -20766,7 +20833,7 @@ msgstr ""
 "\n"
 
 #. TRANSLATORS: defmacro Kernel.sigil_r(arg1, options)
-#: lib/kernel.ex:3436
+#: lib/kernel.ex:3439
 msgid ""
 "Handles the sigil ~r. It returns a Regex pattern.\n"
 "\n"
@@ -20786,7 +20853,7 @@ msgstr ""
 "\n"
 
 #. TRANSLATORS: defmacro Kernel.sigil_c(arg1, list2)
-#: lib/kernel.ex:3418
+#: lib/kernel.ex:3421
 msgid ""
 "Handles the sigil ~c. It returns a char list as if it were a single\n"
 "quoted string, unescaping characters and replacing interpolations.\n"
@@ -20820,7 +20887,7 @@ msgstr ""
 "\n"
 
 #. TRANSLATORS: defmacro Kernel.sigil_W(arg1, modifiers)
-#: lib/kernel.ex:3509
+#: lib/kernel.ex:3512
 msgid ""
 "Handles the sigil ~W. It returns a list of \"words\" split by whitespace\n"
 "without escaping nor interpreting interpolations.\n"
@@ -20853,7 +20920,7 @@ msgstr ""
 "\n"
 
 #. TRANSLATORS: defmacro Kernel.sigil_S(string, list2)
-#: lib/kernel.ex:3358
+#: lib/kernel.ex:3361
 msgid ""
 "Handles the sigil ~S. It simply returns a string\n"
 "without escaping characters and without interpolations.\n"
@@ -20880,7 +20947,7 @@ msgstr ""
 "\n"
 
 #. TRANSLATORS: defmacro Kernel.sigil_R(arg1, options)
-#: lib/kernel.ex:3457
+#: lib/kernel.ex:3460
 msgid ""
 "Handles the sigil ~R. It returns a Regex pattern without escaping\n"
 "nor interpreting interpolations.\n"
@@ -20901,7 +20968,7 @@ msgstr ""
 "\n"
 
 #. TRANSLATORS: defmacro Kernel.sigil_C(arg1, list2)
-#: lib/kernel.ex:3395
+#: lib/kernel.ex:3398
 msgid ""
 "Handles the sigil ~C. It simply returns a char list\n"
 "without escaping characters and without interpolations.\n"
@@ -22136,7 +22203,7 @@ msgstr ""
 "慣例に従うことを、決定しました。\n"
 
 #. TRANSLATORS: def URI.encode_www_form(str)
-#: lib/uri.ex:207
+#: lib/uri.ex:209
 msgid ""
 "Encode a string as \"x-www-urlencoded\".\n"
 "\n"
@@ -22455,7 +22522,7 @@ msgstr ""
 "\n"
 
 #. TRANSLATORS: def Module.get_attribute(module, key)
-#: lib/module.ex:776
+#: lib/module.ex:775
 msgid ""
 "Gets the given attribute from a module. If the attribute\n"
 "was marked with `accumulate` with `Module.register_attribute/3`,\n"
@@ -22819,7 +22886,7 @@ msgstr ""
 "す。\n"
 
 #. TRANSLATORS: def URI.decode_query(q, dict \\ %{})
-#: lib/uri.ex:100
+#: lib/uri.ex:102
 msgid ""
 "Decodes a query string into a dictionary (by default uses a map).\n"
 "\n"
@@ -23254,7 +23321,7 @@ msgstr ""
 "pathは削除される前に、`Path.expand/1`で展開されます。\n"
 
 #. TRANSLATORS: defmacro Kernel.defdelegate(funs, opts)
-#: lib/kernel.ex:3313
+#: lib/kernel.ex:3316
 msgid ""
 "Defines the given functions in the current module that will\n"
 "delegate to the given `target`. Functions defined with\n"
@@ -23341,7 +23408,7 @@ msgstr ""
 "\n"
 
 #. TRANSLATORS: def File.ln_s(existing, new)
-#: lib/file.ex:350
+#: lib/file.ex:356
 msgid ""
 "Creates a symbolic link `new` to the file or directory `existing`.\n"
 "\n"
@@ -23732,7 +23799,7 @@ msgstr ""
 "\n"
 
 #. TRANSLATORS: defmacro Kernel.defimpl(name, opts, do_block \\ [])
-#: lib/kernel.ex:3183
+#: lib/kernel.ex:3186
 msgid ""
 "Defines an implementation for the given protocol. See\n"
 "`defprotocol/2` for examples.\n"
@@ -23747,7 +23814,7 @@ msgstr ""
 "現在のターゲットは`@for`でアクセスできます。\n"
 
 #. TRANSLATORS: defmacro Kernel.defexception(fields)
-#: lib/kernel.ex:2996
+#: lib/kernel.ex:2999
 msgid ""
 "Defines an exception.\n"
 "\n"
@@ -23777,6 +23844,8 @@ msgid ""
 "    defmodule MyAppError do\n"
 "      defexception [:message]\n"
 "    end\n"
+"\n"
+"    value = [:hello]\n"
 "\n"
 "    raise MyAppError,\n"
 "      message: \"did not get what was expected, got: #{inspect value}\"\n"
@@ -23826,6 +23895,8 @@ msgstr ""
 "      defexception [:message]\n"
 "    end\n"
 "\n"
+"    value = [:hello]\n"
+"\n"
 "    raise MyAppError,\n"
 "      message: \"did not get what was expected, got: #{inspect value}\"\n"
 "\n"
@@ -23847,7 +23918,7 @@ msgstr ""
 "上の例は、例外メッセージをカスタマイズするための好ましいメカニズムです。\n"
 
 #. TRANSLATORS: defmacro Kernel.defstruct(fields)
-#: lib/kernel.ex:2912
+#: lib/kernel.ex:2913
 msgid ""
 "Defines a struct for the current module.\n"
 "\n"
@@ -24214,7 +24285,7 @@ msgstr ""
 "\n"
 
 #. TRANSLATORS: def URI.decode_www_form(str)
-#: lib/uri.ex:252
+#: lib/uri.ex:254
 msgid ""
 "Decode a string as \"x-www-urlencoded\".\n"
 "\n"
@@ -24983,7 +25054,7 @@ msgstr ""
 "\n"
 
 #. TRANSLATORS: def File.close(io_device)
-#: lib/file.ex:1104
+#: lib/file.ex:1110
 msgid ""
 "Closes the file referenced by `io_device`. It mostly returns `:ok`, except\n"
 "for some severe errors such as out of memory.\n"
@@ -25619,7 +25690,7 @@ msgid "Arithmetic bitshift left as operator.\n"
 msgstr "演算子としての算術的左ビットシフトです。\n"
 
 #. TRANSLATORS: def Regex.compile(source, options \\ "")
-#: lib/regex.ex:107
+#: lib/regex.ex:108
 msgid ""
 "Compiles the regular expression.\n"
 "\n"
@@ -25659,7 +25730,7 @@ msgstr ""
 "\n"
 
 #. TRANSLATORS: def Regex.compile!(source, options \\ "")
-#: lib/regex.ex:137
+#: lib/regex.ex:138
 msgid ""
 "Compiles the regular expression according to the given options.\n"
 "Fails with `Regex.CompileError` if the regex cannot be compiled.\n"
@@ -25699,7 +25770,7 @@ msgstr ""
 "`Kernel.ParallelCompiler.files/2`をチェックしてください。\n"
 
 #. TRANSLATORS: def File.chgrp(path, gid)
-#: lib/file.ex:1167
+#: lib/file.ex:1173
 msgid ""
 "Changes the user group given by the group id `gid`\n"
 "for a given `file`. Returns `:ok` on success, or\n"
@@ -25711,7 +25782,7 @@ msgstr ""
 "返します。\n"
 
 #. TRANSLATORS: def File.chmod(path, mode)
-#: lib/file.ex:1144
+#: lib/file.ex:1150
 msgid ""
 "Changes the unix file `mode` for a given `file`.\n"
 "Returns `:ok` on success, or `{:error, reason}`\n"
@@ -25722,7 +25793,7 @@ msgstr ""
 "返します。\n"
 
 #. TRANSLATORS: def File.chown(path, uid)
-#: lib/file.ex:1190
+#: lib/file.ex:1196
 msgid ""
 "Changes the owner given by the user id `uid`\n"
 "for a given `file`. Returns `:ok` on success,\n"
@@ -25732,7 +25803,7 @@ msgstr ""
 "ら`:ok`を返し、失敗したら`{:error, reason}`を返します。\n"
 
 #. TRANSLATORS: def File.cd!(path, function)
-#: lib/file.ex:1057
+#: lib/file.ex:1063
 msgid ""
 "Changes the current directory to the given `path`,\n"
 "executes the given function and then revert back\n"
@@ -26303,36 +26374,8 @@ msgstr ""
 "    [[1], [2, 2], [3], [4, 4, 6], [7, 7]]\n"
 "\n"
 
-#. TRANSLATORS: defmacro Kernel.is_nil(x)
-#: lib/kernel.ex:1893
-msgid ""
-"Checks if the given argument is nil or not.\n"
-"Allowed in guard clauses.\n"
-"\n"
-"## Examples\n"
-"\n"
-"    iex> is_nil(1)\n"
-"    false\n"
-"\n"
-"    iex> is_nil(nil)\n"
-"    true\n"
-"\n"
-msgstr ""
-"与えられた引数が、nilまたはnotであるか否かを\n"
-"チェックします。\n"
-"ガード節で使えます。\n"
-"\n"
-"## 例\n"
-"\n"
-"    iex> nil?(1)\n"
-"    false\n"
-"\n"
-"    iex> nil?(nil)\n"
-"    true\n"
-"\n"
-
 #. TRANSLATORS: defmacro Kernel.in(left, right)
-#: lib/kernel.ex:2454
+#: lib/kernel.ex:2455
 msgid ""
 "Checks if the element on the left side is member of the\n"
 "collection on the right side.\n"
@@ -26466,7 +26509,7 @@ msgstr ""
 "\n"
 
 #. TRANSLATORS: def URI.char_unescaped?(c)
-#: lib/uri.ex:180
+#: lib/uri.ex:182
 msgid ""
 "Checks if the character is allowed unescaped in a URI.\n"
 "\n"
@@ -26479,7 +26522,7 @@ msgstr ""
 "これはデフォルトで`URI.encode/2`によって使われます。\n"
 
 #. TRANSLATORS: def URI.char_unreserved?(c)
-#: lib/uri.ex:167
+#: lib/uri.ex:169
 msgid ""
 "Checks if the character is a \"unreserved\" character in a URI.\n"
 "\n"
@@ -26490,7 +26533,7 @@ msgstr ""
 "非予約(unreserved)文字は、 RFC3986 section 2.3に定められています。\n"
 
 #. TRANSLATORS: def URI.char_reserved?(c)
-#: lib/uri.ex:158
+#: lib/uri.ex:160
 msgid ""
 "Checks if the character is a \"reserved\" character in a URI.\n"
 "\n"
@@ -27352,7 +27395,7 @@ msgid "Returns true if the given argument is an exception.\n"
 msgstr "与えられた引数が例外ならtrueを返します。\n"
 
 #. TRANSLATORS: def GenEvent.which_handlers(manager)
-#: lib/gen_event.ex:502
+#: lib/gen_event.ex:499
 msgid "Returns a list of all event handlers installed in the `manager`.\n"
 msgstr ""
 "`manager`にインストールされている全てのイベントハンドラの\n"
@@ -27488,7 +27531,7 @@ msgstr ""
 "\n"
 
 #. TRANSLATORS: def File.copy(source, destination, bytes_count \\ :infinity)
-#: lib/file.ex:377
+#: lib/file.ex:383
 msgid ""
 "Copies the contents of `source` to `destination`.\n"
 "\n"
@@ -27609,7 +27652,7 @@ msgid "Count how many items are in the range.\n"
 msgstr "範囲(range)のアイテムの数を数えます。\n"
 
 #. TRANSLATORS: def File.cp_r(source, destination, callback \\ fn _, _ -> true end)
-#: lib/file.ex:488
+#: lib/file.ex:494
 msgid ""
 "Copies the contents in source to destination.\n"
 "\n"
@@ -27700,7 +27743,7 @@ msgstr ""
 "\n"
 
 #. TRANSLATORS: def File.cp(source, destination, callback \\ fn _, _ -> true end)
-#: lib/file.ex:417
+#: lib/file.ex:423
 msgid ""
 "Copies the contents in `source` to `destination` preserving its mode.\n"
 "\n"
@@ -28111,7 +28154,7 @@ msgid ""
 "Converts a list of integers representing codepoints, lists or\n"
 "strings into a string.\n"
 "\n"
-"Notice that this function expect a list of integer representing\n"
+"Notice that this function expects a list of integers representing\n"
 "UTF-8 codepoints. If you have a list of bytes, you must instead use\n"
 "[the `:binary` module](http://erlang.org/doc/man/binary.html).\n"
 "\n"
@@ -28200,7 +28243,7 @@ msgid "Converts a `:file_info` record into a `File.Stat`.\n"
 msgstr "`:file_info`レコードを`File.Stat`に変換します。\n"
 
 #. TRANSLATORS: defmacro Kernel.destructure(left, right)
-#: lib/kernel.ex:2216
+#: lib/kernel.ex:2217
 msgid ""
 "Allows you to destructure two lists, assigning each term in the right to "
 "the\n"
@@ -28465,7 +28508,7 @@ msgstr ""
 "加えられます。\n"
 
 #. TRANSLATORS: def GenEvent.add_handler(manager, handler, args)
-#: lib/gen_event.ex:319
+#: lib/gen_event.ex:316
 msgid ""
 "Adds a new event handler to the event `manager`.\n"
 "\n"
@@ -28494,7 +28537,7 @@ msgstr ""
 "いたら、この関数は`{:error, :already_present}`を返します。\n"
 
 #. TRANSLATORS: def GenEvent.add_mon_handler(manager, handler, args)
-#: lib/gen_event.ex:364
+#: lib/gen_event.ex:361
 msgid ""
 "Adds a monitored event handler to the event `manager`.\n"
 "\n"
@@ -28579,7 +28622,7 @@ msgstr ""
 "動作します(Erlangの`:gen_event`との後方互換性はありません)。\n"
 
 #. TRANSLATORS: def Module.overridable?(module, tuple)
-#: lib/module.ex:714
+#: lib/module.ex:713
 msgid "Returns `true` if `tuple` in `module` is marked as overridable.\n"
 msgstr ""
 "もし、`module`の中の`tuple`がoverridableとしてマークされていれば、\n"
@@ -28959,7 +29002,7 @@ msgstr ""
 "\n"
 
 #. TRANSLATORS: def Regex.scan(regex, string, options \\ [])
-#: lib/regex.ex:315
+#: lib/regex.ex:316
 msgid ""
 "Same as `run/3`, but scans the target several times collecting all\n"
 "matches of the regular expression. A list of lists is returned,\n"
@@ -29012,7 +29055,7 @@ msgstr ""
 "\n"
 
 #. TRANSLATORS: def Regex.regex?(regex)
-#: lib/regex.ex:175
+#: lib/regex.ex:176
 msgid ""
 "Returns true if the given argument is a regex.\n"
 "\n"
@@ -29241,7 +29284,7 @@ msgstr ""
 "\n"
 
 #. TRANSLATORS: def GenEvent.swap_handler(manager, handler1, args1, handler2, args2)
-#: lib/gen_event.ex:484
+#: lib/gen_event.ex:481
 msgid ""
 "Replaces an old event handler with a new one in the event `manager`.\n"
 "\n"
@@ -29278,7 +29321,7 @@ msgstr ""
 "返します。\n"
 
 #. TRANSLATORS: def GenEvent.swap_mon_handler(manager, handler1, args1, handler2, args2)
-#: lib/gen_event.ex:494
+#: lib/gen_event.ex:491
 msgid ""
 "Replaces an old event handler with a new monitored one in the event "
 "`manager`.\n"
@@ -29912,7 +29955,7 @@ msgid ""
 "can access the default value:\n"
 "\n"
 "    Application.get_env(:APP_NAME, :hello)\n"
-"    #=> {:ok, :hello}\n"
+"    #=> :world\n"
 "\n"
 "It is also possible to put and delete values from the application value,\n"
 "including new values that are not defined in the environment file (although\n"
@@ -29956,7 +29999,7 @@ msgid ""
 "\n"
 "The `type` passed into `start/2` is usually `:normal` unless in a "
 "distributed\n"
-"setup where applications takeover and failovers are configured. This "
+"setup where applications takeovers and failovers are configured. This "
 "particular\n"
 "aspect of applications can be read with more detail in the OTP "
 "documentation:\n"
@@ -29967,7 +30010,7 @@ msgid ""
 "A developer may also implement the `stop/1` callback (automatically defined\n"
 "by `use Application`) which does any application cleanup. It receives the\n"
 "application state and can return any value. Notice that shutting down the\n"
-"supervisor is automatically handled by the VM;\n"
+"supervisor is automatically handled by the VM.\n"
 msgstr ""
 "アプリケーションで動き、アプリケーションコールバックを定義するモジュールで"
 "す。\n"
@@ -30143,7 +30186,7 @@ msgstr ""
 "関数とAPIの詳細は、`Dict`モジュールを参照してください。\n"
 
 #. TRANSLATORS: defmacro Kernel.match?(pattern, expr)
-#: lib/kernel.ex:1932
+#: lib/kernel.ex:1933
 msgid ""
 "A convenience macro that checks if the right side (an expression)\n"
 "matches the left side (a pattern).\n"
@@ -30636,7 +30679,7 @@ msgid ""
 "    iex> String.to_char_list(\"æß\")\n"
 "    'æß'\n"
 "\n"
-"Notice that this function expect a list of integer representing\n"
+"Notice that this function expects a list of integers representing\n"
 "UTF-8 codepoints. If you have a raw binary, you must instead use\n"
 "[the `:binary` module](http://erlang.org/doc/man/binary.html).\n"
 msgstr ""
@@ -30737,7 +30780,7 @@ msgid ""
 "\n"
 "Explicit supervisors as above are required when there is a need to:\n"
 "\n"
-"  1. Partialy change the supervision tree during hot-code swaps.\n"
+"  1. Partially change the supervision tree during hot-code swaps.\n"
 "\n"
 "  2. Define supervisors inside other supervisors.\n"
 "\n"
@@ -30767,7 +30810,7 @@ msgid ""
 "    child process is a `Supervisor` or `GenServer`; if the child\n"
 "    process is a `GenEvent`, modules should be `:dynamic`\n"
 "\n"
-"### Restart values\n"
+"### Restart values (:restart)\n"
 "\n"
 "The following restart values are supported:\n"
 "\n"
@@ -30780,7 +30823,7 @@ msgid ""
 "    terminates abnormally, i.e. with another exit reason than\n"
 "    `:normal`, `:shutdown` or `{:shutdown, term}`\n"
 "\n"
-"### Shutdown values\n"
+"### Shutdown values (:shutdown)\n"
 "\n"
 "The following shutdown values are supported:\n"
 "\n"
@@ -30869,7 +30912,7 @@ msgstr ""
 "     コールバックモジュールの名前で、子プロセスが`GenEvent`なら、\n"
 "     moduleは`:dynamic`でなければなりません。\n"
 "\n"
-"### Restart values\n"
+"### Restart values (:restart)\n"
 "\n"
 "restart の値は以下がサポートされています:\n"
 "\n"
@@ -30878,11 +30921,10 @@ msgstr ""
 "  * `:temporary` - 子プロセスは決して再起動されません(\n"
 "     スーパバイザの戦略が`rest_for_one`、`:one_for_all`のときも)\n"
 "\n"
-"  * `:transient` - 異常終了(即ち、`:normal`, `:shutdown`, `{:shutdown, term}"
-"`\n"
+"  * `:transient` - 異常終了(即ち、`:normal`, `:shutdown`, `{:shutdown, term}`\n"
 "      以外ののexit reason)したときだけ、子プロセスは再起動されます。\n"
 "\n"
-"### Shutdown values\n"
+"### Shutdown values (:shutdown)\n"
 "\n"
 "以下のshutdown値がサポートされます:\n"
 "\n"
@@ -30896,8 +30938,7 @@ msgstr ""
 "  * 最後に、スーパバイザが子プロセスに\n"
 "    呼び出し`Process.exit(child, :shutdown)`によて終了するようにいい、\n"
 "    それから、exitシグナルバックを待つことは、任意の整数で有り得ます。\n"
-"    もしexitシグナルが指定された時間(ミリ秒)に受信されないなら、子プロセス"
-"は\n"
+"    もしexitシグナルが指定された時間(ミリ秒)に受信されないなら、子プロセスは\n"
 "    無条件に`Process.exit(child, :kill)`を使って終了されます。\n"
 
 #. TRANSLATORS: Elixir.GenServer Summary
@@ -31338,7 +31379,7 @@ msgid ""
 "\n"
 "A supervisor implemented using this module will have a standard set\n"
 "of interface functions and include functionality for tracing and error\n"
-"reporting. It will also fit into an supervision tree.\n"
+"reporting. It will also fit into a supervision tree.\n"
 "\n"
 "## Example\n"
 "\n"
@@ -31624,7 +31665,7 @@ msgid ""
 "\n"
 "An event manager implemented using this module will have a standard\n"
 "set of interface functions and include functionality for tracing and\n"
-"error reporting. It will also fit into an supervision tree.\n"
+"error reporting. It will also fit into a supervision tree.\n"
 "\n"
 "## Example\n"
 "\n"
@@ -31673,8 +31714,8 @@ msgid ""
 "Notifications can be sent to the event manager which will then\n"
 "invoke `handle_event/2` for each registered handler.\n"
 "\n"
-"We can add new handlers with `add_handler/3`. Calls can also\n"
-"be made to specific handlers by using `call/3`.\n"
+"We can add new handlers with `add_handler/3` and `add_mon_handler/3`.\n"
+"Calls can also be made to specific handlers by using `call/3`.\n"
 "\n"
 "## Callbacks\n"
 "\n"
@@ -31756,21 +31797,18 @@ msgid ""
 "\n"
 "## Streaming\n"
 "\n"
-"`GenEvent`s can be streamed from and streamed with the help of `stream/2`.\n"
+"`GenEvent` messages can be streamed with the help of `stream/2`.\n"
 "Here are some examples:\n"
 "\n"
 "    stream = GenEvent.stream(pid)\n"
 "\n"
-"    # Take the next 10 events\n"
-"    Enum.take(stream, 10)\n"
+"    # Discard the next 10 events\n"
+"    _ = Enum.drop(stream, 10)\n"
 "\n"
 "    # Print all remaining events\n"
 "    for event <- stream do\n"
 "      IO.inspect event\n"
 "    end\n"
-"\n"
-"A stream may also be given an id, which allows all streams with the given\n"
-"id to be cancelled at any moment via `cancel_streams/1`.\n"
 "\n"
 "## Learn more and compatibility\n"
 "\n"
@@ -31855,7 +31893,8 @@ msgstr ""
 "それから、登録されたハンドラ毎に`handle_event/2`を実行するイベント\n"
 "マネージャに通知を送ることができます。\n"
 "\n"
-"私達は`add_handler/3`で新しいハンドラを追加します。\n"
+"私達は`add_handler/3`と`add_mon_handler/3`で新しいハンドラを\n"
+"追加します。\n"
 "`call/3`を使って特定のハンドラを呼び出すことができます。\n"
 "\n"
 "## Callbacks\n"
@@ -31873,8 +31912,7 @@ msgstr ""
 "    -  `{:ok, state, :hibernate}`\n"
 "    -  `{:error, reason}`\n"
 "\n"
-"  * `handle_event(msg, state)` - イベントが`notify/2`か`sync_notify/2`によ"
-"り\n"
+"  * `handle_event(msg, state)` - イベントが`notify/2`か`sync_notify/2`により\n"
 "      遅られたときは何時でも起動されます。\n"
 "\n"
 "\n"
@@ -31932,24 +31970,21 @@ msgstr ""
 "\n"
 "## Streaming\n"
 "\n"
-"`GenEvent`は`stream/2`の助けを借りて、ストリームから取り出したり、\n"
-"ストリームへ送り出したり出来ます。いくつかの例です:\n"
+"`GenEvent`メッセージは`stream/2`の助けを借りて、ストリーム化\n"
+"出来ます。いくつかの例です:\n"
 "\n"
 "    stream = GenEvent.stream(pid)\n"
 "\n"
-"    # Take the next 10 events\n"
-"    Enum.take(stream, 10)\n"
+"    # Discard the next 10 events\n"
+"    _ = Enum.drop(stream, 10)\n"
 "\n"
 "    # Print all remaining events\n"
 "    for event <- stream do\n"
 "      IO.inspect event\n"
 "    end\n"
 "\n"
-"ストリームは、idを与えられるかもしれません。与えられたidにより、全ての\n"
-"ストリームを、`cancel_streams/1`によって、任意の時点でキャンセルするこ\n"
-"とを許します。\n"
 "\n"
-"## Learn more\n"
+"## Learn more and compatibility\n"
 "\n"
 "gen eventについてもっと知りたいなら、Elixir getting started guide\n"
 "がチュートリアルライクの導入を提供します。Erlangのドキュメントとリンク\n"
@@ -31958,6 +31993,18 @@ msgstr ""
 "  * http://elixir-lang.org/getting_started/mix/1.html\n"
 "  * http://www.erlang.org/doc/man/gen_event.html\n"
 "  * http://learnyousomeerlang.com/event-handlers\n"
+"\n"
+"ElixirとErlangのgen eventは100%の互換性がないことを心に留めてお\n"
+"いてください。\n"
+"`:gen_event.add_sup_handler/3`はElixirのGenEventではサポートされません、\n"
+"代わりに`GenEvent.add_mon_handler/3`をサポートします。\n"
+"\n"
+"モニタアプローチの利点は上のリンク \"Learn you some Erlang\" の \"Don't\n"
+"drink too much kool aid\" セクションに記述されています。それらの変更によ\n"
+"り、ElixirのGenEventはデフォルトではexitをトラップしません。\n"
+"\n"
+"さらにまた、Elixirは、`GenEvent`モジュールにあわせるために、\n"
+"多くの関数により返される`{:error, _}`タプルを正規化します。\n"
 
 #. TRANSLATORS: Elixir.String Summary
 #: lib/string.ex:3
@@ -32017,7 +32064,7 @@ msgid ""
 "the whole string considering the proper Unicode codepoints.\n"
 "\n"
 "For example, `String.length/1` is going to take longer as\n"
-"the input grows. On the other hand, `byte_size/1` always runs\n"
+"the input grows. On the other hand, `Kernel.byte_size/1` always runs\n"
 "in constant time (i.e. regardless of the input size).\n"
 "\n"
 "This means often there are performance costs in using the\n"
