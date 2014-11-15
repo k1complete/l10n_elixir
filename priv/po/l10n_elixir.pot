@@ -19,7 +19,7 @@ msgid ""
 "argument to the given list of args.\n"
 msgstr ""
 #. TRANSLATORS: def Enum.take_while(collection, fun)
-#: lib/enum.ex:1774 
+#: lib/enum.ex:1777 
 msgid ""
 "Takes the items at the beginning of `collection` while `fun` returns `true`.\n"
 "\n"
@@ -34,7 +34,7 @@ msgstr ""
 msgid ""
 "Takes the first `count` items from the collection.\n"
 "\n"
-"If a negative `count` is given, the last `count` values will\n"
+"`count` must be an integer. If a negative `count` is given, the last `count` values will\n"
 "be taken. For such, the collection is fully enumerated keeping up\n"
 "to `2 * count` elements in memory. Once the end of the collection is\n"
 "reached, the last `count` elements are returned.\n"
@@ -85,7 +85,7 @@ msgid ""
 "Note that the function does not purge the application modules.\n"
 msgstr ""
 #. TRANSLATORS: def Dict.update(dict, key, initial, fun)
-#: lib/dict.ex:556 
+#: lib/dict.ex:559 
 msgid ""
 "Update a value in `dict` by calling `fun` on the value to get a new value. If\n"
 "`key` is not present in `dict` then `initial` will be stored as the first\n"
@@ -382,7 +382,7 @@ msgid ""
 "\n"
 msgstr ""
 #. TRANSLATORS: def Dict.update!(dict, key, fun)
-#: lib/dict.ex:538 
+#: lib/dict.ex:541 
 msgid ""
 "Update a value in `dict` by calling `fun` on the value to get a new\n"
 "value. An exception is generated if `key` is not present in the dict.\n"
@@ -691,7 +691,7 @@ msgid ""
 "\n"
 msgstr ""
 #. TRANSLATORS: def Stream.zip(left, right)
-#: lib/stream.ex:816 
+#: lib/stream.ex:819 
 msgid ""
 "Zips two collections together, lazily.\n"
 "\n"
@@ -706,7 +706,7 @@ msgid ""
 "\n"
 msgstr ""
 #. TRANSLATORS: def Enum.zip(coll1, coll2)
-#: lib/enum.ex:1843 
+#: lib/enum.ex:1846 
 msgid ""
 "Zips corresponding elements from two collections into one list\n"
 "of tuples.\n"
@@ -808,7 +808,7 @@ msgid ""
 "quoted expression.\n"
 msgstr ""
 #. TRANSLATORS: def Stream.transform(enum, acc, reducer)
-#: lib/stream.ex:635 
+#: lib/stream.ex:638 
 msgid ""
 "Transforms an existing stream.\n"
 "\n"
@@ -1716,7 +1716,7 @@ msgid ""
 "Sets foreground color to black"
 msgstr ""
 #. TRANSLATORS: def String.chunk(string, trait)
-#: lib/string.ex:873 
+#: lib/string.ex:860 
 msgid ""
 "Splits the string into chunks of characters that share a common trait.\n"
 "\n"
@@ -1915,7 +1915,7 @@ msgid ""
 "Same as `chgrp/2`, but raises an exception in case of failure. Otherwise `:ok`.\n"
 msgstr ""
 #. TRANSLATORS: def Float.round(number, precision \\ 0)
-#: lib/float.ex:185 
+#: lib/float.ex:188 
 msgid ""
 "Rounds a floating point value to an arbitrary number of fractional digits\n"
 "(between 0 and 15).\n"
@@ -1940,7 +1940,7 @@ msgid ""
 "\n"
 msgstr ""
 #. TRANSLATORS: def Float.floor(number, precision \\ 0)
-#: lib/float.ex:123 
+#: lib/float.ex:126 
 msgid ""
 "Rounds a float to the largest integer less than or equal to `num`.\n"
 "\n"
@@ -1963,7 +1963,7 @@ msgid ""
 "\n"
 msgstr ""
 #. TRANSLATORS: def Float.ceil(number, precision \\ 0)
-#: lib/float.ex:153 
+#: lib/float.ex:156 
 msgid ""
 "Rounds a float to the largest integer greater than or equal to `num`.\n"
 "\n"
@@ -2230,10 +2230,13 @@ msgid ""
 "\n"
 msgstr ""
 #. TRANSLATORS: def Dict.pop(dict, key, default \\ nil)
-#: lib/dict.ex:521 
+#: lib/dict.ex:524 
 msgid ""
 "Returns the value associated with `key` in `dict` as\n"
 "well as the `dict` without `key`.\n"
+"\n"
+"If `key` is not present in `dict`, then the `dict` will\n"
+"be returned unmodified.\n"
 "\n"
 "## Examples\n"
 "\n"
@@ -2504,7 +2507,7 @@ msgid ""
 "\n"
 msgstr ""
 #. TRANSLATORS: def String.length(string)
-#: lib/string.ex:991 
+#: lib/string.ex:978 
 msgid ""
 "Returns the number of unicode graphemes in an utf8 string.\n"
 "\n"
@@ -2570,7 +2573,7 @@ msgid ""
 "Allowed in guard tests. Inlined by the compiler.\n"
 msgstr ""
 #. TRANSLATORS: def String.next_grapheme(string)
-#: lib/string.ex:931 
+#: lib/string.ex:918 
 msgid ""
 "Returns the next grapheme in a String.\n"
 "\n"
@@ -2585,7 +2588,7 @@ msgid ""
 "\n"
 msgstr ""
 #. TRANSLATORS: def String.next_codepoint(string)
-#: lib/string.ex:781 
+#: lib/string.ex:768 
 msgid ""
 "Returns the next codepoint in a String.\n"
 "\n"
@@ -2618,7 +2621,7 @@ msgid ""
 "\n"
 msgstr ""
 #. TRANSLATORS: def String.last(string)
-#: lib/string.ex:968 
+#: lib/string.ex:955 
 msgid ""
 "Returns the last grapheme from an utf8 string,\n"
 "`nil` if the string is empty.\n"
@@ -2694,7 +2697,7 @@ msgid ""
 "Inlined by the compiler.\n"
 msgstr ""
 #. TRANSLATORS: def String.at(string, position)
-#: lib/string.ex:1025 
+#: lib/string.ex:1012 
 msgid ""
 "Returns the grapheme in the `position` of the given utf8 `string`.\n"
 "If `position` is greater than `string` length, then it returns `nil`.\n"
@@ -2843,7 +2846,7 @@ msgid ""
 "\n"
 msgstr ""
 #. TRANSLATORS: def String.first(string)
-#: lib/string.ex:947 
+#: lib/string.ex:934 
 msgid ""
 "Returns the first grapheme from an utf8 string,\n"
 "nil if the string is empty.\n"
@@ -2966,7 +2969,7 @@ msgid ""
 "\n"
 msgstr ""
 #. TRANSLATORS: def Enum.with_index(collection)
-#: lib/enum.ex:1862 
+#: lib/enum.ex:1865 
 msgid ""
 "Returns the collection with each element wrapped in a tuple\n"
 "alongside its index.\n"
@@ -3120,7 +3123,7 @@ msgid ""
 "\n"
 msgstr ""
 #. TRANSLATORS: def String.codepoints(string)
-#: lib/string.ex:759 
+#: lib/string.ex:746 
 msgid ""
 "Returns all codepoints in the string.\n"
 "\n"
@@ -4232,13 +4235,13 @@ msgid ""
 "\n"
 msgstr ""
 #. TRANSLATORS: def Dict.split(dict, keys)
-#: lib/dict.ex:586 
+#: lib/dict.ex:589 
 msgid ""
 "Returns a tuple of two dicts, where the first dict contains only\n"
 "entries from `dict` with keys in `keys`, and the second dict\n"
-"contains only entries from `dict` with keys not in `keys`\n"
+"contains only entries from `dict` with keys not in `keys`.\n"
 "\n"
-"Any non-member keys are ignored.\n"
+"All non-member keys are ignored.\n"
 "\n"
 "## Examples\n"
 "\n"
@@ -4259,10 +4262,10 @@ msgid ""
 "\n"
 msgstr ""
 #. TRANSLATORS: def Dict.drop(dict, keys)
-#: lib/dict.ex:608 
+#: lib/dict.ex:611 
 msgid ""
 "Returns a new dict where the given `keys` are removed from `dict`.\n"
-"Any non-member keys are ignored.\n"
+"All non-member keys are ignored.\n"
 "\n"
 "## Examples\n"
 "\n"
@@ -4278,7 +4281,7 @@ msgid ""
 "\n"
 msgstr ""
 #. TRANSLATORS: def String.to_integer(string, base)
-#: lib/string.ex:1427 
+#: lib/string.ex:1414 
 msgid ""
 "Returns an integer whose text representation is `string` in base `base`.\n"
 "\n"
@@ -4508,7 +4511,7 @@ msgid ""
 "It returns the same as the built-in `node()`.\n"
 msgstr ""
 #. TRANSLATORS: def Stream.repeatedly(generator_fun)
-#: lib/stream.ex:966 
+#: lib/stream.ex:969 
 msgid ""
 "Returns a stream generated by calling `generator_fun` repeatedly.\n"
 "\n"
@@ -4519,7 +4522,7 @@ msgid ""
 "\n"
 msgstr ""
 #. TRANSLATORS: def String.slice(string, start, len)
-#: lib/string.ex:1086 
+#: lib/string.ex:1073 
 msgid ""
 "Returns a substring starting at the offset given by the first, and\n"
 "a length given by the second.\n"
@@ -4558,7 +4561,7 @@ msgid ""
 "\n"
 msgstr ""
 #. TRANSLATORS: def String.slice(string, range)
-#: lib/string.ex:1164 
+#: lib/string.ex:1151 
 msgid ""
 "Returns a substring from the offset given by the start of the\n"
 "range to the offset given by the end of the range.\n"
@@ -4661,7 +4664,7 @@ msgid ""
 "\n"
 msgstr ""
 #. TRANSLATORS: def String.rstrip(string, char)
-#: lib/string.ex:474 
+#: lib/string.ex:472 
 msgid ""
 "Returns a string where trailing `char` have been removed.\n"
 "\n"
@@ -4672,7 +4675,7 @@ msgid ""
 "\n"
 msgstr ""
 #. TRANSLATORS: def String.rstrip(binary)
-#: lib/string.ex:461 
+#: lib/string.ex:459 
 msgid ""
 "Returns a string where trailing Unicode whitespace\n"
 "has been removed.\n"
@@ -4684,7 +4687,7 @@ msgid ""
 "\n"
 msgstr ""
 #. TRANSLATORS: def String.strip(string, char)
-#: lib/string.ex:563 
+#: lib/string.ex:561 
 msgid ""
 "Returns a string where leading/trailing `char` have been\n"
 "removed.\n"
@@ -4696,7 +4699,7 @@ msgid ""
 "\n"
 msgstr ""
 #. TRANSLATORS: def String.strip(string)
-#: lib/string.ex:547 
+#: lib/string.ex:545 
 msgid ""
 "Returns a string where leading/trailing Unicode whitespace\n"
 "has been removed.\n"
@@ -4708,7 +4711,7 @@ msgid ""
 "\n"
 msgstr ""
 #. TRANSLATORS: def String.lstrip(other, char)
-#: lib/string.ex:527 
+#: lib/string.ex:525 
 msgid ""
 "Returns a string where leading `char` have been removed.\n"
 "\n"
@@ -4719,7 +4722,7 @@ msgid ""
 "\n"
 msgstr ""
 #. TRANSLATORS: def String.lstrip(binary)
-#: lib/string.ex:513 
+#: lib/string.ex:511 
 msgid ""
 "Returns a string where leading Unicode whitespace\n"
 "has been removed.\n"
@@ -4802,11 +4805,11 @@ msgid ""
 "\n"
 msgstr ""
 #. TRANSLATORS: def Dict.take(dict, keys)
-#: lib/dict.ex:629 
+#: lib/dict.ex:632 
 msgid ""
 "Returns a new dict where only the keys in `keys` from `dict` are included.\n"
 "\n"
-"Any non-member keys are ignored.\n"
+"All non-member keys are ignored.\n"
 "\n"
 "## Examples\n"
 "\n"
@@ -4881,8 +4884,8 @@ msgid ""
 "    [1,2,3,4]\n"
 "\n"
 msgstr ""
-#. TRANSLATORS: def String.rjust(subject, len)
-#: lib/string.ex:585 
+#. TRANSLATORS: def String.rjust(subject, len, pad \\ 32)
+#: lib/string.ex:583 
 msgid ""
 "Returns a new string of length `len` with `subject` right justified and\n"
 "padded with `padding`. If `padding` is not present, it defaults to\n"
@@ -4898,8 +4901,8 @@ msgid ""
 "    \"--abc\"\n"
 "\n"
 msgstr ""
-#. TRANSLATORS: def String.ljust(subject, len)
-#: lib/string.ex:610 
+#. TRANSLATORS: def String.ljust(subject, len, pad \\ 32)
+#: lib/string.ex:604 
 msgid ""
 "Returns a new string of length `len` with `subject` left justified and padded\n"
 "with `padding`. If `padding` is not present, it defaults to whitespace. When\n"
@@ -4920,7 +4923,7 @@ msgid ""
 "Returns a new empty map.\n"
 msgstr ""
 #. TRANSLATORS: def String.replace(subject, pattern, replacement, options \\ [])
-#: lib/string.ex:678 
+#: lib/string.ex:665 
 msgid ""
 "Returns a new binary based on `subject` by replacing the parts\n"
 "matching `pattern` by `replacement`. By default, it replaces\n"
@@ -5110,7 +5113,7 @@ msgid ""
 "return any value, as it won't be used.\n"
 msgstr ""
 #. TRANSLATORS: def Float.to_char_list(float, options)
-#: lib/float.ex:229 
+#: lib/float.ex:232 
 msgid ""
 "Returns a list which corresponds to the text representation\n"
 "of `float`.\n"
@@ -5167,7 +5170,7 @@ msgid ""
 "\n"
 msgstr ""
 #. TRANSLATORS: def Dict.to_list(dict)
-#: lib/dict.ex:686 
+#: lib/dict.ex:689 
 msgid ""
 "Returns a list of key-value pairs stored in `dict`.\n"
 "No particular order is enforced.\n"
@@ -5269,10 +5272,12 @@ msgid ""
 "\n"
 msgstr ""
 #. TRANSLATORS: def Enum.take_every(collection, nth)
-#: lib/enum.ex:1757 
+#: lib/enum.ex:1758 
 msgid ""
 "Returns a collection of every `nth` item in the collection,\n"
 "starting with the first element.\n"
+"\n"
+"The second argument specifying every `nth` item must be a non-negative integer.\n"
 "\n"
 "## Examples\n"
 "\n"
@@ -5294,7 +5299,7 @@ msgid ""
 "\n"
 msgstr ""
 #. TRANSLATORS: def Float.to_char_list(number)
-#: lib/float.ex:207 
+#: lib/float.ex:210 
 msgid ""
 "Returns a char list which corresponds to the text representation of the given float.\n"
 "\n"
@@ -5310,7 +5315,7 @@ msgstr ""
 #: lib/integer.ex:138 
 msgid ""
 "Returns a char list which corresponds to the text representation of the\n"
-"given integer in the given case.\n"
+"given integer in the given base.\n"
 "\n"
 "Inlined by the compiler.\n"
 "\n"
@@ -5489,7 +5494,7 @@ msgid ""
 "\n"
 msgstr ""
 #. TRANSLATORS: def Float.to_string(some_float)
-#: lib/float.ex:246 
+#: lib/float.ex:249 
 msgid ""
 "Returns a binary which corresponds to the text representation\n"
 "of `some_float`.\n"
@@ -5503,7 +5508,7 @@ msgid ""
 "\n"
 msgstr ""
 #. TRANSLATORS: def Float.to_string(float, options)
-#: lib/float.ex:268 
+#: lib/float.ex:271 
 msgid ""
 "Returns a binary which corresponds to the text representation\n"
 "of `float`.\n"
@@ -5522,7 +5527,7 @@ msgid ""
 "\n"
 msgstr ""
 #. TRANSLATORS: def String.duplicate(subject, n)
-#: lib/string.ex:739 
+#: lib/string.ex:726 
 msgid ""
 "Returns a binary `subject` duplicated `n` times.\n"
 "\n"
@@ -5665,7 +5670,7 @@ msgid ""
 "by escripts generated by Elixir.\n"
 msgstr ""
 #. TRANSLATORS: def String.split_at(string, offset)
-#: lib/string.ex:367 
+#: lib/string.ex:366 
 msgid ""
 "Splits a string into two at the specified offset. When the offset given is\n"
 "negative, location is counted from the end of the string.\n"
@@ -5693,7 +5698,7 @@ msgid ""
 "\n"
 msgstr ""
 #. TRANSLATORS: def String.graphemes(string)
-#: lib/string.ex:914 
+#: lib/string.ex:901 
 msgid ""
 "Returns unicode graphemes in the string as per Extended Grapheme\n"
 "Cluster algorithm outlined in the [Unicode Standard Annex #29,\n"
@@ -5721,7 +5726,7 @@ msgid ""
 "Sets a new `value` for the environment variable `varname`.\n"
 msgstr ""
 #. TRANSLATORS: def String.reverse(string)
-#: lib/string.ex:713 
+#: lib/string.ex:700 
 msgid ""
 "Reverses the given string. Works on graphemes.\n"
 "\n"
@@ -6203,7 +6208,7 @@ msgstr ""
 msgid ""
 "Receives a list of tuples and returns the first tuple\n"
 "where the item at `position` in the tuple matches the\n"
-"given `item`.\n"
+"given `key`.\n"
 "\n"
 "## Examples\n"
 "\n"
@@ -6222,7 +6227,7 @@ msgstr ""
 msgid ""
 "Receives a list of tuples and returns `true` if there is\n"
 "a tuple where the item at `position` in the tuple matches\n"
-"the given `item`.\n"
+"the given `key`.\n"
 "\n"
 "## Examples\n"
 "\n"
@@ -6269,7 +6274,7 @@ msgstr ""
 msgid ""
 "Receives a list of tuples and deletes the first tuple\n"
 "where the item at `position` matches the\n"
-"given `item`. Returns the new list.\n"
+"given `key`. Returns the new list.\n"
 "\n"
 "## Examples\n"
 "\n"
@@ -7895,7 +7900,7 @@ msgstr ""
 #. TRANSLATORS: def Dict.put_new(dict, key, val)
 #: lib/dict.ex:431 
 msgid ""
-"Puts the given `value` under `key` in `dict` unless `key` already exists.\n"
+"Puts the given `value` under `key` in `dict` unless `key` already existed.\n"
 "\n"
 "## Examples\n"
 "\n"
@@ -8321,12 +8326,15 @@ msgid ""
 "\n"
 msgstr ""
 #. TRANSLATORS: def Float.parse(binary)
-#: lib/float.ex:30 
+#: lib/float.ex:33 
 msgid ""
 "Parses a binary into a float.\n"
 "\n"
 "If successful, returns a tuple of the form `{float, remainder_of_binary}`.\n"
 "Otherwise `:error`.\n"
+"\n"
+"If a float formated string wants to be directly converted to float,\n"
+"`String.to_float/1\" can be used instead.\n"
 "\n"
 "## Examples\n"
 "\n"
@@ -8712,8 +8720,8 @@ msgstr ""
 msgid ""
 "Merges the dict `dict2` into dict `dict1`.\n"
 "\n"
-"If one of the `dict2` entries already exists in `dict1`, the\n"
-"functions in entries in `dict2` have higher precedence unless a\n"
+"If one of the `dict2` entries already existed in `dict1`, the\n"
+"conflicting entries in `dict2` have higher precedence unless a\n"
 "function is given to resolve conflicts.\n"
 "\n"
 "Notice this function is polymorphic as it merges dicts of any\n"
@@ -10802,7 +10810,7 @@ msgid ""
 "variable is undefined.\n"
 msgstr ""
 #. TRANSLATORS: def Enum.uniq(collection, fun \\ fn x -> x end)
-#: lib/enum.ex:1815 
+#: lib/enum.ex:1818 
 msgid ""
 "Enumerates the collection, removing all duplicated items.\n"
 "\n"
@@ -10962,7 +10970,7 @@ msgid ""
 "\n"
 msgstr ""
 #. TRANSLATORS: def Stream.take_while(enum, fun)
-#: lib/stream.ex:585 
+#: lib/stream.ex:588 
 msgid ""
 "Lazily takes elements of the enumerable while the given\n"
 "function returns `true`.\n"
@@ -11954,7 +11962,7 @@ msgid ""
 "\n"
 msgstr ""
 #. TRANSLATORS: def Stream.resource(start_fun, next_fun, after_fun)
-#: lib/stream.ex:1011 
+#: lib/stream.ex:1014 
 msgid ""
 "Emits a sequence of values for the given resource.\n"
 "\n"
@@ -11984,7 +11992,7 @@ msgid ""
 "\n"
 msgstr ""
 #. TRANSLATORS: def Stream.unfold(next_acc, next_fun)
-#: lib/stream.ex:1111 
+#: lib/stream.ex:1114 
 msgid ""
 "Emits a sequence of values for the given accumulator.\n"
 "\n"
@@ -11999,7 +12007,7 @@ msgid ""
 "\n"
 msgstr ""
 #. TRANSLATORS: def Stream.iterate(start_value, next_fun)
-#: lib/stream.ex:946 
+#: lib/stream.ex:949 
 msgid ""
 "Emit a sequence of values, starting with `start_value`. Successive\n"
 "values are generated by calling `next_fun` on the previous value.\n"
@@ -12011,7 +12019,7 @@ msgid ""
 "\n"
 msgstr ""
 #. TRANSLATORS: def String.split(string, pattern, options \\ [])
-#: lib/string.ex:290 
+#: lib/string.ex:289 
 msgid ""
 "Divides a string into substrings based on a pattern.\n"
 "\n"
@@ -12070,7 +12078,7 @@ msgid ""
 "\n"
 msgstr ""
 #. TRANSLATORS: def String.split(binary)
-#: lib/string.ex:229 
+#: lib/string.ex:228 
 msgid ""
 "Divides a string into substrings at each Unicode whitespace\n"
 "occurrence with leading and trailing whitespace ignored.\n"
@@ -12898,8 +12906,8 @@ msgid ""
 "    %User{}[:age]\n"
 "    ** (Protocol.UndefinedError) protocol Access not implemented for %User{...}\n"
 "\n"
-"However, `defstruct/2` allows implementation for protocols to\n"
-"derived by defining a `@derive` attribute as a list before `defstruct/2`\n"
+"However, `defstruct/1` allows implementation for protocols to\n"
+"derived by defining a `@derive` attribute as a list before `defstruct/1`\n"
 "is invoked:\n"
 "\n"
 "    defmodule User do\n"
@@ -13170,7 +13178,7 @@ msgid ""
 "\n"
 msgstr ""
 #. TRANSLATORS: def Stream.with_index(enum)
-#: lib/stream.ex:760 
+#: lib/stream.ex:763 
 msgid ""
 "Creates a stream where each item in the enumerable will\n"
 "be wrapped in a tuple alongside its index.\n"
@@ -13222,11 +13230,13 @@ msgid ""
 "\n"
 msgstr ""
 #. TRANSLATORS: def Stream.take_every(enum, n)
-#: lib/stream.ex:567 
+#: lib/stream.ex:570 
 msgid ""
 "Creates a stream that takes every `n` item from the enumerable.\n"
 "\n"
 "The first item is always included, unless `n` is 0.\n"
+"\n"
+"`n` must be a non-negative integer, or `FunctionClauseError` will be thrown.\n"
 "\n"
 "## Examples\n"
 "\n"
@@ -13236,7 +13246,7 @@ msgid ""
 "\n"
 msgstr ""
 #. TRANSLATORS: def Stream.uniq(enum, fun \\ fn x -> x end)
-#: lib/stream.ex:744 
+#: lib/stream.ex:747 
 msgid ""
 "Creates a stream that only emits elements if they are unique.\n"
 "\n"
@@ -13283,7 +13293,7 @@ msgid ""
 "\n"
 msgstr ""
 #. TRANSLATORS: def Stream.concat(first, second)
-#: lib/stream.ex:798 
+#: lib/stream.ex:801 
 msgid ""
 "Creates a stream that enumerates the first argument, followed by the second.\n"
 "\n"
@@ -13301,7 +13311,7 @@ msgid ""
 "\n"
 msgstr ""
 #. TRANSLATORS: def Stream.concat(enumerables)
-#: lib/stream.ex:777 
+#: lib/stream.ex:780 
 msgid ""
 "Creates a stream that enumerates each enumerable in an enumerable.\n"
 "\n"
@@ -13326,7 +13336,7 @@ msgid ""
 "\n"
 msgstr ""
 #. TRANSLATORS: def Stream.timer(n)
-#: lib/stream.ex:601 
+#: lib/stream.ex:604 
 msgid ""
 "Creates a stream that emits a single value after `n` milliseconds.\n"
 "\n"
@@ -13339,7 +13349,7 @@ msgid ""
 "\n"
 msgstr ""
 #. TRANSLATORS: def Stream.cycle(enumerable)
-#: lib/stream.ex:889 
+#: lib/stream.ex:892 
 msgid ""
 "Creates a stream that cycles through the given enumerable,\n"
 "infinitely.\n"
@@ -14441,7 +14451,7 @@ msgid ""
 "\n"
 msgstr ""
 #. TRANSLATORS: def Dict.equal?(dict1, dict2)
-#: lib/dict.ex:660 
+#: lib/dict.ex:663 
 msgid ""
 "Check if two dicts are equal using `===`.\n"
 "\n"
@@ -14495,7 +14505,7 @@ msgid ""
 "and its attributes and functions can be modified.\n"
 msgstr ""
 #. TRANSLATORS: def String.valid_character?(codepoint)
-#: lib/string.ex:840 
+#: lib/string.ex:827 
 msgid ""
 "Checks whether `str` is a valid character.\n"
 "\n"
@@ -14518,7 +14528,7 @@ msgid ""
 "\n"
 msgstr ""
 #. TRANSLATORS: def String.valid?(arg1)
-#: lib/string.ex:810 
+#: lib/string.ex:797 
 msgid ""
 "Checks whether `str` contains only valid characters.\n"
 "\n"
@@ -14538,7 +14548,7 @@ msgid ""
 "\n"
 msgstr ""
 #. TRANSLATORS: def String.printable?(b)
-#: lib/string.ex:191 
+#: lib/string.ex:190 
 msgid ""
 "Checks if a string is printable considering it is encoded\n"
 "as UTF-8. Returns `true` if so, `false` otherwise.\n"
@@ -14550,7 +14560,7 @@ msgid ""
 "\n"
 msgstr ""
 #. TRANSLATORS: def String.match?(string, regex)
-#: lib/string.ex:1292 
+#: lib/string.ex:1279 
 msgid ""
 "Check if `string` matches the given regular expression.\n"
 "\n"
@@ -14564,7 +14574,7 @@ msgid ""
 "\n"
 msgstr ""
 #. TRANSLATORS: def String.contains?(string, contents)
-#: lib/string.ex:1315 
+#: lib/string.ex:1302 
 msgid ""
 "Check if `string` contains any of the given `contents`.\n"
 "\n"
@@ -15068,7 +15078,7 @@ msgid ""
 "\n"
 msgstr ""
 #. TRANSLATORS: def String.capitalize(string)
-#: lib/string.ex:445 
+#: lib/string.ex:443 
 msgid ""
 "Converts the first character in the given string to\n"
 "uppercase and the remaining to lowercase.\n"
@@ -15478,7 +15488,7 @@ msgid ""
 "This operation is not supported by `simple_one_for_one` supervisors.\n"
 msgstr ""
 #. TRANSLATORS: def String.starts_with?(string, prefixes)
-#: lib/string.ex:1226 
+#: lib/string.ex:1213 
 msgid ""
 "Returns `true` if `string` starts with any of the prefixes given, otherwise\n"
 "`false`. `prefixes` can be either a single prefix or a list of prefixes.\n"
@@ -15496,7 +15506,7 @@ msgid ""
 "\n"
 msgstr ""
 #. TRANSLATORS: def String.ends_with?(string, suffixes)
-#: lib/string.ex:1260 
+#: lib/string.ex:1247 
 msgid ""
 "Returns `true` if `string` ends with any of the suffixes given, otherwise\n"
 "`false`. `suffixes` can be either a single suffix or a list of suffixes.\n"
@@ -15583,7 +15593,7 @@ msgid ""
 "\n"
 msgstr ""
 #. TRANSLATORS: def String.upcase(binary)
-#: lib/string.ex:403 
+#: lib/string.ex:401 
 msgid ""
 "Convert all characters on the given string to uppercase.\n"
 "\n"
@@ -15600,7 +15610,7 @@ msgid ""
 "\n"
 msgstr ""
 #. TRANSLATORS: def String.downcase(binary)
-#: lib/string.ex:421 
+#: lib/string.ex:419 
 msgid ""
 "Convert all characters on the given string to lowercase.\n"
 "\n"
@@ -15759,7 +15769,7 @@ msgid ""
 "\n"
 msgstr ""
 #. TRANSLATORS: def Enum.to_list(collection)
-#: lib/enum.ex:1793 
+#: lib/enum.ex:1796 
 msgid ""
 "Convert `collection` to a list.\n"
 "\n"
@@ -16441,7 +16451,7 @@ msgid ""
 "\n"
 msgstr ""
 #. TRANSLATORS: def String.to_integer(string)
-#: lib/string.ex:1411 
+#: lib/string.ex:1398 
 msgid ""
 "Returns a integer whose text representation is `string`.\n"
 "\n"
@@ -16454,9 +16464,14 @@ msgid ""
 "\n"
 msgstr ""
 #. TRANSLATORS: def String.to_float(string)
-#: lib/string.ex:1443 
+#: lib/string.ex:1438 
 msgid ""
 "Returns a float whose text representation is `string`.\n"
+"\n"
+"`string` must be the string representation of a float.\n"
+"If a string representation of an integer wants to be used,\n"
+"then `Float.parse/1` should be used instead,\n"
+"otherwise an argument error will be raised.\n"
 "\n"
 "Inlined by the compiler.\n"
 "\n"
@@ -16464,6 +16479,9 @@ msgid ""
 "\n"
 "    iex> String.to_float(\"2.2017764e+0\")\n"
 "    2.2017764\n"
+"\n"
+"    iex> String.to_float(\"3.0\")\n"
+"    3.0\n"
 "\n"
 msgstr ""
 #. TRANSLATORS: def Process.unregister(name)
@@ -16485,7 +16503,7 @@ msgid ""
 "Inlined by the compiler.\n"
 msgstr ""
 #. TRANSLATORS: def String.to_existing_atom(string)
-#: lib/string.ex:1395 
+#: lib/string.ex:1382 
 msgid ""
 "Converts a string to an existing atom.\n"
 "\n"
@@ -16505,7 +16523,7 @@ msgid ""
 "\n"
 msgstr ""
 #. TRANSLATORS: def String.to_atom(string)
-#: lib/string.ex:1372 
+#: lib/string.ex:1359 
 msgid ""
 "Converts a string to an atom.\n"
 "\n"
@@ -16521,7 +16539,7 @@ msgid ""
 "\n"
 msgstr ""
 #. TRANSLATORS: def String.to_char_list(string)
-#: lib/string.ex:1344 
+#: lib/string.ex:1331 
 msgid ""
 "Converts a string into a char list.\n"
 "\n"
@@ -16861,7 +16879,7 @@ msgid ""
 "guides provide a tutorial-like introduction. The documentation and links\n"
 "in Erlang can also provide extra insight.\n"
 "\n"
-"  * http://elixir-lang.org/getting_started/mix/1.html\n"
+"  * http://elixir-lang.org/getting_started/mix_otp/1.html\n"
 "  * http://www.erlang.org/doc/man/gen_server.html\n"
 "  * http://www.erlang.org/doc/design_principles/gen_server_concepts.html\n"
 "  * http://learnyousomeerlang.com/clients-and-servers\n"
@@ -17168,7 +17186,7 @@ msgid ""
 "guides provide a tutorial-like introduction. The documentation and links\n"
 "in Erlang can also provide extra insight.\n"
 "\n"
-"  * http://elixir-lang.org/getting_started/mix/1.html\n"
+"  * http://elixir-lang.org/getting_started/mix_otp/1.html\n"
 "  * http://www.erlang.org/doc/man/gen_event.html\n"
 "  * http://learnyousomeerlang.com/event-handlers\n"
 "\n"
@@ -17192,7 +17210,7 @@ msgid ""
 "## Codepoints and graphemes\n"
 "\n"
 "The functions in this module act according to the Unicode\n"
-"Standard, version 6.3.0.As per the standard, a codepoint is\n"
+"Standard, version 6.3.0. As per the standard, a codepoint is\n"
 "an Unicode Character, which may be represented by one or more\n"
 "bytes. For example, the character \"é\" is represented with two\n"
 "bytes:\n"
@@ -17227,8 +17245,7 @@ msgid ""
 "module.\n"
 "\n"
 "In general, the functions in this module rely on the Unicode\n"
-"Standard, but does not contain any of the locale specific\n"
-"behaviour.\n"
+"Standard, but do not contain any of the locale specific behaviour.\n"
 "\n"
 "More information about graphemes can be found in the [Unicode\n"
 "Standard Annex #29](http://www.unicode.org/reports/tr29/).\n"
@@ -17266,7 +17283,7 @@ msgid ""
 "    ...>   base = String.length(prefix)\n"
 "    ...>   String.slice(full, base, String.length(full) - base)\n"
 "    ...> end\n"
-"    ...> take_prefix.(\"Mr. John\", \"Mr. \")\n"
+"    iex> take_prefix.(\"Mr. John\", \"Mr. \")\n"
 "    \"John\"\n"
 "\n"
 "Although the function above works, it performs poorly. To\n"
@@ -17280,7 +17297,7 @@ msgid ""
 "    ...>   base = String.length(prefix)\n"
 "    ...>   String.slice(full, base..-1)\n"
 "    ...> end\n"
-"    ...> take_prefix.(\"Mr. John\", \"Mr. \")\n"
+"    iex> take_prefix.(\"Mr. John\", \"Mr. \")\n"
 "    \"John\"\n"
 "\n"
 "While this is much better (we don't traverse `full` twice),\n"
@@ -17293,17 +17310,17 @@ msgid ""
 "    ...>   base = byte_size(prefix)\n"
 "    ...>   binary_part(full, base, byte_size(full) - base)\n"
 "    ...> end\n"
-"    ...> take_prefix.(\"Mr. John\", \"Mr. \")\n"
+"    iex> take_prefix.(\"Mr. John\", \"Mr. \")\n"
 "    \"John\"\n"
 "\n"
-"Or simply used pattern matching:\n"
+"Or simply use pattern matching:\n"
 "\n"
 "    iex> take_prefix = fn full, prefix ->\n"
 "    ...>   base = byte_size(prefix)\n"
 "    ...>   <<_ :: binary-size(base), rest :: binary>> = full\n"
 "    ...>   rest\n"
 "    ...> end\n"
-"    ...> take_prefix.(\"Mr. John\", \"Mr. \")\n"
+"    iex> take_prefix.(\"Mr. John\", \"Mr. \")\n"
 "    \"John\"\n"
 "\n"
 "On the other hand, if you want to dynamically slice a string\n"
