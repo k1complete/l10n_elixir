@@ -27,11 +27,10 @@ defmodule L10nElixir.Mixfile do
   # Type `mix help deps` for more examples and options
   defp deps do
     [
-#	   {:exgettext, path: "../"},
-#	   {:l10n_iex, path: "../l10n_iex"}
-	   {:exgettext, git: "https://github.com/k1complete/exgettext.git"},
-	   {:l10n_iex, 
-	    git: "https://github.com/k1complete/l10n_iex.git" }
+##	   {:exgettext, path: "../"},
+##	   {:l10n_iex, path: "../l10n_iex"}
+     {:exgettext, github: "k1complete/exgettext"},
+	   {:l10n_iex,  github: "k1complete/l10n_iex" }
 #	    compile: "mix do deps.get, deps.compile; mix; mix l10n.msgfmt"}
     ]
   end
