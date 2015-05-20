@@ -1,0 +1,12 @@
+#. TRANSLATORS: Elixir.IO.Stream Summary
+#: lib/io/stream.ex:11 
+msgid ""
+"Defines a `IO.Stream` struct returned by `IO.stream/2` and `IO.binstream/2`.\n"
+"\n"
+"The following fields are public:\n"
+"\n"
+"  * `device`        - the IO device\n"
+"  * `raw`           - a boolean indicating if bin functions should be used\n"
+"  * `line_or_bytes` - if reading should read lines or a given amount of bytes\n"
+"\n"
+msgstr ""

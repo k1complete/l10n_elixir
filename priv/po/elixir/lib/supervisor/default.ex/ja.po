@@ -1,0 +1,22 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: l 10n_elixir\n"
+"PO-Revision-Date: 2015-05-20 21:54+0900\n"
+"Last-Translator: 小田 照敬 <EMAIL@ADDRESS>\n"
+"Language-Team: Japanese\n"
+"Language: ja\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#. TRANSLATORS: def Supervisor.Default.init(args)
+#: lib/supervisor/default.ex:10
+msgid ""
+"Supervisor callback that simply returns the given args.\n"
+"\n"
+"This is the supervisor used by `Supervisor.start_link/2`.\n"
+msgstr ""
+"単に与えられた引数を返すスーパバイザコールバックです。\n"
+"\n"
+"これは`Supervisor.start_link/2`によってスーパーバイザで使われます。\n"

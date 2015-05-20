@@ -1,0 +1,89 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: l 10n_elixir\n"
+"PO-Revision-Date: 2015-05-20 21:54+0900\n"
+"Last-Translator: 小田 照敬 <EMAIL@ADDRESS>\n"
+"Language-Team: Japanese\n"
+"Language: ja\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#. TRANSLATORS: Elixir.Range Summary
+#: lib/range.ex:1
+msgid ""
+"Defines a Range.\n"
+"\n"
+"A Range is represented internally as a struct. However,\n"
+"the most common form of creating and matching on ranges\n"
+"is via the `../2` macro, auto-imported from Kernel:\n"
+"\n"
+"    iex> range = 1..3\n"
+"    1..3\n"
+"    iex> first .. last = range\n"
+"    iex> first\n"
+"    1\n"
+"    iex> last\n"
+"    3\n"
+"\n"
+msgstr ""
+"範囲(Range)を定義します。\n"
+"\n"
+"Rangeは内部では構造体として表現されます。しかしながら、\n"
+"範囲(range)の作成とマッチングの最も一般的なフォームは、\n"
+"Kernelから自動インポートされる`../2`マクロによってです。\n"
+"\n"
+"    iex> range = 1..3\n"
+"    1..3\n"
+"    iex> first .. last = range\n"
+"    iex> first\n"
+"    1\n"
+"    iex> last\n"
+"    3\n"
+"\n"
+
+#. TRANSLATORS: def Range.new(first, last)
+#: lib/range.ex:27
+msgid "Creates a new range.\n"
+msgstr "新しい範囲(range)を作成します。\n"
+
+#. TRANSLATORS: def Range.Iterator.count(first, range)
+#: lib/range.ex:60
+msgid "Counts how many items are in the range.\n"
+msgstr "範囲(range)のアイテムの数を数えます。\n"
+
+#. TRANSLATORS: def Range.Iterator.next(first, range)
+#: lib/range.ex:55
+msgid "Returns the function that calculates the next item.\n"
+msgstr "次のアイテムを計算する関数を返します。\n"
+
+#. TRANSLATORS: Elixir.Range.Iterator Summary
+#: lib/range.ex:47
+msgid "A protocol used for iterating range elements.\n"
+msgstr "範囲(range)の要素の繰返しのために使われるプロトコルです。\n"
+
+#. TRANSLATORS: def Range.range?(range)
+#: lib/range.ex:43
+msgid ""
+"Returns true if the given argument is a range.\n"
+"\n"
+"## Examples\n"
+"\n"
+"    iex> Range.range?(1..3)\n"
+"    true\n"
+"\n"
+"    iex> Range.range?(0)\n"
+"    false\n"
+"\n"
+msgstr ""
+"与えられた引数が範囲(range)ならtrueを返します。\n"
+"\n"
+"## 例\n"
+"\n"
+"    iex> Range.range?(1..3)\n"
+"    true\n"
+"\n"
+"    iex> Range.range?(0)\n"
+"    false\n"
+"\n"

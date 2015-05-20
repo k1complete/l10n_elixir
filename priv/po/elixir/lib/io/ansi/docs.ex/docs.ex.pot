@@ -1,0 +1,35 @@
+#. TRANSLATORS: def IO.ANSI.Docs.default_options()
+#: lib/io/ansi/docs.ex:24 
+msgid ""
+"The default options used by this module.\n"
+"\n"
+"The supported values are:\n"
+"\n"
+"  * `:enabled`           - toggles coloring on and off (true)\n"
+"  * `:doc_bold`          - bold text (bright)\n"
+"  * `:doc_code`          - code blocks (cyan, bright)\n"
+"  * `:doc_headings`      - h1 and h2 headings (yellow, bright)\n"
+"  * `:doc_inline_code`   - inline code (cyan)\n"
+"  * `:doc_table_heading` - style for table headings\n"
+"  * `:doc_title`         - top level heading (reverse, yellow, bright)\n"
+"  * `:doc_underline`     - underlined text (underline)\n"
+"  * `:width`             - the width to format the text (80)\n"
+"\n"
+"Values for the color settings are strings with\n"
+"comma-separated ANSI values.\n"
+msgstr ""
+#. TRANSLATORS: def IO.ANSI.Docs.print_heading(heading, options \\ [])
+#: lib/io/ansi/docs.ex:41 
+msgid ""
+"Prints the head of the documentation (i.e. the function signature).\n"
+"\n"
+"See `default_options/0` for docs on the supported options.\n"
+msgstr ""
+#. TRANSLATORS: def IO.ANSI.Docs.print(doc, options \\ [])
+#: lib/io/ansi/docs.ex:57 
+msgid ""
+"Prints the documentation body.\n"
+"\n"
+"In addition to the printing string, takes a set of options\n"
+"defined in `default_options/1`.\n"
+msgstr ""

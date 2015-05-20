@@ -1,0 +1,11 @@
+#. TRANSLATORS: def Kernel.LexicalTracker.remotes(arg)
+#: lib/kernel/lexical_tracker.ex:20 
+msgid ""
+"Returns all remotes linked to in this lexical scope.\n"
+msgstr ""
+#. TRANSLATORS: def Kernel.LexicalTracker.dest(arg)
+#: lib/kernel/lexical_tracker.ex:29 
+msgid ""
+"Gets the destination the lexical scope is meant to\n"
+"compile to.\n"
+msgstr ""

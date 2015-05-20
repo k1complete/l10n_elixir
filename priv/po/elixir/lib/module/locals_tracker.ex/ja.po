@@ -1,0 +1,35 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: l 10n_elixir\n"
+"PO-Revision-Date: 2015-05-20 21:54+0900\n"
+"Last-Translator: 小田 照敬 <EMAIL@ADDRESS>\n"
+"Language-Team: Japanese\n"
+"Language: ja\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#. TRANSLATORS: def Module.LocalsTracker.imports_with_dispatch(ref, arg2)
+#: lib/module/locals_tracker.ex:54
+msgid ""
+"Returns all imported modules that had the given\n"
+"`{name, arity}` invoked.\n"
+msgstr ""
+"与えられた`{name, arity}`を呼び出したインポートされたモジュール\n"
+"全てを返します。\n"
+
+#. TRANSLATORS: def Module.LocalsTracker.reachable(ref)
+#: lib/module/locals_tracker.ex:67
+msgid ""
+"Returns all locals that are reachable.\n"
+"\n"
+"By default, all public functions are reachable.\n"
+"A private function is only reachable if it has\n"
+"a public function that it invokes directly.\n"
+msgstr ""
+"到達可能な全てのローカルを返します。\n"
+"\n"
+"デフォルトでは、全ての公開関数は到達可能です。\n"
+"プライベート関数は、それをダイレクトに呼び出している\n"
+"公開関数があれば到達可能なだけです。\n"

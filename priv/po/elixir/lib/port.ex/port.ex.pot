@@ -1,0 +1,68 @@
+#. TRANSLATORS: def Port.list()
+#: lib/port.ex:83 
+msgid ""
+"See http://www.erlang.org/doc/man/erlang.html#ports-0.\n"
+"\n"
+"Inlined by the compiler.\n"
+msgstr ""
+#. TRANSLATORS: def Port.info(port, item)
+#: lib/port.ex:74 
+msgid ""
+"See http://www.erlang.org/doc/man/erlang.html#port_info-2.\n"
+"\n"
+"Inlined by the compiler.\n"
+msgstr ""
+#. TRANSLATORS: def Port.info(port)
+#: lib/port.ex:65 
+msgid ""
+"See http://www.erlang.org/doc/man/erlang.html#port_info-1.\n"
+"\n"
+"Inlined by the compiler.\n"
+msgstr ""
+#. TRANSLATORS: def Port.control(port, operation, data)
+#: lib/port.ex:47 
+msgid ""
+"See http://www.erlang.org/doc/man/erlang.html#port_control-3.\n"
+"\n"
+"Inlined by the compiler.\n"
+msgstr ""
+#. TRANSLATORS: def Port.connect(port, pid)
+#: lib/port.ex:38 
+msgid ""
+"See http://www.erlang.org/doc/man/erlang.html#port_connect-2.\n"
+"\n"
+"Inlined by the compiler.\n"
+msgstr ""
+#. TRANSLATORS: def Port.command(port, data, options \\ [])
+#: lib/port.ex:29 
+msgid ""
+"See http://www.erlang.org/doc/man/erlang.html#port_command-2.\n"
+"\n"
+"Inlined by the compiler.\n"
+msgstr ""
+#. TRANSLATORS: def Port.close(port)
+#: lib/port.ex:20 
+msgid ""
+"See http://www.erlang.org/doc/man/erlang.html#port_close-1.\n"
+"\n"
+"Inlined by the compiler.\n"
+msgstr ""
+#. TRANSLATORS: def Port.call(port, operation, data)
+#: lib/port.ex:56 
+msgid ""
+"See http://www.erlang.org/doc/man/erlang.html#port_call-3.\n"
+"\n"
+"Inlined by the compiler.\n"
+msgstr ""
+#. TRANSLATORS: def Port.open(name, settings)
+#: lib/port.ex:11 
+msgid ""
+"See http://www.erlang.org/doc/man/erlang.html#open_port-2.\n"
+"\n"
+"Inlined by the compiler.\n"
+msgstr ""
+#. TRANSLATORS: Elixir.Port Summary
+#: lib/port.ex:1 
+msgid ""
+"Functions related to Erlang ports.\n"
+msgstr ""

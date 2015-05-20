@@ -1,0 +1,13 @@
+#. TRANSLATORS: Elixir.File.Stream Summary
+#: lib/file/stream.ex:1 
+msgid ""
+"Defines a `File.Stream` struct returned by `File.stream!/3`.\n"
+"\n"
+"The following fields are public:\n"
+"\n"
+"  * `path`          - the file path\n"
+"  * `modes`         - the file modes\n"
+"  * `raw`           - a boolean indicating if bin functions should be used\n"
+"  * `line_or_bytes` - if reading should read lines or a given amount of bytes\n"
+"\n"
+msgstr ""

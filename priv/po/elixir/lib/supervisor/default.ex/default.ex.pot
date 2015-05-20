@@ -1,0 +1,7 @@
+#. TRANSLATORS: def Supervisor.Default.init(args)
+#: lib/supervisor/default.ex:10 
+msgid ""
+"Supervisor callback that simply returns the given args.\n"
+"\n"
+"This is the supervisor used by `Supervisor.start_link/2`.\n"
+msgstr ""

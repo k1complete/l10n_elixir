@@ -1,0 +1,14 @@
+#. TRANSLATORS: Elixir.String.Chars Summary
+#: lib/string/chars.ex:3 
+msgid ""
+"The String.Chars protocol is responsible for\n"
+"converting a structure to a Binary (only if applicable).\n"
+"The only function required to be implemented is\n"
+"`to_string` which does the conversion.\n"
+"\n"
+"The `to_string` function automatically imported\n"
+"by Kernel invokes this protocol. String\n"
+"interpolation also invokes to_string in its\n"
+"arguments. For example, `\"foo#{bar}\"` is the same\n"
+"as `\"foo\" <> to_string(bar)`.\n"
+msgstr ""

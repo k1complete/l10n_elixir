@@ -1,0 +1,92 @@
+#. TRANSLATORS: Elixir.Bitwise Summary
+#: lib/bitwise.ex:1 
+msgid ""
+"This module provides macros and operators for bitwise operators.\n"
+"These macros can be used in guards.\n"
+"\n"
+"The easiest way to use is to simply import them into\n"
+"your module:\n"
+"\n"
+"    iex> use Bitwise\n"
+"    iex> bnot 1\n"
+"    -2\n"
+"    iex> 1 &&& 1\n"
+"    1\n"
+"\n"
+"You can select to include only or skip operators by passing options:\n"
+"\n"
+"    iex> use Bitwise, only_operators: true\n"
+"    iex> 1 &&& 1\n"
+"    1\n"
+"\n"
+msgstr ""
+#. TRANSLATORS: defmacro Bitwise.bxor(left, right)
+#: lib/bitwise.ex:90 
+msgid ""
+"Bitwise xor.\n"
+msgstr ""
+#. TRANSLATORS: defmacro Bitwise.^^^(left, right)
+#: lib/bitwise.ex:97 
+msgid ""
+"Bitwise xor as operator.\n"
+msgstr ""
+#. TRANSLATORS: defmacro Bitwise.bor(left, right)
+#: lib/bitwise.ex:76 
+msgid ""
+"Bitwise or.\n"
+msgstr ""
+#. TRANSLATORS: defmacro Bitwise.|||(left, right)
+#: lib/bitwise.ex:83 
+msgid ""
+"Bitwise or as operator.\n"
+msgstr ""
+#. TRANSLATORS: defmacro Bitwise.bnot(expr)
+#: lib/bitwise.ex:48 
+msgid ""
+"Bitwise not.\n"
+msgstr ""
+#. TRANSLATORS: defmacro Bitwise.~~~(expr)
+#: lib/bitwise.ex:55 
+msgid ""
+"Bitwise not as operator.\n"
+msgstr ""
+#. TRANSLATORS: defmacro Bitwise.band(left, right)
+#: lib/bitwise.ex:62 
+msgid ""
+"Bitwise and.\n"
+msgstr ""
+#. TRANSLATORS: defmacro Bitwise.&&&(left, right)
+#: lib/bitwise.ex:69 
+msgid ""
+"Bitwise and as operator.\n"
+msgstr ""
+#. TRANSLATORS: defmacro Bitwise.bsr(left, right)
+#: lib/bitwise.ex:118 
+msgid ""
+"Arithmetic bitshift right.\n"
+msgstr ""
+#. TRANSLATORS: defmacro Bitwise.>>>(left, right)
+#: lib/bitwise.ex:125 
+msgid ""
+"Arithmetic bitshift right as operator.\n"
+msgstr ""
+#. TRANSLATORS: defmacro Bitwise.bsl(left, right)
+#: lib/bitwise.ex:104 
+msgid ""
+"Arithmetic bitshift left.\n"
+msgstr ""
+#. TRANSLATORS: defmacro Bitwise.<<<(left, right)
+#: lib/bitwise.ex:111 
+msgid ""
+"Arithmetic bitshift left as operator.\n"
+msgstr ""
+#. TRANSLATORS: defmacro Bitwise.__using__(options)
+#: lib/bitwise.ex:31 
+msgid ""
+"Allows a developer to use this module in their programs with\n"
+"the following options:\n"
+"\n"
+"  * `:only_operators` - include only operators\n"
+"  * `:skip_operators` - skip operators\n"
+"\n"
+msgstr ""

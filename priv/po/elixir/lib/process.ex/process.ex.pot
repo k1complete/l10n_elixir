@@ -1,0 +1,261 @@
+#. TRANSLATORS: def Process.monitor(item)
+#: lib/process.ex:206 
+msgid ""
+"The calling process starts monitoring the item given.\n"
+"It returns the monitor reference.\n"
+"\n"
+"See http://www.erlang.org/doc/man/erlang.html#monitor-2 for more info.\n"
+"\n"
+"Inlined by the compiler.\n"
+msgstr ""
+#. TRANSLATORS: def Process.group_leader(pid, leader)
+#: lib/process.ex:315 
+msgid ""
+"Sets the group leader of `pid` to `leader`. Typically, this is used when a processes\n"
+"started from a certain shell should have a group leader other than `:init`.\n"
+msgstr ""
+#. TRANSLATORS: def Process.put(key, value)
+#: lib/process.ex:62 
+msgid ""
+"Stores the given key-value in the process dictionary.\n"
+msgstr ""
+#. TRANSLATORS: def Process.get(key, default \\ nil)
+#: lib/process.ex:41 
+msgid ""
+"Returns the value for the given `key`.\n"
+msgstr ""
+#. TRANSLATORS: def Process.list()
+#: lib/process.ex:236 
+msgid ""
+"Returns a list of process identifiers corresponding to all the\n"
+"processes currently existing on the local node.\n"
+"\n"
+"Note that a process that is exiting, exists but is not alive, i.e.,\n"
+"`alive?/1` will return `false` for a process that is exiting,\n"
+"but its process identifier will be part of the result returned.\n"
+"\n"
+"See http://www.erlang.org/doc/man/erlang.html#processes-0 for more info.\n"
+msgstr ""
+#. TRANSLATORS: def Process.registered()
+#: lib/process.ex:323 
+msgid ""
+"Returns a list of names which have been registered using `register/2`.\n"
+msgstr ""
+#. TRANSLATORS: def Process.unregister(name)
+#: lib/process.ex:287 
+msgid ""
+"Removes the registered name, associated with a pid or a port identifier.\n"
+"\n"
+"See http://www.erlang.org/doc/man/erlang.html#unregister-1 for more info.\n"
+msgstr ""
+#. TRANSLATORS: def Process.unlink(pid)
+#: lib/process.ex:263 
+msgid ""
+"Removes the link, if there is one, between the calling process and\n"
+"the process or port referred to by `pid`. Returns `true` and does not\n"
+"fail, even if there is no link or `id` does not exist\n"
+"\n"
+"See http://www.erlang.org/doc/man/erlang.html#unlink-1 for more info.\n"
+"\n"
+"Inlined by the compiler.\n"
+msgstr ""
+#. TRANSLATORS: def Process.spawn(mod, fun, args, opts)
+#: lib/process.ex:193 
+msgid ""
+"Spawns the given module and function passing the given args\n"
+"according to the given options.\n"
+"\n"
+"The result depends on the given options. In particular,\n"
+"if `:monitor` is given as an option, it will return a tuple\n"
+"containing the pid and the monitoring reference, otherwise\n"
+"just the spawned process pid.\n"
+"\n"
+"It also accepts extra options, for the list of available options\n"
+"check http://www.erlang.org/doc/man/erlang.html#spawn_opt-4\n"
+"\n"
+"Inlined by the compiler.\n"
+msgstr ""
+#. TRANSLATORS: def Process.demonitor(monitor_ref, options \\ [])
+#: lib/process.ex:221 
+msgid ""
+"If `monitor_ref` is a reference which the calling process\n"
+"obtained by calling `monitor/1`, this monitoring is turned off.\n"
+"If the monitoring is already turned off, nothing happens.\n"
+"\n"
+"See http://www.erlang.org/doc/man/erlang.html#demonitor-2 for more info.\n"
+"\n"
+"Inlined by the compiler.\n"
+msgstr ""
+#. TRANSLATORS: def Process.whereis(name)
+#: lib/process.ex:298 
+msgid ""
+"Returns the pid or port identifier with the registered name.\n"
+"Returns `nil` if the name is not registered.\n"
+"\n"
+"See http://www.erlang.org/doc/man/erlang.html#whereis-1 for more info.\n"
+msgstr ""
+#. TRANSLATORS: def Process.group_leader()
+#: lib/process.ex:306 
+msgid ""
+"Returns the pid of the group leader for the process which evaluates the function.\n"
+msgstr ""
+#. TRANSLATORS: def Process.get_keys(value)
+#: lib/process.ex:54 
+msgid ""
+"Returns all keys that have the given `value`.\n"
+msgstr ""
+#. TRANSLATORS: def Process.get()
+#: lib/process.ex:32 
+msgid ""
+"Returns all key-values in the dictionary.\n"
+msgstr ""
+#. TRANSLATORS: def Process.delete(key)
+#: lib/process.ex:70 
+msgid ""
+"Deletes the given `key` from the dictionary.\n"
+msgstr ""
+#. TRANSLATORS: def Process.link(pid)
+#: lib/process.ex:249 
+msgid ""
+"Creates a link between the calling process and another process\n"
+"(or port) `pid`, if there is not such a link already.\n"
+"\n"
+"See http://www.erlang.org/doc/man/erlang.html#link-1 for more info.\n"
+"\n"
+"Inlined by the compiler.\n"
+msgstr ""
+#. TRANSLATORS: def Process.flag(flag, value)
+#: lib/process.ex:337 
+msgid ""
+"Sets certain flags for the process which calls this function.\n"
+"Returns the old value of the flag.\n"
+"\n"
+"See http://www.erlang.org/doc/man/erlang.html#process_flag-2 for more info.\n"
+msgstr ""
+#. TRANSLATORS: def Process.flag(pid, flag, value)
+#: lib/process.ex:349 
+msgid ""
+"Sets certain flags for the process `pid`, in the same manner as `flag/2`.\n"
+"Returns the old value of the flag. The allowed values for `flag` are\n"
+"only a subset of those allowed in `flag/2`, namely: `save_calls`.\n"
+"\n"
+"See http://www.erlang.org/doc/man/erlang.html#process_flag-3 for more info.\n"
+msgstr ""
+#. TRANSLATORS: def Process.exit(pid, reason)
+#: lib/process.ex:100 
+msgid ""
+"Sends an exit signal with the given reason to the pid.\n"
+"\n"
+"The following behaviour applies if reason is any term except `:normal` or `:kill`:\n"
+"\n"
+"  1. If pid is not trapping exits, pid will exit with the given reason.\n"
+"\n"
+"  2. If pid is trapping exits, the exit signal is transformed into a message\n"
+"     `{:EXIT, from, reason}` and delivered to the message queue of pid.\n"
+"\n"
+"  3. If reason is the atom `:normal`, pid will not exit. If it is trapping\n"
+"     exits, the exit signal is transformed into a message `{:EXIT, from,\n"
+"     :normal}` and delivered to its message queue.\n"
+"\n"
+"  4. If reason is the atom `:kill`, that is if `exit(pid, :kill)` is called,\n"
+"     an untrappable exit signal is sent to pid which will unconditionally\n"
+"     exit with exit reason `:killed`.\n"
+"\n"
+"Inlined by the compiler.\n"
+"\n"
+"## Examples\n"
+"\n"
+"    Process.exit(pid, :kill)\n"
+"\n"
+msgstr ""
+#. TRANSLATORS: def Process.send(dest, msg, options)
+#: lib/process.ex:127 
+msgid ""
+"Sends a message to the given process.\n"
+"\n"
+"If the option `:noconnect` is used and sending the message would require an\n"
+"auto-connection to another node the message is not sent and `:noconnect` is\n"
+"returned.\n"
+"\n"
+"If the option `:nosuspend` is used and sending the message would cause the\n"
+"sender to be suspended the message is not sent and `:nosuspend` is returned.\n"
+"\n"
+"Otherwise the message is sent and `:ok` is returned.\n"
+"\n"
+"## Examples\n"
+"\n"
+"    iex> Process.send({:name, :node_does_not_exist}, :hi, [:noconnect])\n"
+"    :noconnect\n"
+"\n"
+msgstr ""
+#. TRANSLATORS: def Process.send_after(dest, msg, time)
+#: lib/process.ex:149 
+msgid ""
+"Sends `msg` to `dest` after `time` milliseconds.\n"
+"\n"
+"If `dest` is a pid, it must be the pid of a local process, dead or alive.\n"
+"If `dest` is an atom, it must be the name of a registered process\n"
+"which is looked up at the time of delivery. No error is given if the name does\n"
+"not refer to a process.\n"
+"\n"
+"This function returns a timer reference, which can be read or canceled with\n"
+"`:erlang.read_timer/1`, `:erlang.start_timer/3` and `:erlang.cancel_timer/1`.\n"
+"Note `time` cannot be greater than `4294967295`.\n"
+"\n"
+"Finally, the timer will be automatically canceled if the given `dest` is a pid\n"
+"which is not alive or when the given pid exits. Note that timers will not be\n"
+"automatically canceled when `dest` is an atom (as the atom resolution is done\n"
+"on delivery).\n"
+msgstr ""
+#. TRANSLATORS: def Process.alive?(pid)
+#: lib/process.ex:24 
+msgid ""
+"Returns true if the process exists and is alive, that is,\n"
+"is not exiting and has not exited. Otherwise, returns false.\n"
+"\n"
+"`pid` must refer to a process at the local node.\n"
+msgstr ""
+#. TRANSLATORS: def Process.info(pid)
+#: lib/process.ex:361 
+msgid ""
+"Returns information about the process identified by `pid` or `nil` if the process\n"
+"is not alive.\n"
+"Use this only for debugging information.\n"
+"\n"
+"See http://www.erlang.org/doc/man/erlang.html#process_info-1 for more info.\n"
+msgstr ""
+#. TRANSLATORS: def Process.info(pid, spec)
+#: lib/process.ex:372 
+msgid ""
+"Returns information about the process identified by `pid`\n"
+"or `nil` if the process is not alive.\n"
+"\n"
+"See http://www.erlang.org/doc/man/erlang.html#process_info-2 for more info.\n"
+msgstr ""
+#. TRANSLATORS: Elixir.Process Summary
+#: lib/process.ex:1 
+msgid ""
+"Conveniences for working with processes and the process dictionary.\n"
+"\n"
+"Besides the functions available in this module, the `Kernel` module\n"
+"exposes and auto-imports some basic functionality related to processes\n"
+"available through the functions:\n"
+"\n"
+"  * `Kernel.spawn/1` and `Kernel.spawn/3`\n"
+"  * `Kernel.spawn_link/1` and `Kernel.spawn_link/3`\n"
+"  * `Kernel.spawn_monitor/1` and `Kernel.spawn_monitor/3`\n"
+"  * `Kernel.self/0`\n"
+"  * `Kernel.send/2`\n"
+"\n"
+msgstr ""
+#. TRANSLATORS: def Process.register(pid, name)
+#: lib/process.ex:277 
+msgid ""
+"Associates the name with a pid or a port identifier. `name`, which must\n"
+"be an atom, can be used instead of the pid / port identifier with the\n"
+"`Kernel.send/2` function.\n"
+"\n"
+"`Process.register/2` will fail with `ArgumentError` if the pid supplied\n"
+"is no longer alive, (check with `alive?/1`) or if the name is\n"
+"already registered (check with `whereis/1`).\n"
+msgstr ""

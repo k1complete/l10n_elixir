@@ -1,0 +1,21 @@
+#. TRANSLATORS: def HashSet.new()
+#: lib/hash_set.ex:36 
+msgid ""
+"Creates a new empty set.\n"
+msgstr ""
+#. TRANSLATORS: Elixir.HashSet Summary
+#: lib/hash_set.ex:1 
+msgid ""
+"A set store.\n"
+"\n"
+"The `HashSet` is represented internally as a struct, therefore\n"
+"`%HashSet{}` can be used whenever there is a need to match\n"
+"on any `HashSet`. Note though the struct fields are private and\n"
+"must not be accessed directly. Instead, use the functions on this\n"
+"or in the `Set` module.\n"
+"\n"
+"The `HashSet` is implemented using tries, which grows in\n"
+"space as the number of keys grows, working well with both\n"
+"small and large set of keys. For more information about the\n"
+"functions and their APIs, please consult the `Set` module.\n"
+msgstr ""

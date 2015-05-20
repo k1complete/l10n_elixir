@@ -1,0 +1,52 @@
+#. TRANSLATORS: Elixir.Range Summary
+#: lib/range.ex:1 
+msgid ""
+"Defines a Range.\n"
+"\n"
+"A Range is represented internally as a struct. However,\n"
+"the most common form of creating and matching on ranges\n"
+"is via the `../2` macro, auto-imported from Kernel:\n"
+"\n"
+"    iex> range = 1..3\n"
+"    1..3\n"
+"    iex> first .. last = range\n"
+"    iex> first\n"
+"    1\n"
+"    iex> last\n"
+"    3\n"
+"\n"
+msgstr ""
+#. TRANSLATORS: def Range.new(first, last)
+#: lib/range.ex:27 
+msgid ""
+"Creates a new range.\n"
+msgstr ""
+#. TRANSLATORS: def Range.Iterator.count(first, range)
+#: lib/range.ex:60 
+msgid ""
+"Counts how many items are in the range.\n"
+msgstr ""
+#. TRANSLATORS: def Range.Iterator.next(first, range)
+#: lib/range.ex:55 
+msgid ""
+"Returns the function that calculates the next item.\n"
+msgstr ""
+#. TRANSLATORS: Elixir.Range.Iterator Summary
+#: lib/range.ex:47 
+msgid ""
+"A protocol used for iterating range elements.\n"
+msgstr ""
+#. TRANSLATORS: def Range.range?(range)
+#: lib/range.ex:43 
+msgid ""
+"Returns true if the given argument is a range.\n"
+"\n"
+"## Examples\n"
+"\n"
+"    iex> Range.range?(1..3)\n"
+"    true\n"
+"\n"
+"    iex> Range.range?(0)\n"
+"    false\n"
+"\n"
+msgstr ""

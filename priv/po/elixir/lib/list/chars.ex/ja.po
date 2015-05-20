@@ -1,0 +1,33 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: l 10n_elixir\n"
+"PO-Revision-Date: 2015-05-20 21:54+0900\n"
+"Last-Translator: 小田 照敬 <EMAIL@ADDRESS>\n"
+"Language-Team: Japanese\n"
+"Language: ja\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#. TRANSLATORS: Elixir.List.Chars Summary
+#: lib/list/chars.ex:1
+msgid ""
+"The List.Chars protocol is responsible for\n"
+"converting a structure to a list (only if applicable).\n"
+"The only function required to be implemented is\n"
+"`to_char_list` which does the conversion.\n"
+"\n"
+"The `to_char_list` function automatically imported\n"
+"by Kernel invokes this protocol.\n"
+msgstr ""
+"List.Charsプロトコルは、構造をリスト(適用できるときだけ)へ変換する役割\n"
+"りを果します。要求される関数は変換を行う`to_char_list`の実装だけです。\n"
+"\n"
+"`to_char_list`関数は自動的にカーネルによってインポートされ、このプロト\n"
+"コルが実行します。\n"
+
+#. TRANSLATORS: def List.Chars.BitString.to_char_list(thing)
+#: lib/list/chars.ex:23
+msgid "Returns the given binary converted to a char list.\n"
+msgstr "与えられたバイナリを文字のリストに変換したものを返します。\n"
