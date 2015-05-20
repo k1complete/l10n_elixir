@@ -29,8 +29,8 @@ defmodule L10nElixir.Mixfile do
     [
 ##	   {:exgettext, path: "../"},
 ##	   {:l10n_iex, path: "../l10n_iex"}
-     {:exgettext, github: "k1complete/exgettext", branch: "structured" },
-	   {:l10n_iex,  github: "k1complete/l10n_iex", branch: "structured" }
+     {:exgettext, github: "k1complete/exgettext"},
+	   {:l10n_iex,  github: "k1complete/l10n_iex" }
 #	    compile: "mix do deps.get, deps.compile; mix; mix l10n.msgfmt"}
     ]
   end
