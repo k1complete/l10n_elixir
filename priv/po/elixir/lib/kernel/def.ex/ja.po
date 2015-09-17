@@ -1,0 +1,21 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: l 10n_elixir\n"
+"PO-Revision-Date: 2015-09-17 19:06+0900\n"
+"Last-Translator: 小田 照敬 <EMAIL@ADDRESS>\n"
+"Language-Team: Japanese\n"
+"Language: ja\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#. TRANSLATORS: def Kernel.Def.struct(module, fields)
+#: lib/kernel/def.ex:26
+msgid "Callback invoked at compile time for `defstruct`.\n"
+msgstr "`defstruct`からコンパイル時に起動されるコールバックです。\n"
+
+#. TRANSLATORS: def Kernel.Def.delegate(fun, opts)
+#: lib/kernel/def.ex:4
+msgid "Callback invoked at compile time for `defdelegate`.\n"
+msgstr "`defdelegate`からコンパイル時に起動されるコールバックです。\n"

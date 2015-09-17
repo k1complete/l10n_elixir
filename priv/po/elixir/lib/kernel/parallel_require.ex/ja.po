@@ -10,8 +10,8 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
-#. TRANSLATORS: def Kernel.ParallelRequire.files(files, callback \\ fn x -> x end)
-#: lib/kernel/parallel_require.ex:16
+#. TRANSLATORS: def Kernel.ParallelRequire.files(files, callback \\ default_callback)
+#: lib/kernel/parallel_require.ex:8
 msgid ""
 "Requires the given files.\n"
 "\n"
@@ -28,6 +28,6 @@ msgstr ""
 "requireされたファイルにより生成された、モジュールを返します。\n"
 
 #. TRANSLATORS: Elixir.Kernel.ParallelRequire Summary
-#: lib/kernel/parallel_require.ex:1
+#: lib/kernel/parallel_require.ex:2
 msgid "A module responsible for requiring files in parallel.\n"
 msgstr "並列にファイルをrequireすることに責任をもつモジュールです。\n"

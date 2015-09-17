@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: l 10n_elixir\n"
-"PO-Revision-Date: 2015-05-20 21:55+0900\n"
+"PO-Revision-Date: 2015-09-17 15:04+0900\n"
 "Last-Translator: 小田 照敬 <EMAIL@ADDRESS>\n"
 "Language-Team: Japanese\n"
 "Language: ja\n"
@@ -11,7 +11,7 @@ msgstr ""
 "Plural-Forms: nplurals=1; plural=0;\n"
 
 #. TRANSLATORS: def System.tmp_dir()
-#: lib/system.ex:173
+#: lib/system.ex:141
 msgid ""
 "Writable temporary directory.\n"
 "\n"
@@ -40,7 +40,7 @@ msgstr ""
 "上の全てが書込み不可だった場合、`nil`を返します。\n"
 
 #. TRANSLATORS: def System.tmp_dir!()
-#: lib/system.ex:187
+#: lib/system.ex:163
 msgid ""
 "Writable temporary directory, exception on error.\n"
 "\n"
@@ -52,21 +52,43 @@ msgstr ""
 "`tmp_dir/0`と同じですが、もしテンポラリディレクトリが\n"
 "無い場合、`nil`を返すかわりに、`RuntimeError`を上げます。\n"
 
+#. TRANSLATORS: def System.put_env(dict)
+#: lib/system.ex:281
+msgid ""
+"Sets multiple environment variables.\n"
+"\n"
+"Sets a new value for each environment variable corresponding\n"
+"to each key in `dict`.\n"
+msgstr ""
+"複数の環境変数をセットします。\n"
+"\n"
+"`dict`の中のそれぞれのキーに一致しているそれぞれの環境変数に\n"
+"新しい値をセットします。\n"
+
+#. TRANSLATORS: def System.put_env(varname, value)
+#: lib/system.ex:270
+msgid ""
+"Sets an environment variable value.\n"
+"\n"
+"Sets a new `value` for the environment variable `varname`.\n"
+msgstr ""
+"環境変数の値をセットします。\n"
+"\n"
+"環境変数`varname`に新しい`value`をセットします。\n"
+
 #. TRANSLATORS: def System.user_home()
-#: lib/system.ex:127
+#: lib/system.ex:121
 msgid ""
 "User home directory.\n"
 "\n"
 "Returns the user home directory (platform independent).\n"
-"Returns `nil` if no user home is set.\n"
 msgstr ""
 "ユーザホームディレクトリです。\n"
 "\n"
-"(プラットフォーム依存の)ユーザホームディレクトリを返します。\n"
-"もしユーザホームがセットされていない場合、`nil`を返します。\n"
+"(プラットフォーム非依存の)ユーザホームディレクトリを返します。\n"
 
 #. TRANSLATORS: def System.user_home!()
-#: lib/system.ex:140
+#: lib/system.ex:130
 msgid ""
 "User home directory, exception on error.\n"
 "\n"
@@ -79,19 +101,8 @@ msgstr ""
 "もしユーザホームがセットされていない場合、`nil`を返すか\n"
 "わりに`RuntimeError`を上げます。\n"
 
-#. TRANSLATORS: Elixir.System Summary
-#: lib/system.ex:1
-msgid ""
-"The System module provides access to variables used or\n"
-"maintained by the VM and to functions that interact directly\n"
-"with the VM or the host system.\n"
-msgstr ""
-"SystemモジュールはVMにより使用、維持される変数、\n"
-"VMまたはホストシステムへの直接の相互作用をする関数\n"
-"へのアクセスを提供します。\n"
-
 #. TRANSLATORS: def System.get_env()
-#: lib/system.ex:254
+#: lib/system.ex:229
 msgid ""
 "System environment variables.\n"
 "\n"
@@ -103,21 +114,19 @@ msgstr ""
 "全ての環境変数のリストを返します。それぞれの変数は`{name, value}`タプル\n"
 "で、`name`と`value`はどちらも文字列として与えられます。\n"
 
-#. TRANSLATORS: def System.put_env(dict)
-#: lib/system.ex:306
+#. TRANSLATORS: Elixir.System Summary
+#: lib/system.ex:2
 msgid ""
-"Sets multiple environment variables.\n"
-"\n"
-"Sets a new value for each environment variable corresponding\n"
-"to each key in `dict`.\n"
+"The System module provides access to variables used or\n"
+"maintained by the VM and to functions that interact directly\n"
+"with the VM or the host system.\n"
 msgstr ""
-"複数の環境変数をセットします。\n"
-"\n"
-"`dict`の中のそれぞれのキーに一致しているそれぞれの環境変数に\n"
-"新しい値をセットします。\n"
+"SystemモジュールはVMにより使用、維持される変数、\n"
+"VMまたはホストシステムへの直接の相互作用をする関数\n"
+"へのアクセスを提供します。\n"
 
 #. TRANSLATORS: def System.at_exit(fun)
-#: lib/system.ex:226
+#: lib/system.ex:195
 msgid ""
 "Registers a program exit handler function.\n"
 "\n"
@@ -144,7 +153,7 @@ msgstr ""
 "関数は引数としてexitステータスコードを受け取らなくてはなりません。\n"
 
 #. TRANSLATORS: def System.argv(args)
-#: lib/system.ex:85
+#: lib/system.ex:78
 msgid ""
 "Modifies command line arguments.\n"
 "\n"
@@ -157,7 +166,7 @@ msgstr ""
 "以前のargv情報は全て破壊されますので、注意して使用してください。\n"
 
 #. TRANSLATORS: def System.find_executable(program)
-#: lib/system.ex:240
+#: lib/system.ex:212
 msgid ""
 "Locates an executable on the system.\n"
 "\n"
@@ -175,30 +184,8 @@ msgstr ""
 "Windowsでは`.com`、`.cmd`または類似した拡張子で\n"
 "ファイルを探します。\n"
 
-#. TRANSLATORS: def System.put_env(varname, value)
-#: lib/system.ex:294
-msgid ""
-"Sets an environment variable value.\n"
-"\n"
-"Sets a new `value` for the environment variable `varname`.\n"
-msgstr ""
-"環境変数の値をセットします。\n"
-"\n"
-"環境変数`varname`に新しい`value`をセットします。\n"
-
-#. TRANSLATORS: def System.argv()
-#: lib/system.ex:74
-msgid ""
-"Lists command line arguments.\n"
-"\n"
-"Returns the list of command line arguments passed to the program.\n"
-msgstr ""
-"コマンドライン引数のリストです。\n"
-"\n"
-"プログラムに渡された、コマンドライン引数のリストを返します。\n"
-
 #. TRANSLATORS: def System.cmd(command, args, opts \\ [])
-#: lib/system.ex:433
+#: lib/system.ex:355
 msgid ""
 "Executes the given `command` with `args`.\n"
 "\n"
@@ -210,7 +197,20 @@ msgid ""
 "not happen unless `Path.wildcard/2` is used. On Windows though,\n"
 "wildcard expansion is up to the program.\n"
 "\n"
-"A set of options are also supported and described below.\n"
+"This function returns a tuple containing the collected result\n"
+"and the command exit status.\n"
+"\n"
+"## Examples\n"
+"\n"
+"    iex> System.cmd \"echo\", [\"hello\"]\n"
+"    {\"hello\\n\", 0}\n"
+"\n"
+"    iex> System.cmd \"echo\", [\"hello\"], env: [{\"MIX_ENV\", \"test\"}]\n"
+"    {\"hello\\n\", 0}\n"
+"    \n"
+"    iex> System.cmd \"echo\", [\"hello\"], into: IO.stream(:stdio, :line)\n"
+"    hello\n"
+"    {%IO.Stream{}, 0}\n"
 "\n"
 "## Options\n"
 "\n"
@@ -220,9 +220,11 @@ msgid ""
 "  * `:env` - an enumerable of tuples containing environment key-value as "
 "binary\n"
 "  * `:arg0` - set the command arg0\n"
-"  * `:stderr_to_stdout` - redirects stderr to stdout when true\n"
-"  * `:parallelism` - when true, the VM will schedule port tasks to improve\n"
-"    parallelism in the system. If set to false, the VM will try to perform\n"
+"  * `:stderr_to_stdout` - redirects stderr to stdout when `true`\n"
+"  * `:parallelism` - when `true`, the VM will schedule port tasks to "
+"improve\n"
+"    parallelism in the system. If set to `false`, the VM will try to "
+"perform\n"
 "    commands immediately, improving latency at the expense of parallelism.\n"
 "    The default can be set on system startup by passing the \"+spp\" "
 "argument\n"
@@ -270,15 +272,25 @@ msgstr ""
 "起らないことを意味します。しかし、Windowsではワイルドカード\n"
 "の展開はプログラム次第です。\n"
 "\n"
-"サポートされるオプションとその説明は以下の通りです。\n"
+"この関数は結果とコマンドのexitステータスのタプルを返します。\n"
+"\n"
+"## Examples\n"
+"\n"
+"    iex> System.cmd \"echo\", [\"hello\"]\n"
+"    {\"hello\\n\", 0}\n"
+"\n"
+"    iex> System.cmd \"echo\", [\"hello\"], env: [{\"MIX_ENV\", \"test\"}]\n"
+"    {\"hello\\n\", 0}\n"
+"    \n"
+"    iex> System.cmd \"echo\", [\"hello\"], into: IO.stream(:stdio, :line)\n"
+"    hello\n"
+"    {%IO.Stream{}, 0}\n"
 "\n"
 "## オプション\n"
 "\n"
-"  * `:into` - 与えられたcollectableに結果を挿入します。デフォルトは`\"\"`で"
-"す\n"
+"  * `:into` - 与えられたcollectableに結果を挿入します。デフォルトは`\"\"`です\n"
 "  * `:cd` - コマンドを実行するディレクトリを指定します\n"
-"  * `:env` - バイナリの環境変数キーバリュータプルを含むenumerableを指定しま"
-"す\n"
+"  * `:env` - バイナリの環境変数キーバリュータプルを含むenumerableを指定します\n"
 "  * `:arg0` - コマンドのarg0を指定します\n"
 "  * `:stderr_to_stdout` - trueにすると、stderrをstdoutにリダイレクトします\n"
 "  * `:parallelism` - trueにすると、VMはシステムの並行性を改善するために\n"
@@ -319,9 +331,65 @@ msgstr ""
 "を実行することを望むなら、\n"
 "[Erlang's :os.cmd/1 function](http://www.erlang.org/doc/man/os.html#cmd-1)\n"
 "を、チェックしてください。\n"
+"-----<\n"
+"## Options\n"
+"\n"
+"  * `:into` - injects the result into the given collectable, defaults to `\"\"`\n"
+"  * `:cd` - the directory to run the command in\n"
+"  * `:env` - an enumerable of tuples containing environment key-value as binary\n"
+"  * `:arg0` - set the command arg0\n"
+"  * `:stderr_to_stdout` - redirects stderr to stdout when `true`\n"
+"  * `:parallelism` - when `true`, the VM will schedule port tasks to improve\n"
+"    parallelism in the system. If set to `false`, the VM will try to perform\n"
+"    commands immediately, improving latency at the expense of parallelism.\n"
+"    The default can be set on system startup by passing the \"+spp\" argument\n"
+"    to `--erl`.\n"
+"\n"
+"## Error reasons\n"
+"\n"
+"If invalid arguments are given, `ArgumentError` is raised by\n"
+"`System.cmd/3`. `System.cmd/3` also expects a strict set of\n"
+"options and will raise if unknown or invalid options are given.\n"
+"\n"
+"Furthermore, `System.cmd/3` may fail with one of the POSIX reasons\n"
+"detailed below:\n"
+"\n"
+"  * `:system_limit` - all available ports in the Erlang emulator are in use\n"
+"\n"
+"  * `:enomem` - there was not enough memory to create the port\n"
+"\n"
+"  * `:eagain` - there are no more available operating system processes\n"
+"\n"
+"  * `:enametoolong` - the external command given was too long\n"
+"\n"
+"  * `:emfile` - there are no more available file descriptors\n"
+"    (for the operating system process that the Erlang emulator runs in)\n"
+"\n"
+"  * `:enfile` - the file table is full (for the entire operating system)\n"
+"\n"
+"  * `:eacces` - the command does not point to an executable file\n"
+"\n"
+"  * `:enoent` - the command does not point to an existing file\n"
+"\n"
+"## Shell commands\n"
+"\n"
+"If you desire to execute a trusted command inside a shell, with pipes,\n"
+"redirecting and so on, please check\n"
+"[Erlang's :os.cmd/1 function](http://www.erlang.org/doc/man/os.html#cmd-1).\n"
+
+#. TRANSLATORS: def System.argv()
+#: lib/system.ex:68
+msgid ""
+"Lists command line arguments.\n"
+"\n"
+"Returns the list of command line arguments passed to the program.\n"
+msgstr ""
+"コマンドライン引数のリストです。\n"
+"\n"
+"プログラムに渡された、コマンドライン引数のリストを返します。\n"
 
 #. TRANSLATORS: def System.get_pid()
-#: lib/system.ex:286
+#: lib/system.ex:259
 msgid ""
 "Erlang VM process identifier.\n"
 "\n"
@@ -338,7 +406,7 @@ msgstr ""
 "詳細は http://www.erlang.org/doc/man/os.html#getpid-0 を参照してください。\n"
 
 #. TRANSLATORS: def System.get_env(varname)
-#: lib/system.ex:270
+#: lib/system.ex:244
 msgid ""
 "Environment variable value.\n"
 "\n"
@@ -351,42 +419,8 @@ msgstr ""
 "バイナリとして`varname`環境変数の値を返します。\n"
 "環境変数が定義されていないなら、`nil`を返します。\n"
 
-#. TRANSLATORS: def System.version()
-#: lib/system.ex:56
-msgid ""
-"Elixir version information.\n"
-"\n"
-"Returns Elixir's version as binary.\n"
-msgstr ""
-"Elixirバージョン情報です。\n"
-"\n"
-"バイナリとしてElixirのバージョンを返します。\n"
-
-#. TRANSLATORS: def System.build_info()
-#: lib/system.ex:64
-msgid ""
-"Elixir build information.\n"
-"\n"
-"Returns a keyword list with Elixir version, git tag info and compilation "
-"date.\n"
-msgstr ""
-"Elixirビルドインフォメーションです。\n"
-"\n"
-"Elixirバージョン、git tag 情報および、コンパイル日時を返します。\n"
-
-#. TRANSLATORS: def System.delete_env(varname)
-#: lib/system.ex:316
-msgid ""
-"Deletes an environment variable.\n"
-"\n"
-"Removes the variable `varname` from the environment.\n"
-msgstr ""
-"環境変数を削除します。\n"
-"\n"
-"環境から変数`varname`を取り除きます。\n"
-
 #. TRANSLATORS: def System.halt(status \\ 0)
-#: lib/system.ex:363
+#: lib/system.ex:316
 msgid ""
 "Halts the Erlang runtime system.\n"
 "\n"
@@ -444,7 +478,7 @@ msgstr ""
 "\n"
 
 #. TRANSLATORS: def System.stacktrace()
-#: lib/system.ex:330
+#: lib/system.ex:303
 msgid ""
 "Last exception stacktrace.\n"
 "\n"
@@ -461,8 +495,42 @@ msgstr ""
 "\n"
 "コンパイラにより`:erlang.get_stacktrace/0`にインライン化されます。\n"
 
+#. TRANSLATORS: def System.version()
+#: lib/system.ex:50
+msgid ""
+"Elixir version information.\n"
+"\n"
+"Returns Elixir's version as binary.\n"
+msgstr ""
+"Elixirバージョン情報です。\n"
+"\n"
+"バイナリとしてElixirのバージョンを返します。\n"
+
+#. TRANSLATORS: def System.build_info()
+#: lib/system.ex:58
+msgid ""
+"Elixir build information.\n"
+"\n"
+"Returns a keyword list with Elixir version, git tag info and compilation "
+"date.\n"
+msgstr ""
+"Elixirビルドインフォメーションです。\n"
+"\n"
+"Elixirバージョン、git tag 情報および、コンパイル日時を返します。\n"
+
+#. TRANSLATORS: def System.delete_env(varname)
+#: lib/system.ex:292
+msgid ""
+"Deletes an environment variable.\n"
+"\n"
+"Removes the variable `varname` from the environment.\n"
+msgstr ""
+"環境変数を削除します。\n"
+"\n"
+"環境から変数`varname`を取り除きます。\n"
+
 #. TRANSLATORS: def System.cwd()
-#: lib/system.ex:95
+#: lib/system.ex:89
 msgid ""
 "Current working directory.\n"
 "\n"
@@ -475,7 +543,7 @@ msgstr ""
 "もしそれが利用できないなら、`nil`を返します。\n"
 
 #. TRANSLATORS: def System.cwd!()
-#: lib/system.ex:116
+#: lib/system.ex:111
 msgid ""
 "Current working directory, exception on error.\n"
 "\n"

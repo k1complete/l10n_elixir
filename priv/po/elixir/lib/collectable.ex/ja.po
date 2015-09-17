@@ -11,7 +11,7 @@ msgstr ""
 "Plural-Forms: nplurals=1; plural=0;\n"
 
 #. TRANSLATORS: def Collectable.into(collectable)
-#: lib/collectable.ex:46
+#: lib/collectable.ex:31
 msgid ""
 "Returns a function that collects values alongside\n"
 "the initial accumulation value.\n"
@@ -39,7 +39,7 @@ msgstr ""
 "で、任意の値を返すことができます。\n"
 
 #. TRANSLATORS: Elixir.Collectable Summary
-#: lib/collectable.ex:1
+#: lib/collectable.ex:2
 msgid ""
 "A protocol to traverse data structures.\n"
 "\n"

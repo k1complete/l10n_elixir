@@ -1,0 +1,15 @@
+#. TRANSLATORS: Elixir.MapSet Summary
+#: lib/map_set.ex:2 
+msgid ""
+"A set store.\n"
+"\n"
+"The `MapSet` is represented internally as a struct, therefore\n"
+"`%MapSet{}` can be used whenever there is a need to match\n"
+"on any `MapSet`. Note though the struct fields are private and\n"
+"must not be accessed directly. Instead, use the functions on this\n"
+"or in the `Set` module.\n"
+"\n"
+"The `MapSet` is implemented using `Map` data type.\n"
+"For more information about the functions\n"
+"and their APIs, please consult the `Set` module.\n"
+msgstr ""

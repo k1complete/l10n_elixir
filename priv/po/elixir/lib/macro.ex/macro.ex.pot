@@ -1,5 +1,5 @@
 #. TRANSLATORS: def Macro.validate(expr)
-#: lib/macro.ex:317 
+#: lib/macro.ex:330 
 msgid ""
 "Validates the given expressions are valid quoted expressions.\n"
 "\n"
@@ -7,14 +7,14 @@ msgid ""
 "quoted expression.\n"
 msgstr ""
 #. TRANSLATORS: def Macro.unescape_tokens(tokens, map)
-#: lib/macro.ex:438 
+#: lib/macro.ex:452 
 msgid ""
 "Unescapes the given tokens according to the given map.\n"
 "\n"
 "Check `unescape_tokens/1` and `unescape_string/2` for more information.\n"
 msgstr ""
 #. TRANSLATORS: def Macro.unescape_tokens(tokens)
-#: lib/macro.ex:428 
+#: lib/macro.ex:436 
 msgid ""
 "Unescapes the given tokens according to the default map.\n"
 "\n"
@@ -27,7 +27,7 @@ msgid ""
 "for examples.\n"
 msgstr ""
 #. TRANSLATORS: def Macro.unescape_string(chars, map)
-#: lib/macro.ex:412 
+#: lib/macro.ex:392 
 msgid ""
 "Unescapes the given chars according to the map given.\n"
 "\n"
@@ -68,7 +68,7 @@ msgid ""
 "\n"
 msgstr ""
 #. TRANSLATORS: def Macro.unescape_string(chars)
-#: lib/macro.ex:368 
+#: lib/macro.ex:364 
 msgid ""
 "Unescape the given chars.\n"
 "\n"
@@ -92,34 +92,8 @@ msgid ""
 "In the example above, we pass a string with `\\n` escaped\n"
 "and return a version with it unescaped.\n"
 msgstr ""
-#. TRANSLATORS: def Macro.decompose_call(arg1)
-#: lib/macro.ex:272 
-msgid ""
-"Decomposes a local or remote call into its remote part (when provided),\n"
-"function name and argument list.\n"
-"\n"
-"Returns `:error` when an invalid call syntax is provided.\n"
-"\n"
-"## Examples\n"
-"\n"
-"    iex> Macro.decompose_call(quote do: foo)\n"
-"    {:foo, []}\n"
-"\n"
-"    iex> Macro.decompose_call(quote do: foo())\n"
-"    {:foo, []}\n"
-"\n"
-"    iex> Macro.decompose_call(quote do: foo(1, 2, 3))\n"
-"    {:foo, [1, 2, 3]}\n"
-"\n"
-"    iex> Macro.decompose_call(quote do: Elixir.M.foo(1, 2, 3))\n"
-"    {{:__aliases__, [], [:Elixir, :M]}, :foo, [1, 2, 3]}\n"
-"\n"
-"    iex> Macro.decompose_call(quote do: 42)\n"
-"    :error\n"
-"\n"
-msgstr ""
 #. TRANSLATORS: def Macro.escape(expr, opts \\ [])
-#: lib/macro.ex:306 
+#: lib/macro.ex:304 
 msgid ""
 "Recursively escapes a value so it can be inserted\n"
 "into a syntax tree.\n"
@@ -141,16 +115,16 @@ msgid ""
 "\n"
 msgstr ""
 #. TRANSLATORS: def Macro.expand(tree, env)
-#: lib/macro.ex:944 
+#: lib/macro.ex:1002 
 msgid ""
 "Receives an AST node and expands it until it can no longer\n"
 "be expanded.\n"
 "\n"
 "This function uses `expand_once/2` under the hood. Check\n"
-"`expand_once/2` for more information and examples.\n"
+"it out for more information and examples.\n"
 msgstr ""
 #. TRANSLATORS: def Macro.expand_once(ast, env)
-#: lib/macro.ex:826 
+#: lib/macro.ex:815 
 msgid ""
 "Receives an AST node and expands it once.\n"
 "\n"
@@ -227,40 +201,40 @@ msgid ""
 "    end\n"
 "\n"
 msgstr ""
+#. TRANSLATORS: def Macro.pipe(expr, call_args, position)
+#: lib/macro.ex:84 
+msgid ""
+"Pipes `expr` into the `call_args` at the given `position`.\n"
+msgstr ""
 #. TRANSLATORS: @type expr
 #: lib/macro.ex:0 
 msgid ""
 "Expr node (remaining ones are literals)"
 msgstr ""
-#. TRANSLATORS: def Macro.pipe(expr, call_args, position)
-#: lib/macro.ex:76 
-msgid ""
-"Pipes `expr` into the `call_args` at the given `position`.\n"
-msgstr ""
 #. TRANSLATORS: def Macro.prewalk(ast, fun)
-#: lib/macro.ex:154 
+#: lib/macro.ex:168 
 msgid ""
 "Performs a depth-first, pre-order traversal of quoted expressions.\n"
 msgstr ""
 #. TRANSLATORS: def Macro.prewalk(ast, acc, fun)
-#: lib/macro.ex:163 
+#: lib/macro.ex:176 
 msgid ""
 "Performs a depth-first, pre-order traversal of quoted expressions\n"
 "using an accumulator.\n"
 msgstr ""
 #. TRANSLATORS: def Macro.postwalk(ast, fun)
-#: lib/macro.ex:207 
+#: lib/macro.ex:221 
 msgid ""
 "Performs a depth-first, post-order traversal of quoted expressions.\n"
 msgstr ""
 #. TRANSLATORS: def Macro.postwalk(ast, acc, fun)
-#: lib/macro.ex:216 
+#: lib/macro.ex:229 
 msgid ""
 "Performs a depth-first, post-order traversal of quoted expressions\n"
 "using an accumulator.\n"
 msgstr ""
 #. TRANSLATORS: def Macro.var(var, context)
-#: lib/macro.ex:146 
+#: lib/macro.ex:143 
 msgid ""
 "Generates an AST node representing the variable given\n"
 "by the atoms `var` and `context`.\n"
@@ -281,8 +255,34 @@ msgid ""
 "    {:foo, [], nil}\n"
 "\n"
 msgstr ""
+#. TRANSLATORS: def Macro.decompose_call(ast)
+#: lib/macro.ex:265 
+msgid ""
+"Decomposes a local or remote call into its remote part (when provided),\n"
+"function name and argument list.\n"
+"\n"
+"Returns `:error` when an invalid call syntax is provided.\n"
+"\n"
+"## Examples\n"
+"\n"
+"    iex> Macro.decompose_call(quote do: foo)\n"
+"    {:foo, []}\n"
+"\n"
+"    iex> Macro.decompose_call(quote do: foo())\n"
+"    {:foo, []}\n"
+"\n"
+"    iex> Macro.decompose_call(quote do: foo(1, 2, 3))\n"
+"    {:foo, [1, 2, 3]}\n"
+"\n"
+"    iex> Macro.decompose_call(quote do: Elixir.M.foo(1, 2, 3))\n"
+"    {{:__aliases__, [], [:Elixir, :M]}, :foo, [1, 2, 3]}\n"
+"\n"
+"    iex> Macro.decompose_call(quote do: 42)\n"
+"    :error\n"
+"\n"
+msgstr ""
 #. TRANSLATORS: def Macro.to_string(tree, fun \\ fn _ast, string -> string end)
-#: lib/macro.ex:453 
+#: lib/macro.ex:462 
 msgid ""
 "Converts the given expression to a binary.\n"
 "\n"
@@ -292,19 +292,30 @@ msgid ""
 "    \"foo.bar(1, 2, 3)\"\n"
 "\n"
 msgstr ""
-#. TRANSLATORS: def Macro.unpipe(expr)
-#: lib/macro.ex:60 
+#. TRANSLATORS: Elixir.Macro Summary
+#: lib/macro.ex:4 
 msgid ""
-"Breaks a pipeline expression into a list.\n"
+"Conveniences for working with macros.\n"
 "\n"
-"Raises if the pipeline is ill-formed.\n"
+"## Custom Sigils\n"
+"\n"
+"To create a custom sigil, define a function with the name\n"
+"`sigil_{identifier}` that takes two arguments. The first argument will be\n"
+"the interpolated string, the second will be a char list containing any\n"
+"modifiers.\n"
+"\n"
+"Valid modifiers include only lower and upper case letters. Other characters\n"
+"will cause a syntax error.\n"
+"\n"
+"The module containing the custom sigil must be imported before the sigil\n"
+"syntax can be used.\n"
 msgstr ""
 #. TRANSLATORS: def Macro.update_meta(quoted, fun)
-#: lib/macro.ex:115 
+#: lib/macro.ex:117 
 msgid ""
 "Applies the given function to the node metadata if it contains one.\n"
 "\n"
-"This is often useful when used with `Macro.prewalk/1` to remove\n"
+"This is often useful when used with `Macro.prewalk/2` to remove\n"
 "information like lines and hygienic counters from the expression\n"
 "for either storage or comparison.\n"
 "\n"
@@ -321,8 +332,10 @@ msgstr ""
 msgid ""
 "Abstract Syntax Tree (AST)"
 msgstr ""
-#. TRANSLATORS: Elixir.Macro Summary
-#: lib/macro.ex:3 
+#. TRANSLATORS: def Macro.unpipe(expr)
+#: lib/macro.ex:66 
 msgid ""
-"Conveniences for working with macros.\n"
+"Breaks a pipeline expression into a list.\n"
+"\n"
+"Raises if the pipeline is ill-formed.\n"
 msgstr ""

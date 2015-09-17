@@ -1,5 +1,5 @@
 #. TRANSLATORS: def Version.parse_requirement(string)
-#: lib/version.ex:206 
+#: lib/version.ex:204 
 msgid ""
 "Parses a version requirement string into a `Version.Requirement`.\n"
 "\n"
@@ -14,7 +14,7 @@ msgid ""
 "\n"
 msgstr ""
 #. TRANSLATORS: def Version.parse(string)
-#: lib/version.ex:181 
+#: lib/version.ex:179 
 msgid ""
 "Parses a version string into a `Version`.\n"
 "\n"
@@ -29,7 +29,7 @@ msgid ""
 "\n"
 msgstr ""
 #. TRANSLATORS: Elixir.Version Summary
-#: lib/version.ex:1 
+#: lib/version.ex:2 
 msgid ""
 "Functions for parsing and matching versions against requirements.\n"
 "\n"
@@ -82,9 +82,22 @@ msgid ""
 "\n"
 "    \"~> 2.0.0\"\n"
 "\n"
+"`~>` will never include pre-release versions of its upper bound.\n"
+"It can also be used to set an upper bound on only the major\n"
+"version part. See the table below for `~>` requirements and\n"
+"their corresponding translation.\n"
+"\n"
+"`~>`           | Translation\n"
+":------------- | :---------------------\n"
+"`~> 2.0.0`     | `>= 2.0.0 and < 2.1.0`\n"
+"`~> 2.1.2`     | `>= 2.1.2 and < 2.2.0`\n"
+"`~> 2.1.3-dev` | `>= 2.1.3-dev and < 2.2.0`\n"
+"`~> 2.0`       | `>= 2.0.0 and < 3.0.0`\n"
+"`~> 2.1`       | `>= 2.1.0 and < 3.0.0`\n"
+"\n"
 msgstr ""
-#. TRANSLATORS: def Version.compare(vsn1, vsn2)
-#: lib/version.ex:151 
+#. TRANSLATORS: def Version.compare(version1, version2)
+#: lib/version.ex:142 
 msgid ""
 "Compares two versions. Returns `:gt` if first version is greater than\n"
 "the second and `:lt` for vice versa. If the two versions are equal `:eq`\n"
@@ -105,8 +118,8 @@ msgid ""
 "    ** (Version.InvalidVersionError) invalid\n"
 "\n"
 msgstr ""
-#. TRANSLATORS: def Version.match?(vsn, req)
-#: lib/version.ex:116 
+#. TRANSLATORS: def Version.match?(version, requirement)
+#: lib/version.ex:103 
 msgid ""
 "Checks if the given version matches the specification.\n"
 "\n"

@@ -1,11 +1,11 @@
-#. TRANSLATORS: def Module.LocalsTracker.imports_with_dispatch(ref, arg2)
-#: lib/module/locals_tracker.ex:54 
+#. TRANSLATORS: def Module.LocalsTracker.imports_with_dispatch(ref, arg)
+#: lib/module/locals_tracker.ex:49 
 msgid ""
 "Returns all imported modules that had the given\n"
 "`{name, arity}` invoked.\n"
 msgstr ""
 #. TRANSLATORS: def Module.LocalsTracker.reachable(ref)
-#: lib/module/locals_tracker.ex:67 
+#: lib/module/locals_tracker.ex:59 
 msgid ""
 "Returns all locals that are reachable.\n"
 "\n"

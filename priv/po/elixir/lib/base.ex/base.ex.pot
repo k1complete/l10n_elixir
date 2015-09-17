@@ -1,5 +1,5 @@
 #. TRANSLATORS: Elixir.Base Summary
-#: lib/base.ex:1 
+#: lib/base.ex:4 
 msgid ""
 "This module provides data encoding and decoding functions\n"
 "according to [RFC 4648](http://tools.ietf.org/html/rfc4648).\n"
@@ -91,7 +91,7 @@ msgid ""
 "\n"
 msgstr ""
 #. TRANSLATORS: def Base.encode64(data)
-#: lib/base.ex:234 
+#: lib/base.ex:224 
 msgid ""
 "Encodes a binary string into a base 64 encoded string.\n"
 "\n"
@@ -102,19 +102,19 @@ msgid ""
 "\n"
 msgstr ""
 #. TRANSLATORS: def Base.url_encode64(data)
-#: lib/base.ex:284 
+#: lib/base.ex:273 
 msgid ""
 "Encodes a binary string into a base 64 encoded string with URL and filename\n"
 "safe alphabet.\n"
 "\n"
 "## Examples\n"
 "\n"
-"    iex> Base.url_encode64(<<255,127,254,252>>)\n"
+"    iex> Base.url_encode64(<<255, 127, 254, 252>>)\n"
 "    \"_3_-_A==\"\n"
 "\n"
 msgstr ""
 #. TRANSLATORS: def Base.encode32(data, opts \\ [])
-#: lib/base.ex:340 
+#: lib/base.ex:323 
 msgid ""
 "Encodes a binary string into a base 32 encoded string.\n"
 "\n"
@@ -131,7 +131,7 @@ msgid ""
 "\n"
 msgstr ""
 #. TRANSLATORS: def Base.hex_encode32(data, opts \\ [])
-#: lib/base.ex:420 
+#: lib/base.ex:402 
 msgid ""
 "Encodes a binary string into a base 32 encoded string with an\n"
 "extended hexadecimal alphabet.\n"
@@ -149,7 +149,7 @@ msgid ""
 "\n"
 msgstr ""
 #. TRANSLATORS: def Base.encode16(data, opts \\ [])
-#: lib/base.ex:161 
+#: lib/base.ex:144 
 msgid ""
 "Encodes a binary string into a base 16 encoded string.\n"
 "\n"
@@ -166,7 +166,7 @@ msgid ""
 "\n"
 msgstr ""
 #. TRANSLATORS: def Base.url_decode64!(string)
-#: lib/base.ex:319 
+#: lib/base.ex:305 
 msgid ""
 "Decodes a base 64 encoded string with URL and filename safe alphabet\n"
 "into a binary string.\n"
@@ -177,11 +177,11 @@ msgid ""
 "## Examples\n"
 "\n"
 "    iex> Base.url_decode64!(\"_3_-_A==\")\n"
-"    <<255,127,254,252>>\n"
+"    <<255, 127, 254, 252>>\n"
 "\n"
 msgstr ""
 #. TRANSLATORS: def Base.url_decode64(string)
-#: lib/base.ex:299 
+#: lib/base.ex:288 
 msgid ""
 "Decodes a base 64 encoded string with URL and filename safe alphabet\n"
 "into a binary string.\n"
@@ -189,11 +189,11 @@ msgid ""
 "## Examples\n"
 "\n"
 "    iex> Base.url_decode64(\"_3_-_A==\")\n"
-"    {:ok, <<255,127,254,252>>}\n"
+"    {:ok, <<255, 127, 254, 252>>}\n"
 "\n"
 msgstr ""
 #. TRANSLATORS: def Base.decode64!(string)
-#: lib/base.ex:269 
+#: lib/base.ex:254 
 msgid ""
 "Decodes a base 64 encoded string into a binary string.\n"
 "\n"
@@ -209,7 +209,7 @@ msgid ""
 "\n"
 msgstr ""
 #. TRANSLATORS: def Base.decode64(string)
-#: lib/base.ex:248 
+#: lib/base.ex:238 
 msgid ""
 "Decodes a base 64 encoded string into a binary string.\n"
 "\n"
@@ -220,7 +220,7 @@ msgid ""
 "\n"
 msgstr ""
 #. TRANSLATORS: def Base.hex_decode32!(string, opts \\ [])
-#: lib/base.ex:479 
+#: lib/base.ex:454 
 msgid ""
 "Decodes a base 32 encoded string with extended hexadecimal alphabet\n"
 "into a binary string.\n"
@@ -245,7 +245,7 @@ msgid ""
 "\n"
 msgstr ""
 #. TRANSLATORS: def Base.hex_decode32(string, opts \\ [])
-#: lib/base.ex:447 
+#: lib/base.ex:425 
 msgid ""
 "Decodes a base 32 encoded string with extended hexadecimal alphabet\n"
 "into a binary string.\n"
@@ -267,7 +267,7 @@ msgid ""
 "\n"
 msgstr ""
 #. TRANSLATORS: def Base.decode32!(string, opts \\ [])
-#: lib/base.ex:397 
+#: lib/base.ex:373 
 msgid ""
 "Decodes a base 32 encoded string into a binary string.\n"
 "\n"
@@ -291,7 +291,7 @@ msgid ""
 "\n"
 msgstr ""
 #. TRANSLATORS: def Base.decode32(string, opts \\ [])
-#: lib/base.ex:366 
+#: lib/base.ex:345 
 msgid ""
 "Decodes a base 32 encoded string into a binary string.\n"
 "\n"
@@ -312,7 +312,7 @@ msgid ""
 "\n"
 msgstr ""
 #. TRANSLATORS: def Base.decode16!(string, opts \\ [])
-#: lib/base.ex:219 
+#: lib/base.ex:195 
 msgid ""
 "Decodes a base 16 encoded string into a binary string.\n"
 "\n"
@@ -336,7 +336,7 @@ msgid ""
 "\n"
 msgstr ""
 #. TRANSLATORS: def Base.decode16(string, opts \\ [])
-#: lib/base.ex:188 
+#: lib/base.ex:167 
 msgid ""
 "Decodes a base 16 encoded string into a binary string.\n"
 "\n"

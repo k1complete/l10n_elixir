@@ -1,10 +1,10 @@
 #. TRANSLATORS: def HashSet.new()
-#: lib/hash_set.ex:36 
+#: lib/hash_set.ex:32 
 msgid ""
 "Creates a new empty set.\n"
 msgstr ""
 #. TRANSLATORS: Elixir.HashSet Summary
-#: lib/hash_set.ex:1 
+#: lib/hash_set.ex:2 
 msgid ""
 "A set store.\n"
 "\n"

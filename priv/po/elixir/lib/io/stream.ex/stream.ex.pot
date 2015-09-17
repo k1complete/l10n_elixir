@@ -1,5 +1,5 @@
 #. TRANSLATORS: Elixir.IO.Stream Summary
-#: lib/io/stream.ex:11 
+#: lib/io/stream.ex:12 
 msgid ""
 "Defines a `IO.Stream` struct returned by `IO.stream/2` and `IO.binstream/2`.\n"
 "\n"

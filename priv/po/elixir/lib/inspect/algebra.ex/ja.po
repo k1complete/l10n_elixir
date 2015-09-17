@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: l 10n_elixir\n"
-"PO-Revision-Date: 2015-05-20 21:54+0900\n"
+"PO-Revision-Date: 2015-09-16 11:02+0900\n"
 "Last-Translator: 小田 照敬 <EMAIL@ADDRESS>\n"
 "Language-Team: Japanese\n"
 "Language: ja\n"
@@ -11,7 +11,7 @@ msgstr ""
 "Plural-Forms: nplurals=1; plural=0;\n"
 
 #. TRANSLATORS: def Inspect.Algebra.format(d, w)
-#: lib/inspect/algebra.ex:486
+#: lib/inspect/algebra.ex:511
 msgid ""
 "The formatting function.\n"
 "\n"
@@ -25,7 +25,7 @@ msgstr ""
 "メントのためのベストレイアウトのIOデータ表現を返します。\n"
 
 #. TRANSLATORS: def Inspect.Algebra.surround(left, doc, right)
-#: lib/inspect/algebra.ex:410
+#: lib/inspect/algebra.ex:421
 msgid ""
 "Surrounds a document with characters.\n"
 "\n"
@@ -56,7 +56,7 @@ msgstr ""
 "\n"
 
 #. TRANSLATORS: def Inspect.Algebra.empty()
-#: lib/inspect/algebra.ex:228
+#: lib/inspect/algebra.ex:243
 msgid ""
 "Returns a document entity used to represent nothingness.\n"
 "\n"
@@ -74,56 +74,8 @@ msgstr ""
 "    :doc_nil\n"
 "\n"
 
-#. TRANSLATORS: def Inspect.Algebra.break(s)
-#: lib/inspect/algebra.ex:298
-msgid ""
-"Document entity representing a break.\n"
-"\n"
-"This break can be rendered as a linebreak or as spaces,\n"
-"depending on the `mode` of the chosen layout or the provided\n"
-"separator.\n"
-"\n"
-"## Examples\n"
-"\n"
-"Let's glue two docs together with a break and then render it:\n"
-"\n"
-"    iex> doc = Inspect.Algebra.glue(\"a\", \" \", \"b\")\n"
-"    iex> Inspect.Algebra.format(doc, 80)\n"
-"    [\"a\", \" \", \"b\"]\n"
-"\n"
-"Notice the break was represented as is, because we haven't reached\n"
-"a line limit. Once we do, it is replaced by a newline:\n"
-"\n"
-"    iex> doc = Inspect.Algebra.glue(String.duplicate(\"a\", 20), \" \", \"b"
-"\")\n"
-"    iex> Inspect.Algebra.format(doc, 10)\n"
-"    [\"aaaaaaaaaaaaaaaaaaaa\", \"\\n\", \"b\"]\n"
-"\n"
-msgstr ""
-"ドキュメントエンティティのブレークを意味します。\n"
-"\n"
-"このブレークは、選ばれたレイアウトのモードか提供されたセパレータに従っ\n"
-"て、ラインブレークかスペースとして生成されます。\n"
-"\n"
-"## 例\n"
-"\n"
-"ブレークと一緒に二つのdocを接着して、それをレンダリンクしてみます:\n"
-"\n"
-"    iex> doc = Inspect.Algebra.glue(\"a\", \" \", \"b\")\n"
-"    iex> Inspect.Algebra.format(doc, 80)\n"
-"    [\"a\", \" \", \"b\"]\n"
-"\n"
-"行の制限に達しなかったので、ブレークが現状のまま表現されたことに注意し\n"
-"てください。一旦そうすれば、改行文字と置換されます:\n"
-"\n"
-"    iex> doc = Inspect.Algebra.glue(String.duplicate(\"a\", 20), \" \", \"b"
-"\")\n"
-"    iex> Inspect.Algebra.format(doc, 10)\n"
-"    [\"aaaaaaaaaaaaaaaaaaaa\", \"\\n\", \"b\"]\n"
-"\n"
-
 #. TRANSLATORS: def Inspect.Algebra.group(d)
-#: lib/inspect/algebra.ex:344
+#: lib/inspect/algebra.ex:341
 msgid ""
 "Returns a group containing the specified document.\n"
 "\n"
@@ -177,8 +129,13 @@ msgstr ""
 "    [\"Hello,\", \"\\n\", \"A\", \" \", \"B\"]\n"
 "\n"
 
+#. TRANSLATORS: Elixir.Inspect.Error Summary
+#: lib/inspect/algebra.ex:66
+msgid "Raised when a struct cannot be inspected.\n"
+msgstr "構造体のinspectが出来無かった時に上ります。\n"
+
 #. TRANSLATORS: def Inspect.Algebra.nest(x, i)
-#: lib/inspect/algebra.ex:266
+#: lib/inspect/algebra.ex:278
 msgid ""
 "Nests document entity `x` positions deep.\n"
 "\n"
@@ -205,7 +162,7 @@ msgstr ""
 "\n"
 
 #. TRANSLATORS: def Inspect.Algebra.surround_many(left, docs, right, opts, fun, separator \\ ",")
-#: lib/inspect/algebra.ex:439
+#: lib/inspect/algebra.ex:440
 msgid ""
 "Maps and glues a collection of items.\n"
 "\n"
@@ -266,7 +223,7 @@ msgstr ""
 "    \"[1! 2! 3! ...]\"\n"
 
 #. TRANSLATORS: def Inspect.Algebra.space(x, y)
-#: lib/inspect/algebra.ex:359
+#: lib/inspect/algebra.ex:373
 msgid ""
 "Inserts a mandatory single space between two document entities.\n"
 "\n"
@@ -287,7 +244,7 @@ msgstr ""
 "\n"
 
 #. TRANSLATORS: def Inspect.Algebra.line(x, y)
-#: lib/inspect/algebra.ex:372
+#: lib/inspect/algebra.ex:386
 msgid ""
 "Inserts a mandatory linebreak between two document entities.\n"
 "\n"
@@ -308,7 +265,7 @@ msgstr ""
 "\n"
 
 #. TRANSLATORS: def Inspect.Algebra.glue(x, g, y)
-#: lib/inspect/algebra.ex:314
+#: lib/inspect/algebra.ex:334
 msgid ""
 "Inserts a break, passed as the second argument, between two docs,\n"
 "the first and the third arguments.\n"
@@ -317,14 +274,14 @@ msgstr ""
 "パスされたブレークを挿入します。\n"
 
 #. TRANSLATORS: def Inspect.Algebra.glue(x, y)
-#: lib/inspect/algebra.ex:307
+#: lib/inspect/algebra.ex:328
 msgid "Inserts a break between two docs. See `break/1` for more info.\n"
 msgstr ""
 "二つのドキュメントの間にブレークを挿入します。\n"
 "詳細は`break/1`を参照してください。\n"
 
-#. TRANSLATORS: def Inspect.Algebra.folddoc(list1, f)
-#: lib/inspect/algebra.ex:389
+#. TRANSLATORS: def Inspect.Algebra.fold_doc(list, fun)
+#: lib/inspect/algebra.ex:399
 msgid ""
 "Folds a list of document entities into a document entity\n"
 "using a function that is passed as the first argument.\n"
@@ -332,7 +289,7 @@ msgid ""
 "## Examples\n"
 "\n"
 "    iex> doc = [\"A\", \"B\"]\n"
-"    iex> doc = Inspect.Algebra.folddoc(doc, fn(x,y) ->\n"
+"    iex> doc = Inspect.Algebra.fold_doc(doc, fn(x, y) ->\n"
 "    ...>   Inspect.Algebra.concat [x, \"!\", y]\n"
 "    ...> end)\n"
 "    iex> Inspect.Algebra.format(doc, 80)\n"
@@ -346,22 +303,70 @@ msgstr ""
 "## 例\n"
 "\n"
 "    iex> doc = [\"A\", \"B\"]\n"
-"    iex> doc = Inspect.Algebra.folddoc(doc, fn(x,y) ->\n"
+"    iex> doc = Inspect.Algebra.fold_doc(doc, fn(x,y) ->\n"
 "    ...>   Inspect.Algebra.concat [x, \"!\", y]\n"
 "    ...> end)\n"
 "    iex> Inspect.Algebra.format(doc, 80)\n"
 "    [\"A\", \"!\", \"B\"]\n"
 "\n"
 
+#. TRANSLATORS: def Inspect.Algebra.break(s)
+#: lib/inspect/algebra.ex:299
+msgid ""
+"Document entity representing a break.\n"
+"\n"
+"This break can be rendered as a linebreak or as spaces,\n"
+"depending on the `mode` of the chosen layout or the provided\n"
+"separator.\n"
+"\n"
+"## Examples\n"
+"\n"
+"Let's glue two docs together with a break and then render it:\n"
+"\n"
+"    iex> doc = Inspect.Algebra.glue(\"a\", \" \", \"b\")\n"
+"    iex> Inspect.Algebra.format(doc, 80)\n"
+"    [\"a\", \" \", \"b\"]\n"
+"\n"
+"Notice the break was represented as is, because we haven't reached\n"
+"a line limit. Once we do, it is replaced by a newline:\n"
+"\n"
+"    iex> doc = Inspect.Algebra.glue(String.duplicate(\"a\", 20), \" \", \"b"
+"\")\n"
+"    iex> Inspect.Algebra.format(doc, 10)\n"
+"    [\"aaaaaaaaaaaaaaaaaaaa\", \"\\n\", \"b\"]\n"
+"\n"
+msgstr ""
+"ドキュメントエンティティのブレークを意味します。\n"
+"\n"
+"このブレークは、選ばれたレイアウトのモードか提供されたセパレータに従っ\n"
+"て、ラインブレークかスペースとして生成されます。\n"
+"\n"
+"## 例\n"
+"\n"
+"ブレークと一緒に二つのdocを接着して、それをレンダリンクしてみます:\n"
+"\n"
+"    iex> doc = Inspect.Algebra.glue(\"a\", \" \", \"b\")\n"
+"    iex> Inspect.Algebra.format(doc, 80)\n"
+"    [\"a\", \" \", \"b\"]\n"
+"\n"
+"行の制限に達しなかったので、ブレークが現状のまま表現されたことに注意し\n"
+"てください。一旦そうすれば、改行文字と置換されます:\n"
+"\n"
+"    iex> doc = Inspect.Algebra.glue(String.duplicate(\"a\", 20), \" \", \"b"
+"\")\n"
+"    iex> Inspect.Algebra.format(doc, 10)\n"
+"    [\"aaaaaaaaaaaaaaaaaaaa\", \"\\n\", \"b\"]\n"
+"\n"
+
 #. TRANSLATORS: Elixir.Inspect.Opts Summary
-#: lib/inspect/algebra.ex:1
+#: lib/inspect/algebra.ex:2
 msgid ""
 "Defines the Inspect.Opts used by the Inspect protocol.\n"
 "\n"
 "The following fields are available:\n"
 "\n"
-"  * `:structs` - when false, structs are not formatted by the inspect\n"
-"    protocol, they are instead printed as maps, defaults to true.\n"
+"  * `:structs` - when `false`, structs are not formatted by the inspect\n"
+"    protocol, they are instead printed as maps, defaults to `true`.\n"
 "\n"
 "  * `:binaries` - when `:as_strings` all binaries will be printed as "
 "strings,\n"
@@ -386,22 +391,30 @@ msgid ""
 "defaults\n"
 "    to 50.\n"
 "\n"
-"  * `:pretty` - if set to true enables pretty printing, defaults to false.\n"
+"  * `:pretty` - if set to `true` enables pretty printing, defaults to "
+"`false`.\n"
 "\n"
-"  * `:width` - defaults to the 80 characters, used when pretty is true or\n"
+"  * `:width` - defaults to the 80 characters, used when pretty is `true` or\n"
 "    when printing to IO devices.\n"
 "\n"
 "  * `:base` - print integers as :binary, :octal, :decimal, or :hex, "
 "defaults\n"
 "    to :decimal\n"
 "\n"
+"  * `:safe` - when `false`, failures while inspecting structs will be "
+"raised\n"
+"    as errors instead of being wrapped in the Inspect.Error exception. This\n"
+"    is useful when debugging failures and crashes for custom inspect\n"
+"    implementations\n"
+"\n"
 msgstr ""
 "Inspectプロトコルで使われる、Inspect.Optsを定義します。\n"
 "\n"
 "以下のフィールドが有効です:\n"
 "\n"
-"  * `:structs` -  falseの時、構造体はinspectプロトコルでフォーマット\n"
-"    されません。代りにマップとして表示されます。デフォルトはtrueです。\n"
+"  * `:structs` -  `false`の時、構造体はinspectプロトコルで\n"
+"    フォーマットされません。代りにマップとして表示されます。\n"
+"    デフォルトは`true`です。\n"
 "\n"
 "  * `:binaries` -  `:as_strings`の時、全てのバイナリは文字列として\n"
 "    表示され、印字不能なバイトはエスケープされます。\n"
@@ -423,18 +436,26 @@ msgstr ""
 "    要素の数を制限します。文字列、文字リストは適用されません。\n"
 "    デフォルトは50です。\n"
 "\n"
-"  * `:pretty` -  trueにセットすると、プリティプリンティングを有効にします。\n"
-"     デフォルトはfalseです。\n"
+"  * `:pretty` -  `true`にセットすると、プリティプリンティングを\n"
+"     有効にします。デフォルトは`false`です。\n"
 "\n"
-"  * `:width` -  デフォルトは80文字です。prettyがtrueか、IOデバイスへの\n"
-"    プリント時に使われます。\n"
+"  * `:width` -  デフォルトは80文字です。prettyが`true`か、\n"
+"    IOデバイスへのプリント時に使われます。\n"
 "\n"
 "  * `:base` -  整数を:binary, :octal, :decimal, :hexとして表示します。\n"
 "    デフォルトは:decimalです\n"
 "\n"
+"  * `:safe` - `false`の時、構造体のinspectをしている間の失敗は、\n"
+"    Inspect.Error例外でラッピングするかわりに、エラーとなります。\n"
+"    カスタムinspect実装のデバッグ時に失敗とクラッシュが便利です。\n"
+
+#. TRANSLATORS: def Inspect.Algebra.concat(docs)
+#: lib/inspect/algebra.ex:270
+msgid "Concatenates a list of documents.\n"
+msgstr "ドキュメントのリストを連結します。\n"
 
 #. TRANSLATORS: def Inspect.Algebra.concat(x, y)
-#: lib/inspect/algebra.ex:241
+#: lib/inspect/algebra.ex:255
 msgid ""
 "Concatenates two document entities.\n"
 "\n"
@@ -454,22 +475,8 @@ msgstr ""
 "    [\"hello\", \"world\"]\n"
 "\n"
 
-#. TRANSLATORS: def Inspect.Algebra.concat(docs)
-#: lib/inspect/algebra.ex:249
-msgid "Concatenates a list of documents.\n"
-msgstr "ドキュメントのリストを連結します。\n"
-
-#. TRANSLATORS: def Inspect.Algebra.to_doc(map, opts)
-#: lib/inspect/algebra.ex:182
-msgid ""
-"Converts an Elixir structure to an algebra document\n"
-"according to the inspect protocol.\n"
-msgstr ""
-"Elixirの構造を、Inspectプロトコルに従って、\n"
-"algebraドキュメントに変換します。\n"
-
 #. TRANSLATORS: Elixir.Inspect.Algebra Summary
-#: lib/inspect/algebra.ex:58
+#: lib/inspect/algebra.ex:73
 msgid ""
 "A set of functions for creating and manipulating algebra\n"
 "documents, as described in [\"Strictly Pretty\" (2000) by Christian Lindig]"
@@ -539,9 +546,9 @@ msgid ""
 "\n"
 msgstr ""
 "[\"Strictly Pretty\" (2000) by Christian Lindig][0]で記述された、\n"
-"代数学的ドキュメントを作成、操作するための一組の関数です。\n"
+"Algebraドキュメントを作成、操作するための一組の関数です。\n"
 "\n"
-"代数学的ドキュメントは、\n"
+"Algebraドキュメントは、\n"
 "`Inspect.Algebra`ノードか標準の文字列により表現されます。\n"
 "\n"
 "    iex> Inspect.Algebra.empty\n"
@@ -559,10 +566,10 @@ msgstr ""
 "\n"
 "`nest/2`、`space/2`、`line/2`関数は、\n"
 "あなたが堅い構造にドキュメントをまとめるのを助けます。\n"
-"しかしながら、`break/2`のような関数を使用するとき、\n"
-"ドキュメント代数は面白くなります。そしてこのスペースが\n"
-"どのくらい印字することになっているかに依存して、与えられた\n"
-"文字列に改行を入れ、変換します。\n"
+"しかしながら、このスペースがどのくらい印字することになっているかに\n"
+"依存して、与えられた文字列に改行を入れ変換することに、\n"
+"algebraドキュメントが興味をもつとき、`break/2`のような関数を\n"
+"使用します。\n"
 "breakとともに二つのドキュメントを接着し、それからそれをレンダリング\n"
 "してみましょう:\n"
 "\n"
@@ -573,8 +580,7 @@ msgstr ""
 "breakはそのまま表現されたことに注意してください。というのは、\n"
 "行制限に達していなかったからです。もう一度、こんどは改行で置き換えられます:\n"
 "\n"
-"    iex> doc = Inspect.Algebra.glue(String.duplicate(\"a\", 20), \" \", \"b"
-"\")\n"
+"    iex> doc = Inspect.Algebra.glue(String.duplicate(\"a\", 20), \" \", \"b\")\n"
 "    iex> Inspect.Algebra.format(doc, 10)\n"
 "    [\"aaaaaaaaaaaaaaaaaaaa\", \"\\n\", \"b\"]\n"
 "\n"
@@ -610,3 +616,12 @@ msgstr ""
 "  [0]: http://citeseerx.ist.psu.edu/viewdoc/summary?doi=10.1.1.34.2200\n"
 "  [1]: http://homepages.inf.ed.ac.uk/wadler/papers/prettier/prettier.pdf\n"
 "\n"
+
+#. TRANSLATORS: def Inspect.Algebra.to_doc(map, opts)
+#: lib/inspect/algebra.ex:191
+msgid ""
+"Converts an Elixir structure to an algebra document\n"
+"according to the inspect protocol.\n"
+msgstr ""
+"Elixirの構造を、Inspectプロトコルに従って、\n"
+"algebraドキュメントに変換します。\n"

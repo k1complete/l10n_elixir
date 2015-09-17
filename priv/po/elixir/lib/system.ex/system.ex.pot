@@ -1,5 +1,5 @@
 #. TRANSLATORS: def System.tmp_dir()
-#: lib/system.ex:173 
+#: lib/system.ex:141 
 msgid ""
 "Writable temporary directory.\n"
 "\n"
@@ -15,54 +15,60 @@ msgid ""
 "Returns `nil` if none of the above are writable.\n"
 msgstr ""
 #. TRANSLATORS: def System.tmp_dir!()
-#: lib/system.ex:187 
+#: lib/system.ex:163 
 msgid ""
 "Writable temporary directory, exception on error.\n"
 "\n"
 "Same as `tmp_dir/0` but raises `RuntimeError`\n"
 "instead of returning `nil` if no temp dir is set.\n"
 msgstr ""
-#. TRANSLATORS: def System.user_home()
-#: lib/system.ex:127 
-msgid ""
-"User home directory.\n"
-"\n"
-"Returns the user home directory (platform independent).\n"
-"Returns `nil` if no user home is set.\n"
-msgstr ""
-#. TRANSLATORS: def System.user_home!()
-#: lib/system.ex:140 
-msgid ""
-"User home directory, exception on error.\n"
-"\n"
-"Same as `user_home/0` but raises `RuntimeError`\n"
-"instead of returning `nil` if no user home is set.\n"
-msgstr ""
-#. TRANSLATORS: Elixir.System Summary
-#: lib/system.ex:1 
-msgid ""
-"The System module provides access to variables used or\n"
-"maintained by the VM and to functions that interact directly\n"
-"with the VM or the host system.\n"
-msgstr ""
-#. TRANSLATORS: def System.get_env()
-#: lib/system.ex:254 
-msgid ""
-"System environment variables.\n"
-"\n"
-"Returns a list of all environment variables. Each variable is given as a\n"
-"`{name, value}` tuple where both `name` and `value` are strings.\n"
-msgstr ""
 #. TRANSLATORS: def System.put_env(dict)
-#: lib/system.ex:306 
+#: lib/system.ex:281 
 msgid ""
 "Sets multiple environment variables.\n"
 "\n"
 "Sets a new value for each environment variable corresponding\n"
 "to each key in `dict`.\n"
 msgstr ""
+#. TRANSLATORS: def System.put_env(varname, value)
+#: lib/system.ex:270 
+msgid ""
+"Sets an environment variable value.\n"
+"\n"
+"Sets a new `value` for the environment variable `varname`.\n"
+msgstr ""
+#. TRANSLATORS: def System.user_home()
+#: lib/system.ex:121 
+msgid ""
+"User home directory.\n"
+"\n"
+"Returns the user home directory (platform independent).\n"
+msgstr ""
+#. TRANSLATORS: def System.user_home!()
+#: lib/system.ex:130 
+msgid ""
+"User home directory, exception on error.\n"
+"\n"
+"Same as `user_home/0` but raises `RuntimeError`\n"
+"instead of returning `nil` if no user home is set.\n"
+msgstr ""
+#. TRANSLATORS: def System.get_env()
+#: lib/system.ex:229 
+msgid ""
+"System environment variables.\n"
+"\n"
+"Returns a list of all environment variables. Each variable is given as a\n"
+"`{name, value}` tuple where both `name` and `value` are strings.\n"
+msgstr ""
+#. TRANSLATORS: Elixir.System Summary
+#: lib/system.ex:2 
+msgid ""
+"The System module provides access to variables used or\n"
+"maintained by the VM and to functions that interact directly\n"
+"with the VM or the host system.\n"
+msgstr ""
 #. TRANSLATORS: def System.at_exit(fun)
-#: lib/system.ex:226 
+#: lib/system.ex:195 
 msgid ""
 "Registers a program exit handler function.\n"
 "\n"
@@ -77,7 +83,7 @@ msgid ""
 "The function must receive the exit status code as an argument.\n"
 msgstr ""
 #. TRANSLATORS: def System.argv(args)
-#: lib/system.ex:85 
+#: lib/system.ex:78 
 msgid ""
 "Modifies command line arguments.\n"
 "\n"
@@ -85,7 +91,7 @@ msgid ""
 "as it destroys any previous argv information.\n"
 msgstr ""
 #. TRANSLATORS: def System.find_executable(program)
-#: lib/system.ex:240 
+#: lib/system.ex:212 
 msgid ""
 "Locates an executable on the system.\n"
 "\n"
@@ -95,22 +101,8 @@ msgid ""
 "extension for each OS, so for Windows it will try to\n"
 "lookup files with `.com`, `.cmd` or similar extensions.\n"
 msgstr ""
-#. TRANSLATORS: def System.put_env(varname, value)
-#: lib/system.ex:294 
-msgid ""
-"Sets an environment variable value.\n"
-"\n"
-"Sets a new `value` for the environment variable `varname`.\n"
-msgstr ""
-#. TRANSLATORS: def System.argv()
-#: lib/system.ex:74 
-msgid ""
-"Lists command line arguments.\n"
-"\n"
-"Returns the list of command line arguments passed to the program.\n"
-msgstr ""
 #. TRANSLATORS: def System.cmd(command, args, opts \\ [])
-#: lib/system.ex:433 
+#: lib/system.ex:355 
 msgid ""
 "Executes the given `command` with `args`.\n"
 "\n"
@@ -122,7 +114,20 @@ msgid ""
 "not happen unless `Path.wildcard/2` is used. On Windows though,\n"
 "wildcard expansion is up to the program.\n"
 "\n"
-"A set of options are also supported and described below.\n"
+"This function returns a tuple containing the collected result\n"
+"and the command exit status.\n"
+"\n"
+"## Examples\n"
+"\n"
+"    iex> System.cmd \"echo\", [\"hello\"]\n"
+"    {\"hello\\n\", 0}\n"
+"\n"
+"    iex> System.cmd \"echo\", [\"hello\"], env: [{\"MIX_ENV\", \"test\"}]\n"
+"    {\"hello\\n\", 0}\n"
+"    \n"
+"    iex> System.cmd \"echo\", [\"hello\"], into: IO.stream(:stdio, :line)\n"
+"    hello\n"
+"    {%IO.Stream{}, 0}\n"
 "\n"
 "## Options\n"
 "\n"
@@ -130,9 +135,9 @@ msgid ""
 "  * `:cd` - the directory to run the command in\n"
 "  * `:env` - an enumerable of tuples containing environment key-value as binary\n"
 "  * `:arg0` - set the command arg0\n"
-"  * `:stderr_to_stdout` - redirects stderr to stdout when true\n"
-"  * `:parallelism` - when true, the VM will schedule port tasks to improve\n"
-"    parallelism in the system. If set to false, the VM will try to perform\n"
+"  * `:stderr_to_stdout` - redirects stderr to stdout when `true`\n"
+"  * `:parallelism` - when `true`, the VM will schedule port tasks to improve\n"
+"    parallelism in the system. If set to `false`, the VM will try to perform\n"
 "    commands immediately, improving latency at the expense of parallelism.\n"
 "    The default can be set on system startup by passing the \"+spp\" argument\n"
 "    to `--erl`.\n"
@@ -169,8 +174,15 @@ msgid ""
 "redirecting and so on, please check\n"
 "[Erlang's :os.cmd/1 function](http://www.erlang.org/doc/man/os.html#cmd-1).\n"
 msgstr ""
+#. TRANSLATORS: def System.argv()
+#: lib/system.ex:68 
+msgid ""
+"Lists command line arguments.\n"
+"\n"
+"Returns the list of command line arguments passed to the program.\n"
+msgstr ""
 #. TRANSLATORS: def System.get_pid()
-#: lib/system.ex:286 
+#: lib/system.ex:259 
 msgid ""
 "Erlang VM process identifier.\n"
 "\n"
@@ -180,7 +192,7 @@ msgid ""
 "See http://www.erlang.org/doc/man/os.html#getpid-0 for more info.\n"
 msgstr ""
 #. TRANSLATORS: def System.get_env(varname)
-#: lib/system.ex:270 
+#: lib/system.ex:244 
 msgid ""
 "Environment variable value.\n"
 "\n"
@@ -188,29 +200,8 @@ msgid ""
 "`varname` as a binary, or `nil` if the environment\n"
 "variable is undefined.\n"
 msgstr ""
-#. TRANSLATORS: def System.version()
-#: lib/system.ex:56 
-msgid ""
-"Elixir version information.\n"
-"\n"
-"Returns Elixir's version as binary.\n"
-msgstr ""
-#. TRANSLATORS: def System.build_info()
-#: lib/system.ex:64 
-msgid ""
-"Elixir build information.\n"
-"\n"
-"Returns a keyword list with Elixir version, git tag info and compilation date.\n"
-msgstr ""
-#. TRANSLATORS: def System.delete_env(varname)
-#: lib/system.ex:316 
-msgid ""
-"Deletes an environment variable.\n"
-"\n"
-"Removes the variable `varname` from the environment.\n"
-msgstr ""
 #. TRANSLATORS: def System.halt(status \\ 0)
-#: lib/system.ex:363 
+#: lib/system.ex:316 
 msgid ""
 "Halts the Erlang runtime system.\n"
 "\n"
@@ -239,7 +230,7 @@ msgid ""
 "\n"
 msgstr ""
 #. TRANSLATORS: def System.stacktrace()
-#: lib/system.ex:330 
+#: lib/system.ex:303 
 msgid ""
 "Last exception stacktrace.\n"
 "\n"
@@ -249,8 +240,29 @@ msgid ""
 "\n"
 "Inlined by the compiler into `:erlang.get_stacktrace/0`.\n"
 msgstr ""
+#. TRANSLATORS: def System.version()
+#: lib/system.ex:50 
+msgid ""
+"Elixir version information.\n"
+"\n"
+"Returns Elixir's version as binary.\n"
+msgstr ""
+#. TRANSLATORS: def System.build_info()
+#: lib/system.ex:58 
+msgid ""
+"Elixir build information.\n"
+"\n"
+"Returns a keyword list with Elixir version, git tag info and compilation date.\n"
+msgstr ""
+#. TRANSLATORS: def System.delete_env(varname)
+#: lib/system.ex:292 
+msgid ""
+"Deletes an environment variable.\n"
+"\n"
+"Removes the variable `varname` from the environment.\n"
+msgstr ""
 #. TRANSLATORS: def System.cwd()
-#: lib/system.ex:95 
+#: lib/system.ex:89 
 msgid ""
 "Current working directory.\n"
 "\n"
@@ -258,7 +270,7 @@ msgid ""
 "is not available.\n"
 msgstr ""
 #. TRANSLATORS: def System.cwd!()
-#: lib/system.ex:116 
+#: lib/system.ex:111 
 msgid ""
 "Current working directory, exception on error.\n"
 "\n"

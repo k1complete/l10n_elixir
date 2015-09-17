@@ -10,27 +10,27 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
-#. TRANSLATORS: def Macro.Env.in_match?(arg1)
-#: lib/macro/env.ex:116
+#. TRANSLATORS: def Macro.Env.in_match?(env)
+#: lib/macro/env.ex:115
 msgid ""
 "Returns whether the compilation environment is currently\n"
 "inside a match clause.\n"
 msgstr "コンパイル環境が現在のマッチ節の内部かどうかを返します。\n"
 
-#. TRANSLATORS: def Macro.Env.in_guard?(arg1)
-#: lib/macro/env.ex:110
+#. TRANSLATORS: def Macro.Env.in_guard?(env)
+#: lib/macro/env.ex:107
 msgid ""
 "Returns whether the compilation environment is currently\n"
 "inside a guard.\n"
 msgstr "コンパイル環境が現在ガードの内部かどうかを返します。\n"
 
 #. TRANSLATORS: def Macro.Env.stacktrace(env)
-#: lib/macro/env.ex:121
+#: lib/macro/env.ex:123
 msgid "Returns the environment stacktrace.\n"
 msgstr "その環境のスタックトレースを返します。\n"
 
 #. TRANSLATORS: Elixir.Macro.Env Summary
-#: lib/macro/env.ex:1
+#: lib/macro/env.ex:2
 msgid ""
 "A struct that holds compile time environment information.\n"
 "\n"
@@ -117,8 +117,8 @@ msgstr ""
 "     トラッカーのpid\n"
 "  * `local` - ローカル関数を拡大するモジュール\n"
 
-#. TRANSLATORS: def Macro.Env.location(arg1)
-#: lib/macro/env.ex:102
+#. TRANSLATORS: def Macro.Env.location(env)
+#: lib/macro/env.ex:97
 msgid ""
 "Returns a keyword list containing the file and line\n"
 "information as keys.\n"

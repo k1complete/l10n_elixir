@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: l 10n_elixir\n"
-"PO-Revision-Date: 2015-05-20 21:53+0900\n"
+"PO-Revision-Date: 2015-09-12 17:57+0900\n"
 "Last-Translator: 小田 照敬 <EMAIL@ADDRESS>\n"
 "Language-Team: Japanese\n"
 "Language: ja\n"
@@ -11,23 +11,23 @@ msgstr ""
 "Plural-Forms: nplurals=1; plural=0;\n"
 
 #. TRANSLATORS: def File.Stat.to_record(stat)
-#: lib/file/stat.ex:65
+#: lib/file/stat.ex:62
 msgid "Converts a `File.Stat` struct to a `:file_info` record.\n"
 msgstr "`File.Stat`構造体を`:file_info`レコードに変換します。\n"
 
-#. TRANSLATORS: def File.Stat.from_record(arg1)
-#: lib/file/stat.ex:72
+#. TRANSLATORS: def File.Stat.from_record(file_info)
+#: lib/file/stat.ex:69
 msgid "Converts a `:file_info` record into a `File.Stat`.\n"
 msgstr "`:file_info`レコードを`File.Stat`に変換します。\n"
 
 #. TRANSLATORS: Elixir.File.Stat Summary
-#: lib/file/stat.ex:3
+#: lib/file/stat.ex:4
 msgid ""
 "A struct responsible to hold file information.\n"
 "\n"
 "In Erlang, this struct is represented by a `:file_info` record.\n"
 "Therefore this module also provides functions for converting\n"
-"in between the Erlang record and the Elixir struct.\n"
+"between the Erlang record and the Elixir struct.\n"
 "\n"
 "Its fields are:\n"
 "\n"
@@ -92,8 +92,7 @@ msgstr ""
 "\n"
 "  * `mtime` - 最後にファイルが書かれた時刻\n"
 "\n"
-"  * `ctime` - この時刻フィールドの解釈はオペレーティングシステムに依存しま"
-"す。\n"
+"  * `ctime` - この時刻フィールドの解釈はオペレーティングシステムに依存します。\n"
 "    Unixでは、ファイルまたはそのinodeが変更された最後の時刻です。\n"
 "    Windowsでは、作成された時刻です。\n"
 "\n"

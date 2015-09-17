@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: l 10n_elixir\n"
-"PO-Revision-Date: 2015-05-20 21:54+0900\n"
+"PO-Revision-Date: 2015-09-12 18:26+0900\n"
 "Last-Translator: 小田 照敬 <EMAIL@ADDRESS>\n"
 "Language-Team: Japanese\n"
 "Language: ja\n"
@@ -11,7 +11,7 @@ msgstr ""
 "Plural-Forms: nplurals=1; plural=0;\n"
 
 #. TRANSLATORS: Elixir.GenEvent.Stream Summary
-#: lib/gen_event/stream.ex:1
+#: lib/gen_event/stream.ex:2
 msgid ""
 "Defines a `GenEvent` stream.\n"
 "\n"
@@ -19,7 +19,7 @@ msgid ""
 "contains the following fields:\n"
 "\n"
 "  * `:manager`  - the manager reference given to `GenEvent.stream/2`\n"
-"  * `:timeout`  - the timeout in between events, defaults to `:infinity`\n"
+"  * `:timeout`  - the timeout between events, defaults to `:infinity`\n"
 "\n"
 msgstr ""
 "`GenEvent`ストリームを定義します。\n"

@@ -1,5 +1,5 @@
 #. TRANSLATORS: Elixir.List.Chars Summary
-#: lib/list/chars.ex:1 
+#: lib/list/chars.ex:2 
 msgid ""
 "The List.Chars protocol is responsible for\n"
 "converting a structure to a list (only if applicable).\n"
@@ -10,7 +10,7 @@ msgid ""
 "by Kernel invokes this protocol.\n"
 msgstr ""
 #. TRANSLATORS: def List.Chars.BitString.to_char_list(thing)
-#: lib/list/chars.ex:23 
+#: lib/list/chars.ex:20 
 msgid ""
 "Returns the given binary converted to a char list.\n"
 msgstr ""

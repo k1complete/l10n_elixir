@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: l 10n_elixir\n"
-"PO-Revision-Date: 2015-05-20 21:54+0900\n"
+"PO-Revision-Date: 2015-09-16 23:10+0900\n"
 "Last-Translator: 小田 照敬 <EMAIL@ADDRESS>\n"
 "Language-Team: Japanese\n"
 "Language: ja\n"
@@ -11,9 +11,9 @@ msgstr ""
 "Plural-Forms: nplurals=1; plural=0;\n"
 
 #. TRANSLATORS: def Port.list()
-#: lib/port.ex:83
+#: lib/port.ex:90
 msgid ""
-"See http://www.erlang.org/doc/man/erlang.html#ports-0.\n"
+"See http://www.erlang.org/doc/man/erlang.html#ports-0\n"
 "\n"
 "Inlined by the compiler.\n"
 msgstr ""
@@ -21,32 +21,10 @@ msgstr ""
 "\n"
 "コンパイラによりインライン化されます。\n"
 
-#. TRANSLATORS: def Port.info(port, item)
-#: lib/port.ex:74
-msgid ""
-"See http://www.erlang.org/doc/man/erlang.html#port_info-2.\n"
-"\n"
-"Inlined by the compiler.\n"
-msgstr ""
-"http://www.erlang.org/doc/man/erlang.html#port_info-2 を参照してください。\n"
-"\n"
-"コンパイラによりインライン化されます。\n"
-
-#. TRANSLATORS: def Port.info(port)
-#: lib/port.ex:65
-msgid ""
-"See http://www.erlang.org/doc/man/erlang.html#port_info-1.\n"
-"\n"
-"Inlined by the compiler.\n"
-msgstr ""
-"http://www.erlang.org/doc/man/erlang.html#port_info-1 を参照してください。\n"
-"\n"
-"コンパイラによりインライン化されます。\n"
-
 #. TRANSLATORS: def Port.control(port, operation, data)
-#: lib/port.ex:47
+#: lib/port.ex:42
 msgid ""
-"See http://www.erlang.org/doc/man/erlang.html#port_control-3.\n"
+"See http://www.erlang.org/doc/man/erlang.html#port_control-3\n"
 "\n"
 "Inlined by the compiler.\n"
 msgstr ""
@@ -56,9 +34,9 @@ msgstr ""
 "コンパイラによりインライン化されます。\n"
 
 #. TRANSLATORS: def Port.connect(port, pid)
-#: lib/port.ex:38
+#: lib/port.ex:33
 msgid ""
-"See http://www.erlang.org/doc/man/erlang.html#port_connect-2.\n"
+"See http://www.erlang.org/doc/man/erlang.html#port_connect-2\n"
 "\n"
 "Inlined by the compiler.\n"
 msgstr ""
@@ -68,9 +46,9 @@ msgstr ""
 "コンパイラによりインライン化されます。\n"
 
 #. TRANSLATORS: def Port.command(port, data, options \\ [])
-#: lib/port.ex:29
+#: lib/port.ex:24
 msgid ""
-"See http://www.erlang.org/doc/man/erlang.html#port_command-2.\n"
+"See http://www.erlang.org/doc/man/erlang.html#port_command-2\n"
 "\n"
 "Inlined by the compiler.\n"
 msgstr ""
@@ -80,9 +58,9 @@ msgstr ""
 "コンパイラによりインライン化されます。\n"
 
 #. TRANSLATORS: def Port.close(port)
-#: lib/port.ex:20
+#: lib/port.ex:15
 msgid ""
-"See http://www.erlang.org/doc/man/erlang.html#port_close-1.\n"
+"See http://www.erlang.org/doc/man/erlang.html#port_close-1\n"
 "\n"
 "Inlined by the compiler.\n"
 msgstr ""
@@ -92,9 +70,9 @@ msgstr ""
 "コンパイラによりインライン化されます。\n"
 
 #. TRANSLATORS: def Port.call(port, operation, data)
-#: lib/port.ex:56
+#: lib/port.ex:51
 msgid ""
-"See http://www.erlang.org/doc/man/erlang.html#port_call-3.\n"
+"See http://www.erlang.org/doc/man/erlang.html#port_call-3\n"
 "\n"
 "Inlined by the compiler.\n"
 msgstr ""
@@ -104,9 +82,9 @@ msgstr ""
 "コンパイラによりインライン化されます。\n"
 
 #. TRANSLATORS: def Port.open(name, settings)
-#: lib/port.ex:11
+#: lib/port.ex:6
 msgid ""
-"See http://www.erlang.org/doc/man/erlang.html#open_port-2.\n"
+"See http://www.erlang.org/doc/man/erlang.html#open_port-2\n"
 "\n"
 "Inlined by the compiler.\n"
 msgstr ""
@@ -115,7 +93,55 @@ msgstr ""
 "\n"
 "コンパイラによりインライン化されます。\n"
 
+#. TRANSLATORS: def Port.info(port, spec)
+#: lib/port.ex:70
+msgid ""
+"Returns information about the `port`\n"
+"or `nil` if the port is closed.\n"
+"\n"
+"See http://www.erlang.org/doc/man/erlang.html#port_info-2\n"
+msgstr ""
+"`port`についての情報を返します。\n"
+"ポートがクローズされていたら`nil`を返します。\n"
+"\n"
+"http://www.erlang.org/doc/man/erlang.html#port_info-2 を\n"
+"参照してください。\n"
+
+#. TRANSLATORS: def Port.info(port)
+#: lib/port.ex:60
+msgid ""
+"Returns information about the `port`\n"
+"or `nil` if the port is closed.\n"
+"\n"
+"See http://www.erlang.org/doc/man/erlang.html#port_info-1\n"
+msgstr ""
+"`port`についての情報を返します。\n"
+"ポートがクローズされていたら`nil`を返します。\n"
+"\n"
+"http://www.erlang.org/doc/man/erlang.html#port_info-1 を\n"
+"参照してください。\n"
+
 #. TRANSLATORS: Elixir.Port Summary
-#: lib/port.ex:1
+#: lib/port.ex:2
 msgid "Functions related to Erlang ports.\n"
 msgstr "Erlangポートに関連する関数です。\n"
+
+#~ msgid ""
+#~ "See http://www.erlang.org/doc/man/erlang.html#port_info-2.\n"
+#~ "\n"
+#~ "Inlined by the compiler.\n"
+#~ msgstr ""
+#~ "http://www.erlang.org/doc/man/erlang.html#port_info-2 を参照してくださ"
+#~ "い。\n"
+#~ "\n"
+#~ "コンパイラによりインライン化されます。\n"
+
+#~ msgid ""
+#~ "See http://www.erlang.org/doc/man/erlang.html#port_info-1.\n"
+#~ "\n"
+#~ "Inlined by the compiler.\n"
+#~ msgstr ""
+#~ "http://www.erlang.org/doc/man/erlang.html#port_info-1 を参照してくださ"
+#~ "い。\n"
+#~ "\n"
+#~ "コンパイラによりインライン化されます。\n"

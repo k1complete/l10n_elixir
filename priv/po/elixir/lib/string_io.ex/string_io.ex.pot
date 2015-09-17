@@ -1,5 +1,5 @@
 #. TRANSLATORS: Elixir.StringIO Summary
-#: lib/string_io.ex:1 
+#: lib/string_io.ex:2 
 msgid ""
 "This module provides an IO device that wraps a string.\n"
 "\n"
@@ -11,7 +11,7 @@ msgid ""
 "\n"
 msgstr ""
 #. TRANSLATORS: def StringIO.close(pid)
-#: lib/string_io.ex:88 
+#: lib/string_io.ex:76 
 msgid ""
 "Stops the IO device and returns remaining buffers.\n"
 "\n"
@@ -23,8 +23,21 @@ msgid ""
 "    {:ok, {\"in\", \"out\"}}\n"
 "\n"
 msgstr ""
+#. TRANSLATORS: def StringIO.contents(pid)
+#: lib/string_io.ex:42 
+msgid ""
+"Returns current buffers.\n"
+"\n"
+"## Examples\n"
+"\n"
+"    iex> {:ok, pid} = StringIO.open(\"in\")\n"
+"    iex> IO.write(pid, \"out\")\n"
+"    iex> StringIO.contents(pid)\n"
+"    {\"in\", \"out\"}\n"
+"\n"
+msgstr ""
 #. TRANSLATORS: def StringIO.flush(pid)
-#: lib/string_io.ex:72 
+#: lib/string_io.ex:58 
 msgid ""
 "Flushes output buffer.\n"
 "\n"
@@ -39,7 +52,7 @@ msgid ""
 "\n"
 msgstr ""
 #. TRANSLATORS: def StringIO.open(string, options \\ [])
-#: lib/string_io.ex:38 
+#: lib/string_io.ex:15 
 msgid ""
 "Creates an IO device.\n"
 "\n"
@@ -60,18 +73,5 @@ msgid ""
 "    \"foo\"\n"
 "    iex> StringIO.contents(pid)\n"
 "    {\"\", \">\"}\n"
-"\n"
-msgstr ""
-#. TRANSLATORS: def StringIO.contents(pid)
-#: lib/string_io.ex:54 
-msgid ""
-"Returns current buffers.\n"
-"\n"
-"## Examples\n"
-"\n"
-"    iex> {:ok, pid} = StringIO.open(\"in\")\n"
-"    iex> IO.write(pid, \"out\")\n"
-"    iex> StringIO.contents(pid)\n"
-"    {\"in\", \"out\"}\n"
 "\n"
 msgstr ""

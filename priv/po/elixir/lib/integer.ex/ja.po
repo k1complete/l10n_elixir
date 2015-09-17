@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: l 10n_elixir\n"
-"PO-Revision-Date: 2015-05-20 21:54+0900\n"
+"PO-Revision-Date: 2015-09-16 11:04+0900\n"
 "Last-Translator: 小田 照敬 <EMAIL@ADDRESS>\n"
 "Language-Team: Japanese\n"
 "Language: ja\n"
@@ -11,7 +11,7 @@ msgstr ""
 "Plural-Forms: nplurals=1; plural=0;\n"
 
 #. TRANSLATORS: def Integer.digits(n, base \\ 10)
-#: lib/integer.ex:46
+#: lib/integer.ex:30
 msgid ""
 "Returns the ordered digits for the given non-negative integer.\n"
 "\n"
@@ -42,7 +42,7 @@ msgstr ""
 "\n"
 
 #. TRANSLATORS: def Integer.to_char_list(number)
-#: lib/integer.ex:228
+#: lib/integer.ex:216
 msgid ""
 "Returns a char list which corresponds to the text representation of the "
 "given integer.\n"
@@ -66,7 +66,7 @@ msgstr ""
 "\n"
 
 #. TRANSLATORS: def Integer.to_char_list(number, base)
-#: lib/integer.ex:245
+#: lib/integer.ex:232
 msgid ""
 "Returns a char list which corresponds to the text representation of the\n"
 "given integer in the given base.\n"
@@ -91,7 +91,7 @@ msgstr ""
 "\n"
 
 #. TRANSLATORS: def Integer.to_string(some_integer)
-#: lib/integer.ex:195
+#: lib/integer.ex:182
 msgid ""
 "Returns a binary which corresponds to the text representation\n"
 "of `some_integer`.\n"
@@ -115,7 +115,7 @@ msgstr ""
 "\n"
 
 #. TRANSLATORS: def Integer.to_string(some_integer, base)
-#: lib/integer.ex:212
+#: lib/integer.ex:199
 msgid ""
 "Returns a binary which corresponds to the text representation\n"
 "of `some_integer` in base `base`.\n"
@@ -139,8 +139,13 @@ msgstr ""
 "    \"64\"\n"
 "\n"
 
+#. TRANSLATORS: Elixir.Integer Summary
+#: lib/integer.ex:2
+msgid "Functions for working with integers.\n"
+msgstr "整数で動く関数です\n"
+
 #. TRANSLATORS: defmacro Integer.is_odd(n)
-#: lib/integer.ex:15
+#: lib/integer.ex:8
 msgid ""
 "Determines if an integer is odd.\n"
 "\n"
@@ -155,7 +160,7 @@ msgstr ""
 "ガード節で使えます。\n"
 
 #. TRANSLATORS: defmacro Integer.is_even(n)
-#: lib/integer.ex:26
+#: lib/integer.ex:19
 msgid ""
 "Determines if an integer is even.\n"
 "\n"
@@ -169,41 +174,8 @@ msgstr ""
 "\n"
 "ガード節で使えます。\n"
 
-#. TRANSLATORS: Elixir.Integer Summary
-#: lib/integer.ex:1
-msgid "Functions for working with integers.\n"
-msgstr "整数で動く関数です\n"
-
-#. TRANSLATORS: def Integer.undigits(digits, base \\ 10)
-#: lib/integer.ex:71
-msgid ""
-"Returns the integer represented by the ordered digits.\n"
-"\n"
-"An optional base value may be provided representing the radix for the "
-"digits.\n"
-"\n"
-" ## Examples\n"
-"\n"
-"     iex> Integer.undigits([1, 0, 1])\n"
-"     101\n"
-"\n"
-"     iex> Integer.undigits([1, 4], 16)\n"
-"     20\n"
-msgstr ""
-"桁のリストによって表現された整数を返します。\n"
-"\n"
-"オプションで桁のリストの基数を指定することができます。\n"
-"\n"
-" ## 例\n"
-"\n"
-"     iex> Integer.undigits([1, 0, 1])\n"
-"     101\n"
-"\n"
-"     iex> Integer.undigits([1, 4], 16)\n"
-"     20\n"
-
 #. TRANSLATORS: def Integer.parse(binary, base \\ 10)
-#: lib/integer.ex:119
+#: lib/integer.ex:80
 msgid ""
 "Converts a binary from a text representation of an integer\n"
 "in an optional base `base` to the corresponding integer.\n"
@@ -219,10 +191,10 @@ msgid ""
 "## Examples\n"
 "\n"
 "    iex> Integer.parse(\"34\")\n"
-"    {34,\"\"}\n"
+"    {34, \"\"}\n"
 "\n"
 "    iex> Integer.parse(\"34.5\")\n"
-"    {34,\".5\"}\n"
+"    {34, \".5\"}\n"
 "\n"
 "    iex> Integer.parse(\"three\")\n"
 "    :error\n"
@@ -256,10 +228,10 @@ msgstr ""
 "## 例\n"
 "\n"
 "    iex> Integer.parse(\"34\")\n"
-"    {34,\"\"}\n"
+"    {34, \"\"}\n"
 "\n"
 "    iex> Integer.parse(\"34.5\")\n"
-"    {34,\".5\"}\n"
+"    {34, \".5\"}\n"
 "\n"
 "    iex> Integer.parse(\"three\")\n"
 "    :error\n"
@@ -279,3 +251,31 @@ msgstr ""
 "    iex> Integer.parse(\"a2\", 38)\n"
 "    ** (ArgumentError) invalid base 38\n"
 "\n"
+
+#. TRANSLATORS: def Integer.undigits(digits, base \\ 10)
+#: lib/integer.ex:57
+msgid ""
+"Returns the integer represented by the ordered digits.\n"
+"\n"
+"An optional base value may be provided representing the radix for the "
+"digits.\n"
+"\n"
+"## Examples\n"
+"\n"
+"    iex> Integer.undigits([1, 0, 1])\n"
+"    101\n"
+"\n"
+"    iex> Integer.undigits([1, 4], 16)\n"
+"    20\n"
+msgstr ""
+"桁のリストによって表現された整数を返します。\n"
+"\n"
+"オプションで桁のリストの基数を指定することができます。\n"
+"\n"
+" ## 例\n"
+"\n"
+"     iex> Integer.undigits([1, 0, 1])\n"
+"     101\n"
+"\n"
+"     iex> Integer.undigits([1, 4], 16)\n"
+"     20\n"

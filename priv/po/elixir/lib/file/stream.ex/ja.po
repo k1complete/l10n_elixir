@@ -11,7 +11,7 @@ msgstr ""
 "Plural-Forms: nplurals=1; plural=0;\n"
 
 #. TRANSLATORS: Elixir.File.Stream Summary
-#: lib/file/stream.ex:1
+#: lib/file/stream.ex:2
 msgid ""
 "Defines a `File.Stream` struct returned by `File.stream!/3`.\n"
 "\n"

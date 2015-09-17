@@ -1,10 +1,10 @@
 #. TRANSLATORS: def Task.Supervisor.terminate_child(supervisor, pid)
-#: lib/task/supervisor.ex:78 
+#: lib/task/supervisor.ex:73 
 msgid ""
 "Terminates the child with the given `pid`.\n"
 msgstr ""
 #. TRANSLATORS: def Task.Supervisor.async(supervisor, module, fun, args)
-#: lib/task/supervisor.ex:66 
+#: lib/task/supervisor.ex:58 
 msgid ""
 "Starts a task that can be awaited on.\n"
 "\n"
@@ -12,7 +12,7 @@ msgid ""
 "For more information on tasks, check the `Task` module.\n"
 msgstr ""
 #. TRANSLATORS: def Task.Supervisor.start_child(supervisor, module, fun, args)
-#: lib/task/supervisor.ex:110 
+#: lib/task/supervisor.ex:102 
 msgid ""
 "Starts a task as child of the given `supervisor`.\n"
 "\n"
@@ -20,7 +20,7 @@ msgid ""
 "by the given `module`, `fun` and `args`.\n"
 msgstr ""
 #. TRANSLATORS: def Task.Supervisor.start_child(supervisor, fun)
-#: lib/task/supervisor.ex:99 
+#: lib/task/supervisor.ex:89 
 msgid ""
 "Starts a task as child of the given `supervisor`.\n"
 "\n"
@@ -30,7 +30,7 @@ msgid ""
 "to report back to the caller.\n"
 msgstr ""
 #. TRANSLATORS: def Task.Supervisor.start_link(opts \\ [])
-#: lib/task/supervisor.ex:40 
+#: lib/task/supervisor.ex:18 
 msgid ""
 "Starts a new supervisor.\n"
 "\n"
@@ -52,12 +52,12 @@ msgid ""
 "\n"
 msgstr ""
 #. TRANSLATORS: def Task.Supervisor.children(supervisor)
-#: lib/task/supervisor.ex:86 
+#: lib/task/supervisor.ex:81 
 msgid ""
 "Returns all children pids.\n"
 msgstr ""
 #. TRANSLATORS: Elixir.Task.Supervisor Summary
-#: lib/task/supervisor.ex:1 
+#: lib/task/supervisor.ex:2 
 msgid ""
 "A tasks supervisor.\n"
 "\n"
@@ -66,8 +66,7 @@ msgid ""
 "`:simple_one_for_one` supervisor where the workers are temporary\n"
 "(i.e. they are not restarted after they die).\n"
 "\n"
-"The functions in this module allow tasks to be spawned and awaited\n"
-"from a supervisor, similar to the functions defined in the `Task` module.\n"
+"See the `Task` module for more information.\n"
 "\n"
 "## Name Registration\n"
 "\n"

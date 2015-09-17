@@ -1,10 +1,10 @@
 #. TRANSLATORS: def Tuple.delete_at(tuple, index)
-#: lib/tuple.ex:63 
+#: lib/tuple.ex:70 
 msgid ""
 "Removes an element from a tuple.\n"
 "\n"
 "Deletes the element at the zero-based `index` from `tuple`.\n"
-"Raises an `ArgumentError` if `index` is greater than\n"
+"Raises an `ArgumentError` if `index` is negative or greater than\n"
 "or equal to the length of `tuple`.\n"
 "\n"
 "Inlined by the compiler.\n"
@@ -16,13 +16,29 @@ msgid ""
 "    {:bar, :baz}\n"
 "\n"
 msgstr ""
-#. TRANSLATORS: def Tuple.insert_at(tuple, index, term)
-#: lib/tuple.ex:42 
+#. TRANSLATORS: def Tuple.append(tuple, value)
+#: lib/tuple.ex:51 
+msgid ""
+"Inserts an element into the end of a tuple.\n"
+"\n"
+"Returns a new tuple which has one element more than `tuple`, and contains\n"
+"the elements in `tuple` followed by `value` as the last element.\n"
+"\n"
+"Inlined by the compiler.\n"
+"\n"
+"## Examples\n"
+"    iex> tuple = {:foo, :bar}\n"
+"    iex> Tuple.append(tuple, :baz)\n"
+"    {:foo, :bar, :baz}\n"
+"\n"
+msgstr ""
+#. TRANSLATORS: def Tuple.insert_at(tuple, index, value)
+#: lib/tuple.ex:28 
 msgid ""
 "Inserts an element into a tuple.\n"
 "\n"
 "Inserts `value` into `tuple` at the given zero-based `index`.\n"
-"Raises an `ArgumentError` if `index` is greater than the\n"
+"Raises an `ArgumentError` if `index` is negative or greater than the\n"
 "length of `tuple`.\n"
 "\n"
 "Inlined by the compiler.\n"
@@ -32,15 +48,20 @@ msgid ""
 "    iex> tuple = {:bar, :baz}\n"
 "    iex> Tuple.insert_at(tuple, 0, :foo)\n"
 "    {:foo, :bar, :baz}\n"
+"    iex> Tuple.insert_at(tuple, 2, :bong)\n"
+"    {:bar, :baz, :bong}\n"
 "\n"
 msgstr ""
 #. TRANSLATORS: Elixir.Tuple Summary
-#: lib/tuple.ex:1 
+#: lib/tuple.ex:2 
 msgid ""
 "Functions for working with tuples.\n"
+"\n"
+"See also `Kernel.elem/2`, `Kernel.is_tuple/1`, `Kernel.put_elem/3`, and\n"
+"`Kernel.tuple_size/1`.\n"
 msgstr ""
 #. TRANSLATORS: def Tuple.duplicate(data, size)
-#: lib/tuple.ex:21 
+#: lib/tuple.ex:9 
 msgid ""
 "Creates a new tuple.\n"
 "\n"
@@ -56,9 +77,16 @@ msgid ""
 "\n"
 msgstr ""
 #. TRANSLATORS: def Tuple.to_list(tuple)
-#: lib/tuple.ex:73 
+#: lib/tuple.ex:91 
 msgid ""
 "Converts a tuple to a list.\n"
 "\n"
 "Inlined by the compiler.\n"
+"\n"
+"## Examples\n"
+"\n"
+"    iex> tuple = {:foo, :bar, :baz}\n"
+"    iex> Tuple.to_list(tuple)\n"
+"    [:foo, :bar, :baz]\n"
+"\n"
 msgstr ""

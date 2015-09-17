@@ -1,102 +1,177 @@
 #. TRANSLATORS: def IO.ANSI.underline()
-#: lib/io/ansi.ex:57 
+#: lib/io/ansi.ex:56 
 msgid ""
 "Underline: Single"
 msgstr ""
 #. TRANSLATORS: def IO.ANSI.no_underline()
-#: lib/io/ansi.ex:92 
+#: lib/io/ansi.ex:91 
 msgid ""
 "Underline: None"
 msgstr ""
 #. TRANSLATORS: def IO.ANSI.home()
-#: lib/io/ansi.ex:129 
+#: lib/io/ansi.ex:128 
 msgid ""
 "Send cursor home"
 msgstr ""
 #. TRANSLATORS: def IO.ANSI.primary_font()
-#: lib/io/ansi.ex:78 
+#: lib/io/ansi.ex:77 
 msgid ""
 "Sets primary (default) font"
 msgstr ""
-#. TRANSLATORS: def IO.ANSI.default_color()
-#: lib/io/ansi.ex:108 
-msgid ""
-"Default text color"
-msgstr ""
-#. TRANSLATORS: def IO.ANSI.default_background()
-#: lib/io/ansi.ex:111 
-msgid ""
-"Default background color"
-msgstr ""
-#. TRANSLATORS: def IO.ANSI.reset()
-#: lib/io/ansi.ex:45 
-msgid ""
-"Resets all attributes"
-msgstr ""
-#. TRANSLATORS: def IO.ANSI.normal()
-#: lib/io/ansi.ex:86 
-msgid ""
-"Normal color or intensity"
-msgstr ""
-#. TRANSLATORS: def IO.ANSI.faint()
-#: lib/io/ansi.ex:51 
-msgid ""
-"Faint (decreased intensity), not widely supported"
-msgstr ""
-#. TRANSLATORS: def IO.ANSI.italic()
-#: lib/io/ansi.ex:54 
-msgid ""
-"Italic: on. Not widely supported. Sometimes treated as inverse."
-msgstr ""
 #. TRANSLATORS: def IO.ANSI.yellow()
-#: lib/io/ansi.ex:101 
+#: lib/io/ansi.ex:100 
 msgid ""
 "Sets foreground color to yellow"
 msgstr ""
 #. TRANSLATORS: def IO.ANSI.white()
-#: lib/io/ansi.ex:101 
+#: lib/io/ansi.ex:100 
 msgid ""
 "Sets foreground color to white"
 msgstr ""
 #. TRANSLATORS: def IO.ANSI.red()
-#: lib/io/ansi.ex:101 
+#: lib/io/ansi.ex:100 
 msgid ""
 "Sets foreground color to red"
 msgstr ""
 #. TRANSLATORS: def IO.ANSI.magenta()
-#: lib/io/ansi.ex:101 
+#: lib/io/ansi.ex:100 
 msgid ""
 "Sets foreground color to magenta"
 msgstr ""
 #. TRANSLATORS: def IO.ANSI.green()
-#: lib/io/ansi.ex:101 
+#: lib/io/ansi.ex:100 
 msgid ""
 "Sets foreground color to green"
 msgstr ""
 #. TRANSLATORS: def IO.ANSI.cyan()
-#: lib/io/ansi.ex:101 
+#: lib/io/ansi.ex:100 
 msgid ""
 "Sets foreground color to cyan"
 msgstr ""
 #. TRANSLATORS: def IO.ANSI.blue()
-#: lib/io/ansi.ex:101 
+#: lib/io/ansi.ex:100 
 msgid ""
 "Sets foreground color to blue"
 msgstr ""
 #. TRANSLATORS: def IO.ANSI.black()
-#: lib/io/ansi.ex:101 
+#: lib/io/ansi.ex:100 
 msgid ""
 "Sets foreground color to black"
 msgstr ""
-#. TRANSLATORS: def IO.ANSI.format(chardata, emit \\ enabled?())
-#: lib/io/ansi.ex:157 
+#. TRANSLATORS: def IO.ANSI.yellow_background()
+#: lib/io/ansi.ex:103 
+msgid ""
+"Sets background color to yellow"
+msgstr ""
+#. TRANSLATORS: def IO.ANSI.white_background()
+#: lib/io/ansi.ex:103 
+msgid ""
+"Sets background color to white"
+msgstr ""
+#. TRANSLATORS: def IO.ANSI.red_background()
+#: lib/io/ansi.ex:103 
+msgid ""
+"Sets background color to red"
+msgstr ""
+#. TRANSLATORS: def IO.ANSI.magenta_background()
+#: lib/io/ansi.ex:103 
+msgid ""
+"Sets background color to magenta"
+msgstr ""
+#. TRANSLATORS: def IO.ANSI.green_background()
+#: lib/io/ansi.ex:103 
+msgid ""
+"Sets background color to green"
+msgstr ""
+#. TRANSLATORS: def IO.ANSI.cyan_background()
+#: lib/io/ansi.ex:103 
+msgid ""
+"Sets background color to cyan"
+msgstr ""
+#. TRANSLATORS: def IO.ANSI.blue_background()
+#: lib/io/ansi.ex:103 
+msgid ""
+"Sets background color to blue"
+msgstr ""
+#. TRANSLATORS: def IO.ANSI.black_background()
+#: lib/io/ansi.ex:103 
+msgid ""
+"Sets background color to black"
+msgstr ""
+#. TRANSLATORS: def IO.ANSI.font_9()
+#: lib/io/ansi.ex:81 
+msgid ""
+"Sets alternative font 9"
+msgstr ""
+#. TRANSLATORS: def IO.ANSI.font_8()
+#: lib/io/ansi.ex:81 
+msgid ""
+"Sets alternative font 8"
+msgstr ""
+#. TRANSLATORS: def IO.ANSI.font_7()
+#: lib/io/ansi.ex:81 
+msgid ""
+"Sets alternative font 7"
+msgstr ""
+#. TRANSLATORS: def IO.ANSI.font_6()
+#: lib/io/ansi.ex:81 
+msgid ""
+"Sets alternative font 6"
+msgstr ""
+#. TRANSLATORS: def IO.ANSI.font_5()
+#: lib/io/ansi.ex:81 
+msgid ""
+"Sets alternative font 5"
+msgstr ""
+#. TRANSLATORS: def IO.ANSI.font_4()
+#: lib/io/ansi.ex:81 
+msgid ""
+"Sets alternative font 4"
+msgstr ""
+#. TRANSLATORS: def IO.ANSI.font_3()
+#: lib/io/ansi.ex:81 
+msgid ""
+"Sets alternative font 3"
+msgstr ""
+#. TRANSLATORS: def IO.ANSI.font_2()
+#: lib/io/ansi.ex:81 
+msgid ""
+"Sets alternative font 2"
+msgstr ""
+#. TRANSLATORS: def IO.ANSI.font_1()
+#: lib/io/ansi.ex:81 
+msgid ""
+"Sets alternative font 1"
+msgstr ""
+#. TRANSLATORS: def IO.ANSI.reset()
+#: lib/io/ansi.ex:44 
+msgid ""
+"Resets all attributes"
+msgstr ""
+#. TRANSLATORS: def IO.ANSI.normal()
+#: lib/io/ansi.ex:85 
+msgid ""
+"Normal color or intensity"
+msgstr ""
+#. TRANSLATORS: def IO.ANSI.faint()
+#: lib/io/ansi.ex:50 
+msgid ""
+"Faint (decreased intensity), not widely supported"
+msgstr ""
+#. TRANSLATORS: def IO.ANSI.italic()
+#: lib/io/ansi.ex:53 
+msgid ""
+"Italic: on. Not widely supported. Sometimes treated as inverse."
+msgstr ""
+#. TRANSLATORS: def IO.ANSI.format(chardata, emit \\ enabled?)
+#: lib/io/ansi.ex:138 
 msgid ""
 "Formats a chardata-like argument by converting named ANSI sequences into actual\n"
 "ANSI codes.\n"
 "\n"
 "The named sequences are represented by atoms.\n"
 "\n"
-"It will also append an `IO.ANSI.reset` to the chardata when a conversion is\n"
+"It will also append an `IO.ANSI.reset/0` to the chardata when a conversion is\n"
 "performed. If you don't want this behaviour, use `format_fragment/2`.\n"
 "\n"
 "An optional boolean parameter can be passed to enable or disable\n"
@@ -109,8 +184,8 @@ msgid ""
 "    [[[[[[], \"Hello, \"] | \"\\e[31m\"] | \"\\e[1m\"], \"world!\"] | \"\\e[0m\"]\n"
 "\n"
 msgstr ""
-#. TRANSLATORS: def IO.ANSI.format_fragment(chardata, emit \\ enabled?())
-#: lib/io/ansi.ex:177 
+#. TRANSLATORS: def IO.ANSI.format_fragment(chardata, emit \\ enabled?)
+#: lib/io/ansi.ex:161 
 msgid ""
 "Formats a chardata-like argument by converting named ANSI sequences into actual\n"
 "ANSI codes.\n"
@@ -128,175 +203,100 @@ msgid ""
 "\n"
 msgstr ""
 #. TRANSLATORS: def IO.ANSI.reverse()
-#: lib/io/ansi.ex:69 
+#: lib/io/ansi.ex:68 
 msgid ""
 "Image: Negative. Swap foreground and background"
 msgstr ""
 #. TRANSLATORS: def IO.ANSI.overlined()
-#: lib/io/ansi.ex:120 
+#: lib/io/ansi.ex:119 
 msgid ""
 "Overlined"
 msgstr ""
 #. TRANSLATORS: def IO.ANSI.not_overlined()
-#: lib/io/ansi.ex:126 
+#: lib/io/ansi.ex:125 
 msgid ""
 "Not overlined"
 msgstr ""
 #. TRANSLATORS: def IO.ANSI.not_italic()
-#: lib/io/ansi.ex:89 
+#: lib/io/ansi.ex:88 
 msgid ""
 "Not italic"
 msgstr ""
 #. TRANSLATORS: def IO.ANSI.not_framed_encircled()
-#: lib/io/ansi.ex:123 
+#: lib/io/ansi.ex:122 
 msgid ""
 "Not framed or encircled"
 msgstr ""
-#. TRANSLATORS: def IO.ANSI.encircled()
-#: lib/io/ansi.ex:117 
-msgid ""
-"Encircled"
-msgstr ""
 #. TRANSLATORS: Elixir.IO.ANSI Summary
-#: lib/io/ansi.ex:17 
+#: lib/io/ansi.ex:18 
 msgid ""
 "Functionality to render ANSI escape sequences\n"
-"(http://en.wikipedia.org/wiki/ANSI_escape_code) —  characters embedded\n"
+"(https://en.wikipedia.org/wiki/ANSI_escape_code) —  characters embedded\n"
 "in text used to control formatting, color, and other output options\n"
 "on video text terminals.\n"
 msgstr ""
 #. TRANSLATORS: def IO.ANSI.framed()
-#: lib/io/ansi.ex:114 
+#: lib/io/ansi.ex:113 
 msgid ""
 "Framed"
 msgstr ""
+#. TRANSLATORS: def IO.ANSI.encircled()
+#: lib/io/ansi.ex:116 
+msgid ""
+"Encircled"
+msgstr ""
+#. TRANSLATORS: def IO.ANSI.default_color()
+#: lib/io/ansi.ex:107 
+msgid ""
+"Default text color"
+msgstr ""
+#. TRANSLATORS: def IO.ANSI.default_background()
+#: lib/io/ansi.ex:110 
+msgid ""
+"Default background color"
+msgstr ""
 #. TRANSLATORS: def IO.ANSI.crossed_out()
-#: lib/io/ansi.ex:75 
+#: lib/io/ansi.ex:74 
 msgid ""
 "Crossed-out. Characters legible, but marked for deletion. Not widely supported."
 msgstr ""
 #. TRANSLATORS: def IO.ANSI.conceal()
-#: lib/io/ansi.ex:72 
+#: lib/io/ansi.ex:71 
 msgid ""
 "Conceal. Not widely supported"
 msgstr ""
 #. TRANSLATORS: def IO.ANSI.clear()
-#: lib/io/ansi.ex:132 
+#: lib/io/ansi.ex:131 
 msgid ""
 "Clear screen"
 msgstr ""
+#. TRANSLATORS: def IO.ANSI.bright()
+#: lib/io/ansi.ex:47 
+msgid ""
+"Bright (increased intensity) or Bold"
+msgstr ""
+#. TRANSLATORS: def IO.ANSI.blink_off()
+#: lib/io/ansi.ex:94 
+msgid ""
+"Blink: off"
+msgstr ""
+#. TRANSLATORS: def IO.ANSI.blink_slow()
+#: lib/io/ansi.ex:59 
+msgid ""
+"Blink: Slow. Less than 150 per minute"
+msgstr ""
+#. TRANSLATORS: def IO.ANSI.blink_rapid()
+#: lib/io/ansi.ex:62 
+msgid ""
+"Blink: Rapid. MS-DOS ANSI.SYS; 150 per minute or more; not widely supported"
+msgstr ""
 #. TRANSLATORS: def IO.ANSI.enabled?()
-#: lib/io/ansi.ex:40 
+#: lib/io/ansi.ex:31 
 msgid ""
 "Checks if ANSI coloring is supported and enabled on this machine.\n"
 "\n"
 "This function simply reads the configuration value for\n"
 "`:ansi_enabled` in the `:elixir` application. The value is by\n"
-"default false unless Elixir can detect during startup that\n"
+"default `false` unless Elixir can detect during startup that\n"
 "both `stdout` and `stderr` are terminals.\n"
-msgstr ""
-#. TRANSLATORS: def IO.ANSI.bright()
-#: lib/io/ansi.ex:48 
-msgid ""
-"Bright (increased intensity) or Bold"
-msgstr ""
-#. TRANSLATORS: def IO.ANSI.blink_off()
-#: lib/io/ansi.ex:95 
-msgid ""
-"Blink: off"
-msgstr ""
-#. TRANSLATORS: def IO.ANSI.blink_slow()
-#: lib/io/ansi.ex:60 
-msgid ""
-"Blink: Slow. Less than 150 per minute"
-msgstr ""
-#. TRANSLATORS: def IO.ANSI.blink_rapid()
-#: lib/io/ansi.ex:63 
-msgid ""
-"Blink: Rapid. MS-DOS ANSI.SYS; 150 per minute or more; not widely supported"
-msgstr ""
-#. TRANSLATORS: def IO.ANSI.yellow_background()
-#: lib/io/ansi.ex:104 
-msgid ""
-"Sets background color to yellow"
-msgstr ""
-#. TRANSLATORS: def IO.ANSI.white_background()
-#: lib/io/ansi.ex:104 
-msgid ""
-"Sets background color to white"
-msgstr ""
-#. TRANSLATORS: def IO.ANSI.red_background()
-#: lib/io/ansi.ex:104 
-msgid ""
-"Sets background color to red"
-msgstr ""
-#. TRANSLATORS: def IO.ANSI.magenta_background()
-#: lib/io/ansi.ex:104 
-msgid ""
-"Sets background color to magenta"
-msgstr ""
-#. TRANSLATORS: def IO.ANSI.green_background()
-#: lib/io/ansi.ex:104 
-msgid ""
-"Sets background color to green"
-msgstr ""
-#. TRANSLATORS: def IO.ANSI.cyan_background()
-#: lib/io/ansi.ex:104 
-msgid ""
-"Sets background color to cyan"
-msgstr ""
-#. TRANSLATORS: def IO.ANSI.blue_background()
-#: lib/io/ansi.ex:104 
-msgid ""
-"Sets background color to blue"
-msgstr ""
-#. TRANSLATORS: def IO.ANSI.black_background()
-#: lib/io/ansi.ex:104 
-msgid ""
-"Sets background color to black"
-msgstr ""
-#. TRANSLATORS: def IO.ANSI.font_9()
-#: lib/io/ansi.ex:82 
-msgid ""
-"Sets alternative font 9"
-msgstr ""
-#. TRANSLATORS: def IO.ANSI.font_8()
-#: lib/io/ansi.ex:82 
-msgid ""
-"Sets alternative font 8"
-msgstr ""
-#. TRANSLATORS: def IO.ANSI.font_7()
-#: lib/io/ansi.ex:82 
-msgid ""
-"Sets alternative font 7"
-msgstr ""
-#. TRANSLATORS: def IO.ANSI.font_6()
-#: lib/io/ansi.ex:82 
-msgid ""
-"Sets alternative font 6"
-msgstr ""
-#. TRANSLATORS: def IO.ANSI.font_5()
-#: lib/io/ansi.ex:82 
-msgid ""
-"Sets alternative font 5"
-msgstr ""
-#. TRANSLATORS: def IO.ANSI.font_4()
-#: lib/io/ansi.ex:82 
-msgid ""
-"Sets alternative font 4"
-msgstr ""
-#. TRANSLATORS: def IO.ANSI.font_3()
-#: lib/io/ansi.ex:82 
-msgid ""
-"Sets alternative font 3"
-msgstr ""
-#. TRANSLATORS: def IO.ANSI.font_2()
-#: lib/io/ansi.ex:82 
-msgid ""
-"Sets alternative font 2"
-msgstr ""
-#. TRANSLATORS: def IO.ANSI.font_1()
-#: lib/io/ansi.ex:82 
-msgid ""
-"Sets alternative font 1"
 msgstr ""

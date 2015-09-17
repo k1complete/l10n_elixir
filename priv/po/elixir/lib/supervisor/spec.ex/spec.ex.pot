@@ -34,7 +34,7 @@ msgid ""
 "Supported id values"
 msgstr ""
 #. TRANSLATORS: def Supervisor.Spec.supervise(children, options)
-#: lib/supervisor/spec.ex:160 
+#: lib/supervisor/spec.ex:130 
 msgid ""
 "Receives a list of children (workers or supervisors) to\n"
 "supervise and a set of options.\n"
@@ -63,7 +63,7 @@ msgid ""
 "a complete description of the available strategies.\n"
 msgstr ""
 #. TRANSLATORS: def Supervisor.Spec.worker(module, args, options \\ [])
-#: lib/supervisor/spec.ex:206 
+#: lib/supervisor/spec.ex:186 
 msgid ""
 "Defines the given `module` as a worker which will be started\n"
 "with the given arguments.\n"
@@ -83,7 +83,7 @@ msgid ""
 "the options.\n"
 msgstr ""
 #. TRANSLATORS: def Supervisor.Spec.supervisor(module, args, options \\ [])
-#: lib/supervisor/spec.ex:230 
+#: lib/supervisor/spec.ex:210 
 msgid ""
 "Defines the given `module` as a supervisor which will be started\n"
 "with the given arguments.\n"
@@ -103,7 +103,7 @@ msgid ""
 "the options.\n"
 msgstr ""
 #. TRANSLATORS: Elixir.Supervisor.Spec Summary
-#: lib/supervisor/spec.ex:1 
+#: lib/supervisor/spec.ex:2 
 msgid ""
 "Convenience functions for defining a supervision specification.\n"
 "\n"

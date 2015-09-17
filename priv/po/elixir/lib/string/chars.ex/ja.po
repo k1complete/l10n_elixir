@@ -11,7 +11,7 @@ msgstr ""
 "Plural-Forms: nplurals=1; plural=0;\n"
 
 #. TRANSLATORS: Elixir.String.Chars Summary
-#: lib/string/chars.ex:3
+#: lib/string/chars.ex:4
 msgid ""
 "The String.Chars protocol is responsible for\n"
 "converting a structure to a Binary (only if applicable).\n"

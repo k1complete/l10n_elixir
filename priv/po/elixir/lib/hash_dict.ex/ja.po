@@ -11,12 +11,12 @@ msgstr ""
 "Plural-Forms: nplurals=1; plural=0;\n"
 
 #. TRANSLATORS: def HashDict.new()
-#: lib/hash_dict.ex:36
+#: lib/hash_dict.ex:32
 msgid "Creates a new empty dict.\n"
 msgstr "新しい、空のdictを作成します。\n"
 
 #. TRANSLATORS: Elixir.HashDict Summary
-#: lib/hash_dict.ex:1
+#: lib/hash_dict.ex:2
 msgid ""
 "A key-value store.\n"
 "\n"

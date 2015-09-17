@@ -1,11 +1,9 @@
 #. TRANSLATORS: Elixir.Bitwise Summary
-#: lib/bitwise.ex:1 
+#: lib/bitwise.ex:2 
 msgid ""
-"This module provides macros and operators for bitwise operators.\n"
-"These macros can be used in guards.\n"
-"\n"
-"The easiest way to use is to simply import them into\n"
-"your module:\n"
+"This module provides macro-based operators that perform calculations\n"
+"on (sets of) bits. In general, you should `use` the Bitwise module\n"
+"as a whole:\n"
 "\n"
 "    iex> use Bitwise\n"
 "    iex> bnot 1\n"
@@ -13,80 +11,157 @@ msgid ""
 "    iex> 1 &&& 1\n"
 "    1\n"
 "\n"
-"You can select to include only or skip operators by passing options:\n"
+"When used, it accepts the following options:\n"
+"\n"
+"  * `:only_operators` - include only operators\n"
+"  * `:skip_operators` - skip operators\n"
 "\n"
 "    iex> use Bitwise, only_operators: true\n"
 "    iex> 1 &&& 1\n"
 "    1\n"
 "\n"
-msgstr ""
-#. TRANSLATORS: defmacro Bitwise.bxor(left, right)
-#: lib/bitwise.ex:90 
-msgid ""
-"Bitwise xor.\n"
-msgstr ""
-#. TRANSLATORS: defmacro Bitwise.^^^(left, right)
-#: lib/bitwise.ex:97 
-msgid ""
-"Bitwise xor as operator.\n"
-msgstr ""
-#. TRANSLATORS: defmacro Bitwise.bor(left, right)
-#: lib/bitwise.ex:76 
-msgid ""
-"Bitwise or.\n"
-msgstr ""
-#. TRANSLATORS: defmacro Bitwise.|||(left, right)
-#: lib/bitwise.ex:83 
-msgid ""
-"Bitwise or as operator.\n"
-msgstr ""
-#. TRANSLATORS: defmacro Bitwise.bnot(expr)
-#: lib/bitwise.ex:48 
-msgid ""
-"Bitwise not.\n"
+"\n"
+"These macros can be used in guards:\n"
+"\n"
+"    iex> use Bitwise\n"
+"    iex> odd? = fn(int) when band(int, 1) == 1 -> true; (_) -> false end\n"
+"    iex> odd?.(1)\n"
+"    true\n"
+"\n"
 msgstr ""
 #. TRANSLATORS: defmacro Bitwise.~~~(expr)
-#: lib/bitwise.ex:55 
+#: lib/bitwise.ex:60 
 msgid ""
-"Bitwise not as operator.\n"
-msgstr ""
-#. TRANSLATORS: defmacro Bitwise.band(left, right)
-#: lib/bitwise.ex:62 
-msgid ""
-"Bitwise and.\n"
-msgstr ""
-#. TRANSLATORS: defmacro Bitwise.&&&(left, right)
-#: lib/bitwise.ex:69 
-msgid ""
-"Bitwise and as operator.\n"
-msgstr ""
-#. TRANSLATORS: defmacro Bitwise.bsr(left, right)
-#: lib/bitwise.ex:118 
-msgid ""
-"Arithmetic bitshift right.\n"
+"Prefix (unary) operator; calculates the bitwise NOT of its argument.\n"
+"\n"
+"    iex> ~~~2\n"
+"    -3\n"
+"    iex> ~~~2 &&& 3\n"
+"    1\n"
+"\n"
 msgstr ""
 #. TRANSLATORS: defmacro Bitwise.>>>(left, right)
-#: lib/bitwise.ex:125 
+#: lib/bitwise.ex:190 
 msgid ""
-"Arithmetic bitshift right as operator.\n"
-msgstr ""
-#. TRANSLATORS: defmacro Bitwise.bsl(left, right)
-#: lib/bitwise.ex:104 
-msgid ""
-"Arithmetic bitshift left.\n"
+"Infix operator; calculates the result of an arithmetic right bitshift.\n"
+"\n"
+"    iex> 1 >>> 2\n"
+"    0\n"
+"    iex> 1 >>> -2\n"
+"    4\n"
+"    iex> -1 >>> 2\n"
+"    -1\n"
+"    iex> -1 >>> -2\n"
+"    -4\n"
+"\n"
 msgstr ""
 #. TRANSLATORS: defmacro Bitwise.<<<(left, right)
-#: lib/bitwise.ex:111 
+#: lib/bitwise.ex:156 
 msgid ""
-"Arithmetic bitshift left as operator.\n"
-msgstr ""
-#. TRANSLATORS: defmacro Bitwise.__using__(options)
-#: lib/bitwise.ex:31 
-msgid ""
-"Allows a developer to use this module in their programs with\n"
-"the following options:\n"
+"Infix operator; calculates the result of an arithmetic left bitshift.\n"
 "\n"
-"  * `:only_operators` - include only operators\n"
-"  * `:skip_operators` - skip operators\n"
+"    iex> 1 <<< 2\n"
+"    4\n"
+"    iex> 1 <<< -2\n"
+"    0\n"
+"    iex> -1 <<< 2\n"
+"    -4\n"
+"    iex> -1 <<< -2\n"
+"    -1\n"
+"\n"
+msgstr ""
+#. TRANSLATORS: defmacro Bitwise.^^^(left, right)
+#: lib/bitwise.ex:128 
+msgid ""
+"Infix operator; calculates the bitwise XOR of its arguments.\n"
+"\n"
+"    iex> 9 ^^^ 3\n"
+"    10\n"
+"\n"
+msgstr ""
+#. TRANSLATORS: defmacro Bitwise.|||(left, right)
+#: lib/bitwise.ex:106 
+msgid ""
+"Infix operator; calculates the bitwise OR of its arguments.\n"
+"\n"
+"    iex> 9 ||| 3\n"
+"    11\n"
+"\n"
+msgstr ""
+#. TRANSLATORS: defmacro Bitwise.&&&(left, right)
+#: lib/bitwise.ex:84 
+msgid ""
+"Infix operator; calculates the bitwise AND of its arguments.\n"
+"\n"
+"    iex> 9 &&& 3\n"
+"    1\n"
+"\n"
+msgstr ""
+#. TRANSLATORS: defmacro Bitwise.bsr(left, right)
+#: lib/bitwise.ex:173 
+msgid ""
+"Calculates the result of an arithmetic right bitshift.\n"
+"\n"
+"    iex> bsr(1, 2)\n"
+"    0\n"
+"    iex> bsr(1, -2)\n"
+"    4\n"
+"    iex> bsr(-1, 2)\n"
+"    -1\n"
+"    iex> bsr(-1, -2)\n"
+"    -4\n"
+"\n"
+msgstr ""
+#. TRANSLATORS: defmacro Bitwise.bsl(left, right)
+#: lib/bitwise.ex:139 
+msgid ""
+"Calculates the result of an arithmetic left bitshift.\n"
+"\n"
+"    iex> bsl(1, 2)\n"
+"    4\n"
+"    iex> bsl(1, -2)\n"
+"    0\n"
+"    iex> bsl(-1, 2)\n"
+"    -4\n"
+"    iex> bsl(-1, -2)\n"
+"    -1\n"
+"\n"
+msgstr ""
+#. TRANSLATORS: defmacro Bitwise.bxor(left, right)
+#: lib/bitwise.ex:117 
+msgid ""
+"Calculates the bitwise XOR of its arguments.\n"
+"\n"
+"    iex> bxor(9, 3)\n"
+"    10\n"
+"\n"
+msgstr ""
+#. TRANSLATORS: defmacro Bitwise.bor(left, right)
+#: lib/bitwise.ex:95 
+msgid ""
+"Calculates the bitwise OR of its arguments.\n"
+"\n"
+"    iex> bor(9, 3)\n"
+"    11\n"
+"\n"
+msgstr ""
+#. TRANSLATORS: defmacro Bitwise.bnot(expr)
+#: lib/bitwise.ex:47 
+msgid ""
+"Calculates the bitwise NOT of its argument.\n"
+"\n"
+"    iex> bnot(2)\n"
+"    -3\n"
+"    iex> bnot(2) &&& 3\n"
+"    1\n"
+"\n"
+msgstr ""
+#. TRANSLATORS: defmacro Bitwise.band(left, right)
+#: lib/bitwise.ex:73 
+msgid ""
+"Calculates the bitwise AND of its arguments.\n"
+"\n"
+"    iex> band(9, 3)\n"
+"    1\n"
 "\n"
 msgstr ""

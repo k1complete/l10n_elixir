@@ -1,0 +1,10 @@
+#. TRANSLATORS: def Kernel.Def.struct(module, fields)
+#: lib/kernel/def.ex:26 
+msgid ""
+"Callback invoked at compile time for `defstruct`.\n"
+msgstr ""
+#. TRANSLATORS: def Kernel.Def.delegate(fun, opts)
+#: lib/kernel/def.ex:4 
+msgid ""
+"Callback invoked at compile time for `defdelegate`.\n"
+msgstr ""

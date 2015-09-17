@@ -1,5 +1,5 @@
 #. TRANSLATORS: def IO.ANSI.Docs.default_options()
-#: lib/io/ansi/docs.ex:24 
+#: lib/io/ansi/docs.ex:6 
 msgid ""
 "The default options used by this module.\n"
 "\n"
@@ -19,14 +19,14 @@ msgid ""
 "comma-separated ANSI values.\n"
 msgstr ""
 #. TRANSLATORS: def IO.ANSI.Docs.print_heading(heading, options \\ [])
-#: lib/io/ansi/docs.ex:41 
+#: lib/io/ansi/docs.ex:36 
 msgid ""
 "Prints the head of the documentation (i.e. the function signature).\n"
 "\n"
 "See `default_options/0` for docs on the supported options.\n"
 msgstr ""
 #. TRANSLATORS: def IO.ANSI.Docs.print(doc, options \\ [])
-#: lib/io/ansi/docs.ex:57 
+#: lib/io/ansi/docs.ex:51 
 msgid ""
 "Prints the documentation body.\n"
 "\n"

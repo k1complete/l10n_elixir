@@ -1,5 +1,5 @@
 #. TRANSLATORS: Elixir.GenEvent.Stream Summary
-#: lib/gen_event/stream.ex:1 
+#: lib/gen_event/stream.ex:2 
 msgid ""
 "Defines a `GenEvent` stream.\n"
 "\n"
@@ -7,6 +7,6 @@ msgid ""
 "contains the following fields:\n"
 "\n"
 "  * `:manager`  - the manager reference given to `GenEvent.stream/2`\n"
-"  * `:timeout`  - the timeout in between events, defaults to `:infinity`\n"
+"  * `:timeout`  - the timeout between events, defaults to `:infinity`\n"
 "\n"
 msgstr ""

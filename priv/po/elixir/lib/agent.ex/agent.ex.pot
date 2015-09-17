@@ -1,23 +1,3 @@
-#. TRANSLATORS: def Agent.update(agent, fun, timeout \\ 5000)
-#: lib/agent.ex:248 
-msgid ""
-"Updates the agent state.\n"
-"\n"
-"The function `fun` is sent to the `agent` which invokes the function\n"
-"passing the agent state. The function must return the new state.\n"
-"\n"
-"A timeout can also be specified (it has a default value of 5000).\n"
-"This function always returns `:ok`.\n"
-msgstr ""
-#. TRANSLATORS: def Agent.update(agent, module, fun, args, timeout \\ 5000)
-#: lib/agent.ex:260 
-msgid ""
-"Updates the agent state.\n"
-"\n"
-"Same as `update/3` but a module, function and args are expected\n"
-"instead of an anonymous function. The state is added as first\n"
-"argument to the given list of args.\n"
-msgstr ""
 #. TRANSLATORS: @type state
 #: lib/agent.ex:0 
 msgid ""
@@ -33,8 +13,28 @@ msgstr ""
 msgid ""
 "The agent name"
 msgstr ""
+#. TRANSLATORS: def Agent.update(agent, fun, timeout \\ 5000)
+#: lib/agent.ex:245 
+msgid ""
+"Updates the agent state.\n"
+"\n"
+"The function `fun` is sent to the `agent` which invokes the function\n"
+"passing the agent state. The function must return the new state.\n"
+"\n"
+"A timeout can also be specified (it has a default value of 5000).\n"
+"This function always returns `:ok`.\n"
+msgstr ""
+#. TRANSLATORS: def Agent.update(agent, module, fun, args, timeout \\ 5000)
+#: lib/agent.ex:259 
+msgid ""
+"Updates the agent state.\n"
+"\n"
+"Same as `update/3` but a module, function and args are expected\n"
+"instead of an anonymous function. The state is added as first\n"
+"argument to the given list of args.\n"
+msgstr ""
 #. TRANSLATORS: def Agent.stop(agent, timeout \\ 5000)
-#: lib/agent.ex:296 
+#: lib/agent.ex:297 
 msgid ""
 "Stops the agent.\n"
 "\n"
@@ -49,14 +49,14 @@ msgid ""
 "instead of an anonymous function.\n"
 msgstr ""
 #. TRANSLATORS: def Agent.start(fun, options \\ [])
-#: lib/agent.ex:170 
+#: lib/agent.ex:171 
 msgid ""
 "Starts an agent process without links (outside of a supervision tree).\n"
 "\n"
 "See `start_link/2` for more information.\n"
 msgstr ""
 #. TRANSLATORS: def Agent.start_link(module, fun, args, options \\ [])
-#: lib/agent.ex:160 
+#: lib/agent.ex:159 
 msgid ""
 "Starts an agent linked to the current process with the given module\n"
 "function and arguments.\n"
@@ -65,7 +65,7 @@ msgid ""
 "instead of an anonymous function.\n"
 msgstr ""
 #. TRANSLATORS: def Agent.start_link(fun, options \\ [])
-#: lib/agent.ex:148 
+#: lib/agent.ex:120 
 msgid ""
 "Starts an agent linked to the current process with the given function.\n"
 "\n"
@@ -93,15 +93,15 @@ msgid ""
 "## Return values\n"
 "\n"
 "If the server is successfully created and initialized, the function returns\n"
-"`{:ok, pid}`, where `pid` is the pid of the server. If there already exists\n"
-"an agent with the specified name, the function returns\n"
+"`{:ok, pid}`, where `pid` is the pid of the server. If an agent with the\n"
+"specified name already exists, the function returns\n"
 "`{:error, {:already_started, pid}}` with the pid of that process.\n"
 "\n"
 "If the given function callback fails with `reason`, the function returns\n"
 "`{:error, reason}`.\n"
 msgstr ""
 #. TRANSLATORS: def Agent.cast(agent, fun)
-#: lib/agent.ex:274 
+#: lib/agent.ex:271 
 msgid ""
 "Performs a cast (fire and forget) operation on the agent state.\n"
 "\n"
@@ -112,7 +112,7 @@ msgid ""
 "destination node or agent exists.\n"
 msgstr ""
 #. TRANSLATORS: def Agent.cast(agent, module, fun, args)
-#: lib/agent.ex:286 
+#: lib/agent.ex:285 
 msgid ""
 "Performs a cast (fire and forget) operation on the agent state.\n"
 "\n"
@@ -121,7 +121,7 @@ msgid ""
 "argument to the given list of args.\n"
 msgstr ""
 #. TRANSLATORS: def Agent.get_and_update(agent, fun, timeout \\ 5000)
-#: lib/agent.ex:222 
+#: lib/agent.ex:218 
 msgid ""
 "Gets and updates the agent state in one operation.\n"
 "\n"
@@ -133,7 +133,7 @@ msgid ""
 "A timeout can also be specified (it has a default value of 5000).\n"
 msgstr ""
 #. TRANSLATORS: def Agent.get_and_update(agent, module, fun, args, timeout \\ 5000)
-#: lib/agent.ex:234 
+#: lib/agent.ex:233 
 msgid ""
 "Gets and updates the agent state in one operation.\n"
 "\n"
@@ -142,7 +142,7 @@ msgid ""
 "argument to the given list of args.\n"
 msgstr ""
 #. TRANSLATORS: def Agent.get(agent, fun, timeout \\ 5000)
-#: lib/agent.ex:195 
+#: lib/agent.ex:192 
 msgid ""
 "Gets an agent value via the given function.\n"
 "\n"
@@ -153,7 +153,7 @@ msgid ""
 "A timeout can also be specified (it has a default value of 5000).\n"
 msgstr ""
 #. TRANSLATORS: def Agent.get(agent, module, fun, args, timeout \\ 5000)
-#: lib/agent.ex:207 
+#: lib/agent.ex:206 
 msgid ""
 "Gets an agent value via the given function.\n"
 "\n"
@@ -162,7 +162,7 @@ msgid ""
 "argument to the given list of args.\n"
 msgstr ""
 #. TRANSLATORS: Elixir.Agent Summary
-#: lib/agent.ex:1 
+#: lib/agent.ex:2 
 msgid ""
 "Agents are a simple abstraction around state.\n"
 "\n"
@@ -197,6 +197,13 @@ msgid ""
 "        item = {task, project}\n"
 "        Agent.update(__MODULE__, &Set.put(&1, item))\n"
 "      end\n"
+"\n"
+"      @doc \"Reset the executed tasks and return the previous list of tasks\"\n"
+"      def take_all() do\n"
+"        Agent.get_and_update(__MODULE__, fn set ->\n"
+"          {Enum.into(set, []), HashSet.new}\n"
+"        end)\n"
+"      end\n"
 "    end\n"
 "\n"
 "Note that agents still provide a segregation between the\n"
@@ -218,11 +225,11 @@ msgid ""
 "      Agent.get(agent, &(&1)) |> do_something_expensive()\n"
 "    end\n"
 "\n"
-"The first one blocks the agent while the second one copies\n"
-"all the state to the client and executes the operation in the client.\n"
-"The trade-off here is exactly if the data is small enough to be\n"
-"sent to the client cheaply or large enough to require processing on\n"
-"the server (or at least some initial processing).\n"
+"The first function blocks the agent. The second function copies\n"
+"all the state to the client and then executes the operation in the\n"
+"client. The difference is whether the data is large enough to require\n"
+"processing in the server, at least initially, or small enough to be\n"
+"sent to the client cheaply.\n"
 "\n"
 "## Name Registration\n"
 "\n"
@@ -232,8 +239,8 @@ msgid ""
 "## A word on distributed agents\n"
 "\n"
 "It is important to consider the limitations of distributed agents. Agents\n"
-"provides two APIs, one that works with anonymous functions and another\n"
-"that expects explicit module, function and arguments.\n"
+"provide two APIs, one that works with anonymous functions and another\n"
+"that expects an explicit module, function, and arguments.\n"
 "\n"
 "In a distributed setup with multiple nodes, the API that accepts anonymous\n"
 "functions only works if the caller (client) and the agent have the same\n"
@@ -246,13 +253,13 @@ msgid ""
 "In this setup, part of your environment will have one version of a given\n"
 "module and the other part another version (the newer one) of the same module.\n"
 "\n"
-"The best solution is to simply use the explicit module, function and arguments\n"
+"The best solution is to simply use the explicit module, function, and arguments\n"
 "APIs when working with distributed agents.\n"
 "\n"
 "## Hot code swapping\n"
 "\n"
 "An agent can have its code hot swapped live by simply passing a module,\n"
-"function and args tuple to the update instruction. For example, imagine\n"
+"function, and args tuple to the update instruction. For example, imagine\n"
 "you have an agent named `:sample` and you want to convert its inner state\n"
 "from some dict structure to a map. It can be done with the following\n"
 "instruction:\n"

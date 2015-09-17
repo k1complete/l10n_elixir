@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: l 10n_elixir\n"
-"PO-Revision-Date: 2015-05-20 21:54+0900\n"
+"PO-Revision-Date: 2015-09-16 22:23+0900\n"
 "Last-Translator: 小田 照敬 <EMAIL@ADDRESS>\n"
 "Language-Team: Japanese\n"
 "Language: ja\n"
@@ -10,13 +10,31 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
+#. TRANSLATORS: def Map.update!(dict, key, fun)
+#: lib/map.ex:14
+msgid "Updates the value in the map with the given function.\n"
+msgstr "mapの値を与えられた関数で更新します。\n"
+
 #. TRANSLATORS: def Map.new()
-#: lib/map.ex:23
+#: lib/map.ex:20
 msgid "Returns a new empty map.\n"
 msgstr "新しい空のマップを返します。\n"
 
+#. TRANSLATORS: def Map.get_and_update!(map, key, fun)
+#: lib/map.ex:70
+msgid ""
+"Gets a value and updates a map only if the key exists in one operation.\n"
+msgstr ""
+"一度のオペレーションで存在するkeyの値の取得と\n"
+"更新を行います。\n"
+
+#. TRANSLATORS: def Map.get_and_update(dict, key, fun)
+#: lib/map.ex:14
+msgid "Gets a value and updates a map in one operation.\n"
+msgstr "一度のオペレーションで値の取得と更新を行います。\n"
+
 #. TRANSLATORS: def Map.from_struct(struct)
-#: lib/map.ex:60
+#: lib/map.ex:85
 msgid ""
 "Converts a struct to map.\n"
 "\n"
@@ -55,7 +73,7 @@ msgstr ""
 "\n"
 
 #. TRANSLATORS: Elixir.Map Summary
-#: lib/map.ex:1
+#: lib/map.ex:2
 msgid ""
 "A Dict implementation that works on maps.\n"
 "\n"

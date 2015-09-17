@@ -11,12 +11,12 @@ msgstr ""
 "Plural-Forms: nplurals=1; plural=0;\n"
 
 #. TRANSLATORS: def Kernel.LexicalTracker.remotes(arg)
-#: lib/kernel/lexical_tracker.ex:20
+#: lib/kernel/lexical_tracker.ex:14
 msgid "Returns all remotes linked to in this lexical scope.\n"
 msgstr "このレキシカルスコープの中につながる全てのリモートを返します。\n"
 
 #. TRANSLATORS: def Kernel.LexicalTracker.dest(arg)
-#: lib/kernel/lexical_tracker.ex:29
+#: lib/kernel/lexical_tracker.ex:30
 msgid ""
 "Gets the destination the lexical scope is meant to\n"
 "compile to.\n"

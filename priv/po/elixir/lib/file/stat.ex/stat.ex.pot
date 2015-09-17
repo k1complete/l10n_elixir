@@ -1,21 +1,21 @@
 #. TRANSLATORS: def File.Stat.to_record(stat)
-#: lib/file/stat.ex:65 
+#: lib/file/stat.ex:62 
 msgid ""
 "Converts a `File.Stat` struct to a `:file_info` record.\n"
 msgstr ""
-#. TRANSLATORS: def File.Stat.from_record(arg1)
-#: lib/file/stat.ex:72 
+#. TRANSLATORS: def File.Stat.from_record(file_info)
+#: lib/file/stat.ex:69 
 msgid ""
 "Converts a `:file_info` record into a `File.Stat`.\n"
 msgstr ""
 #. TRANSLATORS: Elixir.File.Stat Summary
-#: lib/file/stat.ex:3 
+#: lib/file/stat.ex:4 
 msgid ""
 "A struct responsible to hold file information.\n"
 "\n"
 "In Erlang, this struct is represented by a `:file_info` record.\n"
 "Therefore this module also provides functions for converting\n"
-"in between the Erlang record and the Elixir struct.\n"
+"between the Erlang record and the Elixir struct.\n"
 "\n"
 "Its fields are:\n"
 "\n"

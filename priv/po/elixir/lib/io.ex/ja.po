@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: l 10n_elixir\n"
-"PO-Revision-Date: 2015-05-20 21:54+0900\n"
+"PO-Revision-Date: 2015-09-16 11:13+0900\n"
 "Last-Translator: 小田 照敬 <EMAIL@ADDRESS>\n"
 "Language-Team: Japanese\n"
 "Language: ja\n"
@@ -10,8 +10,8 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
-#. TRANSLATORS: def IO.write(device \\ :erlang.group_leader(), item)
-#: lib/io.ex:150
+#. TRANSLATORS: def IO.write(device \\ group_leader(), item)
+#: lib/io.ex:134
 msgid ""
 "Writes the given argument to the given device.\n"
 "\n"
@@ -41,8 +41,8 @@ msgstr ""
 "    #=> \"error\"\n"
 "\n"
 
-#. TRANSLATORS: def IO.binwrite(device \\ :erlang.group_leader(), item)
-#: lib/io.ex:164
+#. TRANSLATORS: def IO.binwrite(device \\ group_leader(), item)
+#: lib/io.ex:154
 msgid ""
 "Writes the given argument to the given device\n"
 "as a binary, no unicode conversion happens.\n"
@@ -60,8 +60,8 @@ msgstr ""
 "Note: 間違った結果を返すのでunicodeモードのデバイスで\n"
 "この関数を使ってはいけません。\n"
 
-#. TRANSLATORS: def IO.puts(device \\ :erlang.group_leader(), item)
-#: lib/io.ex:174
+#. TRANSLATORS: def IO.puts(device \\ group_leader(), item)
+#: lib/io.ex:168
 msgid ""
 "Writes the argument to the device, similar to `write/2`,\n"
 "but adds a newline at the end. The argument is expected\n"
@@ -70,13 +70,36 @@ msgstr ""
 "`write/2`と似て、引数をデバイスへ書き出しますが、最後に改行を付加します。\n"
 "引数はchardataであることを期待しています。\n"
 
-#. TRANSLATORS: def IO.gets(device \\ :erlang.group_leader(), prompt)
-#: lib/io.ex:258
+#. TRANSLATORS: def IO.iodata_length(item)
+#: lib/io.ex:381
+msgid ""
+"Returns the size of an iodata.\n"
+"\n"
+"Inlined by the compiler.\n"
+"\n"
+"## Examples\n"
+"\n"
+"    iex> IO.iodata_length([1, 2|<<3, 4>>])\n"
+"    4\n"
+"\n"
+msgstr ""
+"iodataのサイズを返します。\n"
+"\n"
+"コンパイラによりインライン化されます。\n"
+"\n"
+"## 例\n"
+"\n"
+"    iex> IO.iodata_length([1, 2|<<3, 4>>])\n"
+"    4\n"
+"\n"
+
+#. TRANSLATORS: def IO.gets(device \\ group_leader(), prompt)
+#: lib/io.ex:249
 msgid ""
 "Reads a line from the IO device. It returns:\n"
 "\n"
 "  * `data` - the characters in the line terminated\n"
-"    by a LF (or end of file)\n"
+"    by a line-feed (LF) or end of file (EOF)\n"
 "\n"
 "  * `:eof` - end of file was encountered\n"
 "\n"
@@ -86,7 +109,7 @@ msgid ""
 msgstr ""
 "IOデバイスから行を読みます。以下を返します:\n"
 "\n"
-"  * `data` - LF(あるいはend of file)で終了された行の文字列\n"
+"  * `data` - line-feed(LF)あるいはend of file(EOF)で終了された行の文字列\n"
 "\n"
 "  * `:eof` - end of fileに到達したことを示します\n"
 "\n"
@@ -94,8 +117,8 @@ msgstr ""
 "    例えば、`{:error, :estale}`はNFSボリュームから読み込んだ時に\n"
 "    起きるかもしれません。\n"
 
-#. TRANSLATORS: def IO.binread(device \\ :erlang.group_leader(), chars_or_line)
-#: lib/io.ex:106
+#. TRANSLATORS: def IO.binread(device \\ group_leader, chars_or_line)
+#: lib/io.ex:84
 msgid ""
 "Reads `count` characters from the IO device, a whole\n"
 "`:line` or the whole device with `:all`.\n"
@@ -135,8 +158,8 @@ msgstr ""
 "注: unicodeモードのIOデバイスにこの関数を使ってはいけません。\n"
 "悪い結果を返すでしょう。\n"
 
-#. TRANSLATORS: def IO.read(device \\ :erlang.group_leader(), chars_or_line)
-#: lib/io.ex:63
+#. TRANSLATORS: def IO.read(device \\ group_leader, chars_or_line)
+#: lib/io.ex:44
 msgid ""
 "Reads `count` characters from the IO device, a whole\n"
 "`:line` or the whole device with `:all`.\n"
@@ -170,42 +193,27 @@ msgstr ""
 "もし`:all`が与えられたら、`:eof`は決して返しません。しかし\n"
 "デバイスがEOFになったら空文字列を返します。\n"
 
-#. TRANSLATORS: def IO.iodata_length(item)
-#: lib/io.ex:389
-msgid ""
-"Returns the size of an iodata.\n"
-"\n"
-"Inlined by the compiler.\n"
-"\n"
-"## Examples\n"
-"\n"
-"    iex> IO.iodata_length([1, 2|<<3, 4>>])\n"
-"    4\n"
-"\n"
-msgstr ""
-"iodataのサイズを返します。\n"
-"\n"
-"コンパイラによりインライン化されます。\n"
-"\n"
-"## 例\n"
-"\n"
-"    iex> IO.iodata_length([1, 2|<<3, 4>>])\n"
-"    4\n"
-"\n"
-
 #. TRANSLATORS: def IO.inspect(device, item, opts)
-#: lib/io.ex:200
-msgid "Inspects the item with options using the given device.\n"
-msgstr "与えられたデバイスを使い、オプションでアイテムをインスペクトします。\n"
+#: lib/io.ex:198
+msgid ""
+"Inspects the item with options using the given device.\n"
+"\n"
+"See `Inspect.Opts` for a full list of options.\n"
+msgstr ""
+"与えられたデバイスを使い、オプションでアイテムをインスペクトします。\n"
+"\n"
+"完全なオプションのリストは`Inspect.Opts`を参照してください。\n"
 
 #. TRANSLATORS: def IO.inspect(item, opts \\ [])
-#: lib/io.ex:192
+#: lib/io.ex:179
 msgid ""
 "Inspects and writes the given argument to the device.\n"
 "\n"
 "It enables pretty printing by default with width of\n"
 "80 characters. The width can be changed by explicitly\n"
 "passing the `:width` option.\n"
+"\n"
+"See `Inspect.Opts` for a full list of options.\n"
 "\n"
 "## Examples\n"
 "\n"
@@ -217,13 +225,15 @@ msgstr ""
 "デフォルトで、80文字の幅での、プリティプリンティングを有効にします。\n"
 "幅は明示的に`:width`オプションを渡すことで変更できます。\n"
 "\n"
+"完全なオプションのリストは`Inspect.Opts`を参照してください。\n"
+"\n"
 "## 例\n"
 "\n"
 "    IO.inspect Process.list, width: 40\n"
 "\n"
 
 #. TRANSLATORS: def IO.getn(prompt, count \\ 1)
-#: lib/io.ex:224
+#: lib/io.ex:211
 msgid ""
 "Gets a number of bytes from the io device. If the\n"
 "io device is a unicode device, `count` implies\n"
@@ -254,7 +264,7 @@ msgstr ""
 "    読み込んでいるときに起きるかもしれません\n"
 
 #. TRANSLATORS: def IO.getn(device, prompt, count)
-#: lib/io.ex:241
+#: lib/io.ex:238
 msgid ""
 "Gets a number of bytes from the io device. If the\n"
 "io device is a unicode device, `count` implies\n"
@@ -267,7 +277,7 @@ msgstr ""
 "さもなくば、`count`は取得される生のバイトの数です。\n"
 
 #. TRANSLATORS: Elixir.IO Summary
-#: lib/io.ex:1
+#: lib/io.ex:2
 msgid ""
 "Functions handling IO.\n"
 "\n"
@@ -287,15 +297,14 @@ msgid ""
 "## IO devices\n"
 "\n"
 "An IO device may be an atom or a pid. In case it is an atom,\n"
-"the atom must be the name of a registered process. However,\n"
-"there are three exceptions for this rule:\n"
+"the atom must be the name of a registered process. In addition,\n"
+"Elixir provides two shorcuts:\n"
 "\n"
-"  * `:standard_io` - when the `:standard_io` atom is given,\n"
-"    it is treated as a shortcut for `Process.group_leader`\n"
+"  * `:stdio` - a shortcut for `:standard_io`, which maps to\n"
+"    the current `Process.group_leader/0` in Erlang\n"
 "\n"
-"  * `:stdio` - is a shortcut for `:standard_io`\n"
-"\n"
-"  * `:stderr` - is a shortcut for `:standard_error`\n"
+"  * `:stderr` - a shortcut for the named process `:standard_error`\n"
+"    provided in Erlang\n"
 "\n"
 msgstr ""
 "IOをハンドリングする関数です。\n"
@@ -321,15 +330,49 @@ msgstr ""
 "しかしながら、この規則に3つの例外があります:\n"
 "\n"
 "  * `:standard_io` - アトム`:standard_io`が与えらえると、\n"
-"    `Process.group_leader`のショートカットとして扱われます。\n"
+"    のショートカットとして扱われます。\n"
 "\n"
-"  * `:stdio` - `:standard_io`のショートカットです。\n"
+"  * `:stdio` - `:standard_io`のショートカットで、Erlangの\n"
+"     現在の`Process.group_leader`へマップされます。\n"
 "\n"
-"  * `:stderr` - `:standard_error`のショートカットです。\n"
+"  * `:stderr` - Erlangで提供される`:standard_error`という\n"
+"     名前のプロセスへのショートカットです。\n"
 "\n"
 
+#. TRANSLATORS: def IO.binstream(device, line_or_bytes)
+#: lib/io.ex:295
+msgid ""
+"Converts the IO device into a `IO.Stream`.\n"
+"\n"
+"An `IO.Stream` implements both `Enumerable` and\n"
+"`Collectable`, allowing it to be used for both read\n"
+"and write.\n"
+"\n"
+"The device is iterated line by line or by a number of bytes.\n"
+"This reads the IO device as a raw binary.\n"
+"\n"
+"Note that an IO stream has side effects and every time\n"
+"you go over the stream you may get different results.\n"
+"\n"
+"Finally, do not use this function on IO devices in unicode\n"
+"mode as it will return the wrong result.\n"
+msgstr ""
+"IOデバイスをを`IO.Stream`に変換します。\n"
+"\n"
+"`IO.Stream`は、読み書きの両方で使えるように、`Enumerable`と\n"
+"`Collectable`の両方を実装します。\n"
+"\n"
+"deviceは`:line`が与えられたら、行ごとか、バイトごとに繰り返さます。\n"
+"これはrawバイナリとしてIOデバイスを読み込みます。\n"
+"\n"
+"IOストリームは副作用を持つことに注意してください。\n"
+"ストリームを調べるたびに、異る結果を得るでしょう。\n"
+"\n"
+"最後に、unicodeモードのIOデバイスでこの関数を使わないでください。\n"
+"間違った結果を返すかもしれません。\n"
+
 #. TRANSLATORS: def IO.stream(device, line_or_codepoints)
-#: lib/io.ex:287
+#: lib/io.ex:266
 msgid ""
 "Converts the io device into a `IO.Stream`.\n"
 "\n"
@@ -376,40 +419,8 @@ msgstr ""
 "    Enum.each IO.stream(:stdio, :line), &IO.write(&1)\n"
 "\n"
 
-#. TRANSLATORS: def IO.binstream(device, line_or_bytes)
-#: lib/io.ex:308
-msgid ""
-"Converts the IO device into a `IO.Stream`.\n"
-"\n"
-"An `IO.Stream` implements both `Enumerable` and\n"
-"`Collectable`, allowing it to be used for both read\n"
-"and write.\n"
-"\n"
-"The device is iterated line by line or by a number of bytes.\n"
-"This reads the IO device as a raw binary.\n"
-"\n"
-"Note that an IO stream has side effects and every time\n"
-"you go over the stream you may get different results.\n"
-"\n"
-"Finally, do not use this function on IO devices in unicode\n"
-"mode as it will return the wrong result.\n"
-msgstr ""
-"IOデバイスをを`IO.Stream`に変換します。\n"
-"\n"
-"`IO.Stream`は、読み書きの両方で使えるように、`Enumerable`と\n"
-"`Collectable`の両方を実装します。\n"
-"\n"
-"deviceは`:line`が与えられたら、行ごとか、バイトごとに繰り返さます。\n"
-"これはrawバイナリとしてIOデバイスを読み込みます。\n"
-"\n"
-"IOストリームは副作用を持つことに注意してください。\n"
-"ストリームを調べるたびに、異る結果を得るでしょう。\n"
-"\n"
-"最後に、unicodeモードのIOデバイスでこの関数を使わないでください。\n"
-"間違った結果を返すかもしれません。\n"
-
 #. TRANSLATORS: def IO.iodata_to_binary(item)
-#: lib/io.ex:373
+#: lib/io.ex:350
 msgid ""
 "Converts iodata (a list of integers representing bytes, lists\n"
 "and binaries) into a binary.\n"
@@ -429,11 +440,11 @@ msgid ""
 "    iex> bin2 = <<4, 5>>\n"
 "    iex> bin3 = <<6>>\n"
 "    iex> IO.iodata_to_binary([bin1, 1, [2, 3, bin2], 4|bin3])\n"
-"    <<1,2,3,1,2,3,4,5,4,6>>\n"
+"    <<1, 2, 3, 1, 2, 3, 4, 5, 4, 6>>\n"
 "\n"
 "    iex> bin = <<1, 2, 3>>\n"
 "    iex> IO.iodata_to_binary(bin)\n"
-"    <<1,2,3>>\n"
+"    <<1, 2, 3>>\n"
 "\n"
 msgstr ""
 "iodata(バイト表現している整数、リスト、バイナリのリスト)を\n"
@@ -454,15 +465,15 @@ msgstr ""
 "    iex> bin2 = <<4, 5>>\n"
 "    iex> bin3 = <<6>>\n"
 "    iex> IO.iodata_to_binary([bin1, 1, [2, 3, bin2], 4|bin3])\n"
-"    <<1,2,3,1,2,3,4,5,4,6>>\n"
+"    <<1, 2, 3, 1, 2, 3, 4, 5, 4, 6>>\n"
 "\n"
 "    iex> bin = <<1, 2, 3>>\n"
 "    iex> IO.iodata_to_binary(bin)\n"
-"    <<1,2,3>>\n"
+"    <<1, 2, 3>>\n"
 "\n"
 
 #. TRANSLATORS: def IO.chardata_to_string(string)
-#: lib/io.ex:329
+#: lib/io.ex:316
 msgid ""
 "Converts chardata (a list of integers representing codepoints,\n"
 "lists and strings) into a string.\n"

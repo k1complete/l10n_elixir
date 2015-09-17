@@ -1,20 +1,47 @@
 #. TRANSLATORS: def Application.unload(app)
-#: lib/application.ex:279 
+#: lib/application.ex:285 
 msgid ""
 "Unloads the given `app`.\n"
 "\n"
 "It will also unload all `:included_applications`.\n"
 "Note that the function does not purge the application modules.\n"
 msgstr ""
+#. TRANSLATORS: def Application.get_env(app, key, default \\ nil)
+#: lib/application.ex:123 
+msgid ""
+"Returns the value for `key` in `app`'s environment.\n"
+"\n"
+"If the configuration parameter does not exist, the function returns the\n"
+"`default` value.\n"
+msgstr ""
+#. TRANSLATORS: def Application.fetch_env!(app, key)
+#: lib/application.ex:147 
+msgid ""
+"Returns the value for `key` in `app`'s environment.\n"
+"\n"
+"If the configuration parameter does not exist, raises `ArgumentError`.\n"
+msgstr ""
+#. TRANSLATORS: def Application.fetch_env(app, key)
+#: lib/application.ex:134 
+msgid ""
+"Returns the value for `key` in `app`'s environment in a tuple.\n"
+"\n"
+"If the configuration parameter does not exist, the function returns `:error`.\n"
+msgstr ""
+#. TRANSLATORS: def Application.app_dir(app, path)
+#: lib/application.ex:328 
+msgid ""
+"Returns the given path inside `app_dir/1`.\n"
+msgstr ""
 #. TRANSLATORS: def Application.stop(app)
-#: lib/application.ex:254 
+#: lib/application.ex:261 
 msgid ""
 "Stops the given `app`.\n"
 "\n"
 "When stopped, the application is still loaded.\n"
 msgstr ""
 #. TRANSLATORS: def Application.start(app, type \\ :temporary)
-#: lib/application.ex:244 
+#: lib/application.ex:222 
 msgid ""
 "Starts the given `app`.\n"
 "\n"
@@ -49,29 +76,23 @@ msgid ""
 "Note also that the `:transient` type is of little practical use, since when a\n"
 "supervision tree terminates, the reason is set to `:shutdown`, not `:normal`.\n"
 msgstr ""
-#. TRANSLATORS: def Application.get_env(app, key, default \\ nil)
-#: lib/application.ex:129 
+#. TRANSLATORS: def Application.get_all_env(app)
+#: lib/application.ex:115 
 msgid ""
-"Returns the value for `key` in `app`'s environment.\n"
-"\n"
-"If the specified application is not loaded, or the configuration parameter\n"
-"does not exist, the function returns the `default` value.\n"
+"Returns all key-value pairs for `app`.\n"
 msgstr ""
-#. TRANSLATORS: def Application.fetch_env(app, key)
-#: lib/application.ex:143 
+#. TRANSLATORS: def Application.loaded_applications()
+#: lib/application.ex:344 
 msgid ""
-"Returns the value for `key` in `app`'s environment in a tuple.\n"
-"\n"
-"If the specified application is not loaded, or the configuration parameter\n"
-"does not exist, the function returns `:error`.\n"
+"Returns a list with information about the applications which have been loaded.\n"
 msgstr ""
-#. TRANSLATORS: def Application.app_dir(app, path)
-#: lib/application.ex:319 
+#. TRANSLATORS: def Application.started_applications(timeout \\ 5000)
+#: lib/application.ex:336 
 msgid ""
-"Returns the given path inside `app_dir/1`.\n"
+"Returns a list with information about the applications which are currently running.\n"
 msgstr ""
 #. TRANSLATORS: def Application.ensure_started(app, type \\ :temporary)
-#: lib/application.ex:193 
+#: lib/application.ex:195 
 msgid ""
 "Ensures the given `app` is started.\n"
 "\n"
@@ -83,7 +104,7 @@ msgid ""
 "\n"
 msgstr ""
 #. TRANSLATORS: def Application.ensure_all_started(app, type \\ :temporary)
-#: lib/application.ex:205 
+#: lib/application.ex:210 
 msgid ""
 "Ensures the given `app` and its applications are started.\n"
 "\n"
@@ -92,7 +113,7 @@ msgid ""
 "started.\n"
 msgstr ""
 #. TRANSLATORS: def Application.put_env(app, key, value, opts \\ [])
-#: lib/application.ex:168 
+#: lib/application.ex:163 
 msgid ""
 "Puts the `value` in `key` for the given `app`.\n"
 "\n"
@@ -105,13 +126,13 @@ msgid ""
 "environment values specified in the `.app` file will override the ones\n"
 "previously set.\n"
 "\n"
-"The persistent option can be set to true when there is a need to guarantee\n"
+"The persistent option can be set to `true` when there is a need to guarantee\n"
 "parameters set with this function will not be overridden by the ones defined\n"
 "in the application resource file on load. This means persistent values will\n"
 "stick after the application is loaded and also on application reload.\n"
 msgstr ""
 #. TRANSLATORS: def Application.load(app)
-#: lib/application.ex:268 
+#: lib/application.ex:271 
 msgid ""
 "Loads the given `app`.\n"
 "\n"
@@ -122,14 +143,14 @@ msgid ""
 "it does load its environment.\n"
 msgstr ""
 #. TRANSLATORS: def Application.format_error(reason)
-#: lib/application.ex:329 
+#: lib/application.ex:352 
 msgid ""
 "Formats the error reason returned by `start/2`,\n"
 "`ensure_started/2`, `stop/1`, `load/1` and `unload/1`,\n"
 "returns a string.\n"
 msgstr ""
 #. TRANSLATORS: def Application.app_dir(app)
-#: lib/application.ex:308 
+#: lib/application.ex:296 
 msgid ""
 "Gets the directory for app.\n"
 "\n"
@@ -154,48 +175,43 @@ msgid ""
 "For more information on code paths, check the `Code` module in\n"
 "Elixir and also Erlang's `:code` module.\n"
 msgstr ""
-#. TRANSLATORS: def Application.get_all_env(app)
-#: lib/application.ex:118 
-msgid ""
-"Returns all key-value pairs for `app`.\n"
-msgstr ""
 #. TRANSLATORS: def Application.delete_env(app, key, opts \\ [])
-#: lib/application.ex:178 
+#: lib/application.ex:185 
 msgid ""
 "Deletes the `key` from the given `app` environment.\n"
 "\n"
 "See `put_env/4` for a description of the options.\n"
 msgstr ""
 #. TRANSLATORS: Elixir.Application Summary
-#: lib/application.ex:1 
+#: lib/application.ex:2 
 msgid ""
 "A module for working with applications and defining application callbacks.\n"
 "\n"
 "In Elixir (actually, in Erlang/OTP), an application is a component\n"
 "implementing some specific functionality, that can be started and stopped\n"
-"as a unit, and which can be re-used in other systems as well.\n"
+"as a unit, and which can be re-used in other systems.\n"
 "\n"
 "Applications are defined with an application file named `APP.app` where\n"
-"`APP` is the APP name, usually in `underscore_case` convention. The\n"
-"application file must reside in the same `ebin` directory as the\n"
-"application's modules bytecode.\n"
+"`APP` is the application name, usually in `underscore_case`. The application\n"
+"file must reside in the same `ebin` directory as the compiled modules of the\n"
+"application.\n"
 "\n"
 "In Elixir, Mix is responsible for compiling your source code and\n"
 "generating your application `.app` file. Furthermore, Mix is also\n"
 "responsible for configuring, starting and stopping your application\n"
 "and its dependencies. For this reason, this documentation will focus\n"
-"on the remaining aspects of your application: the application environment,\n"
+"on the remaining aspects of your application: the application environment\n"
 "and the application callback module.\n"
 "\n"
-"You can learn more about Mix compilation of `.app` files by typing\n"
+"You can learn more about Mix generation of `.app` files by typing\n"
 "`mix help compile.app`.\n"
 "\n"
 "## Application environment\n"
 "\n"
 "Once an application is started, OTP provides an application environment\n"
-"that can be used to configure applications.\n"
+"that can be used to configure the application.\n"
 "\n"
-"Assuming you are inside a Mix project, you can edit your application\n"
+"Assuming you are inside a Mix project, you can edit the `application`\n"
 "function in the `mix.exs` file to the following:\n"
 "\n"
 "    def application do\n"
@@ -211,14 +227,14 @@ msgid ""
 "\n"
 "It is also possible to put and delete values from the application value,\n"
 "including new values that are not defined in the environment file (although\n"
-"those should be avoided).\n"
+"this should be avoided).\n"
 "\n"
-"In the future, we plan to support configuration files which allows\n"
+"In the future, we plan to support configuration files which allow\n"
 "developers to configure the environment of their dependencies.\n"
 "\n"
 "Keep in mind that each application is responsible for its environment.\n"
-"Do not use the functions in this module for directly access or modify\n"
-"the environment of other application (as it may lead to inconsistent\n"
+"Do not use the functions in this module for directly accessing or modifying\n"
+"the environment of other applications (as it may lead to inconsistent\n"
 "data in the application environment).\n"
 "\n"
 "## Application module callback\n"
@@ -233,8 +249,8 @@ msgid ""
 "    end\n"
 "\n"
 "Our application now requires the `MyApp` module to provide an application\n"
-"callback. This can be done by invoking `use Application` in that module\n"
-"and defining a `start/2` callback, for example:\n"
+"callback. This can be done by invoking `use Application` in that module and\n"
+"defining a `start/2` callback, for example:\n"
 "\n"
 "    defmodule MyApp do\n"
 "      use Application\n"
@@ -244,19 +260,20 @@ msgid ""
 "      end\n"
 "    end\n"
 "\n"
-"`start/2` most commonly returns `{:ok, pid}` or `{:ok, pid, state}` where\n"
-"`pid` identifies the supervision tree and the state is the application state.\n"
-"`args` is second element of the tuple given to the `:mod` option.\n"
+"`start/2` typically returns `{:ok, pid}` or `{:ok, pid, state}` where\n"
+"`pid` identifies the supervision tree and `state` is the application state.\n"
+"`args` is the second element of the tuple given to the `:mod` option.\n"
 "\n"
-"The `type` passed into `start/2` is usually `:normal` unless in a distributed\n"
-"setup where applications takeovers and failovers are configured. This particular\n"
-"aspect of applications can be read with more detail in the OTP documentation:\n"
+"The `type` argument passed to `start/2` is usually `:normal` unless in a\n"
+"distributed setup where application takeovers and failovers are configured.\n"
+"This particular aspect of applications is explained in more detail in the\n"
+"OTP documentation:\n"
 "\n"
 "  * http://www.erlang.org/doc/man/application.html\n"
 "  * http://www.erlang.org/doc/design_principles/applications.html\n"
 "\n"
 "A developer may also implement the `stop/1` callback (automatically defined\n"
 "by `use Application`) which does any application cleanup. It receives the\n"
-"application state and can return any value. Notice that shutting down the\n"
+"application state and can return any value. Note that shutting down the\n"
 "supervisor is automatically handled by the VM.\n"
 msgstr ""

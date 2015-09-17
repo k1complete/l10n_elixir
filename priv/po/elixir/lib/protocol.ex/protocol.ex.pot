@@ -1,5 +1,5 @@
 #. TRANSLATORS: def Protocol.consolidate(protocol, types)
-#: lib/protocol.ex:265 
+#: lib/protocol.ex:237 
 msgid ""
 "Receives a protocol and a list of implementations and\n"
 "consolidates the given protocol.\n"
@@ -16,7 +16,7 @@ msgid ""
 "\n"
 "    Protocol.consolidated?(Enumerable)\n"
 "\n"
-"If the first element of the tuple is true, it means\n"
+"If the first element of the tuple is `true`, it means\n"
 "the protocol was consolidated.\n"
 "\n"
 "This function does not load the protocol at any point\n"
@@ -24,17 +24,8 @@ msgid ""
 "However each implementation must be available and\n"
 "it will be loaded.\n"
 msgstr ""
-#. TRANSLATORS: defmacro Protocol.def(signature)
-#: lib/protocol.ex:13 
-msgid ""
-"Defines a new protocol function.\n"
-"\n"
-"Protocols do not allow functions to be defined directly, instead, the\n"
-"regular `Kernel.def/*` macros are replaced by this macro which\n"
-"defines the protocol functions with the appropriate callbacks.\n"
-msgstr ""
 #. TRANSLATORS: def Protocol.extract_impls(protocol, paths)
-#: lib/protocol.ex:178 
+#: lib/protocol.ex:158 
 msgid ""
 "Extracts all types implemented for the given protocol from\n"
 "the given paths.\n"
@@ -55,7 +46,7 @@ msgid ""
 "\n"
 msgstr ""
 #. TRANSLATORS: def Protocol.extract_protocols(paths)
-#: lib/protocol.ex:148 
+#: lib/protocol.ex:129 
 msgid ""
 "Extracts all protocols from the given paths.\n"
 "\n"
@@ -74,25 +65,34 @@ msgid ""
 "    true\n"
 "\n"
 msgstr ""
-#. TRANSLATORS: defmacro Protocol.derive(protocol, module, options \\ [])
-#: lib/protocol.ex:120 
-msgid ""
-"Derives the `protocol` for `module` with the given options.\n"
-msgstr ""
 #. TRANSLATORS: Elixir.Protocol Summary
-#: lib/protocol.ex:1 
+#: lib/protocol.ex:2 
 msgid ""
 "Functions for working with protocols.\n"
 msgstr ""
+#. TRANSLATORS: defmacro Protocol.def(signature)
+#: lib/protocol.ex:6 
+msgid ""
+"Defines a new protocol function.\n"
+"\n"
+"Protocols do not allow functions to be defined directly, instead, the\n"
+"regular `Kernel.def/*` macros are replaced by this macro which\n"
+"defines the protocol functions with the appropriate callbacks.\n"
+msgstr ""
+#. TRANSLATORS: defmacro Protocol.derive(protocol, module, options \\ [])
+#: lib/protocol.ex:117 
+msgid ""
+"Derives the `protocol` for `module` with the given options.\n"
+msgstr ""
 #. TRANSLATORS: def Protocol.assert_protocol!(module)
-#: lib/protocol.ex:62 
+#: lib/protocol.ex:56 
 msgid ""
 "Checks if the given module is loaded and is protocol.\n"
 "\n"
 "Returns `:ok` if so, otherwise raises ArgumentError.\n"
 msgstr ""
 #. TRANSLATORS: def Protocol.assert_impl!(protocol, base)
-#: lib/protocol.ex:89 
+#: lib/protocol.ex:82 
 msgid ""
 "Checks if the given module is loaded and is an implementation\n"
 "of the given protocol.\n"
@@ -100,7 +100,7 @@ msgid ""
 "Returns `:ok` if so, otherwise raises ArgumentError.\n"
 msgstr ""
 #. TRANSLATORS: def Protocol.consolidated?(protocol)
-#: lib/protocol.ex:233 
+#: lib/protocol.ex:229 
 msgid ""
-"Returns true if the protocol was consolidated.\n"
+"Returns `true` if the protocol was consolidated.\n"
 msgstr ""

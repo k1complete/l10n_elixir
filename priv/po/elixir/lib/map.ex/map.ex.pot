@@ -1,10 +1,25 @@
+#. TRANSLATORS: def Map.update!(dict, key, fun)
+#: lib/map.ex:14 
+msgid ""
+"Updates the value in the map with the given function.\n"
+msgstr ""
 #. TRANSLATORS: def Map.new()
-#: lib/map.ex:23 
+#: lib/map.ex:20 
 msgid ""
 "Returns a new empty map.\n"
 msgstr ""
+#. TRANSLATORS: def Map.get_and_update!(map, key, fun)
+#: lib/map.ex:70 
+msgid ""
+"Gets a value and updates a map only if the key exists in one operation.\n"
+msgstr ""
+#. TRANSLATORS: def Map.get_and_update(dict, key, fun)
+#: lib/map.ex:14 
+msgid ""
+"Gets a value and updates a map in one operation.\n"
+msgstr ""
 #. TRANSLATORS: def Map.from_struct(struct)
-#: lib/map.ex:60 
+#: lib/map.ex:85 
 msgid ""
 "Converts a struct to map.\n"
 "\n"
@@ -25,7 +40,7 @@ msgid ""
 "\n"
 msgstr ""
 #. TRANSLATORS: Elixir.Map Summary
-#: lib/map.ex:1 
+#: lib/map.ex:2 
 msgid ""
 "A Dict implementation that works on maps.\n"
 "\n"
