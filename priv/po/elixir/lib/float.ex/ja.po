@@ -262,6 +262,11 @@ msgstr ""
 "    \"7.1\"\n"
 "\n"
 
+#. TRANSLATORS: Elixir.Float Summary
+#: lib/float.ex:4
+msgid "Functions for working with floating point numbers.\n"
+msgstr "浮動小数点数で動く関数です。\n"
+
 #. TRANSLATORS: def Float.parse(binary)
 #: lib/float.ex:8
 msgid ""
@@ -310,8 +315,3 @@ msgstr ""
 "    iex> Float.parse(\"pi\")\n"
 "    :error\n"
 "\n"
-
-#. TRANSLATORS: Elixir.Float Summary
-#: lib/float.ex:4
-msgid "Functions for working with floating point numbers.\n"
-msgstr "浮動小数点数で動く関数です。\n"

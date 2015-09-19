@@ -1,12 +1,17 @@
 #. TRANSLATORS: @type kind
-#: lib/exception.ex:0 
+#: lib/exception.ex:20 
 msgid ""
 "The kind handled by formatting functions"
 msgstr ""
 #. TRANSLATORS: @type t
-#: lib/exception.ex:0 
+#: lib/exception.ex:17 
 msgid ""
 "The exception type"
+msgstr ""
+#. TRANSLATORS: def Exception.exception?(term)
+#: lib/exception.ex:34 
+msgid ""
+"Returns `true` if the given `term` is an exception.\n"
 msgstr ""
 #. TRANSLATORS: def Exception.format_fa(fun, arity)
 #: lib/exception.ex:389 
@@ -90,6 +95,11 @@ msgid ""
 "not return the stacktrace corresponding to the exception\n"
 "an empty stacktrace, `[]`, must be used.\n"
 msgstr ""
+#. TRANSLATORS: def Exception.message(exception)
+#: lib/exception.ex:44 
+msgid ""
+"Gets the message for an exception.\n"
+msgstr ""
 #. TRANSLATORS: def Exception.format_stacktrace(trace \\ nil)
 #: lib/exception.ex:372 
 msgid ""
@@ -126,11 +136,6 @@ msgid ""
 "formats exits in a way to nicely show the exit reason, caller\n"
 "and stacktrace.\n"
 msgstr ""
-#. TRANSLATORS: def Exception.message(exception)
-#: lib/exception.ex:44 
-msgid ""
-"Gets the message for an exception.\n"
-msgstr ""
 #. TRANSLATORS: Elixir.Exception Summary
 #: lib/exception.ex:2 
 msgid ""
@@ -146,9 +151,4 @@ msgid ""
 "in order to better suit Elixir's tool chain. In other words,\n"
 "by using the functions in this module it is guaranteed you will\n"
 "format exceptions as in the current Elixir version being used.\n"
-msgstr ""
-#. TRANSLATORS: def Exception.exception?(term)
-#: lib/exception.ex:34 
-msgid ""
-"Returns `true` if the given `term` is an exception.\n"
 msgstr ""

@@ -10,6 +10,11 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
+#. TRANSLATORS: def Protocol.consolidated?(protocol)
+#: lib/protocol.ex:229
+msgid "Returns `true` if the protocol was consolidated.\n"
+msgstr "プロトコルが合成(consolidate)されていれば`true`を返します。\n"
+
 #. TRANSLATORS: def Protocol.consolidate(protocol, types)
 #: lib/protocol.ex:237
 msgid ""
@@ -56,6 +61,21 @@ msgstr ""
 "この関数はいかなるプロトコルもロードしませんし、コンパイルされたモジュー\n"
 "ルの新しいバイトコードもロードしません。しかしながら、それぞれの実装は\n"
 "有効にされるはずで、それはロードされるでしょう。\n"
+
+#. TRANSLATORS: defmacro Protocol.def(signature)
+#: lib/protocol.ex:6
+msgid ""
+"Defines a new protocol function.\n"
+"\n"
+"Protocols do not allow functions to be defined directly, instead, the\n"
+"regular `Kernel.def/*` macros are replaced by this macro which\n"
+"defines the protocol functions with the appropriate callbacks.\n"
+msgstr ""
+"新しいプロトコル関数を定義します。\n"
+"\n"
+"プロトコルは関数を直接定義することは許されていません。代りに、\n"
+"適切なコールバックでプロトコル関数を定義するこのマクロと、\n"
+"標準の`Kernel.def/*`マクロが取り替えられます。\n"
 
 #. TRANSLATORS: def Protocol.extract_impls(protocol, paths)
 #: lib/protocol.ex:158
@@ -136,21 +156,6 @@ msgstr ""
 msgid "Functions for working with protocols.\n"
 msgstr "プロトコルで動く関数です。\n"
 
-#. TRANSLATORS: defmacro Protocol.def(signature)
-#: lib/protocol.ex:6
-msgid ""
-"Defines a new protocol function.\n"
-"\n"
-"Protocols do not allow functions to be defined directly, instead, the\n"
-"regular `Kernel.def/*` macros are replaced by this macro which\n"
-"defines the protocol functions with the appropriate callbacks.\n"
-msgstr ""
-"新しいプロトコル関数を定義します。\n"
-"\n"
-"プロトコルは関数を直接定義することは許されていません。代りに、\n"
-"適切なコールバックでプロトコル関数を定義するこのマクロと、\n"
-"標準の`Kernel.def/*`マクロが取り替えられます。\n"
-
 #. TRANSLATORS: defmacro Protocol.derive(protocol, module, options \\ [])
 #: lib/protocol.ex:117
 msgid "Derives the `protocol` for `module` with the given options.\n"
@@ -179,8 +184,3 @@ msgstr ""
 "実装しているかチェックします。\n"
 "\n"
 "もしそうなら`:ok`を返し、さもなくばArgumentErrorを上げます。\n"
-
-#. TRANSLATORS: def Protocol.consolidated?(protocol)
-#: lib/protocol.ex:229
-msgid "Returns `true` if the protocol was consolidated.\n"
-msgstr "プロトコルが合成(consolidate)されていれば`true`を返します。\n"

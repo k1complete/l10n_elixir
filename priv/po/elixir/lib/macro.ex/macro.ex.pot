@@ -201,37 +201,10 @@ msgid ""
 "    end\n"
 "\n"
 msgstr ""
-#. TRANSLATORS: def Macro.pipe(expr, call_args, position)
-#: lib/macro.ex:84 
-msgid ""
-"Pipes `expr` into the `call_args` at the given `position`.\n"
-msgstr ""
 #. TRANSLATORS: @type expr
-#: lib/macro.ex:0 
+#: lib/macro.ex:24 
 msgid ""
 "Expr node (remaining ones are literals)"
-msgstr ""
-#. TRANSLATORS: def Macro.prewalk(ast, fun)
-#: lib/macro.ex:168 
-msgid ""
-"Performs a depth-first, pre-order traversal of quoted expressions.\n"
-msgstr ""
-#. TRANSLATORS: def Macro.prewalk(ast, acc, fun)
-#: lib/macro.ex:176 
-msgid ""
-"Performs a depth-first, pre-order traversal of quoted expressions\n"
-"using an accumulator.\n"
-msgstr ""
-#. TRANSLATORS: def Macro.postwalk(ast, fun)
-#: lib/macro.ex:221 
-msgid ""
-"Performs a depth-first, post-order traversal of quoted expressions.\n"
-msgstr ""
-#. TRANSLATORS: def Macro.postwalk(ast, acc, fun)
-#: lib/macro.ex:229 
-msgid ""
-"Performs a depth-first, post-order traversal of quoted expressions\n"
-"using an accumulator.\n"
 msgstr ""
 #. TRANSLATORS: def Macro.var(var, context)
 #: lib/macro.ex:143 
@@ -310,6 +283,45 @@ msgid ""
 "The module containing the custom sigil must be imported before the sigil\n"
 "syntax can be used.\n"
 msgstr ""
+#. TRANSLATORS: def Macro.unpipe(expr)
+#: lib/macro.ex:66 
+msgid ""
+"Breaks a pipeline expression into a list.\n"
+"\n"
+"Raises if the pipeline is ill-formed.\n"
+msgstr ""
+#. TRANSLATORS: def Macro.pipe(expr, call_args, position)
+#: lib/macro.ex:84 
+msgid ""
+"Pipes `expr` into the `call_args` at the given `position`.\n"
+msgstr ""
+#. TRANSLATORS: def Macro.prewalk(ast, fun)
+#: lib/macro.ex:168 
+msgid ""
+"Performs a depth-first, pre-order traversal of quoted expressions.\n"
+msgstr ""
+#. TRANSLATORS: def Macro.prewalk(ast, acc, fun)
+#: lib/macro.ex:176 
+msgid ""
+"Performs a depth-first, pre-order traversal of quoted expressions\n"
+"using an accumulator.\n"
+msgstr ""
+#. TRANSLATORS: def Macro.postwalk(ast, fun)
+#: lib/macro.ex:221 
+msgid ""
+"Performs a depth-first, post-order traversal of quoted expressions.\n"
+msgstr ""
+#. TRANSLATORS: def Macro.postwalk(ast, acc, fun)
+#: lib/macro.ex:229 
+msgid ""
+"Performs a depth-first, post-order traversal of quoted expressions\n"
+"using an accumulator.\n"
+msgstr ""
+#. TRANSLATORS: @type t
+#: lib/macro.ex:21 
+msgid ""
+"Abstract Syntax Tree (AST)"
+msgstr ""
 #. TRANSLATORS: def Macro.update_meta(quoted, fun)
 #: lib/macro.ex:117 
 msgid ""
@@ -326,16 +338,4 @@ msgid ""
 "    iex> Macro.update_meta(quoted, &Keyword.delete(&1, :line))\n"
 "    {:sample, [], []}\n"
 "\n"
-msgstr ""
-#. TRANSLATORS: @type t
-#: lib/macro.ex:0 
-msgid ""
-"Abstract Syntax Tree (AST)"
-msgstr ""
-#. TRANSLATORS: def Macro.unpipe(expr)
-#: lib/macro.ex:66 
-msgid ""
-"Breaks a pipeline expression into a list.\n"
-"\n"
-"Raises if the pipeline is ill-formed.\n"
 msgstr ""

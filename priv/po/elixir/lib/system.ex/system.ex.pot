@@ -22,21 +22,6 @@ msgid ""
 "Same as `tmp_dir/0` but raises `RuntimeError`\n"
 "instead of returning `nil` if no temp dir is set.\n"
 msgstr ""
-#. TRANSLATORS: def System.put_env(dict)
-#: lib/system.ex:281 
-msgid ""
-"Sets multiple environment variables.\n"
-"\n"
-"Sets a new value for each environment variable corresponding\n"
-"to each key in `dict`.\n"
-msgstr ""
-#. TRANSLATORS: def System.put_env(varname, value)
-#: lib/system.ex:270 
-msgid ""
-"Sets an environment variable value.\n"
-"\n"
-"Sets a new `value` for the environment variable `varname`.\n"
-msgstr ""
 #. TRANSLATORS: def System.user_home()
 #: lib/system.ex:121 
 msgid ""
@@ -59,6 +44,21 @@ msgid ""
 "\n"
 "Returns a list of all environment variables. Each variable is given as a\n"
 "`{name, value}` tuple where both `name` and `value` are strings.\n"
+msgstr ""
+#. TRANSLATORS: def System.put_env(dict)
+#: lib/system.ex:281 
+msgid ""
+"Sets multiple environment variables.\n"
+"\n"
+"Sets a new value for each environment variable corresponding\n"
+"to each key in `dict`.\n"
+msgstr ""
+#. TRANSLATORS: def System.put_env(varname, value)
+#: lib/system.ex:270 
+msgid ""
+"Sets an environment variable value.\n"
+"\n"
+"Sets a new `value` for the environment variable `varname`.\n"
 msgstr ""
 #. TRANSLATORS: Elixir.System Summary
 #: lib/system.ex:2 
@@ -100,6 +100,24 @@ msgid ""
 "and Windows. It also considers the proper executable\n"
 "extension for each OS, so for Windows it will try to\n"
 "lookup files with `.com`, `.cmd` or similar extensions.\n"
+msgstr ""
+#. TRANSLATORS: def System.argv()
+#: lib/system.ex:68 
+msgid ""
+"Lists command line arguments.\n"
+"\n"
+"Returns the list of command line arguments passed to the program.\n"
+msgstr ""
+#. TRANSLATORS: def System.stacktrace()
+#: lib/system.ex:303 
+msgid ""
+"Last exception stacktrace.\n"
+"\n"
+"Note that the Erlang VM (and therefore this function) does not\n"
+"return the current stacktrace but rather the stacktrace of the\n"
+"latest exception.\n"
+"\n"
+"Inlined by the compiler into `:erlang.get_stacktrace/0`.\n"
 msgstr ""
 #. TRANSLATORS: def System.cmd(command, args, opts \\ [])
 #: lib/system.ex:355 
@@ -174,13 +192,6 @@ msgid ""
 "redirecting and so on, please check\n"
 "[Erlang's :os.cmd/1 function](http://www.erlang.org/doc/man/os.html#cmd-1).\n"
 msgstr ""
-#. TRANSLATORS: def System.argv()
-#: lib/system.ex:68 
-msgid ""
-"Lists command line arguments.\n"
-"\n"
-"Returns the list of command line arguments passed to the program.\n"
-msgstr ""
 #. TRANSLATORS: def System.get_pid()
 #: lib/system.ex:259 
 msgid ""
@@ -199,6 +210,27 @@ msgid ""
 "Returns the value of the environment variable\n"
 "`varname` as a binary, or `nil` if the environment\n"
 "variable is undefined.\n"
+msgstr ""
+#. TRANSLATORS: def System.version()
+#: lib/system.ex:50 
+msgid ""
+"Elixir version information.\n"
+"\n"
+"Returns Elixir's version as binary.\n"
+msgstr ""
+#. TRANSLATORS: def System.build_info()
+#: lib/system.ex:58 
+msgid ""
+"Elixir build information.\n"
+"\n"
+"Returns a keyword list with Elixir version, git tag info and compilation date.\n"
+msgstr ""
+#. TRANSLATORS: def System.delete_env(varname)
+#: lib/system.ex:292 
+msgid ""
+"Deletes an environment variable.\n"
+"\n"
+"Removes the variable `varname` from the environment.\n"
 msgstr ""
 #. TRANSLATORS: def System.halt(status \\ 0)
 #: lib/system.ex:316 
@@ -228,38 +260,6 @@ msgid ""
 "    System.halt(1)\n"
 "    System.halt(:abort)\n"
 "\n"
-msgstr ""
-#. TRANSLATORS: def System.stacktrace()
-#: lib/system.ex:303 
-msgid ""
-"Last exception stacktrace.\n"
-"\n"
-"Note that the Erlang VM (and therefore this function) does not\n"
-"return the current stacktrace but rather the stacktrace of the\n"
-"latest exception.\n"
-"\n"
-"Inlined by the compiler into `:erlang.get_stacktrace/0`.\n"
-msgstr ""
-#. TRANSLATORS: def System.version()
-#: lib/system.ex:50 
-msgid ""
-"Elixir version information.\n"
-"\n"
-"Returns Elixir's version as binary.\n"
-msgstr ""
-#. TRANSLATORS: def System.build_info()
-#: lib/system.ex:58 
-msgid ""
-"Elixir build information.\n"
-"\n"
-"Returns a keyword list with Elixir version, git tag info and compilation date.\n"
-msgstr ""
-#. TRANSLATORS: def System.delete_env(varname)
-#: lib/system.ex:292 
-msgid ""
-"Deletes an environment variable.\n"
-"\n"
-"Removes the variable `varname` from the environment.\n"
 msgstr ""
 #. TRANSLATORS: def System.cwd()
 #: lib/system.ex:89 

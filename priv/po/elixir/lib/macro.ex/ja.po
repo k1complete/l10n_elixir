@@ -388,44 +388,10 @@ msgstr ""
 "    end\n"
 "\n"
 
-#. TRANSLATORS: def Macro.pipe(expr, call_args, position)
-#: lib/macro.ex:84
-msgid "Pipes `expr` into the `call_args` at the given `position`.\n"
-msgstr "与えられた`position`の`call_args`へ`expr`をパイプします。\n"
-
 #. TRANSLATORS: @type expr
-#: lib/macro.ex:0
+#: lib/macro.ex:24
 msgid "Expr node (remaining ones are literals)"
 msgstr "Exprノード(残りの物はリテラルです)"
-
-#. TRANSLATORS: def Macro.prewalk(ast, fun)
-#: lib/macro.ex:168
-msgid "Performs a depth-first, pre-order traversal of quoted expressions.\n"
-msgstr "quoteされた式の、深さ優先行き掛け順(DFS,pre-order)探索を実行します。\n"
-
-#. TRANSLATORS: def Macro.prewalk(ast, acc, fun)
-#: lib/macro.ex:176
-msgid ""
-"Performs a depth-first, pre-order traversal of quoted expressions\n"
-"using an accumulator.\n"
-msgstr ""
-"quoteされた式をアキュムレータ付きで、深さ優先\n"
-"行き掛け順(DFS,pre-order)探索を実行します。\n"
-
-#. TRANSLATORS: def Macro.postwalk(ast, fun)
-#: lib/macro.ex:221
-msgid "Performs a depth-first, post-order traversal of quoted expressions.\n"
-msgstr ""
-"quoteされた式の、深さ優先帰り掛け順(DFS,post-order)探索を実行します。\n"
-
-#. TRANSLATORS: def Macro.postwalk(ast, acc, fun)
-#: lib/macro.ex:229
-msgid ""
-"Performs a depth-first, post-order traversal of quoted expressions\n"
-"using an accumulator.\n"
-msgstr ""
-"quoteされた式をアキュムレータ付きで、深さ優先\n"
-"帰り掛け順(DFS,post-order)探索を実行します。\n"
 
 #. TRANSLATORS: def Macro.var(var, context)
 #: lib/macro.ex:143
@@ -569,6 +535,56 @@ msgstr ""
 "カスタムsigilを含むモジュールは、そのsigilシンタックスが\n"
 "使われる前にimportされなければなりません。\n"
 
+#. TRANSLATORS: def Macro.unpipe(expr)
+#: lib/macro.ex:66
+msgid ""
+"Breaks a pipeline expression into a list.\n"
+"\n"
+"Raises if the pipeline is ill-formed.\n"
+msgstr ""
+"パイプライン式をリストにします。\n"
+"\n"
+"パイプラインが不適格なら、エラーを上げます。\n"
+
+#. TRANSLATORS: def Macro.pipe(expr, call_args, position)
+#: lib/macro.ex:84
+msgid "Pipes `expr` into the `call_args` at the given `position`.\n"
+msgstr "与えられた`position`の`call_args`へ`expr`をパイプします。\n"
+
+#. TRANSLATORS: def Macro.prewalk(ast, fun)
+#: lib/macro.ex:168
+msgid "Performs a depth-first, pre-order traversal of quoted expressions.\n"
+msgstr "quoteされた式の、深さ優先行き掛け順(DFS,pre-order)探索を実行します。\n"
+
+#. TRANSLATORS: def Macro.prewalk(ast, acc, fun)
+#: lib/macro.ex:176
+msgid ""
+"Performs a depth-first, pre-order traversal of quoted expressions\n"
+"using an accumulator.\n"
+msgstr ""
+"quoteされた式をアキュムレータ付きで、深さ優先\n"
+"行き掛け順(DFS,pre-order)探索を実行します。\n"
+
+#. TRANSLATORS: def Macro.postwalk(ast, fun)
+#: lib/macro.ex:221
+msgid "Performs a depth-first, post-order traversal of quoted expressions.\n"
+msgstr ""
+"quoteされた式の、深さ優先帰り掛け順(DFS,post-order)探索を実行します。\n"
+
+#. TRANSLATORS: def Macro.postwalk(ast, acc, fun)
+#: lib/macro.ex:229
+msgid ""
+"Performs a depth-first, post-order traversal of quoted expressions\n"
+"using an accumulator.\n"
+msgstr ""
+"quoteされた式をアキュムレータ付きで、深さ優先\n"
+"帰り掛け順(DFS,post-order)探索を実行します。\n"
+
+#. TRANSLATORS: @type t
+#: lib/macro.ex:21
+msgid "Abstract Syntax Tree (AST)"
+msgstr "抽象構文木(AST)"
+
 #. TRANSLATORS: def Macro.update_meta(quoted, fun)
 #: lib/macro.ex:117
 msgid ""
@@ -600,22 +616,6 @@ msgstr ""
 "    iex> Macro.update_meta(quoted, &Keyword.delete(&1, :line))\n"
 "    {:sample, [], []}\n"
 "\n"
-
-#. TRANSLATORS: @type t
-#: lib/macro.ex:0
-msgid "Abstract Syntax Tree (AST)"
-msgstr "抽象構文木(AST)"
-
-#. TRANSLATORS: def Macro.unpipe(expr)
-#: lib/macro.ex:66
-msgid ""
-"Breaks a pipeline expression into a list.\n"
-"\n"
-"Raises if the pipeline is ill-formed.\n"
-msgstr ""
-"パイプライン式をリストにします。\n"
-"\n"
-"パイプラインが不適格なら、エラーを上げます。\n"
 
 #~ msgid "Conveniences for working with macros.\n"
 #~ msgstr "マクロで働くための便利なものです。\n"

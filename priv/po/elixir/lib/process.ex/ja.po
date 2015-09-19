@@ -39,6 +39,41 @@ msgstr ""
 "からスタートするプロセスが`:init`以外のグループリーダーをを持っていなけ\n"
 "ればならないとき、これが使われます。\n"
 
+#. TRANSLATORS: def Process.put(key, value)
+#: lib/process.ex:58
+msgid "Stores the given key-value in the process dictionary.\n"
+msgstr "プロセス辞書に与えられたキーバリューを保存します。\n"
+
+#. TRANSLATORS: def Process.spawn(mod, fun, args, opts)
+#: lib/process.ex:179
+msgid ""
+"Spawns the given module and function passing the given args\n"
+"according to the given options.\n"
+"\n"
+"The result depends on the given options. In particular,\n"
+"if `:monitor` is given as an option, it will return a tuple\n"
+"containing the pid and the monitoring reference, otherwise\n"
+"just the spawned process pid.\n"
+"\n"
+"It also accepts extra options, for the list of available options\n"
+"check http://www.erlang.org/doc/man/erlang.html#spawn_opt-4\n"
+"\n"
+"Inlined by the compiler.\n"
+msgstr ""
+"与えられたオプションによって、与えられたモジュールと関数に与えられた引\n"
+"数を送ってプロセスを生成します。\n"
+"\n"
+"戻値は、与えられたオプションによります。特に、`:monitor`オプションが与\n"
+"えられると、pidとモニタリファレンスを含むタプルを返し、さもなければ、生\n"
+"成されたプロセスのpidを返します。\n"
+"\n"
+"\n"
+"他のオプションも受け入れます。利用できるオプションのリストについては\n"
+"http://www.erlang.org/doc/man/erlang.html#spawn_opt-4 をチェックしてく\n"
+"ださい。\n"
+"\n"
+"コンパイラによりインライン化されます。\n"
+
 #. TRANSLATORS: def Process.flag(flag, value)
 #: lib/process.ex:331
 msgid ""
@@ -115,7 +150,8 @@ msgstr ""
 "\n"
 "  3. reasonがアトム`:normal`なら、pidは終了しないでしょう。\n"
 "     (それが呼出しプロセス自身のpidなら、reason `:normal`で終了します)\n"
-"     pidがexitをトラップしていたら、exitシグナルは`{:EXIT, from, :normal}`と\n"
+"     pidがexitをトラップしていたら、exitシグナルは`{:EXIT, from, :normal}`"
+"と\n"
 "     いうメッセージに変換され、メッセージキューに配送されます。\n"
 "\n"
 "  4. reasonがアトム`:kill`なら、つまり、`exit(pid, :kill)`が呼ばれたら、\n"
@@ -128,36 +164,6 @@ msgstr ""
 "\n"
 "    Process.exit(pid, :kill)\n"
 "\n"
-
-#. TRANSLATORS: def Process.spawn(mod, fun, args, opts)
-#: lib/process.ex:179
-msgid ""
-"Spawns the given module and function passing the given args\n"
-"according to the given options.\n"
-"\n"
-"The result depends on the given options. In particular,\n"
-"if `:monitor` is given as an option, it will return a tuple\n"
-"containing the pid and the monitoring reference, otherwise\n"
-"just the spawned process pid.\n"
-"\n"
-"It also accepts extra options, for the list of available options\n"
-"check http://www.erlang.org/doc/man/erlang.html#spawn_opt-4\n"
-"\n"
-"Inlined by the compiler.\n"
-msgstr ""
-"与えられたオプションによって、与えられたモジュールと関数に与えられた引\n"
-"数を送ってプロセスを生成します。\n"
-"\n"
-"戻値は、与えられたオプションによります。特に、`:monitor`オプションが与\n"
-"えられると、pidとモニタリファレンスを含むタプルを返し、さもなければ、生\n"
-"成されたプロセスのpidを返します。\n"
-"\n"
-"\n"
-"他のオプションも受け入れます。利用できるオプションのリストについては\n"
-"http://www.erlang.org/doc/man/erlang.html#spawn_opt-4 をチェックしてく\n"
-"ださい。\n"
-"\n"
-"コンパイラによりインライン化されます。\n"
 
 #. TRANSLATORS: def Process.send(dest, msg, options)
 #: lib/process.ex:105
@@ -244,20 +250,26 @@ msgstr ""
 msgid "Returns the value for the given `key`.\n"
 msgstr "与えられた`key`の値を返します。\n"
 
-#. TRANSLATORS: def Process.put(key, value)
-#: lib/process.ex:58
-msgid "Stores the given key-value in the process dictionary.\n"
-msgstr "プロセス辞書に与えられたキーバリューを保存します。\n"
+#. TRANSLATORS: def Process.whereis(name)
+#: lib/process.ex:292
+msgid ""
+"Returns the pid or port identifier with the registered name.\n"
+"Returns `nil` if the name is not registered.\n"
+"\n"
+"See http://www.erlang.org/doc/man/erlang.html#whereis-1 for more info.\n"
+msgstr ""
+"pidまたはnameで登録されたポート識別子を返します。nameが登録されていない\n"
+"とき、`nil`を返します。\n"
+"\n"
+"更なる情報は http://www.erlang.org/doc/man/erlang.html#whereis-1 を参照\n"
+"してください。\n"
 
-#. TRANSLATORS: def Process.get_keys(value)
-#: lib/process.ex:50
-msgid "Returns all keys that have the given `value`.\n"
-msgstr "与えられた`value`をもつキーを全て返します。\n"
-
-#. TRANSLATORS: def Process.get()
-#: lib/process.ex:28
-msgid "Returns all key-values in the dictionary.\n"
-msgstr "プロセス辞書の全てのキー/値の組を全て返します。\n"
+#. TRANSLATORS: def Process.group_leader()
+#: lib/process.ex:303
+msgid ""
+"Returns the pid of the group leader for the process which evaluates the "
+"function.\n"
+msgstr "関数を評価しているプロセスのグループリーダのpidを返します。\n"
 
 #. TRANSLATORS: def Process.info(pid)
 #: lib/process.ex:354
@@ -290,6 +302,16 @@ msgstr ""
 "詳細は、http://www.erlang.org/doc/man/erlang.html#process_info-2\n"
 "を参照してください。\n"
 
+#. TRANSLATORS: def Process.get_keys(value)
+#: lib/process.ex:50
+msgid "Returns all keys that have the given `value`.\n"
+msgstr "与えられた`value`をもつキーを全て返します。\n"
+
+#. TRANSLATORS: def Process.get()
+#: lib/process.ex:28
+msgid "Returns all key-values in the dictionary.\n"
+msgstr "プロセス辞書の全てのキー/値の組を全て返します。\n"
+
 #. TRANSLATORS: def Process.list()
 #: lib/process.ex:226
 msgid ""
@@ -317,6 +339,20 @@ msgstr ""
 msgid ""
 "Returns a list of names which have been registered using `register/2`.\n"
 msgstr "`register/2`を使って登録された、名前のリストを返します。\n"
+
+#. TRANSLATORS: def Process.alive?(pid)
+#: lib/process.ex:17
+msgid ""
+"Returns `true` if the process exists and is alive (i.e. it is not exiting\n"
+"and has not exited yet). Otherwise, returns `false`.\n"
+"\n"
+"`pid` must refer to a process at the local node.\n"
+msgstr ""
+"プロセスが存在して生きている(つまり、終了中でなく、\n"
+"まだ終了が完了していないということです)そのとき、`true`を返します。\n"
+"さもなければ`false`を返します。\n"
+"\n"
+"`pid`はローカルノードのプロセスの参照でなければなりません。\n"
 
 #. TRANSLATORS: def Process.unregister(name)
 #: lib/process.ex:282
@@ -400,38 +436,6 @@ msgstr ""
 msgid "Deletes the given `key` from the dictionary.\n"
 msgstr "プロセス辞書から与えられた`key`を削除します。\n"
 
-#. TRANSLATORS: def Process.link(pid)
-#: lib/process.ex:241
-msgid ""
-"Creates a link between the calling process and another process\n"
-"(or port) `pid`, if there is not such a link already.\n"
-"\n"
-"See http://www.erlang.org/doc/man/erlang.html#link-1 for more info.\n"
-"\n"
-"Inlined by the compiler.\n"
-msgstr ""
-"呼び出し側プロセスと他のプロセス(またはport)`pid`の間に、まだ\n"
-"リンクがなければ、リンクを作成します。\n"
-"\n"
-"詳細は、\n"
-" http://www.erlang.org/doc/man/erlang.html#link-1 を参照してください。\n"
-"\n"
-"コンパイラによりインライン化されます。\n"
-
-#. TRANSLATORS: def Process.alive?(pid)
-#: lib/process.ex:17
-msgid ""
-"Returns `true` if the process exists and is alive (i.e. it is not exiting\n"
-"and has not exited yet). Otherwise, returns `false`.\n"
-"\n"
-"`pid` must refer to a process at the local node.\n"
-msgstr ""
-"プロセスが存在して生きている(つまり、終了中でなく、\n"
-"まだ終了が完了していないということです)そのとき、`true`を返します。\n"
-"さもなければ`false`を返します。\n"
-"\n"
-"`pid`はローカルノードのプロセスの参照でなければなりません。\n"
-
 #. TRANSLATORS: Elixir.Process Summary
 #: lib/process.ex:2
 msgid ""
@@ -461,6 +465,24 @@ msgstr ""
 "  * `Kernel.send/2`\n"
 "\n"
 
+#. TRANSLATORS: def Process.link(pid)
+#: lib/process.ex:241
+msgid ""
+"Creates a link between the calling process and another process\n"
+"(or port) `pid`, if there is not such a link already.\n"
+"\n"
+"See http://www.erlang.org/doc/man/erlang.html#link-1 for more info.\n"
+"\n"
+"Inlined by the compiler.\n"
+msgstr ""
+"呼び出し側プロセスと他のプロセス(またはport)`pid`の間に、まだ\n"
+"リンクがなければ、リンクを作成します。\n"
+"\n"
+"詳細は、\n"
+" http://www.erlang.org/doc/man/erlang.html#link-1 を参照してください。\n"
+"\n"
+"コンパイラによりインライン化されます。\n"
+
 #. TRANSLATORS: def Process.register(pid, name)
 #: lib/process.ex:268
 msgid ""
@@ -479,24 +501,3 @@ msgstr ""
 "`Process.register/2`は、供給された(`alive?/1`でチェックして)pidが最早生\n"
 "きていない、あるいは、(`whereis/1`でチェックして)名前がすでに登録ずみな\n"
 "ら、`ArgumentError`で失敗します。\n"
-
-#. TRANSLATORS: def Process.whereis(name)
-#: lib/process.ex:292
-msgid ""
-"Returns the pid or port identifier with the registered name.\n"
-"Returns `nil` if the name is not registered.\n"
-"\n"
-"See http://www.erlang.org/doc/man/erlang.html#whereis-1 for more info.\n"
-msgstr ""
-"pidまたはnameで登録されたポート識別子を返します。nameが登録されていない\n"
-"とき、`nil`を返します。\n"
-"\n"
-"更なる情報は http://www.erlang.org/doc/man/erlang.html#whereis-1 を参照\n"
-"してください。\n"
-
-#. TRANSLATORS: def Process.group_leader()
-#: lib/process.ex:303
-msgid ""
-"Returns the pid of the group leader for the process which evaluates the "
-"function.\n"
-msgstr "関数を評価しているプロセスのグループリーダのpidを返します。\n"

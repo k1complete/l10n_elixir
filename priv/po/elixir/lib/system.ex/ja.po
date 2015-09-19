@@ -52,30 +52,6 @@ msgstr ""
 "`tmp_dir/0`と同じですが、もしテンポラリディレクトリが\n"
 "無い場合、`nil`を返すかわりに、`RuntimeError`を上げます。\n"
 
-#. TRANSLATORS: def System.put_env(dict)
-#: lib/system.ex:281
-msgid ""
-"Sets multiple environment variables.\n"
-"\n"
-"Sets a new value for each environment variable corresponding\n"
-"to each key in `dict`.\n"
-msgstr ""
-"複数の環境変数をセットします。\n"
-"\n"
-"`dict`の中のそれぞれのキーに一致しているそれぞれの環境変数に\n"
-"新しい値をセットします。\n"
-
-#. TRANSLATORS: def System.put_env(varname, value)
-#: lib/system.ex:270
-msgid ""
-"Sets an environment variable value.\n"
-"\n"
-"Sets a new `value` for the environment variable `varname`.\n"
-msgstr ""
-"環境変数の値をセットします。\n"
-"\n"
-"環境変数`varname`に新しい`value`をセットします。\n"
-
 #. TRANSLATORS: def System.user_home()
 #: lib/system.ex:121
 msgid ""
@@ -113,6 +89,30 @@ msgstr ""
 "\n"
 "全ての環境変数のリストを返します。それぞれの変数は`{name, value}`タプル\n"
 "で、`name`と`value`はどちらも文字列として与えられます。\n"
+
+#. TRANSLATORS: def System.put_env(dict)
+#: lib/system.ex:281
+msgid ""
+"Sets multiple environment variables.\n"
+"\n"
+"Sets a new value for each environment variable corresponding\n"
+"to each key in `dict`.\n"
+msgstr ""
+"複数の環境変数をセットします。\n"
+"\n"
+"`dict`の中のそれぞれのキーに一致しているそれぞれの環境変数に\n"
+"新しい値をセットします。\n"
+
+#. TRANSLATORS: def System.put_env(varname, value)
+#: lib/system.ex:270
+msgid ""
+"Sets an environment variable value.\n"
+"\n"
+"Sets a new `value` for the environment variable `varname`.\n"
+msgstr ""
+"環境変数の値をセットします。\n"
+"\n"
+"環境変数`varname`に新しい`value`をセットします。\n"
 
 #. TRANSLATORS: Elixir.System Summary
 #: lib/system.ex:2
@@ -183,6 +183,35 @@ msgstr ""
 "それぞれのOS毎に適当な実行可能拡張子を考慮するので、\n"
 "Windowsでは`.com`、`.cmd`または類似した拡張子で\n"
 "ファイルを探します。\n"
+
+#. TRANSLATORS: def System.argv()
+#: lib/system.ex:68
+msgid ""
+"Lists command line arguments.\n"
+"\n"
+"Returns the list of command line arguments passed to the program.\n"
+msgstr ""
+"コマンドライン引数のリストです。\n"
+"\n"
+"プログラムに渡された、コマンドライン引数のリストを返します。\n"
+
+#. TRANSLATORS: def System.stacktrace()
+#: lib/system.ex:303
+msgid ""
+"Last exception stacktrace.\n"
+"\n"
+"Note that the Erlang VM (and therefore this function) does not\n"
+"return the current stacktrace but rather the stacktrace of the\n"
+"latest exception.\n"
+"\n"
+"Inlined by the compiler into `:erlang.get_stacktrace/0`.\n"
+msgstr ""
+"最後の例外のスタックトレースです。\n"
+"\n"
+"Erlang VM(と従ってこの関数)が現在のスタックトレースではなく、\n"
+"むしろ、最後の例外のスタックトレースを返すことに、注意してください。\n"
+"\n"
+"コンパイラにより`:erlang.get_stacktrace/0`にインライン化されます。\n"
 
 #. TRANSLATORS: def System.cmd(command, args, opts \\ [])
 #: lib/system.ex:355
@@ -288,9 +317,11 @@ msgstr ""
 "\n"
 "## オプション\n"
 "\n"
-"  * `:into` - 与えられたcollectableに結果を挿入します。デフォルトは`\"\"`です\n"
+"  * `:into` - 与えられたcollectableに結果を挿入します。デフォルトは`\"\"`で"
+"す\n"
 "  * `:cd` - コマンドを実行するディレクトリを指定します\n"
-"  * `:env` - バイナリの環境変数キーバリュータプルを含むenumerableを指定します\n"
+"  * `:env` - バイナリの環境変数キーバリュータプルを含むenumerableを指定しま"
+"す\n"
 "  * `:arg0` - コマンドのarg0を指定します\n"
 "  * `:stderr_to_stdout` - trueにすると、stderrをstdoutにリダイレクトします\n"
 "  * `:parallelism` - trueにすると、VMはシステムの並行性を改善するために\n"
@@ -334,15 +365,20 @@ msgstr ""
 "-----<\n"
 "## Options\n"
 "\n"
-"  * `:into` - injects the result into the given collectable, defaults to `\"\"`\n"
+"  * `:into` - injects the result into the given collectable, defaults to `"
+"\"\"`\n"
 "  * `:cd` - the directory to run the command in\n"
-"  * `:env` - an enumerable of tuples containing environment key-value as binary\n"
+"  * `:env` - an enumerable of tuples containing environment key-value as "
+"binary\n"
 "  * `:arg0` - set the command arg0\n"
 "  * `:stderr_to_stdout` - redirects stderr to stdout when `true`\n"
-"  * `:parallelism` - when `true`, the VM will schedule port tasks to improve\n"
-"    parallelism in the system. If set to `false`, the VM will try to perform\n"
+"  * `:parallelism` - when `true`, the VM will schedule port tasks to "
+"improve\n"
+"    parallelism in the system. If set to `false`, the VM will try to "
+"perform\n"
 "    commands immediately, improving latency at the expense of parallelism.\n"
-"    The default can be set on system startup by passing the \"+spp\" argument\n"
+"    The default can be set on system startup by passing the \"+spp\" "
+"argument\n"
 "    to `--erl`.\n"
 "\n"
 "## Error reasons\n"
@@ -377,17 +413,6 @@ msgstr ""
 "redirecting and so on, please check\n"
 "[Erlang's :os.cmd/1 function](http://www.erlang.org/doc/man/os.html#cmd-1).\n"
 
-#. TRANSLATORS: def System.argv()
-#: lib/system.ex:68
-msgid ""
-"Lists command line arguments.\n"
-"\n"
-"Returns the list of command line arguments passed to the program.\n"
-msgstr ""
-"コマンドライン引数のリストです。\n"
-"\n"
-"プログラムに渡された、コマンドライン引数のリストを返します。\n"
-
 #. TRANSLATORS: def System.get_pid()
 #: lib/system.ex:259
 msgid ""
@@ -418,6 +443,40 @@ msgstr ""
 "\n"
 "バイナリとして`varname`環境変数の値を返します。\n"
 "環境変数が定義されていないなら、`nil`を返します。\n"
+
+#. TRANSLATORS: def System.version()
+#: lib/system.ex:50
+msgid ""
+"Elixir version information.\n"
+"\n"
+"Returns Elixir's version as binary.\n"
+msgstr ""
+"Elixirバージョン情報です。\n"
+"\n"
+"バイナリとしてElixirのバージョンを返します。\n"
+
+#. TRANSLATORS: def System.build_info()
+#: lib/system.ex:58
+msgid ""
+"Elixir build information.\n"
+"\n"
+"Returns a keyword list with Elixir version, git tag info and compilation "
+"date.\n"
+msgstr ""
+"Elixirビルドインフォメーションです。\n"
+"\n"
+"Elixirバージョン、git tag 情報および、コンパイル日時を返します。\n"
+
+#. TRANSLATORS: def System.delete_env(varname)
+#: lib/system.ex:292
+msgid ""
+"Deletes an environment variable.\n"
+"\n"
+"Removes the variable `varname` from the environment.\n"
+msgstr ""
+"環境変数を削除します。\n"
+"\n"
+"環境から変数`varname`を取り除きます。\n"
 
 #. TRANSLATORS: def System.halt(status \\ 0)
 #: lib/system.ex:316
@@ -476,58 +535,6 @@ msgstr ""
 "    System.halt(1)\n"
 "    System.halt(:abort)\n"
 "\n"
-
-#. TRANSLATORS: def System.stacktrace()
-#: lib/system.ex:303
-msgid ""
-"Last exception stacktrace.\n"
-"\n"
-"Note that the Erlang VM (and therefore this function) does not\n"
-"return the current stacktrace but rather the stacktrace of the\n"
-"latest exception.\n"
-"\n"
-"Inlined by the compiler into `:erlang.get_stacktrace/0`.\n"
-msgstr ""
-"最後の例外のスタックトレースです。\n"
-"\n"
-"Erlang VM(と従ってこの関数)が現在のスタックトレースではなく、\n"
-"むしろ、最後の例外のスタックトレースを返すことに、注意してください。\n"
-"\n"
-"コンパイラにより`:erlang.get_stacktrace/0`にインライン化されます。\n"
-
-#. TRANSLATORS: def System.version()
-#: lib/system.ex:50
-msgid ""
-"Elixir version information.\n"
-"\n"
-"Returns Elixir's version as binary.\n"
-msgstr ""
-"Elixirバージョン情報です。\n"
-"\n"
-"バイナリとしてElixirのバージョンを返します。\n"
-
-#. TRANSLATORS: def System.build_info()
-#: lib/system.ex:58
-msgid ""
-"Elixir build information.\n"
-"\n"
-"Returns a keyword list with Elixir version, git tag info and compilation "
-"date.\n"
-msgstr ""
-"Elixirビルドインフォメーションです。\n"
-"\n"
-"Elixirバージョン、git tag 情報および、コンパイル日時を返します。\n"
-
-#. TRANSLATORS: def System.delete_env(varname)
-#: lib/system.ex:292
-msgid ""
-"Deletes an environment variable.\n"
-"\n"
-"Removes the variable `varname` from the environment.\n"
-msgstr ""
-"環境変数を削除します。\n"
-"\n"
-"環境から変数`varname`を取り除きます。\n"
 
 #. TRANSLATORS: def System.cwd()
 #: lib/system.ex:89

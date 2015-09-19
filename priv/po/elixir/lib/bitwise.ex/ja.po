@@ -68,25 +68,6 @@ msgstr ""
 "    true\n"
 "\n"
 
-#. TRANSLATORS: defmacro Bitwise.~~~(expr)
-#: lib/bitwise.ex:60
-msgid ""
-"Prefix (unary) operator; calculates the bitwise NOT of its argument.\n"
-"\n"
-"    iex> ~~~2\n"
-"    -3\n"
-"    iex> ~~~2 &&& 3\n"
-"    1\n"
-"\n"
-msgstr ""
-"前置(単項)演算子; 引数のビットのNOTを計算します。\n"
-"\n"
-"    iex> ~~~2\n"
-"    -3\n"
-"    iex> ~~~2 &&& 3\n"
-"    1\n"
-"\n"
-
 #. TRANSLATORS: defmacro Bitwise.>>>(left, right)
 #: lib/bitwise.ex:190
 msgid ""
@@ -183,6 +164,25 @@ msgstr ""
 "中置演算子; 引数のビットANDした結果を計算します。\n"
 "\n"
 "    iex> 9 &&& 3\n"
+"    1\n"
+"\n"
+
+#. TRANSLATORS: defmacro Bitwise.~~~(expr)
+#: lib/bitwise.ex:60
+msgid ""
+"Prefix (unary) operator; calculates the bitwise NOT of its argument.\n"
+"\n"
+"    iex> ~~~2\n"
+"    -3\n"
+"    iex> ~~~2 &&& 3\n"
+"    1\n"
+"\n"
+msgstr ""
+"前置(単項)演算子; 引数のビットのNOTを計算します。\n"
+"\n"
+"    iex> ~~~2\n"
+"    -3\n"
+"    iex> ~~~2 &&& 3\n"
 "    1\n"
 "\n"
 

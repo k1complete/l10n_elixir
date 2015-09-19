@@ -82,6 +82,11 @@ msgid ""
 "    [\"hello\", \"\\n     \", \"world\"]\n"
 "\n"
 msgstr ""
+#. TRANSLATORS: def Inspect.Algebra.concat(docs)
+#: lib/inspect/algebra.ex:270 
+msgid ""
+"Concatenates a list of documents.\n"
+msgstr ""
 #. TRANSLATORS: def Inspect.Algebra.surround_many(left, docs, right, opts, fun, separator \\ ",")
 #: lib/inspect/algebra.ex:440 
 msgid ""
@@ -143,22 +148,6 @@ msgstr ""
 msgid ""
 "Inserts a break between two docs. See `break/1` for more info.\n"
 msgstr ""
-#. TRANSLATORS: def Inspect.Algebra.fold_doc(list, fun)
-#: lib/inspect/algebra.ex:399 
-msgid ""
-"Folds a list of document entities into a document entity\n"
-"using a function that is passed as the first argument.\n"
-"\n"
-"## Examples\n"
-"\n"
-"    iex> doc = [\"A\", \"B\"]\n"
-"    iex> doc = Inspect.Algebra.fold_doc(doc, fn(x, y) ->\n"
-"    ...>   Inspect.Algebra.concat [x, \"!\", y]\n"
-"    ...> end)\n"
-"    iex> Inspect.Algebra.format(doc, 80)\n"
-"    [\"A\", \"!\", \"B\"]\n"
-"\n"
-msgstr ""
 #. TRANSLATORS: def Inspect.Algebra.break(s)
 #: lib/inspect/algebra.ex:299 
 msgid ""
@@ -182,6 +171,22 @@ msgid ""
 "    iex> doc = Inspect.Algebra.glue(String.duplicate(\"a\", 20), \" \", \"b\")\n"
 "    iex> Inspect.Algebra.format(doc, 10)\n"
 "    [\"aaaaaaaaaaaaaaaaaaaa\", \"\\n\", \"b\"]\n"
+"\n"
+msgstr ""
+#. TRANSLATORS: def Inspect.Algebra.fold_doc(list, fun)
+#: lib/inspect/algebra.ex:399 
+msgid ""
+"Folds a list of document entities into a document entity\n"
+"using a function that is passed as the first argument.\n"
+"\n"
+"## Examples\n"
+"\n"
+"    iex> doc = [\"A\", \"B\"]\n"
+"    iex> doc = Inspect.Algebra.fold_doc(doc, fn(x, y) ->\n"
+"    ...>   Inspect.Algebra.concat [x, \"!\", y]\n"
+"    ...> end)\n"
+"    iex> Inspect.Algebra.format(doc, 80)\n"
+"    [\"A\", \"!\", \"B\"]\n"
 "\n"
 msgstr ""
 #. TRANSLATORS: Elixir.Inspect.Opts Summary
@@ -228,10 +233,11 @@ msgid ""
 "    implementations\n"
 "\n"
 msgstr ""
-#. TRANSLATORS: def Inspect.Algebra.concat(docs)
-#: lib/inspect/algebra.ex:270 
+#. TRANSLATORS: def Inspect.Algebra.to_doc(map, opts)
+#: lib/inspect/algebra.ex:191 
 msgid ""
-"Concatenates a list of documents.\n"
+"Converts an Elixir structure to an algebra document\n"
+"according to the inspect protocol.\n"
 msgstr ""
 #. TRANSLATORS: def Inspect.Algebra.concat(x, y)
 #: lib/inspect/algebra.ex:255 
@@ -312,10 +318,4 @@ msgid ""
 "  [0]: http://citeseerx.ist.psu.edu/viewdoc/summary?doi=10.1.1.34.2200\n"
 "  [1]: http://homepages.inf.ed.ac.uk/wadler/papers/prettier/prettier.pdf\n"
 "\n"
-msgstr ""
-#. TRANSLATORS: def Inspect.Algebra.to_doc(map, opts)
-#: lib/inspect/algebra.ex:191 
-msgid ""
-"Converts an Elixir structure to an algebra document\n"
-"according to the inspect protocol.\n"
 msgstr ""

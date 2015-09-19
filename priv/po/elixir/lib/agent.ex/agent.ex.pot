@@ -1,18 +1,3 @@
-#. TRANSLATORS: @type state
-#: lib/agent.ex:0 
-msgid ""
-"The agent state"
-msgstr ""
-#. TRANSLATORS: @type agent
-#: lib/agent.ex:0 
-msgid ""
-"The agent reference"
-msgstr ""
-#. TRANSLATORS: @type name
-#: lib/agent.ex:0 
-msgid ""
-"The agent name"
-msgstr ""
 #. TRANSLATORS: def Agent.update(agent, fun, timeout \\ 5000)
 #: lib/agent.ex:245 
 msgid ""
@@ -32,6 +17,21 @@ msgid ""
 "Same as `update/3` but a module, function and args are expected\n"
 "instead of an anonymous function. The state is added as first\n"
 "argument to the given list of args.\n"
+msgstr ""
+#. TRANSLATORS: @type state
+#: lib/agent.ex:117 
+msgid ""
+"The agent state"
+msgstr ""
+#. TRANSLATORS: @type agent
+#: lib/agent.ex:114 
+msgid ""
+"The agent reference"
+msgstr ""
+#. TRANSLATORS: @type name
+#: lib/agent.ex:111 
+msgid ""
+"The agent name"
 msgstr ""
 #. TRANSLATORS: def Agent.stop(agent, timeout \\ 5000)
 #: lib/agent.ex:297 

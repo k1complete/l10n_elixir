@@ -1,3 +1,8 @@
+#. TRANSLATORS: def Protocol.consolidated?(protocol)
+#: lib/protocol.ex:229 
+msgid ""
+"Returns `true` if the protocol was consolidated.\n"
+msgstr ""
 #. TRANSLATORS: def Protocol.consolidate(protocol, types)
 #: lib/protocol.ex:237 
 msgid ""
@@ -23,6 +28,15 @@ msgid ""
 "nor loads the new bytecode for the compiled module.\n"
 "However each implementation must be available and\n"
 "it will be loaded.\n"
+msgstr ""
+#. TRANSLATORS: defmacro Protocol.def(signature)
+#: lib/protocol.ex:6 
+msgid ""
+"Defines a new protocol function.\n"
+"\n"
+"Protocols do not allow functions to be defined directly, instead, the\n"
+"regular `Kernel.def/*` macros are replaced by this macro which\n"
+"defines the protocol functions with the appropriate callbacks.\n"
 msgstr ""
 #. TRANSLATORS: def Protocol.extract_impls(protocol, paths)
 #: lib/protocol.ex:158 
@@ -70,15 +84,6 @@ msgstr ""
 msgid ""
 "Functions for working with protocols.\n"
 msgstr ""
-#. TRANSLATORS: defmacro Protocol.def(signature)
-#: lib/protocol.ex:6 
-msgid ""
-"Defines a new protocol function.\n"
-"\n"
-"Protocols do not allow functions to be defined directly, instead, the\n"
-"regular `Kernel.def/*` macros are replaced by this macro which\n"
-"defines the protocol functions with the appropriate callbacks.\n"
-msgstr ""
 #. TRANSLATORS: defmacro Protocol.derive(protocol, module, options \\ [])
 #: lib/protocol.ex:117 
 msgid ""
@@ -98,9 +103,4 @@ msgid ""
 "of the given protocol.\n"
 "\n"
 "Returns `:ok` if so, otherwise raises ArgumentError.\n"
-msgstr ""
-#. TRANSLATORS: def Protocol.consolidated?(protocol)
-#: lib/protocol.ex:229 
-msgid ""
-"Returns `true` if the protocol was consolidated.\n"
 msgstr ""

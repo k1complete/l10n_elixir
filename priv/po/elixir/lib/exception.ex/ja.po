@@ -11,14 +11,19 @@ msgstr ""
 "Plural-Forms: nplurals=1; plural=0;\n"
 
 #. TRANSLATORS: @type kind
-#: lib/exception.ex:0
+#: lib/exception.ex:20
 msgid "The kind handled by formatting functions"
 msgstr "書式整形関数によりハンドルされます"
 
 #. TRANSLATORS: @type t
-#: lib/exception.ex:0
+#: lib/exception.ex:17
 msgid "The exception type"
 msgstr "例外のタイプ"
+
+#. TRANSLATORS: def Exception.exception?(term)
+#: lib/exception.ex:34
+msgid "Returns `true` if the given `term` is an exception.\n"
+msgstr "与えられた`term`が例外ならtrueを返します。\n"
 
 #. TRANSLATORS: def Exception.format_fa(fun, arity)
 #: lib/exception.ex:389
@@ -159,6 +164,11 @@ msgstr ""
 "外と一致したスタックトレースを返さないならば、空のスタックトレース\n"
 "`[]`が使われなければならない。\n"
 
+#. TRANSLATORS: def Exception.message(exception)
+#: lib/exception.ex:44
+msgid "Gets the message for an exception.\n"
+msgstr "例外のメッセージを取得します。\n"
+
 #. TRANSLATORS: def Exception.format_stacktrace(trace \\ nil)
 #: lib/exception.ex:372
 msgid ""
@@ -223,11 +233,6 @@ msgstr ""
 "reason、呼び出し側、スタックトレースを上手く示す方法でフォーマットしま\n"
 "す。\n"
 
-#. TRANSLATORS: def Exception.message(exception)
-#: lib/exception.ex:44
-msgid "Gets the message for an exception.\n"
-msgstr "例外のメッセージを取得します。\n"
-
 #. TRANSLATORS: Elixir.Exception Summary
 #: lib/exception.ex:2
 msgid ""
@@ -257,8 +262,3 @@ msgstr ""
 "言い替えると、このモジュールの関数を用いることによって、現在使\n"
 "われているのElixirのバージョンに合せて例外をフォーマットするこ\n"
 "とが保証されます。\n"
-
-#. TRANSLATORS: def Exception.exception?(term)
-#: lib/exception.ex:34
-msgid "Returns `true` if the given `term` is an exception.\n"
-msgstr "与えられた`term`が例外ならtrueを返します。\n"

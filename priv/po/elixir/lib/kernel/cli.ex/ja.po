@@ -10,6 +10,11 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
+#. TRANSLATORS: def Kernel.CLI.main(argv)
+#: lib/kernel/cli.ex:8
+msgid "This is the API invoked by Elixir boot process.\n"
+msgstr "これはElixirブートプロセスにより実行されるAPIです。\n"
+
 #. TRANSLATORS: def Kernel.CLI.run(fun, halt \\ true)
 #: lib/kernel/cli.ex:27
 msgid ""
@@ -25,8 +30,3 @@ msgstr ""
 "\n"
 "この関数はElixir CLIと、Elixirにより生成されたescriptによって使用されま\n"
 "す。\n"
-
-#. TRANSLATORS: def Kernel.CLI.main(argv)
-#: lib/kernel/cli.ex:8
-msgid "This is the API invoked by Elixir boot process.\n"
-msgstr "これはElixirブートプロセスにより実行されるAPIです。\n"

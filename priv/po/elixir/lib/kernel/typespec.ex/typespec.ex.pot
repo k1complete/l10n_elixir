@@ -20,17 +20,6 @@ msgid ""
 "The module must have a corresponding beam file which can be\n"
 "located by the runtime system.\n"
 msgstr ""
-#. TRANSLATORS: def Kernel.Typespec.beam_callbacks(module)
-#: lib/kernel/typespec.ex:427 
-msgid ""
-"Returns all callbacks available from the module's beam code.\n"
-"\n"
-"The result is returned as a list of tuples where the first\n"
-"element is spec name and arity and the second is the spec.\n"
-"\n"
-"The module must have a corresponding beam file\n"
-"which can be located by the runtime system.\n"
-msgstr ""
 #. TRANSLATORS: def Kernel.Typespec.defines_type?(module, name, arity)
 #: lib/kernel/typespec.ex:277 
 msgid ""
@@ -49,6 +38,103 @@ msgstr ""
 msgid ""
 "Returns `true` if the current module defines a callback.\n"
 "This function is only available for modules being compiled.\n"
+msgstr ""
+#. TRANSLATORS: def Kernel.Typespec.beam_callbacks(module)
+#: lib/kernel/typespec.ex:427 
+msgid ""
+"Returns all callbacks available from the module's beam code.\n"
+"\n"
+"The result is returned as a list of tuples where the first\n"
+"element is spec name and arity and the second is the spec.\n"
+"\n"
+"The module must have a corresponding beam file\n"
+"which can be located by the runtime system.\n"
+msgstr ""
+#. TRANSLATORS: defmacro Kernel.Typespec.defmacrocallback(spec)
+#: lib/kernel/typespec.ex:248 
+msgid ""
+"Defines a macro callback.\n"
+"This macro is responsible for handling the attribute `@macrocallback`.\n"
+"\n"
+"## Examples\n"
+"\n"
+"    @macrocallback add(number, number) :: Macro.t\n"
+"\n"
+msgstr ""
+#. TRANSLATORS: defmacro Kernel.Typespec.defcallback(spec)
+#: lib/kernel/typespec.ex:232 
+msgid ""
+"Defines a callback.\n"
+"This macro is responsible for handling the attribute `@callback`.\n"
+"\n"
+"## Examples\n"
+"\n"
+"    @callback add(number, number) :: number\n"
+"\n"
+msgstr ""
+#. TRANSLATORS: def Kernel.Typespec.define_type(kind, expr, doc \\ nil, env)
+#: lib/kernel/typespec.ex:263 
+msgid ""
+"Defines a `type`, `typep` or `opaque` by receiving a typespec expression.\n"
+msgstr ""
+#. TRANSLATORS: def Kernel.Typespec.define_spec(kind, expr, env)
+#: lib/kernel/typespec.ex:270 
+msgid ""
+"Defines a `spec` by receiving a typespec expression.\n"
+msgstr ""
+#. TRANSLATORS: defmacro Kernel.Typespec.deftypep(type)
+#: lib/kernel/typespec.ex:202 
+msgid ""
+"Defines a private type.\n"
+"This macro is responsible for handling the attribute `@typep`.\n"
+"\n"
+"## Examples\n"
+"\n"
+"    @typep my_type :: atom\n"
+"\n"
+msgstr ""
+#. TRANSLATORS: defmacro Kernel.Typespec.defopaque(type)
+#: lib/kernel/typespec.ex:187 
+msgid ""
+"Defines an opaque type.\n"
+"This macro is responsible for handling the attribute `@opaque`.\n"
+"\n"
+"## Examples\n"
+"\n"
+"    @opaque my_type :: atom\n"
+"\n"
+msgstr ""
+#. TRANSLATORS: defmacro Kernel.Typespec.deftype(type)
+#: lib/kernel/typespec.ex:172 
+msgid ""
+"Defines a type.\n"
+"This macro is responsible for handling the attribute `@type`.\n"
+"\n"
+"## Examples\n"
+"\n"
+"    @type my_type :: atom\n"
+"\n"
+msgstr ""
+#. TRANSLATORS: defmacro Kernel.Typespec.defspec(spec)
+#: lib/kernel/typespec.ex:217 
+msgid ""
+"Defines a spec.\n"
+"This macro is responsible for handling the attribute `@spec`.\n"
+"\n"
+"## Examples\n"
+"\n"
+"    @spec add(number, number) :: number\n"
+"\n"
+msgstr ""
+#. TRANSLATORS: def Kernel.Typespec.spec_to_ast(name, spec)
+#: lib/kernel/typespec.ex:312 
+msgid ""
+"Converts a spec clause back to Elixir AST.\n"
+msgstr ""
+#. TRANSLATORS: def Kernel.Typespec.type_to_ast(type)
+#: lib/kernel/typespec.ex:360 
+msgid ""
+"Converts a type clause back to Elixir AST.\n"
 msgstr ""
 #. TRANSLATORS: Elixir.Kernel.Typespec Summary
 #: lib/kernel/typespec.ex:2 
@@ -220,90 +306,4 @@ msgid ""
 "\n"
 "If you want to refer to the \"string\" type (the one operated on by functions in\n"
 "the `String` module), use `String.t` type instead.\n"
-msgstr ""
-#. TRANSLATORS: defmacro Kernel.Typespec.deftypep(type)
-#: lib/kernel/typespec.ex:202 
-msgid ""
-"Defines a private type.\n"
-"This macro is responsible for handling the attribute `@typep`.\n"
-"\n"
-"## Examples\n"
-"\n"
-"    @typep my_type :: atom\n"
-"\n"
-msgstr ""
-#. TRANSLATORS: defmacro Kernel.Typespec.defmacrocallback(spec)
-#: lib/kernel/typespec.ex:248 
-msgid ""
-"Defines a macro callback.\n"
-"This macro is responsible for handling the attribute `@macrocallback`.\n"
-"\n"
-"## Examples\n"
-"\n"
-"    @macrocallback add(number, number) :: Macro.t\n"
-"\n"
-msgstr ""
-#. TRANSLATORS: defmacro Kernel.Typespec.defcallback(spec)
-#: lib/kernel/typespec.ex:232 
-msgid ""
-"Defines a callback.\n"
-"This macro is responsible for handling the attribute `@callback`.\n"
-"\n"
-"## Examples\n"
-"\n"
-"    @callback add(number, number) :: number\n"
-"\n"
-msgstr ""
-#. TRANSLATORS: def Kernel.Typespec.define_type(kind, expr, doc \\ nil, env)
-#: lib/kernel/typespec.ex:263 
-msgid ""
-"Defines a `type`, `typep` or `opaque` by receiving a typespec expression.\n"
-msgstr ""
-#. TRANSLATORS: def Kernel.Typespec.define_spec(kind, expr, env)
-#: lib/kernel/typespec.ex:270 
-msgid ""
-"Defines a `spec` by receiving a typespec expression.\n"
-msgstr ""
-#. TRANSLATORS: defmacro Kernel.Typespec.defopaque(type)
-#: lib/kernel/typespec.ex:187 
-msgid ""
-"Defines an opaque type.\n"
-"This macro is responsible for handling the attribute `@opaque`.\n"
-"\n"
-"## Examples\n"
-"\n"
-"    @opaque my_type :: atom\n"
-"\n"
-msgstr ""
-#. TRANSLATORS: defmacro Kernel.Typespec.deftype(type)
-#: lib/kernel/typespec.ex:172 
-msgid ""
-"Defines a type.\n"
-"This macro is responsible for handling the attribute `@type`.\n"
-"\n"
-"## Examples\n"
-"\n"
-"    @type my_type :: atom\n"
-"\n"
-msgstr ""
-#. TRANSLATORS: defmacro Kernel.Typespec.defspec(spec)
-#: lib/kernel/typespec.ex:217 
-msgid ""
-"Defines a spec.\n"
-"This macro is responsible for handling the attribute `@spec`.\n"
-"\n"
-"## Examples\n"
-"\n"
-"    @spec add(number, number) :: number\n"
-"\n"
-msgstr ""
-#. TRANSLATORS: def Kernel.Typespec.spec_to_ast(name, spec)
-#: lib/kernel/typespec.ex:312 
-msgid ""
-"Converts a spec clause back to Elixir AST.\n"
-msgstr ""
-#. TRANSLATORS: def Kernel.Typespec.type_to_ast(type)
-#: lib/kernel/typespec.ex:360 
-msgid ""
-"Converts a type clause back to Elixir AST.\n"
 msgstr ""

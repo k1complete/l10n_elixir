@@ -11,94 +11,39 @@ msgstr ""
 "Plural-Forms: nplurals=1; plural=0;\n"
 
 #. TRANSLATORS: @type spec
-#: lib/supervisor/spec.ex:0
+#: lib/supervisor/spec.ex:122
 msgid "The supervisor specification"
 msgstr "スーパバイザの仕様(specification)"
 
 #. TRANSLATORS: @type worker
-#: lib/supervisor/spec.ex:0
+#: lib/supervisor/spec.ex:113
 msgid "Supported worker values"
 msgstr "workerでサポートされる値"
 
 #. TRANSLATORS: @type strategy
-#: lib/supervisor/spec.ex:0
+#: lib/supervisor/spec.ex:104
 msgid "Supported strategies"
 msgstr "strategyでサポートされる値"
 
 #. TRANSLATORS: @type shutdown
-#: lib/supervisor/spec.ex:0
+#: lib/supervisor/spec.ex:110
 msgid "Supported shutdown values"
 msgstr "shutdownでサポートされる値"
 
 #. TRANSLATORS: @type restart
-#: lib/supervisor/spec.ex:0
+#: lib/supervisor/spec.ex:107
 msgid "Supported restart values"
 msgstr "restartでサポートされる値"
 
 #. TRANSLATORS: @type modules
-#: lib/supervisor/spec.ex:0
+#: lib/supervisor/spec.ex:116
 msgid "Supported module values"
 msgstr "moduleでサポートされる値"
 
 #. TRANSLATORS: @type child_id
-#: lib/supervisor/spec.ex:0
+#: lib/supervisor/spec.ex:119
 msgid "Supported id values"
 msgstr "idでサポートされる値"
-
-#. TRANSLATORS: def Supervisor.Spec.supervise(children, options)
-#: lib/supervisor/spec.ex:130
-msgid ""
-"Receives a list of children (workers or supervisors) to\n"
-"supervise and a set of options.\n"
-"\n"
-"Returns a tuple containing the supervisor specification.\n"
-"\n"
-"## Examples\n"
-"\n"
-"    supervise children, strategy: :one_for_one\n"
-"\n"
-"## Options\n"
-"\n"
-"  * `:strategy` - the restart strategy option. It can be either\n"
-"    `:one_for_one`, `:rest_for_one`, `:one_for_all`, or\n"
-"    `:simple_one_for_one`. You can learn more about strategies\n"
-"    in the `Supervisor` module docs.\n"
-"\n"
-"  * `:max_restarts` - the maximum amount of restarts allowed in\n"
-"    a time frame. Defaults to 3.\n"
-"\n"
-"  * `:max_seconds` - the time frame in which `:max_restarts` applies.\n"
-"    Defaults to 5.\n"
-"\n"
-"The `:strategy` option is required and by default maximum 3 restarts\n"
-"are allowed within 5 seconds. Please check the `Supervisor` module for\n"
-"a complete description of the available strategies.\n"
-msgstr ""
-"監督対象の子(workerかsupervisor)のリストと、オプション\n"
-"を受け取ります。\n"
-"\n"
-"スーパバイザ仕様を含んだタプルを返します。\n"
-"\n"
-"## 例\n"
-"\n"
-"    supervise children, strategy: :one_for_one\n"
-"\n"
-"## Options\n"
-"\n"
-"  * `:strategy` - 再起動戦略オプション。取り得る値は、\n"
-"    `:one_for_one`、 `:rest_for_one`、 `:one_for_all`、あるいは\n"
-"    `:simple_one_for_one`です。`Supervisor`モジュールドキュメントで\n"
-"     戦略についてより多く学ぶことができます。\n"
-"\n"
-"  * `:max_restarts` - 1フレームの間の再起動の回数の最大値です。\n"
-"     デフォルトは3です。\n"
-"\n"
-"  * `:max_seconds` - `:max_restarts`を適用する1フレームの秒数です。\n"
-"     デフォルトは5です。\n"
-"\n"
-"`:strategy`オプションは必要とされます。そして、デフォルトでは5秒\n"
-"間に3回のリスタートが許されます。有効な戦略の完全な説明は、\n"
-"`Supervisor`モジュールをチェックしてください。\n"
 
 #. TRANSLATORS: def Supervisor.Spec.worker(module, args, options \\ [])
 #: lib/supervisor/spec.ex:186
@@ -379,3 +324,58 @@ msgstr ""
 "    もしexitシグナルが指定された時間(ミリ秒)に受信されないなら、\n"
 "    子プロセスは無条件に`Process.exit(child, :kill)`を使って終了\n"
 "    されます。\n"
+
+#. TRANSLATORS: def Supervisor.Spec.supervise(children, options)
+#: lib/supervisor/spec.ex:130
+msgid ""
+"Receives a list of children (workers or supervisors) to\n"
+"supervise and a set of options.\n"
+"\n"
+"Returns a tuple containing the supervisor specification.\n"
+"\n"
+"## Examples\n"
+"\n"
+"    supervise children, strategy: :one_for_one\n"
+"\n"
+"## Options\n"
+"\n"
+"  * `:strategy` - the restart strategy option. It can be either\n"
+"    `:one_for_one`, `:rest_for_one`, `:one_for_all`, or\n"
+"    `:simple_one_for_one`. You can learn more about strategies\n"
+"    in the `Supervisor` module docs.\n"
+"\n"
+"  * `:max_restarts` - the maximum amount of restarts allowed in\n"
+"    a time frame. Defaults to 3.\n"
+"\n"
+"  * `:max_seconds` - the time frame in which `:max_restarts` applies.\n"
+"    Defaults to 5.\n"
+"\n"
+"The `:strategy` option is required and by default maximum 3 restarts\n"
+"are allowed within 5 seconds. Please check the `Supervisor` module for\n"
+"a complete description of the available strategies.\n"
+msgstr ""
+"監督対象の子(workerかsupervisor)のリストと、オプション\n"
+"を受け取ります。\n"
+"\n"
+"スーパバイザ仕様を含んだタプルを返します。\n"
+"\n"
+"## 例\n"
+"\n"
+"    supervise children, strategy: :one_for_one\n"
+"\n"
+"## Options\n"
+"\n"
+"  * `:strategy` - 再起動戦略オプション。取り得る値は、\n"
+"    `:one_for_one`、 `:rest_for_one`、 `:one_for_all`、あるいは\n"
+"    `:simple_one_for_one`です。`Supervisor`モジュールドキュメントで\n"
+"     戦略についてより多く学ぶことができます。\n"
+"\n"
+"  * `:max_restarts` - 1フレームの間の再起動の回数の最大値です。\n"
+"     デフォルトは3です。\n"
+"\n"
+"  * `:max_seconds` - `:max_restarts`を適用する1フレームの秒数です。\n"
+"     デフォルトは5です。\n"
+"\n"
+"`:strategy`オプションは必要とされます。そして、デフォルトでは5秒\n"
+"間に3回のリスタートが許されます。有効な戦略の完全な説明は、\n"
+"`Supervisor`モジュールをチェックしてください。\n"

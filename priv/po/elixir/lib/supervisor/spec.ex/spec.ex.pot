@@ -1,66 +1,37 @@
 #. TRANSLATORS: @type spec
-#: lib/supervisor/spec.ex:0 
+#: lib/supervisor/spec.ex:122 
 msgid ""
 "The supervisor specification"
 msgstr ""
 #. TRANSLATORS: @type worker
-#: lib/supervisor/spec.ex:0 
+#: lib/supervisor/spec.ex:113 
 msgid ""
 "Supported worker values"
 msgstr ""
 #. TRANSLATORS: @type strategy
-#: lib/supervisor/spec.ex:0 
+#: lib/supervisor/spec.ex:104 
 msgid ""
 "Supported strategies"
 msgstr ""
 #. TRANSLATORS: @type shutdown
-#: lib/supervisor/spec.ex:0 
+#: lib/supervisor/spec.ex:110 
 msgid ""
 "Supported shutdown values"
 msgstr ""
 #. TRANSLATORS: @type restart
-#: lib/supervisor/spec.ex:0 
+#: lib/supervisor/spec.ex:107 
 msgid ""
 "Supported restart values"
 msgstr ""
 #. TRANSLATORS: @type modules
-#: lib/supervisor/spec.ex:0 
+#: lib/supervisor/spec.ex:116 
 msgid ""
 "Supported module values"
 msgstr ""
 #. TRANSLATORS: @type child_id
-#: lib/supervisor/spec.ex:0 
+#: lib/supervisor/spec.ex:119 
 msgid ""
 "Supported id values"
-msgstr ""
-#. TRANSLATORS: def Supervisor.Spec.supervise(children, options)
-#: lib/supervisor/spec.ex:130 
-msgid ""
-"Receives a list of children (workers or supervisors) to\n"
-"supervise and a set of options.\n"
-"\n"
-"Returns a tuple containing the supervisor specification.\n"
-"\n"
-"## Examples\n"
-"\n"
-"    supervise children, strategy: :one_for_one\n"
-"\n"
-"## Options\n"
-"\n"
-"  * `:strategy` - the restart strategy option. It can be either\n"
-"    `:one_for_one`, `:rest_for_one`, `:one_for_all`, or\n"
-"    `:simple_one_for_one`. You can learn more about strategies\n"
-"    in the `Supervisor` module docs.\n"
-"\n"
-"  * `:max_restarts` - the maximum amount of restarts allowed in\n"
-"    a time frame. Defaults to 3.\n"
-"\n"
-"  * `:max_seconds` - the time frame in which `:max_restarts` applies.\n"
-"    Defaults to 5.\n"
-"\n"
-"The `:strategy` option is required and by default maximum 3 restarts\n"
-"are allowed within 5 seconds. Please check the `Supervisor` module for\n"
-"a complete description of the available strategies.\n"
 msgstr ""
 #. TRANSLATORS: def Supervisor.Spec.worker(module, args, options \\ [])
 #: lib/supervisor/spec.ex:186 
@@ -204,4 +175,33 @@ msgid ""
 "    and then waits for an exit signal back. If no exit signal is received\n"
 "    within the specified time (in milliseconds), the child process is\n"
 "    unconditionally terminated using `Process.exit(child, :kill)`.\n"
+msgstr ""
+#. TRANSLATORS: def Supervisor.Spec.supervise(children, options)
+#: lib/supervisor/spec.ex:130 
+msgid ""
+"Receives a list of children (workers or supervisors) to\n"
+"supervise and a set of options.\n"
+"\n"
+"Returns a tuple containing the supervisor specification.\n"
+"\n"
+"## Examples\n"
+"\n"
+"    supervise children, strategy: :one_for_one\n"
+"\n"
+"## Options\n"
+"\n"
+"  * `:strategy` - the restart strategy option. It can be either\n"
+"    `:one_for_one`, `:rest_for_one`, `:one_for_all`, or\n"
+"    `:simple_one_for_one`. You can learn more about strategies\n"
+"    in the `Supervisor` module docs.\n"
+"\n"
+"  * `:max_restarts` - the maximum amount of restarts allowed in\n"
+"    a time frame. Defaults to 3.\n"
+"\n"
+"  * `:max_seconds` - the time frame in which `:max_restarts` applies.\n"
+"    Defaults to 5.\n"
+"\n"
+"The `:strategy` option is required and by default maximum 3 restarts\n"
+"are allowed within 5 seconds. Please check the `Supervisor` module for\n"
+"a complete description of the available strategies.\n"
 msgstr ""

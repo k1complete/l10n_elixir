@@ -14,6 +14,27 @@ msgid ""
 "Sets the group leader of `pid` to `leader`. Typically, this is used when a processes\n"
 "started from a certain shell should have a group leader other than `:init`.\n"
 msgstr ""
+#. TRANSLATORS: def Process.put(key, value)
+#: lib/process.ex:58 
+msgid ""
+"Stores the given key-value in the process dictionary.\n"
+msgstr ""
+#. TRANSLATORS: def Process.spawn(mod, fun, args, opts)
+#: lib/process.ex:179 
+msgid ""
+"Spawns the given module and function passing the given args\n"
+"according to the given options.\n"
+"\n"
+"The result depends on the given options. In particular,\n"
+"if `:monitor` is given as an option, it will return a tuple\n"
+"containing the pid and the monitoring reference, otherwise\n"
+"just the spawned process pid.\n"
+"\n"
+"It also accepts extra options, for the list of available options\n"
+"check http://www.erlang.org/doc/man/erlang.html#spawn_opt-4\n"
+"\n"
+"Inlined by the compiler.\n"
+msgstr ""
 #. TRANSLATORS: def Process.flag(flag, value)
 #: lib/process.ex:331 
 msgid ""
@@ -59,22 +80,6 @@ msgid ""
 "    Process.exit(pid, :kill)\n"
 "\n"
 msgstr ""
-#. TRANSLATORS: def Process.spawn(mod, fun, args, opts)
-#: lib/process.ex:179 
-msgid ""
-"Spawns the given module and function passing the given args\n"
-"according to the given options.\n"
-"\n"
-"The result depends on the given options. In particular,\n"
-"if `:monitor` is given as an option, it will return a tuple\n"
-"containing the pid and the monitoring reference, otherwise\n"
-"just the spawned process pid.\n"
-"\n"
-"It also accepts extra options, for the list of available options\n"
-"check http://www.erlang.org/doc/man/erlang.html#spawn_opt-4\n"
-"\n"
-"Inlined by the compiler.\n"
-msgstr ""
 #. TRANSLATORS: def Process.send(dest, msg, options)
 #: lib/process.ex:105 
 msgid ""
@@ -119,20 +124,18 @@ msgstr ""
 msgid ""
 "Returns the value for the given `key`.\n"
 msgstr ""
-#. TRANSLATORS: def Process.put(key, value)
-#: lib/process.ex:58 
+#. TRANSLATORS: def Process.whereis(name)
+#: lib/process.ex:292 
 msgid ""
-"Stores the given key-value in the process dictionary.\n"
+"Returns the pid or port identifier with the registered name.\n"
+"Returns `nil` if the name is not registered.\n"
+"\n"
+"See http://www.erlang.org/doc/man/erlang.html#whereis-1 for more info.\n"
 msgstr ""
-#. TRANSLATORS: def Process.get_keys(value)
-#: lib/process.ex:50 
+#. TRANSLATORS: def Process.group_leader()
+#: lib/process.ex:303 
 msgid ""
-"Returns all keys that have the given `value`.\n"
-msgstr ""
-#. TRANSLATORS: def Process.get()
-#: lib/process.ex:28 
-msgid ""
-"Returns all key-values in the dictionary.\n"
+"Returns the pid of the group leader for the process which evaluates the function.\n"
 msgstr ""
 #. TRANSLATORS: def Process.info(pid)
 #: lib/process.ex:354 
@@ -151,6 +154,16 @@ msgid ""
 "\n"
 "See http://www.erlang.org/doc/man/erlang.html#process_info-2 for more info.\n"
 msgstr ""
+#. TRANSLATORS: def Process.get_keys(value)
+#: lib/process.ex:50 
+msgid ""
+"Returns all keys that have the given `value`.\n"
+msgstr ""
+#. TRANSLATORS: def Process.get()
+#: lib/process.ex:28 
+msgid ""
+"Returns all key-values in the dictionary.\n"
+msgstr ""
 #. TRANSLATORS: def Process.list()
 #: lib/process.ex:226 
 msgid ""
@@ -167,6 +180,14 @@ msgstr ""
 #: lib/process.ex:320 
 msgid ""
 "Returns a list of names which have been registered using `register/2`.\n"
+msgstr ""
+#. TRANSLATORS: def Process.alive?(pid)
+#: lib/process.ex:17 
+msgid ""
+"Returns `true` if the process exists and is alive (i.e. it is not exiting\n"
+"and has not exited yet). Otherwise, returns `false`.\n"
+"\n"
+"`pid` must refer to a process at the local node.\n"
 msgstr ""
 #. TRANSLATORS: def Process.unregister(name)
 #: lib/process.ex:282 
@@ -214,24 +235,6 @@ msgstr ""
 msgid ""
 "Deletes the given `key` from the dictionary.\n"
 msgstr ""
-#. TRANSLATORS: def Process.link(pid)
-#: lib/process.ex:241 
-msgid ""
-"Creates a link between the calling process and another process\n"
-"(or port) `pid`, if there is not such a link already.\n"
-"\n"
-"See http://www.erlang.org/doc/man/erlang.html#link-1 for more info.\n"
-"\n"
-"Inlined by the compiler.\n"
-msgstr ""
-#. TRANSLATORS: def Process.alive?(pid)
-#: lib/process.ex:17 
-msgid ""
-"Returns `true` if the process exists and is alive (i.e. it is not exiting\n"
-"and has not exited yet). Otherwise, returns `false`.\n"
-"\n"
-"`pid` must refer to a process at the local node.\n"
-msgstr ""
 #. TRANSLATORS: Elixir.Process Summary
 #: lib/process.ex:2 
 msgid ""
@@ -248,6 +251,16 @@ msgid ""
 "  * `Kernel.send/2`\n"
 "\n"
 msgstr ""
+#. TRANSLATORS: def Process.link(pid)
+#: lib/process.ex:241 
+msgid ""
+"Creates a link between the calling process and another process\n"
+"(or port) `pid`, if there is not such a link already.\n"
+"\n"
+"See http://www.erlang.org/doc/man/erlang.html#link-1 for more info.\n"
+"\n"
+"Inlined by the compiler.\n"
+msgstr ""
 #. TRANSLATORS: def Process.register(pid, name)
 #: lib/process.ex:268 
 msgid ""
@@ -258,17 +271,4 @@ msgid ""
 "`Process.register/2` will fail with `ArgumentError` if the pid supplied\n"
 "is no longer alive, (check with `alive?/1`) or if the name is\n"
 "already registered (check with `whereis/1`).\n"
-msgstr ""
-#. TRANSLATORS: def Process.whereis(name)
-#: lib/process.ex:292 
-msgid ""
-"Returns the pid or port identifier with the registered name.\n"
-"Returns `nil` if the name is not registered.\n"
-"\n"
-"See http://www.erlang.org/doc/man/erlang.html#whereis-1 for more info.\n"
-msgstr ""
-#. TRANSLATORS: def Process.group_leader()
-#: lib/process.ex:303 
-msgid ""
-"Returns the pid of the group leader for the process which evaluates the function.\n"
 msgstr ""

@@ -10,21 +10,6 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
-#. TRANSLATORS: @type state
-#: lib/agent.ex:0
-msgid "The agent state"
-msgstr "エージェントのステート"
-
-#. TRANSLATORS: @type agent
-#: lib/agent.ex:0
-msgid "The agent reference"
-msgstr "エージェントのリファレンス"
-
-#. TRANSLATORS: @type name
-#: lib/agent.ex:0
-msgid "The agent name"
-msgstr "エージェントの名前"
-
 #. TRANSLATORS: def Agent.update(agent, fun, timeout \\ 5000)
 #: lib/agent.ex:245
 msgid ""
@@ -58,6 +43,21 @@ msgstr ""
 "\n"
 "`update/3`と同じですが、無名関数のかわりにモジュール、関数、引数を指定\n"
 "します。ステートは与えられた引数リストの最初の引数として追加されます。\n"
+
+#. TRANSLATORS: @type state
+#: lib/agent.ex:117
+msgid "The agent state"
+msgstr "エージェントのステート"
+
+#. TRANSLATORS: @type agent
+#: lib/agent.ex:114
+msgid "The agent reference"
+msgstr "エージェントのリファレンス"
+
+#. TRANSLATORS: @type name
+#: lib/agent.ex:111
+msgid "The agent name"
+msgstr "エージェントの名前"
 
 #. TRANSLATORS: def Agent.stop(agent, timeout \\ 5000)
 #: lib/agent.ex:297
@@ -164,7 +164,8 @@ msgstr ""
 "許可します。あるいは、エージェントの起動は終了させられて、\n"
 "スタート関数は`{:error, :timeout}`を返します。\n"
 "\n"
-"`:debug`オプションがあると、[`:sys` モジュール](http://www.erlang.org/doc/man/sys.html) で対応する関数が起動されます。\n"
+"`:debug`オプションがあると、[`:sys` モジュール](http://www.erlang.org/doc/"
+"man/sys.html) で対応する関数が起動されます。\n"
 "\n"
 "`:spawn_opt`があると、その値は`Process.spawn/4`のように根底にある\n"
 "プロセスまでオプションとして渡されます。\n"

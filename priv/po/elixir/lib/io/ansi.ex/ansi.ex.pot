@@ -153,15 +153,30 @@ msgstr ""
 msgid ""
 "Normal color or intensity"
 msgstr ""
-#. TRANSLATORS: def IO.ANSI.faint()
-#: lib/io/ansi.ex:50 
+#. TRANSLATORS: def IO.ANSI.clear()
+#: lib/io/ansi.ex:131 
 msgid ""
-"Faint (decreased intensity), not widely supported"
+"Clear screen"
 msgstr ""
 #. TRANSLATORS: def IO.ANSI.italic()
 #: lib/io/ansi.ex:53 
 msgid ""
 "Italic: on. Not widely supported. Sometimes treated as inverse."
+msgstr ""
+#. TRANSLATORS: def IO.ANSI.reverse()
+#: lib/io/ansi.ex:68 
+msgid ""
+"Image: Negative. Swap foreground and background"
+msgstr ""
+#. TRANSLATORS: def IO.ANSI.faint()
+#: lib/io/ansi.ex:50 
+msgid ""
+"Faint (decreased intensity), not widely supported"
+msgstr ""
+#. TRANSLATORS: def IO.ANSI.encircled()
+#: lib/io/ansi.ex:116 
+msgid ""
+"Encircled"
 msgstr ""
 #. TRANSLATORS: def IO.ANSI.format(chardata, emit \\ enabled?)
 #: lib/io/ansi.ex:138 
@@ -202,31 +217,6 @@ msgid ""
 "    [[[[[[] | \"\\e[1m\"], 87], 111], 114], 100]\n"
 "\n"
 msgstr ""
-#. TRANSLATORS: def IO.ANSI.reverse()
-#: lib/io/ansi.ex:68 
-msgid ""
-"Image: Negative. Swap foreground and background"
-msgstr ""
-#. TRANSLATORS: def IO.ANSI.overlined()
-#: lib/io/ansi.ex:119 
-msgid ""
-"Overlined"
-msgstr ""
-#. TRANSLATORS: def IO.ANSI.not_overlined()
-#: lib/io/ansi.ex:125 
-msgid ""
-"Not overlined"
-msgstr ""
-#. TRANSLATORS: def IO.ANSI.not_italic()
-#: lib/io/ansi.ex:88 
-msgid ""
-"Not italic"
-msgstr ""
-#. TRANSLATORS: def IO.ANSI.not_framed_encircled()
-#: lib/io/ansi.ex:122 
-msgid ""
-"Not framed or encircled"
-msgstr ""
 #. TRANSLATORS: Elixir.IO.ANSI Summary
 #: lib/io/ansi.ex:18 
 msgid ""
@@ -239,11 +229,6 @@ msgstr ""
 #: lib/io/ansi.ex:113 
 msgid ""
 "Framed"
-msgstr ""
-#. TRANSLATORS: def IO.ANSI.encircled()
-#: lib/io/ansi.ex:116 
-msgid ""
-"Encircled"
 msgstr ""
 #. TRANSLATORS: def IO.ANSI.default_color()
 #: lib/io/ansi.ex:107 
@@ -265,15 +250,15 @@ msgstr ""
 msgid ""
 "Conceal. Not widely supported"
 msgstr ""
-#. TRANSLATORS: def IO.ANSI.clear()
-#: lib/io/ansi.ex:131 
-msgid ""
-"Clear screen"
-msgstr ""
 #. TRANSLATORS: def IO.ANSI.bright()
 #: lib/io/ansi.ex:47 
 msgid ""
 "Bright (increased intensity) or Bold"
+msgstr ""
+#. TRANSLATORS: def IO.ANSI.overlined()
+#: lib/io/ansi.ex:119 
+msgid ""
+"Overlined"
 msgstr ""
 #. TRANSLATORS: def IO.ANSI.blink_off()
 #: lib/io/ansi.ex:94 
@@ -289,6 +274,21 @@ msgstr ""
 #: lib/io/ansi.ex:62 
 msgid ""
 "Blink: Rapid. MS-DOS ANSI.SYS; 150 per minute or more; not widely supported"
+msgstr ""
+#. TRANSLATORS: def IO.ANSI.not_overlined()
+#: lib/io/ansi.ex:125 
+msgid ""
+"Not overlined"
+msgstr ""
+#. TRANSLATORS: def IO.ANSI.not_italic()
+#: lib/io/ansi.ex:88 
+msgid ""
+"Not italic"
+msgstr ""
+#. TRANSLATORS: def IO.ANSI.not_framed_encircled()
+#: lib/io/ansi.ex:122 
+msgid ""
+"Not framed or encircled"
 msgstr ""
 #. TRANSLATORS: def IO.ANSI.enabled?()
 #: lib/io/ansi.ex:31 

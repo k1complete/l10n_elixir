@@ -10,6 +10,11 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
+#. TRANSLATORS: def Macro.Env.stacktrace(env)
+#: lib/macro/env.ex:123
+msgid "Returns the environment stacktrace.\n"
+msgstr "その環境のスタックトレースを返します。\n"
+
 #. TRANSLATORS: def Macro.Env.in_match?(env)
 #: lib/macro/env.ex:115
 msgid ""
@@ -24,10 +29,14 @@ msgid ""
 "inside a guard.\n"
 msgstr "コンパイル環境が現在ガードの内部かどうかを返します。\n"
 
-#. TRANSLATORS: def Macro.Env.stacktrace(env)
-#: lib/macro/env.ex:123
-msgid "Returns the environment stacktrace.\n"
-msgstr "その環境のスタックトレースを返します。\n"
+#. TRANSLATORS: def Macro.Env.location(env)
+#: lib/macro/env.ex:97
+msgid ""
+"Returns a keyword list containing the file and line\n"
+"information as keys.\n"
+msgstr ""
+"引数から、キーとしてファイルと行番号情報を含むキーワードリストを返\n"
+"します。\n"
 
 #. TRANSLATORS: Elixir.Macro.Env Summary
 #: lib/macro/env.ex:2
@@ -116,12 +125,3 @@ msgstr ""
 "  * `lexical_tracker` - ユーザ情報を保つために責任があるレキシカル\n"
 "     トラッカーのpid\n"
 "  * `local` - ローカル関数を拡大するモジュール\n"
-
-#. TRANSLATORS: def Macro.Env.location(env)
-#: lib/macro/env.ex:97
-msgid ""
-"Returns a keyword list containing the file and line\n"
-"information as keys.\n"
-msgstr ""
-"引数から、キーとしてファイルと行番号情報を含むキーワードリストを返\n"
-"します。\n"

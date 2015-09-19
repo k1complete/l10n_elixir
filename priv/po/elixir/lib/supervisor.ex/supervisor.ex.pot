@@ -1,5 +1,5 @@
 #. TRANSLATORS: @type supervisor
-#: lib/supervisor.ex:0 
+#: lib/supervisor.ex:237 
 msgid ""
 "The supervisor reference"
 msgstr ""
@@ -56,7 +56,7 @@ msgid ""
 "Other failure conditions are specified in `start_link/2` docs.\n"
 msgstr ""
 #. TRANSLATORS: @type name
-#: lib/supervisor.ex:0 
+#: lib/supervisor.ex:228 
 msgid ""
 "The Supervisor name"
 msgstr ""
@@ -80,32 +80,13 @@ msgid ""
 "If successful, the function returns `:ok`. If there is no child specification or\n"
 "pid, the function returns `{:error, :not_found}`.\n"
 msgstr ""
-#. TRANSLATORS: def Supervisor.count_children(supervisor)
-#: lib/supervisor.ex:442 
-msgid ""
-"Returns a map containing count values for the supervisor.\n"
-"\n"
-"The map contains the following keys:\n"
-"\n"
-"  * `:specs` - the total count of children, dead or alive\n"
-"\n"
-"  * `:active` - the count of all actively running child processes managed by\n"
-"    this supervisor\n"
-"\n"
-"  * `:supervisors` - the count of all supervisors whether or not the child\n"
-"    process is still alive\n"
-"\n"
-"  * `:workers` - the count of all workers, whether or not the child process\n"
-"    is still alive\n"
-"\n"
-msgstr ""
 #. TRANSLATORS: @type on_start_child
-#: lib/supervisor.ex:0 
+#: lib/supervisor.ex:222 
 msgid ""
 "Return values of `start_child` functions"
 msgstr ""
 #. TRANSLATORS: @type on_start
-#: lib/supervisor.ex:0 
+#: lib/supervisor.ex:218 
 msgid ""
 "Return values of `start_link` functions"
 msgstr ""
@@ -135,24 +116,24 @@ msgid ""
 "\n"
 "This operation is not supported by `simple_one_for_one` supervisors.\n"
 msgstr ""
-#. TRANSLATORS: @type options
-#: lib/supervisor.ex:0 
+#. TRANSLATORS: def Supervisor.count_children(supervisor)
+#: lib/supervisor.ex:442 
 msgid ""
-"Options used by the `start*` functions"
-msgstr ""
-#. TRANSLATORS: def Supervisor.delete_child(supervisor, child_id)
-#: lib/supervisor.ex:365 
-msgid ""
-"Deletes the child specification identified by `child_id`.\n"
+"Returns a map containing count values for the supervisor.\n"
 "\n"
-"The corresponding child process must not be running, use `terminate_child/2`\n"
-"to terminate it.\n"
+"The map contains the following keys:\n"
 "\n"
-"If successful, the function returns `:ok`. This function may error with an\n"
-"appropriate error tuple if the `child_id` is not found, or if the current\n"
-"process is running or being restarted.\n"
+"  * `:specs` - the total count of children, dead or alive\n"
 "\n"
-"This operation is not supported by `simple_one_for_one` supervisors.\n"
+"  * `:active` - the count of all actively running child processes managed by\n"
+"    this supervisor\n"
+"\n"
+"  * `:supervisors` - the count of all supervisors whether or not the child\n"
+"    process is still alive\n"
+"\n"
+"  * `:workers` - the count of all workers, whether or not the child process\n"
+"    is still alive\n"
+"\n"
 msgstr ""
 #. TRANSLATORS: def Supervisor.start_child(supervisor, child_spec_or_args)
 #: lib/supervisor.ex:307 
@@ -184,6 +165,25 @@ msgid ""
 "or if it fails, the child specification is discarded and the function returns\n"
 "`{:error, error}` where `error` is a term containing information about the error\n"
 "and child specification.\n"
+msgstr ""
+#. TRANSLATORS: def Supervisor.delete_child(supervisor, child_id)
+#: lib/supervisor.ex:365 
+msgid ""
+"Deletes the child specification identified by `child_id`.\n"
+"\n"
+"The corresponding child process must not be running, use `terminate_child/2`\n"
+"to terminate it.\n"
+"\n"
+"If successful, the function returns `:ok`. This function may error with an\n"
+"appropriate error tuple if the `child_id` is not found, or if the current\n"
+"process is running or being restarted.\n"
+"\n"
+"This operation is not supported by `simple_one_for_one` supervisors.\n"
+msgstr ""
+#. TRANSLATORS: @type options
+#: lib/supervisor.ex:231 
+msgid ""
+"Options used by the `start*` functions"
 msgstr ""
 #. TRANSLATORS: def Supervisor.which_children(supervisor)
 #: lib/supervisor.ex:414 
