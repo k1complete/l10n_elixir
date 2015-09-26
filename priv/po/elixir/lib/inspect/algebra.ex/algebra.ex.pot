@@ -1,5 +1,5 @@
 #. TRANSLATORS: def Inspect.Algebra.format(d, w)
-#: lib/inspect/algebra.ex:511 
+#: lib/inspect/algebra.ex:513 
 msgid ""
 "The formatting function.\n"
 "\n"
@@ -8,7 +8,7 @@ msgid ""
 "document to fit in the given width.\n"
 msgstr ""
 #. TRANSLATORS: def Inspect.Algebra.surround(left, doc, right)
-#: lib/inspect/algebra.ex:421 
+#: lib/inspect/algebra.ex:423 
 msgid ""
 "Surrounds a document with characters.\n"
 "\n"
@@ -24,7 +24,7 @@ msgid ""
 "\n"
 msgstr ""
 #. TRANSLATORS: def Inspect.Algebra.empty()
-#: lib/inspect/algebra.ex:243 
+#: lib/inspect/algebra.ex:245 
 msgid ""
 "Returns a document entity used to represent nothingness.\n"
 "\n"
@@ -35,7 +35,7 @@ msgid ""
 "\n"
 msgstr ""
 #. TRANSLATORS: def Inspect.Algebra.group(d)
-#: lib/inspect/algebra.ex:341 
+#: lib/inspect/algebra.ex:343 
 msgid ""
 "Returns a group containing the specified document.\n"
 "\n"
@@ -69,7 +69,7 @@ msgid ""
 "Raised when a struct cannot be inspected.\n"
 msgstr ""
 #. TRANSLATORS: def Inspect.Algebra.nest(x, i)
-#: lib/inspect/algebra.ex:278 
+#: lib/inspect/algebra.ex:280 
 msgid ""
 "Nests document entity `x` positions deep.\n"
 "\n"
@@ -83,12 +83,12 @@ msgid ""
 "\n"
 msgstr ""
 #. TRANSLATORS: def Inspect.Algebra.concat(docs)
-#: lib/inspect/algebra.ex:270 
+#: lib/inspect/algebra.ex:272 
 msgid ""
 "Concatenates a list of documents.\n"
 msgstr ""
 #. TRANSLATORS: def Inspect.Algebra.surround_many(left, docs, right, opts, fun, separator \\ ",")
-#: lib/inspect/algebra.ex:440 
+#: lib/inspect/algebra.ex:442 
 msgid ""
 "Maps and glues a collection of items.\n"
 "\n"
@@ -114,7 +114,7 @@ msgid ""
 "    \"[1! 2! 3! ...]\"\n"
 msgstr ""
 #. TRANSLATORS: def Inspect.Algebra.space(x, y)
-#: lib/inspect/algebra.ex:373 
+#: lib/inspect/algebra.ex:375 
 msgid ""
 "Inserts a mandatory single space between two document entities.\n"
 "\n"
@@ -126,7 +126,7 @@ msgid ""
 "\n"
 msgstr ""
 #. TRANSLATORS: def Inspect.Algebra.line(x, y)
-#: lib/inspect/algebra.ex:386 
+#: lib/inspect/algebra.ex:388 
 msgid ""
 "Inserts a mandatory linebreak between two document entities.\n"
 "\n"
@@ -138,18 +138,34 @@ msgid ""
 "\n"
 msgstr ""
 #. TRANSLATORS: def Inspect.Algebra.glue(x, g, y)
-#: lib/inspect/algebra.ex:334 
+#: lib/inspect/algebra.ex:336 
 msgid ""
 "Inserts a break, passed as the second argument, between two docs,\n"
 "the first and the third arguments.\n"
 msgstr ""
 #. TRANSLATORS: def Inspect.Algebra.glue(x, y)
-#: lib/inspect/algebra.ex:328 
+#: lib/inspect/algebra.ex:330 
 msgid ""
 "Inserts a break between two docs. See `break/1` for more info.\n"
 msgstr ""
+#. TRANSLATORS: def Inspect.Algebra.fold_doc(list, fun)
+#: lib/inspect/algebra.ex:401 
+msgid ""
+"Folds a list of document entities into a document entity\n"
+"using a function that is passed as the first argument.\n"
+"\n"
+"## Examples\n"
+"\n"
+"    iex> doc = [\"A\", \"B\"]\n"
+"    iex> doc = Inspect.Algebra.fold_doc(doc, fn(x, y) ->\n"
+"    ...>   Inspect.Algebra.concat [x, \"!\", y]\n"
+"    ...> end)\n"
+"    iex> Inspect.Algebra.format(doc, 80)\n"
+"    [\"A\", \"!\", \"B\"]\n"
+"\n"
+msgstr ""
 #. TRANSLATORS: def Inspect.Algebra.break(s)
-#: lib/inspect/algebra.ex:299 
+#: lib/inspect/algebra.ex:301 
 msgid ""
 "Document entity representing a break.\n"
 "\n"
@@ -171,22 +187,6 @@ msgid ""
 "    iex> doc = Inspect.Algebra.glue(String.duplicate(\"a\", 20), \" \", \"b\")\n"
 "    iex> Inspect.Algebra.format(doc, 10)\n"
 "    [\"aaaaaaaaaaaaaaaaaaaa\", \"\\n\", \"b\"]\n"
-"\n"
-msgstr ""
-#. TRANSLATORS: def Inspect.Algebra.fold_doc(list, fun)
-#: lib/inspect/algebra.ex:399 
-msgid ""
-"Folds a list of document entities into a document entity\n"
-"using a function that is passed as the first argument.\n"
-"\n"
-"## Examples\n"
-"\n"
-"    iex> doc = [\"A\", \"B\"]\n"
-"    iex> doc = Inspect.Algebra.fold_doc(doc, fn(x, y) ->\n"
-"    ...>   Inspect.Algebra.concat [x, \"!\", y]\n"
-"    ...> end)\n"
-"    iex> Inspect.Algebra.format(doc, 80)\n"
-"    [\"A\", \"!\", \"B\"]\n"
 "\n"
 msgstr ""
 #. TRANSLATORS: Elixir.Inspect.Opts Summary
@@ -234,13 +234,13 @@ msgid ""
 "\n"
 msgstr ""
 #. TRANSLATORS: def Inspect.Algebra.to_doc(map, opts)
-#: lib/inspect/algebra.ex:191 
+#: lib/inspect/algebra.ex:193 
 msgid ""
 "Converts an Elixir structure to an algebra document\n"
 "according to the inspect protocol.\n"
 msgstr ""
 #. TRANSLATORS: def Inspect.Algebra.concat(x, y)
-#: lib/inspect/algebra.ex:255 
+#: lib/inspect/algebra.ex:257 
 msgid ""
 "Concatenates two document entities.\n"
 "\n"
@@ -255,10 +255,12 @@ msgstr ""
 #: lib/inspect/algebra.ex:73 
 msgid ""
 "A set of functions for creating and manipulating algebra\n"
-"documents, as described in [\"Strictly Pretty\" (2000) by Christian Lindig][0].\n"
+"documents.\n"
 "\n"
-"An algebra document is represented by an `Inspect.Algebra` node\n"
-"or a regular string.\n"
+"This module implements the functionality described in\n"
+"[\"Strictly Pretty\" (2000) by Christian Lindig][0] with small\n"
+"additions, like support for String nodes, and a custom\n"
+"rendering function that maximises horizontal space use. \n"
 "\n"
 "    iex> Inspect.Algebra.empty\n"
 "    :doc_nil\n"

@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: l 10n_elixir\n"
-"PO-Revision-Date: 2015-09-10 23:01+0900\n"
+"PO-Revision-Date: 2015-09-25 23:28+0900\n"
 "Last-Translator: 小田 照敬 <EMAIL@ADDRESS>\n"
 "Language-Team: Japanese\n"
 "Language: ja\n"
@@ -11,12 +11,12 @@ msgstr ""
 "Plural-Forms: nplurals=1; plural=0;\n"
 
 #. TRANSLATORS: def Access.get(container, key, default \\ nil)
-#: lib/access.ex:42
+#: lib/access.ex:67
 msgid "Gets the container's value for the given key.\n"
 msgstr "与えられたキーに対するコンテナの値を取得します。\n"
 
 #. TRANSLATORS: def Access.get_and_update(container, key, fun)
-#: lib/access.ex:70
+#: lib/access.ex:78
 msgid ""
 "Gets and updates the container's value for the given key, in a single pass.\n"
 "\n"
@@ -39,6 +39,11 @@ msgstr ""
 "この関数は2要素のタプルを返します。\n"
 "最初の要素は、`fun`から返された`get`した値です。\n"
 "二つめの要素は、`fun`から返された値で更新されたコンテナです。\n"
+
+#. TRANSLATORS: def Access.fetch(container, key)
+#: lib/access.ex:42
+msgid "Fetches the container's value for the given key.\n"
+msgstr "与えられたキーに対するコンテナの値を取得します。\n"
 
 #. TRANSLATORS: Elixir.Access Summary
 #: lib/access.ex:2

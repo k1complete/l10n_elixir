@@ -313,6 +313,13 @@ msgstr ""
 msgid ""
 "Returns a list of key-value pairs stored in `dict`.\n"
 "No particular order is enforced.\n"
+"\n"
+"## Examples\n"
+"\n"
+"    iex> dict = dict_impl.new\n"
+"    iex> dict = Dict.put(dict, :a, 1)\n"
+"    iex> Dict.to_list(dict)\n"
+"    [a: 1]\n"
 msgstr ""
 #. TRANSLATORS: def Dict.values(dict)
 #: lib/dict.ex:344 

@@ -229,6 +229,60 @@ msgstr ""
 "    \"ftp://s-ite.tld/?value=put%20it+%D0%B9\"\n"
 "\n"
 
+#. TRANSLATORS: def URI.to_string(uri)
+#: lib/uri.ex:346
+msgid ""
+"Converts the URI to string.\n"
+"\n"
+"    iex> URI.to_string(URI.parse(\"http://google.com\"))\n"
+"    \"http://google.com\"\n"
+msgstr ""
+"URLを文字列に変換します。\n"
+"\n"
+"    iex> URI.to_string(URI.parse(\"http://google.com\"))\n"
+"    \"http://google.com\"\n"
+
+#. TRANSLATORS: def URI.char_unescaped?(c)
+#: lib/uri.ex:155
+msgid ""
+"Checks if the character is allowed unescaped in a URI.\n"
+"\n"
+"This is the default used by `URI.encode/2` where both\n"
+"reserved and unreserved characters are kept unescaped.\n"
+msgstr ""
+"文字がURIでアンエスケープが許されるかどうかをチェックします。\n"
+"\n"
+"予約、実予約文字の両方がアンエスケープでおかれるように、\n"
+"これはデフォルトで`URI.encode/2`によって使われます。\n"
+
+#. TRANSLATORS: def URI.char_unreserved?(c)
+#: lib/uri.ex:143
+msgid ""
+"Checks if the character is a \"unreserved\" character in a URI.\n"
+"\n"
+"Unreserved characters are specified in [RFC3986, section 2.3](http://tools."
+"ietf.org/html/rfc3986#section-2.3).\n"
+msgstr ""
+"文字が、URIの\"非予約(unreserved)\"文字かどうかをチェックします。\n"
+"\n"
+"非予約(unreserved)文字は、 \n"
+"[RFC3986, section 2.3](http://tools.ietf.org/html/rfc3986#section-2.3)\n"
+"に定められています。\n"
+
+#. TRANSLATORS: def URI.char_reserved?(c)
+#: lib/uri.ex:134
+msgid ""
+"Checks if the character is a \"reserved\" character in a URI.\n"
+"\n"
+"Reserved characters are specified in [RFC3986, section 2.2](http://tools."
+"ietf.org/html/rfc3986#section-2.2).\n"
+msgstr ""
+"文字が、URIの\"予約(reserved)\"文字かどうかをチェックします。\n"
+"\n"
+"予約(reserved)文字は、 \n"
+"[RFC3986, section 2.2](http://tools.ietf.org/html/rfc3986#section-2.2)\n"
+"に定められています。\n"
+
 #. TRANSLATORS: def URI.parse(uri)
 #: lib/uri.ex:259
 msgid ""
@@ -300,60 +354,6 @@ msgstr ""
 "    %URI{authority: nil, fragment: nil, host: nil, path: \"foo/bar\",\n"
 "         port: nil, query: nil, scheme: nil, userinfo: nil}\n"
 "\n"
-
-#. TRANSLATORS: def URI.to_string(uri)
-#: lib/uri.ex:346
-msgid ""
-"Converts the URI to string.\n"
-"\n"
-"    iex> URI.to_string(URI.parse(\"http://google.com\"))\n"
-"    \"http://google.com\"\n"
-msgstr ""
-"URLを文字列に変換します。\n"
-"\n"
-"    iex> URI.to_string(URI.parse(\"http://google.com\"))\n"
-"    \"http://google.com\"\n"
-
-#. TRANSLATORS: def URI.char_unescaped?(c)
-#: lib/uri.ex:155
-msgid ""
-"Checks if the character is allowed unescaped in a URI.\n"
-"\n"
-"This is the default used by `URI.encode/2` where both\n"
-"reserved and unreserved characters are kept unescaped.\n"
-msgstr ""
-"文字がURIでアンエスケープが許されるかどうかをチェックします。\n"
-"\n"
-"予約、実予約文字の両方がアンエスケープでおかれるように、\n"
-"これはデフォルトで`URI.encode/2`によって使われます。\n"
-
-#. TRANSLATORS: def URI.char_unreserved?(c)
-#: lib/uri.ex:143
-msgid ""
-"Checks if the character is a \"unreserved\" character in a URI.\n"
-"\n"
-"Unreserved characters are specified in [RFC3986, section 2.3](http://tools."
-"ietf.org/html/rfc3986#section-2.3).\n"
-msgstr ""
-"文字が、URIの\"非予約(unreserved)\"文字かどうかをチェックします。\n"
-"\n"
-"非予約(unreserved)文字は、 \n"
-"[RFC3986, section 2.3](http://tools.ietf.org/html/rfc3986#section-2.3)\n"
-"に定められています。\n"
-
-#. TRANSLATORS: def URI.char_reserved?(c)
-#: lib/uri.ex:134
-msgid ""
-"Checks if the character is a \"reserved\" character in a URI.\n"
-"\n"
-"Reserved characters are specified in [RFC3986, section 2.2](http://tools."
-"ietf.org/html/rfc3986#section-2.2).\n"
-msgstr ""
-"文字が、URIの\"予約(reserved)\"文字かどうかをチェックします。\n"
-"\n"
-"予約(reserved)文字は、 \n"
-"[RFC3986, section 2.2](http://tools.ietf.org/html/rfc3986#section-2.2)\n"
-"に定められています。\n"
 
 #~ msgid "Normalizes the scheme according to the spec by downcasing it.\n"
 #~ msgstr "小文字化することにより仕様に従って、schemeを正規化します。\n"

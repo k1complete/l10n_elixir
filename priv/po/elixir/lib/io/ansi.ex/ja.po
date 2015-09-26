@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: l 10n_elixir\n"
-"PO-Revision-Date: 2015-09-16 11:17+0900\n"
+"PO-Revision-Date: 2015-09-26 00:24+0900\n"
 "Last-Translator: 小田 照敬 <EMAIL@ADDRESS>\n"
 "Language-Team: Japanese\n"
 "Language: ja\n"
@@ -11,187 +11,202 @@ msgstr ""
 "Plural-Forms: nplurals=1; plural=0;\n"
 
 #. TRANSLATORS: def IO.ANSI.underline()
-#: lib/io/ansi.ex:56
+#: lib/io/ansi.ex:57
 msgid "Underline: Single"
 msgstr "下線: 一重"
 
 #. TRANSLATORS: def IO.ANSI.no_underline()
-#: lib/io/ansi.ex:91
+#: lib/io/ansi.ex:92
 msgid "Underline: None"
 msgstr "下線: なし"
 
-#. TRANSLATORS: def IO.ANSI.home()
-#: lib/io/ansi.ex:128
-msgid "Send cursor home"
-msgstr "カーソルをホームへセットします。"
-
-#. TRANSLATORS: def IO.ANSI.primary_font()
-#: lib/io/ansi.ex:77
-msgid "Sets primary (default) font"
-msgstr "プライマリ(default)フォントをセットします。"
-
-#. TRANSLATORS: def IO.ANSI.yellow()
-#: lib/io/ansi.ex:100
-msgid "Sets foreground color to yellow"
-msgstr "前面色を黄色にセットします。"
-
-#. TRANSLATORS: def IO.ANSI.white()
-#: lib/io/ansi.ex:100
-msgid "Sets foreground color to white"
-msgstr "前面色を白にセットします"
-
-#. TRANSLATORS: def IO.ANSI.red()
-#: lib/io/ansi.ex:100
-msgid "Sets foreground color to red"
-msgstr "前面色を赤にセットします"
-
-#. TRANSLATORS: def IO.ANSI.magenta()
-#: lib/io/ansi.ex:100
-msgid "Sets foreground color to magenta"
-msgstr "前面色をマゼンタにセットします"
-
-#. TRANSLATORS: def IO.ANSI.green()
-#: lib/io/ansi.ex:100
-msgid "Sets foreground color to green"
-msgstr "前面色を緑にセットします"
-
-#. TRANSLATORS: def IO.ANSI.cyan()
-#: lib/io/ansi.ex:100
-msgid "Sets foreground color to cyan"
-msgstr "前面色をシアンにセットします"
-
-#. TRANSLATORS: def IO.ANSI.blue()
-#: lib/io/ansi.ex:100
-msgid "Sets foreground color to blue"
-msgstr "前面色を青にセットします"
-
-#. TRANSLATORS: def IO.ANSI.black()
-#: lib/io/ansi.ex:100
-msgid "Sets foreground color to black"
-msgstr "前面色を黒にセットします"
-
-#. TRANSLATORS: def IO.ANSI.yellow_background()
-#: lib/io/ansi.ex:103
-msgid "Sets background color to yellow"
-msgstr "背景色を黄色にセットします"
-
-#. TRANSLATORS: def IO.ANSI.white_background()
-#: lib/io/ansi.ex:103
-msgid "Sets background color to white"
-msgstr "背景色を白にセットします"
-
-#. TRANSLATORS: def IO.ANSI.red_background()
-#: lib/io/ansi.ex:103
-msgid "Sets background color to red"
-msgstr "背景色を赤にセットします"
-
-#. TRANSLATORS: def IO.ANSI.magenta_background()
-#: lib/io/ansi.ex:103
-msgid "Sets background color to magenta"
-msgstr "背景色をマゼンタにセットします"
-
-#. TRANSLATORS: def IO.ANSI.green_background()
-#: lib/io/ansi.ex:103
-msgid "Sets background color to green"
-msgstr "背景色を緑にセットします"
-
-#. TRANSLATORS: def IO.ANSI.cyan_background()
-#: lib/io/ansi.ex:103
-msgid "Sets background color to cyan"
-msgstr "背景色をシアンにセットします"
-
-#. TRANSLATORS: def IO.ANSI.blue_background()
-#: lib/io/ansi.ex:103
-msgid "Sets background color to blue"
-msgstr "背景色を青にセットします"
-
-#. TRANSLATORS: def IO.ANSI.black_background()
-#: lib/io/ansi.ex:103
-msgid "Sets background color to black"
-msgstr "背景色を黒にセットします"
-
 #. TRANSLATORS: def IO.ANSI.font_9()
-#: lib/io/ansi.ex:81
+#: lib/io/ansi.ex:82
 msgid "Sets alternative font 9"
 msgstr "選択肢フォント9にセットします。"
 
 #. TRANSLATORS: def IO.ANSI.font_8()
-#: lib/io/ansi.ex:81
+#: lib/io/ansi.ex:82
 msgid "Sets alternative font 8"
 msgstr "選択肢フォント8にセットします。"
 
 #. TRANSLATORS: def IO.ANSI.font_7()
-#: lib/io/ansi.ex:81
+#: lib/io/ansi.ex:82
 msgid "Sets alternative font 7"
 msgstr "選択肢フォント7にセットします。"
 
 #. TRANSLATORS: def IO.ANSI.font_6()
-#: lib/io/ansi.ex:81
+#: lib/io/ansi.ex:82
 msgid "Sets alternative font 6"
 msgstr "選択肢フォント6にセットします。"
 
 #. TRANSLATORS: def IO.ANSI.font_5()
-#: lib/io/ansi.ex:81
+#: lib/io/ansi.ex:82
 msgid "Sets alternative font 5"
 msgstr "選択肢フォント5にセットします。"
 
 #. TRANSLATORS: def IO.ANSI.font_4()
-#: lib/io/ansi.ex:81
+#: lib/io/ansi.ex:82
 msgid "Sets alternative font 4"
 msgstr "選択肢フォント4にセットします。"
 
 #. TRANSLATORS: def IO.ANSI.font_3()
-#: lib/io/ansi.ex:81
+#: lib/io/ansi.ex:82
 msgid "Sets alternative font 3"
 msgstr "選択肢フォント3にセットします。"
 
 #. TRANSLATORS: def IO.ANSI.font_2()
-#: lib/io/ansi.ex:81
+#: lib/io/ansi.ex:82
 msgid "Sets alternative font 2"
 msgstr "選択肢フォント2にセットします。"
 
 #. TRANSLATORS: def IO.ANSI.font_1()
-#: lib/io/ansi.ex:81
+#: lib/io/ansi.ex:82
 msgid "Sets alternative font 1"
 msgstr "選択肢フォント1にセットします。"
 
+#. TRANSLATORS: def IO.ANSI.home()
+#: lib/io/ansi.ex:129
+msgid "Sends cursor home"
+msgstr "カーソルをホームへセットします。"
+
+#. TRANSLATORS: def IO.ANSI.primary_font()
+#: lib/io/ansi.ex:78
+msgid "Sets primary (default) font"
+msgstr "プライマリ(default)フォントをセットします。"
+
+#. TRANSLATORS: def IO.ANSI.yellow()
+#: lib/io/ansi.ex:101
+msgid "Sets foreground color to yellow"
+msgstr "前面色を黄色にセットします。"
+
+#. TRANSLATORS: def IO.ANSI.white()
+#: lib/io/ansi.ex:101
+msgid "Sets foreground color to white"
+msgstr "前面色を白にセットします"
+
+#. TRANSLATORS: def IO.ANSI.red()
+#: lib/io/ansi.ex:101
+msgid "Sets foreground color to red"
+msgstr "前面色を赤にセットします"
+
+#. TRANSLATORS: def IO.ANSI.magenta()
+#: lib/io/ansi.ex:101
+msgid "Sets foreground color to magenta"
+msgstr "前面色をマゼンタにセットします"
+
+#. TRANSLATORS: def IO.ANSI.green()
+#: lib/io/ansi.ex:101
+msgid "Sets foreground color to green"
+msgstr "前面色を緑にセットします"
+
+#. TRANSLATORS: def IO.ANSI.cyan()
+#: lib/io/ansi.ex:101
+msgid "Sets foreground color to cyan"
+msgstr "前面色をシアンにセットします"
+
+#. TRANSLATORS: def IO.ANSI.blue()
+#: lib/io/ansi.ex:101
+msgid "Sets foreground color to blue"
+msgstr "前面色を青にセットします"
+
+#. TRANSLATORS: def IO.ANSI.black()
+#: lib/io/ansi.ex:101
+msgid "Sets foreground color to black"
+msgstr "前面色を黒にセットします"
+
+#. TRANSLATORS: def IO.ANSI.yellow_background()
+#: lib/io/ansi.ex:104
+msgid "Sets background color to yellow"
+msgstr "背景色を黄色にセットします"
+
+#. TRANSLATORS: def IO.ANSI.white_background()
+#: lib/io/ansi.ex:104
+msgid "Sets background color to white"
+msgstr "背景色を白にセットします"
+
+#. TRANSLATORS: def IO.ANSI.red_background()
+#: lib/io/ansi.ex:104
+msgid "Sets background color to red"
+msgstr "背景色を赤にセットします"
+
+#. TRANSLATORS: def IO.ANSI.magenta_background()
+#: lib/io/ansi.ex:104
+msgid "Sets background color to magenta"
+msgstr "背景色をマゼンタにセットします"
+
+#. TRANSLATORS: def IO.ANSI.green_background()
+#: lib/io/ansi.ex:104
+msgid "Sets background color to green"
+msgstr "背景色を緑にセットします"
+
+#. TRANSLATORS: def IO.ANSI.cyan_background()
+#: lib/io/ansi.ex:104
+msgid "Sets background color to cyan"
+msgstr "背景色をシアンにセットします"
+
+#. TRANSLATORS: def IO.ANSI.blue_background()
+#: lib/io/ansi.ex:104
+msgid "Sets background color to blue"
+msgstr "背景色を青にセットします"
+
+#. TRANSLATORS: def IO.ANSI.black_background()
+#: lib/io/ansi.ex:104
+msgid "Sets background color to black"
+msgstr "背景色を黒にセットします"
+
 #. TRANSLATORS: def IO.ANSI.reset()
-#: lib/io/ansi.ex:44
+#: lib/io/ansi.ex:45
 msgid "Resets all attributes"
 msgstr "全ての属性をリセットします"
 
+#. TRANSLATORS: def IO.ANSI.overlined()
+#: lib/io/ansi.ex:120
+msgid "Overlined"
+msgstr "上線を設定"
+
 #. TRANSLATORS: def IO.ANSI.normal()
-#: lib/io/ansi.ex:85
+#: lib/io/ansi.ex:86
 msgid "Normal color or intensity"
 msgstr "太文字と低輝度を解除"
 
 #. TRANSLATORS: def IO.ANSI.clear()
-#: lib/io/ansi.ex:131
-msgid "Clear screen"
+#: lib/io/ansi.ex:132
+msgid "Clears screen"
 msgstr "全画面消去"
 
+#. TRANSLATORS: def IO.ANSI.clear_line()
+#: lib/io/ansi.ex:135
+msgid "Clears line"
+msgstr "行消去"
+
+#. TRANSLATORS: def IO.ANSI.not_overlined()
+#: lib/io/ansi.ex:126
+msgid "Not overlined"
+msgstr "上線を解除"
+
+#. TRANSLATORS: def IO.ANSI.not_italic()
+#: lib/io/ansi.ex:89
+msgid "Not italic"
+msgstr "イタリックを解除"
+
+#. TRANSLATORS: def IO.ANSI.not_framed_encircled()
+#: lib/io/ansi.ex:123
+msgid "Not framed or encircled"
+msgstr "四角囲みまたは丸囲みを解除"
+
 #. TRANSLATORS: def IO.ANSI.italic()
-#: lib/io/ansi.ex:53
-msgid "Italic: on. Not widely supported. Sometimes treated as inverse."
+#: lib/io/ansi.ex:54
+msgid "Italic: on. Not widely supported. Sometimes treated as inverse"
 msgstr "イタリック: on。広くはサポートされていません。時々反転と見做されます。"
 
 #. TRANSLATORS: def IO.ANSI.reverse()
-#: lib/io/ansi.ex:68
+#: lib/io/ansi.ex:69
 msgid "Image: Negative. Swap foreground and background"
 msgstr "イメージ: 反転。前景色と背景色を入れ替えます"
 
-#. TRANSLATORS: def IO.ANSI.faint()
-#: lib/io/ansi.ex:50
-msgid "Faint (decreased intensity), not widely supported"
-msgstr "Faint(かすかな)(低輝度)、広くはサポートされていません"
-
-#. TRANSLATORS: def IO.ANSI.encircled()
-#: lib/io/ansi.ex:116
-msgid "Encircled"
-msgstr "丸で囲みます"
-
 #. TRANSLATORS: def IO.ANSI.format(chardata, emit \\ enabled?)
-#: lib/io/ansi.ex:138
+#: lib/io/ansi.ex:142
 msgid ""
 "Formats a chardata-like argument by converting named ANSI sequences into "
 "actual\n"
@@ -236,7 +251,7 @@ msgstr ""
 "\n"
 
 #. TRANSLATORS: def IO.ANSI.format_fragment(chardata, emit \\ enabled?)
-#: lib/io/ansi.ex:161
+#: lib/io/ansi.ex:165
 msgid ""
 "Formats a chardata-like argument by converting named ANSI sequences into "
 "actual\n"
@@ -270,93 +285,84 @@ msgstr ""
 "    [[[[[[] | \"\\e[1m\"], 87], 111], 114], 100]\n"
 "\n"
 
+#. TRANSLATORS: def IO.ANSI.faint()
+#: lib/io/ansi.ex:51
+msgid "Faint (decreased intensity), not widely supported"
+msgstr "Faint(かすかな)(低輝度)、広くはサポートされていません"
+
+#. TRANSLATORS: def IO.ANSI.encircled()
+#: lib/io/ansi.ex:117
+msgid "Encircled"
+msgstr "丸で囲みます"
+
 #. TRANSLATORS: Elixir.IO.ANSI Summary
 #: lib/io/ansi.ex:18
 msgid ""
-"Functionality to render ANSI escape sequences\n"
-"(https://en.wikipedia.org/wiki/ANSI_escape_code) —  characters embedded\n"
-"in text used to control formatting, color, and other output options\n"
-"on video text terminals.\n"
+"Functionality to render ANSI escape sequences.\n"
+"\n"
+"[ANSI escape sequences](https://en.wikipedia.org/wiki/ANSI_escape_code)\n"
+"are characters embedded in text used to control formatting, color, and\n"
+"other output options on video text terminals.\n"
 msgstr ""
-"ANSIエスケープシーケンス\n"
-"(https://en.wikipedia.org/wiki/ANSI_escape_code)\n"
-"  —  \n"
-"ビデオ・テキスト端末に、フォーマット、色、その他出力オプションを制御す\n"
-"るためにテキストに埋め込まれる文字、をレンダリングする関数群です\n"
+"ANSIエスケープシーケンスをレンダリングする関数です。\n"
+"\n"
+"[ANSIエスケープシーケンス](https://en.wikipedia.org/wiki/ANSI_escape_code)\n"
+"とはビデオ・テキスト端末に、フォーマット、色、その他出力オプションを\n"
+"制御するためにテキストに埋め込まれる文字です。\n"
 
 #. TRANSLATORS: def IO.ANSI.framed()
-#: lib/io/ansi.ex:113
+#: lib/io/ansi.ex:114
 msgid "Framed"
 msgstr "フレーム化"
 
 #. TRANSLATORS: def IO.ANSI.default_color()
-#: lib/io/ansi.ex:107
+#: lib/io/ansi.ex:108
 msgid "Default text color"
 msgstr "テキスト色をデフォルトに戻す"
 
 #. TRANSLATORS: def IO.ANSI.default_background()
-#: lib/io/ansi.ex:110
+#: lib/io/ansi.ex:111
 msgid "Default background color"
 msgstr "背景色をデフォルトに戻す"
 
 #. TRANSLATORS: def IO.ANSI.crossed_out()
-#: lib/io/ansi.ex:74
+#: lib/io/ansi.ex:75
 msgid ""
 "Crossed-out. Characters legible, but marked for deletion. Not widely "
-"supported."
+"supported"
 msgstr ""
 "打消し線。文字は判読可能だが、削除として指定する。広くはサポートされていな"
 "い。"
 
 #. TRANSLATORS: def IO.ANSI.conceal()
-#: lib/io/ansi.ex:71
+#: lib/io/ansi.ex:72
 msgid "Conceal. Not widely supported"
 msgstr "文字色と背景色を同じにします。広くはサポートされていません"
 
 #. TRANSLATORS: def IO.ANSI.bright()
-#: lib/io/ansi.ex:47
+#: lib/io/ansi.ex:48
 msgid "Bright (increased intensity) or Bold"
 msgstr "高輝度/太文字に設定"
 
-#. TRANSLATORS: def IO.ANSI.overlined()
-#: lib/io/ansi.ex:119
-msgid "Overlined"
-msgstr "上線を設定"
-
 #. TRANSLATORS: def IO.ANSI.blink_off()
-#: lib/io/ansi.ex:94
+#: lib/io/ansi.ex:95
 msgid "Blink: off"
 msgstr "ブリンク: off"
 
 #. TRANSLATORS: def IO.ANSI.blink_slow()
-#: lib/io/ansi.ex:59
+#: lib/io/ansi.ex:60
 msgid "Blink: Slow. Less than 150 per minute"
 msgstr "ブリンク: Slow. 150回/分未満"
 
 #. TRANSLATORS: def IO.ANSI.blink_rapid()
-#: lib/io/ansi.ex:62
+#: lib/io/ansi.ex:63
 msgid ""
 "Blink: Rapid. MS-DOS ANSI.SYS; 150 per minute or more; not widely supported"
 msgstr ""
 "Blink: Rapid. MS-DOS ANSI.SYS; 150回/分以上; 広くはサポートされていません"
 
-#. TRANSLATORS: def IO.ANSI.not_overlined()
-#: lib/io/ansi.ex:125
-msgid "Not overlined"
-msgstr "上線を解除"
-
-#. TRANSLATORS: def IO.ANSI.not_italic()
-#: lib/io/ansi.ex:88
-msgid "Not italic"
-msgstr "イタリックを解除"
-
-#. TRANSLATORS: def IO.ANSI.not_framed_encircled()
-#: lib/io/ansi.ex:122
-msgid "Not framed or encircled"
-msgstr "四角囲みまたは丸囲みを解除"
-
 #. TRANSLATORS: def IO.ANSI.enabled?()
-#: lib/io/ansi.ex:31
+#: lib/io/ansi.ex:32
 msgid ""
 "Checks if ANSI coloring is supported and enabled on this machine.\n"
 "\n"

@@ -1,5 +1,5 @@
 #. TRANSLATORS: def String.length(string)
-#: lib/string.ex:1048 
+#: lib/string.ex:1052 
 msgid ""
 "Returns the number of Unicode graphemes in a utf8 string.\n"
 "\n"
@@ -13,7 +13,7 @@ msgid ""
 "\n"
 msgstr ""
 #. TRANSLATORS: def String.next_grapheme(binary)
-#: lib/string.ex:966 
+#: lib/string.ex:970 
 msgid ""
 "Returns the next grapheme in a string.\n"
 "\n"
@@ -28,7 +28,7 @@ msgid ""
 "\n"
 msgstr ""
 #. TRANSLATORS: def String.next_codepoint(string)
-#: lib/string.ex:809 
+#: lib/string.ex:813 
 msgid ""
 "Returns the next codepoint in a String.\n"
 "\n"
@@ -48,7 +48,7 @@ msgid ""
 "\n"
 msgstr ""
 #. TRANSLATORS: def String.last(string)
-#: lib/string.ex:1024 
+#: lib/string.ex:1028 
 msgid ""
 "Returns the last grapheme from a utf8 string,\n"
 "`nil` if the string is empty.\n"
@@ -63,7 +63,7 @@ msgid ""
 "\n"
 msgstr ""
 #. TRANSLATORS: def String.at(string, position)
-#: lib/string.ex:1063 
+#: lib/string.ex:1067 
 msgid ""
 "Returns the grapheme in the `position` of the given utf8 `string`.\n"
 "If `position` is greater than `string` length, then it returns `nil`.\n"
@@ -87,7 +87,7 @@ msgid ""
 "\n"
 msgstr ""
 #. TRANSLATORS: def String.first(string)
-#: lib/string.ex:1003 
+#: lib/string.ex:1007 
 msgid ""
 "Returns the first grapheme from a utf8 string,\n"
 "`nil` if the string is empty.\n"
@@ -102,16 +102,16 @@ msgid ""
 "\n"
 msgstr ""
 #. TRANSLATORS: def String.chunk(string, trait)
-#: lib/string.ex:892 
+#: lib/string.ex:896 
 msgid ""
 "Splits the string into chunks of characters that share a common trait.\n"
 "\n"
 "The trait can be one of two options:\n"
 "\n"
-"  * `:valid` – the string is split into chunks of valid and invalid character\n"
+"  * `:valid`     - the string is split into chunks of valid and invalid character\n"
 "    sequences\n"
 "\n"
-"  * `:printable` – the string is split into chunks of printable and\n"
+"  * `:printable` - the string is split into chunks of printable and\n"
 "    non-printable character sequences\n"
 "\n"
 "Returns a list of binaries each of which contains only one kind of\n"
@@ -181,7 +181,7 @@ msgid ""
 "\n"
 msgstr ""
 #. TRANSLATORS: def String.reverse(string)
-#: lib/string.ex:745 
+#: lib/string.ex:749 
 msgid ""
 "Reverses the given string. Works on graphemes.\n"
 "\n"
@@ -198,7 +198,7 @@ msgid ""
 "\n"
 msgstr ""
 #. TRANSLATORS: def String.next_grapheme_size(string)
-#: lib/string.ex:987 
+#: lib/string.ex:991 
 msgid ""
 "Returns the size of the next grapheme.\n"
 "\n"
@@ -213,7 +213,7 @@ msgid ""
 "\n"
 msgstr ""
 #. TRANSLATORS: def String.to_integer(string)
-#: lib/string.ex:1463 
+#: lib/string.ex:1467 
 msgid ""
 "Returns an integer whose text representation is `string`.\n"
 "\n"
@@ -226,7 +226,7 @@ msgid ""
 "\n"
 msgstr ""
 #. TRANSLATORS: def String.to_integer(string, base)
-#: lib/string.ex:1479 
+#: lib/string.ex:1483 
 msgid ""
 "Returns an integer whose text representation is `string` in base `base`.\n"
 "\n"
@@ -239,7 +239,7 @@ msgid ""
 "\n"
 msgstr ""
 #. TRANSLATORS: def String.to_float(string)
-#: lib/string.ex:1495 
+#: lib/string.ex:1499 
 msgid ""
 "Returns a float whose text representation is `string`.\n"
 "\n"
@@ -259,12 +259,12 @@ msgid ""
 "    3.0\n"
 "\n"
 msgstr ""
-#. TRANSLATORS: def String.jaro_distance(str1, str2)
-#: lib/string.ex:1519 
+#. TRANSLATORS: def String.jaro_distance(string1, string2)
+#: lib/string.ex:1523 
 msgid ""
 "Returns a float value between 0 (equates to no similarity) and 1 (is an exact match)\n"
 "representing [Jaro](https://en.wikipedia.org/wiki/Jaro–Winkler_distance)\n"
-"distance between `str1` and `str2`.\n"
+"distance between `string1` and `string2`.\n"
 "\n"
 "The Jaro distance metric is designed and best suited for short strings such as person names.\n"
 "\n"
@@ -277,7 +277,7 @@ msgid ""
 "\n"
 msgstr ""
 #. TRANSLATORS: def String.duplicate(subject, n)
-#: lib/string.ex:771 
+#: lib/string.ex:775 
 msgid ""
 "Returns a binary `subject` duplicated `n` times.\n"
 "\n"
@@ -294,7 +294,7 @@ msgid ""
 "\n"
 msgstr ""
 #. TRANSLATORS: def String.starts_with?(string, prefix)
-#: lib/string.ex:1262 
+#: lib/string.ex:1266 
 msgid ""
 "Returns `true` if `string` starts with any of the prefixes given, otherwise\n"
 "returns `false`. `prefixes` can be either a single prefix or a list of prefixes.\n"
@@ -312,7 +312,7 @@ msgid ""
 "\n"
 msgstr ""
 #. TRANSLATORS: def String.ends_with?(string, suffixes)
-#: lib/string.ex:1295 
+#: lib/string.ex:1299 
 msgid ""
 "Returns `true` if `string` ends with any of the suffixes given, otherwise\n"
 "returns `false`. `suffixes` can be either a single suffix or a list of suffixes.\n"
@@ -330,7 +330,7 @@ msgid ""
 "\n"
 msgstr ""
 #. TRANSLATORS: def String.graphemes(string)
-#: lib/string.ex:950 
+#: lib/string.ex:954 
 msgid ""
 "Returns Unicode graphemes in the string as per Extended Grapheme\n"
 "Cluster algorithm outlined in the [Unicode Standard Annex #29,\n"
@@ -343,7 +343,7 @@ msgid ""
 "\n"
 msgstr ""
 #. TRANSLATORS: def String.codepoints(string)
-#: lib/string.ex:791 
+#: lib/string.ex:795 
 msgid ""
 "Returns all codepoints in the string.\n"
 "\n"
@@ -398,10 +398,10 @@ msgid ""
 "Returns a new binary created by replacing occurences of `pattern` in\n"
 "`subject` with `replacement`.\n"
 "\n"
-"By default, it replaces all occurences, except if the `global` option is\n"
+"By default, it replaces all occurences, unless the `global` option is\n"
 "set to `false`.\n"
 "\n"
-"A `pattern` may be a string or a regular expression.\n"
+"The `pattern` may be a string or a regular expression.\n"
 "\n"
 "## Examples\n"
 "\n"
@@ -411,18 +411,20 @@ msgid ""
 "    iex> String.replace(\"a,b,c\", \",\", \"-\", global: false)\n"
 "    \"a-b,c\"\n"
 "\n"
-"The pattern can also be a regular expression. In those cases, one can give `\\N` or\n"
+"When the pattern is a regular expression, one can give `\\N` or\n"
 "`\\g{N}` in the `replacement` string to access a specific capture in the\n"
-"regex:\n"
+"regular expression:\n"
 "\n"
-"    iex> String.replace(\"a,b,c\", ~r/,(.)/, \",\\\\1\\\\1\")\n"
+"    iex> String.replace(\"a,b,c\", ~r/,(.)/, \",\\\\1\\\\g{1}\")\n"
 "    \"a,bb,cc\"\n"
 "\n"
 "Notice we had to escape the escape character `\\`. By giving `\\0`,\n"
 "one can inject the whole matched pattern in the replacement string.\n"
 "\n"
-"When strings are used as a pattern, a developer can also use the\n"
-"replaced part inside the `replacement` via the `:insert_replaced` option:\n"
+"When the pattern is a string, a developer can use the replaced part inside\n"
+"the `replacement` by using the `:insert_replace` option and specifying the\n"
+"position(s) inside the `replacement` where the string pattern will be\n"
+"inserted:\n"
 "\n"
 "    iex> String.replace(\"a,b,c\", \"b\", \"[]\", insert_replaced: 1)\n"
 "    \"a,[b],c\"\n"
@@ -433,9 +435,11 @@ msgid ""
 "    iex> String.replace(\"a,b,c\", \",\", \"[]\", insert_replaced: [1, 1])\n"
 "    \"a[,,]b[,,]c\"\n"
 "\n"
+"If any position given in the `:insert_replace` option is larger than the\n"
+"replacement string, or is negative, an `ArgumentError` is raised.\n"
 msgstr ""
 #. TRANSLATORS: def String.slice(string, start, len)
-#: lib/string.ex:1106 
+#: lib/string.ex:1110 
 msgid ""
 "Returns a substring starting at the offset `start`, and of\n"
 "length `len`.\n"
@@ -474,7 +478,7 @@ msgid ""
 "\n"
 msgstr ""
 #. TRANSLATORS: def String.slice(string, range)
-#: lib/string.ex:1166 
+#: lib/string.ex:1170 
 msgid ""
 "Returns a substring from the offset given by the start of the\n"
 "range to the offset given by the end of the range.\n"
@@ -526,7 +530,7 @@ msgstr ""
 #. TRANSLATORS: def String.rstrip(string, char)
 #: lib/string.ex:520 
 msgid ""
-"Returns a string where trailing `char` have been removed.\n"
+"Returns a string where all trailing `char`s have been removed.\n"
 "\n"
 "## Examples\n"
 "\n"
@@ -537,7 +541,7 @@ msgstr ""
 #. TRANSLATORS: def String.rstrip(binary)
 #: lib/string.ex:507 
 msgid ""
-"Returns a string where trailing Unicode whitespace\n"
+"Returns a string where all trailing Unicode whitespaces\n"
 "has been removed.\n"
 "\n"
 "## Examples\n"
@@ -549,7 +553,7 @@ msgstr ""
 #. TRANSLATORS: def String.strip(string, char)
 #: lib/string.ex:609 
 msgid ""
-"Returns a string where leading and trailing `char` have been\n"
+"Returns a string where all leading and trailing `char`s have been\n"
 "removed.\n"
 "\n"
 "## Examples\n"
@@ -561,7 +565,7 @@ msgstr ""
 #. TRANSLATORS: def String.strip(string)
 #: lib/string.ex:593 
 msgid ""
-"Returns a string where leading and trailing Unicode whitespace\n"
+"Returns a string where all leading and trailing Unicode whitespaces\n"
 "has been removed.\n"
 "\n"
 "## Examples\n"
@@ -573,7 +577,7 @@ msgstr ""
 #. TRANSLATORS: def String.lstrip(string, char)
 #: lib/string.ex:572 
 msgid ""
-"Returns a string where leading `char` have been removed.\n"
+"Returns a string where all leading `char`s have been removed.\n"
 "\n"
 "## Examples\n"
 "\n"
@@ -584,7 +588,7 @@ msgstr ""
 #. TRANSLATORS: def String.lstrip(binary)
 #: lib/string.ex:560 
 msgid ""
-"Returns a string where leading Unicode whitespace\n"
+"Returns a string where all leading Unicode whitespaces\n"
 "has been removed.\n"
 "\n"
 "## Examples\n"
@@ -735,7 +739,7 @@ msgid ""
 "\n"
 msgstr ""
 #. TRANSLATORS: def String.to_existing_atom(string)
-#: lib/string.ex:1440 
+#: lib/string.ex:1444 
 msgid ""
 "Converts a string to an existing atom.\n"
 "\n"
@@ -755,7 +759,7 @@ msgid ""
 "\n"
 msgstr ""
 #. TRANSLATORS: def String.to_atom(string)
-#: lib/string.ex:1421 
+#: lib/string.ex:1425 
 msgid ""
 "Converts a string to an atom.\n"
 "\n"
@@ -771,7 +775,7 @@ msgid ""
 "\n"
 msgstr ""
 #. TRANSLATORS: def String.to_char_list(string)
-#: lib/string.ex:1392 
+#: lib/string.ex:1396 
 msgid ""
 "Converts a string into a char list.\n"
 "\n"
@@ -800,7 +804,7 @@ msgid ""
 "\n"
 msgstr ""
 #. TRANSLATORS: def String.match?(string, regex)
-#: lib/string.ex:1335 
+#: lib/string.ex:1339 
 msgid ""
 "Checks if `string` matches the given regular expression.\n"
 "\n"
@@ -814,7 +818,7 @@ msgid ""
 "\n"
 msgstr ""
 #. TRANSLATORS: def String.contains?(string, contents)
-#: lib/string.ex:1352 
+#: lib/string.ex:1356 
 msgid ""
 "Checks if `string` contains any of the given `contents`.\n"
 "\n"
@@ -839,7 +843,7 @@ msgid ""
 "\n"
 msgstr ""
 #. TRANSLATORS: def String.valid_character?(codepoint)
-#: lib/string.ex:866 
+#: lib/string.ex:870 
 msgid ""
 "Checks whether `string` is a valid character.\n"
 "\n"
@@ -847,7 +851,7 @@ msgid ""
 "are not valid characters. They may be reserved, private,\n"
 "or other.\n"
 "\n"
-"More info at: https://en.wikipedia.org/wiki/Universal_Character_Set_characters#Non-characters\n"
+"More info at: [Non-characters – Wikipedia](https://en.wikipedia.org/wiki/Universal_Character_Set_characters#Non-characters)\n"
 "\n"
 "## Examples\n"
 "\n"
@@ -862,9 +866,9 @@ msgid ""
 "\n"
 msgstr ""
 #. TRANSLATORS: def String.valid?(string)
-#: lib/string.ex:831 
+#: lib/string.ex:835 
 msgid ""
-"Checks whether `str` contains only valid characters.\n"
+"Checks whether `string` contains only valid characters.\n"
 "\n"
 "## Examples\n"
 "\n"
@@ -949,7 +953,7 @@ msgid ""
 "  * `Kernel.bit_size/1` and `Kernel.byte_size/1` - size related functions\n"
 "  * `Kernel.is_bitstring/1` and `Kernel.is_binary/1` - type checking function\n"
 "  * Plus a number of functions for working with binaries (bytes)\n"
-"    [in the `:binary` module](http://www.erlang.org/doc/man/binary.html)\n"
+"    in the [`:binary` module](http://www.erlang.org/doc/man/binary.html)\n"
 "\n"
 "There are many situations where using the `String` module can\n"
 "be avoided in favor of binary functions or pattern matching.\n"

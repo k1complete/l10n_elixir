@@ -135,6 +135,11 @@ msgid ""
 "    is still alive\n"
 "\n"
 msgstr ""
+#. TRANSLATORS: @type options
+#: lib/supervisor.ex:231 
+msgid ""
+"Options used by the `start*` functions"
+msgstr ""
 #. TRANSLATORS: def Supervisor.start_child(supervisor, child_spec_or_args)
 #: lib/supervisor.ex:307 
 msgid ""
@@ -180,11 +185,6 @@ msgid ""
 "\n"
 "This operation is not supported by `simple_one_for_one` supervisors.\n"
 msgstr ""
-#. TRANSLATORS: @type options
-#: lib/supervisor.ex:231 
-msgid ""
-"Options used by the `start*` functions"
-msgstr ""
 #. TRANSLATORS: def Supervisor.which_children(supervisor)
 #: lib/supervisor.ex:414 
 msgid ""
@@ -204,7 +204,7 @@ msgid ""
 "\n"
 "  * `type` - `:worker` or `:supervisor` as defined in the child specification\n"
 "\n"
-"  * `modules` – as defined in the child specification\n"
+"  * `modules` - as defined in the child specification\n"
 msgstr ""
 #. TRANSLATORS: Elixir.Supervisor Summary
 #: lib/supervisor.ex:2 

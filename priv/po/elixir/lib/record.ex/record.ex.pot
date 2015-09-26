@@ -38,7 +38,7 @@ msgid ""
 "      Record.defrecord :user, name: \"john\", age: 25\n"
 "\n"
 "      @type user :: record(:user, name: String.t, age: integer)\n"
-"      # expands to: `@type user :: {:user, String.t, integer}`\n"
+"      # expands to: \"@type user :: {:user, String.t, integer}\"\n"
 "    end\n"
 msgstr ""
 #. TRANSLATORS: def Record.extract(name, opts)

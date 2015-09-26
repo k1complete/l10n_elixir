@@ -122,6 +122,36 @@ msgid ""
 "    \"ftp://s-ite.tld/?value=put%20it+%D0%B9\"\n"
 "\n"
 msgstr ""
+#. TRANSLATORS: def URI.to_string(uri)
+#: lib/uri.ex:346 
+msgid ""
+"Converts the URI to string.\n"
+"\n"
+"    iex> URI.to_string(URI.parse(\"http://google.com\"))\n"
+"    \"http://google.com\"\n"
+msgstr ""
+#. TRANSLATORS: def URI.char_unescaped?(c)
+#: lib/uri.ex:155 
+msgid ""
+"Checks if the character is allowed unescaped in a URI.\n"
+"\n"
+"This is the default used by `URI.encode/2` where both\n"
+"reserved and unreserved characters are kept unescaped.\n"
+msgstr ""
+#. TRANSLATORS: def URI.char_unreserved?(c)
+#: lib/uri.ex:143 
+msgid ""
+"Checks if the character is a \"unreserved\" character in a URI.\n"
+"\n"
+"Unreserved characters are specified in [RFC3986, section 2.3](http://tools.ietf.org/html/rfc3986#section-2.3).\n"
+msgstr ""
+#. TRANSLATORS: def URI.char_reserved?(c)
+#: lib/uri.ex:134 
+msgid ""
+"Checks if the character is a \"reserved\" character in a URI.\n"
+"\n"
+"Reserved characters are specified in [RFC3986, section 2.2](http://tools.ietf.org/html/rfc3986#section-2.2).\n"
+msgstr ""
 #. TRANSLATORS: def URI.parse(uri)
 #: lib/uri.ex:259 
 msgid ""
@@ -156,34 +186,4 @@ msgid ""
 "    %URI{authority: nil, fragment: nil, host: nil, path: \"foo/bar\",\n"
 "         port: nil, query: nil, scheme: nil, userinfo: nil}\n"
 "\n"
-msgstr ""
-#. TRANSLATORS: def URI.to_string(uri)
-#: lib/uri.ex:346 
-msgid ""
-"Converts the URI to string.\n"
-"\n"
-"    iex> URI.to_string(URI.parse(\"http://google.com\"))\n"
-"    \"http://google.com\"\n"
-msgstr ""
-#. TRANSLATORS: def URI.char_unescaped?(c)
-#: lib/uri.ex:155 
-msgid ""
-"Checks if the character is allowed unescaped in a URI.\n"
-"\n"
-"This is the default used by `URI.encode/2` where both\n"
-"reserved and unreserved characters are kept unescaped.\n"
-msgstr ""
-#. TRANSLATORS: def URI.char_unreserved?(c)
-#: lib/uri.ex:143 
-msgid ""
-"Checks if the character is a \"unreserved\" character in a URI.\n"
-"\n"
-"Unreserved characters are specified in [RFC3986, section 2.3](http://tools.ietf.org/html/rfc3986#section-2.3).\n"
-msgstr ""
-#. TRANSLATORS: def URI.char_reserved?(c)
-#: lib/uri.ex:134 
-msgid ""
-"Checks if the character is a \"reserved\" character in a URI.\n"
-"\n"
-"Reserved characters are specified in [RFC3986, section 2.2](http://tools.ietf.org/html/rfc3986#section-2.2).\n"
 msgstr ""

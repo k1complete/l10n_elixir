@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: l 10n_elixir\n"
-"PO-Revision-Date: 2015-09-17 14:59+0900\n"
+"PO-Revision-Date: 2015-09-26 14:47+0900\n"
 "Last-Translator: 小田 照敬 <EMAIL@ADDRESS>\n"
 "Language-Team: Japanese\n"
 "Language: ja\n"
@@ -263,6 +263,11 @@ msgstr ""
 "     ワーカの数\n"
 "\n"
 
+#. TRANSLATORS: @type options
+#: lib/supervisor.ex:231
+msgid "Options used by the `start*` functions"
+msgstr "`start*`関数で使われるオプション"
+
 #. TRANSLATORS: def Supervisor.start_child(supervisor, child_spec_or_args)
 #: lib/supervisor.ex:307
 msgid ""
@@ -360,11 +365,6 @@ msgstr ""
 "\n"
 "この操作は、`simple_one_for_one`スーパバイザはサポートされません。\n"
 
-#. TRANSLATORS: @type options
-#: lib/supervisor.ex:231
-msgid "Options used by the `start*` functions"
-msgstr "`start*`関数で使われるオプション"
-
 #. TRANSLATORS: def Supervisor.which_children(supervisor)
 #: lib/supervisor.ex:414
 msgid ""
@@ -387,7 +387,7 @@ msgid ""
 "  * `type` - `:worker` or `:supervisor` as defined in the child "
 "specification\n"
 "\n"
-"  * `modules` – as defined in the child specification\n"
+"  * `modules` - as defined in the child specification\n"
 msgstr ""
 "全ての子についての情報のリストを返します。\n"
 "\n"
@@ -398,7 +398,7 @@ msgstr ""
 "この関数は以下を含んだタプルのリストを返します:\n"
 "\n"
 "  * `id` - 子仕様で定義されたidまたは、`simple_one_for_one`スーパバイザでは\n"
-"      `:undefined`です\n"
+"    `:undefined`です\n"
 "\n"
 "  * `child` - 子プロセスに対応したpidです。\n"
 "    もしプロセスが再起動されていたら`:restarting`を、もしそのような\n"
@@ -406,7 +406,7 @@ msgstr ""
 "\n"
 "  * `type` - 子仕様で定義された、`:worker` または `:supervisor` です\n"
 "\n"
-"  * `modules` – 子仕様が定義されたモジュールです。\n"
+"  * `modules` - 子仕様が定義されたモジュールです。\n"
 "\n"
 
 #. TRANSLATORS: Elixir.Supervisor Summary

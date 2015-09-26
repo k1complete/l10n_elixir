@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: l 10n_elixir\n"
-"PO-Revision-Date: 2015-09-12 17:54+0900\n"
+"PO-Revision-Date: 2015-09-26 00:04+0900\n"
 "Last-Translator: 小田 照敬 <EMAIL@ADDRESS>\n"
 "Language-Team: Japanese\n"
 "Language: ja\n"
@@ -11,7 +11,7 @@ msgstr ""
 "Plural-Forms: nplurals=1; plural=0;\n"
 
 #. TRANSLATORS: def File.write_stat(path, stat, opts \\ [])
-#: lib/file.ex:335
+#: lib/file.ex:338
 msgid ""
 "Writes the given `File.Stat` back to the filesystem at the given\n"
 "path. Returns `:ok` or `{:error, reason}`.\n"
@@ -20,7 +20,7 @@ msgstr ""
 "`:ok`または`{:error, reason}`を返します。\n"
 
 #. TRANSLATORS: def File.write(path, content, modes \\ [])
-#: lib/file.ex:667
+#: lib/file.ex:674
 msgid ""
 "Writes `content` to the file `path`.\n"
 "\n"
@@ -78,19 +78,19 @@ msgstr ""
 "そのほか有効なオプションについて`File.open/2`をチェックしてください\n"
 
 #. TRANSLATORS: def File.ls!(path \\ ".")
-#: lib/file.ex:1150
+#: lib/file.ex:1157
 msgid ""
 "The same as `ls/1` but raises `File.Error`\n"
 "in case of an error.\n"
 msgstr "`ls/1`と同じですが、エラーのとき`File.Error`例外を上げます。\n"
 
 #. TRANSLATORS: def File.cwd!()
-#: lib/file.ex:1082
+#: lib/file.ex:1089
 msgid "The same as `cwd/0`, but raises an exception if it fails.\n"
 msgstr "`cwd/0`と同じですが、失敗すると例外を上げます。\n"
 
 #. TRANSLATORS: def File.cp_r!(source, destination, callback \\ fn _, _ -> true end)
-#: lib/file.ex:574
+#: lib/file.ex:581
 msgid ""
 "The same as `cp_r/3`, but raises `File.CopyError` if it fails.\n"
 "Returns the list of copied files otherwise.\n"
@@ -99,7 +99,7 @@ msgstr ""
 "さもなければコピーされたファイルのリストを返します。\n"
 
 #. TRANSLATORS: def File.cp!(source, destination, callback \\ fn _, _ -> true end)
-#: lib/file.ex:506
+#: lib/file.ex:513
 msgid ""
 "The same as `cp/3`, but raises `File.CopyError` if it fails.\n"
 "Returns `:ok` otherwise.\n"
@@ -108,7 +108,7 @@ msgstr ""
 "さもなければ、`:ok`を返します。\n"
 
 #. TRANSLATORS: def File.copy!(source, destination, bytes_count \\ :infinity)
-#: lib/file.ex:430
+#: lib/file.ex:437
 msgid ""
 "The same as `copy/3` but raises an `File.CopyError` if it fails.\n"
 "Returns the `bytes_copied` otherwise.\n"
@@ -117,12 +117,12 @@ msgstr ""
 "さもなければ、`bytes_copied`(コピーされたバイト数)を返します。\n"
 
 #. TRANSLATORS: def File.cd!(path)
-#: lib/file.ex:1104
+#: lib/file.ex:1111
 msgid "The same as `cd/1`, but raises an exception if it fails.\n"
 msgstr "`cd/1`と同じですが、失敗すると例外を上げます。\n"
 
 #. TRANSLATORS: def File.rm(path)
-#: lib/file.ex:710
+#: lib/file.ex:717
 msgid ""
 "Tries to delete the file `path`.\n"
 "\n"
@@ -174,7 +174,7 @@ msgstr ""
 "\n"
 
 #. TRANSLATORS: def File.rmdir(path)
-#: lib/file.ex:779
+#: lib/file.ex:786
 msgid ""
 "Tries to delete the dir at `path`.\n"
 "Returns `:ok` if successful, or `{:error, reason}` if an error occurs.\n"
@@ -256,14 +256,17 @@ msgstr ""
 "  * `:enospc`  - デバイスの残り容量がない\n"
 "  * `:enotdir` - `path`の一部がディレクトリでない;\n"
 
-#. TRANSLATORS: def File.touch(path, time \\ :calendar.local_time())
-#: lib/file.ex:358
+#. TRANSLATORS: def File.touch(path, time \\ :calendar.universal_time())
+#: lib/file.ex:362
 msgid ""
 "Updates modification time (mtime) and access time (atime) of\n"
-"the given file. File is created if it doesn’t exist.\n"
+"the given file.\n"
+"\n"
+"File is created if it doesn’t exist. Requires datetime in UTC.\n"
 msgstr ""
 "与えられたファイルの変更時刻(mtime)とアクセス時刻(atime)を更新します。\n"
-"存在しない場合、ファイルは作成されます。\n"
+"\n"
+"存在しない場合、ファイルは作成されます。時刻はUTCです。\n"
 
 #. TRANSLATORS: Elixir.File Summary
 #: lib/file.ex:2
@@ -335,7 +338,8 @@ msgid ""
 "and `:delayed_write` are also useful when operating large files or\n"
 "working with files in tight loops.\n"
 "\n"
-"Check http://www.erlang.org/doc/man/file.html#open-2 for more information\n"
+"Check [`:file.open/2`](http://www.erlang.org/doc/man/file.html#open-2) for "
+"more information\n"
 "about such options and other performance considerations.\n"
 msgstr ""
 "このモジュールはファイルを操作するための関数を含みます。\n"
@@ -401,10 +405,11 @@ msgstr ""
 "おいての作業に役に立ちます。\n"
 "\n"
 "それらのオプションとその他パフォーマンスの考慮点についての詳細は、\n"
-"http://www.erlang.org/doc/man/file.html#open-2 をチェックしてください。\n"
+"[`:file.open/2`](http://www.erlang.org/doc/man/file.html#open-2) \n"
+"をチェックしてください。\n"
 
 #. TRANSLATORS: def File.cd(path)
-#: lib/file.ex:1094
+#: lib/file.ex:1101
 msgid ""
 "Sets the current working directory.\n"
 "\n"
@@ -415,7 +420,7 @@ msgstr ""
 "成功したら`:ok`を、さもなければ`{:error, reason}`を返します。\n"
 
 #. TRANSLATORS: def File.open(path, modes, function)
-#: lib/file.ex:994
+#: lib/file.ex:1001
 msgid ""
 "Similar to `open/2` but expects a function as last argument.\n"
 "\n"
@@ -459,7 +464,7 @@ msgstr ""
 "\n"
 
 #. TRANSLATORS: def File.write_stat!(path, stat, opts \\ [])
-#: lib/file.ex:344
+#: lib/file.ex:348
 msgid ""
 "Same as `write_stat/3` but raises an exception if it fails.\n"
 "Returns `:ok` otherwise.\n"
@@ -468,7 +473,7 @@ msgstr ""
 "さもなくば`:ok`を返します。\n"
 
 #. TRANSLATORS: def File.write!(path, content, modes \\ [])
-#: lib/file.ex:697
+#: lib/file.ex:704
 msgid ""
 "Same as `write/3` but raises an exception if it fails, returns `:ok` "
 "otherwise.\n"
@@ -476,17 +481,19 @@ msgstr ""
 "`write/3`と同じですが、失敗すると例外を上げます。さもなくば`:ok`を\n"
 "返します。\n"
 
-#. TRANSLATORS: def File.touch!(path, time \\ :calendar.local_time())
-#: lib/file.ex:378
+#. TRANSLATORS: def File.touch!(path, time \\ :calendar.universal_time())
+#: lib/file.ex:384
 msgid ""
 "Same as `touch/2` but raises an exception if it fails.\n"
-"Returns `:ok` otherwise.\n"
+"\n"
+"Returns `:ok` otherwise. Requires datetime in UTC.\n"
 msgstr ""
-"`touch/2`と同じですが、失敗すると例外を上げます。さもなくば\n"
-"`:ok`を返します。\n"
+"`touch/2`と同じですが、失敗すると例外を上げます。\n"
+"\n"
+"さもなくば`:ok`を返します。時刻はUTCです。\n"
 
 #. TRANSLATORS: def File.stat!(path, opts \\ [])
-#: lib/file.ex:278
+#: lib/file.ex:279
 msgid ""
 "Same as `stat/2` but returns the `File.Stat` directly and\n"
 "throws `File.Error` if an error is returned.\n"
@@ -495,7 +502,7 @@ msgstr ""
 "`File.Errorを投げます。\n"
 
 #. TRANSLATORS: def File.rmdir!(path)
-#: lib/file.ex:797
+#: lib/file.ex:804
 msgid ""
 "Same as `rmdir/1`, but raises an exception in case of failure. Otherwise `:"
 "ok`.\n"
@@ -504,7 +511,7 @@ msgstr ""
 "返します。\n"
 
 #. TRANSLATORS: def File.rm_rf!(path)
-#: lib/file.ex:899
+#: lib/file.ex:906
 msgid ""
 "Same as `rm_rf/1` but raises `File.Error` in case of failures,\n"
 "otherwise the list of files or directories removed.\n"
@@ -513,7 +520,7 @@ msgstr ""
 "さもなくば削除されたファイルやディレクトリのリストを返します。\n"
 
 #. TRANSLATORS: def File.rm!(path)
-#: lib/file.ex:766
+#: lib/file.ex:773
 msgid ""
 "Same as `rm/1`, but raises an exception in case of failure. Otherwise `:"
 "ok`.\n"
@@ -522,7 +529,7 @@ msgstr ""
 "ます。\n"
 
 #. TRANSLATORS: def File.open!(path, modes, function)
-#: lib/file.ex:1043
+#: lib/file.ex:1050
 msgid ""
 "Same as `open/3` but raises an error if file could not be opened.\n"
 "\n"
@@ -533,7 +540,7 @@ msgstr ""
 "さもないと関数の実行結果を返します。\n"
 
 #. TRANSLATORS: def File.open!(path, modes \\ [])
-#: lib/file.ex:1029
+#: lib/file.ex:1036
 msgid ""
 "Same as `open/2` but raises an error if file could not be opened.\n"
 "\n"
@@ -562,7 +569,7 @@ msgstr ""
 "`:ok`を返します。\n"
 
 #. TRANSLATORS: def File.lstat!(path, opts \\ [])
-#: lib/file.ex:321
+#: lib/file.ex:324
 msgid ""
 "Same as `lstat/2` but returns the `File.Stat` directly and\n"
 "throws `File.Error` if an error is returned.\n"
@@ -571,7 +578,7 @@ msgstr ""
 "直接返さず、`File.Errorを投げます。\n"
 
 #. TRANSLATORS: def File.chown!(path, uid)
-#: lib/file.ex:1295
+#: lib/file.ex:1302
 msgid ""
 "Same as `chown/2`, but raises an exception in case of failure. Otherwise `:"
 "ok`.\n"
@@ -580,7 +587,7 @@ msgstr ""
 "`:ok`を返します。\n"
 
 #. TRANSLATORS: def File.chmod!(path, mode)
-#: lib/file.ex:1249
+#: lib/file.ex:1256
 msgid ""
 "Same as `chmod/2`, but raises an exception in case of failure. Otherwise `:"
 "ok`.\n"
@@ -589,7 +596,7 @@ msgstr ""
 "`:ok`を返します。\n"
 
 #. TRANSLATORS: def File.chgrp!(path, gid)
-#: lib/file.ex:1272
+#: lib/file.ex:1279
 msgid ""
 "Same as `chgrp/2`, but raises an exception in case of failure. Otherwise `:"
 "ok`.\n"
@@ -598,7 +605,7 @@ msgstr ""
 "`:ok`を返します。\n"
 
 #. TRANSLATORS: def File.ls(path \\ ".")
-#: lib/file.ex:1136
+#: lib/file.ex:1143
 msgid ""
 "Returns list of files in the given directory.\n"
 "\n"
@@ -611,12 +618,14 @@ msgstr ""
 "`{:error, reason}`を返します。\n"
 
 #. TRANSLATORS: def File.lstat(path, opts \\ [])
-#: lib/file.ex:292
+#: lib/file.ex:293
 msgid ""
 "Returns information about the `path`. If the file is a symlink sets\n"
 "the `type` to `:symlink` and returns `File.Stat` for the link. For any\n"
-"other file, returns exactly the same values as `stat/2`. For more details\n"
-"see http://www.erlang.org/doc/man/file.html#read_link_info-2\n"
+"other file, returns exactly the same values as `stat/2`.\n"
+"\n"
+"For more details, see [`:file.read_link_info/2`](http://www.erlang.org/doc/"
+"man/file.html#read_link_info-2).\n"
 "\n"
 "## Options\n"
 "\n"
@@ -626,28 +635,27 @@ msgid ""
 "\n"
 "The values for `:time` can be:\n"
 "\n"
+"  * `:universal` - returns a `{date, time}` tuple in UTC (default)\n"
 "  * `:local` - returns a `{date, time}` tuple using the machine time\n"
-"  * `:universal` - returns a `{date, time}` tuple in UTC\n"
 "  * `:posix` - returns the time as integer seconds since epoch\n"
 "\n"
 msgstr ""
 "`path`についての、情報を返します。もしファイルがシンボリックリング\n"
 "なら、`type`を`:symlink`にセットして、リンクについての`File.Stat`を\n"
 "返します。その他のファイルの場合、`stat/2`と全く同じ値を返します。\n"
-"詳細は、 http://www.erlang.org/doc/man/file.html#read_link_info-2 を\n"
+"詳細は、 [`:file.read_link_info/2`](http://www.erlang.org/doc/man/file.html#read_link_info-2) を\n"
 "参照してください。\n"
 "\n"
 "## オプション\n"
 "\n"
 "以下のオプションを受け付けます:\n"
 "\n"
-"  * `:time` - ファイルのタイムタンプを\n"
-"             どのように返すかを構成します\n"
+"  * `:time` - ファイルのタイムタンプをどのように返すかを構成します\n"
 "\n"
 "`:time`の値は以下のものが可能です:\n"
 "\n"
-"  * `:local` - マシンタイムを使い、`{date, time}`タプルを返します。\n"
 "  * `:universal` - UTCの`{date, time}`タプルを返します。\n"
+"  * `:local` - マシンタイムを使い、`{date, time}`タプルを返します。\n"
 "  * `:posix` - epochからの整数の秒数として時刻を返します。\n"
 "\n"
 
@@ -667,8 +675,8 @@ msgid ""
 "\n"
 "The values for `:time` can be:\n"
 "\n"
+"  * `:universal` - returns a `{date, time}` tuple in UTC (default)\n"
 "  * `:local` - returns a `{date, time}` tuple using the machine time\n"
-"  * `:universal` - returns a `{date, time}` tuple in UTC\n"
 "  * `:posix` - returns the time as integer seconds since epoch\n"
 "\n"
 msgstr ""
@@ -680,13 +688,12 @@ msgstr ""
 "\n"
 "以下のオプションを受け付けます:\n"
 "\n"
-"  * `:time` - ファイルのタイムタンプを\n"
-"             どのように返すかを構成します\n"
+"  * `:time` - ファイルのタイムタンプをどのように返すかを構成します\n"
 "\n"
 "`:time`の値は以下のものが可能です:\n"
 "\n"
-"  * `:local` - マシンタイムを使い、`{date, time}`タプルを返します。\n"
 "  * `:universal` - UTCの`{date, time}`タプルを返します。\n"
+"  * `:local` - マシンタイムを使い、`{date, time}`タプルを返します。\n"
 "  * `:posix` - epochからの整数の秒数として時刻を返します。\n"
 "\n"
 
@@ -700,7 +707,7 @@ msgstr ""
 "あるいは、エラーが起きたら`File.Error`を上げます。\n"
 
 #. TRANSLATORS: def File.rename(source, destination)
-#: lib/file.ex:444
+#: lib/file.ex:451
 msgid ""
 "Renames the `source` file to `destination` file.  If can be used to move "
 "files\n"
@@ -711,8 +718,8 @@ msgid ""
 "It returns `:ok` in case of success, returns `{:error, reason}` otherwise\n"
 "\n"
 "Note: The command `mv` in Unix systems behaves differently depending\n"
-"if `source` is a file and the `destination` is an existing directory. \n"
-"We have chosen to explicitly disallow this behaviour. \n"
+"if `source` is a file and the `destination` is an existing directory.\n"
+"We have chosen to explicitly disallow this behaviour.\n"
 "\n"
 "## Examples\n"
 "\n"
@@ -720,7 +727,7 @@ msgid ""
 "    File.rename \"a.txt\", \"b.txt\"\n"
 "\n"
 "    # Rename directory \"samples\" to \"tmp\"\n"
-"    File.rename \"samples\", \"tmp\"  \n"
+"    File.rename \"samples\", \"tmp\"\n"
 msgstr ""
 "`source`ファイルを`destination`ファイルにリネームします。\n"
 "可能ならファイル(とディレクトリ)をディレクトリ間で移動します。\n"
@@ -739,10 +746,10 @@ msgstr ""
 "    File.rename \"a.txt\", \"b.txt\"\n"
 "\n"
 "    # Rename directory \"samples\" to \"tmp\"\n"
-"    File.rename \"samples\", \"tmp\"  \n"
+"    File.rename \"samples\", \"tmp\"\n"
 
 #. TRANSLATORS: def File.rm_rf(path)
-#: lib/file.ex:810
+#: lib/file.ex:817
 msgid ""
 "Removes files and directories recursively at the given `path`.\n"
 "Symlinks are not followed but simply removed, non-existing\n"
@@ -779,7 +786,7 @@ msgstr ""
 "\n"
 
 #. TRANSLATORS: def File.stream!(path, modes \\ [], line_or_bytes \\ :line)
-#: lib/file.ex:1177
+#: lib/file.ex:1184
 msgid ""
 "Returns a `File.Stream` for the given `path` with the given `modes`.\n"
 "\n"
@@ -803,20 +810,20 @@ msgid ""
 "is specified. This means any data streamed into the file must be\n"
 "converted to `iodata` type. If you pass `[:utf8]` in the modes parameter,\n"
 "the underlying stream will use `IO.write/2` and the `String.Chars` protocol\n"
-"to convert the data. See `IO.binwrite/2` and `IO.write/2` . \n"
+"to convert the data. See `IO.binwrite/2` and `IO.write/2` .\n"
 "\n"
 "One may also consider passing the `:delayed_write` option if the stream\n"
 "is meant to be written to under a tight loop.\n"
 "\n"
 "## Examples\n"
-"    \n"
+"\n"
 "    # Read in 2048 byte chunks rather than lines\n"
 "    File.stream!(\"./test/test.data\", [], 2048)\n"
 "    #=>  %File.Stream{line_or_bytes: 2048, modes: [:raw, :read_ahead, :"
 "binary],\n"
 "    #=> path: \"./test/test.data\", raw: true}\n"
 "\n"
-"See `Stream.run/1` for an example of streaming into a file. \n"
+"See `Stream.run/1` for an example of streaming into a file.\n"
 "\n"
 msgstr ""
 "与えられた`path`について、与えられた`modes`での`File.Stream`を返します。\n"
@@ -839,6 +846,11 @@ msgstr ""
 "由からrawモードでファイルをオープンすることは便利です。従って、エンコー\n"
 "ディングが指定されない限り、Elixirは、`:read_ahead`オプション付の\n"
 "`:raw`モードでストリームをオープン ** します ** 。\n"
+"これはファイルへ入れる任意のデータストリームは\n"
+"`iodata`タイプへ変換しなければならないことを意味します。\n"
+"もしmodeパラメタに`[:utf8]`を渡したら、ストリームの下で`IO.write/2`を\n"
+"使い、データの変換には`String.Chars`プロトコルを用います。\n"
+"`IO.binwrite/2`と`IO.write/2`を参照してください。\n"
 "\n"
 "人は、もしストリームが堅いループ中で書き込みされるはずなら、\n"
 "`:delayed_write`オプションをパスすることを考慮するかもしれません。\n"
@@ -847,8 +859,7 @@ msgstr ""
 "    \n"
 "    # Read in 2048 byte chunks rather than lines\n"
 "    File.stream!(\"./test/test.data\", [], 2048)\n"
-"    #=>  %File.Stream{line_or_bytes: 2048, modes: [:raw, :read_ahead, :"
-"binary],\n"
+"    #=>  %File.Stream{line_or_bytes: 2048, modes: [:raw, :read_ahead, :binary],\n"
 "    #=> path: \"./test/test.data\", raw: true}\n"
 "\n"
 "ストリームをファイルへ書き出す例は`Stream.run/1`を参照してください。\n"
@@ -948,7 +959,7 @@ msgstr ""
 "\n"
 
 #. TRANSLATORS: def File.copy(source, destination, bytes_count \\ :infinity)
-#: lib/file.ex:403
+#: lib/file.ex:410
 msgid ""
 "Copies the contents of `source` to `destination`.\n"
 "\n"
@@ -992,7 +1003,7 @@ msgstr ""
 "典型的なエラーreasonは`open/2`、`read/2`、`write/3`と同じです。\n"
 
 #. TRANSLATORS: def File.cp_r(source, destination, callback \\ fn _, _ -> true end)
-#: lib/file.ex:520
+#: lib/file.ex:527
 msgid ""
 "Copies the contents in source to destination.\n"
 "\n"
@@ -1081,7 +1092,7 @@ msgstr ""
 "\n"
 
 #. TRANSLATORS: def File.cp(source, destination, callback \\ fn _, _ -> true end)
-#: lib/file.ex:469
+#: lib/file.ex:476
 msgid ""
 "Copies the contents in `source` to `destination` preserving its mode.\n"
 "\n"
@@ -1121,7 +1132,7 @@ msgstr ""
 "エラーを返します。\n"
 
 #. TRANSLATORS: def File.close(io_device)
-#: lib/file.ex:1164
+#: lib/file.ex:1171
 msgid ""
 "Closes the file referenced by `io_device`. It mostly returns `:ok`, except\n"
 "for some severe errors such as out of memory.\n"
@@ -1139,128 +1150,8 @@ msgstr ""
 "`close/1`は古い書き込みエラーを返し、ファイルを閉じようとしないかもしれない\n"
 "ことに、注意してください。`open/2`を参照してください。\n"
 
-#. TRANSLATORS: def File.cwd()
-#: lib/file.ex:1057
-msgid ""
-"Gets the current working directory.\n"
-"\n"
-"In rare circumstances, this function can fail on Unix. It may happen\n"
-"if read permission does not exist for the parent directories of the\n"
-"current directory. For this reason, returns `{:ok, cwd}` in case\n"
-"of success, `{:error, reason}` otherwise.\n"
-msgstr ""
-"カレントワーキングディレクトリを返します。\n"
-"\n"
-"稀な状況では、この関数はUnixで失敗することがあります。カレントディレク\n"
-"トリの親ディレクトリの読み込み許可がない場合、それは起きるかもしれませ\n"
-"ん。この理由で、成功したら`{:ok, cwd}`(さもなければ`{:error, reason}`)\n"
-"が返ります。\n"
-
-#. TRANSLATORS: def File.ln_s(existing, new)
-#: lib/file.ex:392
-msgid ""
-"Creates a symbolic link `new` to the file or directory `existing`.\n"
-"\n"
-"Returns `:ok` if successful, `{:error, reason}` otherwise.\n"
-"If the operating system does not support symlinks, returns\n"
-"`{:error, :enotsup}`.\n"
-msgstr ""
-"シンボリックリンク`new`をファイルかディレクトリ`existing`に対して\n"
-"作成します。\n"
-"\n"
-"成功すると`:ok`を返し、さもなければ`{:error, reason}`を返します。\n"
-"もしオペレーティングシステムがシンボリックリンクをサポートしていないなら、\n"
-"`{:error, :enotsup}`を返します。\n"
-
-#. TRANSLATORS: def File.chgrp(path, gid)
-#: lib/file.ex:1262
-msgid ""
-"Changes the user group given by the group id `gid`\n"
-"for a given `file`. Returns `:ok` on success, or\n"
-"`{:error, reason}` on failure.\n"
-msgstr ""
-"与えられた`file`について、ユーザグループを\n"
-"与えられたグループID`gid`に、変更します。\n"
-"成功したら`:ok`を返し、失敗したら`{:error, reason}`を\n"
-"返します。\n"
-
-#. TRANSLATORS: def File.chown(path, uid)
-#: lib/file.ex:1285
-msgid ""
-"Changes the owner given by the user id `uid`\n"
-"for a given `file`. Returns `:ok` on success,\n"
-"or `{:error, reason}` on failure.\n"
-msgstr ""
-"与えられた`file`について、オーナを、ユーザID`uid`に変更します。成功した\n"
-"ら`:ok`を返し、失敗したら`{:error, reason}`を返します。\n"
-
-#. TRANSLATORS: def File.cd!(path, function)
-#: lib/file.ex:1117
-msgid ""
-"Changes the current directory to the given `path`,\n"
-"executes the given function and then revert back\n"
-"to the previous path regardless if there is an exception.\n"
-"\n"
-"Raises an error if retrieving or changing the current\n"
-"directory fails.\n"
-msgstr ""
-"与えられた`path`に、カレントディレクトリを変更し、\n"
-"与えられた関数を実行します。そして、例外が\n"
-"あったら、とにかく以前のパスに戻ります。\n"
-"\n"
-"もしカレントディレクトリを取得するか変更するかに失敗したら、\n"
-"エラーが上ります。\n"
-
-#. TRANSLATORS: def File.chmod(path, mode)
-#: lib/file.ex:1220
-msgid ""
-"Changes the `mode` for a given `file`.\n"
-"\n"
-"Returns `:ok` on success, or `{:error, reason}` on failure.\n"
-"\n"
-"## Permissions\n"
-"\n"
-"  * 0o400 - read permission: owner\n"
-"  * 0o200 - write permission: owner\n"
-"  * 0o100 - execute permission: owner\n"
-"\n"
-"  * 0o040 - read permission: group\n"
-"  * 0o020 - write permission: group\n"
-"  * 0o010 - execute permission: group\n"
-"\n"
-"  * 0o004 - read permission: other\n"
-"  * 0o002 - write permission: other\n"
-"  * 0o001 - execute permission: other\n"
-"\n"
-"For example, setting the mode 0o755 gives it\n"
-"write, read and execute permission to the owner\n"
-"and both read and execute permission to group\n"
-"and others.\n"
-msgstr ""
-"与えられた`file`を`mode`に変更します。\n"
-"\n"
-"成功すると`:ok`を返し、失敗すると`{:error, reason}`を返します。\n"
-"\n"
-"## Permissions\n"
-"\n"
-"  * 0o400 - read permission: owner\n"
-"  * 0o200 - write permission: owner\n"
-"  * 0o100 - execute permission: owner\n"
-"\n"
-"  * 0o040 - read permission: group\n"
-"  * 0o020 - write permission: group\n"
-"  * 0o010 - execute permission: group\n"
-"\n"
-"  * 0o004 - read permission: other\n"
-"  * 0o002 - write permission: other\n"
-"  * 0o001 - execute permission: other\n"
-"\n"
-"例えば、モード0o755の設定は、オーナーに\n"
-"write, read, executeを許可し、グループと\n"
-"その他ユーザにreadとexecuteを許可します。\n"
-
 #. TRANSLATORS: def File.open(path, modes \\ [])
-#: lib/file.ex:913
+#: lib/file.ex:920
 msgid ""
 "Opens the given `path` according to the given list of modes.\n"
 "\n"
@@ -1313,9 +1204,9 @@ msgid ""
 "the\n"
 "    file will be closed.\n"
 "\n"
-"Check http://www.erlang.org/doc/man/file.html#open-2 for more information "
-"about\n"
-"other options like `:read_ahead` and `:delayed_write`.\n"
+"For more information about other options like `:read_ahead` and `:"
+"delayed_write`,\n"
+"see [`:file.open/2`](http://www.erlang.org/doc/man/file.html#open-2).\n"
 "\n"
 "This function returns:\n"
 "\n"
@@ -1350,14 +1241,12 @@ msgstr ""
 "\n"
 "許されたモードは以下のとおりです:\n"
 "\n"
-"  * `:read` - ファイルは存在していなくてはならず、読み込みのためにオープンさ"
-"れます\n"
+"  * `:read` - ファイルは存在していなくてはならず、読み込みのためにオープンされます\n"
 "\n"
 "  * `:write` - ファイルは書き込みの為にオープンされます。もしなければ、\n"
-"              作られます。\n"
+"    作られます。\n"
 "\n"
-"    もしファイルが存在して、そして、もしwriteがreadと一緒に指定されないな"
-"ら、\n"
+"    もしファイルが存在して、そして、もしwriteがreadと一緒に指定されないなら、\n"
 "    ファイルはトランケートされます。\n"
 "\n"
 "  * `:append` - ファイルは書き込みの為にオープンされ、もし存在しないなら、\n"
@@ -1365,19 +1254,16 @@ msgstr ""
 "    オペレーションは、ファイルの終わりの場所に行われます。\n"
 "\n"
 "  * `:exclusive` - 書き込みの為にオープンされたファイルは、存在しないなら\n"
-"    作成されます。もしファイルが存在したらopenは`{:error, :eexist}`を返しま"
-"す。\n"
+"    作成されます。もしファイルが存在したらopenは`{:error, :eexist}`を返します。\n"
 "\n"
 "  * `:char_list` - これが指定されたら、ファイルの読み込み\n"
 "    オペレーションはバイナリではなく文字のリストを返します。\n"
 "\n"
-"  * `:compressed` - gzipで圧縮されたファイルを読み書きすることを可能にしま"
-"す。\n"
+"  * `:compressed` - gzipで圧縮されたファイルを読み書きすることを可能にします。\n"
 "\n"
 "    compressedオプションはreadかwriteの両方ではなく、どちらか一方と一緒に\n"
 "    指定されなければなりません。\n"
-"    `stat/1`で得られるファイルサイズは、圧縮ファイルから読み込むことができ"
-"る\n"
+"    `stat/1`で得られるファイルサイズは、圧縮ファイルから読み込むことができる\n"
 "     バイト数と、多分マッチしないことに注意してください。\n"
 "\n"
 "  * `:utf8` - このオプションは、ディスクファイルに実際に保存される方法\n"
@@ -1386,19 +1272,18 @@ msgstr ""
 "\n"
 "    もし、データがutf8へ変換出来ないフォーマットでファイルに送信されたら、\n"
 "    または、データの文字範囲に対処できないフォーマットでデータを返す関数に\n"
-"    よってデータが読み込まれたら、エラーが発生し、ファイルはクローズされま"
-"す。\n"
+"    よってデータが読み込まれたら、エラーが発生し、ファイルはクローズされます。\n"
 "\n"
 "`:read_ahead`や`:delayed_write`といった、他のオプションについての詳細は、\n"
-"http://www.erlang.org/doc/man/file.html#open-2をチェックしてください。\n"
+"[`:file.open/2`](http://www.erlang.org/doc/man/file.html#open-2)\n"
+"をチェックしてください。\n"
 "\n"
 "この関数は以下を返します:\n"
 "\n"
 "  * `{:ok, io_device}` - 要求されたモードで、ファイルはオープンされました。\n"
 "\n"
 "    `io_device`は通常、ファイルを扱うプロセスのpidです。\n"
-"    このプロセスはファイルをオープンしたオリジナルのプロセスにリンクしていま"
-"す。\n"
+"    このプロセスはファイルをオープンしたオリジナルのプロセスにリンクしています。\n"
 "    もし`io_device`がリンクされている任意のプロセスが終了したら、\n"
 "    ファイルはクローズされ、そのプロセス自身も終了します。\n"
 "\n"
@@ -1413,6 +1298,126 @@ msgstr ""
 "    IO.read(file, :line)\n"
 "    File.close(file)\n"
 "\n"
+
+#. TRANSLATORS: def File.cwd()
+#: lib/file.ex:1064
+msgid ""
+"Gets the current working directory.\n"
+"\n"
+"In rare circumstances, this function can fail on Unix. It may happen\n"
+"if read permission does not exist for the parent directories of the\n"
+"current directory. For this reason, returns `{:ok, cwd}` in case\n"
+"of success, `{:error, reason}` otherwise.\n"
+msgstr ""
+"カレントワーキングディレクトリを返します。\n"
+"\n"
+"稀な状況では、この関数はUnixで失敗することがあります。カレントディレク\n"
+"トリの親ディレクトリの読み込み許可がない場合、それは起きるかもしれませ\n"
+"ん。この理由で、成功したら`{:ok, cwd}`(さもなければ`{:error, reason}`)\n"
+"が返ります。\n"
+
+#. TRANSLATORS: def File.ln_s(existing, new)
+#: lib/file.ex:399
+msgid ""
+"Creates a symbolic link `new` to the file or directory `existing`.\n"
+"\n"
+"Returns `:ok` if successful, `{:error, reason}` otherwise.\n"
+"If the operating system does not support symlinks, returns\n"
+"`{:error, :enotsup}`.\n"
+msgstr ""
+"シンボリックリンク`new`をファイルかディレクトリ`existing`に対して\n"
+"作成します。\n"
+"\n"
+"成功すると`:ok`を返し、さもなければ`{:error, reason}`を返します。\n"
+"もしオペレーティングシステムがシンボリックリンクをサポートしていないなら、\n"
+"`{:error, :enotsup}`を返します。\n"
+
+#. TRANSLATORS: def File.chgrp(path, gid)
+#: lib/file.ex:1269
+msgid ""
+"Changes the user group given by the group id `gid`\n"
+"for a given `file`. Returns `:ok` on success, or\n"
+"`{:error, reason}` on failure.\n"
+msgstr ""
+"与えられた`file`について、ユーザグループを\n"
+"与えられたグループID`gid`に、変更します。\n"
+"成功したら`:ok`を返し、失敗したら`{:error, reason}`を\n"
+"返します。\n"
+
+#. TRANSLATORS: def File.chown(path, uid)
+#: lib/file.ex:1292
+msgid ""
+"Changes the owner given by the user id `uid`\n"
+"for a given `file`. Returns `:ok` on success,\n"
+"or `{:error, reason}` on failure.\n"
+msgstr ""
+"与えられた`file`について、オーナを、ユーザID`uid`に変更します。成功した\n"
+"ら`:ok`を返し、失敗したら`{:error, reason}`を返します。\n"
+
+#. TRANSLATORS: def File.cd!(path, function)
+#: lib/file.ex:1124
+msgid ""
+"Changes the current directory to the given `path`,\n"
+"executes the given function and then revert back\n"
+"to the previous path regardless if there is an exception.\n"
+"\n"
+"Raises an error if retrieving or changing the current\n"
+"directory fails.\n"
+msgstr ""
+"与えられた`path`に、カレントディレクトリを変更し、\n"
+"与えられた関数を実行します。そして、例外が\n"
+"あったら、とにかく以前のパスに戻ります。\n"
+"\n"
+"もしカレントディレクトリを取得するか変更するかに失敗したら、\n"
+"エラーが上ります。\n"
+
+#. TRANSLATORS: def File.chmod(path, mode)
+#: lib/file.ex:1227
+msgid ""
+"Changes the `mode` for a given `file`.\n"
+"\n"
+"Returns `:ok` on success, or `{:error, reason}` on failure.\n"
+"\n"
+"## Permissions\n"
+"\n"
+"  * 0o400 - read permission: owner\n"
+"  * 0o200 - write permission: owner\n"
+"  * 0o100 - execute permission: owner\n"
+"\n"
+"  * 0o040 - read permission: group\n"
+"  * 0o020 - write permission: group\n"
+"  * 0o010 - execute permission: group\n"
+"\n"
+"  * 0o004 - read permission: other\n"
+"  * 0o002 - write permission: other\n"
+"  * 0o001 - execute permission: other\n"
+"\n"
+"For example, setting the mode 0o755 gives it\n"
+"write, read and execute permission to the owner\n"
+"and both read and execute permission to group\n"
+"and others.\n"
+msgstr ""
+"与えられた`file`を`mode`に変更します。\n"
+"\n"
+"成功すると`:ok`を返し、失敗すると`{:error, reason}`を返します。\n"
+"\n"
+"## Permissions\n"
+"\n"
+"  * 0o400 - read permission: owner\n"
+"  * 0o200 - write permission: owner\n"
+"  * 0o100 - execute permission: owner\n"
+"\n"
+"  * 0o040 - read permission: group\n"
+"  * 0o020 - write permission: group\n"
+"  * 0o010 - execute permission: group\n"
+"\n"
+"  * 0o004 - read permission: other\n"
+"  * 0o002 - write permission: other\n"
+"  * 0o001 - execute permission: other\n"
+"\n"
+"例えば、モード0o755の設定は、オーナーに\n"
+"write, read, executeを許可し、グループと\n"
+"その他ユーザにreadとexecuteを許可します。\n"
 
 #~ msgid ""
 #~ "The same as `cp/3`, but raises `File.CopyError` if it fails.\n"

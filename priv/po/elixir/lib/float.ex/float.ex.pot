@@ -1,5 +1,5 @@
 #. TRANSLATORS: def Float.round(number, precision \\ 0)
-#: lib/float.ex:128 
+#: lib/float.ex:132 
 msgid ""
 "Rounds a floating point value to an arbitrary number of fractional digits\n"
 "(between 0 and 15).\n"
@@ -24,7 +24,7 @@ msgid ""
 "\n"
 msgstr ""
 #. TRANSLATORS: def Float.floor(number, precision \\ 0)
-#: lib/float.ex:68 
+#: lib/float.ex:72 
 msgid ""
 "Rounds a float to the largest integer less than or equal to `num`.\n"
 "\n"
@@ -47,7 +47,7 @@ msgid ""
 "\n"
 msgstr ""
 #. TRANSLATORS: def Float.ceil(number, precision \\ 0)
-#: lib/float.ex:98 
+#: lib/float.ex:102 
 msgid ""
 "Rounds a float to the largest integer greater than or equal to `num`.\n"
 "\n"
@@ -70,7 +70,7 @@ msgid ""
 "\n"
 msgstr ""
 #. TRANSLATORS: def Float.to_char_list(float)
-#: lib/float.ex:162 
+#: lib/float.ex:166 
 msgid ""
 "Returns a char list which corresponds to the text representation of the given float.\n"
 "\n"
@@ -83,16 +83,16 @@ msgid ""
 "\n"
 msgstr ""
 #. TRANSLATORS: def Float.to_char_list(float, options)
-#: lib/float.ex:178 
+#: lib/float.ex:182 
 msgid ""
 "Returns a list which corresponds to the text representation\n"
 "of the given float.\n"
 "\n"
 "## Options\n"
 "\n"
-"  * `:decimals`   — number of decimal points to show\n"
-"  * `:scientific` — number of decimal points to show, in scientific format\n"
-"  * `:compact`    — when `true`, use the most compact representation (ignored\n"
+"  * `:decimals`   - number of decimal points to show\n"
+"  * `:scientific` - number of decimal points to show, in scientific format\n"
+"  * `:compact`    - when `true`, use the most compact representation (ignored\n"
 "    with the `scientific` option)\n"
 "\n"
 "## Examples\n"
@@ -102,7 +102,7 @@ msgid ""
 "\n"
 msgstr ""
 #. TRANSLATORS: def Float.to_string(float)
-#: lib/float.ex:200 
+#: lib/float.ex:204 
 msgid ""
 "Returns a binary which corresponds to the text representation\n"
 "of the given float.\n"
@@ -116,16 +116,16 @@ msgid ""
 "\n"
 msgstr ""
 #. TRANSLATORS: def Float.to_string(float, options)
-#: lib/float.ex:217 
+#: lib/float.ex:221 
 msgid ""
 "Returns a binary which corresponds to the text representation\n"
 "of `float`.\n"
 "\n"
 "## Options\n"
 "\n"
-"  * `:decimals` — number of decimal points to show\n"
-"  * `:scientific` — number of decimal points to show, in scientific format\n"
-"  * `:compact` — when `true`, use the most compact representation (ignored\n"
+"  * `:decimals`   - number of decimal points to show\n"
+"  * `:scientific` - number of decimal points to show, in scientific format\n"
+"  * `:compact`    - when `true`, use the most compact representation (ignored\n"
 "    with the `scientific` option)\n"
 "\n"
 "## Examples\n"
@@ -133,11 +133,6 @@ msgid ""
 "    iex> Float.to_string 7.1, [decimals: 2, compact: true]\n"
 "    \"7.1\"\n"
 "\n"
-msgstr ""
-#. TRANSLATORS: Elixir.Float Summary
-#: lib/float.ex:4 
-msgid ""
-"Functions for working with floating point numbers.\n"
 msgstr ""
 #. TRANSLATORS: def Float.parse(binary)
 #: lib/float.ex:8 
@@ -148,7 +143,7 @@ msgid ""
 "otherwise, `:error`.\n"
 "\n"
 "If a float formatted string wants to be directly converted to a float,\n"
-"`String.to_float/1\" can be used instead.\n"
+"`String.to_float/1` can be used instead.\n"
 "\n"
 "## Examples\n"
 "\n"
@@ -164,4 +159,9 @@ msgid ""
 "    iex> Float.parse(\"pi\")\n"
 "    :error\n"
 "\n"
+msgstr ""
+#. TRANSLATORS: Elixir.Float Summary
+#: lib/float.ex:4 
+msgid ""
+"Functions for working with floating point numbers.\n"
 msgstr ""
