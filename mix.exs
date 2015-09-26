@@ -55,7 +55,8 @@ defmodule L10nElixir.Mixfile do
      logo_url: "http://elixir-lang.org/docs/logo.png",
      source_beam: sr,
      source_ref: sref,
-     main: "Kernel"
+     main: "Kernel",
+     output: "doc/elixir"
     ]
   end
 
@@ -76,7 +77,7 @@ defmodule L10nElixir.Mixfile do
   #
   # Type `mix help deps` for more examples and options
   defp deps do
-    [{:elixir, github: "elixir-lang/elixir"},
+    [{:elixir, github: "elixir-lang/elixir", tag: "v1.1.0"},
      {:ex_doc, github: "elixir-lang/ex_doc"},
      {:earmark, "~> 0.1.17 or ~> 0.2", optional: true},
      {:exgettext, github: "k1complete/exgettext"},
