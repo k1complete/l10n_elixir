@@ -1,5 +1,4 @@
-PATH=`pwd`/deps/elixir/bin:$PATH
-export PATH
+. env.sh
 if [ ! -f logo.png ]; then
     wget "http://elixir-lang.org/docs/logo.png"
 fi
