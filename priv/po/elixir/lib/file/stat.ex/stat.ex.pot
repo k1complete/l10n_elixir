@@ -1,17 +1,12 @@
-#. TRANSLATORS: def File.Stat.to_record(stat)
-#: lib/file/stat.ex:62 
-msgid ""
-"Converts a `File.Stat` struct to a `:file_info` record.\n"
-msgstr ""
 #. TRANSLATORS: def File.Stat.from_record(file_info)
-#: lib/file/stat.ex:69 
+#: lib/file/stat.ex:70 
 msgid ""
 "Converts a `:file_info` record into a `File.Stat`.\n"
 msgstr ""
 #. TRANSLATORS: Elixir.File.Stat Summary
 #: lib/file/stat.ex:4 
 msgid ""
-"A struct responsible to hold file information.\n"
+"A struct that holds file information.\n"
 "\n"
 "In Erlang, this struct is represented by a `:file_info` record.\n"
 "Therefore this module also provides functions for converting\n"
@@ -50,12 +45,18 @@ msgid ""
 "  * `inode` - gives the inode number. On non-Unix file systems, this field\n"
 "    will be zero.\n"
 "\n"
-"  * `uid` - indicates the owner of the file.\n"
+"  * `uid` - indicates the owner of the file. Will be zero for non-Unix file\n"
+"    systems.\n"
 "\n"
-"  * `gid` - gives the group that the owner of the file belongs to. Will be\n"
-"    zero for non-Unix file systems.\n"
+"  * `gid` - indicates the group that owns the file. Will be zero for\n"
+"    non-Unix file systems.\n"
 "\n"
 "The time type returned in `atime`, `mtime`, and `ctime` is dependent on the\n"
 "time type set in options. `{:time, type}` where type can be `:local`,\n"
-"`:universal`, or `:posix`. Default is `:local`.\n"
+"`:universal`, or `:posix`. Default is `:universal`.\n"
+msgstr ""
+#. TRANSLATORS: def File.Stat.to_record(stat)
+#: lib/file/stat.ex:63 
+msgid ""
+"Converts a `File.Stat` struct to a `:file_info` record.\n"
 msgstr ""

@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: l 10n_elixir\n"
-"PO-Revision-Date: 2015-09-25 23:33+0900\n"
+"PO-Revision-Date: 2015-12-12 22:23+0900\n"
 "Last-Translator: 小田 照敬 <EMAIL@ADDRESS>\n"
 "Language-Team: Japanese\n"
 "Language: ja\n"
@@ -9,6 +9,16 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
+
+#. TRANSLATORS: @type name
+#: lib/agent.ex:111
+msgid "The agent name"
+msgstr "エージェントの名前"
+
+#. TRANSLATORS: @type agent
+#: lib/agent.ex:114
+msgid "The agent reference"
+msgstr "エージェントのリファレンス"
 
 #. TRANSLATORS: def Agent.update(agent, fun, timeout \\ 5000)
 #: lib/agent.ex:245
@@ -30,6 +40,33 @@ msgstr ""
 "タイムアウトを指定することもできます(デフォルト値は5000です)。\n"
 "この関数は常に`:ok`を返します。\n"
 
+#. TRANSLATORS: @type state
+#: lib/agent.ex:117
+msgid "The agent state"
+msgstr "エージェントのステート"
+
+#. TRANSLATORS: def Agent.stop(agent, reason \\ :normal, timeout \\ :infinity)
+#: lib/agent.ex:297
+msgid ""
+"Stops the agent with the given `reason`.\n"
+"\n"
+"It returns `:ok` if the server terminates with the given\n"
+"reason, if it terminates with another reason, the call will\n"
+"exit.\n"
+"\n"
+"This function keeps OTP semantics regarding error reporting.\n"
+"If the reason is any other than `:normal`, `:shutdown` or\n"
+"`{:shutdown, _}`, an error report will be logged.\n"
+msgstr ""
+"与えられた`reason`でエージェントを停止します。\n"
+"\n"
+"もしサーバが与えられたreasonで終了したら `:ok` を返し、\n"
+"他の reason で終了したら exit を呼びます。\n"
+"\n"
+"この関数は OTPのエラーレポーティングのセマンティクスを\n"
+"尊重します。`:normal`, `:shutdown` あるいは `{:shutdown, _}`\n"
+"以外の reason なら、エラーレポートはログされるでしょう。\n"
+
 #. TRANSLATORS: def Agent.update(agent, module, fun, args, timeout \\ 5000)
 #: lib/agent.ex:259
 msgid ""
@@ -43,71 +80,6 @@ msgstr ""
 "\n"
 "`update/3`と同じですが、無名関数のかわりにモジュール、関数、引数を指定\n"
 "します。ステートは与えられた引数リストの最初の引数として追加されます。\n"
-
-#. TRANSLATORS: @type state
-#: lib/agent.ex:117
-msgid "The agent state"
-msgstr "エージェントのステート"
-
-#. TRANSLATORS: @type agent
-#: lib/agent.ex:114
-msgid "The agent reference"
-msgstr "エージェントのリファレンス"
-
-#. TRANSLATORS: @type name
-#: lib/agent.ex:111
-msgid "The agent name"
-msgstr "エージェントの名前"
-
-#. TRANSLATORS: def Agent.stop(agent, timeout \\ 5000)
-#: lib/agent.ex:297
-msgid ""
-"Stops the agent.\n"
-"\n"
-"Returns `:ok` if the agent is stopped within the given `timeout`.\n"
-msgstr ""
-"エージェントを停止します。\n"
-"\n"
-"エージェントが与えられた`timeout`以内に停止されたら`:ok`を返します。\n"
-
-#. TRANSLATORS: def Agent.start(module, fun, args, options \\ [])
-#: lib/agent.ex:181
-msgid ""
-"Starts an agent with the given module function and arguments.\n"
-"\n"
-"Similar to `start/2` but a module, function and args are expected\n"
-"instead of an anonymous function.\n"
-msgstr ""
-"与えられたモジュールと関数、引数でエージェントを開始します。\n"
-"\n"
-"`start/2`と似ていますが、無名関数の替わりに、\n"
-"モジュール、関数、引数を期待しています。\n"
-
-#. TRANSLATORS: def Agent.start(fun, options \\ [])
-#: lib/agent.ex:171
-msgid ""
-"Starts an agent process without links (outside of a supervision tree).\n"
-"\n"
-"See `start_link/2` for more information.\n"
-msgstr ""
-"エージェントプロセスをリンクなし(監督ツリーの外側)で開始します。\n"
-"\n"
-"詳細は `start_link/2` を参照してください。\n"
-
-#. TRANSLATORS: def Agent.start_link(module, fun, args, options \\ [])
-#: lib/agent.ex:159
-msgid ""
-"Starts an agent linked to the current process with the given module\n"
-"function and arguments.\n"
-"\n"
-"Same as `start_link/2` but a module, function and args are expected\n"
-"instead of an anonymous function.\n"
-msgstr ""
-"与えられたモジュール、関数、引数で現在のプロセスにリンクされた\n"
-"エージェントを開始します。\n"
-"\n"
-"`start_link/2`と同じですが、無名関数の替わりに、モジュール、関数、引数\n"
-"を期待しています。\n"
 
 #. TRANSLATORS: def Agent.start_link(fun, options \\ [])
 #: lib/agent.ex:120
@@ -200,56 +172,18 @@ msgstr ""
 "送信先のノードあるいはエージェントの存在の有無に拘わらず、`cast`は\n"
 "`:ok`を直ちに返すことに注意してください。\n"
 
-#. TRANSLATORS: def Agent.cast(agent, module, fun, args)
-#: lib/agent.ex:285
+#. TRANSLATORS: def Agent.start(module, fun, args, options \\ [])
+#: lib/agent.ex:181
 msgid ""
-"Performs a cast (fire and forget) operation on the agent state.\n"
+"Starts an agent with the given module function and arguments.\n"
 "\n"
-"Same as `cast/2` but a module, function and args are expected\n"
-"instead of an anonymous function. The state is added as first\n"
-"argument to the given list of args.\n"
+"Similar to `start/2` but a module, function and args are expected\n"
+"instead of an anonymous function.\n"
 msgstr ""
-"エージェントのステートでキャスト(発火して忘れる)オペレーションを実行しま"
-"す。\n"
+"与えられたモジュールと関数、引数でエージェントを開始します。\n"
 "\n"
-"`cast/2`と同じですが、無名関数のかわりに、モジュール、関数、引数を明示\n"
-"してます。ステートは与えられた引数リストの最初に追加されます。関数\n"
-"`fun`は`agent`に送られ、エージェントステートを渡されて実行されます。\n"
-
-#. TRANSLATORS: def Agent.get_and_update(agent, fun, timeout \\ 5000)
-#: lib/agent.ex:218
-msgid ""
-"Gets and updates the agent state in one operation.\n"
-"\n"
-"The function `fun` is sent to the `agent` which invokes the function\n"
-"passing the agent state. The function must return a tuple with two\n"
-"elements, the first being the value to return (i.e. the `get` value)\n"
-"and the second one is the new state.\n"
-"\n"
-"A timeout can also be specified (it has a default value of 5000).\n"
-msgstr ""
-"一つのオペレーションで、エージェントステートを取得して更新します。\n"
-"\n"
-"`fun`関数は、エージェントステートを渡して実行する`agent`に送られます。\n"
-"関数は、最初の要素は返される値(即ち`get`した値)で、二つめの要素は\n"
-"新しいステートとなる、二つの要素のタプルを返さなくてはなりません。\n"
-"\n"
-"タイムアウトも指定することができます(デフォルト値は5000です)。\n"
-
-#. TRANSLATORS: def Agent.get_and_update(agent, module, fun, args, timeout \\ 5000)
-#: lib/agent.ex:233
-msgid ""
-"Gets and updates the agent state in one operation.\n"
-"\n"
-"Same as `get_and_update/3` but a module, function and args are expected\n"
-"instead of an anonymous function. The state is added as first\n"
-"argument to the given list of args.\n"
-msgstr ""
-"一つのオペレーションで、エージェントステートを取得して更新します。\n"
-"\n"
-"`get_and_update/3`と同じですが、無名関数の替りに、モジュール、関数、そ\n"
-"して引数が期待されます。ステートは与えられた引数リストの最初の引数とし\n"
-"て追加されます。\n"
+"`start/2`と似ていますが、無名関数の替わりに、\n"
+"モジュール、関数、引数を期待しています。\n"
 
 #. TRANSLATORS: def Agent.get(agent, fun, timeout \\ 5000)
 #: lib/agent.ex:192
@@ -304,7 +238,7 @@ msgid ""
 "\n"
 "    defmodule Mix.TasksServer do\n"
 "      def start_link do\n"
-"        Agent.start_link(fn -> HashSet.new end, name: __MODULE__)\n"
+"        Agent.start_link(fn -> MapSet.new end, name: __MODULE__)\n"
 "      end\n"
 "\n"
 "      @doc \"Checks if the task has already executed\"\n"
@@ -318,14 +252,14 @@ msgid ""
 "      @doc \"Marks a task as executed\"\n"
 "      def put_task(task, project) do\n"
 "        item = {task, project}\n"
-"        Agent.update(__MODULE__, &Set.put(&1, item))\n"
+"        Agent.update(__MODULE__, &MapSet.put(&1, item))\n"
 "      end\n"
 "\n"
-"      @doc \"Resets the executed tasks and return the previous list of tasks"
+"      @doc \"Resets the executed tasks and returns the previous list of tasks"
 "\"\n"
 "      def take_all() do\n"
 "        Agent.get_and_update(__MODULE__, fn set ->\n"
-"          {Enum.into(set, []), HashSet.new}\n"
+"          {Enum.into(set, []), MapSet.new}\n"
 "        end)\n"
 "      end\n"
 "    end\n"
@@ -396,8 +330,8 @@ msgid ""
 msgstr ""
 "Agentはステートまわりの単純な抽象です。\n"
 "\n"
-"Elixirではしばしば、異るプロセスから、または、異る時の同じ\n"
-"プロセスにより、アクセスされなければならないステートを、\n"
+"Elixirではしばしば、異るプロセスから、または、同じプロセスの\n"
+"異る時点により、アクセスされなければならないステートを、\n"
 "保存または共有する必要があります。\n"
 "\n"
 "Agentモジュールは、シンプルなAPIによりステートを取り出したり更新される\n"
@@ -499,3 +433,80 @@ msgstr ""
 "\n"
 "エージェントのステートは最初の引数として与えられたリストに\n"
 "加えられます。\n"
+
+#. TRANSLATORS: def Agent.start(fun, options \\ [])
+#: lib/agent.ex:171
+msgid ""
+"Starts an agent process without links (outside of a supervision tree).\n"
+"\n"
+"See `start_link/2` for more information.\n"
+msgstr ""
+"エージェントプロセスをリンクなし(監督ツリーの外側)で開始します。\n"
+"\n"
+"詳細は `start_link/2` を参照してください。\n"
+
+#. TRANSLATORS: def Agent.get_and_update(agent, fun, timeout \\ 5000)
+#: lib/agent.ex:218
+msgid ""
+"Gets and updates the agent state in one operation.\n"
+"\n"
+"The function `fun` is sent to the `agent` which invokes the function\n"
+"passing the agent state. The function must return a tuple with two\n"
+"elements, the first being the value to return (i.e. the `get` value)\n"
+"and the second one is the new state.\n"
+"\n"
+"A timeout can also be specified (it has a default value of 5000).\n"
+msgstr ""
+"一つのオペレーションで、エージェントステートを取得して更新します。\n"
+"\n"
+"`fun`関数は、エージェントステートを渡して実行する`agent`に送られます。\n"
+"関数は、最初の要素は返される値(即ち`get`した値)で、二つめの要素は\n"
+"新しいステートとなる、二つの要素のタプルを返さなくてはなりません。\n"
+"\n"
+"タイムアウトも指定することができます(デフォルト値は5000です)。\n"
+
+#. TRANSLATORS: def Agent.start_link(module, fun, args, options \\ [])
+#: lib/agent.ex:159
+msgid ""
+"Starts an agent linked to the current process with the given module\n"
+"function and arguments.\n"
+"\n"
+"Same as `start_link/2` but a module, function and args are expected\n"
+"instead of an anonymous function.\n"
+msgstr ""
+"与えられたモジュール、関数、引数で現在のプロセスにリンクされた\n"
+"エージェントを開始します。\n"
+"\n"
+"`start_link/2`と同じですが、無名関数の替わりに、モジュール、関数、引数\n"
+"を期待しています。\n"
+
+#. TRANSLATORS: def Agent.cast(agent, module, fun, args)
+#: lib/agent.ex:285
+msgid ""
+"Performs a cast (fire and forget) operation on the agent state.\n"
+"\n"
+"Same as `cast/2` but a module, function and args are expected\n"
+"instead of an anonymous function. The state is added as first\n"
+"argument to the given list of args.\n"
+msgstr ""
+"エージェントのステートでキャスト(発火して忘れる)オペレーションを実行しま"
+"す。\n"
+"\n"
+"`cast/2`と同じですが、無名関数のかわりに、モジュール、関数、引数を明示\n"
+"してます。ステートは与えられた引数リストの最初に追加されます。関数\n"
+"`fun`は`agent`に送られ、エージェントステートを渡されて実行されます。\n"
+
+#. TRANSLATORS: def Agent.get_and_update(agent, module, fun, args, timeout \\ 5000)
+#: lib/agent.ex:233
+msgid ""
+"Gets and updates the agent state in one operation.\n"
+"\n"
+"Same as `get_and_update/3` but a module, function and args are expected\n"
+"instead of an anonymous function. The state is added as first\n"
+"argument to the given list of args.\n"
+msgstr ""
+"一つのオペレーションで、エージェントステートを取得して更新します。\n"
+"\n"
+"`get_and_update/3`と同じですが、無名関数の替りに、モジュール、関数、そ\n"
+"して引数が期待されます。ステートは与えられた引数リストの最初の引数とし\n"
+"て追加されます。\n"

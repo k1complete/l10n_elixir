@@ -10,6 +10,17 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
+#. TRANSLATORS: defmacro Behaviour.defcallback(spec)
+#: lib/behaviour.ex:13
+msgid ""
+"Defines a function callback according to the given type specification.\n"
+msgstr "与えられたタイプ仕様に従って、コールバック関数を定義します。\n"
+
+#. TRANSLATORS: defmacro Behaviour.defmacrocallback(spec)
+#: lib/behaviour.ex:20
+msgid "Defines a macro callback according to the given type specification.\n"
+msgstr "与えられたタイプ仕様に従って、コールバックマクロを定義します。\n"
+
 #. TRANSLATORS: Elixir.Behaviour Summary
 #: lib/behaviour.ex:2
 msgid ""
@@ -26,14 +37,3 @@ msgstr ""
 "`defmacrocallback`の代わりに、単に`@macrocallback`を使えます。\n"
 "`__behaviour__(:callbacks)`の代わりに、単に`behaviour_info(:callbacks)`を\n"
 "使えます。\n"
-
-#. TRANSLATORS: defmacro Behaviour.defmacrocallback(spec)
-#: lib/behaviour.ex:20
-msgid "Defines a macro callback according to the given type specification.\n"
-msgstr "与えられたタイプ仕様に従って、コールバックマクロを定義します。\n"
-
-#. TRANSLATORS: defmacro Behaviour.defcallback(spec)
-#: lib/behaviour.ex:13
-msgid ""
-"Defines a function callback according to the given type specification.\n"
-msgstr "与えられたタイプ仕様に従って、コールバック関数を定義します。\n"

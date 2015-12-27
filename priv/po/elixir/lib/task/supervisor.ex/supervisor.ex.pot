@@ -1,26 +1,5 @@
-#. TRANSLATORS: def Task.Supervisor.terminate_child(supervisor, pid)
-#: lib/task/supervisor.ex:73 
-msgid ""
-"Terminates the child with the given `pid`.\n"
-msgstr ""
-#. TRANSLATORS: def Task.Supervisor.async(supervisor, module, fun, args)
-#: lib/task/supervisor.ex:58 
-msgid ""
-"Starts a task that can be awaited on.\n"
-"\n"
-"The `supervisor` must be a reference as defined in `Task.Supervisor`.\n"
-"For more information on tasks, check the `Task` module.\n"
-msgstr ""
-#. TRANSLATORS: def Task.Supervisor.start_child(supervisor, module, fun, args)
-#: lib/task/supervisor.ex:102 
-msgid ""
-"Starts a task as child of the given `supervisor`.\n"
-"\n"
-"Similar to `start_child/2` except the task is specified\n"
-"by the given `module`, `fun` and `args`.\n"
-msgstr ""
 #. TRANSLATORS: def Task.Supervisor.start_child(supervisor, fun)
-#: lib/task/supervisor.ex:89 
+#: lib/task/supervisor.ex:122 
 msgid ""
 "Starts a task as child of the given `supervisor`.\n"
 "\n"
@@ -28,6 +7,14 @@ msgid ""
 "only to the supervisor. This command is useful in case the\n"
 "task needs to perform side-effects (like I/O) and does not need\n"
 "to report back to the caller.\n"
+msgstr ""
+#. TRANSLATORS: def Task.Supervisor.start_child(supervisor, module, fun, args)
+#: lib/task/supervisor.ex:135 
+msgid ""
+"Starts a task as child of the given `supervisor`.\n"
+"\n"
+"Similar to `start_child/2` except the task is specified\n"
+"by the given `module`, `fun` and `args`.\n"
 msgstr ""
 #. TRANSLATORS: def Task.Supervisor.start_link(opts \\ [])
 #: lib/task/supervisor.ex:18 
@@ -42,7 +29,7 @@ msgid ""
 "\n"
 "* `:restart` - the restart strategy, may be `:temporary` (the default),\n"
 "  `:transient` or `:permanent`. Check `Supervisor.Spec` for more info.\n"
-"  Defaults to temporary as most tasks can't be effectively restarted after\n"
+"  Defaults to `:temporary` as most tasks can't be effectively restarted after\n"
 "  a crash;\n"
 "\n"
 "* `:shutdown` - `:brutal_kill` if the tasks must be killed directly on shutdown\n"
@@ -51,15 +38,15 @@ msgid ""
 "* `:max_restarts` and `:max_seconds` - as specified in `Supervisor.Spec.supervise/2`;\n"
 "\n"
 msgstr ""
-#. TRANSLATORS: def Task.Supervisor.children(supervisor)
-#: lib/task/supervisor.ex:81 
+#. TRANSLATORS: def Task.Supervisor.terminate_child(supervisor, pid)
+#: lib/task/supervisor.ex:106 
 msgid ""
-"Returns all children pids.\n"
+"Terminates the child with the given `pid`.\n"
 msgstr ""
 #. TRANSLATORS: Elixir.Task.Supervisor Summary
 #: lib/task/supervisor.ex:2 
 msgid ""
-"A tasks supervisor.\n"
+"A task supervisor.\n"
 "\n"
 "This module defines a supervisor which can be used to dynamically\n"
 "supervise tasks. Behind the scenes, this module is implemented as a\n"
@@ -71,5 +58,28 @@ msgid ""
 "## Name Registration\n"
 "\n"
 "A `Task.Supervisor` is bound to the same name registration rules as a\n"
-"`GenServer`. Read more about it in the `GenServer` docs.\n"
+"`GenServer`. Read more about them in the `GenServer` docs.\n"
+msgstr ""
+#. TRANSLATORS: def Task.Supervisor.async(supervisor, module, fun, args)
+#: lib/task/supervisor.ex:59 
+msgid ""
+"Starts a task that can be awaited on.\n"
+"\n"
+"The `supervisor` must be a reference as defined in `Task.Supervisor`.\n"
+"The task will still be linked to the caller, see `Task.async/3` for\n"
+"more information and `async_nolink/2` for a non-linked variant.\n"
+msgstr ""
+#. TRANSLATORS: def Task.Supervisor.async_nolink(supervisor, module, fun, args)
+#: lib/task/supervisor.ex:89 
+msgid ""
+"Starts a task that can be awaited on.\n"
+"\n"
+"The `supervisor` must be a reference as defined in `Task.Supervisor`.\n"
+"The task won't be linked to the caller, see `Task.async/3` for\n"
+"more information.\n"
+msgstr ""
+#. TRANSLATORS: def Task.Supervisor.children(supervisor)
+#: lib/task/supervisor.ex:114 
+msgid ""
+"Returns all children pids.\n"
 msgstr ""

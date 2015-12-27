@@ -11,6 +11,13 @@ msgid ""
 "    \"foo\"\n"
 "\n"
 msgstr ""
+#. TRANSLATORS: Elixir.Atom Summary
+#: lib/atom.ex:2 
+msgid ""
+"Convenience functions for working with atoms.\n"
+"\n"
+"See also `Kernel.is_atom/1`.\n"
+msgstr ""
 #. TRANSLATORS: def Atom.to_char_list(atom)
 #: lib/atom.ex:24 
 msgid ""
@@ -23,11 +30,4 @@ msgid ""
 "    iex> Atom.to_char_list(:\"An atom\")\n"
 "    'An atom'\n"
 "\n"
-msgstr ""
-#. TRANSLATORS: Elixir.Atom Summary
-#: lib/atom.ex:2 
-msgid ""
-"Convenience functions for working with atoms.\n"
-"\n"
-"See also `Kernel.is_atom/1`.\n"
 msgstr ""

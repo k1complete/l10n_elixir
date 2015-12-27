@@ -1,21 +1,12 @@
-#. TRANSLATORS: def HashDict.new()
-#: lib/hash_dict.ex:32 
-msgid ""
-"Creates a new empty dict.\n"
-msgstr ""
 #. TRANSLATORS: Elixir.HashDict Summary
 #: lib/hash_dict.ex:2 
 msgid ""
-"A key-value store.\n"
+"WARNING: this module is deprecated.\n"
 "\n"
-"The `HashDict` is represented internally as a struct, therefore\n"
-"`%HashDict{}` can be used whenever there is a need to match\n"
-"on any `HashDict`. Note though the struct fields are private and\n"
-"must not be accessed directly. Instead, use the functions on this\n"
-"or in the `Dict` module.\n"
-"\n"
-"Implementation-wise, `HashDict` is implemented using tries, which\n"
-"grows in space as the number of keys grows, working well with both\n"
-"small and large set of keys. For more information about the\n"
-"functions and their APIs, please consult the `Dict` module.\n"
+"Use the `Map` module instead.\n"
+msgstr ""
+#. TRANSLATORS: def HashDict.new()
+#: lib/hash_dict.ex:23 
+msgid ""
+"Creates a new empty dict.\n"
 msgstr ""

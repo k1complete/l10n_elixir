@@ -1,40 +1,31 @@
-#. TRANSLATORS: def Node.start(name, type \\ :longnames, tick_time \\ 15000)
-#: lib/node.ex:13 
-msgid ""
-"Turns a non-distributed node into a distributed node.\n"
-"\n"
-"This functionality starts the `:net_kernel` and other\n"
-"related processes.\n"
-msgstr ""
-#. TRANSLATORS: def Node.stop()
-#: lib/node.ex:25 
-msgid ""
-"Turns a distributed node into a non-distributed node.\n"
-"\n"
-"For other nodes in the network, this is the same as the node going down.\n"
-"Only possible when the node was started with `Node.start/3`, otherwise\n"
-"returns `{:error, :not_allowed}`. Returns `{:error, :not_found}` if the\n"
-"local node is not alive.\n"
-msgstr ""
-#. TRANSLATORS: def Node.ping(node)
-#: lib/node.ex:110 
-msgid ""
-"Tries to set up a connection to node.\n"
-"\n"
-"Returns `:pang` if it fails, or `:pong` if it is successful.\n"
-"\n"
-"## Examples\n"
-"\n"
-"    iex> Node.ping(:unknown_node)\n"
-"    :pang\n"
-"\n"
-msgstr ""
 #. TRANSLATORS: def Node.get_cookie()
 #: lib/node.ex:259 
 msgid ""
 "Returns the magic cookie of the local node.\n"
 "\n"
 "Returns the cookie if the node is alive, otherwise `:nocookie`.\n"
+msgstr ""
+#. TRANSLATORS: def Node.monitor(node, flag)
+#: lib/node.ex:84 
+msgid ""
+"Monitors the status of the node.\n"
+"\n"
+"If `flag` is `true`, monitoring is turned on.\n"
+"If `flag` is `false`, monitoring is turned off.\n"
+"\n"
+"For more information, see\n"
+"[`:erlang.monitor_node/2`](http://www.erlang.org/doc/man/erlang.html#monitor_node-2).\n"
+msgstr ""
+#. TRANSLATORS: def Node.list(args)
+#: lib/node.ex:69 
+msgid ""
+"Returns a list of nodes according to argument given.\n"
+"\n"
+"The result returned when the argument is a list, is the list of nodes\n"
+"satisfying the disjunction(s) of the list elements.\n"
+"\n"
+"For more information, see\n"
+"[`:erlang.nodes/1`](http://www.erlang.org/doc/man/erlang.html#nodes-1).\n"
 msgstr ""
 #. TRANSLATORS: def Node.set_cookie(node \\ Node.self(), cookie)
 #: lib/node.ex:247 
@@ -46,16 +37,56 @@ msgid ""
 "\n"
 "This function will raise `FunctionClauseError` if the given `node` is not alive.\n"
 msgstr ""
-#. TRANSLATORS: def Node.spawn(node, fun)
-#: lib/node.ex:156 
+#. TRANSLATORS: def Node.start(name, type \\ :longnames, tick_time \\ 15000)
+#: lib/node.ex:13 
 msgid ""
-"Returns the pid of a new process started by the application of `fun`\n"
-"on `node`. If `node` does not exist, a useless pid is returned.\n"
+"Turns a non-distributed node into a distributed node.\n"
 "\n"
-"For the list of available options, see\n"
-"[`:erlang.spawn/2`](http://www.erlang.org/doc/man/erlang.html#spawn-2).\n"
+"This functionality starts the `:net_kernel` and other\n"
+"related processes.\n"
+msgstr ""
+#. TRANSLATORS: def Node.disconnect(node)
+#: lib/node.ex:126 
+msgid ""
+"Forces the disconnection of a node.\n"
+"\n"
+"This will appear to the `node` as if the local node has crashed.\n"
+"This function is mainly used in the Erlang network authentication\n"
+"protocols. Returns `true` if disconnection succeeds, otherwise `false`.\n"
+"If the local node is not alive, the function returns `:ignored`.\n"
+"\n"
+"For more information, see\n"
+"[`:erlang.disconnect_node/1`](http://www.erlang.org/doc/man/erlang.html#disconnect_node-1).\n"
+msgstr ""
+#. TRANSLATORS: def Node.spawn_link(node, fun)
+#: lib/node.ex:218 
+msgid ""
+"Returns the pid of a new linked process started by the application of `fun` on `node`.\n"
+"\n"
+"A link is created between the calling process and the new process, atomically.\n"
+"If `node` does not exist, a useless pid is returned (and due to the link, an exit\n"
+"signal with exit reason `:noconnection` will be received).\n"
 "\n"
 "Inlined by the compiler.\n"
+msgstr ""
+#. TRANSLATORS: def Node.monitor(node, flag, options)
+#: lib/node.ex:98 
+msgid ""
+"Behaves as `monitor/2` except that it allows an extra\n"
+"option to be given, namely `:allow_passive_connect`.\n"
+"\n"
+"For more information, see\n"
+"[`:erlang.monitor_node/3`](http://www.erlang.org/doc/man/erlang.html#monitor_node-3).\n"
+msgstr ""
+#. TRANSLATORS: Elixir.Node Summary
+#: lib/node.ex:2 
+msgid ""
+"Functions related to VM nodes.\n"
+"\n"
+"Some of the functions in this module are inlined by the compiler,\n"
+"similar to functions in the `Kernel` module and they are explicitly\n"
+"marked in their docs as \"inlined by the compiler\". For more information\n"
+"about inlined functions, check out the `Kernel` module.\n"
 msgstr ""
 #. TRANSLATORS: def Node.spawn(node, fun, opts)
 #: lib/node.ex:170 
@@ -70,6 +101,24 @@ msgid ""
 "\n"
 "Inlined by the compiler.\n"
 msgstr ""
+#. TRANSLATORS: def Node.list()
+#: lib/node.ex:58 
+msgid ""
+"Returns a list of all visible nodes in the system, excluding\n"
+"the local node.\n"
+"\n"
+"Same as `list(:visible)`.\n"
+msgstr ""
+#. TRANSLATORS: def Node.stop()
+#: lib/node.ex:25 
+msgid ""
+"Turns a distributed node into a non-distributed node.\n"
+"\n"
+"For other nodes in the network, this is the same as the node going down.\n"
+"Only possible when the node was started with `Node.start/3`, otherwise\n"
+"returns `{:error, :not_allowed}`. Returns `{:error, :not_found}` if the\n"
+"local node is not alive.\n"
+msgstr ""
 #. TRANSLATORS: def Node.spawn(node, module, fun, args, opts)
 #: lib/node.ex:202 
 msgid ""
@@ -83,6 +132,26 @@ msgid ""
 "\n"
 "Inlined by the compiler.\n"
 msgstr ""
+#. TRANSLATORS: def Node.ping(node)
+#: lib/node.ex:110 
+msgid ""
+"Tries to set up a connection to node.\n"
+"\n"
+"Returns `:pang` if it fails, or `:pong` if it is successful.\n"
+"\n"
+"## Examples\n"
+"\n"
+"    iex> Node.ping(:unknown_node)\n"
+"    :pang\n"
+"\n"
+msgstr ""
+#. TRANSLATORS: def Node.alive?()
+#: lib/node.ex:48 
+msgid ""
+"Returns `true` if the local node is alive.\n"
+"\n"
+"That is, if the node can be part of a distributed system.\n"
+msgstr ""
 #. TRANSLATORS: def Node.spawn(node, module, fun, args)
 #: lib/node.ex:186 
 msgid ""
@@ -93,17 +162,6 @@ msgid ""
 "\n"
 "For the list of available options, see\n"
 "[`:erlang.spawn/4`](http://www.erlang.org/doc/man/erlang.html#spawn-4).\n"
-"\n"
-"Inlined by the compiler.\n"
-msgstr ""
-#. TRANSLATORS: def Node.spawn_link(node, fun)
-#: lib/node.ex:218 
-msgid ""
-"Returns the pid of a new linked process started by the application of `fun` on `node`.\n"
-"\n"
-"A link is created between the calling process and the new process, atomically.\n"
-"If `node` does not exist, a useless pid is returned (and due to the link, an exit\n"
-"signal with exit reason `:noconnection` will be received).\n"
 "\n"
 "Inlined by the compiler.\n"
 msgstr ""
@@ -126,56 +184,6 @@ msgid ""
 "\n"
 "It returns the same as the built-in `node()`.\n"
 msgstr ""
-#. TRANSLATORS: def Node.list(args)
-#: lib/node.ex:69 
-msgid ""
-"Returns a list of nodes according to argument given.\n"
-"\n"
-"The result returned when the argument is a list, is the list of nodes\n"
-"satisfying the disjunction(s) of the list elements.\n"
-"\n"
-"For more information, see\n"
-"[`:erlang.nodes/1`](http://www.erlang.org/doc/man/erlang.html#nodes-1).\n"
-msgstr ""
-#. TRANSLATORS: def Node.list()
-#: lib/node.ex:58 
-msgid ""
-"Returns a list of all visible nodes in the system, excluding\n"
-"the local node.\n"
-"\n"
-"Same as `list(:visible)`.\n"
-msgstr ""
-#. TRANSLATORS: def Node.alive?()
-#: lib/node.ex:48 
-msgid ""
-"Returns `true` if the local node is alive.\n"
-"\n"
-"That is, if the node can be part of a distributed system.\n"
-msgstr ""
-#. TRANSLATORS: def Node.monitor(node, flag)
-#: lib/node.ex:84 
-msgid ""
-"Monitors the status of the node.\n"
-"\n"
-"If `flag` is `true`, monitoring is turned on.\n"
-"If `flag` is `false`, monitoring is turned off.\n"
-"\n"
-"For more information, see\n"
-"[`:erlang.monitor_node/2`](http://www.erlang.org/doc/man/erlang.html#monitor_node-2).\n"
-msgstr ""
-#. TRANSLATORS: def Node.disconnect(node)
-#: lib/node.ex:126 
-msgid ""
-"Forces the disconnection of a node.\n"
-"\n"
-"This will appear to the `node` as if the local node has crashed.\n"
-"This function is mainly used in the Erlang network authentication\n"
-"protocols. Returns `true` if disconnection succeeds, otherwise `false`.\n"
-"If the local node is not alive, the function returns `:ignored`.\n"
-"\n"
-"For more information, see\n"
-"[`:erlang.disconnect_node/1`](http://www.erlang.org/doc/man/erlang.html#disconnect_node-1).\n"
-msgstr ""
 #. TRANSLATORS: def Node.connect(node)
 #: lib/node.ex:142 
 msgid ""
@@ -187,22 +195,14 @@ msgid ""
 "For more information, see\n"
 "[`:erlang.connect_node/1`](http://www.erlang.org/doc/man/net_kernel.html#connect_node-1).\n"
 msgstr ""
-#. TRANSLATORS: Elixir.Node Summary
-#: lib/node.ex:2 
+#. TRANSLATORS: def Node.spawn(node, fun)
+#: lib/node.ex:156 
 msgid ""
-"Functions related to VM nodes.\n"
+"Returns the pid of a new process started by the application of `fun`\n"
+"on `node`. If `node` does not exist, a useless pid is returned.\n"
 "\n"
-"Some of the functions in this module are inlined by the compiler,\n"
-"similar to functions in the `Kernel` module and they are explicitly\n"
-"marked in their docs as \"inlined by the compiler\". For more information\n"
-"about inlined functions, check out the `Kernel` module.\n"
-msgstr ""
-#. TRANSLATORS: def Node.monitor(node, flag, options)
-#: lib/node.ex:98 
-msgid ""
-"Behaves as `monitor/2` except that it allows an extra\n"
-"option to be given, namely `:allow_passive_connect`.\n"
+"For the list of available options, see\n"
+"[`:erlang.spawn/2`](http://www.erlang.org/doc/man/erlang.html#spawn-2).\n"
 "\n"
-"For more information, see\n"
-"[`:erlang.monitor_node/3`](http://www.erlang.org/doc/man/erlang.html#monitor_node-3).\n"
+"Inlined by the compiler.\n"
 msgstr ""

@@ -1,46 +1,3 @@
-#. TRANSLATORS: Elixir.URI Summary
-#: lib/uri.ex:2 
-msgid ""
-"Utilities for working with and creating URIs.\n"
-msgstr ""
-#. TRANSLATORS: def URI.default_port(scheme)
-#: lib/uri.ex:14 
-msgid ""
-"Returns the default port for a given scheme.\n"
-"\n"
-"If the scheme is unknown to URI, returns `nil`.\n"
-"Any scheme may be registered via `default_port/2`.\n"
-"\n"
-"## Examples\n"
-"\n"
-"    iex> URI.default_port(\"ftp\")\n"
-"    21\n"
-"\n"
-"    iex> URI.default_port(\"ponzi\")\n"
-"    nil\n"
-"\n"
-msgstr ""
-#. TRANSLATORS: def URI.query_decoder(q)
-#: lib/uri.ex:85 
-msgid ""
-"Returns an iterator function over the query string that decodes\n"
-"the query string in steps.\n"
-"\n"
-"## Examples\n"
-"\n"
-"    iex> URI.query_decoder(\"foo=1&bar=2\") |> Enum.map(&(&1))\n"
-"    [{\"foo\", \"1\"}, {\"bar\", \"2\"}]\n"
-"\n"
-msgstr ""
-#. TRANSLATORS: def URI.default_port(scheme, port)
-#: lib/uri.ex:33 
-msgid ""
-"Registers a scheme with a default port.\n"
-"\n"
-"It is recommended for this function to be invoked in your\n"
-"application start callback in case you want to register\n"
-"new URIs.\n"
-msgstr ""
 #. TRANSLATORS: def URI.encode_query(l)
 #: lib/uri.ex:44 
 msgid ""
@@ -60,27 +17,18 @@ msgid ""
 "    \"bar=2&foo=1\"\n"
 "\n"
 msgstr ""
-#. TRANSLATORS: def URI.encode_www_form(str)
-#: lib/uri.ex:179 
+#. TRANSLATORS: Elixir.URI Summary
+#: lib/uri.ex:2 
 msgid ""
-"Encodes a string as \"x-www-urlencoded\".\n"
-"\n"
-"## Example\n"
-"\n"
-"    iex> URI.encode_www_form(\"put: it+й\")\n"
-"    \"put%3A+it%2B%D0%B9\"\n"
-"\n"
+"Utilities for working with and creating URIs.\n"
 msgstr ""
-#. TRANSLATORS: def URI.decode_www_form(str)
-#: lib/uri.ex:224 
+#. TRANSLATORS: def URI.to_string(uri)
+#: lib/uri.ex:347 
 msgid ""
-"Decodes a string as \"x-www-urlencoded\".\n"
+"Converts the URI to string.\n"
 "\n"
-"## Examples\n"
-"\n"
-"    iex> URI.decode_www_form(\"%3Call+in%2F\")\n"
-"    \"<all in/\"\n"
-"\n"
+"    iex> URI.to_string(URI.parse(\"http://google.com\"))\n"
+"    \"http://google.com\"\n"
 msgstr ""
 #. TRANSLATORS: def URI.decode_query(q, dict \\ %{})
 #: lib/uri.ex:63 
@@ -99,61 +47,72 @@ msgid ""
 "    %{\"bar\" => \"2\", \"foo\" => \"1\"}\n"
 "\n"
 msgstr ""
-#. TRANSLATORS: def URI.decode(uri)
-#: lib/uri.ex:208 
+#. TRANSLATORS: def URI.char_unreserved?(c)
+#: lib/uri.ex:144 
 msgid ""
-"Percent-unescapes a URI.\n"
+"Checks if the character is a \"unreserved\" character in a URI.\n"
+"\n"
+"Unreserved characters are specified in [RFC3986, section 2.3](http://tools.ietf.org/html/rfc3986#section-2.3).\n"
+msgstr ""
+#. TRANSLATORS: def URI.default_port(scheme)
+#: lib/uri.ex:14 
+msgid ""
+"Returns the default port for a given scheme.\n"
+"\n"
+"If the scheme is unknown to URI, returns `nil`.\n"
+"Any scheme may be registered via `default_port/2`.\n"
 "\n"
 "## Examples\n"
 "\n"
-"    iex> URI.decode(\"http%3A%2F%2Felixir-lang.org\")\n"
-"    \"http://elixir-lang.org\"\n"
+"    iex> URI.default_port(\"ftp\")\n"
+"    21\n"
 "\n"
-msgstr ""
-#. TRANSLATORS: def URI.encode(str, predicate \\ &char_unescaped?/1)
-#: lib/uri.ex:165 
-msgid ""
-"Percent-escapes a URI.\n"
-"Accepts `predicate` function as an argument to specify if char can be left as is.\n"
+"    iex> URI.default_port(\"ponzi\")\n"
+"    nil\n"
 "\n"
-"## Example\n"
-"\n"
-"    iex> URI.encode(\"ftp://s-ite.tld/?value=put it+й\")\n"
-"    \"ftp://s-ite.tld/?value=put%20it+%D0%B9\"\n"
-"\n"
-msgstr ""
-#. TRANSLATORS: def URI.to_string(uri)
-#: lib/uri.ex:346 
-msgid ""
-"Converts the URI to string.\n"
-"\n"
-"    iex> URI.to_string(URI.parse(\"http://google.com\"))\n"
-"    \"http://google.com\"\n"
 msgstr ""
 #. TRANSLATORS: def URI.char_unescaped?(c)
-#: lib/uri.ex:155 
+#: lib/uri.ex:156 
 msgid ""
 "Checks if the character is allowed unescaped in a URI.\n"
 "\n"
 "This is the default used by `URI.encode/2` where both\n"
 "reserved and unreserved characters are kept unescaped.\n"
 msgstr ""
-#. TRANSLATORS: def URI.char_unreserved?(c)
-#: lib/uri.ex:143 
+#. TRANSLATORS: def URI.default_port(scheme, port)
+#: lib/uri.ex:33 
 msgid ""
-"Checks if the character is a \"unreserved\" character in a URI.\n"
+"Registers a scheme with a default port.\n"
 "\n"
-"Unreserved characters are specified in [RFC3986, section 2.3](http://tools.ietf.org/html/rfc3986#section-2.3).\n"
+"It is recommended for this function to be invoked in your\n"
+"application start callback in case you want to register\n"
+"new URIs.\n"
 msgstr ""
-#. TRANSLATORS: def URI.char_reserved?(c)
-#: lib/uri.ex:134 
+#. TRANSLATORS: def URI.encode_www_form(str)
+#: lib/uri.ex:180 
 msgid ""
-"Checks if the character is a \"reserved\" character in a URI.\n"
+"Encodes a string as \"x-www-form-urlencoded\".\n"
 "\n"
-"Reserved characters are specified in [RFC3986, section 2.2](http://tools.ietf.org/html/rfc3986#section-2.2).\n"
+"## Example\n"
+"\n"
+"    iex> URI.encode_www_form(\"put: it+й\")\n"
+"    \"put%3A+it%2B%D0%B9\"\n"
+"\n"
+msgstr ""
+#. TRANSLATORS: def URI.query_decoder(q)
+#: lib/uri.ex:86 
+msgid ""
+"Returns an iterator function over the query string that decodes\n"
+"the query string in steps.\n"
+"\n"
+"## Examples\n"
+"\n"
+"    iex> URI.query_decoder(\"foo=1&bar=2\") |> Enum.map(&(&1))\n"
+"    [{\"foo\", \"1\"}, {\"bar\", \"2\"}]\n"
+"\n"
 msgstr ""
 #. TRANSLATORS: def URI.parse(uri)
-#: lib/uri.ex:259 
+#: lib/uri.ex:260 
 msgid ""
 "Parses a well-formed URI reference into its components.\n"
 "\n"
@@ -185,5 +144,46 @@ msgid ""
 "    iex> URI.parse(\"foo/bar\")\n"
 "    %URI{authority: nil, fragment: nil, host: nil, path: \"foo/bar\",\n"
 "         port: nil, query: nil, scheme: nil, userinfo: nil}\n"
+"\n"
+msgstr ""
+#. TRANSLATORS: def URI.char_reserved?(c)
+#: lib/uri.ex:135 
+msgid ""
+"Checks if the character is a \"reserved\" character in a URI.\n"
+"\n"
+"Reserved characters are specified in [RFC3986, section 2.2](http://tools.ietf.org/html/rfc3986#section-2.2).\n"
+msgstr ""
+#. TRANSLATORS: def URI.decode(uri)
+#: lib/uri.ex:209 
+msgid ""
+"Percent-unescapes a URI.\n"
+"\n"
+"## Examples\n"
+"\n"
+"    iex> URI.decode(\"http%3A%2F%2Felixir-lang.org\")\n"
+"    \"http://elixir-lang.org\"\n"
+"\n"
+msgstr ""
+#. TRANSLATORS: def URI.decode_www_form(str)
+#: lib/uri.ex:225 
+msgid ""
+"Decodes a string as \"x-www-form-urlencoded\".\n"
+"\n"
+"## Examples\n"
+"\n"
+"    iex> URI.decode_www_form(\"%3Call+in%2F\")\n"
+"    \"<all in/\"\n"
+"\n"
+msgstr ""
+#. TRANSLATORS: def URI.encode(str, predicate \\ &char_unescaped?/1)
+#: lib/uri.ex:166 
+msgid ""
+"Percent-escapes a URI.\n"
+"Accepts `predicate` function as an argument to specify if char can be left as is.\n"
+"\n"
+"## Example\n"
+"\n"
+"    iex> URI.encode(\"ftp://s-ite.tld/?value=put it+й\")\n"
+"    \"ftp://s-ite.tld/?value=put%20it+%D0%B9\"\n"
 "\n"
 msgstr ""

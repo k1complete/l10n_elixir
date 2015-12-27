@@ -33,6 +33,17 @@ msgstr ""
 "    \"foo\"\n"
 "\n"
 
+#. TRANSLATORS: Elixir.Atom Summary
+#: lib/atom.ex:2
+msgid ""
+"Convenience functions for working with atoms.\n"
+"\n"
+"See also `Kernel.is_atom/1`.\n"
+msgstr ""
+"アトムで動く便利な関数です。\n"
+"\n"
+"`Kernel.is_atom/1`も参照してください。\n"
+
 #. TRANSLATORS: def Atom.to_char_list(atom)
 #: lib/atom.ex:24
 msgid ""
@@ -55,14 +66,3 @@ msgstr ""
 "    iex> Atom.to_char_list(:\"An atom\")\n"
 "    'An atom'\n"
 "\n"
-
-#. TRANSLATORS: Elixir.Atom Summary
-#: lib/atom.ex:2
-msgid ""
-"Convenience functions for working with atoms.\n"
-"\n"
-"See also `Kernel.is_atom/1`.\n"
-msgstr ""
-"アトムで動く便利な関数です。\n"
-"\n"
-"`Kernel.is_atom/1`も参照してください。\n"

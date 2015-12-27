@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: l 10n_elixir\n"
-"PO-Revision-Date: 2015-09-17 18:37+0900\n"
+"PO-Revision-Date: 2015-12-26 19:19+0900\n"
 "Last-Translator: 小田 照敬 <EMAIL@ADDRESS>\n"
 "Language-Team: Japanese\n"
 "Language: ja\n"
@@ -10,39 +10,8 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
-#. TRANSLATORS: def Task.Supervisor.terminate_child(supervisor, pid)
-#: lib/task/supervisor.ex:73
-msgid "Terminates the child with the given `pid`.\n"
-msgstr "与えられた`pid`の子プロセスを終了します。\n"
-
-#. TRANSLATORS: def Task.Supervisor.async(supervisor, module, fun, args)
-#: lib/task/supervisor.ex:58
-msgid ""
-"Starts a task that can be awaited on.\n"
-"\n"
-"The `supervisor` must be a reference as defined in `Task.Supervisor`.\n"
-"For more information on tasks, check the `Task` module.\n"
-msgstr ""
-"待機することができるタスクを開始します。\n"
-"\n"
-"`supervisor`は、`Task.Supervisor`で定義されたリファレンスでなければなり\n"
-"ません。タスクについての詳細は、`Task`モジュールをチェックしてください。\n"
-
-#. TRANSLATORS: def Task.Supervisor.start_child(supervisor, module, fun, args)
-#: lib/task/supervisor.ex:102
-msgid ""
-"Starts a task as child of the given `supervisor`.\n"
-"\n"
-"Similar to `start_child/2` except the task is specified\n"
-"by the given `module`, `fun` and `args`.\n"
-msgstr ""
-"与えられた`supervisor`の子としてタスクを開始します。\n"
-"\n"
-"`start_child/2`と似ていますが、タスクは`module`、`fun`と`args`によって\n"
-"指定されなければなりません。\n"
-
 #. TRANSLATORS: def Task.Supervisor.start_child(supervisor, fun)
-#: lib/task/supervisor.ex:89
+#: lib/task/supervisor.ex:122
 msgid ""
 "Starts a task as child of the given `supervisor`.\n"
 "\n"
@@ -58,6 +27,19 @@ msgstr ""
 "(IOのような)を実行する必要があって、呼び出し側に報告を返す必要はない場\n"
 "合に役に立ちます。\n"
 
+#. TRANSLATORS: def Task.Supervisor.start_child(supervisor, module, fun, args)
+#: lib/task/supervisor.ex:135
+msgid ""
+"Starts a task as child of the given `supervisor`.\n"
+"\n"
+"Similar to `start_child/2` except the task is specified\n"
+"by the given `module`, `fun` and `args`.\n"
+msgstr ""
+"与えられた`supervisor`の子としてタスクを開始します。\n"
+"\n"
+"`start_child/2`と似ていますが、タスクは`module`、`fun`と`args`によって\n"
+"指定されなければなりません。\n"
+
 #. TRANSLATORS: def Task.Supervisor.start_link(opts \\ [])
 #: lib/task/supervisor.ex:18
 msgid ""
@@ -71,7 +53,8 @@ msgid ""
 "\n"
 "* `:restart` - the restart strategy, may be `:temporary` (the default),\n"
 "  `:transient` or `:permanent`. Check `Supervisor.Spec` for more info.\n"
-"  Defaults to temporary as most tasks can't be effectively restarted after\n"
+"  Defaults to `:temporary` as most tasks can't be effectively restarted "
+"after\n"
 "  a crash;\n"
 "\n"
 "* `:shutdown` - `:brutal_kill` if the tasks must be killed directly on "
@@ -88,30 +71,30 @@ msgstr ""
 "サポートされているオプションは以下の通りです:\n"
 "\n"
 "* `:name` - スーパバイザ名を登録するために使います。\n"
-"`GenServer`モジュールドキュメントの`Name Registration`セクションに\n"
-"記述されている値がサポートされています;\n"
+"  `GenServer`モジュールドキュメントの`Name Registration`セクションに\n"
+"  記述されている値がサポートされています;\n"
 "\n"
 "* `:restart` - リスタート戦略で、`:temporary`(デフォルト)、\n"
 "  `:transient`か`:permanent`。 詳細は`Supervisor.Spec`を参照してく\n"
-"   ださい。、殆どのタスクは、クラッシュ後、事実上リスタートできない\n"
-"   ため、temporaryがデフォルトです;\n"
+"  ださい。、殆どのタスクは、クラッシュ後、事実上リスタートできない\n"
+"  ため、temporaryがデフォルトです;\n"
 "\n"
 "* `:shutdown` - shutdownもしくは、`:brutal_kill`で指定されたタイムアウト値\n"
-"(デフォルト5000ミリ秒)で、タスクが直接殺されなければならないならば、\n"
-"指定します;\n"
+"  (デフォルト5000ミリ秒)で、タスクが直接殺されなければならないならば、\n"
+"  指定します;\n"
 "\n"
 "* `:max_restarts` と `:max_seconds` - `Supervisor.Spec.supervise/2`で\n"
-"指定されます;\n"
+"  指定されます;\n"
 
-#. TRANSLATORS: def Task.Supervisor.children(supervisor)
-#: lib/task/supervisor.ex:81
-msgid "Returns all children pids.\n"
-msgstr "全ての子プロセスのpidを返します。\n"
+#. TRANSLATORS: def Task.Supervisor.terminate_child(supervisor, pid)
+#: lib/task/supervisor.ex:106
+msgid "Terminates the child with the given `pid`.\n"
+msgstr "与えられた`pid`の子プロセスを終了します。\n"
 
 #. TRANSLATORS: Elixir.Task.Supervisor Summary
 #: lib/task/supervisor.ex:2
 msgid ""
-"A tasks supervisor.\n"
+"A task supervisor.\n"
 "\n"
 "This module defines a supervisor which can be used to dynamically\n"
 "supervise tasks. Behind the scenes, this module is implemented as a\n"
@@ -123,20 +106,55 @@ msgid ""
 "## Name Registration\n"
 "\n"
 "A `Task.Supervisor` is bound to the same name registration rules as a\n"
-"`GenServer`. Read more about it in the `GenServer` docs.\n"
+"`GenServer`. Read more about them in the `GenServer` docs.\n"
 msgstr ""
 "タスクスーパバイザです。\n"
 "\n"
-"このモジュールは、動的にタスクをスーパバイズする\n"
-"ために使うことができる、スーパバイザを定義します。\n"
-"\n"
-"舞台裏では、このモジュールは、ワーカがtemporaryの\n"
-"`:simple_one_for_one`スーパバイザとして実装されます(即ち、ワーカが死ん\n"
-"でも再起動されません)。\n"
+"このモジュールは、動的にタスクをスーパバイズするために使うこ\n"
+"とができる、スーパバイザを定義します。舞台裏では、このモジュー\n"
+"ルは、ワーカがtemporaryの`:simple_one_for_one`スーパバイザと\n"
+"して実装されます(即ち、ワーカが死んでも再起動されません)。\n"
 "\n"
 "詳細は`Task`モジュールを参照してください。\n"
 "\n"
-"## 名前の登録\n"
+"## Name Registration\n"
 "\n"
 "`Task.Supervisor`は`GenServer`と同じ名前登録規則に従います。\n"
-"それについてはの詳細は、`GenServer`のドキュメントを参照してください。\n"
+"それについてはの詳細は、`GenServer`のドキュメントを参照してく\n"
+"ださい。\n"
+
+#. TRANSLATORS: def Task.Supervisor.async(supervisor, module, fun, args)
+#: lib/task/supervisor.ex:59
+msgid ""
+"Starts a task that can be awaited on.\n"
+"\n"
+"The `supervisor` must be a reference as defined in `Task.Supervisor`.\n"
+"The task will still be linked to the caller, see `Task.async/3` for\n"
+"more information and `async_nolink/2` for a non-linked variant.\n"
+msgstr ""
+"待機することができるタスクを開始します。\n"
+"\n"
+"`supervisor`は、`Task.Supervisor`で定義されたリファレンスでな\n"
+"ければなりません。タスクは呼出し側にリンクされたままになります。\n"
+"詳細は`Task.async/3`を参照してください。リンクされない変形は\n"
+"`async_nolink/2`を参照してください。\n"
+
+#. TRANSLATORS: def Task.Supervisor.async_nolink(supervisor, module, fun, args)
+#: lib/task/supervisor.ex:89
+msgid ""
+"Starts a task that can be awaited on.\n"
+"\n"
+"The `supervisor` must be a reference as defined in `Task.Supervisor`.\n"
+"The task won't be linked to the caller, see `Task.async/3` for\n"
+"more information.\n"
+msgstr ""
+"待機することができるタスクを開始します。\n"
+"\n"
+"`supervisor`は、`Task.Supervisor`で定義されたリファレンスでな\n"
+"ければなりません。タスクを呼出し側へリンクしたいなら、\n"
+"`Task.async/3`を参照してください。\n"
+
+#. TRANSLATORS: def Task.Supervisor.children(supervisor)
+#: lib/task/supervisor.ex:114
+msgid "Returns all children pids.\n"
+msgstr "全ての子プロセスのpidを返します。\n"

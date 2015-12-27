@@ -10,57 +10,28 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
-#. TRANSLATORS: def Protocol.consolidated?(protocol)
-#: lib/protocol.ex:229
-msgid "Returns `true` if the protocol was consolidated.\n"
-msgstr "プロトコルが統合(consolidate)されていれば`true`を返します。\n"
+#. TRANSLATORS: Elixir.Protocol Summary
+#: lib/protocol.ex:2
+msgid "Functions for working with protocols.\n"
+msgstr "プロトコルで動く関数です。\n"
 
-#. TRANSLATORS: def Protocol.consolidate(protocol, types)
-#: lib/protocol.ex:237
+#. TRANSLATORS: def Protocol.assert_impl!(protocol, base)
+#: lib/protocol.ex:82
 msgid ""
-"Receives a protocol and a list of implementations and\n"
-"consolidates the given protocol.\n"
+"Checks if the given module is loaded and is an implementation\n"
+"of the given protocol.\n"
 "\n"
-"Consolidation happens by changing the protocol `impl_for`\n"
-"in the abstract format to have fast lookup rules. Usually\n"
-"the list of implementations to use during consolidation\n"
-"are retrieved with the help of `extract_impls/2`.\n"
-"\n"
-"It returns the updated version of the protocol bytecode.\n"
-"A given bytecode or protocol implementation can be checked\n"
-"to be consolidated or not by analyzing the protocol\n"
-"attribute:\n"
-"\n"
-"    Protocol.consolidated?(Enumerable)\n"
-"\n"
-"If the first element of the tuple is `true`, it means\n"
-"the protocol was consolidated.\n"
-"\n"
-"This function does not load the protocol at any point\n"
-"nor loads the new bytecode for the compiled module.\n"
-"However each implementation must be available and\n"
-"it will be loaded.\n"
+"Returns `:ok` if so, otherwise raises ArgumentError.\n"
 msgstr ""
-"プロトコルと実装のリストを受け取り、与えられたプロトコルを\n"
-"統合します。\n"
+"与えられたモジュールがロードされ、与えられたプロトコルを\n"
+"実装しているかチェックします。\n"
 "\n"
-"速い検索規則を持つために抽象的なフォーマットで\n"
-"`impl_for`プロトコルを変更することにより統合は起きます。\n"
-"通常、統合の間の実装のリストは`extract_impls/2`の助けを得て\n"
-"検索されます。\n"
-"\n"
-"プロトコルバイトコードの更新版を返します。与えられたバイトコードまたは\n"
-"プロトコル実装は、統合されたかどうかをプロトコルアトリビュートを分析す\n"
-"ることで、チェックできます:\n"
-"\n"
-"\n"
-"    Protocol.consolidated?(Enumerable)\n"
-"\n"
-"もしタプルの最初の要素が`true`ならプロトコルは統合されたことを意味します。\n"
-"\n"
-"この関数はいかなるプロトコルもロードしませんし、コンパイルされたモジュー\n"
-"ルの新しいバイトコードもロードしません。しかしながら、それぞれの実装は\n"
-"有効にされるはずで、それはロードされるでしょう。\n"
+"もしそうなら`:ok`を返し、さもなくばArgumentErrorを上げます。\n"
+
+#. TRANSLATORS: defmacro Protocol.derive(protocol, module, options \\ [])
+#: lib/protocol.ex:117
+msgid "Derives the `protocol` for `module` with the given options.\n"
+msgstr "与えられたオプションで、`module`のために`protocol`を導出します。\n"
 
 #. TRANSLATORS: defmacro Protocol.def(signature)
 #: lib/protocol.ex:6
@@ -115,6 +86,17 @@ msgstr ""
 "    true\n"
 "\n"
 
+#. TRANSLATORS: def Protocol.assert_protocol!(module)
+#: lib/protocol.ex:56
+msgid ""
+"Checks if the given module is loaded and is protocol.\n"
+"\n"
+"Returns `:ok` if so, otherwise raises ArgumentError.\n"
+msgstr ""
+"与えられたモジュールがロードされ、プロトコルかどうかをチェックします。\n"
+"\n"
+"もしそうなら`:ok`を返し、さもなくばArgumentErrorを上げます。\n"
+
 #. TRANSLATORS: def Protocol.extract_protocols(paths)
 #: lib/protocol.ex:129
 msgid ""
@@ -151,36 +133,54 @@ msgstr ""
 "    true\n"
 "\n"
 
-#. TRANSLATORS: Elixir.Protocol Summary
-#: lib/protocol.ex:2
-msgid "Functions for working with protocols.\n"
-msgstr "プロトコルで動く関数です。\n"
+#. TRANSLATORS: def Protocol.consolidated?(protocol)
+#: lib/protocol.ex:220
+msgid "Returns `true` if the protocol was consolidated.\n"
+msgstr "プロトコルが統合(consolidate)されていれば`true`を返します。\n"
 
-#. TRANSLATORS: defmacro Protocol.derive(protocol, module, options \\ [])
-#: lib/protocol.ex:117
-msgid "Derives the `protocol` for `module` with the given options.\n"
-msgstr "与えられたオプションで、`module`のために`protocol`を導出します。\n"
-
-#. TRANSLATORS: def Protocol.assert_protocol!(module)
-#: lib/protocol.ex:56
+#. TRANSLATORS: def Protocol.consolidate(protocol, types)
+#: lib/protocol.ex:228
 msgid ""
-"Checks if the given module is loaded and is protocol.\n"
+"Receives a protocol and a list of implementations and\n"
+"consolidates the given protocol.\n"
 "\n"
-"Returns `:ok` if so, otherwise raises ArgumentError.\n"
+"Consolidation happens by changing the protocol `impl_for`\n"
+"in the abstract format to have fast lookup rules. Usually\n"
+"the list of implementations to use during consolidation\n"
+"are retrieved with the help of `extract_impls/2`.\n"
+"\n"
+"It returns the updated version of the protocol bytecode.\n"
+"A given bytecode or protocol implementation can be checked\n"
+"to be consolidated or not by analyzing the protocol\n"
+"attribute:\n"
+"\n"
+"    Protocol.consolidated?(Enumerable)\n"
+"\n"
+"If the first element of the tuple is `true`, it means\n"
+"the protocol was consolidated.\n"
+"\n"
+"This function does not load the protocol at any point\n"
+"nor loads the new bytecode for the compiled module.\n"
+"However each implementation must be available and\n"
+"it will be loaded.\n"
 msgstr ""
-"与えられたモジュールがロードされ、プロトコルかどうかをチェックします。\n"
+"プロトコルと実装のリストを受け取り、与えられたプロトコルを\n"
+"統合します。\n"
 "\n"
-"もしそうなら`:ok`を返し、さもなくばArgumentErrorを上げます。\n"
-
-#. TRANSLATORS: def Protocol.assert_impl!(protocol, base)
-#: lib/protocol.ex:82
-msgid ""
-"Checks if the given module is loaded and is an implementation\n"
-"of the given protocol.\n"
+"速い検索規則を持つために抽象的なフォーマットで\n"
+"`impl_for`プロトコルを変更することにより統合は起きます。\n"
+"通常、統合の間の実装のリストは`extract_impls/2`の助けを得て\n"
+"検索されます。\n"
 "\n"
-"Returns `:ok` if so, otherwise raises ArgumentError.\n"
-msgstr ""
-"与えられたモジュールがロードされ、与えられたプロトコルを\n"
-"実装しているかチェックします。\n"
+"プロトコルバイトコードの更新版を返します。与えられたバイトコードまたは\n"
+"プロトコル実装は、統合されたかどうかをプロトコルアトリビュートを分析す\n"
+"ることで、チェックできます:\n"
 "\n"
-"もしそうなら`:ok`を返し、さもなくばArgumentErrorを上げます。\n"
+"\n"
+"    Protocol.consolidated?(Enumerable)\n"
+"\n"
+"もしタプルの最初の要素が`true`ならプロトコルは統合されたことを意味します。\n"
+"\n"
+"この関数はいかなるプロトコルもロードしませんし、コンパイルされたモジュー\n"
+"ルの新しいバイトコードもロードしません。しかしながら、それぞれの実装は\n"
+"有効にされるはずで、それはロードされるでしょう。\n"

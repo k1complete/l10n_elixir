@@ -1,3 +1,13 @@
+#. TRANSLATORS: @type name
+#: lib/agent.ex:111 
+msgid ""
+"The agent name"
+msgstr ""
+#. TRANSLATORS: @type agent
+#: lib/agent.ex:114 
+msgid ""
+"The agent reference"
+msgstr ""
 #. TRANSLATORS: def Agent.update(agent, fun, timeout \\ 5000)
 #: lib/agent.ex:245 
 msgid ""
@@ -9,6 +19,24 @@ msgid ""
 "A timeout can also be specified (it has a default value of 5000).\n"
 "This function always returns `:ok`.\n"
 msgstr ""
+#. TRANSLATORS: @type state
+#: lib/agent.ex:117 
+msgid ""
+"The agent state"
+msgstr ""
+#. TRANSLATORS: def Agent.stop(agent, reason \\ :normal, timeout \\ :infinity)
+#: lib/agent.ex:297 
+msgid ""
+"Stops the agent with the given `reason`.\n"
+"\n"
+"It returns `:ok` if the server terminates with the given\n"
+"reason, if it terminates with another reason, the call will\n"
+"exit.\n"
+"\n"
+"This function keeps OTP semantics regarding error reporting.\n"
+"If the reason is any other than `:normal`, `:shutdown` or\n"
+"`{:shutdown, _}`, an error report will be logged.\n"
+msgstr ""
 #. TRANSLATORS: def Agent.update(agent, module, fun, args, timeout \\ 5000)
 #: lib/agent.ex:259 
 msgid ""
@@ -17,52 +45,6 @@ msgid ""
 "Same as `update/3` but a module, function and args are expected\n"
 "instead of an anonymous function. The state is added as first\n"
 "argument to the given list of args.\n"
-msgstr ""
-#. TRANSLATORS: @type state
-#: lib/agent.ex:117 
-msgid ""
-"The agent state"
-msgstr ""
-#. TRANSLATORS: @type agent
-#: lib/agent.ex:114 
-msgid ""
-"The agent reference"
-msgstr ""
-#. TRANSLATORS: @type name
-#: lib/agent.ex:111 
-msgid ""
-"The agent name"
-msgstr ""
-#. TRANSLATORS: def Agent.stop(agent, timeout \\ 5000)
-#: lib/agent.ex:297 
-msgid ""
-"Stops the agent.\n"
-"\n"
-"Returns `:ok` if the agent is stopped within the given `timeout`.\n"
-msgstr ""
-#. TRANSLATORS: def Agent.start(module, fun, args, options \\ [])
-#: lib/agent.ex:181 
-msgid ""
-"Starts an agent with the given module function and arguments.\n"
-"\n"
-"Similar to `start/2` but a module, function and args are expected\n"
-"instead of an anonymous function.\n"
-msgstr ""
-#. TRANSLATORS: def Agent.start(fun, options \\ [])
-#: lib/agent.ex:171 
-msgid ""
-"Starts an agent process without links (outside of a supervision tree).\n"
-"\n"
-"See `start_link/2` for more information.\n"
-msgstr ""
-#. TRANSLATORS: def Agent.start_link(module, fun, args, options \\ [])
-#: lib/agent.ex:159 
-msgid ""
-"Starts an agent linked to the current process with the given module\n"
-"function and arguments.\n"
-"\n"
-"Same as `start_link/2` but a module, function and args are expected\n"
-"instead of an anonymous function.\n"
 msgstr ""
 #. TRANSLATORS: def Agent.start_link(fun, options \\ [])
 #: lib/agent.ex:120 
@@ -111,35 +93,13 @@ msgid ""
 "Note that `cast` returns `:ok` immediately, regardless of whether the\n"
 "destination node or agent exists.\n"
 msgstr ""
-#. TRANSLATORS: def Agent.cast(agent, module, fun, args)
-#: lib/agent.ex:285 
+#. TRANSLATORS: def Agent.start(module, fun, args, options \\ [])
+#: lib/agent.ex:181 
 msgid ""
-"Performs a cast (fire and forget) operation on the agent state.\n"
+"Starts an agent with the given module function and arguments.\n"
 "\n"
-"Same as `cast/2` but a module, function and args are expected\n"
-"instead of an anonymous function. The state is added as first\n"
-"argument to the given list of args.\n"
-msgstr ""
-#. TRANSLATORS: def Agent.get_and_update(agent, fun, timeout \\ 5000)
-#: lib/agent.ex:218 
-msgid ""
-"Gets and updates the agent state in one operation.\n"
-"\n"
-"The function `fun` is sent to the `agent` which invokes the function\n"
-"passing the agent state. The function must return a tuple with two\n"
-"elements, the first being the value to return (i.e. the `get` value)\n"
-"and the second one is the new state.\n"
-"\n"
-"A timeout can also be specified (it has a default value of 5000).\n"
-msgstr ""
-#. TRANSLATORS: def Agent.get_and_update(agent, module, fun, args, timeout \\ 5000)
-#: lib/agent.ex:233 
-msgid ""
-"Gets and updates the agent state in one operation.\n"
-"\n"
-"Same as `get_and_update/3` but a module, function and args are expected\n"
-"instead of an anonymous function. The state is added as first\n"
-"argument to the given list of args.\n"
+"Similar to `start/2` but a module, function and args are expected\n"
+"instead of an anonymous function.\n"
 msgstr ""
 #. TRANSLATORS: def Agent.get(agent, fun, timeout \\ 5000)
 #: lib/agent.ex:192 
@@ -181,7 +141,7 @@ msgid ""
 "\n"
 "    defmodule Mix.TasksServer do\n"
 "      def start_link do\n"
-"        Agent.start_link(fn -> HashSet.new end, name: __MODULE__)\n"
+"        Agent.start_link(fn -> MapSet.new end, name: __MODULE__)\n"
 "      end\n"
 "\n"
 "      @doc \"Checks if the task has already executed\"\n"
@@ -195,13 +155,13 @@ msgid ""
 "      @doc \"Marks a task as executed\"\n"
 "      def put_task(task, project) do\n"
 "        item = {task, project}\n"
-"        Agent.update(__MODULE__, &Set.put(&1, item))\n"
+"        Agent.update(__MODULE__, &MapSet.put(&1, item))\n"
 "      end\n"
 "\n"
-"      @doc \"Resets the executed tasks and return the previous list of tasks\"\n"
+"      @doc \"Resets the executed tasks and returns the previous list of tasks\"\n"
 "      def take_all() do\n"
 "        Agent.get_and_update(__MODULE__, fn set ->\n"
-"          {Enum.into(set, []), HashSet.new}\n"
+"          {Enum.into(set, []), MapSet.new}\n"
 "        end)\n"
 "      end\n"
 "    end\n"
@@ -267,4 +227,50 @@ msgid ""
 "    {:update, :sample, {:advanced, {Enum, :into, [%{}]}}}\n"
 "\n"
 "The agent's state will be added to the given list as the first argument.\n"
+msgstr ""
+#. TRANSLATORS: def Agent.start(fun, options \\ [])
+#: lib/agent.ex:171 
+msgid ""
+"Starts an agent process without links (outside of a supervision tree).\n"
+"\n"
+"See `start_link/2` for more information.\n"
+msgstr ""
+#. TRANSLATORS: def Agent.get_and_update(agent, fun, timeout \\ 5000)
+#: lib/agent.ex:218 
+msgid ""
+"Gets and updates the agent state in one operation.\n"
+"\n"
+"The function `fun` is sent to the `agent` which invokes the function\n"
+"passing the agent state. The function must return a tuple with two\n"
+"elements, the first being the value to return (i.e. the `get` value)\n"
+"and the second one is the new state.\n"
+"\n"
+"A timeout can also be specified (it has a default value of 5000).\n"
+msgstr ""
+#. TRANSLATORS: def Agent.start_link(module, fun, args, options \\ [])
+#: lib/agent.ex:159 
+msgid ""
+"Starts an agent linked to the current process with the given module\n"
+"function and arguments.\n"
+"\n"
+"Same as `start_link/2` but a module, function and args are expected\n"
+"instead of an anonymous function.\n"
+msgstr ""
+#. TRANSLATORS: def Agent.cast(agent, module, fun, args)
+#: lib/agent.ex:285 
+msgid ""
+"Performs a cast (fire and forget) operation on the agent state.\n"
+"\n"
+"Same as `cast/2` but a module, function and args are expected\n"
+"instead of an anonymous function. The state is added as first\n"
+"argument to the given list of args.\n"
+msgstr ""
+#. TRANSLATORS: def Agent.get_and_update(agent, module, fun, args, timeout \\ 5000)
+#: lib/agent.ex:233 
+msgid ""
+"Gets and updates the agent state in one operation.\n"
+"\n"
+"Same as `get_and_update/3` but a module, function and args are expected\n"
+"instead of an anonymous function. The state is added as first\n"
+"argument to the given list of args.\n"
 msgstr ""

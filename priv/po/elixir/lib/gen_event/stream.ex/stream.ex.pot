@@ -3,7 +3,7 @@
 msgid ""
 "Defines a `GenEvent` stream.\n"
 "\n"
-"This is a struct returned by `stream/2`. The struct is public and\n"
+"This is a struct returned by `GenEvent.stream/2`. The struct is public and\n"
 "contains the following fields:\n"
 "\n"
 "  * `:manager`  - the manager reference given to `GenEvent.stream/2`\n"

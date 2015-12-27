@@ -3,8 +3,8 @@ defmodule L10nElixir.Mixfile do
 
   def project do
     [app: :l10n_elixir,
-     version: "0.0.3",
-     elixir: "~> 1.1.0-beta",
+     version: "0.0.4",
+#     elixir: "~> 1.2",
      compilers: Mix.compilers ++ [:po],
      source_url: "https://github.com/elixir-lang/elixir",
      docs: fn() -> docs() end,
@@ -30,15 +30,15 @@ defmodule L10nElixir.Mixfile do
       _ -> stag
     end
   end
-   def docs do 
+  def docs do 
     source_dir = "deps/elixir"
     sr = abs_path([source_dir, "lib/elixir/ebin"])
 #    IO.inspect File.ls(sr)
-    if (File.exists?(source_dir)) do
-      sref = make_source_ref(source_dir)
-    else
-      sref = nil
-    end
+    sref = if (File.exists?(source_dir)) do
+             make_source_ref(source_dir)
+           else
+             nil
+           end
     version_path = Path.join(source_dir, "VERSION")
 #    IO.inspect [version_path: version_path]
     version = nil
@@ -77,7 +77,7 @@ defmodule L10nElixir.Mixfile do
   #
   # Type `mix help deps` for more examples and options
   defp deps do
-    [{:elixir, github: "elixir-lang/elixir", tag: "v1.1.0"},
+    [{:elixir, github: "elixir-lang/elixir" }, # tag: "v1.2.0"},
      {:ex_doc, github: "elixir-lang/ex_doc"},
      {:earmark, "~> 0.1.17 or ~> 0.2", optional: true},
      {:exgettext, github: "k1complete/exgettext"},

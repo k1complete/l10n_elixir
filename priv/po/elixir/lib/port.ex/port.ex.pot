@@ -1,70 +1,103 @@
 #. TRANSLATORS: def Port.list()
-#: lib/port.ex:90 
+#: lib/port.ex:132 
 msgid ""
-"See [`:erlang.ports/0`](http://www.erlang.org/doc/man/erlang.html#ports-0)\n"
+"Returns a list of the ports for the current node.\n"
+"\n"
+"For more information, see [`:erlang.ports/0`](http://www.erlang.org/doc/man/erlang.html#ports-0).\n"
 "\n"
 "Inlined by the compiler.\n"
-msgstr ""
-#. TRANSLATORS: def Port.control(port, operation, data)
-#: lib/port.ex:42 
-msgid ""
-"See [`:erlang.port_control/3`](http://www.erlang.org/doc/man/erlang.html#port_control-3)\n"
-"\n"
-"Inlined by the compiler.\n"
-msgstr ""
-#. TRANSLATORS: def Port.connect(port, pid)
-#: lib/port.ex:33 
-msgid ""
-"See [`:erlang.port_connect/2`](http://www.erlang.org/doc/man/erlang.html#port_connect-2)\n"
-"\n"
-"Inlined by the compiler.\n"
-msgstr ""
-#. TRANSLATORS: def Port.command(port, data, options \\ [])
-#: lib/port.ex:24 
-msgid ""
-"See [`:erlang.port_command/2`](http://www.erlang.org/doc/man/erlang.html#port_command-2)\n"
-"\n"
-"Inlined by the compiler.\n"
-msgstr ""
-#. TRANSLATORS: def Port.close(port)
-#: lib/port.ex:15 
-msgid ""
-"See [`:erlang.port_close/1`](http://www.erlang.org/doc/man/erlang.html#port_close-1)\n"
-"\n"
-"Inlined by the compiler.\n"
-msgstr ""
-#. TRANSLATORS: def Port.call(port, operation, data)
-#: lib/port.ex:51 
-msgid ""
-"See [`:erlang.port_call/3`](http://www.erlang.org/doc/man/erlang.html#port_call-3)\n"
-"\n"
-"Inlined by the compiler.\n"
-msgstr ""
-#. TRANSLATORS: def Port.open(name, settings)
-#: lib/port.ex:6 
-msgid ""
-"See [`:erlang.open_port/2`](http://www.erlang.org/doc/man/erlang.html#open_port-2)\n"
-"\n"
-"Inlined by the compiler.\n"
-msgstr ""
-#. TRANSLATORS: def Port.info(port, spec)
-#: lib/port.ex:70 
-msgid ""
-"Returns information about the `port`\n"
-"or `nil` if the port is closed.\n"
-"\n"
-"See [`:erlang.port_info/2`](http://www.erlang.org/doc/man/erlang.html#port_info-2)\n"
-msgstr ""
-#. TRANSLATORS: def Port.info(port)
-#: lib/port.ex:60 
-msgid ""
-"Returns information about the `port`\n"
-"or `nil` if the port is closed.\n"
-"\n"
-"See [`:erlang.port_info/1`](http://www.erlang.org/doc/man/erlang.html#port_info-1)\n"
 msgstr ""
 #. TRANSLATORS: Elixir.Port Summary
 #: lib/port.ex:2 
 msgid ""
 "Functions related to Erlang ports.\n"
+msgstr ""
+#. TRANSLATORS: def Port.command(port, data, options \\ [])
+#: lib/port.ex:50 
+msgid ""
+"Sends `data` to the port driver `port`.\n"
+"\n"
+"For more information, see [`:erlang.port_command/2`](http://www.erlang.org/doc/man/erlang.html#port_command-2).\n"
+"\n"
+"Inlined by the compiler.\n"
+msgstr ""
+#. TRANSLATORS: def Port.info(port)
+#: lib/port.ex:102 
+msgid ""
+"Returns information about the `port`\n"
+"or `nil` if the port is closed.\n"
+"\n"
+"For more information, see [`:erlang.port_info/1`](http://www.erlang.org/doc/man/erlang.html#port_info-1).\n"
+msgstr ""
+#. TRANSLATORS: def Port.call(port, operation, data)
+#: lib/port.ex:88 
+msgid ""
+"Makes a synchronous call to the `port` and returns its reply as a term.\n"
+"\n"
+"Not all port drivers support this control feature.\n"
+"\n"
+"For more information, see [`:erlang.port_call/3`](http://www.erlang.org/doc/man/erlang.html#port_call-3).\n"
+"\n"
+"Inlined by the compiler.\n"
+msgstr ""
+#. TRANSLATORS: def Port.control(port, operation, data)
+#: lib/port.ex:74 
+msgid ""
+"Sends a synchronous control command to the `port` and returns its reply as a binary.\n"
+"\n"
+"Not all port drivers support this feature.\n"
+"\n"
+"For more information, see [`:erlang.port_control/3`](http://www.erlang.org/doc/man/erlang.html#port_control-3).\n"
+"\n"
+"Inlined by the compiler.\n"
+msgstr ""
+#. TRANSLATORS: def Port.open(name, settings)
+#: lib/port.ex:11 
+msgid ""
+"Opens an Erlang port given a tuple `name` and a list of `settings`.\n"
+"\n"
+"## Name\n"
+"\n"
+"The supported values for `name` are:\n"
+"\n"
+"  * `{:spawn, command}` - to run an external program. The first space separated\n"
+"    word of `command` will be considered as the name of the program to run, so\n"
+"    use `{:spawn_executable, command}` to run a program having spaces in its name.\n"
+"  * `{:spawn_driver, command}` - similar to `{:spawn, command}`, but to run a\n"
+"    loaded driver.\n"
+"  * `{:spawn_executable, filename}` - similar to `{:spawn, filename}`, but to run\n"
+"    an external executable. With this option, `filename` in its whole is considered\n"
+"    the name of the program to execute.\n"
+"  * `{:fd, fd_in, fd_out}` - to access file descriptors used by Erlang, `fd_in`\n"
+"    being used for standard input, `fd_out` for standard output.\n"
+"\n"
+"For more information, see [`:erlang.open_port/2`](http://www.erlang.org/doc/man/erlang.html#open_port-2).\n"
+"\n"
+"Inlined by the compiler.\n"
+msgstr ""
+#. TRANSLATORS: def Port.info(port, spec)
+#: lib/port.ex:112 
+msgid ""
+"Returns information about the `port`\n"
+"or `nil` if the port is closed.\n"
+"\n"
+"For more information, see [`:erlang.port_info/2`](http://www.erlang.org/doc/man/erlang.html#port_info-2).\n"
+msgstr ""
+#. TRANSLATORS: def Port.close(port)
+#: lib/port.ex:38 
+msgid ""
+"Closes the `port`.\n"
+"\n"
+"For more information, see [`:erlang.port_close/1`](http://www.erlang.org/doc/man/erlang.html#port_close-1).\n"
+"\n"
+"Inlined by the compiler.\n"
+msgstr ""
+#. TRANSLATORS: def Port.connect(port, pid)
+#: lib/port.ex:62 
+msgid ""
+"Associates the `port` identifier with a `pid`.\n"
+"\n"
+"For more information, see [`:erlang.port_connect/2`](http://www.erlang.org/doc/man/erlang.html#port_connect-2).\n"
+"\n"
+"Inlined by the compiler.\n"
 msgstr ""

@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: l 10n_elixir\n"
-"PO-Revision-Date: 2015-05-20 21:55+0900\n"
+"PO-Revision-Date: 2015-12-26 10:41+0900\n"
 "Last-Translator: 小田 照敬 <EMAIL@ADDRESS>\n"
 "Language-Team: Japanese\n"
 "Language: ja\n"
@@ -14,36 +14,6 @@ msgstr ""
 #: lib/supervisor/spec.ex:122
 msgid "The supervisor specification"
 msgstr "スーパバイザの仕様(specification)"
-
-#. TRANSLATORS: @type worker
-#: lib/supervisor/spec.ex:113
-msgid "Supported worker values"
-msgstr "workerでサポートされる値"
-
-#. TRANSLATORS: @type strategy
-#: lib/supervisor/spec.ex:104
-msgid "Supported strategies"
-msgstr "strategyでサポートされる値"
-
-#. TRANSLATORS: @type shutdown
-#: lib/supervisor/spec.ex:110
-msgid "Supported shutdown values"
-msgstr "shutdownでサポートされる値"
-
-#. TRANSLATORS: @type restart
-#: lib/supervisor/spec.ex:107
-msgid "Supported restart values"
-msgstr "restartでサポートされる値"
-
-#. TRANSLATORS: @type modules
-#: lib/supervisor/spec.ex:116
-msgid "Supported module values"
-msgstr "moduleでサポートされる値"
-
-#. TRANSLATORS: @type child_id
-#: lib/supervisor/spec.ex:119
-msgid "Supported id values"
-msgstr "idでサポートされる値"
 
 #. TRANSLATORS: def Supervisor.Spec.worker(module, args, options \\ [])
 #: lib/supervisor/spec.ex:186
@@ -82,42 +52,10 @@ msgstr ""
 "オプションの詳細は `Supervisor.Spec` モジュールドキュメントを\n"
 "チェックしてください。\n"
 
-#. TRANSLATORS: def Supervisor.Spec.supervisor(module, args, options \\ [])
-#: lib/supervisor/spec.ex:210
-msgid ""
-"Defines the given `module` as a supervisor which will be started\n"
-"with the given arguments.\n"
-"\n"
-"    supervisor ExUnit.Runner, [], restart: :permanent\n"
-"\n"
-"By default, the function `start_link` is invoked on the given\n"
-"module. Overall, the default values for the options are:\n"
-"\n"
-"    [id: module,\n"
-"     function: :start_link,\n"
-"     restart: :permanent,\n"
-"     shutdown: :infinity,\n"
-"     modules: [module]]\n"
-"\n"
-"Check `Supervisor.Spec` module docs for more information on\n"
-"the options.\n"
-msgstr ""
-"与えられた引数で開始するスーパバイザとして、\n"
-"与えられた`module`を定義します。\n"
-"\n"
-"    supervisor ExUnit.Runner, [], restart: :permanent\n"
-"\n"
-"デフォルトで、`start_link`関数が与えられたモジュールで\n"
-"起動されます。全体として、オプションのデフォルト値は以下の通りです:\n"
-"\n"
-"    [id: module,\n"
-"     function: :start_link,\n"
-"     restart: :permanent,\n"
-"     shutdown: :infinity,\n"
-"     modules: [module]]\n"
-"\n"
-"オプションの詳細は `Supervisor.Spec` モジュールドキュメントを\n"
-"チェックしてください。\n"
+#. TRANSLATORS: @type strategy
+#: lib/supervisor/spec.ex:104
+msgid "Supported strategies"
+msgstr "strategyでサポートされる値"
 
 #. TRANSLATORS: Elixir.Supervisor.Spec Summary
 #: lib/supervisor/spec.ex:2
@@ -174,7 +112,7 @@ msgid ""
 "\n"
 "## Supervisor and worker options\n"
 "\n"
-"In the example above, we have defined workers and supervisors\n"
+"In the example above, we defined workers and supervisors\n"
 "and each accepts the following options:\n"
 "\n"
 "  * `:id` - a name used to identify the child specification\n"
@@ -183,7 +121,8 @@ msgid ""
 "\n"
 "  * `:function` - the function to invoke on the child to start it\n"
 "\n"
-"  * `:restart` - defines when the child process should restart\n"
+"  * `:restart` - defines when a terminated child process should be "
+"restarted\n"
 "\n"
 "  * `:shutdown` - defines how a child process should be terminated\n"
 "\n"
@@ -212,11 +151,12 @@ msgid ""
 "  * `:brutal_kill` - the child process is unconditionally terminated\n"
 "    using `exit(child, :kill)`.\n"
 "\n"
-"  * `:infinity` - if the child process is a supervisor, it is a mechanism\n"
+"  * `:infinity` - if the child process is a supervisor, this is a mechanism\n"
 "    to give the subtree enough time to shutdown. It can also be used with\n"
 "    workers with care.\n"
 "\n"
-"  * Finally, it can also be any integer meaning that the supervisor tells\n"
+"  * Finally, the value can also be any integer meaning that the supervisor "
+"tells\n"
 "    the child process to terminate by calling `Process.exit(child, :"
 "shutdown)`\n"
 "    and then waits for an exit signal back. If no exit signal is received\n"
@@ -258,8 +198,7 @@ msgstr ""
 "      end\n"
 "    end\n"
 "\n"
-"この場合、\n"
-"明示的に`Supervicor.Spec`をインポートする必要がないことに\n"
+"この場合、明示的に`Supervicor.Spec`をインポートする必要がないことに\n"
 "注意してください。`use Supervisor`が自動的に行ってくれます。\n"
 "\n"
 "以下の必要があるとき、上記の明示的なスーパバイザは要求されます。\n"
@@ -279,9 +218,8 @@ msgstr ""
 "上の例で、workerと、supervisorを定義し、それぞれは以下のオプションを\n"
 "以下のオプションを受け付けます:\n"
 "\n"
-"  * `:id` - スーパバイザにより内部的に、\n"
-"    子プロセス仕様を定義するために使う名前; デフォルトは与えられた\n"
-"    モジュール名\n"
+"  * `:id` - スーパバイザにより内部的に、子プロセス仕様を定義するた\n"
+"    めに使う名前; デフォルトは与えられたモジュール名\n"
 "\n"
 "  * `:function` - 子プロセスを開始したときに起動する関数\n"
 "\n"
@@ -290,9 +228,9 @@ msgstr ""
 "  * `:shutdown` -  どのように子プロセスが終了されるべきかの定義\n"
 "\n"
 "  * `:modules` -   1要素の`[module]`のようなリストであるべきで、\n"
-"     moduleは、子プロセスが`Supervisor`か`GenServer`ならば、\n"
-"     コールバックモジュールの名前で、子プロセスが`GenEvent`なら、\n"
-"     moduleは`:dynamic`でなければなりません。\n"
+"    moduleは、子プロセスが`Supervisor`か`GenServer`ならば、\n"
+"    コールバックモジュールの名前で、子プロセスが`GenEvent`なら、\n"
+"    moduleは`:dynamic`でなければなりません。\n"
 "\n"
 "### Restart values (:restart)\n"
 "\n"
@@ -301,7 +239,7 @@ msgstr ""
 "  * `:permanent` - 子プロセスは常に再起動されます\n"
 "\n"
 "  * `:temporary` - 子プロセスは決して再起動されません(\n"
-"     スーパバイザの戦略が`rest_for_one`、`:one_for_all`のときも)\n"
+"    スーパバイザの戦略が`rest_for_one`、`:one_for_all`のときも)\n"
 "\n"
 "  * `:transient` - 異常終了(即ち、`:normal`, `:shutdown`, \n"
 "    `{:shutdown, term}`以外ののexit reason)したときだけ、\n"
@@ -312,7 +250,7 @@ msgstr ""
 "以下のshutdown値がサポートされます:\n"
 "\n"
 "  * `:brutal_kill` - `exit(child, :kill)`を使い、子プロセスは無条件で\n"
-"     終了されます。\n"
+"    終了されます。\n"
 "\n"
 "  * `:infinity` - 子プロセスがsupervisorなら、サブツリーにshutdownに\n"
 "    十分な時間を与えるメカニズムです。注意してworkerに対して使われる\n"
@@ -379,3 +317,65 @@ msgstr ""
 "`:strategy`オプションは必要とされます。そして、デフォルトでは5秒\n"
 "間に3回のリスタートが許されます。有効な戦略の完全な説明は、\n"
 "`Supervisor`モジュールをチェックしてください。\n"
+
+#. TRANSLATORS: @type worker
+#: lib/supervisor/spec.ex:113
+msgid "Supported worker values"
+msgstr "workerでサポートされる値"
+
+#. TRANSLATORS: @type restart
+#: lib/supervisor/spec.ex:107
+msgid "Supported restart values"
+msgstr "restartでサポートされる値"
+
+#. TRANSLATORS: @type modules
+#: lib/supervisor/spec.ex:116
+msgid "Supported module values"
+msgstr "moduleでサポートされる値"
+
+#. TRANSLATORS: @type shutdown
+#: lib/supervisor/spec.ex:110
+msgid "Supported shutdown values"
+msgstr "shutdownでサポートされる値"
+
+#. TRANSLATORS: @type child_id
+#: lib/supervisor/spec.ex:119
+msgid "Supported id values"
+msgstr "idでサポートされる値"
+
+#. TRANSLATORS: def Supervisor.Spec.supervisor(module, args, options \\ [])
+#: lib/supervisor/spec.ex:210
+msgid ""
+"Defines the given `module` as a supervisor which will be started\n"
+"with the given arguments.\n"
+"\n"
+"    supervisor ExUnit.Runner, [], restart: :permanent\n"
+"\n"
+"By default, the function `start_link` is invoked on the given\n"
+"module. Overall, the default values for the options are:\n"
+"\n"
+"    [id: module,\n"
+"     function: :start_link,\n"
+"     restart: :permanent,\n"
+"     shutdown: :infinity,\n"
+"     modules: [module]]\n"
+"\n"
+"Check `Supervisor.Spec` module docs for more information on\n"
+"the options.\n"
+msgstr ""
+"与えられた引数で開始するスーパバイザとして、\n"
+"与えられた`module`を定義します。\n"
+"\n"
+"    supervisor ExUnit.Runner, [], restart: :permanent\n"
+"\n"
+"デフォルトで、`start_link`関数が与えられたモジュールで\n"
+"起動されます。全体として、オプションのデフォルト値は以下の通りです:\n"
+"\n"
+"    [id: module,\n"
+"     function: :start_link,\n"
+"     restart: :permanent,\n"
+"     shutdown: :infinity,\n"
+"     modules: [module]]\n"
+"\n"
+"オプションの詳細は `Supervisor.Spec` モジュールドキュメントを\n"
+"チェックしてください。\n"
