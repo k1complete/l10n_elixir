@@ -8,6 +8,7 @@ defmodule L10nElixir.Mixfile do
      compilers: Mix.compilers ++ [:po],
      source_url: "https://github.com/elixir-lang/elixir",
      docs: fn() -> docs() end,
+     aliases: aliases,
      deps: deps]
   end
   def abs_path(s) when is_list(s) do
@@ -59,14 +60,46 @@ defmodule L10nElixir.Mixfile do
      output: "doc/elixir"
     ]
   end
-
   # Configuration for the OTP application
   #
   # Type `mix help compile.app` for more information
   def application do
     [applications: [:exgettext, :l10n_iex]]
   end
-
+  defp aliases do
+    [docall: &docall/1]
+  end
+  def docall(_) do
+    apps = ["l10n_iex", "l10n_ex_unit"]
+    Enum.map apps,
+    fn(app) ->
+      Code.load_file("deps/#{app}/mix.exs")
+      Code.append_path("_build/dev/lib/ex_doc/ebin")
+      File.cp("deps/#{app}/priv/lang/ja/#{app}.exmo", 
+              "priv/lang/ja/#{app}.exmo")
+      mod = Module.concat(Mix.Utils.camelize(app), Mixfile)
+      l10napp = mod.project
+      b = Regex.replace(~r/^l10n_(.*)/, app, "\\1")
+        |> String.to_atom 
+      :ok = Application.load(b)
+      b = Application.spec(b)
+        |> Keyword.get(:mod)
+        |> elem(0)
+        |> Module.split
+        |> hd
+        |> Module.concat(nil)
+      l10napp = update_in(l10napp, 
+                          [:docs, :source_root], 
+                          fn(_) ->  
+                            d = Path.dirname(b.__info__(:compile)[:source])
+                            r = Path.join([d, "..", "..", ".."]) 
+                            |> Path.expand
+                            IO.inspect [r: r]
+                            r
+                          end)
+      Mix.Tasks.Docs.run([], l10napp)
+    end
+  end
   # Dependencies can be hex.pm packages:
   #
   #   {:mydep, "~> 0.3.0"}
@@ -81,7 +114,10 @@ defmodule L10nElixir.Mixfile do
      {:ex_doc, github: "elixir-lang/ex_doc"},
      {:earmark, "~> 0.1.17 or ~> 0.2", optional: true},
      {:exgettext, github: "k1complete/exgettext"},
-	   {:l10n_iex,  github: "k1complete/l10n_iex" }
+	   {:l10n_iex,  github: "k1complete/l10n_iex"},
+#      compile: "mix do deps.get, deps.compile, compile, docs" },
+	   {:l10n_ex_unit,  github: "k1complete/l10n_ex_unit"}
+#      compile: "mix do deps.get, deps.compile, compile, docs" }
 #	    compile: "mix do deps.get, deps.compile; mix; mix l10n.msgfmt"}
     ]
   end
