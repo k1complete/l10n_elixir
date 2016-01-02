@@ -3,6 +3,17 @@
 msgid ""
 "The same as `cd/1`, but raises an exception if it fails.\n"
 msgstr ""
+#. TRANSLATORS: def File.copy!(source, destination, bytes_count \\ :infinity)
+#: lib/file.ex:438 
+msgid ""
+"The same as `copy/3` but raises an `File.CopyError` if it fails.\n"
+"Returns the `bytes_copied` otherwise.\n"
+msgstr ""
+#. TRANSLATORS: def File.rm!(path)
+#: lib/file.ex:774 
+msgid ""
+"Same as `rm/1`, but raises an exception in case of failure. Otherwise `:ok`.\n"
+msgstr ""
 #. TRANSLATORS: def File.chmod(path, mode)
 #: lib/file.ex:1228 
 msgid ""
@@ -28,6 +39,12 @@ msgid ""
 "write, read and execute permission to the owner\n"
 "and both read and execute permission to group\n"
 "and others.\n"
+msgstr ""
+#. TRANSLATORS: def File.stat!(path, opts \\ [])
+#: lib/file.ex:280 
+msgid ""
+"Same as `stat/2` but returns the `File.Stat` directly and\n"
+"throws `File.Error` if an error is returned.\n"
 msgstr ""
 #. TRANSLATORS: def File.mkdir_p(path)
 #: lib/file.ex:160 
@@ -77,12 +94,6 @@ msgid ""
 "  * `:local` - returns a `{date, time}` tuple using the machine time\n"
 "  * `:posix` - returns the time as integer seconds since epoch\n"
 "\n"
-msgstr ""
-#. TRANSLATORS: def File.copy!(source, destination, bytes_count \\ :infinity)
-#: lib/file.ex:438 
-msgid ""
-"The same as `copy/3` but raises an `File.CopyError` if it fails.\n"
-"Returns the `bytes_copied` otherwise.\n"
 msgstr ""
 #. TRANSLATORS: def File.write(path, content, modes \\ [])
 #: lib/file.ex:675 
@@ -189,12 +200,6 @@ msgid ""
 "Changes the group given by the group id `gid`\n"
 "for a given `file`. Returns `:ok` on success, or\n"
 "`{:error, reason}` on failure.\n"
-msgstr ""
-#. TRANSLATORS: def File.stat!(path, opts \\ [])
-#: lib/file.ex:280 
-msgid ""
-"Same as `stat/2` but returns the `File.Stat` directly and\n"
-"throws `File.Error` if an error is returned.\n"
 msgstr ""
 #. TRANSLATORS: def File.read(path)
 #: lib/file.ex:213 
@@ -361,16 +366,6 @@ msgid ""
 "explicitly disallow this behaviour. If destination is a directory, an\n"
 "error will be returned.\n"
 msgstr ""
-#. TRANSLATORS: def File.rm!(path)
-#: lib/file.ex:774 
-msgid ""
-"Same as `rm/1`, but raises an exception in case of failure. Otherwise `:ok`.\n"
-msgstr ""
-#. TRANSLATORS: def File.chgrp!(path, gid)
-#: lib/file.ex:1280 
-msgid ""
-"Same as `chgrp/2`, but raises an exception in case of failure. Otherwise `:ok`.\n"
-msgstr ""
 #. TRANSLATORS: def File.write_stat(path, stat, opts \\ [])
 #: lib/file.ex:339 
 msgid ""
@@ -399,6 +394,28 @@ msgid ""
 "\n"
 "Returns the `io_device` otherwise.\n"
 msgstr ""
+#. TRANSLATORS: def File.chgrp!(path, gid)
+#: lib/file.ex:1280 
+msgid ""
+"Same as `chgrp/2`, but raises an exception in case of failure. Otherwise `:ok`.\n"
+msgstr ""
+#. TRANSLATORS: def File.touch!(path, time \\ :calendar.universal_time())
+#: lib/file.ex:385 
+msgid ""
+"Same as `touch/2` but raises an exception if it fails.\n"
+"\n"
+"Returns `:ok` otherwise. Requires datetime in UTC.\n"
+msgstr ""
+#. TRANSLATORS: def File.close(io_device)
+#: lib/file.ex:1172 
+msgid ""
+"Closes the file referenced by `io_device`. It mostly returns `:ok`, except\n"
+"for some severe errors such as out of memory.\n"
+"\n"
+"Note that if the option `:delayed_write` was used when opening the file,\n"
+"`close/1` might return an old write error and not even try to close the file.\n"
+"See `open/2`.\n"
+msgstr ""
 #. TRANSLATORS: def File.open(path, modes, function)
 #: lib/file.ex:1002 
 msgid ""
@@ -422,23 +439,6 @@ msgid ""
 "      IO.read(file, :line)\n"
 "    end)\n"
 "\n"
-msgstr ""
-#. TRANSLATORS: def File.touch!(path, time \\ :calendar.universal_time())
-#: lib/file.ex:385 
-msgid ""
-"Same as `touch/2` but raises an exception if it fails.\n"
-"\n"
-"Returns `:ok` otherwise. Requires datetime in UTC.\n"
-msgstr ""
-#. TRANSLATORS: def File.close(io_device)
-#: lib/file.ex:1172 
-msgid ""
-"Closes the file referenced by `io_device`. It mostly returns `:ok`, except\n"
-"for some severe errors such as out of memory.\n"
-"\n"
-"Note that if the option `:delayed_write` was used when opening the file,\n"
-"`close/1` might return an old write error and not even try to close the file.\n"
-"See `open/2`.\n"
 msgstr ""
 #. TRANSLATORS: def File.rm_rf(path)
 #: lib/file.ex:818 
@@ -464,6 +464,11 @@ msgstr ""
 #: lib/file.ex:705 
 msgid ""
 "Same as `write/3` but raises an exception if it fails, returns `:ok` otherwise.\n"
+msgstr ""
+#. TRANSLATORS: def File.chown!(path, uid)
+#: lib/file.ex:1303 
+msgid ""
+"Same as `chown/2`, but raises an exception in case of failure. Otherwise `:ok`.\n"
 msgstr ""
 #. TRANSLATORS: def File.read!(path)
 #: lib/file.ex:234 
@@ -495,10 +500,36 @@ msgid ""
 "Same as `lstat/2` but returns the `File.Stat` struct directly and\n"
 "throws `File.Error` if an error is returned.\n"
 msgstr ""
-#. TRANSLATORS: def File.chown!(path, uid)
-#: lib/file.ex:1303 
+#. TRANSLATORS: def File.cwd!()
+#: lib/file.ex:1090 
 msgid ""
-"Same as `chown/2`, but raises an exception in case of failure. Otherwise `:ok`.\n"
+"The same as `cwd/0`, but raises an exception if it fails.\n"
+msgstr ""
+#. TRANSLATORS: def File.chown(path, uid)
+#: lib/file.ex:1293 
+msgid ""
+"Changes the owner given by the user id `uid`\n"
+"for a given `file`. Returns `:ok` on success,\n"
+"or `{:error, reason}` on failure.\n"
+msgstr ""
+#. TRANSLATORS: def File.exists?(path)
+#: lib/file.ex:106 
+msgid ""
+"Returns `true` if the given path exists.\n"
+"It can be regular file, directory, socket,\n"
+"symbolic link, named pipe or device file.\n"
+"\n"
+"## Examples\n"
+"\n"
+"    File.exists?(\"test/\")\n"
+"    #=> true\n"
+"\n"
+"    File.exists?(\"missing.txt\")\n"
+"    #=> false\n"
+"\n"
+"    File.exists?(\"/dev/null\")\n"
+"    #=> true\n"
+"\n"
 msgstr ""
 #. TRANSLATORS: def File.mkdir(path)
 #: lib/file.ex:128 
@@ -545,6 +576,39 @@ msgstr ""
 msgid ""
 "The same as `cp_r/3`, but raises `File.CopyError` if it fails.\n"
 "Returns the list of copied files otherwise.\n"
+msgstr ""
+#. TRANSLATORS: def File.rename(source, destination)
+#: lib/file.ex:452 
+msgid ""
+"Renames the `source` file to `destination` file.  It can be used to move files\n"
+"(and directories) between directories.  If moving a file, you must fully\n"
+"specify the `destination` filename, it is not sufficient to simply specify\n"
+"its directory.\n"
+"\n"
+"It returns `:ok` in case of success, returns `{:error, reason}` otherwise.\n"
+"\n"
+"Note: The command `mv` in Unix systems behaves differently depending\n"
+"if `source` is a file and the `destination` is an existing directory.\n"
+"We have chosen to explicitly disallow this behaviour.\n"
+"\n"
+"## Examples\n"
+"\n"
+"    # Rename file \"a.txt\" to \"b.txt\"\n"
+"    File.rename \"a.txt\", \"b.txt\"\n"
+"\n"
+"    # Rename directory \"samples\" to \"tmp\"\n"
+"    File.rename \"samples\", \"tmp\"\n"
+msgstr ""
+#. TRANSLATORS: def File.write_stat!(path, stat, opts \\ [])
+#: lib/file.ex:349 
+msgid ""
+"Same as `write_stat/3` but raises an exception if it fails.\n"
+"Returns `:ok` otherwise.\n"
+msgstr ""
+#. TRANSLATORS: def File.mkdir_p!(path)
+#: lib/file.ex:200 
+msgid ""
+"Same as `mkdir_p/1`, but raises an exception in case of failure. Otherwise `:ok`.\n"
 msgstr ""
 #. TRANSLATORS: def File.rmdir!(path)
 #: lib/file.ex:805 
@@ -596,89 +660,12 @@ msgid ""
 "    end\n"
 "\n"
 msgstr ""
-#. TRANSLATORS: def File.rename(source, destination)
-#: lib/file.ex:452 
-msgid ""
-"Renames the `source` file to `destination` file.  It can be used to move files\n"
-"(and directories) between directories.  If moving a file, you must fully\n"
-"specify the `destination` filename, it is not sufficient to simply specify\n"
-"its directory.\n"
-"\n"
-"It returns `:ok` in case of success, returns `{:error, reason}` otherwise.\n"
-"\n"
-"Note: The command `mv` in Unix systems behaves differently depending\n"
-"if `source` is a file and the `destination` is an existing directory.\n"
-"We have chosen to explicitly disallow this behaviour.\n"
-"\n"
-"## Examples\n"
-"\n"
-"    # Rename file \"a.txt\" to \"b.txt\"\n"
-"    File.rename \"a.txt\", \"b.txt\"\n"
-"\n"
-"    # Rename directory \"samples\" to \"tmp\"\n"
-"    File.rename \"samples\", \"tmp\"\n"
-msgstr ""
-#. TRANSLATORS: def File.exists?(path)
-#: lib/file.ex:106 
-msgid ""
-"Returns `true` if the given path exists.\n"
-"It can be regular file, directory, socket,\n"
-"symbolic link, named pipe or device file.\n"
-"\n"
-"## Examples\n"
-"\n"
-"    File.exists?(\"test/\")\n"
-"    #=> true\n"
-"\n"
-"    File.exists?(\"missing.txt\")\n"
-"    #=> false\n"
-"\n"
-"    File.exists?(\"/dev/null\")\n"
-"    #=> true\n"
-"\n"
-msgstr ""
-#. TRANSLATORS: def File.chown(path, uid)
-#: lib/file.ex:1293 
-msgid ""
-"Changes the owner given by the user id `uid`\n"
-"for a given `file`. Returns `:ok` on success,\n"
-"or `{:error, reason}` on failure.\n"
-msgstr ""
-#. TRANSLATORS: def File.ln_s(existing, new)
-#: lib/file.ex:400 
-msgid ""
-"Creates a symbolic link `new` to the file or directory `existing`.\n"
-"\n"
-"Returns `:ok` if successful, `{:error, reason}` otherwise.\n"
-"If the operating system does not support symlinks, returns\n"
-"`{:error, :enotsup}`.\n"
-msgstr ""
-#. TRANSLATORS: def File.cwd()
-#: lib/file.ex:1065 
-msgid ""
-"Gets the current working directory.\n"
-"\n"
-"In rare circumstances, this function can fail on Unix. It may happen\n"
-"if read permissions do not exist for the parent directories of the\n"
-"current directory. For this reason, returns `{:ok, cwd}` in case\n"
-"of success, `{:error, reason}` otherwise.\n"
-msgstr ""
-#. TRANSLATORS: def File.cwd!()
-#: lib/file.ex:1090 
-msgid ""
-"The same as `cwd/0`, but raises an exception if it fails.\n"
-msgstr ""
 #. TRANSLATORS: def File.open!(path, modes, function)
 #: lib/file.ex:1051 
 msgid ""
 "Same as `open/3` but raises an error if file could not be opened.\n"
 "\n"
 "Returns the function result otherwise.\n"
-msgstr ""
-#. TRANSLATORS: def File.chmod!(path, mode)
-#: lib/file.ex:1257 
-msgid ""
-"Same as `chmod/2`, but raises an exception in case of failure. Otherwise `:ok`.\n"
 msgstr ""
 #. TRANSLATORS: def File.stat(path, opts \\ [])
 #: lib/file.ex:249 
@@ -701,6 +688,11 @@ msgid ""
 "    machine\n"
 "  * `:posix` - returns the time as integer seconds since epoch\n"
 "\n"
+msgstr ""
+#. TRANSLATORS: def File.chmod!(path, mode)
+#: lib/file.ex:1257 
+msgid ""
+"Same as `chmod/2`, but raises an exception in case of failure. Otherwise `:ok`.\n"
 msgstr ""
 #. TRANSLATORS: def File.rm_rf!(path)
 #: lib/file.ex:907 
@@ -740,16 +732,24 @@ msgstr ""
 msgid ""
 "Returns `true` if the path is a directory.\n"
 msgstr ""
-#. TRANSLATORS: def File.write_stat!(path, stat, opts \\ [])
-#: lib/file.ex:349 
+#. TRANSLATORS: def File.ln_s(existing, new)
+#: lib/file.ex:400 
 msgid ""
-"Same as `write_stat/3` but raises an exception if it fails.\n"
-"Returns `:ok` otherwise.\n"
+"Creates a symbolic link `new` to the file or directory `existing`.\n"
+"\n"
+"Returns `:ok` if successful, `{:error, reason}` otherwise.\n"
+"If the operating system does not support symlinks, returns\n"
+"`{:error, :enotsup}`.\n"
 msgstr ""
-#. TRANSLATORS: def File.mkdir_p!(path)
-#: lib/file.ex:200 
+#. TRANSLATORS: def File.cwd()
+#: lib/file.ex:1065 
 msgid ""
-"Same as `mkdir_p/1`, but raises an exception in case of failure. Otherwise `:ok`.\n"
+"Gets the current working directory.\n"
+"\n"
+"In rare circumstances, this function can fail on Unix. It may happen\n"
+"if read permissions do not exist for the parent directories of the\n"
+"current directory. For this reason, returns `{:ok, cwd}` in case\n"
+"of success, `{:error, reason}` otherwise.\n"
 msgstr ""
 #. TRANSLATORS: def File.cp!(source, destination, callback \\ fn _, _ -> true end)
 #: lib/file.ex:514 

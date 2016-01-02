@@ -15,6 +15,24 @@ msgstr ""
 msgid "The same as `cd/1`, but raises an exception if it fails.\n"
 msgstr "`cd/1`と同じですが、失敗すると例外を上げます。\n"
 
+#. TRANSLATORS: def File.copy!(source, destination, bytes_count \\ :infinity)
+#: lib/file.ex:438
+msgid ""
+"The same as `copy/3` but raises an `File.CopyError` if it fails.\n"
+"Returns the `bytes_copied` otherwise.\n"
+msgstr ""
+"`copy/3`と同じですが、失敗すると`File.CopyError`を上げます。\n"
+"さもなければ、`bytes_copied`(コピーされたバイト数)を返します。\n"
+
+#. TRANSLATORS: def File.rm!(path)
+#: lib/file.ex:774
+msgid ""
+"Same as `rm/1`, but raises an exception in case of failure. Otherwise `:"
+"ok`.\n"
+msgstr ""
+"`rm/1`と同じですが、失敗すると例外を上げます。さもなくば`:ok`を返し\n"
+"ます。\n"
+
 #. TRANSLATORS: def File.chmod(path, mode)
 #: lib/file.ex:1228
 msgid ""
@@ -62,6 +80,15 @@ msgstr ""
 "例えば、モード0o755の設定は、オーナーに\n"
 "write, read, executeを許可し、グループと\n"
 "その他ユーザにreadとexecuteを許可します。\n"
+
+#. TRANSLATORS: def File.stat!(path, opts \\ [])
+#: lib/file.ex:280
+msgid ""
+"Same as `stat/2` but returns the `File.Stat` directly and\n"
+"throws `File.Error` if an error is returned.\n"
+msgstr ""
+"`stat/2`と同じですが、もしエラーが帰って来たら`File.Stat`を直接返さず、\n"
+"`File.Errorを投げます。\n"
 
 #. TRANSLATORS: def File.mkdir_p(path)
 #: lib/file.ex:160
@@ -135,7 +162,8 @@ msgstr ""
 "なら、`type`を`:symlink`にセットして、リンクについての`File.Stat`を\n"
 "返します。その他のファイルの場合、`stat/2`と全く同じ値を返します。\n"
 "\n"
-"詳細は、 [`:file.read_link_info/2`](http://www.erlang.org/doc/man/file.html#read_link_info-2) を\n"
+"詳細は、 [`:file.read_link_info/2`](http://www.erlang.org/doc/man/file."
+"html#read_link_info-2) を\n"
 "参照してください。\n"
 "\n"
 "## オプション\n"
@@ -150,15 +178,6 @@ msgstr ""
 "  * `:local` - マシンタイムを使い、`{date, time}`タプルを返します。\n"
 "  * `:posix` - epochからの整数の秒数として時刻を返します。\n"
 "\n"
-
-#. TRANSLATORS: def File.copy!(source, destination, bytes_count \\ :infinity)
-#: lib/file.ex:438
-msgid ""
-"The same as `copy/3` but raises an `File.CopyError` if it fails.\n"
-"Returns the `bytes_copied` otherwise.\n"
-msgstr ""
-"`copy/3`と同じですが、失敗すると`File.CopyError`を上げます。\n"
-"さもなければ、`bytes_copied`(コピーされたバイト数)を返します。\n"
 
 #. TRANSLATORS: def File.write(path, content, modes \\ [])
 #: lib/file.ex:675
@@ -201,7 +220,8 @@ msgstr ""
 "\n"
 "**警告:** この関数が呼び出されたら毎回、ファイルディスクプリタはオープン\n"
 "され、ファイルへ書き出すための新しいプロセスが生成されます。\n"
-"この理由から、ループの中で複数回書き出しをするなら、`File.open/2`でファイルを\n"
+"この理由から、ループの中で複数回書き出しをするなら、`File.open/2`でファイル"
+"を\n"
 "オープンして、ファイルへ書き出すために`IO`モジュールの関数を使うことが\n"
 "この関数を複数回呼び出すよりも非常によいパフォーマンスを与えます。\n"
 "\n"
@@ -209,7 +229,8 @@ msgstr ""
 "\n"
 "  * `:enoent`  - ファイル名の構成要素が存在しません\n"
 "  * `:enotdir` - ファイル名の構成要素がディレクトリではありません;\n"
-"                 いくつかのプラットフォームでは、`:enoent`が替わりに返されます\n"
+"                 いくつかのプラットフォームでは、`:enoent`が替わりに返されま"
+"す\n"
 "  * `:enospc`  - デバイスに残りスペースがありません。\n"
 "  * `:eacces`  - ファイルを書くための、あるいは、親ディレクトリでサーチする\n"
 "                 ためのパーミッションがありません。\n"
@@ -368,15 +389,6 @@ msgstr ""
 "成功したら`:ok`を返し、失敗したら`{:error, reason}`を\n"
 "返します。\n"
 
-#. TRANSLATORS: def File.stat!(path, opts \\ [])
-#: lib/file.ex:280
-msgid ""
-"Same as `stat/2` but returns the `File.Stat` directly and\n"
-"throws `File.Error` if an error is returned.\n"
-msgstr ""
-"`stat/2`と同じですが、もしエラーが帰って来たら`File.Stat`を直接返さず、\n"
-"`File.Errorを投げます。\n"
-
 #. TRANSLATORS: def File.read(path)
 #: lib/file.ex:213
 msgid ""
@@ -521,12 +533,14 @@ msgstr ""
 "\n"
 "許されたモードは以下のとおりです:\n"
 "\n"
-"  * `:read` - ファイルは存在していなくてはならず、読み込みのためにオープンされます\n"
+"  * `:read` - ファイルは存在していなくてはならず、読み込みのためにオープンさ"
+"れます\n"
 "\n"
 "  * `:write` - ファイルは書き込みの為にオープンされます。もしなければ、\n"
 "    作られます。\n"
 "\n"
-"    もしファイルが存在して、そして、もしwriteがreadと一緒に指定されないなら、\n"
+"    もしファイルが存在して、そして、もしwriteがreadと一緒に指定されないな"
+"ら、\n"
 "    ファイルはトランケートされます。\n"
 "\n"
 "  * `:append` - ファイルは書き込みの為にオープンされ、もし存在しないなら、\n"
@@ -534,16 +548,19 @@ msgstr ""
 "    オペレーションは、ファイルの終わりの場所に行われます。\n"
 "\n"
 "  * `:exclusive` - 書き込みの為にオープンされたファイルは、存在しないなら\n"
-"    作成されます。もしファイルが存在したらopenは`{:error, :eexist}`を返します。\n"
+"    作成されます。もしファイルが存在したらopenは`{:error, :eexist}`を返しま"
+"す。\n"
 "\n"
 "  * `:char_list` - これが指定されたら、ファイルの読み込み\n"
 "    オペレーションはバイナリではなく文字のリストを返します。\n"
 "\n"
-"  * `:compressed` - gzipで圧縮されたファイルを読み書きすることを可能にします。\n"
+"  * `:compressed` - gzipで圧縮されたファイルを読み書きすることを可能にしま"
+"す。\n"
 "\n"
 "    compressedオプションはreadかwriteの両方ではなく、どちらか一方と一緒に\n"
 "    指定されなければなりません。\n"
-"    `stat/1`で得られるファイルサイズは、圧縮ファイルから読み込むことができる\n"
+"    `stat/1`で得られるファイルサイズは、圧縮ファイルから読み込むことができ"
+"る\n"
 "     バイト数と、多分マッチしないことに注意してください。\n"
 "\n"
 "  * `:utf8` - このオプションは、ディスクファイルに実際に保存される方法\n"
@@ -552,7 +569,8 @@ msgstr ""
 "\n"
 "    もし、データがutf8へ変換出来ないフォーマットでファイルに送信されたら、\n"
 "    または、データの文字範囲に対処できないフォーマットでデータを返す関数に\n"
-"    よってデータが読み込まれたら、エラーが発生し、ファイルはクローズされます。\n"
+"    よってデータが読み込まれたら、エラーが発生し、ファイルはクローズされま"
+"す。\n"
 "\n"
 "`:read_ahead`や`:delayed_write`といった、他のオプションについての詳細は、\n"
 "[`:file.open/2`](http://www.erlang.org/doc/man/file.html#open-2)\n"
@@ -564,7 +582,8 @@ msgstr ""
 "\n"
 "    `io_device`は通常、ファイルを扱うプロセスのpidです。\n"
 "    このプロセスはファイルをオープンしたオリジナルのプロセスにリンク\n"
-"    しています。もし`io_device`がリンクされている任意のプロセスが終了したら、\n"
+"    しています。もし`io_device`がリンクされている任意のプロセスが終了した"
+"ら、\n"
 "    ファイルはクローズされ、そのプロセス自身も終了します。\n"
 "\n"
 "    この関数から返された`io_device`は、`IO`モジュールの関数に引数として渡\n"
@@ -663,7 +682,8 @@ msgstr ""
 "    \n"
 "    # Read in 2048 byte chunks rather than lines\n"
 "    File.stream!(\"./test/test.data\", [], 2048)\n"
-"    #=>  %File.Stream{line_or_bytes: 2048, modes: [:raw, :read_ahead, :binary],\n"
+"    #=>  %File.Stream{line_or_bytes: 2048, modes: [:raw, :read_ahead, :"
+"binary],\n"
 "    #=> path: \"./test/test.data\", raw: true}\n"
 "\n"
 "ストリームをファイルへ書き出す例は`Stream.run/1`を参照してください。\n"
@@ -709,24 +729,6 @@ msgstr ""
 "ディレクトリか否かで異った振る舞いをします。我々は、この振る舞いを\n"
 "明確に認めないほうを選びました。もしdestinationがディレクトリなら、\n"
 "エラーを返します。\n"
-
-#. TRANSLATORS: def File.rm!(path)
-#: lib/file.ex:774
-msgid ""
-"Same as `rm/1`, but raises an exception in case of failure. Otherwise `:"
-"ok`.\n"
-msgstr ""
-"`rm/1`と同じですが、失敗すると例外を上げます。さもなくば`:ok`を返し\n"
-"ます。\n"
-
-#. TRANSLATORS: def File.chgrp!(path, gid)
-#: lib/file.ex:1280
-msgid ""
-"Same as `chgrp/2`, but raises an exception in case of failure. Otherwise `:"
-"ok`.\n"
-msgstr ""
-"`chgrp/2`と同じですが、失敗すると例外を上げます。さもなくば\n"
-"`:ok`を返します。\n"
 
 #. TRANSLATORS: def File.write_stat(path, stat, opts \\ [])
 #: lib/file.ex:339
@@ -775,6 +777,45 @@ msgstr ""
 "\n"
 "さもなければ`io_device`を返します。\n"
 
+#. TRANSLATORS: def File.chgrp!(path, gid)
+#: lib/file.ex:1280
+msgid ""
+"Same as `chgrp/2`, but raises an exception in case of failure. Otherwise `:"
+"ok`.\n"
+msgstr ""
+"`chgrp/2`と同じですが、失敗すると例外を上げます。さもなくば\n"
+"`:ok`を返します。\n"
+
+#. TRANSLATORS: def File.touch!(path, time \\ :calendar.universal_time())
+#: lib/file.ex:385
+msgid ""
+"Same as `touch/2` but raises an exception if it fails.\n"
+"\n"
+"Returns `:ok` otherwise. Requires datetime in UTC.\n"
+msgstr ""
+"`touch/2`と同じですが、失敗すると例外を上げます。\n"
+"\n"
+"さもなくば`:ok`を返します。時刻はUTCです。\n"
+
+#. TRANSLATORS: def File.close(io_device)
+#: lib/file.ex:1172
+msgid ""
+"Closes the file referenced by `io_device`. It mostly returns `:ok`, except\n"
+"for some severe errors such as out of memory.\n"
+"\n"
+"Note that if the option `:delayed_write` was used when opening the file,\n"
+"`close/1` might return an old write error and not even try to close the "
+"file.\n"
+"See `open/2`.\n"
+msgstr ""
+"`io_device`により参照されるファイルをクローズします。\n"
+"out of memoryのようないくつかの深刻なエラーを除いて、\n"
+"殆ど`:ok`を返します。\n"
+"\n"
+"ファイルをオープンするときに、`:delayed_write`オプションが使われていたら、\n"
+"`close/1`は古い書き込みエラーを返し、ファイルを閉じようとしないかもしれない\n"
+"ことに、注意してください。`open/2`を参照してください。\n"
+
 #. TRANSLATORS: def File.open(path, modes, function)
 #: lib/file.ex:1002
 msgid ""
@@ -818,36 +859,6 @@ msgstr ""
 "      IO.read(file, :line)\n"
 "    end)\n"
 "\n"
-
-#. TRANSLATORS: def File.touch!(path, time \\ :calendar.universal_time())
-#: lib/file.ex:385
-msgid ""
-"Same as `touch/2` but raises an exception if it fails.\n"
-"\n"
-"Returns `:ok` otherwise. Requires datetime in UTC.\n"
-msgstr ""
-"`touch/2`と同じですが、失敗すると例外を上げます。\n"
-"\n"
-"さもなくば`:ok`を返します。時刻はUTCです。\n"
-
-#. TRANSLATORS: def File.close(io_device)
-#: lib/file.ex:1172
-msgid ""
-"Closes the file referenced by `io_device`. It mostly returns `:ok`, except\n"
-"for some severe errors such as out of memory.\n"
-"\n"
-"Note that if the option `:delayed_write` was used when opening the file,\n"
-"`close/1` might return an old write error and not even try to close the "
-"file.\n"
-"See `open/2`.\n"
-msgstr ""
-"`io_device`により参照されるファイルをクローズします。\n"
-"out of memoryのようないくつかの深刻なエラーを除いて、\n"
-"殆ど`:ok`を返します。\n"
-"\n"
-"ファイルをオープンするときに、`:delayed_write`オプションが使われていたら、\n"
-"`close/1`は古い書き込みエラーを返し、ファイルを閉じようとしないかもしれない\n"
-"ことに、注意してください。`open/2`を参照してください。\n"
 
 #. TRANSLATORS: def File.rm_rf(path)
 #: lib/file.ex:818
@@ -894,6 +905,15 @@ msgid ""
 msgstr ""
 "`write/3`と同じですが、失敗すると例外を上げます。さもなくば`:ok`を\n"
 "返します。\n"
+
+#. TRANSLATORS: def File.chown!(path, uid)
+#: lib/file.ex:1303
+msgid ""
+"Same as `chown/2`, but raises an exception in case of failure. Otherwise `:"
+"ok`.\n"
+msgstr ""
+"`chown/2`と同じですが、失敗すると例外を上げます。さもなくば\n"
+"`:ok`を返します。\n"
 
 #. TRANSLATORS: def File.read!(path)
 #: lib/file.ex:234
@@ -943,14 +963,55 @@ msgstr ""
 "`stat/2`と同じですが、もしエラーが帰って来たら`File.Stat`を\n"
 "直接返さず、`File.Errorを投げます。\n"
 
-#. TRANSLATORS: def File.chown!(path, uid)
-#: lib/file.ex:1303
+#. TRANSLATORS: def File.cwd!()
+#: lib/file.ex:1090
+msgid "The same as `cwd/0`, but raises an exception if it fails.\n"
+msgstr "`cwd/0`と同じですが、失敗すると例外を上げます。\n"
+
+#. TRANSLATORS: def File.chown(path, uid)
+#: lib/file.ex:1293
 msgid ""
-"Same as `chown/2`, but raises an exception in case of failure. Otherwise `:"
-"ok`.\n"
+"Changes the owner given by the user id `uid`\n"
+"for a given `file`. Returns `:ok` on success,\n"
+"or `{:error, reason}` on failure.\n"
 msgstr ""
-"`chown/2`と同じですが、失敗すると例外を上げます。さもなくば\n"
-"`:ok`を返します。\n"
+"与えられた`file`について、オーナを、ユーザID`uid`に変更します。成功した\n"
+"ら`:ok`を返し、失敗したら`{:error, reason}`を返します。\n"
+
+#. TRANSLATORS: def File.exists?(path)
+#: lib/file.ex:106
+msgid ""
+"Returns `true` if the given path exists.\n"
+"It can be regular file, directory, socket,\n"
+"symbolic link, named pipe or device file.\n"
+"\n"
+"## Examples\n"
+"\n"
+"    File.exists?(\"test/\")\n"
+"    #=> true\n"
+"\n"
+"    File.exists?(\"missing.txt\")\n"
+"    #=> false\n"
+"\n"
+"    File.exists?(\"/dev/null\")\n"
+"    #=> true\n"
+"\n"
+msgstr ""
+"与えられたパスが存在するなら、`true`を返します。\n"
+"標準ファイル、ディレクトリ、ソケット、シンボリックリンク、\n"
+"名前付きパイプあるいはデバイスファイルが有り得ます。\n"
+"\n"
+"## 例\n"
+"\n"
+"    File.exists?(\"test/\")\n"
+"    #=> true\n"
+"\n"
+"    File.exists?(\"missing.txt\")\n"
+"    #=> false\n"
+"\n"
+"    File.exists?(\"/dev/null\")\n"
+"    #=> true\n"
+"\n"
 
 #. TRANSLATORS: def File.mkdir(path)
 #: lib/file.ex:128
@@ -1035,6 +1096,66 @@ msgid ""
 msgstr ""
 "`cp_r/3`と同じですが、失敗すると`File.CopyError`を上げます。\n"
 "さもなければコピーされたファイルのリストを返します。\n"
+
+#. TRANSLATORS: def File.rename(source, destination)
+#: lib/file.ex:452
+msgid ""
+"Renames the `source` file to `destination` file.  It can be used to move "
+"files\n"
+"(and directories) between directories.  If moving a file, you must fully\n"
+"specify the `destination` filename, it is not sufficient to simply specify\n"
+"its directory.\n"
+"\n"
+"It returns `:ok` in case of success, returns `{:error, reason}` otherwise.\n"
+"\n"
+"Note: The command `mv` in Unix systems behaves differently depending\n"
+"if `source` is a file and the `destination` is an existing directory.\n"
+"We have chosen to explicitly disallow this behaviour.\n"
+"\n"
+"## Examples\n"
+"\n"
+"    # Rename file \"a.txt\" to \"b.txt\"\n"
+"    File.rename \"a.txt\", \"b.txt\"\n"
+"\n"
+"    # Rename directory \"samples\" to \"tmp\"\n"
+"    File.rename \"samples\", \"tmp\"\n"
+msgstr ""
+"`source`ファイルを`destination`ファイルにリネームします。\n"
+"可能ならファイル(とディレクトリ)をディレクトリ間で移動します。\n"
+"ファイルの移動なら、`destination`ファイル名を完全に指定しなければ\n"
+"なりません。単にディレクトリを指定するのでは不十分です。\n"
+"\n"
+"成功なら`:ok`を返し、さもなくば`{:error, reason}`を返します。\n"
+"\n"
+"注意: `source`がファイルで、`destination`が存在するディレクトリの\n"
+"場合、Unixシステムの`mv`コマンドは異る振る舞いをします。\n"
+"私達は明示的にこの振る舞いを認めないことを選択しました。\n"
+"\n"
+"## Examples\n"
+"\n"
+"    # Rename file \"a.txt\" to \"b.txt\"\n"
+"    File.rename \"a.txt\", \"b.txt\"\n"
+"\n"
+"    # Rename directory \"samples\" to \"tmp\"\n"
+"    File.rename \"samples\", \"tmp\"\n"
+
+#. TRANSLATORS: def File.write_stat!(path, stat, opts \\ [])
+#: lib/file.ex:349
+msgid ""
+"Same as `write_stat/3` but raises an exception if it fails.\n"
+"Returns `:ok` otherwise.\n"
+msgstr ""
+"`write_state/3`と同じですが、失敗すると例外を上げます。\n"
+"さもなくば`:ok`を返します。\n"
+
+#. TRANSLATORS: def File.mkdir_p!(path)
+#: lib/file.ex:200
+msgid ""
+"Same as `mkdir_p/1`, but raises an exception in case of failure. Otherwise `:"
+"ok`.\n"
+msgstr ""
+"`mkdir_p/1`と同じですが、失敗すると例外を上げます。さもなくば\n"
+"`:ok`を返します。\n"
 
 #. TRANSLATORS: def File.rmdir!(path)
 #: lib/file.ex:805
@@ -1130,134 +1251,10 @@ msgstr ""
 "\n"
 "    # Same as before, but asks the user how to proceed in case of conflicts\n"
 "    File.cp_r \"samples\", \"tmp\", fn(source, destination) ->\n"
-"      IO.gets(\"Overwriting #{destination} by #{source}. Type y to confirm.\") == \"y\"\n"
+"      IO.gets(\"Overwriting #{destination} by #{source}. Type y to confirm."
+"\") == \"y\"\n"
 "    end\n"
 "\n"
-
-#. TRANSLATORS: def File.rename(source, destination)
-#: lib/file.ex:452
-msgid ""
-"Renames the `source` file to `destination` file.  It can be used to move "
-"files\n"
-"(and directories) between directories.  If moving a file, you must fully\n"
-"specify the `destination` filename, it is not sufficient to simply specify\n"
-"its directory.\n"
-"\n"
-"It returns `:ok` in case of success, returns `{:error, reason}` otherwise.\n"
-"\n"
-"Note: The command `mv` in Unix systems behaves differently depending\n"
-"if `source` is a file and the `destination` is an existing directory.\n"
-"We have chosen to explicitly disallow this behaviour.\n"
-"\n"
-"## Examples\n"
-"\n"
-"    # Rename file \"a.txt\" to \"b.txt\"\n"
-"    File.rename \"a.txt\", \"b.txt\"\n"
-"\n"
-"    # Rename directory \"samples\" to \"tmp\"\n"
-"    File.rename \"samples\", \"tmp\"\n"
-msgstr ""
-"`source`ファイルを`destination`ファイルにリネームします。\n"
-"可能ならファイル(とディレクトリ)をディレクトリ間で移動します。\n"
-"ファイルの移動なら、`destination`ファイル名を完全に指定しなければ\n"
-"なりません。単にディレクトリを指定するのでは不十分です。\n"
-"\n"
-"成功なら`:ok`を返し、さもなくば`{:error, reason}`を返します。\n"
-"\n"
-"注意: `source`がファイルで、`destination`が存在するディレクトリの\n"
-"場合、Unixシステムの`mv`コマンドは異る振る舞いをします。\n"
-"私達は明示的にこの振る舞いを認めないことを選択しました。\n"
-"\n"
-"## Examples\n"
-"\n"
-"    # Rename file \"a.txt\" to \"b.txt\"\n"
-"    File.rename \"a.txt\", \"b.txt\"\n"
-"\n"
-"    # Rename directory \"samples\" to \"tmp\"\n"
-"    File.rename \"samples\", \"tmp\"\n"
-
-#. TRANSLATORS: def File.exists?(path)
-#: lib/file.ex:106
-msgid ""
-"Returns `true` if the given path exists.\n"
-"It can be regular file, directory, socket,\n"
-"symbolic link, named pipe or device file.\n"
-"\n"
-"## Examples\n"
-"\n"
-"    File.exists?(\"test/\")\n"
-"    #=> true\n"
-"\n"
-"    File.exists?(\"missing.txt\")\n"
-"    #=> false\n"
-"\n"
-"    File.exists?(\"/dev/null\")\n"
-"    #=> true\n"
-"\n"
-msgstr ""
-"与えられたパスが存在するなら、`true`を返します。\n"
-"標準ファイル、ディレクトリ、ソケット、シンボリックリンク、\n"
-"名前付きパイプあるいはデバイスファイルが有り得ます。\n"
-"\n"
-"## 例\n"
-"\n"
-"    File.exists?(\"test/\")\n"
-"    #=> true\n"
-"\n"
-"    File.exists?(\"missing.txt\")\n"
-"    #=> false\n"
-"\n"
-"    File.exists?(\"/dev/null\")\n"
-"    #=> true\n"
-"\n"
-
-#. TRANSLATORS: def File.chown(path, uid)
-#: lib/file.ex:1293
-msgid ""
-"Changes the owner given by the user id `uid`\n"
-"for a given `file`. Returns `:ok` on success,\n"
-"or `{:error, reason}` on failure.\n"
-msgstr ""
-"与えられた`file`について、オーナを、ユーザID`uid`に変更します。成功した\n"
-"ら`:ok`を返し、失敗したら`{:error, reason}`を返します。\n"
-
-#. TRANSLATORS: def File.ln_s(existing, new)
-#: lib/file.ex:400
-msgid ""
-"Creates a symbolic link `new` to the file or directory `existing`.\n"
-"\n"
-"Returns `:ok` if successful, `{:error, reason}` otherwise.\n"
-"If the operating system does not support symlinks, returns\n"
-"`{:error, :enotsup}`.\n"
-msgstr ""
-"シンボリックリンク`new`をファイルかディレクトリ`existing`に対して\n"
-"作成します。\n"
-"\n"
-"成功すると`:ok`を返し、さもなければ`{:error, reason}`を返します。\n"
-"もしオペレーティングシステムがシンボリックリンクをサポートしていないなら、\n"
-"`{:error, :enotsup}`を返します。\n"
-
-#. TRANSLATORS: def File.cwd()
-#: lib/file.ex:1065
-msgid ""
-"Gets the current working directory.\n"
-"\n"
-"In rare circumstances, this function can fail on Unix. It may happen\n"
-"if read permissions do not exist for the parent directories of the\n"
-"current directory. For this reason, returns `{:ok, cwd}` in case\n"
-"of success, `{:error, reason}` otherwise.\n"
-msgstr ""
-"カレントワーキングディレクトリを取得します。\n"
-"\n"
-"稀な状況では、この関数はUnixで失敗することがあります。カレントディレク\n"
-"トリの親ディレクトリの読み込み許可がない場合、それは起きるかもしれませ\n"
-"ん。この理由で、成功したら`{:ok, cwd}`が、さもなければ`{:error, reason}`\n"
-"が返ります。\n"
-
-#. TRANSLATORS: def File.cwd!()
-#: lib/file.ex:1090
-msgid "The same as `cwd/0`, but raises an exception if it fails.\n"
-msgstr "`cwd/0`と同じですが、失敗すると例外を上げます。\n"
 
 #. TRANSLATORS: def File.open!(path, modes, function)
 #: lib/file.ex:1051
@@ -1269,15 +1266,6 @@ msgstr ""
 "`open/3`と同じですが、オープンできないとエラーを上げます。\n"
 "\n"
 "さもないと関数の実行結果を返します。\n"
-
-#. TRANSLATORS: def File.chmod!(path, mode)
-#: lib/file.ex:1257
-msgid ""
-"Same as `chmod/2`, but raises an exception in case of failure. Otherwise `:"
-"ok`.\n"
-msgstr ""
-"`chmod/2`と同じですが、失敗すると例外を上げます。さもなくば\n"
-"`:ok`を返します。\n"
 
 #. TRANSLATORS: def File.stat(path, opts \\ [])
 #: lib/file.ex:249
@@ -1319,6 +1307,15 @@ msgstr ""
 "  * `:posix` - epochからの整数の秒数として時刻を返します。\n"
 "\n"
 
+#. TRANSLATORS: def File.chmod!(path, mode)
+#: lib/file.ex:1257
+msgid ""
+"Same as `chmod/2`, but raises an exception in case of failure. Otherwise `:"
+"ok`.\n"
+msgstr ""
+"`chmod/2`と同じですが、失敗すると例外を上げます。さもなくば\n"
+"`:ok`を返します。\n"
+
 #. TRANSLATORS: def File.rm_rf!(path)
 #: lib/file.ex:907
 msgid ""
@@ -1359,7 +1356,8 @@ msgstr ""
 "\n"
 "成功したら`:ok`を、エラーが発生したら`{:error, reason}`を返します。\n"
 "\n"
-"たとえ読み出し専用モードであってもファイルが削除される点に注意してください。\n"
+"たとえ読み出し専用モードであってもファイルが削除される点に注意してくださ"
+"い。\n"
 "\n"
 "典型的なエラー原因は以下の通りです:\n"
 "\n"
@@ -1384,23 +1382,38 @@ msgstr ""
 msgid "Returns `true` if the path is a directory.\n"
 msgstr "もし、pathがディレクトリなら、`true`を返します。\n"
 
-#. TRANSLATORS: def File.write_stat!(path, stat, opts \\ [])
-#: lib/file.ex:349
+#. TRANSLATORS: def File.ln_s(existing, new)
+#: lib/file.ex:400
 msgid ""
-"Same as `write_stat/3` but raises an exception if it fails.\n"
-"Returns `:ok` otherwise.\n"
+"Creates a symbolic link `new` to the file or directory `existing`.\n"
+"\n"
+"Returns `:ok` if successful, `{:error, reason}` otherwise.\n"
+"If the operating system does not support symlinks, returns\n"
+"`{:error, :enotsup}`.\n"
 msgstr ""
-"`write_state/3`と同じですが、失敗すると例外を上げます。\n"
-"さもなくば`:ok`を返します。\n"
+"シンボリックリンク`new`をファイルかディレクトリ`existing`に対して\n"
+"作成します。\n"
+"\n"
+"成功すると`:ok`を返し、さもなければ`{:error, reason}`を返します。\n"
+"もしオペレーティングシステムがシンボリックリンクをサポートしていないなら、\n"
+"`{:error, :enotsup}`を返します。\n"
 
-#. TRANSLATORS: def File.mkdir_p!(path)
-#: lib/file.ex:200
+#. TRANSLATORS: def File.cwd()
+#: lib/file.ex:1065
 msgid ""
-"Same as `mkdir_p/1`, but raises an exception in case of failure. Otherwise `:"
-"ok`.\n"
+"Gets the current working directory.\n"
+"\n"
+"In rare circumstances, this function can fail on Unix. It may happen\n"
+"if read permissions do not exist for the parent directories of the\n"
+"current directory. For this reason, returns `{:ok, cwd}` in case\n"
+"of success, `{:error, reason}` otherwise.\n"
 msgstr ""
-"`mkdir_p/1`と同じですが、失敗すると例外を上げます。さもなくば\n"
-"`:ok`を返します。\n"
+"カレントワーキングディレクトリを取得します。\n"
+"\n"
+"稀な状況では、この関数はUnixで失敗することがあります。カレントディレク\n"
+"トリの親ディレクトリの読み込み許可がない場合、それは起きるかもしれませ\n"
+"ん。この理由で、成功したら`{:ok, cwd}`が、さもなければ`{:error, reason}`\n"
+"が返ります。\n"
 
 #. TRANSLATORS: def File.cp!(source, destination, callback \\ fn _, _ -> true end)
 #: lib/file.ex:514

@@ -1,3 +1,38 @@
+#. TRANSLATORS: @callback handle_info/2
+#: lib/gen_event.ex:210 
+msgid ""
+"Invoked to handle all other messages. All handlers are run in the `GenEvent`\n"
+"process so messages intended for other handlers should be ignored with a catch\n"
+"all clause.\n"
+"\n"
+"`msg` is the message and `state` is the current state of the handler.\n"
+"\n"
+"Return values are the same as `handle_event/2`.\n"
+msgstr ""
+#. TRANSLATORS: def GenEvent.ack_notify(manager, event)
+#: lib/gen_event.ex:529 
+msgid ""
+"Sends a ack event notification to the event `manager`.\n"
+"\n"
+"In other words, this function only returns `:ok` as soon as the\n"
+"event manager starts processing this event, but it does not wait\n"
+"for event handlers to process the sent event.\n"
+"\n"
+"See `notify/2` for more info. Note this function is specific\n"
+"to Elixir's GenEvent and does not work with Erlang ones.\n"
+msgstr ""
+#. TRANSLATORS: def GenEvent.notify(manager, event)
+#: lib/gen_event.ex:480 
+msgid ""
+"Sends an event notification to the event `manager`.\n"
+"\n"
+"The event manager will call `handle_event/2` for each\n"
+"installed event handler.\n"
+"\n"
+"`notify` is asynchronous and will return immediately after the\n"
+"notification is sent. `notify` will not fail even if the specified\n"
+"event manager does not exist, unless it is specified as an atom.\n"
+msgstr ""
 #. TRANSLATORS: @callback handle_call/2
 #: lib/gen_event.ex:187 
 msgid ""
@@ -17,47 +52,30 @@ msgid ""
 "removes the handler from the `GenEvent` loop and calls `terminate/2` with\n"
 "reason `:remove_handler` and state `state`.\n"
 msgstr ""
-#. TRANSLATORS: @callback handle_info/2
-#: lib/gen_event.ex:210 
+#. TRANSLATORS: @callback handle_event/2
+#: lib/gen_event.ex:159 
 msgid ""
-"Invoked to handle all other messages. All handlers are run in the `GenEvent`\n"
-"process so messages intended for other handlers should be ignored with a catch\n"
-"all clause.\n"
+"Invoked to handle `notify/2`, `ack_notify/2` or `sync_notify/2` messages.\n"
 "\n"
-"`msg` is the message and `state` is the current state of the handler.\n"
+"`event` is the event message and `state` is the current state of the handler.\n"
 "\n"
-"Return values are the same as `handle_event/2`.\n"
-msgstr ""
-#. TRANSLATORS: def GenEvent.notify(manager, event)
-#: lib/gen_event.ex:480 
-msgid ""
-"Sends an event notification to the event `manager`.\n"
+"Returning `{:ok, new_state}` sets the handler's state to `new_state` and the\n"
+"`GenEvent` loop continues.\n"
 "\n"
-"The event manager will call `handle_event/2` for each\n"
-"installed event handler.\n"
+"Returning `{:ok, new_state, :hibernate}` is similar to\n"
+"`{:ok, new_state}` except the process is hibernated once all handlers have\n"
+"handled the events. The `GenEvent` process will continue the loop once a\n"
+"message is its message queue. If a message is already in the message queue\n"
+"this will be immediately. Hibernating a `GenEvent` causes garbage collection\n"
+"and leaves a continuous heap that minimises the memory used by the process.\n"
 "\n"
-"`notify` is asynchronous and will return immediately after the\n"
-"notification is sent. `notify` will not fail even if the specified\n"
-"event manager does not exist, unless it is specified as an atom.\n"
-msgstr ""
-#. TRANSLATORS: def GenEvent.ack_notify(manager, event)
-#: lib/gen_event.ex:529 
-msgid ""
-"Sends a ack event notification to the event `manager`.\n"
+"Hibernating should not be used aggressively as too much time could be spent\n"
+"garbage collecting. Normally it should only be used when a message is not\n"
+"expected soon and minimising the memory of the process is shown to be\n"
+"beneficial.\n"
 "\n"
-"In other words, this function only returns `:ok` as soon as the\n"
-"event manager starts processing this event, but it does not wait\n"
-"for event handlers to process the sent event.\n"
-"\n"
-"See `notify/2` for more info. Note this function is specific\n"
-"to Elixir's GenEvent and does not work with Erlang ones.\n"
-msgstr ""
-#. TRANSLATORS: def GenEvent.swap_mon_handler(manager, handler1, args1, handler2, args2)
-#: lib/gen_event.ex:600 
-msgid ""
-"Replaces an old event handler with a new monitored one in the event `manager`.\n"
-"\n"
-"Read the docs for `add_mon_handler/3` and `swap_handler/5` for more information.\n"
+"Returning `:remove_handler` removes the handler from the `GenEvent` loop and\n"
+"calls `terminate/2` with reason `:remove_handler` and state `state`.\n"
 msgstr ""
 #. TRANSLATORS: @callback code_change/3
 #: lib/gen_event.ex:265 
@@ -215,6 +233,13 @@ msgid ""
 "by many functions, in order to be more consistent with themselves and\n"
 "the `GenServer` module.\n"
 msgstr ""
+#. TRANSLATORS: def GenEvent.swap_mon_handler(manager, handler1, args1, handler2, args2)
+#: lib/gen_event.ex:600 
+msgid ""
+"Replaces an old event handler with a new monitored one in the event `manager`.\n"
+"\n"
+"Read the docs for `add_mon_handler/3` and `swap_handler/5` for more information.\n"
+msgstr ""
 #. TRANSLATORS: @callback terminate/2
 #: lib/gen_event.ex:224 
 msgid ""
@@ -297,40 +322,6 @@ msgid ""
 "Finally, this functionality only works with GenEvent started via this\n"
 "module (it is not backwards compatible with Erlang's `:gen_event`).\n"
 msgstr ""
-#. TRANSLATORS: @callback handle_event/2
-#: lib/gen_event.ex:159 
-msgid ""
-"Invoked to handle `notify/2`, `ack_notify/2` or `sync_notify/2` messages.\n"
-"\n"
-"`event` is the event message and `state` is the current state of the handler.\n"
-"\n"
-"Returning `{:ok, new_state}` sets the handler's state to `new_state` and the\n"
-"`GenEvent` loop continues.\n"
-"\n"
-"Returning `{:ok, new_state, :hibernate}` is similar to\n"
-"`{:ok, new_state}` except the process is hibernated once all handlers have\n"
-"handled the events. The `GenEvent` process will continue the loop once a\n"
-"message is its message queue. If a message is already in the message queue\n"
-"this will be immediately. Hibernating a `GenEvent` causes garbage collection\n"
-"and leaves a continuous heap that minimises the memory used by the process.\n"
-"\n"
-"Hibernating should not be used aggressively as too much time could be spent\n"
-"garbage collecting. Normally it should only be used when a message is not\n"
-"expected soon and minimising the memory of the process is shown to be\n"
-"beneficial.\n"
-"\n"
-"Returning `:remove_handler` removes the handler from the `GenEvent` loop and\n"
-"calls `terminate/2` with reason `:remove_handler` and state `state`.\n"
-msgstr ""
-#. TRANSLATORS: def GenEvent.remove_handler(manager, handler, args)
-#: lib/gen_event.ex:567 
-msgid ""
-"Removes an event handler from the event `manager`.\n"
-"\n"
-"The event manager will call `terminate/2` to terminate the event handler\n"
-"and return the callback value. If the specified event handler is not\n"
-"installed, the function returns `{:error, :not_found}`.\n"
-msgstr ""
 #. TRANSLATORS: def GenEvent.stop(manager, reason \\ :normal, timeout \\ :infinity)
 #: lib/gen_event.ex:618 
 msgid ""
@@ -346,15 +337,19 @@ msgid ""
 "If the reason is any other than `:normal`, `:shutdown` or\n"
 "`{:shutdown, _}`, an error report will be logged.\n"
 msgstr ""
+#. TRANSLATORS: def GenEvent.remove_handler(manager, handler, args)
+#: lib/gen_event.ex:567 
+msgid ""
+"Removes an event handler from the event `manager`.\n"
+"\n"
+"The event manager will call `terminate/2` to terminate the event handler\n"
+"and return the callback value. If the specified event handler is not\n"
+"installed, the function returns `{:error, :not_found}`.\n"
+msgstr ""
 #. TRANSLATORS: def GenEvent.which_handlers(manager)
 #: lib/gen_event.ex:610 
 msgid ""
 "Returns a list of all event handlers installed in the `manager`.\n"
-msgstr ""
-#. TRANSLATORS: @type manager
-#: lib/gen_event.ex:294 
-msgid ""
-"The event manager reference"
 msgstr ""
 #. TRANSLATORS: def GenEvent.sync_notify(manager, event)
 #: lib/gen_event.ex:516 
@@ -390,6 +385,11 @@ msgstr ""
 #: lib/gen_event.ex:297 
 msgid ""
 "Supported values for new handlers"
+msgstr ""
+#. TRANSLATORS: @type manager
+#: lib/gen_event.ex:294 
+msgid ""
+"The event manager reference"
 msgstr ""
 #. TRANSLATORS: def GenEvent.start(options \\ [])
 #: lib/gen_event.ex:367 
@@ -465,11 +465,6 @@ msgid ""
 "If the specified event handler is not installed, the function returns\n"
 "`{:error, :not_found}`.\n"
 msgstr ""
-#. TRANSLATORS: @type name
-#: lib/gen_event.ex:288 
-msgid ""
-"The GenEvent manager name"
-msgstr ""
 #. TRANSLATORS: def GenEvent.swap_handler(manager, handler1, args1, handler2, args2)
 #: lib/gen_event.ex:579 
 msgid ""
@@ -487,4 +482,9 @@ msgid ""
 "\n"
 "If `init/1` in the second handler returns a correct value, this\n"
 "function returns `:ok`.\n"
+msgstr ""
+#. TRANSLATORS: @type name
+#: lib/gen_event.ex:288 
+msgid ""
+"The GenEvent manager name"
 msgstr ""

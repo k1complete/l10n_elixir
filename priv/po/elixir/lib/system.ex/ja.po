@@ -170,9 +170,11 @@ msgstr ""
 "\n"
 "## Options\n"
 "\n"
-"  * `:into` - 与えられたcollectableに結果を挿入します。デフォルトは`\"\"`です\n"
+"  * `:into` - 与えられたcollectableに結果を挿入します。デフォルトは`\"\"`で"
+"す\n"
 "  * `:cd` - コマンドを実行するディレクトリを指定します\n"
-"  * `:env` - バイナリの環境変数キーバリュータプルを含むenumerableを指定します\n"
+"  * `:env` - バイナリの環境変数キーバリュータプルを含むenumerableを指定しま"
+"す\n"
 "  * `:arg0` - コマンドのarg0を指定します\n"
 "  * `:stderr_to_stdout` - trueにすると、stderrをstdoutにリダイレクトします\n"
 "  * `:parallelism` - trueにすると、VMはシステムの並行性を改善するために\n"
@@ -287,19 +289,8 @@ msgstr ""
 "全ての環境変数のリストを返します。それぞれの変数は`{name, value}`タプル\n"
 "で、`name`と`value`はどちらも文字列として与えられます。\n"
 
-#. TRANSLATORS: Elixir.System Summary
-#: lib/system.ex:2
-msgid ""
-"The System module provides access to variables used or\n"
-"maintained by the VM and to functions that interact directly\n"
-"with the VM or the host system.\n"
-msgstr ""
-"SystemモジュールはVMにより使用、維持される変数、\n"
-"VMまたはホストシステムへの直接の相互作用をする関数\n"
-"へのアクセスを提供します。\n"
-
 #. TRANSLATORS: def System.time_offset(unit)
-#: lib/system.ex:590
+#: lib/system.ex:599
 msgid ""
 "Returns the current time offset between the Erlang monotonic time and the\n"
 "Erlang system time.\n"
@@ -327,18 +318,27 @@ msgstr ""
 "\n"
 "コンパイラにより、`:erlang.time_offset/1`にインライン化されます。\n"
 
-#. TRANSLATORS: def System.cwd()
-#: lib/system.ex:104
+#. TRANSLATORS: Elixir.System Summary
+#: lib/system.ex:2
 msgid ""
-"Current working directory.\n"
-"\n"
-"Returns the current working directory or `nil` if one\n"
-"is not available.\n"
+"The System module provides access to variables used or\n"
+"maintained by the VM and to functions that interact directly\n"
+"with the VM or the host system.\n"
 msgstr ""
-"カレントワーキングディレクトリ。\n"
+"SystemモジュールはVMにより使用、維持される変数、\n"
+"VMまたはホストシステムへの直接の相互作用をする関数\n"
+"へのアクセスを提供します。\n"
+
+#. TRANSLATORS: def System.argv()
+#: lib/system.ex:83
+msgid ""
+"Lists command line arguments.\n"
 "\n"
-"カレントワーキングディレクトリを返します。\n"
-"もしそれが利用できないなら、`nil`を返します。\n"
+"Returns the list of command line arguments passed to the program.\n"
+msgstr ""
+"コマンドライン引数のリストです。\n"
+"\n"
+"プログラムに渡された、コマンドライン引数のリストを返します。\n"
 
 #. TRANSLATORS: def System.tmp_dir!()
 #: lib/system.ex:178
@@ -367,7 +367,7 @@ msgstr ""
 "以前のargv情報は全て破壊されますので、注意して使用してください。\n"
 
 #. TRANSLATORS: def System.unique_integer(modifiers \\ [])
-#: lib/system.ex:609
+#: lib/system.ex:618
 msgid ""
 "Generates and returns an integer that is unique in the current runtime\n"
 "instance.\n"
@@ -418,7 +418,7 @@ msgstr ""
 "コンパイラにより`:erlang.unique_integer/1`にインライン化されます。\n"
 
 #. TRANSLATORS: def System.monotonic_time(unit)
-#: lib/system.ex:522
+#: lib/system.ex:531
 msgid ""
 "Returns the current monotonic time in the given time unit.\n"
 "\n"
@@ -437,30 +437,18 @@ msgstr ""
 "\n"
 "コンパイラにより `:erlang.monotonic_time/1`にインライン化されます。\n"
 
-#. TRANSLATORS: def System.convert_time_unit(time, from_unit, to_unit)
-#: lib/system.ex:564
+#. TRANSLATORS: def System.cwd()
+#: lib/system.ex:104
 msgid ""
-"Converts `time` from time unit `from_unit` to time unit `to_unit`. The "
-"result\n"
-"is rounded via the floor function.\n"
+"Current working directory.\n"
 "\n"
-"Inlined by the compiler into `:erlang.convert_time_unit/3`.\n"
+"Returns the current working directory or `nil` if one\n"
+"is not available.\n"
 msgstr ""
-"時間単位`from_unit`から時間単位`to_unit`へ`time`を変換します。\n"
-"結果はfloor関数によって丸められます。\n"
+"カレントワーキングディレクトリ。\n"
 "\n"
-"コンパイラにより`:erlang.convert_time_unit/3`へインライン化されます。\n"
-
-#. TRANSLATORS: def System.argv()
-#: lib/system.ex:83
-msgid ""
-"Lists command line arguments.\n"
-"\n"
-"Returns the list of command line arguments passed to the program.\n"
-msgstr ""
-"コマンドライン引数のリストです。\n"
-"\n"
-"プログラムに渡された、コマンドライン引数のリストを返します。\n"
+"カレントワーキングディレクトリを返します。\n"
+"もしそれが利用できないなら、`nil`を返します。\n"
 
 #. TRANSLATORS: def System.find_executable(program)
 #: lib/system.ex:227
@@ -481,6 +469,20 @@ msgstr ""
 "Windowsでは`.com`、`.cmd`または類似した拡張子で\n"
 "ファイルを探します。\n"
 
+#. TRANSLATORS: def System.convert_time_unit(time, from_unit, to_unit)
+#: lib/system.ex:573
+msgid ""
+"Converts `time` from time unit `from_unit` to time unit `to_unit`. The "
+"result\n"
+"is rounded via the floor function.\n"
+"\n"
+"Inlined by the compiler into `:erlang.convert_time_unit/3`.\n"
+msgstr ""
+"時間単位`from_unit`から時間単位`to_unit`へ`time`を変換します。\n"
+"結果はfloor関数によって丸められます。\n"
+"\n"
+"コンパイラにより`:erlang.convert_time_unit/3`へインライン化されます。\n"
+
 #. TRANSLATORS: def System.user_home!()
 #: lib/system.ex:145
 msgid ""
@@ -496,7 +498,7 @@ msgstr ""
 "わりに`RuntimeError`を上げます。\n"
 
 #. TRANSLATORS: def System.system_time()
-#: lib/system.ex:536
+#: lib/system.ex:545
 msgid ""
 "Returns the current system time in the `:native` time unit.\n"
 "\n"
@@ -575,7 +577,7 @@ msgstr ""
 "\n"
 
 #. TRANSLATORS: def System.system_time(unit)
-#: lib/system.ex:550
+#: lib/system.ex:559
 msgid ""
 "Returns the current system time in the given time unit.\n"
 "\n"
@@ -593,6 +595,29 @@ msgstr ""
 "を参照してください。\n"
 "\n"
 "コンパイラにより `:erlang.system_time/1` にインライン化されます。\n"
+
+#. TRANSLATORS: def System.stacktrace()
+#: lib/system.ex:318
+msgid ""
+"Last exception stacktrace.\n"
+"\n"
+"Note that the Erlang VM (and therefore this function) does not\n"
+"return the current stacktrace but rather the stacktrace of the\n"
+"latest exception.\n"
+"\n"
+"Inlined by the compiler into `:erlang.get_stacktrace/0`.\n"
+msgstr ""
+"最後の例外のスタックトレースです。\n"
+"\n"
+"Erlang VM(と従ってこの関数)が現在のスタックトレースではなく、\n"
+"むしろ、最後の例外のスタックトレースを返すことに、注意してください。\n"
+"\n"
+"コンパイラにより`:erlang.get_stacktrace/0`にインライン化されます。\n"
+
+#. TRANSLATORS: def System.endianness()
+#: lib/system.ex:50
+msgid "Returns the endianness.\n"
+msgstr "エンディアンを返します。\n"
 
 #. TRANSLATORS: def System.put_env(varname, value)
 #: lib/system.ex:285
@@ -642,44 +667,28 @@ msgstr ""
 "バイナリとして`varname`環境変数の値を返します。\n"
 "環境変数が定義されていないなら、`nil`を返します。\n"
 
-#. TRANSLATORS: def System.stacktrace()
-#: lib/system.ex:318
+#. TRANSLATORS: def System.time_offset()
+#: lib/system.ex:584
 msgid ""
-"Last exception stacktrace.\n"
+"Returns the current time offset between the Erlang monotonic time and the\n"
+"Erlang system time.\n"
 "\n"
-"Note that the Erlang VM (and therefore this function) does not\n"
-"return the current stacktrace but rather the stacktrace of the\n"
-"latest exception.\n"
+"The result is returned in the `:native` time unit.\n"
 "\n"
-"Inlined by the compiler into `:erlang.get_stacktrace/0`.\n"
+"See `time_offset/1` for more information.\n"
+"\n"
+"Inlined by the compiler into `:erlang.time_offset/0`.\n"
 msgstr ""
-"最後の例外のスタックトレースです。\n"
+"現在のErlang monotonic timeとErlang system timeとの間の差を返します。\n"
 "\n"
-"Erlang VM(と従ってこの関数)が現在のスタックトレースではなく、\n"
-"むしろ、最後の例外のスタックトレースを返すことに、注意してください。\n"
+"結果は、`:native`時間単位で返されます。\n"
 "\n"
-"コンパイラにより`:erlang.get_stacktrace/0`にインライン化されます。\n"
-
-#. TRANSLATORS: def System.endianness()
-#: lib/system.ex:50
-msgid "Returns the endianness.\n"
-msgstr "エンディアンを返します。\n"
-
-#. TRANSLATORS: def System.put_env(enum)
-#: lib/system.ex:296
-msgid ""
-"Sets multiple environment variables.\n"
+"詳細は `time_offset/1`を参照してください。\n"
 "\n"
-"Sets a new value for each environment variable corresponding\n"
-"to each key in `dict`.\n"
-msgstr ""
-"複数の環境変数をセットします。\n"
-"\n"
-"`dict`の中のそれぞれのキーに一致しているそれぞれの環境変数に\n"
-"新しい値をセットします。\n"
+"コンパイラにより、`:erlang.time_offset/0`にインライン化されます。\n"
 
 #. TRANSLATORS: def System.monotonic_time()
-#: lib/system.ex:505
+#: lib/system.ex:514
 msgid ""
 "Returns the current monotonic time in the `:native` time unit.\n"
 "\n"
@@ -698,26 +707,20 @@ msgstr ""
 "この時間は、不特定の時刻からの始まり、単調に増加します。\n"
 "\n"
 "詳細は、Erlang文書\n"
-"[chapter on time and time correction](http://www.erlang.org/doc/apps/erts/time_correction.html) を参照してください。\n"
+"[chapter on time and time correction](http://www.erlang.org/doc/apps/erts/"
+"time_correction.html) を参照してください。\n"
 "\n"
 "コンパイラにより、`:erlang.monotonic_time/0`にインライン化されます。\n"
 
-#. TRANSLATORS: def System.time_offset()
-#: lib/system.ex:575
+#. TRANSLATORS: def System.put_env(enum)
+#: lib/system.ex:296
 msgid ""
-"Returns the current time offset between the Erlang monotonic time and the\n"
-"Erlang system time.\n"
+"Sets multiple environment variables.\n"
 "\n"
-"The result is returned in the `:native` time unit.\n"
-"\n"
-"See `time_offset/1` for more information.\n"
-"\n"
-"Inlined by the compiler into `:erlang.time_offset/0`.\n"
+"Sets a new value for each environment variable corresponding\n"
+"to each key in `dict`.\n"
 msgstr ""
-"現在のErlang monotonic timeとErlang system timeとの間の差を返します。\n"
+"複数の環境変数をセットします。\n"
 "\n"
-"結果は、`:native`時間単位で返されます。\n"
-"\n"
-"詳細は `time_offset/1`を参照してください。\n"
-"\n"
-"コンパイラにより、`:erlang.time_offset/0`にインライン化されます。\n"
+"`dict`の中のそれぞれのキーに一致しているそれぞれの環境変数に\n"
+"新しい値をセットします。\n"

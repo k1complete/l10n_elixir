@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: l 10n_elixir\n"
-"PO-Revision-Date: 2015-05-20 21:54+0900\n"
+"PO-Revision-Date: 2016-01-02 22:27+0900\n"
 "Last-Translator: 小田 照敬 <EMAIL@ADDRESS>\n"
 "Language-Team: Japanese\n"
 "Language: ja\n"
@@ -17,6 +17,9 @@ msgid ""
 "\n"
 "Use the `Map` module instead.\n"
 msgstr ""
+"WARNING: this module is deprecated.\n"
+"\n"
+"Use the `Map` module instead.\n"
 
 #. TRANSLATORS: def HashDict.new()
 #: lib/hash_dict.ex:23

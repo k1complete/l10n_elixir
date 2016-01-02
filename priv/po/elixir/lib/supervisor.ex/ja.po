@@ -81,11 +81,6 @@ msgstr ""
 "\n"
 "この操作は、`simple_one_for_one`スーパバイザはサポートされません。\n"
 
-#. TRANSLATORS: @type options
-#: lib/supervisor.ex:231
-msgid "Options used by the `start*` functions"
-msgstr "`start*`関数で使われるオプション"
-
 #. TRANSLATORS: def Supervisor.which_children(supervisor)
 #: lib/supervisor.ex:414
 msgid ""
@@ -129,6 +124,11 @@ msgstr ""
 "\n"
 "  * `modules` - 子仕様が定義されたモジュールです。\n"
 "\n"
+
+#. TRANSLATORS: @type options
+#: lib/supervisor.ex:231
+msgid "Options used by the `start*` functions"
+msgstr "`start*`関数で使われるオプション"
 
 #. TRANSLATORS: Elixir.Supervisor Summary
 #: lib/supervisor.ex:2
@@ -499,7 +499,8 @@ msgstr ""
 "    ]\n"
 "\n"
 "    # Start the supervisor with our one child\n"
-"    {:ok, sup_pid} = Supervisor.start_link(children, strategy: :simple_one_for_one)\n"
+"    {:ok, sup_pid} = Supervisor.start_link(children, strategy: :"
+"simple_one_for_one)\n"
 "\n"
 "いくつかの違いがあります:\n"
 "\n"
@@ -773,16 +774,6 @@ msgstr ""
 "親プロセスが`:normal` reasonで終了するかもしれないことに気を付けてくだ\n"
 "さい。\n"
 
-#. TRANSLATORS: @type on_start_child
-#: lib/supervisor.ex:222
-msgid "Return values of `start_child` functions"
-msgstr "`start_child`関数の戻値"
-
-#. TRANSLATORS: @type name
-#: lib/supervisor.ex:228
-msgid "The Supervisor name"
-msgstr "スーパバイザの名前"
-
 #. TRANSLATORS: def Supervisor.start_child(supervisor, child_spec_or_args)
 #: lib/supervisor.ex:307
 msgid ""
@@ -853,3 +844,13 @@ msgstr ""
 "あるいは、失敗したら、子プロセス仕様は捨てられ、関数は、\n"
 "`error`を上記のエラーと子プロセス仕様についての情報を含む語として、\n"
 "`{:error, error}`を返します。\n"
+
+#. TRANSLATORS: @type name
+#: lib/supervisor.ex:228
+msgid "The Supervisor name"
+msgstr "スーパバイザの名前"
+
+#. TRANSLATORS: @type on_start_child
+#: lib/supervisor.ex:222
+msgid "Return values of `start_child` functions"
+msgstr "`start_child`関数の戻値"

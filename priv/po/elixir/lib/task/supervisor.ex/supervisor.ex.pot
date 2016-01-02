@@ -1,21 +1,3 @@
-#. TRANSLATORS: def Task.Supervisor.start_child(supervisor, fun)
-#: lib/task/supervisor.ex:122 
-msgid ""
-"Starts a task as child of the given `supervisor`.\n"
-"\n"
-"Note that the spawned process is not linked to the caller, but\n"
-"only to the supervisor. This command is useful in case the\n"
-"task needs to perform side-effects (like I/O) and does not need\n"
-"to report back to the caller.\n"
-msgstr ""
-#. TRANSLATORS: def Task.Supervisor.start_child(supervisor, module, fun, args)
-#: lib/task/supervisor.ex:135 
-msgid ""
-"Starts a task as child of the given `supervisor`.\n"
-"\n"
-"Similar to `start_child/2` except the task is specified\n"
-"by the given `module`, `fun` and `args`.\n"
-msgstr ""
 #. TRANSLATORS: def Task.Supervisor.start_link(opts \\ [])
 #: lib/task/supervisor.ex:18 
 msgid ""
@@ -37,6 +19,24 @@ msgid ""
 "\n"
 "* `:max_restarts` and `:max_seconds` - as specified in `Supervisor.Spec.supervise/2`;\n"
 "\n"
+msgstr ""
+#. TRANSLATORS: def Task.Supervisor.start_child(supervisor, fun)
+#: lib/task/supervisor.ex:122 
+msgid ""
+"Starts a task as child of the given `supervisor`.\n"
+"\n"
+"Note that the spawned process is not linked to the caller, but\n"
+"only to the supervisor. This command is useful in case the\n"
+"task needs to perform side-effects (like I/O) and does not need\n"
+"to report back to the caller.\n"
+msgstr ""
+#. TRANSLATORS: def Task.Supervisor.start_child(supervisor, module, fun, args)
+#: lib/task/supervisor.ex:135 
+msgid ""
+"Starts a task as child of the given `supervisor`.\n"
+"\n"
+"Similar to `start_child/2` except the task is specified\n"
+"by the given `module`, `fun` and `args`.\n"
 msgstr ""
 #. TRANSLATORS: def Task.Supervisor.terminate_child(supervisor, pid)
 #: lib/task/supervisor.ex:106 

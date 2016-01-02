@@ -10,6 +10,23 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
+#. TRANSLATORS: def Process.flag(flag, value)
+#: lib/process.ex:390
+msgid ""
+"Sets certain flags for the process which calls this function.\n"
+"Returns the old value of the flag.\n"
+"\n"
+"See [`:erlang.process_flag/2`](http://www.erlang.org/doc/man/erlang."
+"html#process_flag-2) for more info.\n"
+msgstr ""
+"特定のフラグをこの関数を呼び出したプロセスにセットします。\n"
+"そのフラグの古い値を返します。\n"
+"\n"
+"更なる情報は\n"
+"[`:erlang.process_flag/2`](http://www.erlang.org/doc/man/erlang."
+"html#process_flag-2)\n"
+"を参照してください。\n"
+
 #. TRANSLATORS: def Process.group_leader()
 #: lib/process.ex:362
 msgid ""
@@ -70,7 +87,8 @@ msgstr ""
 "呼び出したプロセスは与えられたアイテムのモニタを開始します。\n"
 "モニタリファレンスを返します。\n"
 "\n"
-"例は [the need for monitoring](http://elixir-lang.org/getting-started/mix-otp/genserver.html#the-need-for-monitoring)\n"
+"例は [the need for monitoring](http://elixir-lang.org/getting-started/mix-"
+"otp/genserver.html#the-need-for-monitoring)\n"
 "を参照してください。\n"
 "\n"
 "更なる情報は \n"
@@ -78,23 +96,6 @@ msgstr ""
 "を参照してください。\n"
 "\n"
 "コンパイラによりインライン化されます。\n"
-
-#. TRANSLATORS: def Process.flag(flag, value)
-#: lib/process.ex:390
-msgid ""
-"Sets certain flags for the process which calls this function.\n"
-"Returns the old value of the flag.\n"
-"\n"
-"See [`:erlang.process_flag/2`](http://www.erlang.org/doc/man/erlang."
-"html#process_flag-2) for more info.\n"
-msgstr ""
-"特定のフラグをこの関数を呼び出したプロセスにセットします。\n"
-"そのフラグの古い値を返します。\n"
-"\n"
-"更なる情報は\n"
-"[`:erlang.process_flag/2`](http://www.erlang.org/doc/man/erlang."
-"html#process_flag-2)\n"
-"を参照してください。\n"
 
 #. TRANSLATORS: def Process.send(dest, msg, options)
 #: lib/process.ex:124
@@ -237,6 +238,11 @@ msgstr ""
 "    Process.exit(pid, :kill)\n"
 "\n"
 
+#. TRANSLATORS: def Process.delete(key)
+#: lib/process.ex:85
+msgid "Deletes the given `key` from the dictionary.\n"
+msgstr "プロセス辞書から与えられた`key`を削除します。\n"
+
 #. TRANSLATORS: def Process.link(pid)
 #: lib/process.ex:300
 msgid ""
@@ -287,6 +293,17 @@ msgstr ""
 "きていない、あるいは、(`whereis/1`でチェックして)名前がすでに登録ずみな\n"
 "ら、`ArgumentError`で失敗します。\n"
 
+#. TRANSLATORS: def Process.get_keys()
+#: lib/process.ex:54
+msgid ""
+"Returns all keys in the process dictionary.\n"
+"\n"
+"Inlined by the compiler.\n"
+msgstr ""
+"プロセス辞書の全てのキー/値の組を全て返します。\n"
+"\n"
+"コンパイラによりインライン化されます。\n"
+
 #. TRANSLATORS: def Process.cancel_timer(timer_ref)
 #: lib/process.ex:171
 msgid ""
@@ -315,17 +332,6 @@ msgstr ""
 "\n"
 "もしタイマが期限切れになったら、timeoutメッセージが送信されますが、\n"
 "それが宛先に到着したか、まだ到着していないかを教えません。\n"
-"\n"
-"コンパイラによりインライン化されます。\n"
-
-#. TRANSLATORS: def Process.get_keys()
-#: lib/process.ex:54
-msgid ""
-"Returns all keys in the process dictionary.\n"
-"\n"
-"Inlined by the compiler.\n"
-msgstr ""
-"プロセス辞書の全てのキー/値の組を全て返します。\n"
 "\n"
 "コンパイラによりインライン化されます。\n"
 
@@ -363,11 +369,6 @@ msgstr ""
 "\n"
 "コンパイラによりインライン化されます。\n"
 
-#. TRANSLATORS: def Process.delete(key)
-#: lib/process.ex:85
-msgid "Deletes the given `key` from the dictionary.\n"
-msgstr "プロセス辞書から与えられた`key`を削除します。\n"
-
 #. TRANSLATORS: def Process.list()
 #: lib/process.ex:285
 msgid ""
@@ -391,6 +392,25 @@ msgstr ""
 "詳細は \n"
 "[`:erlang.processes/0`](http://www.erlang.org/doc/man/erlang."
 "html#processes-0)\n"
+"を参照してください。\n"
+
+#. TRANSLATORS: def Process.flag(pid, flag, value)
+#: lib/process.ex:401
+msgid ""
+"Sets certain flags for the process `pid`, in the same manner as `flag/2`.\n"
+"Returns the old value of the flag. The allowed values for `flag` are\n"
+"only a subset of those allowed in `flag/2`, namely: `save_calls`.\n"
+"\n"
+"See [`:erlang.process_flag/3`](http://www.erlang.org/doc/man/erlang."
+"html#process_flag-3) for more info.\n"
+msgstr ""
+"`flag/2`と同じマナーで、特定のフラグを`pid`プロセスにセットします。\n"
+"そのフラグの古い値を返します。`flag`の許された値は`flag/2`のサブセット\n"
+"である`save_calls`だけです。\n"
+"\n"
+"更なる情報は\n"
+"[`:erlang.process_flag/3`](http://www.erlang.org/doc/man/erlang."
+"html#process_flag-3)\n"
 "を参照してください。\n"
 
 #. TRANSLATORS: Elixir.Process Summary
@@ -428,23 +448,21 @@ msgid ""
 "Returns a list of names which have been registered using `register/2`.\n"
 msgstr "`register/2`を使って登録された、名前のリストを返します。\n"
 
-#. TRANSLATORS: def Process.alive?(pid)
-#: lib/process.ex:17
+#. TRANSLATORS: def Process.unregister(name)
+#: lib/process.ex:341
 msgid ""
-"Returns `true` if the process exists and is alive (i.e. it is not exiting\n"
-"and has not exited yet). Otherwise, returns `false`.\n"
+"Removes the registered name, associated with a pid or a port identifier.\n"
 "\n"
-"`pid` must refer to a process at the local node.\n"
-"\n"
-"Inlined by the compiler.\n"
+"See [`:erlang.unregister/1`](http://www.erlang.org/doc/man/erlang."
+"html#unregister-1) for more info.\n"
 msgstr ""
-"プロセスが存在して生きている(つまり、終了中でなく、\n"
-"まだ終了が完了していないということです)そのとき、`true`を返します。\n"
-"さもなければ`false`を返します。\n"
+"登録されたnameと、それに関連付けられたpidあるいはport識別子を、\n"
+"削除します。\n"
 "\n"
-"`pid`はローカルノードのプロセスの参照でなければなりません。\n"
-"\n"
-"コンパイラによりインライン化されます。\n"
+"詳細は、\n"
+"[`:erlang.unregister/1`](http://www.erlang.org/doc/man/erlang."
+"html#unregister-1)\n"
+"を参照してください。\n"
 
 #. TRANSLATORS: def Process.info(pid, spec)
 #: lib/process.ex:425
@@ -462,6 +480,24 @@ msgstr ""
 "[`:erlang.process_info/2`](http://www.erlang.org/doc/man/erlang."
 "html#process_info-2)\n"
 "を参照してください。\n"
+
+#. TRANSLATORS: def Process.alive?(pid)
+#: lib/process.ex:17
+msgid ""
+"Returns `true` if the process exists and is alive (i.e. it is not exiting\n"
+"and has not exited yet). Otherwise, returns `false`.\n"
+"\n"
+"`pid` must refer to a process at the local node.\n"
+"\n"
+"Inlined by the compiler.\n"
+msgstr ""
+"プロセスが存在して生きている(つまり、終了中でなく、\n"
+"まだ終了が完了していないということです)そのとき、`true`を返します。\n"
+"さもなければ`false`を返します。\n"
+"\n"
+"`pid`はローカルノードのプロセスの参照でなければなりません。\n"
+"\n"
+"コンパイラによりインライン化されます。\n"
 
 #. TRANSLATORS: def Process.put(key, value)
 #: lib/process.ex:74
@@ -493,77 +529,10 @@ msgstr ""
 "[`:erlang.whereis/1`](http://www.erlang.org/doc/man/erlang.html#whereis-1)\n"
 "を参照してください。\n"
 
-#. TRANSLATORS: def Process.flag(pid, flag, value)
-#: lib/process.ex:401
-msgid ""
-"Sets certain flags for the process `pid`, in the same manner as `flag/2`.\n"
-"Returns the old value of the flag. The allowed values for `flag` are\n"
-"only a subset of those allowed in `flag/2`, namely: `save_calls`.\n"
-"\n"
-"See [`:erlang.process_flag/3`](http://www.erlang.org/doc/man/erlang."
-"html#process_flag-3) for more info.\n"
-msgstr ""
-"`flag/2`と同じマナーで、特定のフラグを`pid`プロセスにセットします。\n"
-"そのフラグの古い値を返します。`flag`の許された値は`flag/2`のサブセット\n"
-"である`save_calls`だけです。\n"
-"\n"
-"更なる情報は\n"
-"[`:erlang.process_flag/3`](http://www.erlang.org/doc/man/erlang."
-"html#process_flag-3)\n"
-"を参照してください。\n"
-
 #. TRANSLATORS: def Process.get(key, default \\ nil)
 #: lib/process.ex:40
 msgid "Returns the value for the given `key`.\n"
 msgstr "与えられた`key`の値を返します。\n"
-
-#. TRANSLATORS: def Process.spawn(mod, fun, args, opts)
-#: lib/process.ex:236
-msgid ""
-"Spawns the given module and function passing the given args\n"
-"according to the given options.\n"
-"\n"
-"The result depends on the given options. In particular,\n"
-"if `:monitor` is given as an option, it will return a tuple\n"
-"containing the pid and the monitoring reference, otherwise\n"
-"just the spawned process pid.\n"
-"\n"
-"It also accepts extra options, for the list of available options\n"
-"check [`:erlang.spawn_opt/4`](http://www.erlang.org/doc/man/erlang."
-"html#spawn_opt-4).\n"
-"\n"
-"Inlined by the compiler.\n"
-msgstr ""
-"与えられたオプションによって、与えられたモジュールと関数に与えられた引\n"
-"数を送ってプロセスを生成します。\n"
-"\n"
-"戻値は、与えられたオプションによります。特に、`:monitor`オプションが与\n"
-"えられると、pidとモニタリファレンスを含むタプルを返し、さもなければ、生\n"
-"成されたプロセスのpidを返します。\n"
-"\n"
-"\n"
-"他のオプションも受け入れます。利用できるオプションのリストについては\n"
-"[`:erlang.spawn_opt/4`](http://www.erlang.org/doc/man/erlang."
-"html#spawn_opt-4)\n"
-"をチェックしてください。\n"
-"\n"
-"コンパイラによりインライン化されます。\n"
-
-#. TRANSLATORS: def Process.unregister(name)
-#: lib/process.ex:341
-msgid ""
-"Removes the registered name, associated with a pid or a port identifier.\n"
-"\n"
-"See [`:erlang.unregister/1`](http://www.erlang.org/doc/man/erlang."
-"html#unregister-1) for more info.\n"
-msgstr ""
-"登録されたnameと、それに関連付けられたpidあるいはport識別子を、\n"
-"削除します。\n"
-"\n"
-"詳細は、\n"
-"[`:erlang.unregister/1`](http://www.erlang.org/doc/man/erlang."
-"html#unregister-1)\n"
-"を参照してください。\n"
 
 #. TRANSLATORS: def Process.send_after(dest, msg, time)
 #: lib/process.ex:150
@@ -630,6 +599,38 @@ msgstr ""
 "\n"
 "もしタイマが期限切れになったら、timeoutメッセージが送信されますが、\n"
 "それが宛先に到着したか、まだ到着していないかを教えません。\n"
+"\n"
+"コンパイラによりインライン化されます。\n"
+
+#. TRANSLATORS: def Process.spawn(mod, fun, args, opts)
+#: lib/process.ex:236
+msgid ""
+"Spawns the given module and function passing the given args\n"
+"according to the given options.\n"
+"\n"
+"The result depends on the given options. In particular,\n"
+"if `:monitor` is given as an option, it will return a tuple\n"
+"containing the pid and the monitoring reference, otherwise\n"
+"just the spawned process pid.\n"
+"\n"
+"It also accepts extra options, for the list of available options\n"
+"check [`:erlang.spawn_opt/4`](http://www.erlang.org/doc/man/erlang."
+"html#spawn_opt-4).\n"
+"\n"
+"Inlined by the compiler.\n"
+msgstr ""
+"与えられたオプションによって、与えられたモジュールと関数に与えられた引\n"
+"数を送ってプロセスを生成します。\n"
+"\n"
+"戻値は、与えられたオプションによります。特に、`:monitor`オプションが与\n"
+"えられると、pidとモニタリファレンスを含むタプルを返し、さもなければ、生\n"
+"成されたプロセスのpidを返します。\n"
+"\n"
+"\n"
+"他のオプションも受け入れます。利用できるオプションのリストについては\n"
+"[`:erlang.spawn_opt/4`](http://www.erlang.org/doc/man/erlang."
+"html#spawn_opt-4)\n"
+"をチェックしてください。\n"
 "\n"
 "コンパイラによりインライン化されます。\n"
 

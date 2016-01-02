@@ -7,15 +7,6 @@ msgid ""
 "    11\n"
 "\n"
 msgstr ""
-#. TRANSLATORS: defmacro Bitwise.^^^(left, right)
-#: lib/bitwise.ex:129 
-msgid ""
-"Infix operator; calculates the bitwise XOR of its arguments.\n"
-"\n"
-"    iex> 9 ^^^ 3\n"
-"    10\n"
-"\n"
-msgstr ""
 #. TRANSLATORS: defmacro Bitwise.bsl(left, right)
 #: lib/bitwise.ex:140 
 msgid ""
@@ -29,6 +20,15 @@ msgid ""
 "    -4\n"
 "    iex> bsl(-1, -2)\n"
 "    -1\n"
+"\n"
+msgstr ""
+#. TRANSLATORS: defmacro Bitwise.^^^(left, right)
+#: lib/bitwise.ex:129 
+msgid ""
+"Infix operator; calculates the bitwise XOR of its arguments.\n"
+"\n"
+"    iex> 9 ^^^ 3\n"
+"    10\n"
 "\n"
 msgstr ""
 #. TRANSLATORS: defmacro Bitwise.&&&(left, right)

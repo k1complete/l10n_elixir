@@ -25,21 +25,6 @@ msgstr ""
 "    11\n"
 "\n"
 
-#. TRANSLATORS: defmacro Bitwise.^^^(left, right)
-#: lib/bitwise.ex:129
-msgid ""
-"Infix operator; calculates the bitwise XOR of its arguments.\n"
-"\n"
-"    iex> 9 ^^^ 3\n"
-"    10\n"
-"\n"
-msgstr ""
-"中置演算子; 引数のビットXORした結果を計算します。\n"
-"\n"
-"    iex> 9 ^^^ 3\n"
-"    10\n"
-"\n"
-
 #. TRANSLATORS: defmacro Bitwise.bsl(left, right)
 #: lib/bitwise.ex:140
 msgid ""
@@ -65,6 +50,21 @@ msgstr ""
 "    -4\n"
 "    iex> bsl(-1, -2)\n"
 "    -1\n"
+"\n"
+
+#. TRANSLATORS: defmacro Bitwise.^^^(left, right)
+#: lib/bitwise.ex:129
+msgid ""
+"Infix operator; calculates the bitwise XOR of its arguments.\n"
+"\n"
+"    iex> 9 ^^^ 3\n"
+"    10\n"
+"\n"
+msgstr ""
+"中置演算子; 引数のビットXORした結果を計算します。\n"
+"\n"
+"    iex> 9 ^^^ 3\n"
+"    10\n"
 "\n"
 
 #. TRANSLATORS: defmacro Bitwise.&&&(left, right)

@@ -1,3 +1,17 @@
+#. TRANSLATORS: def Regex.escape(string)
+#: lib/regex.ex:604 
+msgid ""
+"Escapes a string to be literally matched in a regex.\n"
+"\n"
+"## Examples\n"
+"\n"
+"    iex> Regex.escape(\".\")\n"
+"    \"\\\\.\"\n"
+"\n"
+"    iex> Regex.escape(\"\\\\what if\")\n"
+"    \"\\\\\\\\what\\\\ if\"\n"
+"\n"
+msgstr ""
 #. TRANSLATORS: Elixir.Regex Summary
 #: lib/regex.ex:2 
 msgid ""
@@ -76,20 +90,6 @@ msgid ""
 "  * `:all_names` - captures all names in the Regex\n"
 "\n"
 "  * `list(binary)` - a list of named captures to capture\n"
-"\n"
-msgstr ""
-#. TRANSLATORS: def Regex.escape(string)
-#: lib/regex.ex:604 
-msgid ""
-"Escapes a string to be literally matched in a regex.\n"
-"\n"
-"## Examples\n"
-"\n"
-"    iex> Regex.escape(\".\")\n"
-"    \"\\\\.\"\n"
-"\n"
-"    iex> Regex.escape(\"\\\\what if\")\n"
-"    \"\\\\\\\\what\\\\ if\"\n"
 "\n"
 msgstr ""
 #. TRANSLATORS: def Regex.replace(regex, string, replacement, options \\ [])
@@ -255,6 +255,21 @@ msgid ""
 "    \"m\"\n"
 "\n"
 msgstr ""
+#. TRANSLATORS: def Regex.regex?(term)
+#: lib/regex.ex:163 
+msgid ""
+"Returns `true` if the given `term` is a regex.\n"
+"Otherwise returns `false`.\n"
+"\n"
+"## Examples\n"
+"\n"
+"    iex> Regex.regex?(~r/foo/)\n"
+"    true\n"
+"\n"
+"    iex> Regex.regex?(0)\n"
+"    false\n"
+"\n"
+msgstr ""
 #. TRANSLATORS: def Regex.names(regex)
 #: lib/regex.ex:279 
 msgid ""
@@ -304,26 +319,6 @@ msgid ""
 "    false\n"
 "\n"
 msgstr ""
-#. TRANSLATORS: def Regex.re_pattern(regex)
-#: lib/regex.ex:243 
-msgid ""
-"Returns the underlying `re_pattern` in the regular expression.\n"
-msgstr ""
-#. TRANSLATORS: def Regex.regex?(term)
-#: lib/regex.ex:163 
-msgid ""
-"Returns `true` if the given `term` is a regex.\n"
-"Otherwise returns `false`.\n"
-"\n"
-"## Examples\n"
-"\n"
-"    iex> Regex.regex?(~r/foo/)\n"
-"    true\n"
-"\n"
-"    iex> Regex.regex?(0)\n"
-"    false\n"
-"\n"
-msgstr ""
 #. TRANSLATORS: def Regex.compile!(source, options \\ "")
 #: lib/regex.ex:134 
 msgid ""
@@ -340,4 +335,9 @@ msgid ""
 "    iex> Regex.source(~r(foo))\n"
 "    \"foo\"\n"
 "\n"
+msgstr ""
+#. TRANSLATORS: def Regex.re_pattern(regex)
+#: lib/regex.ex:243 
+msgid ""
+"Returns the underlying `re_pattern` in the regular expression.\n"
 msgstr ""

@@ -1,8 +1,3 @@
-#. TRANSLATORS: @type spec
-#: lib/supervisor/spec.ex:122 
-msgid ""
-"The supervisor specification"
-msgstr ""
 #. TRANSLATORS: def Supervisor.Spec.worker(module, args, options \\ [])
 #: lib/supervisor/spec.ex:186 
 msgid ""
@@ -22,6 +17,11 @@ msgid ""
 "\n"
 "Check `Supervisor.Spec` module docs for more information on\n"
 "the options.\n"
+msgstr ""
+#. TRANSLATORS: @type spec
+#: lib/supervisor/spec.ex:122 
+msgid ""
+"The supervisor specification"
 msgstr ""
 #. TRANSLATORS: @type strategy
 #: lib/supervisor/spec.ex:104 
@@ -131,6 +131,31 @@ msgid ""
 "    within the specified time (in milliseconds), the child process is\n"
 "    unconditionally terminated using `Process.exit(child, :kill)`.\n"
 msgstr ""
+#. TRANSLATORS: def Supervisor.Spec.supervisor(module, args, options \\ [])
+#: lib/supervisor/spec.ex:210 
+msgid ""
+"Defines the given `module` as a supervisor which will be started\n"
+"with the given arguments.\n"
+"\n"
+"    supervisor ExUnit.Runner, [], restart: :permanent\n"
+"\n"
+"By default, the function `start_link` is invoked on the given\n"
+"module. Overall, the default values for the options are:\n"
+"\n"
+"    [id: module,\n"
+"     function: :start_link,\n"
+"     restart: :permanent,\n"
+"     shutdown: :infinity,\n"
+"     modules: [module]]\n"
+"\n"
+"Check `Supervisor.Spec` module docs for more information on\n"
+"the options.\n"
+msgstr ""
+#. TRANSLATORS: @type restart
+#: lib/supervisor/spec.ex:107 
+msgid ""
+"Supported restart values"
+msgstr ""
 #. TRANSLATORS: def Supervisor.Spec.supervise(children, options)
 #: lib/supervisor/spec.ex:130 
 msgid ""
@@ -165,43 +190,18 @@ msgstr ""
 msgid ""
 "Supported worker values"
 msgstr ""
-#. TRANSLATORS: @type restart
-#: lib/supervisor/spec.ex:107 
-msgid ""
-"Supported restart values"
-msgstr ""
 #. TRANSLATORS: @type modules
 #: lib/supervisor/spec.ex:116 
 msgid ""
 "Supported module values"
-msgstr ""
-#. TRANSLATORS: @type shutdown
-#: lib/supervisor/spec.ex:110 
-msgid ""
-"Supported shutdown values"
 msgstr ""
 #. TRANSLATORS: @type child_id
 #: lib/supervisor/spec.ex:119 
 msgid ""
 "Supported id values"
 msgstr ""
-#. TRANSLATORS: def Supervisor.Spec.supervisor(module, args, options \\ [])
-#: lib/supervisor/spec.ex:210 
+#. TRANSLATORS: @type shutdown
+#: lib/supervisor/spec.ex:110 
 msgid ""
-"Defines the given `module` as a supervisor which will be started\n"
-"with the given arguments.\n"
-"\n"
-"    supervisor ExUnit.Runner, [], restart: :permanent\n"
-"\n"
-"By default, the function `start_link` is invoked on the given\n"
-"module. Overall, the default values for the options are:\n"
-"\n"
-"    [id: module,\n"
-"     function: :start_link,\n"
-"     restart: :permanent,\n"
-"     shutdown: :infinity,\n"
-"     modules: [module]]\n"
-"\n"
-"Check `Supervisor.Spec` module docs for more information on\n"
-"the options.\n"
+"Supported shutdown values"
 msgstr ""

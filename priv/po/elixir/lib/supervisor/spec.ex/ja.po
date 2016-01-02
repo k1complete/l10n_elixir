@@ -10,11 +10,6 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
-#. TRANSLATORS: @type spec
-#: lib/supervisor/spec.ex:122
-msgid "The supervisor specification"
-msgstr "スーパバイザの仕様(specification)"
-
 #. TRANSLATORS: def Supervisor.Spec.worker(module, args, options \\ [])
 #: lib/supervisor/spec.ex:186
 msgid ""
@@ -51,6 +46,11 @@ msgstr ""
 "\n"
 "オプションの詳細は `Supervisor.Spec` モジュールドキュメントを\n"
 "チェックしてください。\n"
+
+#. TRANSLATORS: @type spec
+#: lib/supervisor/spec.ex:122
+msgid "The supervisor specification"
+msgstr "スーパバイザの仕様(specification)"
 
 #. TRANSLATORS: @type strategy
 #: lib/supervisor/spec.ex:104
@@ -263,6 +263,48 @@ msgstr ""
 "    子プロセスは無条件に`Process.exit(child, :kill)`を使って終了\n"
 "    されます。\n"
 
+#. TRANSLATORS: def Supervisor.Spec.supervisor(module, args, options \\ [])
+#: lib/supervisor/spec.ex:210
+msgid ""
+"Defines the given `module` as a supervisor which will be started\n"
+"with the given arguments.\n"
+"\n"
+"    supervisor ExUnit.Runner, [], restart: :permanent\n"
+"\n"
+"By default, the function `start_link` is invoked on the given\n"
+"module. Overall, the default values for the options are:\n"
+"\n"
+"    [id: module,\n"
+"     function: :start_link,\n"
+"     restart: :permanent,\n"
+"     shutdown: :infinity,\n"
+"     modules: [module]]\n"
+"\n"
+"Check `Supervisor.Spec` module docs for more information on\n"
+"the options.\n"
+msgstr ""
+"与えられた引数で開始するスーパバイザとして、\n"
+"与えられた`module`を定義します。\n"
+"\n"
+"    supervisor ExUnit.Runner, [], restart: :permanent\n"
+"\n"
+"デフォルトで、`start_link`関数が与えられたモジュールで\n"
+"起動されます。全体として、オプションのデフォルト値は以下の通りです:\n"
+"\n"
+"    [id: module,\n"
+"     function: :start_link,\n"
+"     restart: :permanent,\n"
+"     shutdown: :infinity,\n"
+"     modules: [module]]\n"
+"\n"
+"オプションの詳細は `Supervisor.Spec` モジュールドキュメントを\n"
+"チェックしてください。\n"
+
+#. TRANSLATORS: @type restart
+#: lib/supervisor/spec.ex:107
+msgid "Supported restart values"
+msgstr "restartでサポートされる値"
+
 #. TRANSLATORS: def Supervisor.Spec.supervise(children, options)
 #: lib/supervisor/spec.ex:130
 msgid ""
@@ -323,59 +365,17 @@ msgstr ""
 msgid "Supported worker values"
 msgstr "workerでサポートされる値"
 
-#. TRANSLATORS: @type restart
-#: lib/supervisor/spec.ex:107
-msgid "Supported restart values"
-msgstr "restartでサポートされる値"
-
 #. TRANSLATORS: @type modules
 #: lib/supervisor/spec.ex:116
 msgid "Supported module values"
 msgstr "moduleでサポートされる値"
-
-#. TRANSLATORS: @type shutdown
-#: lib/supervisor/spec.ex:110
-msgid "Supported shutdown values"
-msgstr "shutdownでサポートされる値"
 
 #. TRANSLATORS: @type child_id
 #: lib/supervisor/spec.ex:119
 msgid "Supported id values"
 msgstr "idでサポートされる値"
 
-#. TRANSLATORS: def Supervisor.Spec.supervisor(module, args, options \\ [])
-#: lib/supervisor/spec.ex:210
-msgid ""
-"Defines the given `module` as a supervisor which will be started\n"
-"with the given arguments.\n"
-"\n"
-"    supervisor ExUnit.Runner, [], restart: :permanent\n"
-"\n"
-"By default, the function `start_link` is invoked on the given\n"
-"module. Overall, the default values for the options are:\n"
-"\n"
-"    [id: module,\n"
-"     function: :start_link,\n"
-"     restart: :permanent,\n"
-"     shutdown: :infinity,\n"
-"     modules: [module]]\n"
-"\n"
-"Check `Supervisor.Spec` module docs for more information on\n"
-"the options.\n"
-msgstr ""
-"与えられた引数で開始するスーパバイザとして、\n"
-"与えられた`module`を定義します。\n"
-"\n"
-"    supervisor ExUnit.Runner, [], restart: :permanent\n"
-"\n"
-"デフォルトで、`start_link`関数が与えられたモジュールで\n"
-"起動されます。全体として、オプションのデフォルト値は以下の通りです:\n"
-"\n"
-"    [id: module,\n"
-"     function: :start_link,\n"
-"     restart: :permanent,\n"
-"     shutdown: :infinity,\n"
-"     modules: [module]]\n"
-"\n"
-"オプションの詳細は `Supervisor.Spec` モジュールドキュメントを\n"
-"チェックしてください。\n"
+#. TRANSLATORS: @type shutdown
+#: lib/supervisor/spec.ex:110
+msgid "Supported shutdown values"
+msgstr "shutdownでサポートされる値"

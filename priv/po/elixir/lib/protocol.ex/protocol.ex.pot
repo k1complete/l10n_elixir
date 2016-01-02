@@ -46,13 +46,6 @@ msgid ""
 "    true\n"
 "\n"
 msgstr ""
-#. TRANSLATORS: def Protocol.assert_protocol!(module)
-#: lib/protocol.ex:56 
-msgid ""
-"Checks if the given module is loaded and is protocol.\n"
-"\n"
-"Returns `:ok` if so, otherwise raises ArgumentError.\n"
-msgstr ""
 #. TRANSLATORS: def Protocol.extract_protocols(paths)
 #: lib/protocol.ex:129 
 msgid ""
@@ -72,6 +65,13 @@ msgid ""
 "    iex> Enumerable in mods\n"
 "    true\n"
 "\n"
+msgstr ""
+#. TRANSLATORS: def Protocol.assert_protocol!(module)
+#: lib/protocol.ex:56 
+msgid ""
+"Checks if the given module is loaded and is protocol.\n"
+"\n"
+"Returns `:ok` if so, otherwise raises ArgumentError.\n"
 msgstr ""
 #. TRANSLATORS: def Protocol.consolidated?(protocol)
 #: lib/protocol.ex:220 

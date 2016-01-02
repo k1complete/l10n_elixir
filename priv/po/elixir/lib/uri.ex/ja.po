@@ -95,20 +95,6 @@ msgstr ""
 "    %{\"bar\" => \"2\", \"foo\" => \"1\"}\n"
 "\n"
 
-#. TRANSLATORS: def URI.char_unreserved?(c)
-#: lib/uri.ex:144
-msgid ""
-"Checks if the character is a \"unreserved\" character in a URI.\n"
-"\n"
-"Unreserved characters are specified in [RFC3986, section 2.3](http://tools."
-"ietf.org/html/rfc3986#section-2.3).\n"
-msgstr ""
-"文字が、URIの\"非予約(unreserved)\"文字かどうかをチェックします。\n"
-"\n"
-"非予約(unreserved)文字は、 \n"
-"[RFC3986, section 2.3](http://tools.ietf.org/html/rfc3986#section-2.3)\n"
-"に定められています。\n"
-
 #. TRANSLATORS: def URI.default_port(scheme)
 #: lib/uri.ex:14
 msgid ""
@@ -140,6 +126,39 @@ msgstr ""
 "    nil\n"
 "\n"
 
+#. TRANSLATORS: def URI.char_unreserved?(c)
+#: lib/uri.ex:144
+msgid ""
+"Checks if the character is a \"unreserved\" character in a URI.\n"
+"\n"
+"Unreserved characters are specified in [RFC3986, section 2.3](http://tools."
+"ietf.org/html/rfc3986#section-2.3).\n"
+msgstr ""
+"文字が、URIの\"非予約(unreserved)\"文字かどうかをチェックします。\n"
+"\n"
+"非予約(unreserved)文字は、 \n"
+"[RFC3986, section 2.3](http://tools.ietf.org/html/rfc3986#section-2.3)\n"
+"に定められています。\n"
+
+#. TRANSLATORS: def URI.encode_www_form(str)
+#: lib/uri.ex:180
+msgid ""
+"Encodes a string as \"x-www-form-urlencoded\".\n"
+"\n"
+"## Example\n"
+"\n"
+"    iex> URI.encode_www_form(\"put: it+й\")\n"
+"    \"put%3A+it%2B%D0%B9\"\n"
+"\n"
+msgstr ""
+"\"x-www-urlencoded\"として文字列をエンコードします。\n"
+"\n"
+"## Example\n"
+"\n"
+"    iex> URI.encode_www_form(\"put: it+й\")\n"
+"    \"put%3A+it%2B%D0%B9\"\n"
+"\n"
+
 #. TRANSLATORS: def URI.char_unescaped?(c)
 #: lib/uri.ex:156
 msgid ""
@@ -168,25 +187,6 @@ msgstr ""
 "アプリケーションのstartコールバックで実行されることは\n"
 "推奨されます。\n"
 
-#. TRANSLATORS: def URI.encode_www_form(str)
-#: lib/uri.ex:180
-msgid ""
-"Encodes a string as \"x-www-form-urlencoded\".\n"
-"\n"
-"## Example\n"
-"\n"
-"    iex> URI.encode_www_form(\"put: it+й\")\n"
-"    \"put%3A+it%2B%D0%B9\"\n"
-"\n"
-msgstr ""
-"\"x-www-urlencoded\"として文字列をエンコードします。\n"
-"\n"
-"## Example\n"
-"\n"
-"    iex> URI.encode_www_form(\"put: it+й\")\n"
-"    \"put%3A+it%2B%D0%B9\"\n"
-"\n"
-
 #. TRANSLATORS: def URI.query_decoder(q)
 #: lib/uri.ex:86
 msgid ""
@@ -207,6 +207,20 @@ msgstr ""
 "    iex> URI.query_decoder(\"foo=1&bar=2\") |> Enum.map &(&1)\n"
 "    [{\"foo\", \"1\"}, {\"bar\", \"2\"}]\n"
 "\n"
+
+#. TRANSLATORS: def URI.char_reserved?(c)
+#: lib/uri.ex:135
+msgid ""
+"Checks if the character is a \"reserved\" character in a URI.\n"
+"\n"
+"Reserved characters are specified in [RFC3986, section 2.2](http://tools."
+"ietf.org/html/rfc3986#section-2.2).\n"
+msgstr ""
+"文字が、URIの\"予約(reserved)\"文字かどうかをチェックします。\n"
+"\n"
+"予約(reserved)文字は、 \n"
+"[RFC3986, section 2.2](http://tools.ietf.org/html/rfc3986#section-2.2)\n"
+"に定められています。\n"
 
 #. TRANSLATORS: def URI.parse(uri)
 #: lib/uri.ex:260
@@ -279,20 +293,6 @@ msgstr ""
 "    %URI{authority: nil, fragment: nil, host: nil, path: \"foo/bar\",\n"
 "         port: nil, query: nil, scheme: nil, userinfo: nil}\n"
 "\n"
-
-#. TRANSLATORS: def URI.char_reserved?(c)
-#: lib/uri.ex:135
-msgid ""
-"Checks if the character is a \"reserved\" character in a URI.\n"
-"\n"
-"Reserved characters are specified in [RFC3986, section 2.2](http://tools."
-"ietf.org/html/rfc3986#section-2.2).\n"
-msgstr ""
-"文字が、URIの\"予約(reserved)\"文字かどうかをチェックします。\n"
-"\n"
-"予約(reserved)文字は、 \n"
-"[RFC3986, section 2.2](http://tools.ietf.org/html/rfc3986#section-2.2)\n"
-"に定められています。\n"
 
 #. TRANSLATORS: def URI.decode(uri)
 #: lib/uri.ex:209

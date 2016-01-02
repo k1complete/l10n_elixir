@@ -47,13 +47,6 @@ msgid ""
 "    %{\"bar\" => \"2\", \"foo\" => \"1\"}\n"
 "\n"
 msgstr ""
-#. TRANSLATORS: def URI.char_unreserved?(c)
-#: lib/uri.ex:144 
-msgid ""
-"Checks if the character is a \"unreserved\" character in a URI.\n"
-"\n"
-"Unreserved characters are specified in [RFC3986, section 2.3](http://tools.ietf.org/html/rfc3986#section-2.3).\n"
-msgstr ""
 #. TRANSLATORS: def URI.default_port(scheme)
 #: lib/uri.ex:14 
 msgid ""
@@ -69,6 +62,24 @@ msgid ""
 "\n"
 "    iex> URI.default_port(\"ponzi\")\n"
 "    nil\n"
+"\n"
+msgstr ""
+#. TRANSLATORS: def URI.char_unreserved?(c)
+#: lib/uri.ex:144 
+msgid ""
+"Checks if the character is a \"unreserved\" character in a URI.\n"
+"\n"
+"Unreserved characters are specified in [RFC3986, section 2.3](http://tools.ietf.org/html/rfc3986#section-2.3).\n"
+msgstr ""
+#. TRANSLATORS: def URI.encode_www_form(str)
+#: lib/uri.ex:180 
+msgid ""
+"Encodes a string as \"x-www-form-urlencoded\".\n"
+"\n"
+"## Example\n"
+"\n"
+"    iex> URI.encode_www_form(\"put: it+й\")\n"
+"    \"put%3A+it%2B%D0%B9\"\n"
 "\n"
 msgstr ""
 #. TRANSLATORS: def URI.char_unescaped?(c)
@@ -88,17 +99,6 @@ msgid ""
 "application start callback in case you want to register\n"
 "new URIs.\n"
 msgstr ""
-#. TRANSLATORS: def URI.encode_www_form(str)
-#: lib/uri.ex:180 
-msgid ""
-"Encodes a string as \"x-www-form-urlencoded\".\n"
-"\n"
-"## Example\n"
-"\n"
-"    iex> URI.encode_www_form(\"put: it+й\")\n"
-"    \"put%3A+it%2B%D0%B9\"\n"
-"\n"
-msgstr ""
 #. TRANSLATORS: def URI.query_decoder(q)
 #: lib/uri.ex:86 
 msgid ""
@@ -110,6 +110,13 @@ msgid ""
 "    iex> URI.query_decoder(\"foo=1&bar=2\") |> Enum.map(&(&1))\n"
 "    [{\"foo\", \"1\"}, {\"bar\", \"2\"}]\n"
 "\n"
+msgstr ""
+#. TRANSLATORS: def URI.char_reserved?(c)
+#: lib/uri.ex:135 
+msgid ""
+"Checks if the character is a \"reserved\" character in a URI.\n"
+"\n"
+"Reserved characters are specified in [RFC3986, section 2.2](http://tools.ietf.org/html/rfc3986#section-2.2).\n"
 msgstr ""
 #. TRANSLATORS: def URI.parse(uri)
 #: lib/uri.ex:260 
@@ -145,13 +152,6 @@ msgid ""
 "    %URI{authority: nil, fragment: nil, host: nil, path: \"foo/bar\",\n"
 "         port: nil, query: nil, scheme: nil, userinfo: nil}\n"
 "\n"
-msgstr ""
-#. TRANSLATORS: def URI.char_reserved?(c)
-#: lib/uri.ex:135 
-msgid ""
-"Checks if the character is a \"reserved\" character in a URI.\n"
-"\n"
-"Reserved characters are specified in [RFC3986, section 2.2](http://tools.ietf.org/html/rfc3986#section-2.2).\n"
 msgstr ""
 #. TRANSLATORS: def URI.decode(uri)
 #: lib/uri.ex:209 

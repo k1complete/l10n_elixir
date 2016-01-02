@@ -56,6 +56,10 @@ defmodule L10nElixir.Mixfile do
      logo_url: "http://elixir-lang.org/docs/logo.png",
      source_beam: sr,
      source_ref: sref,
+     extras: [
+              "deps/elixir/lib/elixir/pages/Typespecs.md",
+              "deps/elixir/lib/elixir/pages/Writing Documentation.md"
+             ],
      main: "Kernel",
      output: "doc/elixir"
     ]
@@ -67,16 +71,17 @@ defmodule L10nElixir.Mixfile do
     [applications: [:exgettext, :l10n_iex]]
   end
   defp aliases do
-    [docall: &docall/1]
+    [docs_all: &docs_all/1]
   end
-  def docall(_) do
+  def docs_all(_) do
     apps = ["l10n_iex", "l10n_ex_unit"]
+    locale = Regex.replace(~r/(..).*/, System.get_env("LANG"), "\\1")
     Enum.map apps,
     fn(app) ->
       Code.load_file("deps/#{app}/mix.exs")
       Code.append_path("_build/dev/lib/ex_doc/ebin")
-      File.cp("deps/#{app}/priv/lang/ja/#{app}.exmo", 
-              "priv/lang/ja/#{app}.exmo")
+      File.cp("deps/#{app}/priv/lang/#{locale}/#{app}.exmo", 
+              "priv/lang/#{locale}/#{app}.exmo")
       mod = Module.concat(Mix.Utils.camelize(app), Mixfile)
       l10napp = mod.project
       b = Regex.replace(~r/^l10n_(.*)/, app, "\\1")

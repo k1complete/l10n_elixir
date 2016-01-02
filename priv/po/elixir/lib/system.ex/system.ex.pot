@@ -146,15 +146,8 @@ msgid ""
 "Returns a list of all environment variables. Each variable is given as a\n"
 "`{name, value}` tuple where both `name` and `value` are strings.\n"
 msgstr ""
-#. TRANSLATORS: Elixir.System Summary
-#: lib/system.ex:2 
-msgid ""
-"The System module provides access to variables used or\n"
-"maintained by the VM and to functions that interact directly\n"
-"with the VM or the host system.\n"
-msgstr ""
 #. TRANSLATORS: def System.time_offset(unit)
-#: lib/system.ex:590 
+#: lib/system.ex:599 
 msgid ""
 "Returns the current time offset between the Erlang monotonic time and the\n"
 "Erlang system time.\n"
@@ -169,13 +162,19 @@ msgid ""
 "\n"
 "Inlined by the compiler into `:erlang.time_offset/1`.\n"
 msgstr ""
-#. TRANSLATORS: def System.cwd()
-#: lib/system.ex:104 
+#. TRANSLATORS: Elixir.System Summary
+#: lib/system.ex:2 
 msgid ""
-"Current working directory.\n"
+"The System module provides access to variables used or\n"
+"maintained by the VM and to functions that interact directly\n"
+"with the VM or the host system.\n"
+msgstr ""
+#. TRANSLATORS: def System.argv()
+#: lib/system.ex:83 
+msgid ""
+"Lists command line arguments.\n"
 "\n"
-"Returns the current working directory or `nil` if one\n"
-"is not available.\n"
+"Returns the list of command line arguments passed to the program.\n"
 msgstr ""
 #. TRANSLATORS: def System.tmp_dir!()
 #: lib/system.ex:178 
@@ -194,7 +193,7 @@ msgid ""
 "as it destroys any previous argv information.\n"
 msgstr ""
 #. TRANSLATORS: def System.unique_integer(modifiers \\ [])
-#: lib/system.ex:609 
+#: lib/system.ex:618 
 msgid ""
 "Generates and returns an integer that is unique in the current runtime\n"
 "instance.\n"
@@ -219,7 +218,7 @@ msgid ""
 "Inlined by the compiler into `:erlang.unique_integer/1`.\n"
 msgstr ""
 #. TRANSLATORS: def System.monotonic_time(unit)
-#: lib/system.ex:522 
+#: lib/system.ex:531 
 msgid ""
 "Returns the current monotonic time in the given time unit.\n"
 "\n"
@@ -229,20 +228,13 @@ msgid ""
 "\n"
 "Inlined by the compiler into `:erlang.monotonic_time/1`.\n"
 msgstr ""
-#. TRANSLATORS: def System.convert_time_unit(time, from_unit, to_unit)
-#: lib/system.ex:564 
+#. TRANSLATORS: def System.cwd()
+#: lib/system.ex:104 
 msgid ""
-"Converts `time` from time unit `from_unit` to time unit `to_unit`. The result\n"
-"is rounded via the floor function.\n"
+"Current working directory.\n"
 "\n"
-"Inlined by the compiler into `:erlang.convert_time_unit/3`.\n"
-msgstr ""
-#. TRANSLATORS: def System.argv()
-#: lib/system.ex:83 
-msgid ""
-"Lists command line arguments.\n"
-"\n"
-"Returns the list of command line arguments passed to the program.\n"
+"Returns the current working directory or `nil` if one\n"
+"is not available.\n"
 msgstr ""
 #. TRANSLATORS: def System.find_executable(program)
 #: lib/system.ex:227 
@@ -255,6 +247,14 @@ msgid ""
 "extension for each OS, so for Windows it will try to\n"
 "lookup files with `.com`, `.cmd` or similar extensions.\n"
 msgstr ""
+#. TRANSLATORS: def System.convert_time_unit(time, from_unit, to_unit)
+#: lib/system.ex:573 
+msgid ""
+"Converts `time` from time unit `from_unit` to time unit `to_unit`. The result\n"
+"is rounded via the floor function.\n"
+"\n"
+"Inlined by the compiler into `:erlang.convert_time_unit/3`.\n"
+msgstr ""
 #. TRANSLATORS: def System.user_home!()
 #: lib/system.ex:145 
 msgid ""
@@ -264,7 +264,7 @@ msgid ""
 "instead of returning `nil` if no user home is set.\n"
 msgstr ""
 #. TRANSLATORS: def System.system_time()
-#: lib/system.ex:536 
+#: lib/system.ex:545 
 msgid ""
 "Returns the current system time in the `:native` time unit.\n"
 "\n"
@@ -304,7 +304,7 @@ msgid ""
 "\n"
 msgstr ""
 #. TRANSLATORS: def System.system_time(unit)
-#: lib/system.ex:550 
+#: lib/system.ex:559 
 msgid ""
 "Returns the current system time in the given time unit.\n"
 "\n"
@@ -313,6 +313,22 @@ msgid ""
 "Erlang docs.\n"
 "\n"
 "Inlined by the compiler into `:erlang.system_time/1`.\n"
+msgstr ""
+#. TRANSLATORS: def System.stacktrace()
+#: lib/system.ex:318 
+msgid ""
+"Last exception stacktrace.\n"
+"\n"
+"Note that the Erlang VM (and therefore this function) does not\n"
+"return the current stacktrace but rather the stacktrace of the\n"
+"latest exception.\n"
+"\n"
+"Inlined by the compiler into `:erlang.get_stacktrace/0`.\n"
+msgstr ""
+#. TRANSLATORS: def System.endianness()
+#: lib/system.ex:50 
+msgid ""
+"Returns the endianness.\n"
 msgstr ""
 #. TRANSLATORS: def System.put_env(varname, value)
 #: lib/system.ex:285 
@@ -344,32 +360,20 @@ msgid ""
 "`varname` as a binary, or `nil` if the environment\n"
 "variable is undefined.\n"
 msgstr ""
-#. TRANSLATORS: def System.stacktrace()
-#: lib/system.ex:318 
+#. TRANSLATORS: def System.time_offset()
+#: lib/system.ex:584 
 msgid ""
-"Last exception stacktrace.\n"
+"Returns the current time offset between the Erlang monotonic time and the\n"
+"Erlang system time.\n"
 "\n"
-"Note that the Erlang VM (and therefore this function) does not\n"
-"return the current stacktrace but rather the stacktrace of the\n"
-"latest exception.\n"
+"The result is returned in the `:native` time unit.\n"
 "\n"
-"Inlined by the compiler into `:erlang.get_stacktrace/0`.\n"
-msgstr ""
-#. TRANSLATORS: def System.endianness()
-#: lib/system.ex:50 
-msgid ""
-"Returns the endianness.\n"
-msgstr ""
-#. TRANSLATORS: def System.put_env(enum)
-#: lib/system.ex:296 
-msgid ""
-"Sets multiple environment variables.\n"
+"See `time_offset/1` for more information.\n"
 "\n"
-"Sets a new value for each environment variable corresponding\n"
-"to each key in `dict`.\n"
+"Inlined by the compiler into `:erlang.time_offset/0`.\n"
 msgstr ""
 #. TRANSLATORS: def System.monotonic_time()
-#: lib/system.ex:505 
+#: lib/system.ex:514 
 msgid ""
 "Returns the current monotonic time in the `:native` time unit.\n"
 "\n"
@@ -382,15 +386,11 @@ msgid ""
 "\n"
 "Inlined by the compiler into `:erlang.monotonic_time/0`.\n"
 msgstr ""
-#. TRANSLATORS: def System.time_offset()
-#: lib/system.ex:575 
+#. TRANSLATORS: def System.put_env(enum)
+#: lib/system.ex:296 
 msgid ""
-"Returns the current time offset between the Erlang monotonic time and the\n"
-"Erlang system time.\n"
+"Sets multiple environment variables.\n"
 "\n"
-"The result is returned in the `:native` time unit.\n"
-"\n"
-"See `time_offset/1` for more information.\n"
-"\n"
-"Inlined by the compiler into `:erlang.time_offset/0`.\n"
+"Sets a new value for each environment variable corresponding\n"
+"to each key in `dict`.\n"
 msgstr ""

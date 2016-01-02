@@ -10,36 +10,6 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
-#. TRANSLATORS: def Task.Supervisor.start_child(supervisor, fun)
-#: lib/task/supervisor.ex:122
-msgid ""
-"Starts a task as child of the given `supervisor`.\n"
-"\n"
-"Note that the spawned process is not linked to the caller, but\n"
-"only to the supervisor. This command is useful in case the\n"
-"task needs to perform side-effects (like I/O) and does not need\n"
-"to report back to the caller.\n"
-msgstr ""
-"与えられた`supervisor`の子としてタスクを開始します。\n"
-"\n"
-"生成されたプロセスは呼び出し側にリンクされていなく、スーパバイザにのみ\n"
-"にリンクされていることに注意してください。このコマンドはタスクが副作用\n"
-"(IOのような)を実行する必要があって、呼び出し側に報告を返す必要はない場\n"
-"合に役に立ちます。\n"
-
-#. TRANSLATORS: def Task.Supervisor.start_child(supervisor, module, fun, args)
-#: lib/task/supervisor.ex:135
-msgid ""
-"Starts a task as child of the given `supervisor`.\n"
-"\n"
-"Similar to `start_child/2` except the task is specified\n"
-"by the given `module`, `fun` and `args`.\n"
-msgstr ""
-"与えられた`supervisor`の子としてタスクを開始します。\n"
-"\n"
-"`start_child/2`と似ていますが、タスクは`module`、`fun`と`args`によって\n"
-"指定されなければなりません。\n"
-
 #. TRANSLATORS: def Task.Supervisor.start_link(opts \\ [])
 #: lib/task/supervisor.ex:18
 msgid ""
@@ -85,6 +55,36 @@ msgstr ""
 "\n"
 "* `:max_restarts` と `:max_seconds` - `Supervisor.Spec.supervise/2`で\n"
 "  指定されます;\n"
+
+#. TRANSLATORS: def Task.Supervisor.start_child(supervisor, fun)
+#: lib/task/supervisor.ex:122
+msgid ""
+"Starts a task as child of the given `supervisor`.\n"
+"\n"
+"Note that the spawned process is not linked to the caller, but\n"
+"only to the supervisor. This command is useful in case the\n"
+"task needs to perform side-effects (like I/O) and does not need\n"
+"to report back to the caller.\n"
+msgstr ""
+"与えられた`supervisor`の子としてタスクを開始します。\n"
+"\n"
+"生成されたプロセスは呼び出し側にリンクされていなく、スーパバイザにのみ\n"
+"にリンクされていることに注意してください。このコマンドはタスクが副作用\n"
+"(IOのような)を実行する必要があって、呼び出し側に報告を返す必要はない場\n"
+"合に役に立ちます。\n"
+
+#. TRANSLATORS: def Task.Supervisor.start_child(supervisor, module, fun, args)
+#: lib/task/supervisor.ex:135
+msgid ""
+"Starts a task as child of the given `supervisor`.\n"
+"\n"
+"Similar to `start_child/2` except the task is specified\n"
+"by the given `module`, `fun` and `args`.\n"
+msgstr ""
+"与えられた`supervisor`の子としてタスクを開始します。\n"
+"\n"
+"`start_child/2`と似ていますが、タスクは`module`、`fun`と`args`によって\n"
+"指定されなければなりません。\n"
 
 #. TRANSLATORS: def Task.Supervisor.terminate_child(supervisor, pid)
 #: lib/task/supervisor.ex:106

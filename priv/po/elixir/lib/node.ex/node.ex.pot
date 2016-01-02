@@ -78,6 +78,17 @@ msgid ""
 "For more information, see\n"
 "[`:erlang.monitor_node/3`](http://www.erlang.org/doc/man/erlang.html#monitor_node-3).\n"
 msgstr ""
+#. TRANSLATORS: def Node.spawn(node, fun)
+#: lib/node.ex:156 
+msgid ""
+"Returns the pid of a new process started by the application of `fun`\n"
+"on `node`. If `node` does not exist, a useless pid is returned.\n"
+"\n"
+"For the list of available options, see\n"
+"[`:erlang.spawn/2`](http://www.erlang.org/doc/man/erlang.html#spawn-2).\n"
+"\n"
+"Inlined by the compiler.\n"
+msgstr ""
 #. TRANSLATORS: Elixir.Node Summary
 #: lib/node.ex:2 
 msgid ""
@@ -87,6 +98,14 @@ msgid ""
 "similar to functions in the `Kernel` module and they are explicitly\n"
 "marked in their docs as \"inlined by the compiler\". For more information\n"
 "about inlined functions, check out the `Kernel` module.\n"
+msgstr ""
+#. TRANSLATORS: def Node.list()
+#: lib/node.ex:58 
+msgid ""
+"Returns a list of all visible nodes in the system, excluding\n"
+"the local node.\n"
+"\n"
+"Same as `list(:visible)`.\n"
 msgstr ""
 #. TRANSLATORS: def Node.spawn(node, fun, opts)
 #: lib/node.ex:170 
@@ -100,14 +119,6 @@ msgid ""
 "[`:erlang.spawn_opt/3`](http://www.erlang.org/doc/man/erlang.html#spawn_opt-3).\n"
 "\n"
 "Inlined by the compiler.\n"
-msgstr ""
-#. TRANSLATORS: def Node.list()
-#: lib/node.ex:58 
-msgid ""
-"Returns a list of all visible nodes in the system, excluding\n"
-"the local node.\n"
-"\n"
-"Same as `list(:visible)`.\n"
 msgstr ""
 #. TRANSLATORS: def Node.stop()
 #: lib/node.ex:25 
@@ -165,6 +176,13 @@ msgid ""
 "\n"
 "Inlined by the compiler.\n"
 msgstr ""
+#. TRANSLATORS: def Node.self()
+#: lib/node.ex:38 
+msgid ""
+"Returns the current node.\n"
+"\n"
+"It returns the same as the built-in `node()`.\n"
+msgstr ""
 #. TRANSLATORS: def Node.spawn_link(node, module, fun, args)
 #: lib/node.ex:232 
 msgid ""
@@ -177,13 +195,6 @@ msgid ""
 "\n"
 "Inlined by the compiler.\n"
 msgstr ""
-#. TRANSLATORS: def Node.self()
-#: lib/node.ex:38 
-msgid ""
-"Returns the current node.\n"
-"\n"
-"It returns the same as the built-in `node()`.\n"
-msgstr ""
 #. TRANSLATORS: def Node.connect(node)
 #: lib/node.ex:142 
 msgid ""
@@ -194,15 +205,4 @@ msgid ""
 "\n"
 "For more information, see\n"
 "[`:erlang.connect_node/1`](http://www.erlang.org/doc/man/net_kernel.html#connect_node-1).\n"
-msgstr ""
-#. TRANSLATORS: def Node.spawn(node, fun)
-#: lib/node.ex:156 
-msgid ""
-"Returns the pid of a new process started by the application of `fun`\n"
-"on `node`. If `node` does not exist, a useless pid is returned.\n"
-"\n"
-"For the list of available options, see\n"
-"[`:erlang.spawn/2`](http://www.erlang.org/doc/man/erlang.html#spawn-2).\n"
-"\n"
-"Inlined by the compiler.\n"
 msgstr ""

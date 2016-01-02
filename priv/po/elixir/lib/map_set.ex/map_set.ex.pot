@@ -1,29 +1,3 @@
-#. TRANSLATORS: def MapSet.member?(map_set, value)
-#: lib/map_set.ex:162 
-msgid ""
-"Checks if `set` contains `value`.\n"
-"\n"
-"## Examples\n"
-"\n"
-"    iex> MapSet.member?(MapSet.new([1, 2, 3]), 2)\n"
-"    true\n"
-"    iex> MapSet.member?(MapSet.new([1, 2, 3]), 4)\n"
-"    false\n"
-"\n"
-msgstr ""
-#. TRANSLATORS: def MapSet.new(enumerable)
-#: lib/map_set.ex:28 
-msgid ""
-"Creates a set from an enumerable.\n"
-"\n"
-"## Examples\n"
-"\n"
-"    iex> MapSet.new([:b, :a, 3])\n"
-"    #MapSet<[3, :a, :b]>\n"
-"    iex> MapSet.new([3, 3, 3, 2, 2, 1])\n"
-"    #MapSet<[1, 2, 3]>\n"
-"\n"
-msgstr ""
 #. TRANSLATORS: def MapSet.put(set, value)
 #: lib/map_set.ex:178 
 msgid ""
@@ -37,18 +11,17 @@ msgid ""
 "    #MapSet<[1, 2, 3, 4]>\n"
 "\n"
 msgstr ""
-#. TRANSLATORS: def MapSet.intersection(map_set1, map_set2)
-#: lib/map_set.ex:137 
+#. TRANSLATORS: def MapSet.member?(map_set, value)
+#: lib/map_set.ex:162 
 msgid ""
-"Returns a set containing only members that `set1` and `set2` have in common.\n"
+"Checks if `set` contains `value`.\n"
 "\n"
 "## Examples\n"
 "\n"
-"    iex> MapSet.intersection(MapSet.new([1, 2]), MapSet.new([2, 3, 4]))\n"
-"    #MapSet<[2]>\n"
-"\n"
-"    iex> MapSet.intersection(MapSet.new([1, 2]), MapSet.new([3, 4]))\n"
-"    #MapSet<[]>\n"
+"    iex> MapSet.member?(MapSet.new([1, 2, 3]), 2)\n"
+"    true\n"
+"    iex> MapSet.member?(MapSet.new([1, 2, 3]), 4)\n"
+"    false\n"
 "\n"
 msgstr ""
 #. TRANSLATORS: def MapSet.equal?(map_set1, map_set2)
@@ -66,15 +39,42 @@ msgid ""
 "    false\n"
 "\n"
 msgstr ""
-#. TRANSLATORS: def MapSet.difference(map_set1, map_set2)
-#: lib/map_set.ex:77 
+#. TRANSLATORS: def MapSet.new(enumerable)
+#: lib/map_set.ex:28 
 msgid ""
-"Returns a set that is `set1` without the members of `set2`.\n"
+"Creates a set from an enumerable.\n"
 "\n"
 "## Examples\n"
 "\n"
-"    iex> MapSet.difference(MapSet.new([1, 2]), MapSet.new([2, 3, 4]))\n"
-"    #MapSet<[1]>\n"
+"    iex> MapSet.new([:b, :a, 3])\n"
+"    #MapSet<[3, :a, :b]>\n"
+"    iex> MapSet.new([3, 3, 3, 2, 2, 1])\n"
+"    #MapSet<[1, 2, 3]>\n"
+"\n"
+msgstr ""
+#. TRANSLATORS: def MapSet.size(map_set)
+#: lib/map_set.ex:194 
+msgid ""
+"Returns the number of elements in `set`.\n"
+"\n"
+"## Examples\n"
+"\n"
+"    iex> MapSet.size(MapSet.new([1, 2, 3]))\n"
+"    3\n"
+"\n"
+msgstr ""
+#. TRANSLATORS: def MapSet.intersection(map_set1, map_set2)
+#: lib/map_set.ex:137 
+msgid ""
+"Returns a set containing only members that `set1` and `set2` have in common.\n"
+"\n"
+"## Examples\n"
+"\n"
+"    iex> MapSet.intersection(MapSet.new([1, 2]), MapSet.new([2, 3, 4]))\n"
+"    #MapSet<[2]>\n"
+"\n"
+"    iex> MapSet.intersection(MapSet.new([1, 2]), MapSet.new([3, 4]))\n"
+"    #MapSet<[]>\n"
 "\n"
 msgstr ""
 #. TRANSLATORS: def MapSet.subset?(map_set1, map_set2)
@@ -92,15 +92,15 @@ msgid ""
 "    false\n"
 "\n"
 msgstr ""
-#. TRANSLATORS: def MapSet.new(enumerable, transform)
-#: lib/map_set.ex:44 
+#. TRANSLATORS: def MapSet.difference(map_set1, map_set2)
+#: lib/map_set.ex:77 
 msgid ""
-"Creates a mapset from an enumerable via the transformation function.\n"
+"Returns a set that is `set1` without the members of `set2`.\n"
 "\n"
 "## Examples\n"
 "\n"
-"    iex> MapSet.new([1, 2, 1], fn x -> 2 * x end)\n"
-"    #MapSet<[2, 4]>\n"
+"    iex> MapSet.difference(MapSet.new([1, 2]), MapSet.new([2, 3, 4]))\n"
+"    #MapSet<[1]>\n"
 "\n"
 msgstr ""
 #. TRANSLATORS: def MapSet.union(map_set1, map_set2)
@@ -114,28 +114,15 @@ msgid ""
 "    #MapSet<[1, 2, 3, 4]>\n"
 "\n"
 msgstr ""
-#. TRANSLATORS: def MapSet.disjoint?(map_set1, map_set2)
-#: lib/map_set.ex:94 
+#. TRANSLATORS: def MapSet.new(enumerable, transform)
+#: lib/map_set.ex:44 
 msgid ""
-"Checks if `set1` and `set2` have no members in common.\n"
+"Creates a mapset from an enumerable via the transformation function.\n"
 "\n"
 "## Examples\n"
 "\n"
-"    iex> MapSet.disjoint?(MapSet.new([1, 2]), MapSet.new([3, 4]))\n"
-"    true\n"
-"    iex> MapSet.disjoint?(MapSet.new([1, 2]), MapSet.new([2, 3]))\n"
-"    false\n"
-"\n"
-msgstr ""
-#. TRANSLATORS: def MapSet.size(map_set)
-#: lib/map_set.ex:194 
-msgid ""
-"Returns the number of elements in `set`.\n"
-"\n"
-"## Examples\n"
-"\n"
-"    iex> MapSet.size(MapSet.new([1, 2, 3]))\n"
-"    3\n"
+"    iex> MapSet.new([1, 2, 1], fn x -> 2 * x end)\n"
+"    #MapSet<[2, 4]>\n"
 "\n"
 msgstr ""
 #. TRANSLATORS: Elixir.MapSet Summary
@@ -148,6 +135,19 @@ msgid ""
 "need to match on any `MapSet`. Note though the struct\n"
 "fields are private and must not be accessed directly.\n"
 "Instead, use the functions in this module.\n"
+msgstr ""
+#. TRANSLATORS: def MapSet.disjoint?(map_set1, map_set2)
+#: lib/map_set.ex:94 
+msgid ""
+"Checks if `set1` and `set2` have no members in common.\n"
+"\n"
+"## Examples\n"
+"\n"
+"    iex> MapSet.disjoint?(MapSet.new([1, 2]), MapSet.new([3, 4]))\n"
+"    true\n"
+"    iex> MapSet.disjoint?(MapSet.new([1, 2]), MapSet.new([2, 3]))\n"
+"    false\n"
+"\n"
 msgstr ""
 #. TRANSLATORS: def MapSet.delete(set, term)
 #: lib/map_set.ex:58 

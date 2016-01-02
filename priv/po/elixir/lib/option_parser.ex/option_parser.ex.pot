@@ -19,11 +19,6 @@ msgid ""
 "\n"
 "  * `{:error, rest}` - there are no switches at the top of the given argv\n"
 msgstr ""
-#. TRANSLATORS: Elixir.OptionParser Summary
-#: lib/option_parser.ex:2 
-msgid ""
-"This module contains functions to parse command line options.\n"
-msgstr ""
 #. TRANSLATORS: def OptionParser.parse_head(argv, opts \\ [])
 #: lib/option_parser.ex:120 
 msgid ""
@@ -40,6 +35,11 @@ msgid ""
 "    iex> OptionParser.parse_head([\"--verbose\", \"--source\", \"lib\", \"test/enum_test.exs\", \"--unlock\"])\n"
 "    {[verbose: true, source: \"lib\"], [\"test/enum_test.exs\", \"--unlock\"], []}\n"
 "\n"
+msgstr ""
+#. TRANSLATORS: Elixir.OptionParser Summary
+#: lib/option_parser.ex:2 
+msgid ""
+"This module contains functions to parse command line options.\n"
 msgstr ""
 #. TRANSLATORS: def OptionParser.split(string)
 #: lib/option_parser.ex:271 

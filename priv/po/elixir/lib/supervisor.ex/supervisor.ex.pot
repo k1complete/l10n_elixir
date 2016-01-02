@@ -37,11 +37,6 @@ msgid ""
 "\n"
 "This operation is not supported by `simple_one_for_one` supervisors.\n"
 msgstr ""
-#. TRANSLATORS: @type options
-#: lib/supervisor.ex:231 
-msgid ""
-"Options used by the `start*` functions"
-msgstr ""
 #. TRANSLATORS: def Supervisor.which_children(supervisor)
 #: lib/supervisor.ex:414 
 msgid ""
@@ -62,6 +57,11 @@ msgid ""
 "  * `type` - `:worker` or `:supervisor` as defined in the child specification\n"
 "\n"
 "  * `modules` - as defined in the child specification\n"
+msgstr ""
+#. TRANSLATORS: @type options
+#: lib/supervisor.ex:231 
+msgid ""
+"Options used by the `start*` functions"
 msgstr ""
 #. TRANSLATORS: Elixir.Supervisor Summary
 #: lib/supervisor.ex:2 
@@ -387,16 +387,6 @@ msgid ""
 "and will exit not only on crashes but also if the parent process\n"
 "exits with `:normal` reason.\n"
 msgstr ""
-#. TRANSLATORS: @type on_start_child
-#: lib/supervisor.ex:222 
-msgid ""
-"Return values of `start_child` functions"
-msgstr ""
-#. TRANSLATORS: @type name
-#: lib/supervisor.ex:228 
-msgid ""
-"The Supervisor name"
-msgstr ""
 #. TRANSLATORS: def Supervisor.start_child(supervisor, child_spec_or_args)
 #: lib/supervisor.ex:307 
 msgid ""
@@ -427,4 +417,14 @@ msgid ""
 "or if it fails, the child specification is discarded and the function returns\n"
 "`{:error, error}` where `error` is a term containing information about the error\n"
 "and child specification.\n"
+msgstr ""
+#. TRANSLATORS: @type name
+#: lib/supervisor.ex:228 
+msgid ""
+"The Supervisor name"
+msgstr ""
+#. TRANSLATORS: @type on_start_child
+#: lib/supervisor.ex:222 
+msgid ""
+"Return values of `start_child` functions"
 msgstr ""

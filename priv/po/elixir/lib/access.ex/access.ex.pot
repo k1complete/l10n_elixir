@@ -4,7 +4,7 @@ msgid ""
 "Fetches the container's value for the given key.\n"
 msgstr ""
 #. TRANSLATORS: def Access.get_and_update(container, key, fun)
-#: lib/access.ex:78 
+#: lib/access.ex:83 
 msgid ""
 "Gets and updates the container's value for the given key, in a single pass.\n"
 "\n"
@@ -17,7 +17,7 @@ msgid ""
 "The second element is the container, updated with the value returned by `fun`.\n"
 msgstr ""
 #. TRANSLATORS: def Access.get(container, key, default \\ nil)
-#: lib/access.ex:67 
+#: lib/access.ex:72 
 msgid ""
 "Gets the container's value for the given key.\n"
 msgstr ""

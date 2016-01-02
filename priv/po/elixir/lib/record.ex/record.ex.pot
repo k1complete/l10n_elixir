@@ -106,17 +106,6 @@ msgid ""
 "      def foo(bar, baz), do: IO.inspect({bar, baz})\n"
 "    end\n"
 msgstr ""
-#. TRANSLATORS: def Record.extract_all(opts)
-#: lib/record.ex:59 
-msgid ""
-"Extracts all records information from an Erlang file.\n"
-"\n"
-"Returns a keyword list containing extracted record names as keys, and\n"
-"lists of tuples describing the fields as values. It expects a named\n"
-"argument :from or :from_lib, which correspond to *include* or\n"
-"*include_lib* attribute from Erlang modules, respectively.\n"
-"\n"
-msgstr ""
 #. TRANSLATORS: Elixir.Record Summary
 #: lib/record.ex:2 
 msgid ""
@@ -154,6 +143,17 @@ msgid ""
 "      @type user :: record(:user, name: String.t, age: integer)\n"
 "      # expands to: \"@type user :: {:user, String.t, integer}\"\n"
 "    end\n"
+msgstr ""
+#. TRANSLATORS: def Record.extract_all(opts)
+#: lib/record.ex:59 
+msgid ""
+"Extracts all records information from an Erlang file.\n"
+"\n"
+"Returns a keyword list containing extracted record names as keys, and\n"
+"lists of tuples describing the fields as values. It expects a named\n"
+"argument :from or :from_lib, which correspond to *include* or\n"
+"*include_lib* attribute from Erlang modules, respectively.\n"
+"\n"
 msgstr ""
 #. TRANSLATORS: defmacro Record.is_record(data)
 #: lib/record.ex:100 
