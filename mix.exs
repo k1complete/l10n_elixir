@@ -8,6 +8,7 @@ defmodule L10nElixir.Mixfile do
      compilers: Mix.compilers ++ [:po],
      source_url: "https://github.com/elixir-lang/elixir",
      docs: fn() -> docs() end,
+     exgettext: [ extra: Extrans ],
      aliases: aliases,
      deps: deps]
   end
@@ -57,8 +58,8 @@ defmodule L10nElixir.Mixfile do
      source_beam: sr,
      source_ref: sref,
      extras: [
-              "deps/elixir/lib/elixir/pages/Typespecs.md",
-              "deps/elixir/lib/elixir/pages/Writing Documentation.md"
+              "pages/Typespecs.md",
+              "pages/Writing Documentation.md"
              ],
      main: "Kernel",
      output: "doc/elixir"
@@ -118,6 +119,7 @@ defmodule L10nElixir.Mixfile do
     [{:elixir, github: "elixir-lang/elixir" }, # tag: "v1.2.0"},
      {:ex_doc, github: "elixir-lang/ex_doc"},
      {:earmark, "~> 0.1.17 or ~> 0.2", optional: true},
+     {:extrans, path: "../../extrans"},
      {:exgettext, github: "k1complete/exgettext"},
 	   {:l10n_iex,  github: "k1complete/l10n_iex"},
 #      compile: "mix do deps.get, deps.compile, compile, docs" },

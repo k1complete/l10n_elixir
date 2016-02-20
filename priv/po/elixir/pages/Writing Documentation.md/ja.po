@@ -1,0 +1,286 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: l 10n_elixir\n"
+"PO-Revision-Date: 2016-02-20 16:26+0900\n"
+"Last-Translator: 小田 照敬 <k-1@air13.local>\n"
+"Language-Team: Japanese <translation-team-ja@lists.sourceforge.net>\n"
+"Language: ja\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: deps/elixir/lib/elixir/pages/Writing Documentation.md:1
+msgid "# Writing Documentation"
+msgstr "# Writing Documentation"
+
+#: deps/elixir/lib/elixir/pages/Writing Documentation.md:3
+msgid ""
+"Elixir treats documentation as a first-class citizen. This means "
+"documentation should be easy to write and easy to read. In this document you "
+"will learn how to write documentation in Elixir, covering constructs like "
+"module attributes, style practices and doctests."
+msgstr ""
+"Elixirはドキュメンテーションを第一級市民(first-class citizen)として扱い\n"
+"ます。これはドキュメンテーションは読み書きされやすくされるべきであるこ\n"
+"とを意味します。このドキュメントでは、Elixirでドキュメントを書く方法、\n"
+"モジュールアトリビュートのような構造の変換、スタイルプラクティス、\n"
+"doctestsを学ぶでしょう。"
+
+#: deps/elixir/lib/elixir/pages/Writing Documentation.md:5
+msgid "## Markdown"
+msgstr "## Markdown"
+
+#: deps/elixir/lib/elixir/pages/Writing Documentation.md:7
+msgid ""
+"Elixir documentation is written using Markdown. There are plenty of guides "
+"on Markdown online, we recommend the ones available at GitHub as a getting "
+"started point:"
+msgstr ""
+"ElixirドキュメンテーションはMarkdownを使って書かれています。\n"
+"オンラインにMarkdownの沢山のガイドがありますが、手始めとしては、\n"
+"Githubのものをお勧めします:"
+
+#: deps/elixir/lib/elixir/pages/Writing Documentation.md:9
+msgid ""
+"  * https://help.github.com/articles/markdown-basics/\n"
+"  * https://help.github.com/articles/github-flavored-markdown/"
+msgstr ""
+
+#: deps/elixir/lib/elixir/pages/Writing Documentation.md:12
+msgid "## Module Attributes"
+msgstr "## Module Attributes"
+
+#: deps/elixir/lib/elixir/pages/Writing Documentation.md:14
+msgid ""
+"Documentation in Elixir is usually attached to module attributes. Let's see "
+"an example:"
+msgstr ""
+"Elixirのドキュメンテーションは通常モジュールアトリビュートとして\n"
+"アタッチされます。例を見てみましょう:"
+
+#: deps/elixir/lib/elixir/pages/Writing Documentation.md:37
+msgid ""
+"The `@moduledoc` attribute is used to attach documentation to the module. "
+"`@doc` is used before a function to attach documentation to it. Besides the "
+"attributes above, `@typedoc` can also be used to attach documentation to "
+"types defined as part of typespecs."
+msgstr ""
+"`@moduledoc`アトリビュートはモジュールにドキュメンテーションをアタッチ\n"
+"するために使われます。`@doc`はドキュメンテーションをアタッチしたい関数\n"
+"の前で使います。上記のアトリビュートの他に、typespecsの一部として、タイ\n"
+"プ定義のドキュメンテーションをアタッチするために、`@typedoc`も使うこと\n"
+"もできます。"
+
+#: deps/elixir/lib/elixir/pages/Writing Documentation.md:39
+msgid "## Function Arguments"
+msgstr "## Function Arguments"
+
+#: deps/elixir/lib/elixir/pages/Writing Documentation.md:41
+msgid ""
+"When documenting a function, argument names are inferred by the compiler. "
+"For example:"
+msgstr ""
+"関数を文書化するとき、引数名はコンパイラによって推測されます。\n"
+"例えば:"
+
+#: deps/elixir/lib/elixir/pages/Writing Documentation.md:47
+msgid ""
+"The compiler will infer this argument as `hash_dict`. Sometimes the "
+"inference will be suboptimal, specially if the function contains multiple "
+"clauses with the argument matching on different values each time. You can "
+"specify the proper names for documentation by using a bodyless clause:"
+msgstr ""
+"コンパイラはこの引数を`hash_dict`として推論します。特に、関数がそれぞれ\n"
+"異る値をマッチングする引数をもつ複数の節を含むと、ときどき推論が最適状\n"
+"態に及ばないかもしれません。本体無しの節を使うことで、ドキュメンテーショ\n"
+"ンのための妥当な名前を指定することができます:"
+
+#: deps/elixir/lib/elixir/pages/Writing Documentation.md:51
+msgid "## Recommendations"
+msgstr "## Recommendations"
+
+#: deps/elixir/lib/elixir/pages/Writing Documentation.md:53
+msgid ""
+"There are a couple tips we recommend developers to follow when writing "
+"documentation:"
+msgstr ""
+"ドキュメンテーションを書く時、下記のいくつかのtipsをデベロッパへ推奨\n"
+"します:"
+
+#: deps/elixir/lib/elixir/pages/Writing Documentation.md:55
+msgid ""
+"  * Keep the first paragraph of the documentation concise and simple. Tools "
+"like ExDoc uses the first line to generate a summary."
+msgstr ""
+"  * ドキュメントの最初の段落は簡潔かつ単純に保ってください。ExDocのよう\n"
+"    なツールはサマリを生成するために最初の行を使います。"
+
+#: deps/elixir/lib/elixir/pages/Writing Documentation.md:57
+msgid ""
+"  * Markdown uses backticks (`` ` ``) to quote code. Elixir builds on top of "
+"that to automatically generate links when modules or function names are "
+"referenced. For this reason, always use full module names. If you have a "
+"module called `MyApp.Hello`, always reference it as `` `MyApp.Hello` `` and "
+"never as `` `Hello` ``. Function names must be referenced by name and arity "
+"if they are local, as in `` `world/1` ``, or by module, name and arity if "
+"pointing to an external module: `` `MyApp.Hello.world/1` ``. Referencing a "
+"`@callback` can be done by prepending `c:`, as in `` `c:world/1` ``."
+msgstr ""
+"  * Markdownはバックティック(`` ` ``)をコードの引用に使います。Elixirは\n"
+"    モジュール名や関数名が参照されたとき、自動的にリンクを生成します。\n"
+"    そのため、常に完全なモジュール名を使ってください。もし、\n"
+"    `MyApp.Hello`モジュールを持っていたら、常に`` `MyApp.Hello` ``とし\n"
+"    て参照され、決して`` `Hello` ``として参照されません。関数名は、ロー\n"
+"    カル関数なら、`` `world/1` ``のように名前とアリティで参照され、``\n"
+"    `MyApp.Hello.world/1` ``のような外部モジュールを指しているなら、モ\n"
+"    ジュール、名前、アリティによって参照されなければなりません。\n"
+"    `@callback`の参照は、`` `c:world/1` ``のように、`:c`を前に付加する\n"
+"    ことで参照することができます。"
+
+#: deps/elixir/lib/elixir/pages/Writing Documentation.md:59
+msgid ""
+"  * If using headings, always start from the second heading by using `##`. "
+"The first heading is reserved to the module or function name itself."
+msgstr ""
+"  * もし見出しを使うなら、常に`##`を使って2番目の見出しから始めてくださ\n"
+"    い。最初の見出しはモジュールや関数名のために予約されています。"
+
+#: deps/elixir/lib/elixir/pages/Writing Documentation.md:61
+msgid "## Doctests"
+msgstr "## Doctests"
+
+#: deps/elixir/lib/elixir/pages/Writing Documentation.md:63
+msgid ""
+"We recommend developers to include examples in their documentation, often "
+"under its own `## Examples` heading. To ensure examples do not get out of "
+"date, Elixir's test framework (ExUnit) provides a feature called doctests "
+"that allows developers to test the examples in their documentation. Doctests "
+"work by parsing out code samples starting with `iex>` from the "
+"documentation. You can read more about it at `ExUnit.DocTest`."
+msgstr ""
+"デベロッパはそのドキュメンテーションに`## Examples`見出しで、例を含める\n"
+"ことを推奨します。Elixirのテストフレームワーク(ExUnit)はdoctestとよばれ\n"
+"る機能を提供し、そのドキュメンテーションの例をテストすることをデベロッ\n"
+"パに許すので、例は古くならないことを確実にします。doctestはドキュメンテー\n"
+"ションから`iex>`で始まるコードサンプルをパースすることで動作します。こ\n"
+"れについての詳細は`ExUnit.DocTest`を読んでください。"
+
+#: deps/elixir/lib/elixir/pages/Writing Documentation.md:65
+msgid ""
+"Notice doctests have limitations. When you cannot doctest a function, "
+"because it relies on state or side-effects, we recommend developers to "
+"include examples directly without the `iex>` prompt."
+msgstr ""
+"doctestは制限があることに注意してください。状態や副作用により\n"
+"関数のdoctestが出来無いときは、`iex>`プロンプトなしで直接例を含める\n"
+"ことを推奨します。"
+
+#: deps/elixir/lib/elixir/pages/Writing Documentation.md:67
+msgid "## Privacy"
+msgstr "## Privacy"
+
+#: deps/elixir/lib/elixir/pages/Writing Documentation.md:69
+msgid ""
+"Elixir allows developers to hide both modules and functions from the "
+"documentation by setting the doc attribute to false:"
+msgstr ""
+"docアトリビュートをfalseにセットすることで、モジュールと関数の両方をド\n"
+"キュメンテーションから隠すことをElixirはデベロッパに許します:"
+
+#: deps/elixir/lib/elixir/pages/Writing Documentation.md:79
+msgid ""
+"Notice that, although developers can add `@doc false` to functions, it does "
+"not make the function private:"
+msgstr ""
+"デベロッパが`@doc false`を関数に追加しても、関数がプライベートには\n"
+"ならないことに注意してください。"
+
+#: deps/elixir/lib/elixir/pages/Writing Documentation.md:86
+msgid ""
+"The function above can still be invoked as `MyApp.Sample.add(1, 2)`. Not "
+"only that, if the `MyApp.Sample` is imported, the `add/2` function will also "
+"be imported into the caller. For those reasons, be wary when adding `@doc "
+"false` to functions, instead prefer one of:"
+msgstr ""
+"上の関数はまだ`MyApp.Sample.add(1, 2)`として呼び出すことができます。そ\n"
+"れだけでなく、もし`MyApp.Sample`がimportされていたら、`add/2`関数もまた\n"
+"呼出し側へインポートされるでしょう。それらの理由のために、関数へ`@doc\n"
+"false`を追加するときは注意して、代りに次の何れかを選んでください:"
+
+#: deps/elixir/lib/elixir/pages/Writing Documentation.md:88
+msgid ""
+"  * Move the private function to a module with `@moduledoc false`, like "
+"`MyApp.Hidden`, ensuring the function won't be accidentally exposed or "
+"imported. In fact, you can use `@moduledoc false` to hide a whole module and "
+"still document each function with `@doc`. Tools will still ignore the module."
+msgstr ""
+"  * プライベート関数を`MyApp.Hidden`のような、偶然に公開されたりインポー\n"
+"    トされたりしないことを確実にする`@moduledoc false`のモジュールへ移\n"
+"    動してください。実際、モジュール全体を隠し、各関数のドキュメントに\n"
+"    は`@doc`をつけたままにするために、`@moduledoc false`を使うことがで\n"
+"    きます。ツールはモジュールを無視します。"
+
+#: deps/elixir/lib/elixir/pages/Writing Documentation.md:90
+msgid ""
+"  * Start the function name with underscores, for example, `__add__/2`, and "
+"add `@doc false`. The compiler does not import functions with underscore and "
+"the underscore will tell users to be wary of using it."
+msgstr ""
+"  * 関数名を`__add__/2`のような、アンダースコアで始めて、`@doc false`を\n"
+"    加えてください。コンパイラはアンダースコアで始まる関数をimportせず、\n"
+"    アンダースコアはユーザにそれを使うことに慎重であるように伝えます。"
+
+#: deps/elixir/lib/elixir/pages/Writing Documentation.md:92
+msgid "## Documentation != Comments"
+msgstr "## Documentation != Comments"
+
+#: deps/elixir/lib/elixir/pages/Writing Documentation.md:94
+msgid ""
+"Elixir makes the difference between documentation and code comments. "
+"Documentation are for users of your API, be it your co-worker or your future "
+"self. Modules and functions must always be documented if they are part of "
+"your application public interface (API)."
+msgstr ""
+"Elixirはドキュメンテーションとコードコメントとを異って扱います。ドキュ\n"
+"メンテーションはあなたのAPIのユーザ、あなたの共同作業者、そして未来のあ\n"
+"なた自身のためです。モジュールと関数はあなたのアプリケーションの公開イ\n"
+"ンタフェース(API)の一部であるかぎり、常にドキュメント化されなければなり\n"
+"ません。"
+
+#: deps/elixir/lib/elixir/pages/Writing Documentation.md:96
+msgid ""
+"Code comments are for developers reading the code. They are useful to mark "
+"improvements, leave notes for developers reading the code (for example, you "
+"decided to not call a function due to a bug in a library) and so forth."
+msgstr ""
+"コードコメントはコードを読むデベロッパのためです。それらは改善を記録す\n"
+"るためと、コードを読むデベロッパのために(たとえば、あなたはライブラリの\n"
+"バグのために関数を呼ばないことに決めたなどの)ノートを残すためなどに役に\n"
+"立ちます。"
+
+#: deps/elixir/lib/elixir/pages/Writing Documentation.md:98
+msgid "In other words, documentation is required, code comments are optional."
+msgstr ""
+"言い替えると、ドキュメンテーションは必要とされ、コードコメントはオプショ\n"
+"ンです。"
+
+#: deps/elixir/lib/elixir/pages/Writing Documentation.md:100
+msgid "## Code.get_docs/2"
+msgstr "## Code.get_docs/2"
+
+#: deps/elixir/lib/elixir/pages/Writing Documentation.md:102
+msgid ""
+"Elixir stores documentation inside pre-defined chunks in the bytecode. It "
+"can be accessed from Elixir by using the `Code.get_docs/2` function. This "
+"also means documentation is only accessed when required and not when modules "
+"are loaded by the Virtual Machine. The only downside is that modules defined "
+"in-memory, like the ones defined via IEx, cannot have their documentation "
+"accessed.\n"
+msgstr ""
+"Elixirはバイトコードに予め定義されたチャンク中にドキュメンテーションを\n"
+"保存します。Elixirから`Code.get_docs/2`関数を使ってアクセスできます。こ\n"
+"れはドキュメンテーションが仮想マシンによってモジュールがロードされたと\n"
+"きでなく、必要なときだけアクセスされることも意味します。唯一の不利な点\n"
+"はIExで定義されたモジュールのようにインメモリで定義されたモジュールはそ\n"
+"のドキュメンテーションにアクセスできないことです。\n"

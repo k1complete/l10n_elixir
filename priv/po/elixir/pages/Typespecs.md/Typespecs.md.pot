@@ -1,0 +1,166 @@
+#: deps/elixir/lib/elixir/pages/Typespecs.md:1
+msgid "# Typespecs"
+msgstr ""
+
+#: deps/elixir/lib/elixir/pages/Typespecs.md:3
+msgid ""
+"Elixir comes with a notation for declaring types and specifications. Elixir is\n"
+"dynamically typed, and as such, typespecs are never used by the compiler to\n"
+"optimize or modify code. Still, using typespecs is useful as documentation and\n"
+"tools such as [Dialyzer](http://www.erlang.org/doc/man/dialyzer.html) can\n"
+"analyze code with typespecs to find bugs."
+msgstr ""
+
+#: deps/elixir/lib/elixir/pages/Typespecs.md:9
+msgid ""
+"The attributes `@type`, `@opaque`, `@typep`, `@spec`, `@callback` and\n"
+"`@macrocallback` available in modules are handled by the equivalent macros\n"
+"defined by this module. See sub-sections \"Defining a type\" and \"Defining a\n"
+"specification\" below."
+msgstr ""
+
+#: deps/elixir/lib/elixir/pages/Typespecs.md:14
+msgid "## Types and their syntax"
+msgstr ""
+
+#: deps/elixir/lib/elixir/pages/Typespecs.md:16
+msgid ""
+"The type syntax provided by Elixir is fairly similar to [the one in\n"
+"Erlang](http://www.erlang.org/doc/reference_manual/typespec.html)."
+msgstr ""
+
+#: deps/elixir/lib/elixir/pages/Typespecs.md:19
+msgid ""
+"Most of the built-in types provided in Erlang (for example, `pid()`) are\n"
+"expressed the same way: `pid()` or simply `pid`. Parameterized types are also\n"
+"supported (`list(integer)`) and so are remote types (`Enum.t`)."
+msgstr ""
+
+#: deps/elixir/lib/elixir/pages/Typespecs.md:23
+msgid ""
+"Integers and atom literals are allowed as types (ex. `1`, `:atom` or\n"
+"`false`). All other types are built of unions of predefined types. Certain\n"
+"shorthands are allowed, such as `[...]`, `<<>>` and `{...}`."
+msgstr ""
+
+#: deps/elixir/lib/elixir/pages/Typespecs.md:27
+msgid "### Basic types"
+msgstr ""
+
+#: deps/elixir/lib/elixir/pages/Typespecs.md:51
+msgid "### Literals"
+msgstr ""
+
+#: deps/elixir/lib/elixir/pages/Typespecs.md:53
+msgid "The following literals are also supported in typespecs:"
+msgstr ""
+
+#: deps/elixir/lib/elixir/pages/Typespecs.md:85
+msgid "### Built-in types"
+msgstr ""
+
+#: deps/elixir/lib/elixir/pages/Typespecs.md:87
+msgid ""
+"These types are also provided by Elixir as shortcuts on top of the\n"
+"basic and literal types."
+msgstr ""
+
+#: deps/elixir/lib/elixir/pages/Typespecs.md:90
+msgid ""
+"Built-in type           | Defined as\n"
+":---------------------- | :---------\n"
+"`term()`                | `any()`\n"
+"`binary()`              | `<<_::_ * 8>>`\n"
+"`bitstring()`           | `<<_::_ * 1>>`\n"
+"`boolean()`             | `false` \\| `true`\n"
+"`byte()`                | `0..255`\n"
+"`char()`                | `0..0x10ffff`\n"
+"`number()`              | `integer()` \\| `float()`\n"
+"`char_list()`           | `[char()]`\n"
+"`list()`                | `[any()]`\n"
+"`maybe_improper_list()` | `maybe_improper_list(any(), any())`\n"
+"`nonempty_list()`       | `nonempty_list(any())`\n"
+"`iodata()`              | `iolist()` \\| `binary()`\n"
+"`iolist()`              | `maybe_improper_list(byte()` \\| `binary()` \\| `iolist(), binary()` \\| `[])`\n"
+"`module()`              | `atom()` \\| `tuple()`\n"
+"`arity()`               | `0..255`\n"
+"`mfa()`                 | `{atom(), atom(), arity()}`\n"
+"`node()`                | `atom()`\n"
+"`timeout()`             | `:infinity` \\| `non_neg_integer()`\n"
+"`no_return()`           | `none()`\n"
+"`fun()`                 | `(... -> any)`\n"
+"`struct()`              | `%{__struct__: atom()}`\n"
+"`as_boolean(t)`         | `t`"
+msgstr ""
+
+#: deps/elixir/lib/elixir/pages/Typespecs.md:115
+msgid "### Remote types"
+msgstr ""
+
+#: deps/elixir/lib/elixir/pages/Typespecs.md:117
+msgid ""
+"Any module is also able to define its own type and the modules in\n"
+"Elixir are no exception. For example, a string is `String.t`, a\n"
+"range is `Range.t`, any enumerable can be `Enum.t` and so on."
+msgstr ""
+
+#: deps/elixir/lib/elixir/pages/Typespecs.md:121
+msgid "## Defining a type"
+msgstr ""
+
+#: deps/elixir/lib/elixir/pages/Typespecs.md:127
+msgid ""
+"A type defined with `@typep` is private. An opaque type, defined with\n"
+"`@opaque` is a type where the internal structure of the type will not be\n"
+"visible, but the type is still public."
+msgstr ""
+
+#: deps/elixir/lib/elixir/pages/Typespecs.md:131
+msgid ""
+"Types can be parameterized by defining variables as parameters, these variables\n"
+"can then be used to define the type."
+msgstr ""
+
+#: deps/elixir/lib/elixir/pages/Typespecs.md:136
+msgid "## Defining a specification"
+msgstr ""
+
+#: deps/elixir/lib/elixir/pages/Typespecs.md:142
+msgid ""
+"Callbacks are used to define the callbacks functions of behaviours (see\n"
+"`Behaviour`)."
+msgstr ""
+
+#: deps/elixir/lib/elixir/pages/Typespecs.md:145
+msgid ""
+"Guards can be used to restrict type variables given as arguments to the\n"
+"function."
+msgstr ""
+
+#: deps/elixir/lib/elixir/pages/Typespecs.md:150
+msgid "Type variables with no restriction can also be defined."
+msgstr ""
+
+#: deps/elixir/lib/elixir/pages/Typespecs.md:154
+msgid "Specifications can be overloaded just like ordinary functions."
+msgstr ""
+
+#: deps/elixir/lib/elixir/pages/Typespecs.md:159
+msgid "## Notes"
+msgstr ""
+
+#: deps/elixir/lib/elixir/pages/Typespecs.md:161
+msgid ""
+"Elixir discourages the use of type `string` as it might be confused with\n"
+"binaries which are referred to as \"strings\" in Elixir (as opposed to character\n"
+"lists). In order to use the type that is called `string` in Erlang, one has to\n"
+"use the `char_list` type which is a synonym for `string`. If you use `string`,\n"
+"you'll get a warning from the compiler."
+msgstr ""
+
+#: deps/elixir/lib/elixir/pages/Typespecs.md:167
+msgid ""
+"If you want to refer to the \"string\" type (the one operated on by functions in\n"
+"the `String` module), use `String.t` type instead."
+msgstr ""
+
