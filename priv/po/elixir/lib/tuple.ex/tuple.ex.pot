@@ -1,3 +1,19 @@
+#. TRANSLATORS: def Tuple.append(tuple, value)
+#: lib/tuple.ex:51 
+msgid ""
+"Inserts an element at the end of a tuple.\n"
+"\n"
+"Returns a new tuple with the element appended at the end, and contains\n"
+"the elements in `tuple` followed by `value` as the last element.\n"
+"\n"
+"Inlined by the compiler.\n"
+"\n"
+"## Examples\n"
+"    iex> tuple = {:foo, :bar}\n"
+"    iex> Tuple.append(tuple, :baz)\n"
+"    {:foo, :bar, :baz}\n"
+"\n"
+msgstr ""
 #. TRANSLATORS: def Tuple.delete_at(tuple, index)
 #: lib/tuple.ex:70 
 msgid ""
@@ -14,22 +30,6 @@ msgid ""
 "    iex> tuple = {:foo, :bar, :baz}\n"
 "    iex> Tuple.delete_at(tuple, 0)\n"
 "    {:bar, :baz}\n"
-"\n"
-msgstr ""
-#. TRANSLATORS: def Tuple.append(tuple, value)
-#: lib/tuple.ex:51 
-msgid ""
-"Inserts an element at the end of a tuple.\n"
-"\n"
-"Returns a new tuple with the element appended at the end, and contains\n"
-"the elements in `tuple` followed by `value` as the last element.\n"
-"\n"
-"Inlined by the compiler.\n"
-"\n"
-"## Examples\n"
-"    iex> tuple = {:foo, :bar}\n"
-"    iex> Tuple.append(tuple, :baz)\n"
-"    {:foo, :bar, :baz}\n"
 "\n"
 msgstr ""
 #. TRANSLATORS: def Tuple.to_list(tuple)

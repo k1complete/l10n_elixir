@@ -1,3 +1,9 @@
+#. TRANSLATORS: def Module.LocalsTracker.imports_with_dispatch(ref, arg)
+#: lib/module/locals_tracker.ex:49 
+msgid ""
+"Returns all imported modules that had the given\n"
+"`{name, arity}` invoked.\n"
+msgstr ""
 #. TRANSLATORS: def Module.LocalsTracker.reachable(ref)
 #: lib/module/locals_tracker.ex:59 
 msgid ""
@@ -6,10 +12,4 @@ msgid ""
 "By default, all public functions are reachable.\n"
 "A private function is only reachable if it has\n"
 "a public function that it invokes directly.\n"
-msgstr ""
-#. TRANSLATORS: def Module.LocalsTracker.imports_with_dispatch(ref, arg)
-#: lib/module/locals_tracker.ex:49 
-msgid ""
-"Returns all imported modules that had the given\n"
-"`{name, arity}` invoked.\n"
 msgstr ""

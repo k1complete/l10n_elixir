@@ -10,6 +10,15 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
+#. TRANSLATORS: def Module.LocalsTracker.imports_with_dispatch(ref, arg)
+#: lib/module/locals_tracker.ex:49
+msgid ""
+"Returns all imported modules that had the given\n"
+"`{name, arity}` invoked.\n"
+msgstr ""
+"与えられた`{name, arity}`を呼び出したインポートされたモジュール\n"
+"全てを返します。\n"
+
 #. TRANSLATORS: def Module.LocalsTracker.reachable(ref)
 #: lib/module/locals_tracker.ex:59
 msgid ""
@@ -24,12 +33,3 @@ msgstr ""
 "デフォルトでは、全ての公開関数は到達可能です。\n"
 "プライベート関数は、それをダイレクトに呼び出している\n"
 "公開関数があれば到達可能なだけです。\n"
-
-#. TRANSLATORS: def Module.LocalsTracker.imports_with_dispatch(ref, arg)
-#: lib/module/locals_tracker.ex:49
-msgid ""
-"Returns all imported modules that had the given\n"
-"`{name, arity}` invoked.\n"
-msgstr ""
-"与えられた`{name, arity}`を呼び出したインポートされたモジュール\n"
-"全てを返します。\n"

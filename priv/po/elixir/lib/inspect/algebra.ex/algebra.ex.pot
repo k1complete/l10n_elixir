@@ -1,31 +1,5 @@
-#. TRANSLATORS: def Inspect.Algebra.concat(docs)
-#: lib/inspect/algebra.ex:272 
-msgid ""
-"Concatenates a list of documents.\n"
-msgstr ""
-#. TRANSLATORS: def Inspect.Algebra.space(x, y)
-#: lib/inspect/algebra.ex:375 
-msgid ""
-"Inserts a mandatory single space between two document entities.\n"
-"\n"
-"## Examples\n"
-"\n"
-"    iex> doc = Inspect.Algebra.space \"Hughes\", \"Wadler\"\n"
-"    iex> Inspect.Algebra.format(doc, 80)\n"
-"    [\"Hughes\", \" \", \"Wadler\"]\n"
-"\n"
-msgstr ""
-#. TRANSLATORS: def Inspect.Algebra.format(d, w)
-#: lib/inspect/algebra.ex:513 
-msgid ""
-"The formatting function.\n"
-"\n"
-"Takes the maximum width and a document to print as its arguments\n"
-"and returns an IO data representation of the best layout for the\n"
-"document to fit in the given width.\n"
-msgstr ""
 #. TRANSLATORS: def Inspect.Algebra.line(x, y)
-#: lib/inspect/algebra.ex:388 
+#: lib/inspect/algebra.ex:389 
 msgid ""
 "Inserts a mandatory linebreak between two document entities.\n"
 "\n"
@@ -36,14 +10,34 @@ msgid ""
 "    [\"Hughes\", \"\\n\", \"Wadler\"]\n"
 "\n"
 msgstr ""
-#. TRANSLATORS: def Inspect.Algebra.glue(x, g, y)
-#: lib/inspect/algebra.ex:336 
+#. TRANSLATORS: def Inspect.Algebra.concat(docs)
+#: lib/inspect/algebra.ex:273 
 msgid ""
-"Inserts a break, passed as the second argument, between two docs,\n"
-"the first and the third arguments.\n"
+"Concatenates a list of documents.\n"
+msgstr ""
+#. TRANSLATORS: def Inspect.Algebra.format(d, w)
+#: lib/inspect/algebra.ex:514 
+msgid ""
+"The formatting function.\n"
+"\n"
+"Takes the maximum width and a document to print as its arguments\n"
+"and returns an IO data representation of the best layout for the\n"
+"document to fit in the given width.\n"
+msgstr ""
+#. TRANSLATORS: def Inspect.Algebra.space(x, y)
+#: lib/inspect/algebra.ex:376 
+msgid ""
+"Inserts a mandatory single space between two document entities.\n"
+"\n"
+"## Examples\n"
+"\n"
+"    iex> doc = Inspect.Algebra.space \"Hughes\", \"Wadler\"\n"
+"    iex> Inspect.Algebra.format(doc, 80)\n"
+"    [\"Hughes\", \" \", \"Wadler\"]\n"
+"\n"
 msgstr ""
 #. TRANSLATORS: def Inspect.Algebra.group(d)
-#: lib/inspect/algebra.ex:343 
+#: lib/inspect/algebra.ex:344 
 msgid ""
 "Returns a group containing the specified document.\n"
 "\n"
@@ -72,7 +66,7 @@ msgid ""
 "\n"
 msgstr ""
 #. TRANSLATORS: def Inspect.Algebra.nest(x, i)
-#: lib/inspect/algebra.ex:280 
+#: lib/inspect/algebra.ex:281 
 msgid ""
 "Nests document entity `x` positions deep.\n"
 "\n"
@@ -85,68 +79,8 @@ msgid ""
 "    [\"hello\", \"\\n     \", \"world\"]\n"
 "\n"
 msgstr ""
-#. TRANSLATORS: Elixir.Inspect.Opts Summary
-#: lib/inspect/algebra.ex:2 
-msgid ""
-"Defines the Inspect.Opts used by the Inspect protocol.\n"
-"\n"
-"The following fields are available:\n"
-"\n"
-"  * `:structs` - when `false`, structs are not formatted by the inspect\n"
-"    protocol, they are instead printed as maps, defaults to `true`.\n"
-"\n"
-"  * `:binaries` - when `:as_strings` all binaries will be printed as strings,\n"
-"    non-printable bytes will be escaped.\n"
-"\n"
-"    When `:as_binaries` all binaries will be printed in bit syntax.\n"
-"\n"
-"    When the default `:infer`, the binary will be printed as a string if it\n"
-"    is printable, otherwise in bit syntax.\n"
-"\n"
-"  * `:char_lists` - when `:as_char_lists` all lists will be printed as char\n"
-"    lists, non-printable elements will be escaped.\n"
-"\n"
-"    When `:as_lists` all lists will be printed as lists.\n"
-"\n"
-"    When the default `:infer`, the list will be printed as a char list if it\n"
-"    is printable, otherwise as list.\n"
-"\n"
-"  * `:limit` - limits the number of items that are printed for tuples,\n"
-"    bitstrings, and lists, does not apply to strings nor char lists, defaults\n"
-"    to 50.\n"
-"\n"
-"  * `:pretty` - if set to `true` enables pretty printing, defaults to `false`.\n"
-"\n"
-"  * `:width` - defaults to the 80 characters, used when pretty is `true` or\n"
-"    when printing to IO devices.\n"
-"\n"
-"  * `:base` - print integers as :binary, :octal, :decimal, or :hex, defaults\n"
-"    to :decimal\n"
-"\n"
-"  * `:safe` - when `false`, failures while inspecting structs will be raised\n"
-"    as errors instead of being wrapped in the Inspect.Error exception. This\n"
-"    is useful when debugging failures and crashes for custom inspect\n"
-"    implementations\n"
-"\n"
-msgstr ""
-#. TRANSLATORS: def Inspect.Algebra.surround(left, doc, right)
-#: lib/inspect/algebra.ex:423 
-msgid ""
-"Surrounds a document with characters.\n"
-"\n"
-"Puts the document between left and right enclosing and nesting it.\n"
-"The document is marked as a group, to show the maximum as possible\n"
-"concisely together.\n"
-"\n"
-"## Examples\n"
-"\n"
-"    iex> doc = Inspect.Algebra.surround \"[\", Inspect.Algebra.glue(\"a\", \"b\"), \"]\"\n"
-"    iex> Inspect.Algebra.format(doc, 3)\n"
-"    [\"[\", \"a\", \"\\n \", \"b\", \"]\"]\n"
-"\n"
-msgstr ""
 #. TRANSLATORS: def Inspect.Algebra.fold_doc(list, fun)
-#: lib/inspect/algebra.ex:401 
+#: lib/inspect/algebra.ex:402 
 msgid ""
 "Folds a list of document entities into a document entity\n"
 "using a function that is passed as the first argument.\n"
@@ -161,8 +95,30 @@ msgid ""
 "    [\"A\", \"!\", \"B\"]\n"
 "\n"
 msgstr ""
+#. TRANSLATORS: def Inspect.Algebra.glue(x, g, y)
+#: lib/inspect/algebra.ex:337 
+msgid ""
+"Inserts a break, passed as the second argument, between two docs,\n"
+"the first and the third arguments.\n"
+msgstr ""
+#. TRANSLATORS: def Inspect.Algebra.surround(left, doc, right)
+#: lib/inspect/algebra.ex:424 
+msgid ""
+"Surrounds a document with characters.\n"
+"\n"
+"Puts the document between left and right enclosing and nesting it.\n"
+"The document is marked as a group, to show the maximum as possible\n"
+"concisely together.\n"
+"\n"
+"## Examples\n"
+"\n"
+"    iex> doc = Inspect.Algebra.surround \"[\", Inspect.Algebra.glue(\"a\", \"b\"), \"]\"\n"
+"    iex> Inspect.Algebra.format(doc, 3)\n"
+"    [\"[\", \"a\", \"\\n \", \"b\", \"]\"]\n"
+"\n"
+msgstr ""
 #. TRANSLATORS: Elixir.Inspect.Algebra Summary
-#: lib/inspect/algebra.ex:73 
+#: lib/inspect/algebra.ex:74 
 msgid ""
 "A set of functions for creating and manipulating algebra\n"
 "documents.\n"
@@ -232,7 +188,7 @@ msgid ""
 "\n"
 msgstr ""
 #. TRANSLATORS: def Inspect.Algebra.break(s)
-#: lib/inspect/algebra.ex:301 
+#: lib/inspect/algebra.ex:302 
 msgid ""
 "Document entity representing a break.\n"
 "\n"
@@ -257,18 +213,75 @@ msgid ""
 "\n"
 msgstr ""
 #. TRANSLATORS: def Inspect.Algebra.glue(x, y)
-#: lib/inspect/algebra.ex:330 
+#: lib/inspect/algebra.ex:331 
 msgid ""
 "Inserts a break between two docs. See `break/1` for more info.\n"
 msgstr ""
+#. TRANSLATORS: def Inspect.Algebra.concat(x, y)
+#: lib/inspect/algebra.ex:258 
+msgid ""
+"Concatenates two document entities.\n"
+"\n"
+"## Examples\n"
+"\n"
+"    iex> doc = Inspect.Algebra.concat \"hello\", \"world\"\n"
+"    iex> Inspect.Algebra.format(doc, 80)\n"
+"    [\"hello\", \"world\"]\n"
+"\n"
+msgstr ""
+#. TRANSLATORS: Elixir.Inspect.Opts Summary
+#: lib/inspect/algebra.ex:2 
+msgid ""
+"Defines the Inspect.Opts used by the Inspect protocol.\n"
+"\n"
+"The following fields are available:\n"
+"\n"
+"  * `:structs` - when `false`, structs are not formatted by the inspect\n"
+"    protocol, they are instead printed as maps, defaults to `true`.\n"
+"\n"
+"  * `:binaries` - when `:as_strings` all binaries will be printed as strings,\n"
+"    non-printable bytes will be escaped.\n"
+"\n"
+"    When `:as_binaries` all binaries will be printed in bit syntax.\n"
+"\n"
+"    When the default `:infer`, the binary will be printed as a string if it\n"
+"    is printable, otherwise in bit syntax.\n"
+"\n"
+"  * `:char_lists` - when `:as_char_lists` all lists will be printed as char\n"
+"    lists, non-printable elements will be escaped.\n"
+"\n"
+"    When `:as_lists` all lists will be printed as lists.\n"
+"\n"
+"    When the default `:infer`, the list will be printed as a char list if it\n"
+"    is printable, otherwise as list.\n"
+"\n"
+"  * `:limit` - limits the number of items that are printed for tuples,\n"
+"    bitstrings, and lists, does not apply to strings nor char lists, defaults\n"
+"    to 50.\n"
+"\n"
+"  * `:pretty` - if set to `true` enables pretty printing, defaults to `false`.\n"
+"\n"
+"  * `:width` - defaults to 80 characters, used when pretty is `true` or when\n"
+"    printing to IO devices. Set to 0 to force each item to be printed on its\n"
+"    own line.\n"
+"\n"
+"  * `:base` - print integers as :binary, :octal, :decimal, or :hex, defaults\n"
+"    to :decimal\n"
+"\n"
+"  * `:safe` - when `false`, failures while inspecting structs will be raised\n"
+"    as errors instead of being wrapped in the Inspect.Error exception. This\n"
+"    is useful when debugging failures and crashes for custom inspect\n"
+"    implementations\n"
+"\n"
+msgstr ""
 #. TRANSLATORS: def Inspect.Algebra.to_doc(map, opts)
-#: lib/inspect/algebra.ex:193 
+#: lib/inspect/algebra.ex:194 
 msgid ""
 "Converts an Elixir structure to an algebra document\n"
 "according to the inspect protocol.\n"
 msgstr ""
 #. TRANSLATORS: def Inspect.Algebra.surround_many(left, docs, right, opts, fun, separator \\ ",")
-#: lib/inspect/algebra.ex:442 
+#: lib/inspect/algebra.ex:443 
 msgid ""
 "Maps and glues a collection of items.\n"
 "\n"
@@ -293,20 +306,8 @@ msgid ""
 "    iex> Inspect.Algebra.format(doc, 20) |> IO.iodata_to_binary\n"
 "    \"[1! 2! 3! ...]\"\n"
 msgstr ""
-#. TRANSLATORS: def Inspect.Algebra.concat(x, y)
-#: lib/inspect/algebra.ex:257 
-msgid ""
-"Concatenates two document entities.\n"
-"\n"
-"## Examples\n"
-"\n"
-"    iex> doc = Inspect.Algebra.concat \"hello\", \"world\"\n"
-"    iex> Inspect.Algebra.format(doc, 80)\n"
-"    [\"hello\", \"world\"]\n"
-"\n"
-msgstr ""
 #. TRANSLATORS: def Inspect.Algebra.empty()
-#: lib/inspect/algebra.ex:245 
+#: lib/inspect/algebra.ex:246 
 msgid ""
 "Returns a document entity used to represent nothingness.\n"
 "\n"
@@ -317,7 +318,7 @@ msgid ""
 "\n"
 msgstr ""
 #. TRANSLATORS: Elixir.Inspect.Error Summary
-#: lib/inspect/algebra.ex:66 
+#: lib/inspect/algebra.ex:67 
 msgid ""
 "Raised when a struct cannot be inspected.\n"
 msgstr ""

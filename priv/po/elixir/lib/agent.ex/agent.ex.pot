@@ -1,14 +1,3 @@
-#. TRANSLATORS: def Agent.cast(agent, fun)
-#: lib/agent.ex:271 
-msgid ""
-"Performs a cast (fire and forget) operation on the agent state.\n"
-"\n"
-"The function `fun` is sent to the `agent` which invokes the function\n"
-"passing the agent state. The function must return the new state.\n"
-"\n"
-"Note that `cast` returns `:ok` immediately, regardless of whether the\n"
-"destination node or agent exists.\n"
-msgstr ""
 #. TRANSLATORS: @type name
 #: lib/agent.ex:111 
 msgid ""
@@ -29,6 +18,17 @@ msgid ""
 "\n"
 "A timeout can also be specified (it has a default value of 5000).\n"
 "This function always returns `:ok`.\n"
+msgstr ""
+#. TRANSLATORS: def Agent.cast(agent, fun)
+#: lib/agent.ex:271 
+msgid ""
+"Performs a cast (fire and forget) operation on the agent state.\n"
+"\n"
+"The function `fun` is sent to the `agent` which invokes the function\n"
+"passing the agent state. The function must return the new state.\n"
+"\n"
+"Note that `cast` returns `:ok` immediately, regardless of whether the\n"
+"destination node or agent exists.\n"
 msgstr ""
 #. TRANSLATORS: def Agent.stop(agent, reason \\ :normal, timeout \\ :infinity)
 #: lib/agent.ex:297 
@@ -92,6 +92,26 @@ msgid ""
 "\n"
 "If the given function callback fails with `reason`, the function returns\n"
 "`{:error, reason}`.\n"
+msgstr ""
+#. TRANSLATORS: def Agent.get(agent, fun, timeout \\ 5000)
+#: lib/agent.ex:192 
+msgid ""
+"Gets an agent value via the given function.\n"
+"\n"
+"The function `fun` is sent to the `agent` which invokes the function\n"
+"passing the agent state. The result of the function invocation is\n"
+"returned.\n"
+"\n"
+"A timeout can also be specified (it has a default value of 5000).\n"
+msgstr ""
+#. TRANSLATORS: def Agent.get(agent, module, fun, args, timeout \\ 5000)
+#: lib/agent.ex:206 
+msgid ""
+"Gets an agent value via the given function.\n"
+"\n"
+"Same as `get/3` but a module, function and args are expected\n"
+"instead of an anonymous function. The state is added as first\n"
+"argument to the given list of args.\n"
 msgstr ""
 #. TRANSLATORS: Elixir.Agent Summary
 #: lib/agent.ex:2 
@@ -214,26 +234,6 @@ msgid ""
 "Performs a cast (fire and forget) operation on the agent state.\n"
 "\n"
 "Same as `cast/2` but a module, function and args are expected\n"
-"instead of an anonymous function. The state is added as first\n"
-"argument to the given list of args.\n"
-msgstr ""
-#. TRANSLATORS: def Agent.get(agent, fun, timeout \\ 5000)
-#: lib/agent.ex:192 
-msgid ""
-"Gets an agent value via the given function.\n"
-"\n"
-"The function `fun` is sent to the `agent` which invokes the function\n"
-"passing the agent state. The result of the function invocation is\n"
-"returned.\n"
-"\n"
-"A timeout can also be specified (it has a default value of 5000).\n"
-msgstr ""
-#. TRANSLATORS: def Agent.get(agent, module, fun, args, timeout \\ 5000)
-#: lib/agent.ex:206 
-msgid ""
-"Gets an agent value via the given function.\n"
-"\n"
-"Same as `get/3` but a module, function and args are expected\n"
 "instead of an anonymous function. The state is added as first\n"
 "argument to the given list of args.\n"
 msgstr ""

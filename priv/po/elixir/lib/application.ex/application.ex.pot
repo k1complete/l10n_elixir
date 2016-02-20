@@ -1,12 +1,7 @@
-#. TRANSLATORS: def Application.app_dir(app, path)
-#: lib/application.ex:374 
+#. TRANSLATORS: def Application.loaded_applications()
+#: lib/application.ex:390 
 msgid ""
-"Returns the given path inside `app_dir/1`.\n"
-msgstr ""
-#. TRANSLATORS: def Application.get_all_env(app)
-#: lib/application.ex:161 
-msgid ""
-"Returns all key-value pairs for `app`.\n"
+"Returns a list with information about the applications which have been loaded.\n"
 msgstr ""
 #. TRANSLATORS: def Application.fetch_env(app, key)
 #: lib/application.ex:180 
@@ -14,11 +9,6 @@ msgid ""
 "Returns the value for `key` in `app`'s environment in a tuple.\n"
 "\n"
 "If the configuration parameter does not exist, the function returns `:error`.\n"
-msgstr ""
-#. TRANSLATORS: def Application.loaded_applications()
-#: lib/application.ex:390 
-msgid ""
-"Returns a list with information about the applications which have been loaded.\n"
 msgstr ""
 #. TRANSLATORS: def Application.put_env(app, key, value, opts \\ [])
 #: lib/application.ex:209 
@@ -38,6 +28,19 @@ msgid ""
 "parameters set with this function will not be overridden by the ones defined\n"
 "in the application resource file on load. This means persistent values will\n"
 "stick after the application is loaded and also on application reload.\n"
+msgstr ""
+#. TRANSLATORS: def Application.app_dir(app, path)
+#: lib/application.ex:374 
+msgid ""
+"Returns the given path inside `app_dir/1`.\n"
+msgstr ""
+#. TRANSLATORS: def Application.unload(app)
+#: lib/application.ex:331 
+msgid ""
+"Unloads the given `app`.\n"
+"\n"
+"It will also unload all `:included_applications`.\n"
+"Note that the function does not purge the application modules.\n"
 msgstr ""
 #. TRANSLATORS: def Application.spec(app)
 #: lib/application.ex:115 
@@ -181,6 +184,11 @@ msgid ""
 "of all loaded applications. Returns `nil` if\n"
 "the module is not listed in any application spec.\n"
 msgstr ""
+#. TRANSLATORS: def Application.get_all_env(app)
+#: lib/application.ex:161 
+msgid ""
+"Returns all key-value pairs for `app`.\n"
+msgstr ""
 #. TRANSLATORS: def Application.stop(app)
 #: lib/application.ex:307 
 msgid ""
@@ -224,14 +232,6 @@ msgid ""
 "Note also that the `:transient` type is of little practical use, since when a\n"
 "supervision tree terminates, the reason is set to `:shutdown`, not `:normal`.\n"
 msgstr ""
-#. TRANSLATORS: def Application.unload(app)
-#: lib/application.ex:331 
-msgid ""
-"Unloads the given `app`.\n"
-"\n"
-"It will also unload all `:included_applications`.\n"
-"Note that the function does not purge the application modules.\n"
-msgstr ""
 #. TRANSLATORS: def Application.fetch_env!(app, key)
 #: lib/application.ex:193 
 msgid ""
@@ -244,13 +244,6 @@ msgstr ""
 msgid ""
 "Returns a list with information about the applications which are currently running.\n"
 msgstr ""
-#. TRANSLATORS: def Application.delete_env(app, key, opts \\ [])
-#: lib/application.ex:231 
-msgid ""
-"Deletes the `key` from the given `app` environment.\n"
-"\n"
-"See `put_env/4` for a description of the options.\n"
-msgstr ""
 #. TRANSLATORS: def Application.spec(app, key)
 #: lib/application.ex:133 
 msgid ""
@@ -259,6 +252,13 @@ msgid ""
 "See `spec/1` for the supporte keys. If the given\n"
 "specification parameter does not exist, this function\n"
 "will raise.\n"
+msgstr ""
+#. TRANSLATORS: def Application.delete_env(app, key, opts \\ [])
+#: lib/application.ex:231 
+msgid ""
+"Deletes the `key` from the given `app` environment.\n"
+"\n"
+"See `put_env/4` for a description of the options.\n"
 msgstr ""
 #. TRANSLATORS: def Application.get_env(app, key, default \\ nil)
 #: lib/application.ex:169 

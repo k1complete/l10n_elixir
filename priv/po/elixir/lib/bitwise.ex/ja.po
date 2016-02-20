@@ -10,23 +10,8 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
-#. TRANSLATORS: defmacro Bitwise.bor(left, right)
-#: lib/bitwise.ex:96
-msgid ""
-"Calculates the bitwise OR of its arguments.\n"
-"\n"
-"    iex> bor(9, 3)\n"
-"    11\n"
-"\n"
-msgstr ""
-"引数のビットORした結果を計算します。\n"
-"\n"
-"    iex> bor(9, 3)\n"
-"    11\n"
-"\n"
-
 #. TRANSLATORS: defmacro Bitwise.bsl(left, right)
-#: lib/bitwise.ex:140
+#: lib/bitwise.ex:141
 msgid ""
 "Calculates the result of an arithmetic left bitshift.\n"
 "\n"
@@ -52,23 +37,8 @@ msgstr ""
 "    -1\n"
 "\n"
 
-#. TRANSLATORS: defmacro Bitwise.^^^(left, right)
-#: lib/bitwise.ex:129
-msgid ""
-"Infix operator; calculates the bitwise XOR of its arguments.\n"
-"\n"
-"    iex> 9 ^^^ 3\n"
-"    10\n"
-"\n"
-msgstr ""
-"中置演算子; 引数のビットXORした結果を計算します。\n"
-"\n"
-"    iex> 9 ^^^ 3\n"
-"    10\n"
-"\n"
-
 #. TRANSLATORS: defmacro Bitwise.&&&(left, right)
-#: lib/bitwise.ex:85
+#: lib/bitwise.ex:86
 msgid ""
 "Infix operator; calculates the bitwise AND of its arguments.\n"
 "\n"
@@ -83,7 +53,7 @@ msgstr ""
 "\n"
 
 #. TRANSLATORS: defmacro Bitwise.>>>(left, right)
-#: lib/bitwise.ex:191
+#: lib/bitwise.ex:192
 msgid ""
 "Infix operator; calculates the result of an arithmetic right bitshift.\n"
 "\n"
@@ -109,8 +79,38 @@ msgstr ""
 "    -4\n"
 "\n"
 
+#. TRANSLATORS: defmacro Bitwise.^^^(left, right)
+#: lib/bitwise.ex:130
+msgid ""
+"Infix operator; calculates the bitwise XOR of its arguments.\n"
+"\n"
+"    iex> 9 ^^^ 3\n"
+"    10\n"
+"\n"
+msgstr ""
+"中置演算子; 引数のビットXORした結果を計算します。\n"
+"\n"
+"    iex> 9 ^^^ 3\n"
+"    10\n"
+"\n"
+
+#. TRANSLATORS: defmacro Bitwise.bor(left, right)
+#: lib/bitwise.ex:97
+msgid ""
+"Calculates the bitwise OR of its arguments.\n"
+"\n"
+"    iex> bor(9, 3)\n"
+"    11\n"
+"\n"
+msgstr ""
+"引数のビットORした結果を計算します。\n"
+"\n"
+"    iex> bor(9, 3)\n"
+"    11\n"
+"\n"
+
 #. TRANSLATORS: defmacro Bitwise.bsr(left, right)
-#: lib/bitwise.ex:174
+#: lib/bitwise.ex:175
 msgid ""
 "Calculates the result of an arithmetic right bitshift.\n"
 "\n"
@@ -137,7 +137,7 @@ msgstr ""
 "\n"
 
 #. TRANSLATORS: defmacro Bitwise.bnot(expr)
-#: lib/bitwise.ex:48
+#: lib/bitwise.ex:49
 msgid ""
 "Calculates the bitwise NOT of its argument.\n"
 "\n"
@@ -156,99 +156,9 @@ msgstr ""
 "    1\n"
 "\n"
 
-#. TRANSLATORS: defmacro Bitwise.|||(left, right)
-#: lib/bitwise.ex:107
-msgid ""
-"Infix operator; calculates the bitwise OR of its arguments.\n"
-"\n"
-"    iex> 9 ||| 3\n"
-"    11\n"
-"\n"
-msgstr ""
-"中置演算子; 引数のビットORした結果を計算します。\n"
-"\n"
-"    iex> 9 ||| 3\n"
-"    11\n"
-"\n"
-
-#. TRANSLATORS: defmacro Bitwise.<<<(left, right)
-#: lib/bitwise.ex:157
-msgid ""
-"Infix operator; calculates the result of an arithmetic left bitshift.\n"
-"\n"
-"    iex> 1 <<< 2\n"
-"    4\n"
-"    iex> 1 <<< -2\n"
-"    0\n"
-"    iex> -1 <<< 2\n"
-"    -4\n"
-"    iex> -1 <<< -2\n"
-"    -1\n"
-"\n"
-msgstr ""
-"中置演算子; 算術左ビットシフトした結果を計算します。\n"
-"\n"
-"    iex> 1 <<< 2\n"
-"    4\n"
-"    iex> 1 <<< -2\n"
-"    0\n"
-"    iex> -1 <<< 2\n"
-"    -4\n"
-"    iex> -1 <<< -2\n"
-"    -1\n"
-"\n"
-
-#. TRANSLATORS: defmacro Bitwise.band(left, right)
-#: lib/bitwise.ex:74
-msgid ""
-"Calculates the bitwise AND of its arguments.\n"
-"\n"
-"    iex> band(9, 3)\n"
-"    1\n"
-"\n"
-msgstr ""
-"引数のビットANDした結果を計算します。\n"
-"\n"
-"    iex> band(9, 3)\n"
-"    1\n"
-"\n"
-
-#. TRANSLATORS: defmacro Bitwise.bxor(left, right)
-#: lib/bitwise.ex:118
-msgid ""
-"Calculates the bitwise XOR of its arguments.\n"
-"\n"
-"    iex> bxor(9, 3)\n"
-"    10\n"
-"\n"
-msgstr ""
-"引数のビットXORした結果を計算します。\n"
-"\n"
-"    iex> bxor(9, 3)\n"
-"    10\n"
-"\n"
-
-#. TRANSLATORS: defmacro Bitwise.~~~(expr)
-#: lib/bitwise.ex:61
-msgid ""
-"Prefix (unary) operator; calculates the bitwise NOT of its argument.\n"
-"\n"
-"    iex> ~~~2\n"
-"    -3\n"
-"    iex> ~~~2 &&& 3\n"
-"    1\n"
-"\n"
-msgstr ""
-"前置(単項)演算子; 引数のビットのNOTを計算します。\n"
-"\n"
-"    iex> ~~~2\n"
-"    -3\n"
-"    iex> ~~~2 &&& 3\n"
-"    1\n"
-"\n"
-
 #. TRANSLATORS: Elixir.Bitwise Summary
 #: lib/bitwise.ex:2
+#, fuzzy
 msgid ""
 "This module provides macro-based operators that perform calculations\n"
 "on (sets of) bits.\n"
@@ -265,6 +175,7 @@ msgid ""
 "\n"
 "  * `:only_operators` - include only operators\n"
 "  * `:skip_operators` - skip operators\n"
+"\n"
 "\n"
 "    iex> use Bitwise, only_operators: true\n"
 "    iex> 1 &&& 1\n"
@@ -306,4 +217,95 @@ msgstr ""
 "    iex> odd? = fn(int) when band(int, 1) == 1 -> true; (_) -> false end\n"
 "    iex> odd?.(1)\n"
 "    true\n"
+"\n"
+
+#. TRANSLATORS: defmacro Bitwise.|||(left, right)
+#: lib/bitwise.ex:108
+msgid ""
+"Infix operator; calculates the bitwise OR of its arguments.\n"
+"\n"
+"    iex> 9 ||| 3\n"
+"    11\n"
+"\n"
+msgstr ""
+"中置演算子; 引数のビットORした結果を計算します。\n"
+"\n"
+"    iex> 9 ||| 3\n"
+"    11\n"
+"\n"
+
+#. TRANSLATORS: defmacro Bitwise.<<<(left, right)
+#: lib/bitwise.ex:158
+msgid ""
+"Infix operator; calculates the result of an arithmetic left bitshift.\n"
+"\n"
+"    iex> 1 <<< 2\n"
+"    4\n"
+"    iex> 1 <<< -2\n"
+"    0\n"
+"    iex> -1 <<< 2\n"
+"    -4\n"
+"    iex> -1 <<< -2\n"
+"    -1\n"
+"\n"
+msgstr ""
+"中置演算子; 算術左ビットシフトした結果を計算します。\n"
+"\n"
+"    iex> 1 <<< 2\n"
+"    4\n"
+"    iex> 1 <<< -2\n"
+"    0\n"
+"    iex> -1 <<< 2\n"
+"    -4\n"
+"    iex> -1 <<< -2\n"
+"    -1\n"
+"\n"
+
+#. TRANSLATORS: defmacro Bitwise.bxor(left, right)
+#: lib/bitwise.ex:119
+msgid ""
+"Calculates the bitwise XOR of its arguments.\n"
+"\n"
+"    iex> bxor(9, 3)\n"
+"    10\n"
+"\n"
+msgstr ""
+"引数のビットXORした結果を計算します。\n"
+"\n"
+"    iex> bxor(9, 3)\n"
+"    10\n"
+"\n"
+
+#. TRANSLATORS: defmacro Bitwise.~~~(expr)
+#: lib/bitwise.ex:62
+msgid ""
+"Prefix (unary) operator; calculates the bitwise NOT of its argument.\n"
+"\n"
+"    iex> ~~~2\n"
+"    -3\n"
+"    iex> ~~~2 &&& 3\n"
+"    1\n"
+"\n"
+msgstr ""
+"前置(単項)演算子; 引数のビットのNOTを計算します。\n"
+"\n"
+"    iex> ~~~2\n"
+"    -3\n"
+"    iex> ~~~2 &&& 3\n"
+"    1\n"
+"\n"
+
+#. TRANSLATORS: defmacro Bitwise.band(left, right)
+#: lib/bitwise.ex:75
+msgid ""
+"Calculates the bitwise AND of its arguments.\n"
+"\n"
+"    iex> band(9, 3)\n"
+"    1\n"
+"\n"
+msgstr ""
+"引数のビットANDした結果を計算します。\n"
+"\n"
+"    iex> band(9, 3)\n"
+"    1\n"
 "\n"

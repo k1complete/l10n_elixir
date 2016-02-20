@@ -19,6 +19,11 @@ msgid ""
 "\n"
 "  * `{:error, rest}` - there are no switches at the top of the given argv\n"
 msgstr ""
+#. TRANSLATORS: Elixir.OptionParser Summary
+#: lib/option_parser.ex:2 
+msgid ""
+"This module contains functions to parse command line options.\n"
+msgstr ""
 #. TRANSLATORS: def OptionParser.parse_head(argv, opts \\ [])
 #: lib/option_parser.ex:120 
 msgid ""
@@ -36,23 +41,23 @@ msgid ""
 "    {[verbose: true, source: \"lib\"], [\"test/enum_test.exs\", \"--unlock\"], []}\n"
 "\n"
 msgstr ""
-#. TRANSLATORS: Elixir.OptionParser Summary
-#: lib/option_parser.ex:2 
+#. TRANSLATORS: def OptionParser.to_argv(enum)
+#: lib/option_parser.ex:241 
 msgid ""
-"This module contains functions to parse command line options.\n"
-msgstr ""
-#. TRANSLATORS: def OptionParser.split(string)
-#: lib/option_parser.ex:271 
-msgid ""
-"Splits a string into argv chunks.\n"
+"Receives a key-value enumerable and converts it to argv.\n"
+"\n"
+"Keys must be atoms. Keys with nil value are discarded,\n"
+"boolean values are converted to `--key` or `--no-key`\n"
+"and all other values are converted using `to_string/1`.\n"
 "\n"
 "## Examples\n"
 "\n"
-"    iex> OptionParser.split(\"foo bar\")\n"
-"    [\"foo\", \"bar\"]\n"
+"    iex>  OptionParser.to_argv([foo_bar: \"baz\"])\n"
+"    [\"--foo-bar\", \"baz\"]\n"
 "\n"
-"    iex> OptionParser.split(\"foo \\\"bar baz\\\"\")\n"
-"    [\"foo\", \"bar baz\"]\n"
+"    iex>  OptionParser.to_argv([bool: true, bool: false, discarded: nil])\n"
+"    [\"--bool\", \"--no-bool\"]\n"
+"\n"
 msgstr ""
 #. TRANSLATORS: def OptionParser.parse(argv, opts \\ [])
 #: lib/option_parser.ex:11 
@@ -160,21 +165,16 @@ msgid ""
 "    {[debug: true], [], []}\n"
 "\n"
 msgstr ""
-#. TRANSLATORS: def OptionParser.to_argv(enum)
-#: lib/option_parser.ex:241 
+#. TRANSLATORS: def OptionParser.split(string)
+#: lib/option_parser.ex:271 
 msgid ""
-"Receives a key-value enumerable and converts it to argv.\n"
-"\n"
-"Keys must be atoms. Keys with nil value are discarded,\n"
-"boolean values are converted to `--key` or `--no-key`\n"
-"and all other values are converted using `to_string/1`.\n"
+"Splits a string into argv chunks.\n"
 "\n"
 "## Examples\n"
 "\n"
-"    iex>  OptionParser.to_argv([foo_bar: \"baz\"])\n"
-"    [\"--foo-bar\", \"baz\"]\n"
+"    iex> OptionParser.split(\"foo bar\")\n"
+"    [\"foo\", \"bar\"]\n"
 "\n"
-"    iex>  OptionParser.to_argv([bool: true, bool: false, discarded: nil])\n"
-"    [\"--bool\", \"--no-bool\"]\n"
-"\n"
+"    iex> OptionParser.split(\"foo \\\"bar baz\\\"\")\n"
+"    [\"foo\", \"bar baz\"]\n"
 msgstr ""

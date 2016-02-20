@@ -10,15 +10,12 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
-#. TRANSLATORS: def Application.app_dir(app, path)
-#: lib/application.ex:374
-msgid "Returns the given path inside `app_dir/1`.\n"
-msgstr "`app_dir/1`の内側に与えられたパスを追加して返します。\n"
-
-#. TRANSLATORS: def Application.get_all_env(app)
-#: lib/application.ex:161
-msgid "Returns all key-value pairs for `app`.\n"
-msgstr "`app`の環境リストについて全てのキーバリューの組を返します。\n"
+#. TRANSLATORS: def Application.loaded_applications()
+#: lib/application.ex:390
+msgid ""
+"Returns a list with information about the applications which have been "
+"loaded.\n"
+msgstr "ロードされたアプリケーションについての情報をリストで返します。\n"
 
 #. TRANSLATORS: def Application.fetch_env(app, key)
 #: lib/application.ex:180
@@ -31,13 +28,6 @@ msgstr ""
 "`app`の環境の`key`に対応する値を返します。\n"
 "\n"
 "もしconfigurationパラメータが存在しない場合、`:error`を返します。\n"
-
-#. TRANSLATORS: def Application.loaded_applications()
-#: lib/application.ex:390
-msgid ""
-"Returns a list with information about the applications which have been "
-"loaded.\n"
-msgstr "ロードされたアプリケーションについての情報をリストで返します。\n"
 
 #. TRANSLATORS: def Application.put_env(app, key, value, opts \\ [])
 #: lib/application.ex:209
@@ -78,6 +68,25 @@ msgstr ""
 "必要があるときに、persistent オプションを`true`にセットできます。これは、\n"
 "永続化された値はアプリケーションがロードされ、アプリケーションがリロー\n"
 "ドされた後も定着することを意味します。\n"
+
+#. TRANSLATORS: def Application.app_dir(app, path)
+#: lib/application.ex:374
+msgid "Returns the given path inside `app_dir/1`.\n"
+msgstr "`app_dir/1`の内側に与えられたパスを追加して返します。\n"
+
+#. TRANSLATORS: def Application.unload(app)
+#: lib/application.ex:331
+msgid ""
+"Unloads the given `app`.\n"
+"\n"
+"It will also unload all `:included_applications`.\n"
+"Note that the function does not purge the application modules.\n"
+msgstr ""
+"与えられた`app`をアンロードします。\n"
+"\n"
+"それは`:included_applications`全てをもアンロードします。\n"
+"関数はアプリケーションモジュールをパージしないことに\n"
+"注意してください。\n"
 
 #. TRANSLATORS: def Application.spec(app)
 #: lib/application.ex:115
@@ -360,6 +369,11 @@ msgstr ""
 "もしどのアプリケーションのspecにmoduleがリストされて\n"
 "いない場合`nil`を返します。\n"
 
+#. TRANSLATORS: def Application.get_all_env(app)
+#: lib/application.ex:161
+msgid "Returns all key-value pairs for `app`.\n"
+msgstr "`app`の環境リストについて全てのキーバリューの組を返します。\n"
+
 #. TRANSLATORS: def Application.stop(app)
 #: lib/application.ex:307
 msgid ""
@@ -454,20 +468,6 @@ msgstr ""
 "き、reasonが`:normal`ではなく、`:shutdown`にセットされるからからである\n"
 "ことに注意してください。\n"
 
-#. TRANSLATORS: def Application.unload(app)
-#: lib/application.ex:331
-msgid ""
-"Unloads the given `app`.\n"
-"\n"
-"It will also unload all `:included_applications`.\n"
-"Note that the function does not purge the application modules.\n"
-msgstr ""
-"与えられた`app`をアンロードします。\n"
-"\n"
-"それは`:included_applications`全てをもアンロードします。\n"
-"関数はアプリケーションモジュールをパージしないことに\n"
-"注意してください。\n"
-
 #. TRANSLATORS: def Application.fetch_env!(app, key)
 #: lib/application.ex:193
 msgid ""
@@ -487,17 +487,6 @@ msgid ""
 "running.\n"
 msgstr "現在動いているアプリケーションについての情報をリストで返します。\n"
 
-#. TRANSLATORS: def Application.delete_env(app, key, opts \\ [])
-#: lib/application.ex:231
-msgid ""
-"Deletes the `key` from the given `app` environment.\n"
-"\n"
-"See `put_env/4` for a description of the options.\n"
-msgstr ""
-"与えられた`app`環境から`key`を削除します。\n"
-"\n"
-"オプションの詳細は`put_env/4`を参照してください。\n"
-
 #. TRANSLATORS: def Application.spec(app, key)
 #: lib/application.ex:133
 msgid ""
@@ -512,6 +501,17 @@ msgstr ""
 "サポートされているキーについては`spec/1`を参照してください。\n"
 "もししていされたパラメータが存在しない場合、この関数は例外を\n"
 "上げます。\n"
+
+#. TRANSLATORS: def Application.delete_env(app, key, opts \\ [])
+#: lib/application.ex:231
+msgid ""
+"Deletes the `key` from the given `app` environment.\n"
+"\n"
+"See `put_env/4` for a description of the options.\n"
+msgstr ""
+"与えられた`app`環境から`key`を削除します。\n"
+"\n"
+"オプションの詳細は`put_env/4`を参照してください。\n"
 
 #. TRANSLATORS: def Application.get_env(app, key, default \\ nil)
 #: lib/application.ex:169

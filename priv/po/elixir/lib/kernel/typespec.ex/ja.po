@@ -10,29 +10,38 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
-#. TRANSLATORS: defmacro Kernel.Typespec.defmacrocallback(spec)
-#: lib/kernel/typespec.ex:80
+#. TRANSLATORS: def Kernel.Typespec.beam_types(module)
+#: lib/kernel/typespec.ex:217
 msgid ""
-"Defines a macro callback.\n"
-"This macro is responsible for handling the attribute `@macrocallback`.\n"
+"Returns all types available from the module's beam code.\n"
 "\n"
-"## Examples\n"
+"The result is returned as a list of tuples where the first\n"
+"element is the type (`:typep`, `:type` and `:opaque`).\n"
 "\n"
-"    @macrocallback add(number, number) :: Macro.t\n"
-"\n"
+"The module must have a corresponding beam file which can be\n"
+"located by the runtime system.\n"
 msgstr ""
-"マクロコールバックを定義します。\n"
-"このマクロは`@macrocallback`属性をハンドルする役割りを果します。\n"
+"モジュールのbeamコードから全ての有効なタイプを返します。\n"
 "\n"
-"## 例\n"
+"返された結果は、最初の要素がタイプ(`:typep`, `:type`, `:opaque`)となる\n"
+"タプルのリストです。\n"
 "\n"
-"    @macrocallback add(number, number) :: Macro.t\n"
-"\n"
+"モジュールは実行時システムによって配置された対応するbeamファイルを\n"
+"持っていなければなりません。\n"
 
 #. TRANSLATORS: def Kernel.Typespec.spec_to_ast(name, spec)
 #: lib/kernel/typespec.ex:144
 msgid "Converts a spec clause back to Elixir AST.\n"
 msgstr "spec節をElixir ASTへコンバートします。\n"
+
+#. TRANSLATORS: def Kernel.Typespec.defines_spec?(module, name, arity)
+#: lib/kernel/typespec.ex:122
+msgid ""
+"Returns `true` if the current module defines a given spec.\n"
+"This function is only available for modules being compiled.\n"
+msgstr ""
+"現在のモジュールが所定のspecを定義していれば、`true`を返します。\n"
+"この関数はコンパイルしているモジュールにのみ有効です。\n"
 
 #. TRANSLATORS: def Kernel.Typespec.define_spec(kind, expr, env)
 #: lib/kernel/typespec.ex:102
@@ -77,32 +86,32 @@ msgstr ""
 "    @typep my_type :: atom\n"
 "\n"
 
-#. TRANSLATORS: def Kernel.Typespec.beam_types(module)
-#: lib/kernel/typespec.ex:217
+#. TRANSLATORS: defmacro Kernel.Typespec.defmacrocallback(spec)
+#: lib/kernel/typespec.ex:80
 msgid ""
-"Returns all types available from the module's beam code.\n"
+"Defines a macro callback.\n"
+"This macro is responsible for handling the attribute `@macrocallback`.\n"
 "\n"
-"The result is returned as a list of tuples where the first\n"
-"element is the type (`:typep`, `:type` and `:opaque`).\n"
+"## Examples\n"
 "\n"
-"The module must have a corresponding beam file which can be\n"
-"located by the runtime system.\n"
+"    @macrocallback add(number, number) :: Macro.t\n"
+"\n"
 msgstr ""
-"モジュールのbeamコードから全ての有効なタイプを返します。\n"
+"マクロコールバックを定義します。\n"
+"このマクロは`@macrocallback`属性をハンドルする役割りを果します。\n"
 "\n"
-"返された結果は、最初の要素がタイプ(`:typep`, `:type`, `:opaque`)となる\n"
-"タプルのリストです。\n"
+"## 例\n"
 "\n"
-"モジュールは実行時システムによって配置された対応するbeamファイルを\n"
-"持っていなければなりません。\n"
+"    @macrocallback add(number, number) :: Macro.t\n"
+"\n"
 
-#. TRANSLATORS: def Kernel.Typespec.defines_spec?(module, name, arity)
-#: lib/kernel/typespec.ex:122
+#. TRANSLATORS: def Kernel.Typespec.defines_callback?(module, name, arity)
+#: lib/kernel/typespec.ex:133
 msgid ""
-"Returns `true` if the current module defines a given spec.\n"
+"Returns `true` if the current module defines a callback.\n"
 "This function is only available for modules being compiled.\n"
 msgstr ""
-"現在のモジュールが所定のspecを定義していれば、`true`を返します。\n"
+"現在のモジュールがコールバックを定義していれば、`true`を返します。\n"
 "この関数はコンパイルしているモジュールにのみ有効です。\n"
 
 #. TRANSLATORS: def Kernel.Typespec.type_to_ast(type)
@@ -129,39 +138,11 @@ msgstr ""
 "モジュールは実行時システムによって配置された対応するbeamファイルを\n"
 "持っていなければなりません。\n"
 
-#. TRANSLATORS: def Kernel.Typespec.defines_callback?(module, name, arity)
-#: lib/kernel/typespec.ex:133
-msgid ""
-"Returns `true` if the current module defines a callback.\n"
-"This function is only available for modules being compiled.\n"
-msgstr ""
-"現在のモジュールがコールバックを定義していれば、`true`を返します。\n"
-"この関数はコンパイルしているモジュールにのみ有効です。\n"
-
 #. TRANSLATORS: def Kernel.Typespec.define_type(kind, expr, doc \\ nil, env)
 #: lib/kernel/typespec.ex:95
 msgid ""
 "Defines a `type`, `typep` or `opaque` by receiving a typespec expression.\n"
 msgstr "typespec式を受け取り、`type`、 `typep`または`opaque`を定義します。\n"
-
-#. TRANSLATORS: defmacro Kernel.Typespec.defcallback(spec)
-#: lib/kernel/typespec.ex:64
-msgid ""
-"Defines a callback.\n"
-"This macro is responsible for handling the attribute `@callback`.\n"
-"\n"
-"## Examples\n"
-"\n"
-"    @callback add(number, number) :: number\n"
-"\n"
-msgstr ""
-"コールバックを定義します。\n"
-"このマクロは`@callback`属性をハンドルする役割りを果します。\n"
-"\n"
-"## 例\n"
-"\n"
-"    @callback add(number, number) :: number\n"
-"\n"
 
 #. TRANSLATORS: def Kernel.Typespec.beam_specs(module)
 #: lib/kernel/typespec.ex:245
@@ -181,6 +162,25 @@ msgstr ""
 "\n"
 "モジュールは実行時システムによって配置された対応するbeamファイルを\n"
 "持っていなければなりません。\n"
+
+#. TRANSLATORS: defmacro Kernel.Typespec.defcallback(spec)
+#: lib/kernel/typespec.ex:64
+msgid ""
+"Defines a callback.\n"
+"This macro is responsible for handling the attribute `@callback`.\n"
+"\n"
+"## Examples\n"
+"\n"
+"    @callback add(number, number) :: number\n"
+"\n"
+msgstr ""
+"コールバックを定義します。\n"
+"このマクロは`@callback`属性をハンドルする役割りを果します。\n"
+"\n"
+"## 例\n"
+"\n"
+"    @callback add(number, number) :: number\n"
+"\n"
 
 #. TRANSLATORS: defmacro Kernel.Typespec.defopaque(type)
 #: lib/kernel/typespec.ex:19

@@ -15,23 +15,6 @@ msgid ""
 "    [1, 1, 1, 0, 0, 0, 1, 1, 0, 0, 0, 0, 1, 1, 1, 1]\n"
 "\n"
 msgstr ""
-#. TRANSLATORS: defmacro Integer.is_odd(n)
-#: lib/integer.ex:8 
-msgid ""
-"Determines if an integer is odd.\n"
-"\n"
-"Returns `true` if `n` is an odd number, otherwise `false`.\n"
-"\n"
-"Allowed in guard clauses.\n"
-"\n"
-"## Examples\n"
-"\n"
-"    iex> Integer.is_odd(3)\n"
-"    true\n"
-"\n"
-"    iex> Integer.is_odd(4)\n"
-"    false\n"
-msgstr ""
 #. TRANSLATORS: def Integer.to_string(some_integer, base)
 #: lib/integer.ex:215 
 msgid ""
@@ -59,20 +42,22 @@ msgid ""
 "    '7'\n"
 "\n"
 msgstr ""
-#. TRANSLATORS: def Integer.undigits(digits, base \\ 10)
-#: lib/integer.ex:73 
+#. TRANSLATORS: defmacro Integer.is_odd(n)
+#: lib/integer.ex:8 
 msgid ""
-"Returns the integer represented by the ordered digits.\n"
+"Determines if an integer is odd.\n"
 "\n"
-"An optional base value may be provided representing the radix for the digits.\n"
+"Returns `true` if `n` is an odd number, otherwise `false`.\n"
+"\n"
+"Allowed in guard clauses.\n"
 "\n"
 "## Examples\n"
 "\n"
-"    iex> Integer.undigits([1, 0, 1])\n"
-"    101\n"
+"    iex> Integer.is_odd(3)\n"
+"    true\n"
 "\n"
-"    iex> Integer.undigits([1, 4], 16)\n"
-"    20\n"
+"    iex> Integer.is_odd(4)\n"
+"    false\n"
 msgstr ""
 #. TRANSLATORS: defmacro Integer.is_even(n)
 #: lib/integer.ex:27 
@@ -91,6 +76,21 @@ msgid ""
 "    iex> Integer.is_even(5)\n"
 "    false\n"
 msgstr ""
+#. TRANSLATORS: def Integer.undigits(digits, base \\ 10)
+#: lib/integer.ex:73 
+msgid ""
+"Returns the integer represented by the ordered digits.\n"
+"\n"
+"An optional base value may be provided representing the radix for the digits.\n"
+"\n"
+"## Examples\n"
+"\n"
+"    iex> Integer.undigits([1, 0, 1])\n"
+"    101\n"
+"\n"
+"    iex> Integer.undigits([1, 4], 16)\n"
+"    20\n"
+msgstr ""
 #. TRANSLATORS: def Integer.to_char_list(number, base)
 #: lib/integer.ex:248 
 msgid ""
@@ -104,11 +104,6 @@ msgid ""
 "    iex> Integer.to_char_list(1023, 16)\n"
 "    '3FF'\n"
 "\n"
-msgstr ""
-#. TRANSLATORS: Elixir.Integer Summary
-#: lib/integer.ex:2 
-msgid ""
-"Functions for working with integers.\n"
 msgstr ""
 #. TRANSLATORS: def Integer.parse(binary, base \\ 10)
 #: lib/integer.ex:96 
@@ -149,6 +144,11 @@ msgid ""
 "    iex> Integer.parse(\"a2\", 38)\n"
 "    ** (ArgumentError) invalid base 38\n"
 "\n"
+msgstr ""
+#. TRANSLATORS: Elixir.Integer Summary
+#: lib/integer.ex:2 
+msgid ""
+"Functions for working with integers.\n"
 msgstr ""
 #. TRANSLATORS: def Integer.to_string(some_integer)
 #: lib/integer.ex:198 
