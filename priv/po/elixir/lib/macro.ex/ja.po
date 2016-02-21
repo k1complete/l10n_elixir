@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: l 10n_elixir\n"
-"PO-Revision-Date: 2015-12-17 23:24+0900\n"
+"PO-Revision-Date: 2016-02-20 21:52+0900\n"
 "Last-Translator: 小田 照敬 <EMAIL@ADDRESS>\n"
 "Language-Team: Japanese\n"
 "Language: ja\n"
@@ -98,7 +98,6 @@ msgstr "抽象構文木(AST)"
 
 #. TRANSLATORS: def Macro.traverse(ast, acc, pre, post)
 #: lib/macro.ex:170
-#, fuzzy
 msgid ""
 "Performs a depth-first traversal of quoted expressions\n"
 "using an accumulator.\n"
@@ -379,7 +378,6 @@ msgstr ""
 
 #. TRANSLATORS: def Macro.unescape_string(chars, map)
 #: lib/macro.ex:378
-#, fuzzy
 msgid ""
 "Unescapes the given chars according to the map given.\n"
 "\n"
@@ -444,13 +442,15 @@ msgstr ""
 "    def unescape_map(?t), do: ?\\t\n"
 "    def unescape_map(?v), do: ?\\v\n"
 "    def unescape_map(?x), do: true\n"
+"    def unescape_map(?u), do: true\n"
 "    def unescape_map(e),  do: e\n"
 "\n"
 "もし`unescape_map`関数が`false`を返したら、その文字はエスケープされず、\n"
 "`\\`は文字リストに保持されます。\n"
 "\n"
-"16進数はマップ関数が`?x`に対して`true`を返したらエスケープされるでしょ\n"
-"う。\n"
+"16進数とUnicodeコードポイントは、マップ関数が`?x`に対して`true`を返した\n"
+"らエスケープされるでしょう。Unicodeコードポイントはマップ関数が\n"
+"`?u`に対して`true`を返したら、そのコードポイント値になります。\n"
 "\n"
 "## 例\n"
 "\n"
@@ -560,7 +560,6 @@ msgstr ""
 
 #. TRANSLATORS: def Macro.unescape_string(chars)
 #: lib/macro.ex:349
-#, fuzzy
 msgid ""
 "Unescapes the given chars.\n"
 "\n"
@@ -592,9 +591,9 @@ msgstr ""
 "の情報は`unescape_string/2`をチェックしてください。\n"
 "\n"
 "このセットアップでは、Elixirは以下のとおりエスケープします: `\\0`,\n"
-"`\\a`, `\\b`, `\\d`, `\\e`, `\\f`, `\\n`, `\\r`, `\\s`, `\\t` そして `"
-"\\v`。\n"
-"`\\xNN`や`\\x{NN...}`といった16進数構文もサポートされます。\n"
+"`\\a`, `\\b`, `\\d`, `\\e`, `\\f`, `\\n`, `\\r`, `\\s`, `\\t` そして `\\v`。\n"
+"16進数のための`\\xNN`と、Unicodeコードポイントのための`\\uNNNN`も\n"
+"エスケープします。\n"
 "\n"
 "この関数は生の文字列を受信する(`~r`, `~s`やその他のような)sigilの実装で\n"
 "共通的に使われ、文字列をアンエスケープします。\n"

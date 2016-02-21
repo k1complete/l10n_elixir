@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: l 10n_elixir\n"
-"PO-Revision-Date: 2015-09-26 00:20+0900\n"
+"PO-Revision-Date: 2016-02-20 21:13+0900\n"
 "Last-Translator: 小田 照敬 <EMAIL@ADDRESS>\n"
 "Language-Team: Japanese\n"
 "Language: ja\n"
@@ -445,7 +445,6 @@ msgstr ""
 
 #. TRANSLATORS: Elixir.Inspect.Opts Summary
 #: lib/inspect/algebra.ex:2
-#, fuzzy
 msgid ""
 "Defines the Inspect.Opts used by the Inspect protocol.\n"
 "\n"

@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: l 10n_elixir\n"
-"PO-Revision-Date: 2015-12-26 10:37+0900\n"
+"PO-Revision-Date: 2016-02-21 09:16+0900\n"
 "Last-Translator: 小田 照敬 <EMAIL@ADDRESS>\n"
 "Language-Team: Japanese\n"
 "Language: ja\n"
@@ -474,7 +474,6 @@ msgstr ""
 
 #. TRANSLATORS: def String.ends_with?(string, suffixes)
 #: lib/string.ex:1495
-#, fuzzy
 msgid ""
 "Returns `true` if `string` ends with any of the suffixes given.\n"
 "\n"
@@ -495,8 +494,11 @@ msgid ""
 "\n"
 msgstr ""
 "もし、`string`が与えらえれたサフィックスの何れかで終了していれば、\n"
-"`true`を返します。さもなければ`false`を返します。`suffixes`は一つの\n"
-"文字列でも、サフィイクスのリストでもよいです。\n"
+"`true`を返します。\n"
+"\n"
+"`suffixes`は一つの文字列でも、サフィイクスのリストでもよいです。\n"
+"\n"
+"空の文字列が与えられたらargument errorを上げます。\n"
 "\n"
 "## 例\n"
 "\n"
@@ -547,7 +549,6 @@ msgstr ""
 
 #. TRANSLATORS: def String.normalize(string, form)
 #: lib/string.ex:482
-#, fuzzy
 msgid ""
 "Converts all characters in `string` to Unicode normalization\n"
 "form identified by `form`.\n"
@@ -573,7 +574,7 @@ msgid ""
 "    \"leña\"\n"
 "\n"
 msgstr ""
-"`binary`の全ての文字を`form`により示されたUnicode \n"
+"`string`の全ての文字を`form`により示されたUnicode \n"
 "normalization formに変換します。\n"
 "\n"
 "## Forms\n"
@@ -691,7 +692,6 @@ msgstr ""
 
 #. TRANSLATORS: def String.contains?(string, contents)
 #: lib/string.ex:1547
-#, fuzzy
 msgid ""
 "Checks if `string` contains any of the given `contents`.\n"
 "\n"
@@ -721,6 +721,8 @@ msgstr ""
 "\n"
 "`contents`は単一の文字列でも文字列のリストでも構いません。\n"
 "\n"
+"空の文字列が与えられたら、argument errorを上げます。\n"
+"\n"
 "## Examples\n"
 "\n"
 "    iex> String.contains? \"elixir of life\", \"of\"\n"
@@ -731,6 +733,12 @@ msgstr ""
 "\n"
 "    iex> String.contains? \"elixir of life\", [\"death\", \"mercury\"]\n"
 "    false\n"
+"\n"
+"引数はプリコンパイルされたパターンでも構いません:\n"
+"\n"
+"    iex> pattern = :binary.compile_pattern([\"life\", \"death\"])\n"
+"    iex> String.contains? \"elixir of life\", pattern\n"
+"    true\n"
 "\n"
 
 #. TRANSLATORS: def String.lstrip(string, char)
@@ -774,7 +782,6 @@ msgstr ""
 
 #. TRANSLATORS: def String.equivalent?(string1, string2)
 #: lib/string.ex:450
-#, fuzzy
 msgid ""
 "Returns `true` if `string1` is canonically equivalent to 'string2'.\n"
 "\n"
@@ -802,16 +809,15 @@ msgid ""
 "    false\n"
 "\n"
 msgstr ""
-"`binary`が`another_binary`に規範的に等しいなら`true`を返します。\n"
+"`string1`が`string2`に規範的に等しいなら`true`を返します。\n"
 "\n"
 "それらを比較する前に、Normalization Form Canonical Decomposition (NFD)\n"
 "に変換します。この関数は以下と同等です:\n"
 "\n"
-"    String.normalize(left, :nfd) == String.normalize(right, :nfd)\n"
+"    String.normalize(string1, :nfd) == String.normalize(string2, :nfd)\n"
 "\n"
-"従って、複数の文字列の比較をする計画なら、\n"
-"複数の正規化パスを避けるために、事前に正規化した上で、\n"
-"直接比較するかもしれません。\n"
+"従って、複数の文字列の比較をする計画なら、複数の正規化パスを避けるため\n"
+"に、事前に正規化した上で、直接比較するかもしれません。\n"
 "\n"
 "## Examples\n"
 "\n"
@@ -977,7 +983,6 @@ msgstr ""
 
 #. TRANSLATORS: def String.ljust(subject, len, pad \\ 32)
 #: lib/string.ex:831
-#, fuzzy
 msgid ""
 "Returns a new string of length `len` with `subject` left justified and "
 "padded\n"
@@ -993,9 +998,9 @@ msgid ""
 "    \"abc--\"\n"
 "\n"
 msgstr ""
-"`subject`を左寄して、`padding`でパディングした、長さ`len`の新しい文字列\n"
-"を返します。もし`padding`がなければ、空白文字がデフォルトです。\n"
-"`len`が`subject`の長さより小さいとき、`subject`が返されます。\n"
+"`subject`を左寄せして、`pad`でパディングした、長さ`len`の新しい文字列を\n"
+"返します。もし`pad`がなければ、空白文字がデフォルトです。`len`が\n"
+"`subject`の長さより小さいとき、`subject`が返されます。\n"
 "\n"
 "## 例\n"
 "\n"
@@ -1008,7 +1013,6 @@ msgstr ""
 
 #. TRANSLATORS: def String.graphemes(string)
 #: lib/string.ex:1145
-#, fuzzy
 msgid ""
 "Returns Unicode graphemes in the string as per Extended Grapheme\n"
 "Cluster algorithm.\n"
@@ -1031,10 +1035,12 @@ msgid ""
 "    [\"é\"]\n"
 "\n"
 msgstr ""
-"[Unicode Standard Annex #29,\n"
+"Extended Grapheme Clusterアルゴリズムに従って文字列のユニコード書記素を\n"
+"返します。\n"
+"\n"
+"そのアルゴリズムは、[Unicode Standard Annex #29,\n"
 "Unicode Text Segmentation](http://www.unicode.org/reports/tr29/)\n"
-"に概説されている、Extended Grapheme Cluster アルゴリズムに従って\n"
-"文字列のユニコード書記素を返します。\n"
+"に概説されています。\n"
 "\n"
 "コードポイントと書記素についての詳細は、`String`モジュール\n"
 "ドキュメントを参照してください。\n"
@@ -1150,7 +1156,6 @@ msgstr ""
 
 #. TRANSLATORS: def String.duplicate(subject, n)
 #: lib/string.ex:974
-#, fuzzy
 msgid ""
 "Returns a string `subject` duplicated `n` times.\n"
 "\n"
@@ -1166,7 +1171,7 @@ msgid ""
 "    \"abcabc\"\n"
 "\n"
 msgstr ""
-"`subject`を`n`回複製したバイナリを返します。\n"
+"`subject`を`n`回複製した文字列を返します。\n"
 "\n"
 "## 例\n"
 "\n"
@@ -1234,7 +1239,6 @@ msgstr ""
 
 #. TRANSLATORS: def String.rjust(subject, len, pad \\ 32)
 #: lib/string.ex:809
-#, fuzzy
 msgid ""
 "Returns a new string of length `len` with `subject` right justified and\n"
 "padded with `pad`. If `pad` is not present, it defaults to\n"
@@ -1250,8 +1254,8 @@ msgid ""
 "    \"--abc\"\n"
 "\n"
 msgstr ""
-"`subject`を右寄して、`padding`でパディングした、長さ`len`の新しい文字列\n"
-"を返します。もし`padding`がなければ、空白文字がデフォルトです。\n"
+"`subject`を右寄せして、`pad`でパディングした、長さ`len`の新しい文字列\n"
+"を返します。もし`pad`がなければ、空白文字がデフォルトです。\n"
 "`len`が`subject`の長さより小さいとき、`subject`が返されます。\n"
 "\n"
 "## 例\n"
@@ -1401,7 +1405,6 @@ msgstr ""
 
 #. TRANSLATORS: def String.next_codepoint(string)
 #: lib/string.ex:1020
-#, fuzzy
 msgid ""
 "Returns the next codepoint in a string.\n"
 "\n"
@@ -1890,7 +1893,6 @@ msgstr ""
 
 #. TRANSLATORS: def String.printable?(string)
 #: lib/string.ex:208
-#, fuzzy
 msgid ""
 "Checks if a string contains only printable characters.\n"
 "\n"
@@ -1900,8 +1902,8 @@ msgid ""
 "    true\n"
 "\n"
 msgstr ""
-"文字列がUTC-8でエンコードされているとみなし、印字可能かどうか\n"
-"チェックします。そうなら`true`を返し、さもなくば`false`を返します。\n"
+"文字列が印字可能文字(printable characters)だけを含んでいるかどうかチェッ\n"
+"クします。\n"
 "\n"
 "## 例\n"
 "\n"
@@ -2006,7 +2008,6 @@ msgstr ""
 
 #. TRANSLATORS: def String.splitter(string, pattern, options \\ [])
 #: lib/string.ex:354
-#, fuzzy
 msgid ""
 "Returns an enumerable that splits a string on demand.\n"
 "\n"
@@ -2022,10 +2023,10 @@ msgid ""
 "\n"
 "  * :trim - when `true`, does not emit empty patterns\n"
 msgstr ""
-"オンデマンドに文字列を分割します。\n"
+"オンデマンドに文字列を分割し、enumerableを返します。\n"
 "\n"
-"全データを最初に分割するかわりに、\n"
-"オンデマンドに分割するenumerableを返します。\n"
+"これは`split/3`が全文字列を最初に分割することと\n"
+"対照をなします。\n"
 "\n"
 "splitterは正規表現をサポートしていないことに注意し\n"
 "てください(複数囘パスするより一度にトラバースする\n"
@@ -2037,7 +2038,6 @@ msgstr ""
 
 #. TRANSLATORS: def String.starts_with?(string, prefix)
 #: lib/string.ex:1467
-#, fuzzy
 msgid ""
 "Returns `true` if `string` starts with any of the prefixes given.\n"
 "\n"
@@ -2058,8 +2058,11 @@ msgid ""
 "\n"
 msgstr ""
 "もし、`string`が与えらえれたプレフィックスの何れかで開始していれば、\n"
-"`true`を返します。さもなければ`false`を返します。`prefixes`は一つの\n"
-"文字列でも、プレフィックスのリストでもよいです。\n"
+"`true`を返します。\n"
+"\n"
+"`prefixes`は一つの文字列でも、プレフィックスのリストでもよいです。\n"
+"\n"
+"空の文字列が与えられたら、argument errorを上げます。\n"
 "\n"
 "## 例\n"
 "\n"

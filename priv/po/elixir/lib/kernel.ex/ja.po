@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: l 10n_elixir\n"
-"PO-Revision-Date: 2016-01-02 21:56+0900\n"
+"PO-Revision-Date: 2016-02-20 21:42+0900\n"
 "Last-Translator: 小田 照敬 <EMAIL@ADDRESS>\n"
 "Language-Team: Japanese\n"
 "Language: ja\n"
@@ -1413,7 +1413,6 @@ msgstr ""
 
 #. TRANSLATORS: def Kernel.struct(struct, kv \\ [])
 #: lib/kernel.ex:1573
-#, fuzzy
 msgid ""
 "Creates and updates structs.\n"
 "\n"
@@ -1461,13 +1460,12 @@ msgstr ""
 "発するEnumerableです。\n"
 "\n"
 "Enumerableの中のキーの一つが構造体に存在しないなら、それは自動的に\n"
-"捨てられます。\n"
+"捨てられます。structを定義するときはキーはアトムだけが許され、アトム\n"
+"でなければならないことに注意してください。\n"
 "\n"
-"この関数は、動的に構造体を作成し更新したり、\n"
-"mapと構造体との変換したりに便利です。\n"
-"後者の場合、単に`:__struct__`フィールドをmapに\n"
-"挿入するだけでは十分ではないかもしれず、`struct/2`を代わりに\n"
-"使うべきです。\n"
+"この関数は、動的に構造体を作成し更新したり、mapと構造体との変換したりに\n"
+"便利です。後者の場合、単に`:__struct__`フィールドをmapに挿入するだけで\n"
+"は十分ではないかもしれず、`struct/2`を代わりに使うべきです。\n"
 "\n"
 "## 例\n"
 "\n"
@@ -2767,7 +2765,6 @@ msgstr ""
 
 #. TRANSLATORS: def Kernel.inspect(arg, opts \\ [])
 #: lib/kernel.ex:1510
-#, fuzzy
 msgid ""
 "Inspects the given argument according to the `Inspect` protocol.\n"
 "The second argument is a keyword list with options to control\n"
@@ -2857,7 +2854,7 @@ msgstr ""
 "    iex> inspect(100, base: :hex)\n"
 "    \"0x64\"\n"
 "\n"
-"なお、`Inspect`プロトコルは、Elixirタームの有効な表現を返す必要は、\n"
+"なお、`Inspect`プロトコルは、Elixir項の有効な表現を返す必要は、\n"
 "必ずしもないです。そのような場合、インスペクトされた結果は、`#`から\n"
 "始めなければなりません。例えば、関数をインスペクトすると、\n"
 "以下のように返されます:\n"
@@ -3684,7 +3681,6 @@ msgstr ""
 
 #. TRANSLATORS: defmacro Kernel.use(module, opts \\ [])
 #: lib/kernel.ex:3551
-#, fuzzy
 msgid ""
 "Uses the given module in the current context.\n"
 "\n"

@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: l 10n_elixir\n"
-"PO-Revision-Date: 2015-12-13 11:19+0900\n"
+"PO-Revision-Date: 2016-02-20 21:02+0900\n"
 "Last-Translator: 小田 照敬 <EMAIL@ADDRESS>\n"
 "Language-Team: Japanese\n"
 "Language: ja\n"
@@ -158,7 +158,6 @@ msgstr ""
 
 #. TRANSLATORS: Elixir.Bitwise Summary
 #: lib/bitwise.ex:2
-#, fuzzy
 msgid ""
 "This module provides macro-based operators that perform calculations\n"
 "on (sets of) bits.\n"

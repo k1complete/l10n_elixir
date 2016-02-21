@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: l 10n_elixir\n"
-"PO-Revision-Date: 2015-12-24 22:41+0900\n"
+"PO-Revision-Date: 2016-02-20 21:56+0900\n"
 "Last-Translator: 小田 照敬 <EMAIL@ADDRESS>\n"
 "Language-Team: Japanese\n"
 "Language: ja\n"
@@ -46,13 +46,12 @@ msgstr ""
 
 #. TRANSLATORS: def Process.get()
 #: lib/process.ex:30
-#, fuzzy
 msgid ""
 "Returns all key-values in the process dictionary.\n"
 "\n"
 "Inlined by the compiler.\n"
 msgstr ""
-"プロセス辞書の全てのキー/値の組を全て返します。\n"
+"プロセス辞書の全てのkey-valueの組を全て返します。\n"
 "\n"
 "コンパイラによりインライン化されます。\n"
 
@@ -548,7 +547,6 @@ msgstr "与えられた`key`の値を返します。\n"
 
 #. TRANSLATORS: def Process.delete(key)
 #: lib/process.ex:85
-#, fuzzy
 msgid "Deletes the given `key` from the process dictionary.\n"
 msgstr "プロセス辞書から与えられた`key`を削除します。\n"
 

@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: l 10n_elixir\n"
-"PO-Revision-Date: 2016-01-02 21:07+0900\n"
+"PO-Revision-Date: 2016-02-20 21:11+0900\n"
 "Last-Translator: 小田 照敬 <EMAIL@ADDRESS>\n"
 "Language-Team: Japanese\n"
 "Language: ja\n"
@@ -234,7 +234,6 @@ msgstr ""
 
 #. TRANSLATORS: def Enum.group_by(enumerable, map \\ %{}, fun)
 #: lib/enum.ex:1440
-#, fuzzy
 msgid ""
 "Splits the enumerable into groups based on `fun`.\n"
 "\n"
@@ -251,7 +250,7 @@ msgstr ""
 "enumerableを分割して`fun`に基いてグループ化します。\n"
 "\n"
 "結果は、キーがグループで、値が`fun`が返したグループによる、\n"
-"enumerableからの要素のリストとなるdict(デフォルトではマップ)です。\n"
+"enumerableからの要素のリストとなるmapです。\n"
 "順序は保存されません。\n"
 "\n"
 "## 例\n"
@@ -1261,7 +1260,6 @@ msgstr ""
 
 #. TRANSLATORS: def Enum.map(enumerable, fun)
 #: lib/enum.ex:1073
-#, fuzzy
 msgid ""
 "Returns a list where each item is the result of invoking\n"
 "`fun` on each corresponding item of `enumerable`.\n"
@@ -2059,7 +2057,6 @@ msgstr ""
 
 #. TRANSLATORS: def Enum.at(enumerable, index, default \\ nil)
 #: lib/enum.ex:285
-#, fuzzy
 msgid ""
 "Finds the element at the given `index` (zero-based).\n"
 "\n"
@@ -2090,7 +2087,7 @@ msgid ""
 msgstr ""
 "与えられた(0始まりの) `index`の要素を見付けます。\n"
 "\n"
-"見付かれば、`{:ok, element}`を返し、さもなければ`:error`を返します。\n"
+"`index`が範囲外なら、`default`を返します。\n"
 "\n"
 "負の`index`が渡されると、`enumerable`は一度列挙され、\n"
 "`index`は終わりから数えられる(即ち、`-1`は最後の要素を\n"
@@ -2102,15 +2099,17 @@ msgstr ""
 "\n"
 "## 例\n"
 "\n"
-"    iex> Enum.fetch([2, 4, 6], 0)\n"
-"    {:ok, 2}\n"
+"    iex> Enum.at([2, 4, 6], 0)\n"
+"    2\n"
 "\n"
-"    iex> Enum.fetch([2, 4, 6], 2)\n"
-"    {:ok, 6}\n"
+"    iex> Enum.at([2, 4, 6], 2)\n"
+"    6\n"
 "\n"
-"    iex> Enum.fetch([2, 4, 6], 4)\n"
-"    :error\n"
+"    iex> Enum.at([2, 4, 6], 4)\n"
+"    nil\n"
 "\n"
+"    iex> Enum.at([2, 4, 6], 4, :none)\n"
+"    :none\n"
 
 #. TRANSLATORS: def Enum.min(enumerable)
 #: lib/enum.ex:1268
@@ -2144,7 +2143,6 @@ msgstr ""
 
 #. TRANSLATORS: Elixir.Enum Summary
 #: lib/enum.ex:152
-#, fuzzy
 msgid ""
 "Provides a set of algorithms that enumerate over enumerables according\n"
 "to the `Enumerable` protocol.\n"
@@ -2177,9 +2175,8 @@ msgstr ""
 "    iex> Enum.map([1, 2, 3], fn(x) -> x * 2 end)\n"
 "    [2, 4, 6]\n"
 "\n"
-"辞書のような、若干の特定のタイプはenumerableに特定のフォーマットを与えま"
-"す。\n"
-"dictでは、引数は常に`{key, value}`タプルです:\n"
+"mapのような、若干の特定のタイプはenumerableに特定のフォーマットを与えます。\n"
+"mapでは、引数は常に`{key, value}`タプルです:\n"
 "\n"
 "    iex> dict = %{a: 1, b: 2}\n"
 "    iex> Enum.map(dict, fn {k, v} -> {k, v * 2} end)\n"
@@ -2623,7 +2620,6 @@ msgstr ""
 
 #. TRANSLATORS: def Enum.map_reduce(enumerable, acc, fun)
 #: lib/enum.ex:1134
-#, fuzzy
 msgid ""
 "Invokes the given function to each item in the enumerable to reduce\n"
 "it to a single element, while keeping an accumulator.\n"
@@ -2653,7 +2649,7 @@ msgstr ""
 "です。`fun`は`{result, accumulator}`の形の2要素のタプルを返さなけ\n"
 "ればなりません。\n"
 "\n"
-"dictでは、最初のタプルの要素は`{key, value}`タプルでなくては\n"
+"mapでは、最初のタプルの要素は`{key, value}`タプルでなくては\n"
 "なりません。\n"
 "\n"
 "## 例\n"
