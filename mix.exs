@@ -35,18 +35,19 @@ defmodule L10nElixir.Mixfile do
   def docs do 
     source_dir = "deps/elixir"
     sr = abs_path([source_dir, "lib/elixir/ebin"])
-#    IO.inspect File.ls(sr)
+#    IO.inspect File.los(sr)
     sref = if (File.exists?(source_dir)) do
              make_source_ref(source_dir)
            else
              nil
            end
     version_path = Path.join(source_dir, "VERSION")
-#    IO.inspect [version_path: version_path]
-    version = nil
-    if (File.exists?(version_path)) do
-      {:ok, version} = File.read(version_path)
-    end
+    IO.inspect [version_path: version_path]
+    {:ok, version} = if File.exists?(version_path) do
+                       File.read(version_path)
+                     else
+                       {:ok, nil}
+                     end
     [
      project: "Elixir",
      app: "elixir",
