@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: l 10n_elixir\n"
-"PO-Revision-Date: 2015-12-13 09:23+0900\n"
+"PO-Revision-Date: 2016-02-27 10:37+0900\n"
 "Last-Translator: 小田 照敬 <EMAIL@ADDRESS>\n"
 "Language-Team: Japanese\n"
 "Language: ja\n"
@@ -10,15 +10,8 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
-#. TRANSLATORS: def Application.loaded_applications()
-#: lib/application.ex:390
-msgid ""
-"Returns a list with information about the applications which have been "
-"loaded.\n"
-msgstr "ロードされたアプリケーションについての情報をリストで返します。\n"
-
 #. TRANSLATORS: def Application.fetch_env(app, key)
-#: lib/application.ex:180
+#: lib/application.ex:182
 msgid ""
 "Returns the value for `key` in `app`'s environment in a tuple.\n"
 "\n"
@@ -29,8 +22,15 @@ msgstr ""
 "\n"
 "もしconfigurationパラメータが存在しない場合、`:error`を返します。\n"
 
+#. TRANSLATORS: def Application.loaded_applications()
+#: lib/application.ex:392
+msgid ""
+"Returns a list with information about the applications which have been "
+"loaded.\n"
+msgstr "ロードされたアプリケーションについての情報をリストで返します。\n"
+
 #. TRANSLATORS: def Application.put_env(app, key, value, opts \\ [])
-#: lib/application.ex:209
+#: lib/application.ex:211
 msgid ""
 "Puts the `value` in `key` for the given `app`.\n"
 "\n"
@@ -70,12 +70,12 @@ msgstr ""
 "ドされた後も定着することを意味します。\n"
 
 #. TRANSLATORS: def Application.app_dir(app, path)
-#: lib/application.ex:374
+#: lib/application.ex:376
 msgid "Returns the given path inside `app_dir/1`.\n"
 msgstr "`app_dir/1`の内側に与えられたパスを追加して返します。\n"
 
 #. TRANSLATORS: def Application.unload(app)
-#: lib/application.ex:331
+#: lib/application.ex:333
 msgid ""
 "Unloads the given `app`.\n"
 "\n"
@@ -322,7 +322,7 @@ msgstr ""
 "ンドルされることに注意してください。\n"
 
 #. TRANSLATORS: def Application.ensure_started(app, type \\ :temporary)
-#: lib/application.ex:241
+#: lib/application.ex:243
 msgid ""
 "Ensures the given `app` is started.\n"
 "\n"
@@ -344,7 +344,7 @@ msgstr ""
 "\n"
 
 #. TRANSLATORS: def Application.format_error(reason)
-#: lib/application.ex:398
+#: lib/application.ex:400
 msgid ""
 "Formats the error reason returned by `start/2`,\n"
 "`ensure_started/2`, `stop/1`, `load/1` and `unload/1`,\n"
@@ -354,7 +354,7 @@ msgstr ""
 "返された、エラーのreasonをフォーマットし、文字列を返します。\n"
 
 #. TRANSLATORS: def Application.get_application(module)
-#: lib/application.ex:146
+#: lib/application.ex:148
 msgid ""
 "Get the application for the given module.\n"
 "\n"
@@ -370,12 +370,12 @@ msgstr ""
 "いない場合`nil`を返します。\n"
 
 #. TRANSLATORS: def Application.get_all_env(app)
-#: lib/application.ex:161
+#: lib/application.ex:163
 msgid "Returns all key-value pairs for `app`.\n"
 msgstr "`app`の環境リストについて全てのキーバリューの組を返します。\n"
 
 #. TRANSLATORS: def Application.stop(app)
-#: lib/application.ex:307
+#: lib/application.ex:309
 msgid ""
 "Stops the given `app`.\n"
 "\n"
@@ -386,7 +386,7 @@ msgstr ""
 "停止したとき、アプリケーションはまだロードされたままです。\n"
 
 #. TRANSLATORS: def Application.start(app, type \\ :temporary)
-#: lib/application.ex:268
+#: lib/application.ex:270
 msgid ""
 "Starts the given `app`.\n"
 "\n"
@@ -469,7 +469,7 @@ msgstr ""
 "ことに注意してください。\n"
 
 #. TRANSLATORS: def Application.fetch_env!(app, key)
-#: lib/application.ex:193
+#: lib/application.ex:195
 msgid ""
 "Returns the value for `key` in `app`'s environment.\n"
 "\n"
@@ -481,29 +481,14 @@ msgstr ""
 "`ArgumentError`を上げます。\n"
 
 #. TRANSLATORS: def Application.started_applications(timeout \\ 5000)
-#: lib/application.ex:382
+#: lib/application.ex:384
 msgid ""
 "Returns a list with information about the applications which are currently "
 "running.\n"
 msgstr "現在動いているアプリケーションについての情報をリストで返します。\n"
 
-#. TRANSLATORS: def Application.spec(app, key)
-#: lib/application.ex:133
-msgid ""
-"Returns the value for `key` in `app`'s specification.\n"
-"\n"
-"See `spec/1` for the supporte keys. If the given\n"
-"specification parameter does not exist, this function\n"
-"will raise.\n"
-msgstr ""
-"`app`の環境の`key`に対応する値を返します。\n"
-"\n"
-"サポートされているキーについては`spec/1`を参照してください。\n"
-"もししていされたパラメータが存在しない場合、この関数は例外を\n"
-"上げます。\n"
-
 #. TRANSLATORS: def Application.delete_env(app, key, opts \\ [])
-#: lib/application.ex:231
+#: lib/application.ex:233
 msgid ""
 "Deletes the `key` from the given `app` environment.\n"
 "\n"
@@ -514,7 +499,7 @@ msgstr ""
 "オプションの詳細は`put_env/4`を参照してください。\n"
 
 #. TRANSLATORS: def Application.get_env(app, key, default \\ nil)
-#: lib/application.ex:169
+#: lib/application.ex:171
 msgid ""
 "Returns the value for `key` in `app`'s environment.\n"
 "\n"
@@ -527,7 +512,7 @@ msgstr ""
 "返します。\n"
 
 #. TRANSLATORS: def Application.app_dir(app)
-#: lib/application.ex:342
+#: lib/application.ex:344
 msgid ""
 "Gets the directory for app.\n"
 "\n"
@@ -574,8 +559,24 @@ msgstr ""
 "コードパスについての詳細は、Elixirの`Code`モジュールと、Erlangの\n"
 "`:code`モジュールもチェックしてください。\n"
 
+#. TRANSLATORS: def Application.spec(app, key)
+#: lib/application.ex:133
+msgid ""
+"Returns the value for `key` in `app`'s specification.\n"
+"\n"
+"See `spec/1` for the supported keys. If the given\n"
+"specification parameter does not exist, this function\n"
+"will raise. Returns `nil` if the application is not loaded.\n"
+msgstr ""
+"`app`の仕様の`key`に対応する値を返します。\n"
+"\n"
+"サポートされているキーについては`spec/1`を参照してください。\n"
+"もし与えられた仕様パラメータが存在しない場合、この関数は例外を\n"
+"上げます。アプリケーションがロードされていないなら、`nil`を\n"
+"返します。\n"
+
 #. TRANSLATORS: def Application.ensure_all_started(app, type \\ :temporary)
-#: lib/application.ex:256
+#: lib/application.ex:258
 msgid ""
 "Ensures the given `app` and its applications are started.\n"
 "\n"
@@ -590,7 +591,7 @@ msgstr ""
 "アプリケーションも、まだ開始していない場合には、開始します。\n"
 
 #. TRANSLATORS: def Application.load(app)
-#: lib/application.ex:317
+#: lib/application.ex:319
 msgid ""
 "Loads the given `app`.\n"
 "\n"

@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: l 10n_elixir\n"
-"PO-Revision-Date: 2016-02-20 03:04+0900\n"
+"PO-Revision-Date: 2016-02-28 15:38+0900\n"
 "Last-Translator: 小田 照敬 <EMAIL@ADDRESS>\n"
 "Language-Team: Japanese\n"
 "Language: ja\n"
@@ -17,12 +17,10 @@ msgstr "# Typespecs"
 #: deps/elixir/lib/elixir/pages/Typespecs.md:3
 msgid ""
 "Elixir comes with a notation for declaring types and specifications. Elixir "
-"is\n"
-"dynamically typed, and as such, typespecs are never used by the compiler to\n"
-"optimize or modify code. Still, using typespecs is useful as documentation "
-"and\n"
-"tools such as [Dialyzer](http://www.erlang.org/doc/man/dialyzer.html) can\n"
-"analyze code with typespecs to find bugs."
+"is dynamically typed, and as such, typespecs are never used by the compiler "
+"to optimize or modify code. Still, using typespecs is useful as "
+"documentation and tools such as [Dialyzer](http://www.erlang.org/doc/man/"
+"dialyzer.html) can analyze code with typespecs to find bugs."
 msgstr ""
 "Elixirにはtypeとspecificationの宣言の為の記法があります。Elixirは動的に\n"
 "型付けされ、だから、typespecはコンパイラによって最適化のためやコードの\n"
@@ -31,78 +29,75 @@ msgstr ""
 "[Dialyzer](http://www.erlang.org/doc/man/dialyzer.html) のようなツール\n"
 "にとって役に立ちます。"
 
-#: deps/elixir/lib/elixir/pages/Typespecs.md:9
+#: deps/elixir/lib/elixir/pages/Typespecs.md:5
 msgid ""
-"The attributes `@type`, `@opaque`, `@typep`, `@spec`, `@callback` and\n"
-"`@macrocallback` available in modules are handled by the equivalent macros\n"
-"defined by this module. See sub-sections \"Defining a type\" and \"Defining "
-"a\n"
-"specification\" below."
+"The attributes `@type`, `@opaque`, `@typep`, `@spec`, `@callback` and "
+"`@macrocallback` are the main mechanism for defining typespecs. See sub-"
+"sections \"Defining a type\" and \"Defining a specification\" below."
 msgstr ""
 "`@type`, `@opaque`, `@typep`, `@spec`, `@callback`と`@macrocallback` ア\n"
 "トリビュートがこのモジュールで定義されたマクロとしてモジュール内で評価\n"
 "されます。以下のサブセクション\"Defining a type\"と\"Defining a\n"
 "specification\"を参照してください。"
 
-#: deps/elixir/lib/elixir/pages/Typespecs.md:14
+#: deps/elixir/lib/elixir/pages/Typespecs.md:7
 msgid "## Types and their syntax"
 msgstr "## Types and their syntax"
 
-#: deps/elixir/lib/elixir/pages/Typespecs.md:16
+#: deps/elixir/lib/elixir/pages/Typespecs.md:9
 msgid ""
-"The type syntax provided by Elixir is fairly similar to [the one in\n"
-"Erlang](http://www.erlang.org/doc/reference_manual/typespec.html)."
+"The type syntax provided by Elixir is fairly similar to [the one in Erlang]"
+"(http://www.erlang.org/doc/reference_manual/typespec.html)."
 msgstr ""
 "Elixirにより提供されるtypeシンタックスは[Erlangのも\n"
 "の](http://www.erlang.org/doc/reference_manual/typespec.html)によく似て\n"
 "います。"
 
-#: deps/elixir/lib/elixir/pages/Typespecs.md:19
+#: deps/elixir/lib/elixir/pages/Typespecs.md:11
 msgid ""
-"Most of the built-in types provided in Erlang (for example, `pid()`) are\n"
+"Most of the built-in types provided in Erlang (for example, `pid()`) are "
 "expressed the same way: `pid()` or simply `pid`. Parameterized types are "
-"also\n"
-"supported (`list(integer)`) and so are remote types (`Enum.t`)."
+"also supported (`list(integer)`) and so are remote types (`Enum.t`)."
 msgstr ""
 "Erlangでのビルトインタイプの殆ど(例えば`pid()`)は同じ方法: `pid()`、あ\n"
 "るいはもっとシンプルに `pid`で表現されます。パラメタ化されたタイプ\n"
 "(`list(integer)`)や、リモートタイプ(`Enum.t`)もまたサポートされます。"
 
-#: deps/elixir/lib/elixir/pages/Typespecs.md:23
+#: deps/elixir/lib/elixir/pages/Typespecs.md:13
 msgid ""
-"Integers and atom literals are allowed as types (ex. `1`, `:atom` or\n"
-"`false`). All other types are built of unions of predefined types. Certain\n"
+"Integers and atom literals are allowed as types (ex. `1`, `:atom` or "
+"`false`). All other types are built of unions of predefined types. Certain "
 "shorthands are allowed, such as `[...]`, `<<>>` and `{...}`."
 msgstr ""
 "整数とアトムリテラルはタイプとして許されます(例えば、`1`, `:atom`あるいは\n"
 "`false`)。他の全てのタイプは定義されたタイプの組み合わせにより作られます。\n"
 "`[...]`、`<<>>`や`{...}`といった省略記法は許されます。"
 
-#: deps/elixir/lib/elixir/pages/Typespecs.md:27
+#: deps/elixir/lib/elixir/pages/Typespecs.md:15
 msgid "### Basic types"
 msgstr "### Basic types"
 
-#: deps/elixir/lib/elixir/pages/Typespecs.md:51
+#: deps/elixir/lib/elixir/pages/Typespecs.md:39
 msgid "### Literals"
 msgstr "### Literals"
 
-#: deps/elixir/lib/elixir/pages/Typespecs.md:53
+#: deps/elixir/lib/elixir/pages/Typespecs.md:41
 msgid "The following literals are also supported in typespecs:"
 msgstr "typespecsでは以下のリテラルがサポートされます:"
 
-#: deps/elixir/lib/elixir/pages/Typespecs.md:85
+#: deps/elixir/lib/elixir/pages/Typespecs.md:73
 msgid "### Built-in types"
 msgstr "### Built-in types"
 
-#: deps/elixir/lib/elixir/pages/Typespecs.md:87
+#: deps/elixir/lib/elixir/pages/Typespecs.md:75
 msgid ""
-"These types are also provided by Elixir as shortcuts on top of the\n"
-"basic and literal types."
+"These types are also provided by Elixir as shortcuts on top of the basic and "
+"literal types."
 msgstr ""
 "いくつかのタイプもまた、基本的かつリテラルのタイプの上にショートカット\n"
 "としてElixirにより供給されます。"
 
-#: deps/elixir/lib/elixir/pages/Typespecs.md:90
+#: deps/elixir/lib/elixir/pages/Typespecs.md:77
 msgid ""
 "Built-in type           | Defined as\n"
 ":---------------------- | :---------\n"
@@ -117,12 +112,13 @@ msgid ""
 "`list()`                | `[any()]`\n"
 "`maybe_improper_list()` | `maybe_improper_list(any(), any())`\n"
 "`nonempty_list()`       | `nonempty_list(any())`\n"
+"`iolist()`              | `maybe_improper_list(byte() \\| binary() \\| "
+"iolist(), binary() \\| [])`\n"
 "`iodata()`              | `iolist()` \\| `binary()`\n"
-"`iolist()`              | `maybe_improper_list(byte()` \\| `binary()` \\| "
-"`iolist(), binary()` \\| `[])`\n"
 "`module()`              | `atom()` \\| `tuple()`\n"
 "`arity()`               | `0..255`\n"
 "`mfa()`                 | `{atom(), atom(), arity()}`\n"
+"`identifier()`          | `pid()` \\| `port()` \\| `reference()`\n"
 "`node()`                | `atom()`\n"
 "`timeout()`             | `:infinity` \\| `non_neg_integer()`\n"
 "`no_return()`           | `none()`\n"
@@ -130,86 +126,107 @@ msgid ""
 "`struct()`              | `%{__struct__: atom()}`\n"
 "`as_boolean(t)`         | `t`"
 msgstr ""
+"Built-in type           | Defined as\n"
+":---------------------- | :---------\n"
+"`term()`                | `any()`\n"
+"`binary()`              | `<<_::_ * 8>>`\n"
+"`bitstring()`           | `<<_::_ * 1>>`\n"
+"`boolean()`             | `false` \\| `true`\n"
+"`byte()`                | `0..255`\n"
+"`char()`                | `0..0x10ffff`\n"
+"`number()`              | `integer()` \\| `float()`\n"
+"`char_list()`           | `[char()]`\n"
+"`list()`                | `[any()]`\n"
+"`maybe_improper_list()` | `maybe_improper_list(any(), any())`\n"
+"`nonempty_list()`       | `nonempty_list(any())`\n"
+"`iolist()`              | `maybe_improper_list(byte() \\| binary() \\| iolist(), binary() \\| [])`\n"
+"`iodata()`              | `iolist()` \\| `binary()`\n"
+"`module()`              | `atom()` \\| `tuple()`\n"
+"`arity()`               | `0..255`\n"
+"`mfa()`                 | `{atom(), atom(), arity()}`\n"
+"`identifier()`          | `pid()` \\| `port()` \\| `reference()`\n"
+"`node()`                | `atom()`\n"
+"`timeout()`             | `:infinity` \\| `non_neg_integer()`\n"
+"`no_return()`           | `none()`\n"
+"`fun()`                 | `(... -> any)`\n"
+"`struct()`              | `%{__struct__: atom()}`\n"
+"`as_boolean(t)`         | `t`"
 
-#: deps/elixir/lib/elixir/pages/Typespecs.md:115
+#: deps/elixir/lib/elixir/pages/Typespecs.md:103
 msgid "### Remote types"
 msgstr "### Remote types"
 
-#: deps/elixir/lib/elixir/pages/Typespecs.md:117
+#: deps/elixir/lib/elixir/pages/Typespecs.md:105
 msgid ""
-"Any module is also able to define its own type and the modules in\n"
-"Elixir are no exception. For example, a string is `String.t`, a\n"
-"range is `Range.t`, any enumerable can be `Enum.t` and so on."
+"Any module is also able to define its own type and the modules in Elixir are "
+"no exception. For example, a string is `String.t`, a range is `Range.t`, any "
+"enumerable can be `Enum.t` and so on."
 msgstr ""
 "任意のモジュールもまたそれ自身のタイプの定義をすることが出来、\n"
 "Elixirのモジュールも例外ではありません。例えば、文字列は`String.t`、\n"
 "rangeは`Range.t`、任意のenumerableは`Enum.t`などとなります。"
 
-#: deps/elixir/lib/elixir/pages/Typespecs.md:121
+#: deps/elixir/lib/elixir/pages/Typespecs.md:107
 msgid "## Defining a type"
 msgstr "## Defining a type"
 
-#: deps/elixir/lib/elixir/pages/Typespecs.md:127
+#: deps/elixir/lib/elixir/pages/Typespecs.md:113
 msgid ""
-"A type defined with `@typep` is private. An opaque type, defined with\n"
-"`@opaque` is a type where the internal structure of the type will not be\n"
+"A type defined with `@typep` is private. An opaque type, defined with "
+"`@opaque` is a type where the internal structure of the type will not be "
 "visible, but the type is still public."
 msgstr ""
 "`@typep`で定義されたタイプはプライベートです。`@opaque`によって\n"
 "定義されたopaqueタイプはタイプの内部構造が不可視となりますが、\n"
 "タイプはパブリックのままです。"
 
-#: deps/elixir/lib/elixir/pages/Typespecs.md:131
+#: deps/elixir/lib/elixir/pages/Typespecs.md:115
 msgid ""
 "Types can be parameterized by defining variables as parameters, these "
-"variables\n"
-"can then be used to define the type."
+"variables can then be used to define the type."
 msgstr ""
 "変数はタイプを定義するために使うことができ、タイプは、変数を\n"
 "使ってパラメタ化することもできます。"
 
-#: deps/elixir/lib/elixir/pages/Typespecs.md:136
+#: deps/elixir/lib/elixir/pages/Typespecs.md:119
 msgid "## Defining a specification"
 msgstr "## Defining a specification"
 
-#: deps/elixir/lib/elixir/pages/Typespecs.md:142
+#: deps/elixir/lib/elixir/pages/Typespecs.md:125
 msgid ""
-"Callbacks are used to define the callbacks functions of behaviours (see\n"
+"Callbacks are used to define the callbacks functions of behaviours (see "
 "`Behaviour`)."
 msgstr ""
 "callbacksはビヘイビアのコールバック関数を定義するために使われます\n"
 "(`Behaviour`を参照してください)。"
 
-#: deps/elixir/lib/elixir/pages/Typespecs.md:145
+#: deps/elixir/lib/elixir/pages/Typespecs.md:127
 msgid ""
-"Guards can be used to restrict type variables given as arguments to the\n"
+"Guards can be used to restrict type variables given as arguments to the "
 "function."
 msgstr ""
 "Guardsは関数の引数として与えられる変数の型を制限するために\n"
 "使うことができます。"
 
-#: deps/elixir/lib/elixir/pages/Typespecs.md:150
+#: deps/elixir/lib/elixir/pages/Typespecs.md:131
 msgid "Type variables with no restriction can also be defined."
 msgstr "タイプ変数は制限なしで定義することもできます。"
 
-#: deps/elixir/lib/elixir/pages/Typespecs.md:154
+#: deps/elixir/lib/elixir/pages/Typespecs.md:135
 msgid "Specifications can be overloaded just like ordinary functions."
 msgstr "specificationは普通の関数のようにオーバーロードすることが出来ます。"
 
-#: deps/elixir/lib/elixir/pages/Typespecs.md:159
+#: deps/elixir/lib/elixir/pages/Typespecs.md:140
 msgid "## Notes"
 msgstr "## Notes"
 
-#: deps/elixir/lib/elixir/pages/Typespecs.md:161
+#: deps/elixir/lib/elixir/pages/Typespecs.md:142
 msgid ""
-"Elixir discourages the use of type `string` as it might be confused with\n"
+"Elixir discourages the use of type `string` as it might be confused with "
 "binaries which are referred to as \"strings\" in Elixir (as opposed to "
-"character\n"
-"lists). In order to use the type that is called `string` in Erlang, one has "
-"to\n"
-"use the `char_list` type which is a synonym for `string`. If you use "
-"`string`,\n"
-"you'll get a warning from the compiler."
+"character lists). In order to use the type that is called `string` in "
+"Erlang, one has to use the `char_list` type which is a synonym for `string`. "
+"If you use `string`, you'll get a warning from the compiler."
 msgstr ""
 "Elixirは(文字のリストではなく)Elixirでの\"strings\"(文字列)として\n"
 "参照されるバイナリと混同される可能性があるので、`string`タイプの\n"
@@ -218,11 +235,10 @@ msgstr ""
 "があります。もし`string`を使用したらコンパイラから警告を受けるで\n"
 "しょう。"
 
-#: deps/elixir/lib/elixir/pages/Typespecs.md:167
+#: deps/elixir/lib/elixir/pages/Typespecs.md:144
 msgid ""
 "If you want to refer to the \"string\" type (the one operated on by "
-"functions in\n"
-"the `String` module), use `String.t` type instead."
+"functions in the `String` module), use `String.t` type instead.\n"
 msgstr ""
 "もし(`String`モジュールの関数により操作される)\"string\"タイプを\n"
-"参照したいなら、`String.t`タイプを代りに使ってください。"
+"参照したいなら、`String.t`タイプを代りに使ってください。\n"

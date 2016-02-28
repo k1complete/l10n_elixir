@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: l 10n_elixir\n"
-"PO-Revision-Date: 2015-12-26 19:19+0900\n"
+"PO-Revision-Date: 2016-02-28 15:03+0900\n"
 "Last-Translator: 小田 照敬 <EMAIL@ADDRESS>\n"
 "Language-Team: Japanese\n"
 "Language: ja\n"
@@ -11,9 +11,9 @@ msgstr ""
 "Plural-Forms: nplurals=1; plural=0;\n"
 
 #. TRANSLATORS: def Task.Supervisor.start_child(supervisor, fun)
-#: lib/task/supervisor.ex:122
+#: lib/task/supervisor.ex:137
 msgid ""
-"Starts a task as child of the given `supervisor`.\n"
+"Starts a task as a child of the given `supervisor`.\n"
 "\n"
 "Note that the spawned process is not linked to the caller, but\n"
 "only to the supervisor. This command is useful in case the\n"
@@ -26,19 +26,6 @@ msgstr ""
 "にリンクされていることに注意してください。このコマンドはタスクが副作用\n"
 "(IOのような)を実行する必要があって、呼び出し側に報告を返す必要はない場\n"
 "合に役に立ちます。\n"
-
-#. TRANSLATORS: def Task.Supervisor.start_child(supervisor, module, fun, args)
-#: lib/task/supervisor.ex:135
-msgid ""
-"Starts a task as child of the given `supervisor`.\n"
-"\n"
-"Similar to `start_child/2` except the task is specified\n"
-"by the given `module`, `fun` and `args`.\n"
-msgstr ""
-"与えられた`supervisor`の子としてタスクを開始します。\n"
-"\n"
-"`start_child/2`と似ていますが、タスクは`module`、`fun`と`args`によって\n"
-"指定されなければなりません。\n"
 
 #. TRANSLATORS: def Task.Supervisor.start_link(opts \\ [])
 #: lib/task/supervisor.ex:18
@@ -87,7 +74,7 @@ msgstr ""
 "  指定されます;\n"
 
 #. TRANSLATORS: def Task.Supervisor.terminate_child(supervisor, pid)
-#: lib/task/supervisor.ex:106
+#: lib/task/supervisor.ex:121
 msgid "Terminates the child with the given `pid`.\n"
 msgstr "与えられた`pid`の子プロセスを終了します。\n"
 
@@ -123,6 +110,44 @@ msgstr ""
 "それについてはの詳細は、`GenServer`のドキュメントを参照してく\n"
 "ださい。\n"
 
+#. TRANSLATORS: def Task.Supervisor.async_nolink(supervisor, fun)
+#: lib/task/supervisor.ex:77
+msgid ""
+"Starts a task that can be awaited on.\n"
+"\n"
+"The `supervisor` must be a reference as defined in `Task.Supervisor`.\n"
+"The task won't be linked to the caller, see `Task.async/3` for\n"
+"more information.\n"
+"\n"
+"## Compatibility with OTP behaviours\n"
+"\n"
+"If you create a task using `async_nolink` inside an OTP behaviour\n"
+"like `GenServer`, you should match on the message coming from the\n"
+"task inside your `handle_info` callback.\n"
+"\n"
+"The reply sent by the task will be in the format `{ref, result}`,\n"
+"where `ref` is the monitor reference held by the task struct\n"
+"and `result` is the return value of the task function.\n"
+"\n"
+"Keep in mind that, regardless of how the task created with `async_nolink`\n"
+"terminates, the caller's process will always receive a `:DOWN` message\n"
+"with the same `ref` value that is held by the task struct. If the task\n"
+"terminates normally, the reason in the `:DOWN` message will be `:normal`.\n"
+msgstr ""
+
+#. TRANSLATORS: def Task.Supervisor.start_child(supervisor, module, fun, args)
+#: lib/task/supervisor.ex:150
+msgid ""
+"Starts a task as a child of the given `supervisor`.\n"
+"\n"
+"Similar to `start_child/2` except the task is specified\n"
+"by the given `module`, `fun` and `args`.\n"
+msgstr ""
+"与えられた`supervisor`の子としてタスクを開始します。\n"
+"\n"
+"`start_child/2`と似ていますが、タスクは`module`、`fun`と`args`によって\n"
+"指定されます。\n"
+
 #. TRANSLATORS: def Task.Supervisor.async(supervisor, module, fun, args)
 #: lib/task/supervisor.ex:59
 msgid ""
@@ -140,7 +165,7 @@ msgstr ""
 "`async_nolink/2`を参照してください。\n"
 
 #. TRANSLATORS: def Task.Supervisor.async_nolink(supervisor, module, fun, args)
-#: lib/task/supervisor.ex:89
+#: lib/task/supervisor.ex:104
 msgid ""
 "Starts a task that can be awaited on.\n"
 "\n"
@@ -155,6 +180,6 @@ msgstr ""
 "`Task.async/3`を参照してください。\n"
 
 #. TRANSLATORS: def Task.Supervisor.children(supervisor)
-#: lib/task/supervisor.ex:114
+#: lib/task/supervisor.ex:129
 msgid "Returns all children pids.\n"
 msgstr "全ての子プロセスのpidを返します。\n"
