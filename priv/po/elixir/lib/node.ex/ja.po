@@ -10,17 +10,6 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
-#. TRANSLATORS: def Node.get_cookie()
-#: lib/node.ex:259
-msgid ""
-"Returns the magic cookie of the local node.\n"
-"\n"
-"Returns the cookie if the node is alive, otherwise `:nocookie`.\n"
-msgstr ""
-"ローカルノードのマジッククッキーを返します。\n"
-"\n"
-"もしノードが生きていればクッキーを、さもなくば`:nocookie`を返します。\n"
-
 #. TRANSLATORS: def Node.list(args)
 #: lib/node.ex:69
 msgid ""
@@ -61,6 +50,17 @@ msgstr ""
 "\n"
 "与えられた`node`が生きていないとき、この関数は`FunctionClauseError`を\n"
 "上げます。\n"
+
+#. TRANSLATORS: def Node.get_cookie()
+#: lib/node.ex:259
+msgid ""
+"Returns the magic cookie of the local node.\n"
+"\n"
+"Returns the cookie if the node is alive, otherwise `:nocookie`.\n"
+msgstr ""
+"ローカルノードのマジッククッキーを返します。\n"
+"\n"
+"もしノードが生きていればクッキーを、さもなくば`:nocookie`を返します。\n"
 
 #. TRANSLATORS: def Node.monitor(node, flag)
 #: lib/node.ex:84
@@ -220,6 +220,47 @@ msgstr ""
 "インライン化関数についての詳細は、`Kernel`モジュールをチェックしてくだ\n"
 "さい。\n"
 
+#. TRANSLATORS: def Node.stop()
+#: lib/node.ex:25
+msgid ""
+"Turns a distributed node into a non-distributed node.\n"
+"\n"
+"For other nodes in the network, this is the same as the node going down.\n"
+"Only possible when the node was started with `Node.start/3`, otherwise\n"
+"returns `{:error, :not_allowed}`. Returns `{:error, :not_found}` if the\n"
+"local node is not alive.\n"
+msgstr ""
+"分散ノードを非分散ノードに変えます。\n"
+"\n"
+"ネットワークの他のノードからは、これはノードがダウンしたのと同じです。\n"
+"`Node.start/3`でそのノードがスタートしていたときだけ、この関数を\n"
+"呼ぶことができ、さもなければ、`{:error,:not_allowed}`を返します。\n"
+"もしローカルノードが生きていないとき、`{:error, :not_found}`を返します。\n"
+
+#. TRANSLATORS: def Node.spawn(node, module, fun, args, opts)
+#: lib/node.ex:202
+msgid ""
+"Returns the pid of a new process started by the application of\n"
+"`module.function(args)` on `node`.\n"
+"\n"
+"If `node` does not exist, a useless pid is returned.\n"
+"\n"
+"For the list of available options, see\n"
+"[`:erlang.spawn/5`](http://www.erlang.org/doc/man/erlang.html#spawn_opt-5).\n"
+"\n"
+"Inlined by the compiler.\n"
+msgstr ""
+"`node`で`module.function(args)`の適用により新しいプロセスを開始してその\n"
+"pidを返します。\n"
+"\n"
+"もし`node`が存在しないなら、返されたpidは役にたちません。\n"
+"\n"
+"有効なオプションのリストについては、\n"
+"[`:erlang.spawn/5`](http://www.erlang.org/doc/man/erlang.html#spawn_opt-5)\n"
+"をチェックしてください。\n"
+"\n"
+"コンパイラによりインライン化されます。\n"
+
 #. TRANSLATORS: def Node.ping(node)
 #: lib/node.ex:110
 msgid ""
@@ -254,47 +295,6 @@ msgstr ""
 "\n"
 "つまり、もし、ノードが分散システムの一部で有り得るならば、\n"
 "`true`を返します。\n"
-
-#. TRANSLATORS: def Node.spawn(node, module, fun, args, opts)
-#: lib/node.ex:202
-msgid ""
-"Returns the pid of a new process started by the application of\n"
-"`module.function(args)` on `node`.\n"
-"\n"
-"If `node` does not exist, a useless pid is returned.\n"
-"\n"
-"For the list of available options, see\n"
-"[`:erlang.spawn/5`](http://www.erlang.org/doc/man/erlang.html#spawn_opt-5).\n"
-"\n"
-"Inlined by the compiler.\n"
-msgstr ""
-"`node`で`module.function(args)`の適用により新しいプロセスを開始してその\n"
-"pidを返します。\n"
-"\n"
-"もし`node`が存在しないなら、返されたpidは役にたちません。\n"
-"\n"
-"有効なオプションのリストについては、\n"
-"[`:erlang.spawn/5`](http://www.erlang.org/doc/man/erlang.html#spawn_opt-5)\n"
-"をチェックしてください。\n"
-"\n"
-"コンパイラによりインライン化されます。\n"
-
-#. TRANSLATORS: def Node.stop()
-#: lib/node.ex:25
-msgid ""
-"Turns a distributed node into a non-distributed node.\n"
-"\n"
-"For other nodes in the network, this is the same as the node going down.\n"
-"Only possible when the node was started with `Node.start/3`, otherwise\n"
-"returns `{:error, :not_allowed}`. Returns `{:error, :not_found}` if the\n"
-"local node is not alive.\n"
-msgstr ""
-"分散ノードを非分散ノードに変えます。\n"
-"\n"
-"ネットワークの他のノードからは、これはノードがダウンしたのと同じです。\n"
-"`Node.start/3`でそのノードがスタートしていたときだけ、この関数を\n"
-"呼ぶことができ、さもなければ、`{:error,:not_allowed}`を返します。\n"
-"もしローカルノードが生きていないとき、`{:error, :not_found}`を返します。\n"
 
 #. TRANSLATORS: def Node.spawn(node, module, fun, args)
 #: lib/node.ex:186
@@ -343,17 +343,6 @@ msgstr ""
 "\n"
 "コンパイラによりインライン化されます。\n"
 
-#. TRANSLATORS: def Node.self()
-#: lib/node.ex:38
-msgid ""
-"Returns the current node.\n"
-"\n"
-"It returns the same as the built-in `node()`.\n"
-msgstr ""
-"現在のノードを返します。\n"
-"\n"
-"ビルトインの`node()`と同じように返します。\n"
-
 #. TRANSLATORS: def Node.connect(node)
 #: lib/node.ex:142
 msgid ""
@@ -395,3 +384,14 @@ msgstr ""
 "をチェックしてください。\n"
 "\n"
 "コンパイラによりインライン化されます。\n"
+
+#. TRANSLATORS: def Node.self()
+#: lib/node.ex:38
+msgid ""
+"Returns the current node.\n"
+"\n"
+"It returns the same as the built-in `node()`.\n"
+msgstr ""
+"現在のノードを返します。\n"
+"\n"
+"ビルトインの`node()`と同じように返します。\n"

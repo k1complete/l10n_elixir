@@ -10,11 +10,6 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
-#. TRANSLATORS: @type on_start
-#: lib/supervisor.ex:218
-msgid "Return values of `start_link` functions"
-msgstr "`start_link`関数の戻値"
-
 #. TRANSLATORS: def Supervisor.terminate_child(supervisor, pid_or_child_id)
 #: lib/supervisor.ex:341
 msgid ""
@@ -54,6 +49,11 @@ msgstr ""
 "\n"
 "成功すると、関数は`:ok`を返します。もしchild仕様あるいはpidがないなら、\n"
 "関数は`{:error, :not_found}`を返します。\n"
+
+#. TRANSLATORS: @type on_start
+#: lib/supervisor.ex:218
+msgid "Return values of `start_link` functions"
+msgstr "`start_link`関数の戻値"
 
 #. TRANSLATORS: def Supervisor.delete_child(supervisor, child_id)
 #: lib/supervisor.ex:365
@@ -653,28 +653,6 @@ msgstr ""
 "このオペレーションは`simple_one_for_one`スーパバイザではサポートされて\n"
 "いません。\n"
 
-#. TRANSLATORS: def Supervisor.stop(supervisor, reason \\ :normal, timeout \\ :infinity)
-#: lib/supervisor.ex:466
-msgid ""
-"Stops the supervisor with the given `reason`.\n"
-"\n"
-"It returns `:ok` if the supervisor terminates with the given\n"
-"reason, if it terminates with another reason, the call will\n"
-"exit.\n"
-"\n"
-"This function keeps OTP semantics regarding error reporting.\n"
-"If the reason is any other than `:normal`, `:shutdown` or\n"
-"`{:shutdown, _}`, an error report will be logged.\n"
-msgstr ""
-"与えられた`reason`でスーパバイザを停止します。\n"
-"\n"
-"与えられたreasonでスーババイザが終了したら、`:ok`を返します。\n"
-"他のreasonで終了したらexitを呼出します。\n"
-"\n"
-"この関数はエラーレポートに関するOTPセマンティクスを遵守します。\n"
-"もし`:normal`, `:shutdown`あるいは`{:shutdown, _}`以外の\n"
-"reasonならエラーレポートがログされるでしょう。\n"
-
 #. TRANSLATORS: def Supervisor.start_link(children, options)
 #: lib/supervisor.ex:240
 msgid ""
@@ -732,6 +710,28 @@ msgstr ""
 "`Supervisor`は親プロセスにリンクされていて、クラッシュするだけではなく\n"
 "親プロセスが`:normal` reasonで終了するかもしれないことに気を付けてくだ\n"
 "さい。\n"
+
+#. TRANSLATORS: def Supervisor.stop(supervisor, reason \\ :normal, timeout \\ :infinity)
+#: lib/supervisor.ex:466
+msgid ""
+"Stops the supervisor with the given `reason`.\n"
+"\n"
+"It returns `:ok` if the supervisor terminates with the given\n"
+"reason, if it terminates with another reason, the call will\n"
+"exit.\n"
+"\n"
+"This function keeps OTP semantics regarding error reporting.\n"
+"If the reason is any other than `:normal`, `:shutdown` or\n"
+"`{:shutdown, _}`, an error report will be logged.\n"
+msgstr ""
+"与えられた`reason`でスーパバイザを停止します。\n"
+"\n"
+"与えられたreasonでスーババイザが終了したら、`:ok`を返します。\n"
+"他のreasonで終了したらexitを呼出します。\n"
+"\n"
+"この関数はエラーレポートに関するOTPセマンティクスを遵守します。\n"
+"もし`:normal`, `:shutdown`あるいは`{:shutdown, _}`以外の\n"
+"reasonならエラーレポートがログされるでしょう。\n"
 
 #. TRANSLATORS: @type on_start_child
 #: lib/supervisor.ex:222

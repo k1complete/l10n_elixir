@@ -1,5 +1,5 @@
 #. TRANSLATORS: def Macro.decompose_call(ast)
-#: lib/macro.ex:250 
+#: lib/macro.ex:287 
 msgid ""
 "Decomposes a local or remote call into its remote part (when provided),\n"
 "function name and argument list.\n"
@@ -25,7 +25,7 @@ msgid ""
 "\n"
 msgstr ""
 #. TRANSLATORS: def Macro.expand(tree, env)
-#: lib/macro.ex:1034 
+#: lib/macro.ex:1077 
 msgid ""
 "Receives an AST node and expands it until it can no longer\n"
 "be expanded.\n"
@@ -34,30 +34,30 @@ msgid ""
 "it out for more information and examples.\n"
 msgstr ""
 #. TRANSLATORS: def Macro.postwalk(ast, acc, fun)
-#: lib/macro.ex:241 
+#: lib/macro.ex:278 
 msgid ""
 "Performs a depth-first, post-order traversal of quoted expressions\n"
 "using an accumulator.\n"
 msgstr ""
 #. TRANSLATORS: def Macro.prewalk(ast, acc, fun)
-#: lib/macro.ex:224 
+#: lib/macro.ex:261 
 msgid ""
 "Performs a depth-first, pre-order traversal of quoted expressions\n"
 "using an accumulator.\n"
 msgstr ""
 #. TRANSLATORS: @type t
-#: lib/macro.ex:21 
+#: lib/macro.ex:54 
 msgid ""
 "Abstract Syntax Tree (AST)"
 msgstr ""
 #. TRANSLATORS: def Macro.traverse(ast, acc, pre, post)
-#: lib/macro.ex:170 
+#: lib/macro.ex:203 
 msgid ""
 "Performs a depth-first traversal of quoted expressions\n"
 "using an accumulator.\n"
 msgstr ""
 #. TRANSLATORS: def Macro.underscore(atom)
-#: lib/macro.ex:1053 
+#: lib/macro.ex:1096 
 msgid ""
 "Converts the given atom or binary to underscore format.\n"
 "\n"
@@ -86,7 +86,7 @@ msgid ""
 "\n"
 msgstr ""
 #. TRANSLATORS: def Macro.to_string(tree, fun \\ fn _ast, string -> string end)
-#: lib/macro.ex:450 
+#: lib/macro.ex:487 
 msgid ""
 "Converts the given expression to a binary.\n"
 "\n"
@@ -97,35 +97,17 @@ msgid ""
 "\n"
 msgstr ""
 #. TRANSLATORS: def Macro.prewalk(ast, fun)
-#: lib/macro.ex:216 
+#: lib/macro.ex:253 
 msgid ""
 "Performs a depth-first, pre-order traversal of quoted expressions.\n"
 msgstr ""
-#. TRANSLATORS: Elixir.Macro Summary
-#: lib/macro.ex:4 
-msgid ""
-"Conveniences for working with macros.\n"
-"\n"
-"## Custom Sigils\n"
-"\n"
-"To create a custom sigil, define a function with the name\n"
-"`sigil_{identifier}` that takes two arguments. The first argument will be\n"
-"the interpolated string, the second will be a char list containing any\n"
-"modifiers.\n"
-"\n"
-"Valid modifiers include only lower and upper case letters. Other characters\n"
-"will cause a syntax error.\n"
-"\n"
-"The module containing the custom sigil must be imported before the sigil\n"
-"syntax can be used.\n"
-msgstr ""
 #. TRANSLATORS: def Macro.postwalk(ast, fun)
-#: lib/macro.ex:233 
+#: lib/macro.ex:270 
 msgid ""
 "Performs a depth-first, post-order traversal of quoted expressions.\n"
 msgstr ""
 #. TRANSLATORS: def Macro.expand_once(ast, env)
-#: lib/macro.ex:847 
+#: lib/macro.ex:890 
 msgid ""
 "Receives an AST node and expands it once.\n"
 "\n"
@@ -203,7 +185,7 @@ msgid ""
 "\n"
 msgstr ""
 #. TRANSLATORS: def Macro.unescape_string(chars, map)
-#: lib/macro.ex:378 
+#: lib/macro.ex:415 
 msgid ""
 "Unescapes the given chars according to the map given.\n"
 "\n"
@@ -246,7 +228,7 @@ msgid ""
 "\n"
 msgstr ""
 #. TRANSLATORS: def Macro.camelize(string)
-#: lib/macro.ex:1113 
+#: lib/macro.ex:1156 
 msgid ""
 "Converts the given string to CamelCase format.\n"
 "\n"
@@ -257,7 +239,7 @@ msgid ""
 "\n"
 msgstr ""
 #. TRANSLATORS: def Macro.unescape_tokens(tokens)
-#: lib/macro.ex:424 
+#: lib/macro.ex:461 
 msgid ""
 "Unescapes the given tokens according to the default map.\n"
 "\n"
@@ -269,20 +251,71 @@ msgid ""
 "sigils. Check the implementation of `Kernel.sigil_s/2`\n"
 "for examples.\n"
 msgstr ""
-#. TRANSLATORS: def Macro.pipe(expr, call_args, position)
-#: lib/macro.ex:82 
+#. TRANSLATORS: Elixir.Macro Summary
+#: lib/macro.ex:4 
 msgid ""
-"Pipes `expr` into the `call_args` at the given `position`.\n"
+"Conveniences for working with macros.\n"
+"\n"
+"## Custom Sigils\n"
+"\n"
+"To create a custom sigil, define a function with the name\n"
+"`sigil_{identifier}` that takes two arguments. The first argument will be\n"
+"the string, the second will be a char list containing any modifiers. If the\n"
+"sigil is lower case (such as `sigil_x`) then the string argument will allow\n"
+"interpolation. If the sigil is upper case (such as `sigil_X`) then the string\n"
+"will not be interpolated.\n"
+"\n"
+"Valid modifiers include only lower and upper case letters. Other characters\n"
+"will cause a syntax error.\n"
+"\n"
+"The module containing the custom sigil must be imported before the sigil\n"
+"syntax can be used.\n"
+"\n"
+"### Examples\n"
+"\n"
+"    defmodule MySigils do\n"
+"      defmacro sigil_x(term, [?r]) do\n"
+"        quote do: unquote(term) |> String.reverse()\n"
+"      end\n"
+"      defmacro sigil_x(term, _modifiers) do\n"
+"        term\n"
+"      end\n"
+"      defmacro sigil_X(term, [?r]) do\n"
+"        quote do: unquote(term) |> String.reverse()\n"
+"      end\n"
+"      defmacro sigil_X(term, _modifiers) do\n"
+"        term\n"
+"      end\n"
+"    end\n"
+"\n"
+"    import MySigils\n"
+"\n"
+"    ~x(with #{\"inter\" <> \"polation\"})\n"
+"    #=>\"with interpolation\"\n"
+"\n"
+"    ~x(with #{\"inter\" <> \"polation\"})r\n"
+"    #=>\"noitalopretni htiw\"\n"
+"\n"
+"    ~X(without #{\"interpolation\"})\n"
+"    #=>\"without \\#{\"interpolation\"}\"\n"
+"\n"
+"    ~X(without #{\"interpolation\"})r\n"
+"    #=>\"}\\\"noitalopretni\\\"{# tuohtiw\"\n"
 msgstr ""
 #. TRANSLATORS: def Macro.unescape_tokens(tokens, map)
-#: lib/macro.ex:440 
+#: lib/macro.ex:477 
 msgid ""
 "Unescapes the given tokens according to the given map.\n"
 "\n"
 "Check `unescape_tokens/1` and `unescape_string/2` for more information.\n"
 msgstr ""
+#. TRANSLATORS: def Macro.pipe(expr, call_args, position)
+#: lib/macro.ex:115 
+msgid ""
+"Pipes `expr` into the `call_args` at the given `position`.\n"
+msgstr ""
 #. TRANSLATORS: def Macro.var(var, context)
-#: lib/macro.ex:145 
+#: lib/macro.ex:178 
 msgid ""
 "Generates an AST node representing the variable given\n"
 "by the atoms `var` and `context`.\n"
@@ -304,7 +337,7 @@ msgid ""
 "\n"
 msgstr ""
 #. TRANSLATORS: def Macro.unescape_string(chars)
-#: lib/macro.ex:349 
+#: lib/macro.ex:386 
 msgid ""
 "Unescapes the given chars.\n"
 "\n"
@@ -330,7 +363,7 @@ msgid ""
 "and return a version with it unescaped.\n"
 msgstr ""
 #. TRANSLATORS: def Macro.update_meta(quoted, fun)
-#: lib/macro.ex:119 
+#: lib/macro.ex:152 
 msgid ""
 "Applies the given function to the node metadata if it contains one.\n"
 "\n"
@@ -347,13 +380,13 @@ msgid ""
 "\n"
 msgstr ""
 #. TRANSLATORS: def Macro.escape(expr, opts \\ [])
-#: lib/macro.ex:289 
+#: lib/macro.ex:326 
 msgid ""
 "Recursively escapes a value so it can be inserted\n"
 "into a syntax tree.\n"
 "\n"
 "One may pass `unquote: true` to `escape/2`\n"
-"which leaves `unquote` statements unescaped, effectively\n"
+"which leaves `unquote/1` statements unescaped, effectively\n"
 "unquoting the contents on escape.\n"
 "\n"
 "## Examples\n"
@@ -369,14 +402,14 @@ msgid ""
 "\n"
 msgstr ""
 #. TRANSLATORS: def Macro.unpipe(expr)
-#: lib/macro.ex:64 
+#: lib/macro.ex:97 
 msgid ""
 "Breaks a pipeline expression into a list.\n"
 "\n"
 "Raises if the pipeline is ill-formed.\n"
 msgstr ""
 #. TRANSLATORS: def Macro.validate(expr)
-#: lib/macro.ex:315 
+#: lib/macro.ex:352 
 msgid ""
 "Validates the given expressions are valid quoted expressions.\n"
 "\n"

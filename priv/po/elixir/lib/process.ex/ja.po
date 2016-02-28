@@ -10,15 +10,32 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
+#. TRANSLATORS: def Process.flag(flag, value)
+#: lib/process.ex:464
+msgid ""
+"Sets certain flags for the process which calls this function.\n"
+"Returns the old value of the flag.\n"
+"\n"
+"See [`:erlang.process_flag/2`](http://www.erlang.org/doc/man/erlang."
+"html#process_flag-2) for more info.\n"
+msgstr ""
+"特定のフラグをこの関数を呼び出したプロセスにセットします。\n"
+"そのフラグの古い値を返します。\n"
+"\n"
+"更なる情報は\n"
+"[`:erlang.process_flag/2`](http://www.erlang.org/doc/man/erlang."
+"html#process_flag-2)\n"
+"を参照してください。\n"
+
 #. TRANSLATORS: def Process.group_leader()
-#: lib/process.ex:362
+#: lib/process.ex:436
 msgid ""
 "Returns the pid of the group leader for the process which evaluates the "
 "function.\n"
 msgstr "関数を評価しているプロセスのグループリーダのpidを返します。\n"
 
 #. TRANSLATORS: def Process.monitor(item)
-#: lib/process.ex:255
+#: lib/process.ex:329
 msgid ""
 "The calling process starts monitoring the item given.\n"
 "It returns the monitor reference.\n"
@@ -44,6 +61,77 @@ msgstr ""
 "\n"
 "コンパイラによりインライン化されます。\n"
 
+#. TRANSLATORS: def Process.sleep(timeout)
+#: lib/process.ex:124
+msgid ""
+"Sleeps the current process by `timeout`.\n"
+"\n"
+"`timeout` is either the number of miliseconds to sleep as an\n"
+"integer or the atom `:infinity`. When `:infinity` is given,\n"
+"the current process will suspend forever.\n"
+"\n"
+"**Use this function with extreme care**. For almost all situations\n"
+"where you would use `sleep/1` in Elixir, there is likely a\n"
+"more correct, faster and precise way of achieving it with\n"
+"message passing.\n"
+"\n"
+"For example, if you are waiting a process to perform some\n"
+"action, it is better to communicate.\n"
+"\n"
+"In other words, **do not**:\n"
+"\n"
+"    Task.start_link fn ->\n"
+"      do_something()\n"
+"      ...\n"
+"    end\n"
+"\n"
+"    # Wait until work is done\n"
+"    Process.sleep(2000)\n"
+"\n"
+"But **do**:\n"
+"\n"
+"    parent = self()\n"
+"    Task.start_link fn ->\n"
+"      do_something()\n"
+"      send parent, :work_is_done\n"
+"      ...\n"
+"    end\n"
+"\n"
+"    receive do\n"
+"      :work_is_done -> :ok\n"
+"    after\n"
+"      30_000 -> :timeout # Optional timeout\n"
+"    end\n"
+"\n"
+"Or even use `Task.async/1` and `Task.await/2` in the example\n"
+"above.\n"
+"\n"
+"Similarly, if you are waiting for a process to terminate,\n"
+"use monitor instead of sleep. **Do not**:\n"
+"\n"
+"    Task.start_link fn ->\n"
+"      ...\n"
+"    end\n"
+"\n"
+"    # Wait until task terminates\n"
+"    Process.sleep(2000)\n"
+"\n"
+"Instead **do**:\n"
+"\n"
+"    {:ok, pid} =\n"
+"      Task.start_link fn ->\n"
+"        ...\n"
+"      end\n"
+"\n"
+"    ref = Process.monitor(pid)\n"
+"    receive do\n"
+"      {:DOWN, ^ref, _, _, _} -> :task_is_down\n"
+"    after\n"
+"      30_000 -> :timeout # Optional timeout\n"
+"    end\n"
+"\n"
+msgstr ""
+
 #. TRANSLATORS: def Process.get()
 #: lib/process.ex:30
 msgid ""
@@ -56,7 +144,7 @@ msgstr ""
 "コンパイラによりインライン化されます。\n"
 
 #. TRANSLATORS: def Process.group_leader(pid, leader)
-#: lib/process.ex:370
+#: lib/process.ex:444
 msgid ""
 "Sets the group leader of `pid` to `leader`. Typically, this is used when a "
 "processes\n"
@@ -66,25 +154,8 @@ msgstr ""
 "からスタートするプロセスが`:init`以外のグループリーダーをを持っていなけ\n"
 "ればならないとき、これが使われます。\n"
 
-#. TRANSLATORS: def Process.flag(flag, value)
-#: lib/process.ex:390
-msgid ""
-"Sets certain flags for the process which calls this function.\n"
-"Returns the old value of the flag.\n"
-"\n"
-"See [`:erlang.process_flag/2`](http://www.erlang.org/doc/man/erlang."
-"html#process_flag-2) for more info.\n"
-msgstr ""
-"特定のフラグをこの関数を呼び出したプロセスにセットします。\n"
-"そのフラグの古い値を返します。\n"
-"\n"
-"更なる情報は\n"
-"[`:erlang.process_flag/2`](http://www.erlang.org/doc/man/erlang."
-"html#process_flag-2)\n"
-"を参照してください。\n"
-
 #. TRANSLATORS: def Process.hibernate(mod, fun, args)
-#: lib/process.ex:446
+#: lib/process.ex:520
 msgid ""
 "Puts the calling process into a wait state\n"
 "where its memory allocation has been reduced as much as possible,\n"
@@ -109,7 +180,7 @@ msgstr ""
 "コンパイラによりインライン化されます。\n"
 
 #. TRANSLATORS: def Process.send(dest, msg, options)
-#: lib/process.ex:124
+#: lib/process.ex:198
 msgid ""
 "Sends a message to the given process.\n"
 "\n"
@@ -148,7 +219,7 @@ msgstr ""
 "\n"
 
 #. TRANSLATORS: def Process.unlink(pid)
-#: lib/process.ex:313
+#: lib/process.ex:387
 msgid ""
 "Removes the link, if there is one, between the calling process and\n"
 "the process or port referred to by `pid`. Returns `true` and does not\n"
@@ -171,7 +242,7 @@ msgstr ""
 "コンパイラによりインライン化されます。\n"
 
 #. TRANSLATORS: def Process.info(pid)
-#: lib/process.ex:413
+#: lib/process.ex:487
 msgid ""
 "Returns information about the process identified by `pid` or `nil` if the "
 "process\n"
@@ -250,7 +321,7 @@ msgstr ""
 "\n"
 
 #. TRANSLATORS: def Process.link(pid)
-#: lib/process.ex:300
+#: lib/process.ex:374
 msgid ""
 "Creates a link between the calling process and another process\n"
 "(or port) `pid`, if there is not such a link already.\n"
@@ -281,7 +352,7 @@ msgstr ""
 "コンパイラによりインライン化されます。\n"
 
 #. TRANSLATORS: def Process.register(pid, name)
-#: lib/process.ex:327
+#: lib/process.ex:401
 msgid ""
 "Associates the name with a pid or a port identifier. `name`, which must\n"
 "be an atom, can be used instead of the pid / port identifier with the\n"
@@ -311,7 +382,7 @@ msgstr ""
 "コンパイラによりインライン化されます。\n"
 
 #. TRANSLATORS: def Process.demonitor(monitor_ref, options \\ [])
-#: lib/process.ex:270
+#: lib/process.ex:344
 msgid ""
 "If `monitor_ref` is a reference which the calling process\n"
 "obtained by calling `monitor/1`, this monitoring is turned off.\n"
@@ -334,7 +405,7 @@ msgstr ""
 "コンパイラによりインライン化されます。\n"
 
 #. TRANSLATORS: def Process.cancel_timer(timer_ref)
-#: lib/process.ex:171
+#: lib/process.ex:245
 msgid ""
 "Cancels a timer created by `send_after/3`.\n"
 "\n"
@@ -365,7 +436,7 @@ msgstr ""
 "コンパイラによりインライン化されます。\n"
 
 #. TRANSLATORS: def Process.list()
-#: lib/process.ex:285
+#: lib/process.ex:359
 msgid ""
 "Returns a list of process identifiers corresponding to all the\n"
 "processes currently existing on the local node.\n"
@@ -389,6 +460,25 @@ msgstr ""
 "html#processes-0)\n"
 "を参照してください。\n"
 
+#. TRANSLATORS: def Process.flag(pid, flag, value)
+#: lib/process.ex:475
+msgid ""
+"Sets certain flags for the process `pid`, in the same manner as `flag/2`.\n"
+"Returns the old value of the flag. The allowed values for `flag` are\n"
+"only a subset of those allowed in `flag/2`, namely: `save_calls`.\n"
+"\n"
+"See [`:erlang.process_flag/3`](http://www.erlang.org/doc/man/erlang."
+"html#process_flag-3) for more info.\n"
+msgstr ""
+"`flag/2`と同じマナーで、特定のフラグを`pid`プロセスにセットします。\n"
+"そのフラグの古い値を返します。`flag`の許された値は`flag/2`のサブセット\n"
+"である`save_calls`だけです。\n"
+"\n"
+"更なる情報は\n"
+"[`:erlang.process_flag/3`](http://www.erlang.org/doc/man/erlang."
+"html#process_flag-3)\n"
+"を参照してください。\n"
+
 #. TRANSLATORS: def Process.alive?(pid)
 #: lib/process.ex:17
 msgid ""
@@ -407,24 +497,8 @@ msgstr ""
 "\n"
 "コンパイラによりインライン化されます。\n"
 
-#. TRANSLATORS: def Process.whereis(name)
-#: lib/process.ex:351
-msgid ""
-"Returns the pid or port identifier with the registered name.\n"
-"Returns `nil` if the name is not registered.\n"
-"\n"
-"See [`:erlang.whereis/1`](http://www.erlang.org/doc/man/erlang."
-"html#whereis-1) for more info.\n"
-msgstr ""
-"pidまたはnameで登録されたポート識別子を返します。nameが登録されていない\n"
-"とき、`nil`を返します。\n"
-"\n"
-"更なる情報は \n"
-"[`:erlang.whereis/1`](http://www.erlang.org/doc/man/erlang.html#whereis-1)\n"
-"を参照してください。\n"
-
 #. TRANSLATORS: def Process.spawn(mod, fun, args, opts)
-#: lib/process.ex:236
+#: lib/process.ex:310
 msgid ""
 "Spawns the given module and function passing the given args\n"
 "according to the given options.\n"
@@ -456,7 +530,7 @@ msgstr ""
 "コンパイラによりインライン化されます。\n"
 
 #. TRANSLATORS: def Process.info(pid, spec)
-#: lib/process.ex:425
+#: lib/process.ex:499
 msgid ""
 "Returns information about the process identified by `pid`\n"
 "or `nil` if the process is not alive.\n"
@@ -502,29 +576,10 @@ msgstr ""
 "\n"
 
 #. TRANSLATORS: def Process.registered()
-#: lib/process.ex:379
+#: lib/process.ex:453
 msgid ""
 "Returns a list of names which have been registered using `register/2`.\n"
 msgstr "`register/2`を使って登録された、名前のリストを返します。\n"
-
-#. TRANSLATORS: def Process.flag(pid, flag, value)
-#: lib/process.ex:401
-msgid ""
-"Sets certain flags for the process `pid`, in the same manner as `flag/2`.\n"
-"Returns the old value of the flag. The allowed values for `flag` are\n"
-"only a subset of those allowed in `flag/2`, namely: `save_calls`.\n"
-"\n"
-"See [`:erlang.process_flag/3`](http://www.erlang.org/doc/man/erlang."
-"html#process_flag-3) for more info.\n"
-msgstr ""
-"`flag/2`と同じマナーで、特定のフラグを`pid`プロセスにセットします。\n"
-"そのフラグの古い値を返します。`flag`の許された値は`flag/2`のサブセット\n"
-"である`save_calls`だけです。\n"
-"\n"
-"更なる情報は\n"
-"[`:erlang.process_flag/3`](http://www.erlang.org/doc/man/erlang."
-"html#process_flag-3)\n"
-"を参照してください。\n"
 
 #. TRANSLATORS: def Process.put(key, value)
 #: lib/process.ex:74
@@ -540,6 +595,22 @@ msgstr ""
 "キー`key`のもとで保存されていた前の値(`key`で保存された値が\n"
 "無い場合は`nil`)を返します。\n"
 
+#. TRANSLATORS: def Process.whereis(name)
+#: lib/process.ex:425
+msgid ""
+"Returns the pid or port identifier with the registered name.\n"
+"Returns `nil` if the name is not registered.\n"
+"\n"
+"See [`:erlang.whereis/1`](http://www.erlang.org/doc/man/erlang."
+"html#whereis-1) for more info.\n"
+msgstr ""
+"pidまたはnameで登録されたポート識別子を返します。nameが登録されていない\n"
+"とき、`nil`を返します。\n"
+"\n"
+"更なる情報は \n"
+"[`:erlang.whereis/1`](http://www.erlang.org/doc/man/erlang.html#whereis-1)\n"
+"を参照してください。\n"
+
 #. TRANSLATORS: def Process.get(key, default \\ nil)
 #: lib/process.ex:40
 msgid "Returns the value for the given `key`.\n"
@@ -551,7 +622,7 @@ msgid "Deletes the given `key` from the process dictionary.\n"
 msgstr "プロセス辞書から与えられた`key`を削除します。\n"
 
 #. TRANSLATORS: def Process.send_after(dest, msg, time)
-#: lib/process.ex:150
+#: lib/process.ex:224
 msgid ""
 "Sends `msg` to `dest` after `time` milliseconds.\n"
 "\n"
@@ -588,7 +659,7 @@ msgstr ""
 "い。\n"
 
 #. TRANSLATORS: def Process.read_timer(timer_ref)
-#: lib/process.ex:191
+#: lib/process.ex:265
 msgid ""
 "Reads a timer created by `send_after/3`.\n"
 "\n"
@@ -619,7 +690,7 @@ msgstr ""
 "コンパイラによりインライン化されます。\n"
 
 #. TRANSLATORS: def Process.unregister(name)
-#: lib/process.ex:341
+#: lib/process.ex:415
 msgid ""
 "Removes the registered name, associated with a pid or a port identifier.\n"
 "\n"

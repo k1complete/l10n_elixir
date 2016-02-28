@@ -37,6 +37,21 @@ msgstr ""
 "    -1\n"
 "\n"
 
+#. TRANSLATORS: defmacro Bitwise.^^^(left, right)
+#: lib/bitwise.ex:130
+msgid ""
+"Infix operator; calculates the bitwise XOR of its arguments.\n"
+"\n"
+"    iex> 9 ^^^ 3\n"
+"    10\n"
+"\n"
+msgstr ""
+"中置演算子; 引数のビットXORした結果を計算します。\n"
+"\n"
+"    iex> 9 ^^^ 3\n"
+"    10\n"
+"\n"
+
 #. TRANSLATORS: defmacro Bitwise.&&&(left, right)
 #: lib/bitwise.ex:86
 msgid ""
@@ -77,21 +92,6 @@ msgstr ""
 "    -1\n"
 "    iex> -1 >>> -2\n"
 "    -4\n"
-"\n"
-
-#. TRANSLATORS: defmacro Bitwise.^^^(left, right)
-#: lib/bitwise.ex:130
-msgid ""
-"Infix operator; calculates the bitwise XOR of its arguments.\n"
-"\n"
-"    iex> 9 ^^^ 3\n"
-"    10\n"
-"\n"
-msgstr ""
-"中置演算子; 引数のビットXORした結果を計算します。\n"
-"\n"
-"    iex> 9 ^^^ 3\n"
-"    10\n"
 "\n"
 
 #. TRANSLATORS: defmacro Bitwise.bor(left, right)
@@ -260,6 +260,21 @@ msgstr ""
 "    -1\n"
 "\n"
 
+#. TRANSLATORS: defmacro Bitwise.band(left, right)
+#: lib/bitwise.ex:75
+msgid ""
+"Calculates the bitwise AND of its arguments.\n"
+"\n"
+"    iex> band(9, 3)\n"
+"    1\n"
+"\n"
+msgstr ""
+"引数のビットANDした結果を計算します。\n"
+"\n"
+"    iex> band(9, 3)\n"
+"    1\n"
+"\n"
+
 #. TRANSLATORS: defmacro Bitwise.bxor(left, right)
 #: lib/bitwise.ex:119
 msgid ""
@@ -291,20 +306,5 @@ msgstr ""
 "    iex> ~~~2\n"
 "    -3\n"
 "    iex> ~~~2 &&& 3\n"
-"    1\n"
-"\n"
-
-#. TRANSLATORS: defmacro Bitwise.band(left, right)
-#: lib/bitwise.ex:75
-msgid ""
-"Calculates the bitwise AND of its arguments.\n"
-"\n"
-"    iex> band(9, 3)\n"
-"    1\n"
-"\n"
-msgstr ""
-"引数のビットANDした結果を計算します。\n"
-"\n"
-"    iex> band(9, 3)\n"
 "    1\n"
 "\n"

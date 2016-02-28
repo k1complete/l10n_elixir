@@ -1,24 +1,24 @@
-#. TRANSLATORS: def System.compiled_endianness()
-#: lib/system.ex:57 
-msgid ""
-"Returns the endianness the system was compiled with.\n"
-msgstr ""
-#. TRANSLATORS: def System.build_info()
-#: lib/system.ex:73 
-msgid ""
-"Elixir build information.\n"
-"\n"
-"Returns a keyword list with Elixir version, git short revision hash and compilation date.\n"
-msgstr ""
 #. TRANSLATORS: def System.delete_env(varname)
-#: lib/system.ex:307 
+#: lib/system.ex:319 
 msgid ""
 "Deletes an environment variable.\n"
 "\n"
 "Removes the variable `varname` from the environment.\n"
 msgstr ""
+#. TRANSLATORS: def System.compiled_endianness()
+#: lib/system.ex:53 
+msgid ""
+"Returns the endianness the system was compiled with.\n"
+msgstr ""
+#. TRANSLATORS: def System.build_info()
+#: lib/system.ex:69 
+msgid ""
+"Elixir build information.\n"
+"\n"
+"Returns a keyword list with Elixir version, git short revision hash and compilation date.\n"
+msgstr ""
 #. TRANSLATORS: def System.at_exit(fun)
-#: lib/system.ex:210 
+#: lib/system.ex:222 
 msgid ""
 "Registers a program exit handler function.\n"
 "\n"
@@ -33,7 +33,7 @@ msgid ""
 "The function must receive the exit status code as an argument.\n"
 msgstr ""
 #. TRANSLATORS: def System.cmd(command, args, opts \\ [])
-#: lib/system.ex:370 
+#: lib/system.ex:382 
 msgid ""
 "Executes the given `command` with `args`.\n"
 "\n"
@@ -106,7 +106,7 @@ msgid ""
 "[`:os.cmd/1`](http://www.erlang.org/doc/man/os.html#cmd-1).\n"
 msgstr ""
 #. TRANSLATORS: def System.get_pid()
-#: lib/system.ex:274 
+#: lib/system.ex:286 
 msgid ""
 "Erlang VM process identifier.\n"
 "\n"
@@ -116,7 +116,7 @@ msgid ""
 "For more information, see [`:os.getpid/0`](http://www.erlang.org/doc/man/os.html#getpid-0).\n"
 msgstr ""
 #. TRANSLATORS: def System.tmp_dir()
-#: lib/system.ex:156 
+#: lib/system.ex:168 
 msgid ""
 "Writable temporary directory.\n"
 "\n"
@@ -131,23 +131,23 @@ msgid ""
 "\n"
 "Returns `nil` if none of the above are writable.\n"
 msgstr ""
-#. TRANSLATORS: def System.version()
-#: lib/system.ex:65 
-msgid ""
-"Elixir version information.\n"
-"\n"
-"Returns Elixir's version as binary.\n"
-msgstr ""
 #. TRANSLATORS: def System.get_env()
-#: lib/system.ex:244 
+#: lib/system.ex:256 
 msgid ""
 "System environment variables.\n"
 "\n"
 "Returns a list of all environment variables. Each variable is given as a\n"
 "`{name, value}` tuple where both `name` and `value` are strings.\n"
 msgstr ""
+#. TRANSLATORS: def System.version()
+#: lib/system.ex:61 
+msgid ""
+"Elixir version information.\n"
+"\n"
+"Returns Elixir's version as binary.\n"
+msgstr ""
 #. TRANSLATORS: def System.time_offset(unit)
-#: lib/system.ex:599 
+#: lib/system.ex:611 
 msgid ""
 "Returns the current time offset between the Erlang monotonic time and the\n"
 "Erlang system time.\n"
@@ -163,7 +163,7 @@ msgid ""
 "Inlined by the compiler into `:erlang.time_offset/1`.\n"
 msgstr ""
 #. TRANSLATORS: def System.tmp_dir!()
-#: lib/system.ex:178 
+#: lib/system.ex:190 
 msgid ""
 "Writable temporary directory, exception on error.\n"
 "\n"
@@ -178,7 +178,7 @@ msgid ""
 "with the VM or the host system.\n"
 msgstr ""
 #. TRANSLATORS: def System.user_home!()
-#: lib/system.ex:145 
+#: lib/system.ex:157 
 msgid ""
 "User home directory, exception on error.\n"
 "\n"
@@ -186,7 +186,7 @@ msgid ""
 "instead of returning `nil` if no user home is set.\n"
 msgstr ""
 #. TRANSLATORS: def System.argv(args)
-#: lib/system.ex:93 
+#: lib/system.ex:105 
 msgid ""
 "Modifies command line arguments.\n"
 "\n"
@@ -194,7 +194,7 @@ msgid ""
 "as it destroys any previous argv information.\n"
 msgstr ""
 #. TRANSLATORS: def System.monotonic_time(unit)
-#: lib/system.ex:531 
+#: lib/system.ex:543 
 msgid ""
 "Returns the current monotonic time in the given time unit.\n"
 "\n"
@@ -205,7 +205,7 @@ msgid ""
 "Inlined by the compiler into `:erlang.monotonic_time/1`.\n"
 msgstr ""
 #. TRANSLATORS: def System.find_executable(program)
-#: lib/system.ex:227 
+#: lib/system.ex:239 
 msgid ""
 "Locates an executable on the system.\n"
 "\n"
@@ -216,7 +216,7 @@ msgid ""
 "lookup files with `.com`, `.cmd` or similar extensions.\n"
 msgstr ""
 #. TRANSLATORS: def System.unique_integer(modifiers \\ [])
-#: lib/system.ex:618 
+#: lib/system.ex:630 
 msgid ""
 "Generates and returns an integer that is unique in the current runtime\n"
 "instance.\n"
@@ -241,14 +241,14 @@ msgid ""
 "Inlined by the compiler into `:erlang.unique_integer/1`.\n"
 msgstr ""
 #. TRANSLATORS: def System.argv()
-#: lib/system.ex:83 
+#: lib/system.ex:95 
 msgid ""
 "Lists command line arguments.\n"
 "\n"
 "Returns the list of command line arguments passed to the program.\n"
 msgstr ""
 #. TRANSLATORS: def System.cwd()
-#: lib/system.ex:104 
+#: lib/system.ex:116 
 msgid ""
 "Current working directory.\n"
 "\n"
@@ -256,7 +256,7 @@ msgid ""
 "is not available.\n"
 msgstr ""
 #. TRANSLATORS: def System.convert_time_unit(time, from_unit, to_unit)
-#: lib/system.ex:573 
+#: lib/system.ex:585 
 msgid ""
 "Converts `time` from time unit `from_unit` to time unit `to_unit`. The result\n"
 "is rounded via the floor function.\n"
@@ -264,7 +264,7 @@ msgid ""
 "Inlined by the compiler into `:erlang.convert_time_unit/3`.\n"
 msgstr ""
 #. TRANSLATORS: def System.system_time()
-#: lib/system.ex:545 
+#: lib/system.ex:557 
 msgid ""
 "Returns the current system time in the `:native` time unit.\n"
 "\n"
@@ -275,7 +275,7 @@ msgid ""
 "Inlined by the compiler into `:erlang.system_time/0`.\n"
 msgstr ""
 #. TRANSLATORS: def System.halt(status \\ 0)
-#: lib/system.ex:331 
+#: lib/system.ex:343 
 msgid ""
 "Halts the Erlang runtime system.\n"
 "\n"
@@ -304,7 +304,7 @@ msgid ""
 "\n"
 msgstr ""
 #. TRANSLATORS: def System.system_time(unit)
-#: lib/system.ex:559 
+#: lib/system.ex:571 
 msgid ""
 "Returns the current system time in the given time unit.\n"
 "\n"
@@ -315,7 +315,7 @@ msgid ""
 "Inlined by the compiler into `:erlang.system_time/1`.\n"
 msgstr ""
 #. TRANSLATORS: def System.put_env(enum)
-#: lib/system.ex:296 
+#: lib/system.ex:308 
 msgid ""
 "Sets multiple environment variables.\n"
 "\n"
@@ -323,7 +323,7 @@ msgid ""
 "to each key in `dict`.\n"
 msgstr ""
 #. TRANSLATORS: def System.stacktrace()
-#: lib/system.ex:318 
+#: lib/system.ex:330 
 msgid ""
 "Last exception stacktrace.\n"
 "\n"
@@ -334,33 +334,33 @@ msgid ""
 "Inlined by the compiler into `:erlang.get_stacktrace/0`.\n"
 msgstr ""
 #. TRANSLATORS: def System.endianness()
-#: lib/system.ex:50 
+#: lib/system.ex:46 
 msgid ""
 "Returns the endianness.\n"
 msgstr ""
-#. TRANSLATORS: def System.user_home()
-#: lib/system.ex:136 
-msgid ""
-"User home directory.\n"
-"\n"
-"Returns the user home directory (platform independent).\n"
-msgstr ""
 #. TRANSLATORS: def System.put_env(varname, value)
-#: lib/system.ex:285 
+#: lib/system.ex:297 
 msgid ""
 "Sets an environment variable value.\n"
 "\n"
 "Sets a new `value` for the environment variable `varname`.\n"
 msgstr ""
+#. TRANSLATORS: def System.user_home()
+#: lib/system.ex:148 
+msgid ""
+"User home directory.\n"
+"\n"
+"Returns the user home directory (platform independent).\n"
+msgstr ""
 #. TRANSLATORS: def System.cwd!()
-#: lib/system.ex:126 
+#: lib/system.ex:138 
 msgid ""
 "Current working directory, exception on error.\n"
 "\n"
 "Returns the current working directory or raises `RuntimeError`.\n"
 msgstr ""
 #. TRANSLATORS: def System.get_env(varname)
-#: lib/system.ex:259 
+#: lib/system.ex:271 
 msgid ""
 "Environment variable value.\n"
 "\n"
@@ -369,7 +369,7 @@ msgid ""
 "variable is undefined.\n"
 msgstr ""
 #. TRANSLATORS: def System.monotonic_time()
-#: lib/system.ex:514 
+#: lib/system.ex:526 
 msgid ""
 "Returns the current monotonic time in the `:native` time unit.\n"
 "\n"
@@ -383,7 +383,7 @@ msgid ""
 "Inlined by the compiler into `:erlang.monotonic_time/0`.\n"
 msgstr ""
 #. TRANSLATORS: def System.time_offset()
-#: lib/system.ex:584 
+#: lib/system.ex:596 
 msgid ""
 "Returns the current time offset between the Erlang monotonic time and the\n"
 "Erlang system time.\n"

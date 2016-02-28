@@ -1,3 +1,8 @@
+#. TRANSLATORS: Elixir.Protocol Summary
+#: lib/protocol.ex:2 
+msgid ""
+"Functions for working with protocols.\n"
+msgstr ""
 #. TRANSLATORS: def Protocol.assert_impl!(protocol, base)
 #: lib/protocol.ex:82 
 msgid ""
@@ -5,11 +10,6 @@ msgid ""
 "of the given protocol.\n"
 "\n"
 "Returns `:ok` if so, otherwise raises ArgumentError.\n"
-msgstr ""
-#. TRANSLATORS: Elixir.Protocol Summary
-#: lib/protocol.ex:2 
-msgid ""
-"Functions for working with protocols.\n"
 msgstr ""
 #. TRANSLATORS: defmacro Protocol.derive(protocol, module, options \\ [])
 #: lib/protocol.ex:117 

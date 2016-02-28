@@ -13,6 +13,15 @@ msgid ""
 "    -1\n"
 "\n"
 msgstr ""
+#. TRANSLATORS: defmacro Bitwise.^^^(left, right)
+#: lib/bitwise.ex:130 
+msgid ""
+"Infix operator; calculates the bitwise XOR of its arguments.\n"
+"\n"
+"    iex> 9 ^^^ 3\n"
+"    10\n"
+"\n"
+msgstr ""
 #. TRANSLATORS: defmacro Bitwise.&&&(left, right)
 #: lib/bitwise.ex:86 
 msgid ""
@@ -35,15 +44,6 @@ msgid ""
 "    -1\n"
 "    iex> -1 >>> -2\n"
 "    -4\n"
-"\n"
-msgstr ""
-#. TRANSLATORS: defmacro Bitwise.^^^(left, right)
-#: lib/bitwise.ex:130 
-msgid ""
-"Infix operator; calculates the bitwise XOR of its arguments.\n"
-"\n"
-"    iex> 9 ^^^ 3\n"
-"    10\n"
 "\n"
 msgstr ""
 #. TRANSLATORS: defmacro Bitwise.bor(left, right)
@@ -138,6 +138,15 @@ msgid ""
 "    -1\n"
 "\n"
 msgstr ""
+#. TRANSLATORS: defmacro Bitwise.band(left, right)
+#: lib/bitwise.ex:75 
+msgid ""
+"Calculates the bitwise AND of its arguments.\n"
+"\n"
+"    iex> band(9, 3)\n"
+"    1\n"
+"\n"
+msgstr ""
 #. TRANSLATORS: defmacro Bitwise.bxor(left, right)
 #: lib/bitwise.ex:119 
 msgid ""
@@ -155,15 +164,6 @@ msgid ""
 "    iex> ~~~2\n"
 "    -3\n"
 "    iex> ~~~2 &&& 3\n"
-"    1\n"
-"\n"
-msgstr ""
-#. TRANSLATORS: defmacro Bitwise.band(left, right)
-#: lib/bitwise.ex:75 
-msgid ""
-"Calculates the bitwise AND of its arguments.\n"
-"\n"
-"    iex> band(9, 3)\n"
 "    1\n"
 "\n"
 msgstr ""

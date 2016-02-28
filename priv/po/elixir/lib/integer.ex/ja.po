@@ -205,6 +205,11 @@ msgstr ""
 "    '3FF'\n"
 "\n"
 
+#. TRANSLATORS: Elixir.Integer Summary
+#: lib/integer.ex:2
+msgid "Functions for working with integers.\n"
+msgstr "整数で動く関数です\n"
+
 #. TRANSLATORS: def Integer.parse(binary, base \\ 10)
 #: lib/integer.ex:96
 msgid ""
@@ -282,11 +287,6 @@ msgstr ""
 "    iex> Integer.parse(\"a2\", 38)\n"
 "    ** (ArgumentError) invalid base 38\n"
 "\n"
-
-#. TRANSLATORS: Elixir.Integer Summary
-#: lib/integer.ex:2
-msgid "Functions for working with integers.\n"
-msgstr "整数で動く関数です\n"
 
 #. TRANSLATORS: def Integer.to_string(some_integer)
 #: lib/integer.ex:198

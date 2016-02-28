@@ -51,7 +51,7 @@ msgid "Utilities for working with and creating URIs.\n"
 msgstr "URIの作成と動作についてのユーティリティです。\n"
 
 #. TRANSLATORS: def URI.to_string(uri)
-#: lib/uri.ex:371
+#: lib/uri.ex:367
 msgid ""
 "Converts the URI to string.\n"
 "\n"
@@ -161,7 +161,8 @@ msgstr ""
 "\n"
 "\"key1=value1&key2=value2...\"形式のquery stringがあれば、\n"
 "キー-バリューペア毎に一つのエントリとなるマップを生成します。\n"
-"キーと値それぞれはバイナリです。キーと値はパーセントアンエスケープされます。\n"
+"キーと値それぞれはバイナリです。キーと値はパーセントアンエスケープされま"
+"す。\n"
 "\n"
 "それぞれの値を手動で繰り返したいなら、`query_decoder/1`を使ってください。\n"
 "\n"
@@ -205,39 +206,6 @@ msgstr ""
 "\n"
 "    iex> URI.query_decoder(\"foo=1&bar=2\") |> Enum.map &(&1)\n"
 "    [{\"foo\", \"1\"}, {\"bar\", \"2\"}]\n"
-"\n"
-
-#. TRANSLATORS: def URI.char_reserved?(c)
-#: lib/uri.ex:159
-msgid ""
-"Checks if the character is a \"reserved\" character in a URI.\n"
-"\n"
-"Reserved characters are specified in [RFC3986, section 2.2](http://tools."
-"ietf.org/html/rfc3986#section-2.2).\n"
-msgstr ""
-"文字が、URIの\"予約(reserved)\"文字かどうかをチェックします。\n"
-"\n"
-"予約(reserved)文字は、 \n"
-"[RFC3986, section 2.2](http://tools.ietf.org/html/rfc3986#section-2.2)\n"
-"に定められています。\n"
-
-#. TRANSLATORS: def URI.decode(uri)
-#: lib/uri.ex:233
-msgid ""
-"Percent-unescapes a URI.\n"
-"\n"
-"## Examples\n"
-"\n"
-"    iex> URI.decode(\"http%3A%2F%2Felixir-lang.org\")\n"
-"    \"http://elixir-lang.org\"\n"
-"\n"
-msgstr ""
-"URIをパーセントアンエスケープします。\n"
-"\n"
-"## 例\n"
-"\n"
-"    iex> URI.decode(\"http%3A%2F%2Felixir-lang.org\")\n"
-"    \"http://elixir-lang.org\"\n"
 "\n"
 
 #. TRANSLATORS: def URI.parse(uri)
@@ -310,6 +278,39 @@ msgstr ""
 "    iex> URI.parse(\"foo/bar\")\n"
 "    %URI{authority: nil, fragment: nil, host: nil, path: \"foo/bar\",\n"
 "         port: nil, query: nil, scheme: nil, userinfo: nil}\n"
+"\n"
+
+#. TRANSLATORS: def URI.char_reserved?(c)
+#: lib/uri.ex:159
+msgid ""
+"Checks if the character is a \"reserved\" character in a URI.\n"
+"\n"
+"Reserved characters are specified in [RFC3986, section 2.2](http://tools."
+"ietf.org/html/rfc3986#section-2.2).\n"
+msgstr ""
+"文字が、URIの\"予約(reserved)\"文字かどうかをチェックします。\n"
+"\n"
+"予約(reserved)文字は、 \n"
+"[RFC3986, section 2.2](http://tools.ietf.org/html/rfc3986#section-2.2)\n"
+"に定められています。\n"
+
+#. TRANSLATORS: def URI.decode(uri)
+#: lib/uri.ex:233
+msgid ""
+"Percent-unescapes a URI.\n"
+"\n"
+"## Examples\n"
+"\n"
+"    iex> URI.decode(\"http%3A%2F%2Felixir-lang.org\")\n"
+"    \"http://elixir-lang.org\"\n"
+"\n"
+msgstr ""
+"URIをパーセントアンエスケープします。\n"
+"\n"
+"## 例\n"
+"\n"
+"    iex> URI.decode(\"http%3A%2F%2Felixir-lang.org\")\n"
+"    \"http://elixir-lang.org\"\n"
 "\n"
 
 #. TRANSLATORS: def URI.decode_www_form(str)

@@ -58,12 +58,6 @@ msgid ""
 "    @macrocallback add(number, number) :: Macro.t\n"
 "\n"
 msgstr ""
-#. TRANSLATORS: def Kernel.Typespec.defines_callback?(module, name, arity)
-#: lib/kernel/typespec.ex:133 
-msgid ""
-"Returns `true` if the current module defines a callback.\n"
-"This function is only available for modules being compiled.\n"
-msgstr ""
 #. TRANSLATORS: def Kernel.Typespec.type_to_ast(type)
 #: lib/kernel/typespec.ex:192 
 msgid ""
@@ -79,6 +73,12 @@ msgid ""
 "\n"
 "The module must have a corresponding beam file\n"
 "which can be located by the runtime system.\n"
+msgstr ""
+#. TRANSLATORS: def Kernel.Typespec.defines_callback?(module, name, arity)
+#: lib/kernel/typespec.ex:133 
+msgid ""
+"Returns `true` if the current module defines a callback.\n"
+"This function is only available for modules being compiled.\n"
 msgstr ""
 #. TRANSLATORS: def Kernel.Typespec.define_type(kind, expr, doc \\ nil, env)
 #: lib/kernel/typespec.ex:95 

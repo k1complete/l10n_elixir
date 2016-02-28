@@ -10,6 +10,11 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
+#. TRANSLATORS: Elixir.Protocol Summary
+#: lib/protocol.ex:2
+msgid "Functions for working with protocols.\n"
+msgstr "プロトコルで動く関数です。\n"
+
 #. TRANSLATORS: def Protocol.assert_impl!(protocol, base)
 #: lib/protocol.ex:82
 msgid ""
@@ -22,11 +27,6 @@ msgstr ""
 "実装しているかチェックします。\n"
 "\n"
 "もしそうなら`:ok`を返し、さもなくばArgumentErrorを上げます。\n"
-
-#. TRANSLATORS: Elixir.Protocol Summary
-#: lib/protocol.ex:2
-msgid "Functions for working with protocols.\n"
-msgstr "プロトコルで動く関数です。\n"
 
 #. TRANSLATORS: defmacro Protocol.derive(protocol, module, options \\ [])
 #: lib/protocol.ex:117

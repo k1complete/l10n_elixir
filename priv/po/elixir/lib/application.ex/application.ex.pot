@@ -1,17 +1,17 @@
-#. TRANSLATORS: def Application.loaded_applications()
-#: lib/application.ex:390 
-msgid ""
-"Returns a list with information about the applications which have been loaded.\n"
-msgstr ""
 #. TRANSLATORS: def Application.fetch_env(app, key)
-#: lib/application.ex:180 
+#: lib/application.ex:182 
 msgid ""
 "Returns the value for `key` in `app`'s environment in a tuple.\n"
 "\n"
 "If the configuration parameter does not exist, the function returns `:error`.\n"
 msgstr ""
+#. TRANSLATORS: def Application.loaded_applications()
+#: lib/application.ex:392 
+msgid ""
+"Returns a list with information about the applications which have been loaded.\n"
+msgstr ""
 #. TRANSLATORS: def Application.put_env(app, key, value, opts \\ [])
-#: lib/application.ex:209 
+#: lib/application.ex:211 
 msgid ""
 "Puts the `value` in `key` for the given `app`.\n"
 "\n"
@@ -30,12 +30,12 @@ msgid ""
 "stick after the application is loaded and also on application reload.\n"
 msgstr ""
 #. TRANSLATORS: def Application.app_dir(app, path)
-#: lib/application.ex:374 
+#: lib/application.ex:376 
 msgid ""
 "Returns the given path inside `app_dir/1`.\n"
 msgstr ""
 #. TRANSLATORS: def Application.unload(app)
-#: lib/application.ex:331 
+#: lib/application.ex:333 
 msgid ""
 "Unloads the given `app`.\n"
 "\n"
@@ -157,7 +157,7 @@ msgid ""
 "supervisor is automatically handled by the VM.\n"
 msgstr ""
 #. TRANSLATORS: def Application.ensure_started(app, type \\ :temporary)
-#: lib/application.ex:241 
+#: lib/application.ex:243 
 msgid ""
 "Ensures the given `app` is started.\n"
 "\n"
@@ -169,14 +169,14 @@ msgid ""
 "\n"
 msgstr ""
 #. TRANSLATORS: def Application.format_error(reason)
-#: lib/application.ex:398 
+#: lib/application.ex:400 
 msgid ""
 "Formats the error reason returned by `start/2`,\n"
 "`ensure_started/2`, `stop/1`, `load/1` and `unload/1`,\n"
 "returns a string.\n"
 msgstr ""
 #. TRANSLATORS: def Application.get_application(module)
-#: lib/application.ex:146 
+#: lib/application.ex:148 
 msgid ""
 "Get the application for the given module.\n"
 "\n"
@@ -185,19 +185,19 @@ msgid ""
 "the module is not listed in any application spec.\n"
 msgstr ""
 #. TRANSLATORS: def Application.get_all_env(app)
-#: lib/application.ex:161 
+#: lib/application.ex:163 
 msgid ""
 "Returns all key-value pairs for `app`.\n"
 msgstr ""
 #. TRANSLATORS: def Application.stop(app)
-#: lib/application.ex:307 
+#: lib/application.ex:309 
 msgid ""
 "Stops the given `app`.\n"
 "\n"
 "When stopped, the application is still loaded.\n"
 msgstr ""
 #. TRANSLATORS: def Application.start(app, type \\ :temporary)
-#: lib/application.ex:268 
+#: lib/application.ex:270 
 msgid ""
 "Starts the given `app`.\n"
 "\n"
@@ -233,35 +233,26 @@ msgid ""
 "supervision tree terminates, the reason is set to `:shutdown`, not `:normal`.\n"
 msgstr ""
 #. TRANSLATORS: def Application.fetch_env!(app, key)
-#: lib/application.ex:193 
+#: lib/application.ex:195 
 msgid ""
 "Returns the value for `key` in `app`'s environment.\n"
 "\n"
 "If the configuration parameter does not exist, raises `ArgumentError`.\n"
 msgstr ""
 #. TRANSLATORS: def Application.started_applications(timeout \\ 5000)
-#: lib/application.ex:382 
+#: lib/application.ex:384 
 msgid ""
 "Returns a list with information about the applications which are currently running.\n"
 msgstr ""
-#. TRANSLATORS: def Application.spec(app, key)
-#: lib/application.ex:133 
-msgid ""
-"Returns the value for `key` in `app`'s specification.\n"
-"\n"
-"See `spec/1` for the supporte keys. If the given\n"
-"specification parameter does not exist, this function\n"
-"will raise.\n"
-msgstr ""
 #. TRANSLATORS: def Application.delete_env(app, key, opts \\ [])
-#: lib/application.ex:231 
+#: lib/application.ex:233 
 msgid ""
 "Deletes the `key` from the given `app` environment.\n"
 "\n"
 "See `put_env/4` for a description of the options.\n"
 msgstr ""
 #. TRANSLATORS: def Application.get_env(app, key, default \\ nil)
-#: lib/application.ex:169 
+#: lib/application.ex:171 
 msgid ""
 "Returns the value for `key` in `app`'s environment.\n"
 "\n"
@@ -269,7 +260,7 @@ msgid ""
 "`default` value.\n"
 msgstr ""
 #. TRANSLATORS: def Application.app_dir(app)
-#: lib/application.ex:342 
+#: lib/application.ex:344 
 msgid ""
 "Gets the directory for app.\n"
 "\n"
@@ -294,8 +285,17 @@ msgid ""
 "For more information on code paths, check the `Code` module in\n"
 "Elixir and also Erlang's `:code` module.\n"
 msgstr ""
+#. TRANSLATORS: def Application.spec(app, key)
+#: lib/application.ex:133 
+msgid ""
+"Returns the value for `key` in `app`'s specification.\n"
+"\n"
+"See `spec/1` for the supported keys. If the given\n"
+"specification parameter does not exist, this function\n"
+"will raise. Returns `nil` if the application is not loaded.\n"
+msgstr ""
 #. TRANSLATORS: def Application.ensure_all_started(app, type \\ :temporary)
-#: lib/application.ex:256 
+#: lib/application.ex:258 
 msgid ""
 "Ensures the given `app` and its applications are started.\n"
 "\n"
@@ -304,7 +304,7 @@ msgid ""
 "started.\n"
 msgstr ""
 #. TRANSLATORS: def Application.load(app)
-#: lib/application.ex:317 
+#: lib/application.ex:319 
 msgid ""
 "Loads the given `app`.\n"
 "\n"

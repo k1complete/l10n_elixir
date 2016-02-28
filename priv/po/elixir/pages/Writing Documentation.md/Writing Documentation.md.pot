@@ -29,7 +29,7 @@ msgid "Documentation in Elixir is usually attached to module attributes. Let's s
 msgstr ""
 
 #: deps/elixir/lib/elixir/pages/Writing Documentation.md:37
-msgid "The `@moduledoc` attribute is used to attach documentation to the module. `@doc` is used before a function to attach documentation to it. Besides the attributes above, `@typedoc` can also be used to attach documentation to types defined as part of typespecs."
+msgid "The `@moduledoc` attribute is used to add documentation to the module. `@doc` is used before a function to provide documentation for it. Besides the attributes above, `@typedoc` can also be used to attach documentation to types defined as part of typespecs."
 msgstr ""
 
 #: deps/elixir/lib/elixir/pages/Writing Documentation.md:39
@@ -53,7 +53,7 @@ msgid "There are a couple tips we recommend developers to follow when writing do
 msgstr ""
 
 #: deps/elixir/lib/elixir/pages/Writing Documentation.md:55
-msgid "  * Keep the first paragraph of the documentation concise and simple. Tools like ExDoc uses the first line to generate a summary."
+msgid "  * Keep the first paragraph of the documentation concise and simple, typically one-line. Tools like ExDoc uses the first line to generate a summary."
 msgstr ""
 
 #: deps/elixir/lib/elixir/pages/Writing Documentation.md:57
@@ -61,7 +61,7 @@ msgid "  * Markdown uses backticks (`` ` ``) to quote code. Elixir builds on top
 msgstr ""
 
 #: deps/elixir/lib/elixir/pages/Writing Documentation.md:59
-msgid "  * If using headings, always start from the second heading by using `##`. The first heading is reserved to the module or function name itself."
+msgid "  * When using headings, always start from the second heading by using `##`. The first heading is reserved to the module or function name itself."
 msgstr ""
 
 #: deps/elixir/lib/elixir/pages/Writing Documentation.md:61
@@ -89,15 +89,15 @@ msgid "Notice that, although developers can add `@doc false` to functions, it do
 msgstr ""
 
 #: deps/elixir/lib/elixir/pages/Writing Documentation.md:86
-msgid "The function above can still be invoked as `MyApp.Sample.add(1, 2)`. Not only that, if the `MyApp.Sample` is imported, the `add/2` function will also be imported into the caller. For those reasons, be wary when adding `@doc false` to functions, instead prefer one of:"
+msgid "The function above can still be invoked as `MyApp.Sample.add(1, 2)`. Not only that, if the `MyApp.Sample` is imported, the `add/2` function will also be imported into the caller. For those reasons, be cautious when adding `@doc false` to functions, instead prefer one of:"
 msgstr ""
 
 #: deps/elixir/lib/elixir/pages/Writing Documentation.md:88
-msgid "  * Move the private function to a module with `@moduledoc false`, like `MyApp.Hidden`, ensuring the function won't be accidentally exposed or imported. In fact, you can use `@moduledoc false` to hide a whole module and still document each function with `@doc`. Tools will still ignore the module."
+msgid "  * Move the undocumented function to a module with `@moduledoc false`, like `MyApp.Hidden`, ensuring the function won't be accidentally exposed or imported. In fact, you can use `@moduledoc false` to hide a whole module and still document each function with `@doc`. Tools will still ignore the module."
 msgstr ""
 
 #: deps/elixir/lib/elixir/pages/Writing Documentation.md:90
-msgid "  * Start the function name with underscores, for example, `__add__/2`, and add `@doc false`. The compiler does not import functions with underscore and the underscore will tell users to be wary of using it."
+msgid "  * Start the function name with underscores, for example, `__add__/2`, and add `@doc false`. The compiler does not import functions with underscore and the underscore will hint users to be wary of using then."
 msgstr ""
 
 #: deps/elixir/lib/elixir/pages/Writing Documentation.md:92
@@ -105,7 +105,7 @@ msgid "## Documentation != Comments"
 msgstr ""
 
 #: deps/elixir/lib/elixir/pages/Writing Documentation.md:94
-msgid "Elixir makes the difference between documentation and code comments. Documentation are for users of your API, be it your co-worker or your future self. Modules and functions must always be documented if they are part of your application public interface (API)."
+msgid "Elixir treats documentation and code comments as different concepts. Documentation are for users of your API, be it your co-worker or your future self. Modules and functions must always be documented if they are part of your application public interface (API)."
 msgstr ""
 
 #: deps/elixir/lib/elixir/pages/Writing Documentation.md:96
@@ -122,7 +122,7 @@ msgstr ""
 
 #: deps/elixir/lib/elixir/pages/Writing Documentation.md:102
 msgid ""
-"Elixir stores documentation inside pre-defined chunks in the bytecode. It can be accessed from Elixir by using the `Code.get_docs/2` function. This also means documentation is only accessed when required and not when modules are loaded by the Virtual Machine. The only downside is that modules defined in-memory, like the ones defined via IEx, cannot have their documentation accessed.\n"
+"Elixir stores documentation inside pre-defined chunks in the bytecode. It can be accessed from Elixir by using the `Code.get_docs/2` function. This also means documentation is only accessed when required and not when modules are loaded by the Virtual Machine. The only downside is that modules defined in-memory, like the ones defined in IEx, cannot have their documentation accessed as they do not have their bytecode written to disk.\n"
 ""
 msgstr ""
 

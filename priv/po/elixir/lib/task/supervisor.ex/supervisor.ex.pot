@@ -1,20 +1,12 @@
 #. TRANSLATORS: def Task.Supervisor.start_child(supervisor, fun)
-#: lib/task/supervisor.ex:122 
+#: lib/task/supervisor.ex:137 
 msgid ""
-"Starts a task as child of the given `supervisor`.\n"
+"Starts a task as a child of the given `supervisor`.\n"
 "\n"
 "Note that the spawned process is not linked to the caller, but\n"
 "only to the supervisor. This command is useful in case the\n"
 "task needs to perform side-effects (like I/O) and does not need\n"
 "to report back to the caller.\n"
-msgstr ""
-#. TRANSLATORS: def Task.Supervisor.start_child(supervisor, module, fun, args)
-#: lib/task/supervisor.ex:135 
-msgid ""
-"Starts a task as child of the given `supervisor`.\n"
-"\n"
-"Similar to `start_child/2` except the task is specified\n"
-"by the given `module`, `fun` and `args`.\n"
 msgstr ""
 #. TRANSLATORS: def Task.Supervisor.start_link(opts \\ [])
 #: lib/task/supervisor.ex:18 
@@ -39,7 +31,7 @@ msgid ""
 "\n"
 msgstr ""
 #. TRANSLATORS: def Task.Supervisor.terminate_child(supervisor, pid)
-#: lib/task/supervisor.ex:106 
+#: lib/task/supervisor.ex:121 
 msgid ""
 "Terminates the child with the given `pid`.\n"
 msgstr ""
@@ -60,6 +52,38 @@ msgid ""
 "A `Task.Supervisor` is bound to the same name registration rules as a\n"
 "`GenServer`. Read more about them in the `GenServer` docs.\n"
 msgstr ""
+#. TRANSLATORS: def Task.Supervisor.async_nolink(supervisor, fun)
+#: lib/task/supervisor.ex:77 
+msgid ""
+"Starts a task that can be awaited on.\n"
+"\n"
+"The `supervisor` must be a reference as defined in `Task.Supervisor`.\n"
+"The task won't be linked to the caller, see `Task.async/3` for\n"
+"more information.\n"
+"\n"
+"## Compatibility with OTP behaviours\n"
+"\n"
+"If you create a task using `async_nolink` inside an OTP behaviour\n"
+"like `GenServer`, you should match on the message coming from the\n"
+"task inside your `handle_info` callback.\n"
+"\n"
+"The reply sent by the task will be in the format `{ref, result}`,\n"
+"where `ref` is the monitor reference held by the task struct\n"
+"and `result` is the return value of the task function.\n"
+"\n"
+"Keep in mind that, regardless of how the task created with `async_nolink`\n"
+"terminates, the caller's process will always receive a `:DOWN` message\n"
+"with the same `ref` value that is held by the task struct. If the task\n"
+"terminates normally, the reason in the `:DOWN` message will be `:normal`.\n"
+msgstr ""
+#. TRANSLATORS: def Task.Supervisor.start_child(supervisor, module, fun, args)
+#: lib/task/supervisor.ex:150 
+msgid ""
+"Starts a task as a child of the given `supervisor`.\n"
+"\n"
+"Similar to `start_child/2` except the task is specified\n"
+"by the given `module`, `fun` and `args`.\n"
+msgstr ""
 #. TRANSLATORS: def Task.Supervisor.async(supervisor, module, fun, args)
 #: lib/task/supervisor.ex:59 
 msgid ""
@@ -70,7 +94,7 @@ msgid ""
 "more information and `async_nolink/2` for a non-linked variant.\n"
 msgstr ""
 #. TRANSLATORS: def Task.Supervisor.async_nolink(supervisor, module, fun, args)
-#: lib/task/supervisor.ex:89 
+#: lib/task/supervisor.ex:104 
 msgid ""
 "Starts a task that can be awaited on.\n"
 "\n"
@@ -79,7 +103,7 @@ msgid ""
 "more information.\n"
 msgstr ""
 #. TRANSLATORS: def Task.Supervisor.children(supervisor)
-#: lib/task/supervisor.ex:114 
+#: lib/task/supervisor.ex:129 
 msgid ""
 "Returns all children pids.\n"
 msgstr ""

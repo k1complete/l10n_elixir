@@ -1,23 +1,18 @@
-#. TRANSLATORS: def Map.new()
-#: lib/map.ex:53 
+#. TRANSLATORS: def Map.split(map, keys)
+#: lib/map.ex:431 
 msgid ""
-"Returns a new empty map.\n"
+"Takes all entries corresponding to the given keys and extracts them into a\n"
+"separate map.\n"
+"\n"
+"Returns a tuple with the new map and the old map with removed keys.\n"
+"\n"
+"Keys for which there are no entries in the map are ignored.\n"
 "\n"
 "## Examples\n"
 "\n"
-"    iex> Map.new\n"
-"    %{}\n"
+"    iex> Map.split(%{a: 1, b: 2, c: 3}, [:a, :c, :e])\n"
+"    {%{a: 1, c: 3}, %{b: 2}}\n"
 "\n"
-msgstr ""
-#. TRANSLATORS: Elixir.Map Summary
-#: lib/map.ex:2 
-msgid ""
-"A set of functions for working with maps.\n"
-"\n"
-"Maps are key-value stores where keys can be any value and\n"
-"are compared using the match operator (`===`). Maps can be\n"
-"created with the `%{}` special form defined in the\n"
-"`Kernel.SpecialForms` module.\n"
 msgstr ""
 #. TRANSLATORS: def Map.fetch(map, key)
 #: lib/map.ex:117 
@@ -34,8 +29,24 @@ msgid ""
 "    :error\n"
 "\n"
 msgstr ""
+#. TRANSLATORS: def Map.merge(map1, map2, callback)
+#: lib/map.ex:325 
+msgid ""
+"Merges two maps into one.\n"
+"\n"
+"All keys in `map2` will be added to `map1`. The given function will\n"
+"be invoked with the key, value1 and value2 to solve conflicts.\n"
+"\n"
+"## Examples\n"
+"\n"
+"    iex> Map.merge(%{a: 1, b: 2}, %{a: 3, d: 4}, fn _k, v1, v2 ->\n"
+"    ...>   v1 + v2\n"
+"    ...> end)\n"
+"    %{a: 4, b: 2, d: 4}\n"
+"\n"
+msgstr ""
 #. TRANSLATORS: def Map.update!(map, key, fun)
-#: lib/map.ex:456 
+#: lib/map.ex:457 
 msgid ""
 "Updates the `key` with the given function.\n"
 "\n"
@@ -65,21 +76,15 @@ msgid ""
 "    ** (KeyError) key :b not found in: %{a: 1}\n"
 "\n"
 msgstr ""
-#. TRANSLATORS: def Map.merge(map1, map2, callback)
-#: lib/map.ex:324 
+#. TRANSLATORS: Elixir.Map Summary
+#: lib/map.ex:2 
 msgid ""
-"Merges two maps into one.\n"
+"A set of functions for working with maps.\n"
 "\n"
-"All keys in `map2` will be added to `map1`. The given function will\n"
-"be invoked with the key, value1 and value2 to solve conflicts.\n"
-"\n"
-"## Examples\n"
-"\n"
-"    iex> Map.merge(%{a: 1, b: 2}, %{a: 3, d: 4}, fn _k, v1, v2 ->\n"
-"    ...>   v1 + v2\n"
-"    ...> end)\n"
-"    %{a: 4, b: 2, d: 4}\n"
-"\n"
+"Maps are key-value stores where keys can be any value and\n"
+"are compared using the match operator (`===`). Maps can be\n"
+"created with the `%{}` special form defined in the\n"
+"`Kernel.SpecialForms` module.\n"
 msgstr ""
 #. TRANSLATORS: def Map.to_list(map)
 #: lib/map.ex:39 
@@ -94,22 +99,6 @@ msgid ""
 "    [{1, 2}]\n"
 "\n"
 msgstr ""
-#. TRANSLATORS: def Map.split(map, keys)
-#: lib/map.ex:430 
-msgid ""
-"Takes all entries corresponding to the given keys and extracts them into a\n"
-"separate map.\n"
-"\n"
-"Returns a tuple with the new map and the old map with removed keys.\n"
-"\n"
-"Keys for which there are no entires in the map are ignored.\n"
-"\n"
-"## Examples\n"
-"\n"
-"    iex> Map.split(%{a: 1, b: 2, c: 3}, [:a, :c, :e])\n"
-"    {%{a: 1, c: 3}, %{b: 2}}\n"
-"\n"
-msgstr ""
 #. TRANSLATORS: def Map.new(enumerable, transform)
 #: lib/map.ex:83 
 msgid ""
@@ -121,6 +110,17 @@ msgid ""
 "\n"
 "    iex> Map.new([:a, :b], fn x -> {x, x} end)\n"
 "    %{a: :a, b: :b}\n"
+"\n"
+msgstr ""
+#. TRANSLATORS: def Map.new()
+#: lib/map.ex:53 
+msgid ""
+"Returns a new empty map.\n"
+"\n"
+"## Examples\n"
+"\n"
+"    iex> Map.new\n"
+"    %{}\n"
 "\n"
 msgstr ""
 #. TRANSLATORS: def Map.put_new_lazy(map, key, fun)
@@ -146,7 +146,7 @@ msgid ""
 "\n"
 msgstr ""
 #. TRANSLATORS: def Map.update(map, key, initial, fun)
-#: lib/map.ex:345 
+#: lib/map.ex:346 
 msgid ""
 "Updates the `key` in `map` with the given function.\n"
 "\n"
@@ -161,7 +161,7 @@ msgid ""
 "\n"
 msgstr ""
 #. TRANSLATORS: def Map.pop(map, key, default \\ nil)
-#: lib/map.ex:368 
+#: lib/map.ex:369 
 msgid ""
 "Returns and removes all values associated with `key` in the `map`.\n"
 "\n"
@@ -176,7 +176,7 @@ msgid ""
 "\n"
 msgstr ""
 #. TRANSLATORS: def Map.pop_lazy(map, key, fun)
-#: lib/map.ex:389 
+#: lib/map.ex:390 
 msgid ""
 "Lazily returns and removes all values associated with `key` in the `map`.\n"
 "\n"
@@ -208,7 +208,7 @@ msgid ""
 "\n"
 msgstr ""
 #. TRANSLATORS: def Map.equal?(map1, map2)
-#: lib/map.ex:584 
+#: lib/map.ex:596 
 msgid ""
 "Checks if two maps are equal.\n"
 "\n"
@@ -224,7 +224,7 @@ msgid ""
 "\n"
 msgstr ""
 #. TRANSLATORS: def Map.put(map, key, val)
-#: lib/map.ex:278 
+#: lib/map.ex:279 
 msgid ""
 "Puts the given `value` under `key`.\n"
 "\n"
@@ -248,8 +248,42 @@ msgid ""
 "    %{a: 1, c: 3}\n"
 "\n"
 msgstr ""
+#. TRANSLATORS: def Map.get_and_update(map, key, fun)
+#: lib/map.ex:483 
+msgid ""
+"Gets the value from `key` and updates it, all in one pass.\n"
+"\n"
+"This `fun` argument receives the value of `key` (or `nil` if `key`\n"
+"is not present) and must return a two-elements tuple: the \"get\" value (the\n"
+"retrieved value, which can be operated on before being returned) and the new\n"
+"value to be stored under `key`.\n"
+"\n"
+"The returned value may be a tuple with the \"get\" value returned by\n"
+"`fun` and a new map with the updated value under `key`. The function\n"
+"may also return `:pop`, implying the current value shall be removed\n"
+"from the map and returned.\n"
+"\n"
+"## Examples\n"
+"\n"
+"    iex> Map.get_and_update(%{a: 1}, :a, fn current_value ->\n"
+"    ...>   {current_value, \"new value!\"}\n"
+"    ...> end)\n"
+"    {1, %{a: \"new value!\"}}\n"
+"\n"
+"    iex> Map.get_and_update(%{a: 1}, :b, fn current_value ->\n"
+"    ...>   {current_value, \"new value!\"}\n"
+"    ...> end)\n"
+"    {nil, %{b: \"new value!\", a: 1}}\n"
+"\n"
+"    iex> Map.get_and_update(%{a: 1}, :a, fn _ -> :pop end)\n"
+"    {1, %{}}\n"
+"\n"
+"    iex> Map.get_and_update(%{a: 1}, :b, fn _ -> :pop end)\n"
+"    {nil, %{a: 1}}\n"
+"\n"
+msgstr ""
 #. TRANSLATORS: def Map.get_lazy(map, key, fun)
-#: lib/map.ex:249 
+#: lib/map.ex:250 
 msgid ""
 "Gets the value for a specific `key`.\n"
 "\n"
@@ -301,7 +335,7 @@ msgid ""
 "\n"
 msgstr ""
 #. TRANSLATORS: def Map.delete(map, key)
-#: lib/map.ex:294 
+#: lib/map.ex:295 
 msgid ""
 "Deletes the entries in the map for a specific `key`.\n"
 "\n"
@@ -315,8 +349,19 @@ msgid ""
 "    %{b: 2}\n"
 "\n"
 msgstr ""
+#. TRANSLATORS: def Map.keys(map)
+#: lib/map.ex:15 
+msgid ""
+"Returns all keys from the map.\n"
+"\n"
+"## Examples\n"
+"\n"
+"    iex> Map.keys(%{a: 1, b: 2})\n"
+"    [:a, :b]\n"
+"\n"
+msgstr ""
 #. TRANSLATORS: def Map.from_struct(struct)
-#: lib/map.ex:556 
+#: lib/map.ex:568 
 msgid ""
 "Converts a struct to map.\n"
 "\n"
@@ -336,19 +381,8 @@ msgid ""
 "    #=> %{name: \"john\"}\n"
 "\n"
 msgstr ""
-#. TRANSLATORS: def Map.keys(map)
-#: lib/map.ex:15 
-msgid ""
-"Returns all keys from the map.\n"
-"\n"
-"## Examples\n"
-"\n"
-"    iex> Map.keys(%{a: 1, b: 2})\n"
-"    [:a, :b]\n"
-"\n"
-msgstr ""
 #. TRANSLATORS: def Map.merge(map1, map2)
-#: lib/map.ex:310 
+#: lib/map.ex:311 
 msgid ""
 "Merges two maps into one.\n"
 "\n"
@@ -361,7 +395,7 @@ msgid ""
 "\n"
 msgstr ""
 #. TRANSLATORS: def Map.drop(map, keys)
-#: lib/map.ex:416 
+#: lib/map.ex:417 
 msgid ""
 "Drops the given keys from the map.\n"
 "\n"
@@ -369,32 +403,6 @@ msgid ""
 "\n"
 "    iex> Map.drop(%{a: 1, b: 2, c: 3}, [:b, :d])\n"
 "    %{a: 1, c: 3}\n"
-"\n"
-msgstr ""
-#. TRANSLATORS: def Map.get_and_update(map, key, fun)
-#: lib/map.ex:482 
-msgid ""
-"Gets the value from `key` and updates it, all in one pass.\n"
-"\n"
-"This `fun` argument receives the value of `key` (or `nil` if `key`\n"
-"is not present) and must return a two-elements tuple: the \"get\" value (the\n"
-"retrieved value, which can be operated on before being returned) and the new\n"
-"value to be stored under `key`.\n"
-"\n"
-"The returned value is a tuple with the \"get\" value returned by `fun` and a\n"
-"new map with the updated value under `key`.\n"
-"\n"
-"## Examples\n"
-"\n"
-"    iex> Map.get_and_update(%{a: 1}, :a, fn current_value ->\n"
-"    ...>   {current_value, \"new value!\"}\n"
-"    ...> end)\n"
-"    {1, %{a: \"new value!\"}}\n"
-"\n"
-"    iex> Map.get_and_update(%{a: 1}, :b, fn current_value ->\n"
-"    ...>   {current_value, \"new value!\"}\n"
-"    ...> end)\n"
-"    {nil, %{b: \"new value!\", a: 1}}\n"
 "\n"
 msgstr ""
 #. TRANSLATORS: def Map.has_key?(map, key)
@@ -411,7 +419,7 @@ msgid ""
 "\n"
 msgstr ""
 #. TRANSLATORS: def Map.get_and_update!(map, key, fun)
-#: lib/map.ex:519 
+#: lib/map.ex:531 
 msgid ""
 "Gets the value from `key` and updates it. Raises if there is no `key`.\n"
 "\n"
@@ -437,7 +445,7 @@ msgid ""
 "\n"
 msgstr ""
 #. TRANSLATORS: def Map.get(map, key, default \\ nil)
-#: lib/map.ex:222 
+#: lib/map.ex:223 
 msgid ""
 "Gets the value for a specific `key`.\n"
 "\n"

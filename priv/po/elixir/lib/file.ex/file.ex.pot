@@ -1,5 +1,16 @@
+#. TRANSLATORS: def File.cd!(path)
+#: lib/file.ex:1113 
+msgid ""
+"The same as `cd/1`, but raises an exception if it fails.\n"
+msgstr ""
+#. TRANSLATORS: def File.copy!(source, destination, bytes_count \\ :infinity)
+#: lib/file.ex:438 
+msgid ""
+"The same as `copy/3` but raises an `File.CopyError` if it fails.\n"
+"Returns the `bytes_copied` otherwise.\n"
+msgstr ""
 #. TRANSLATORS: def File.chmod(path, mode)
-#: lib/file.ex:1228 
+#: lib/file.ex:1229 
 msgid ""
 "Changes the `mode` for a given `file`.\n"
 "\n"
@@ -24,17 +35,6 @@ msgid ""
 "and both read and execute permission to group\n"
 "and others.\n"
 msgstr ""
-#. TRANSLATORS: def File.ls!(path \\ ".")
-#: lib/file.ex:1158 
-msgid ""
-"The same as `ls/1` but raises `File.Error`\n"
-"in case of an error.\n"
-msgstr ""
-#. TRANSLATORS: def File.cd!(path)
-#: lib/file.ex:1112 
-msgid ""
-"The same as `cd/1`, but raises an exception if it fails.\n"
-msgstr ""
 #. TRANSLATORS: def File.mkdir_p(path)
 #: lib/file.ex:160 
 msgid ""
@@ -55,6 +55,12 @@ msgid ""
 "the given file.\n"
 "\n"
 "The file is created if it doesn’t exist. Requires datetime in UTC.\n"
+msgstr ""
+#. TRANSLATORS: def File.ls!(path \\ ".")
+#: lib/file.ex:1159 
+msgid ""
+"The same as `ls/1` but raises `File.Error`\n"
+"in case of an error.\n"
 msgstr ""
 #. TRANSLATORS: Elixir.File Summary
 #: lib/file.ex:2 
@@ -151,7 +157,7 @@ msgid ""
 "\n"
 msgstr ""
 #. TRANSLATORS: def File.write(path, content, modes \\ [])
-#: lib/file.ex:675 
+#: lib/file.ex:676 
 msgid ""
 "Writes `content` to the file `path`.\n"
 "\n"
@@ -178,17 +184,11 @@ msgid ""
 "Check `File.open/2` for other available options.\n"
 msgstr ""
 #. TRANSLATORS: def File.chgrp(path, gid)
-#: lib/file.ex:1270 
+#: lib/file.ex:1271 
 msgid ""
 "Changes the group given by the group id `gid`\n"
 "for a given `file`. Returns `:ok` on success, or\n"
 "`{:error, reason}` on failure.\n"
-msgstr ""
-#. TRANSLATORS: def File.copy!(source, destination, bytes_count \\ :infinity)
-#: lib/file.ex:438 
-msgid ""
-"The same as `copy/3` but raises an `File.CopyError` if it fails.\n"
-"Returns the `bytes_copied` otherwise.\n"
 msgstr ""
 #. TRANSLATORS: def File.stat!(path, opts \\ [])
 #: lib/file.ex:280 
@@ -215,7 +215,7 @@ msgid ""
 "You can use `:file.format_error/1` to get a descriptive string of the error.\n"
 msgstr ""
 #. TRANSLATORS: def File.cd!(path, function)
-#: lib/file.ex:1125 
+#: lib/file.ex:1126 
 msgid ""
 "Changes the current directory to the given `path`,\n"
 "executes the given function and then reverts back\n"
@@ -225,7 +225,7 @@ msgid ""
 "directory fails.\n"
 msgstr ""
 #. TRANSLATORS: def File.open(path, modes \\ [])
-#: lib/file.ex:921 
+#: lib/file.ex:922 
 msgid ""
 "Opens the given `path` according to the given list of modes.\n"
 "\n"
@@ -300,8 +300,13 @@ msgstr ""
 msgid ""
 "Same as `mkdir/1`, but raises an exception in case of failure. Otherwise `:ok`.\n"
 msgstr ""
+#. TRANSLATORS: def File.rm!(path)
+#: lib/file.ex:775 
+msgid ""
+"Same as `rm/1`, but raises an exception in case of failure. Otherwise `:ok`.\n"
+msgstr ""
 #. TRANSLATORS: def File.stream!(path, modes \\ [], line_or_bytes \\ :line)
-#: lib/file.ex:1185 
+#: lib/file.ex:1186 
 msgid ""
 "Returns a `File.Stream` for the given `path` with the given `modes`.\n"
 "\n"
@@ -341,7 +346,7 @@ msgid ""
 "\n"
 msgstr ""
 #. TRANSLATORS: def File.cp(source, destination, callback \\ fn _, _ -> true end)
-#: lib/file.ex:477 
+#: lib/file.ex:478 
 msgid ""
 "Copies the contents in `source` to `destination` preserving its mode.\n"
 "\n"
@@ -361,13 +366,8 @@ msgid ""
 "explicitly disallow this behaviour. If destination is a directory, an\n"
 "error will be returned.\n"
 msgstr ""
-#. TRANSLATORS: def File.rm!(path)
-#: lib/file.ex:774 
-msgid ""
-"Same as `rm/1`, but raises an exception in case of failure. Otherwise `:ok`.\n"
-msgstr ""
 #. TRANSLATORS: def File.rm_rf(path)
-#: lib/file.ex:818 
+#: lib/file.ex:819 
 msgid ""
 "Removes files and directories recursively at the given `path`.\n"
 "Symlinks are not followed but simply removed, non-existing\n"
@@ -393,7 +393,7 @@ msgid ""
 "path. Returns `:ok` or `{:error, reason}`.\n"
 msgstr ""
 #. TRANSLATORS: def File.close(io_device)
-#: lib/file.ex:1172 
+#: lib/file.ex:1173 
 msgid ""
 "Closes the file referenced by `io_device`. It mostly returns `:ok`, except\n"
 "for some severe errors such as out of memory.\n"
@@ -403,7 +403,7 @@ msgid ""
 "See `open/2`.\n"
 msgstr ""
 #. TRANSLATORS: def File.rmdir(path)
-#: lib/file.ex:787 
+#: lib/file.ex:788 
 msgid ""
 "Tries to delete the dir at `path`.\n"
 "Returns `:ok` if successful, or `{:error, reason}` if an error occurs.\n"
@@ -418,7 +418,7 @@ msgid ""
 "\n"
 msgstr ""
 #. TRANSLATORS: def File.open!(path, modes \\ [])
-#: lib/file.ex:1037 
+#: lib/file.ex:1038 
 msgid ""
 "Same as `open/2` but raises an error if file could not be opened.\n"
 "\n"
@@ -431,13 +431,8 @@ msgid ""
 "\n"
 "Returns `:ok` otherwise. Requires datetime in UTC.\n"
 msgstr ""
-#. TRANSLATORS: def File.chgrp!(path, gid)
-#: lib/file.ex:1280 
-msgid ""
-"Same as `chgrp/2`, but raises an exception in case of failure. Otherwise `:ok`.\n"
-msgstr ""
 #. TRANSLATORS: def File.open(path, modes, function)
-#: lib/file.ex:1002 
+#: lib/file.ex:1003 
 msgid ""
 "Similar to `open/2` but expects a function as its last argument.\n"
 "\n"
@@ -460,8 +455,13 @@ msgid ""
 "    end)\n"
 "\n"
 msgstr ""
+#. TRANSLATORS: def File.chgrp!(path, gid)
+#: lib/file.ex:1281 
+msgid ""
+"Same as `chgrp/2`, but raises an exception in case of failure. Otherwise `:ok`.\n"
+msgstr ""
 #. TRANSLATORS: def File.write!(path, content, modes \\ [])
-#: lib/file.ex:705 
+#: lib/file.ex:706 
 msgid ""
 "Same as `write/3` but raises an exception if it fails, returns `:ok` otherwise.\n"
 msgstr ""
@@ -472,17 +472,12 @@ msgid ""
 "`File.Error` if an error occurs.\n"
 msgstr ""
 #. TRANSLATORS: def File.ls(path \\ ".")
-#: lib/file.ex:1144 
+#: lib/file.ex:1145 
 msgid ""
 "Returns the list of files in the given directory.\n"
 "\n"
 "It returns `{:ok, [files]}` in case of success,\n"
 "`{:error, reason}` otherwise.\n"
-msgstr ""
-#. TRANSLATORS: def File.chown!(path, uid)
-#: lib/file.ex:1303 
-msgid ""
-"Same as `chown/2`, but raises an exception in case of failure. Otherwise `:ok`.\n"
 msgstr ""
 #. TRANSLATORS: def File.regular?(path)
 #: lib/file.ex:85 
@@ -494,21 +489,10 @@ msgid ""
 "    File.regular? __ENV__.file #=> true\n"
 "\n"
 msgstr ""
-#. TRANSLATORS: def File.mkdir(path)
-#: lib/file.ex:128 
+#. TRANSLATORS: def File.chown!(path, uid)
+#: lib/file.ex:1304 
 msgid ""
-"Tries to create the directory `path`. Missing parent directories are not created.\n"
-"Returns `:ok` if successful, or `{:error, reason}` if an error occurs.\n"
-"\n"
-"Typical error reasons are:\n"
-"\n"
-"  * `:eacces`  - missing search or write permissions for the parent\n"
-"    directories of `path`\n"
-"  * `:eexist`  - there is already a file or directory named `path`\n"
-"  * `:enoent`  - a component of `path` does not exist\n"
-"  * `:enospc`  - there is a no space left on the device\n"
-"  * `:enotdir` - a component of `path` is not a directory;\n"
-"    on some platforms, `:enoent` is returned instead\n"
+"Same as `chown/2`, but raises an exception in case of failure. Otherwise `:ok`.\n"
 msgstr ""
 #. TRANSLATORS: def File.lstat!(path, opts \\ [])
 #: lib/file.ex:325 
@@ -516,13 +500,63 @@ msgid ""
 "Same as `lstat/2` but returns the `File.Stat` struct directly and\n"
 "throws `File.Error` if an error is returned.\n"
 msgstr ""
+#. TRANSLATORS: def File.rmdir!(path)
+#: lib/file.ex:806 
+msgid ""
+"Same as `rmdir/1`, but raises an exception in case of failure. Otherwise `:ok`.\n"
+msgstr ""
+#. TRANSLATORS: def File.cp_r(source, destination, callback \\ fn _, _ -> true end)
+#: lib/file.ex:529 
+msgid ""
+"Copies the contents in source to destination.\n"
+"\n"
+"If the source is a file, it copies `source` to\n"
+"`destination`. If the source is a directory, it copies\n"
+"the contents inside source into the destination.\n"
+"\n"
+"If a file already exists in the destination,\n"
+"it invokes a callback which should return\n"
+"`true` if the existing file should be overwritten,\n"
+"`false` otherwise. The callback defaults to return `true`.\n"
+"\n"
+"If a directory already exists in the destination\n"
+"where a file is meant to be (or vice versa), this\n"
+"function will fail.\n"
+"\n"
+"This function may fail while copying files,\n"
+"in such cases, it will leave the destination\n"
+"directory in a dirty state, where file which have already been copied\n"
+"won't be removed.\n"
+"\n"
+"The function returns `{:ok, files_and_directories}` in case of\n"
+"success, `files_and_directories` lists all files and directories copied in no\n"
+"specific order. It returns `{:error, reason, file}` otherwise.\n"
+"\n"
+"Note: The command `cp` in Unix systems behaves differently\n"
+"depending if `destination` is an existing directory or not.\n"
+"We have chosen to explicitly disallow this behaviour.\n"
+"\n"
+"## Examples\n"
+"\n"
+"    # Copies file \"a.txt\" to \"b.txt\"\n"
+"    File.cp_r \"a.txt\", \"b.txt\"\n"
+"\n"
+"    # Copies all files in \"samples\" to \"tmp\"\n"
+"    File.cp_r \"samples\", \"tmp\"\n"
+"\n"
+"    # Same as before, but asks the user how to proceed in case of conflicts\n"
+"    File.cp_r \"samples\", \"tmp\", fn(source, destination) ->\n"
+"      IO.gets(\"Overwriting #{destination} by #{source}. Type y to confirm. \") == \"y\\n\"\n"
+"    end\n"
+"\n"
+msgstr ""
 #. TRANSLATORS: def File.cwd!()
-#: lib/file.ex:1090 
+#: lib/file.ex:1091 
 msgid ""
 "The same as `cwd/0`, but raises an exception if it fails.\n"
 msgstr ""
 #. TRANSLATORS: def File.cp_r!(source, destination, callback \\ fn _, _ -> true end)
-#: lib/file.ex:582 
+#: lib/file.ex:583 
 msgid ""
 "The same as `cp_r/3`, but raises `File.CopyError` if it fails.\n"
 "Returns the list of copied files otherwise.\n"
@@ -547,7 +581,7 @@ msgid ""
 "\n"
 msgstr ""
 #. TRANSLATORS: def File.chown(path, uid)
-#: lib/file.ex:1293 
+#: lib/file.ex:1294 
 msgid ""
 "Changes the owner given by the user id `uid`\n"
 "for a given `file`. Returns `:ok` on success,\n"
@@ -600,74 +634,18 @@ msgid ""
 "\n"
 msgstr ""
 #. TRANSLATORS: def File.chmod!(path, mode)
-#: lib/file.ex:1257 
+#: lib/file.ex:1258 
 msgid ""
 "Same as `chmod/2`, but raises an exception in case of failure. Otherwise `:ok`.\n"
 msgstr ""
-#. TRANSLATORS: def File.write_stat!(path, stat, opts \\ [])
-#: lib/file.ex:349 
-msgid ""
-"Same as `write_stat/3` but raises an exception if it fails.\n"
-"Returns `:ok` otherwise.\n"
-msgstr ""
-#. TRANSLATORS: def File.rmdir!(path)
-#: lib/file.ex:805 
-msgid ""
-"Same as `rmdir/1`, but raises an exception in case of failure. Otherwise `:ok`.\n"
-msgstr ""
-#. TRANSLATORS: def File.cp_r(source, destination, callback \\ fn _, _ -> true end)
-#: lib/file.ex:528 
-msgid ""
-"Copies the contents in source to destination.\n"
-"\n"
-"If the source is a file, it copies `source` to\n"
-"`destination`. If the source is a directory, it copies\n"
-"the contents inside source into the destination.\n"
-"\n"
-"If a file already exists in the destination,\n"
-"it invokes a callback which should return\n"
-"`true` if the existing file should be overwritten,\n"
-"`false` otherwise. The callback defaults to return `true`.\n"
-"\n"
-"If a directory already exists in the destination\n"
-"where a file is meant to be (or vice versa), this\n"
-"function will fail.\n"
-"\n"
-"This function may fail while copying files,\n"
-"in such cases, it will leave the destination\n"
-"directory in a dirty state, where file which have already been copied\n"
-"won't be removed.\n"
-"\n"
-"The function returns `{:ok, files_and_directories}` in case of\n"
-"success, `files_and_directories` lists all files and directories copied in no\n"
-"specific order. It returns `{:error, reason, file}` otherwise.\n"
-"\n"
-"Note: The command `cp` in Unix systems behaves differently\n"
-"depending if `destination` is an existing directory or not.\n"
-"We have chosen to explicitly disallow this behaviour.\n"
-"\n"
-"## Examples\n"
-"\n"
-"    # Copies file \"a.txt\" to \"b.txt\"\n"
-"    File.cp_r \"a.txt\", \"b.txt\"\n"
-"\n"
-"    # Copies all files in \"samples\" to \"tmp\"\n"
-"    File.cp_r \"samples\", \"tmp\"\n"
-"\n"
-"    # Same as before, but asks the user how to proceed in case of conflicts\n"
-"    File.cp_r \"samples\", \"tmp\", fn(source, destination) ->\n"
-"      IO.gets(\"Overwriting #{destination} by #{source}. Type y to confirm. \") == \"y\\n\"\n"
-"    end\n"
-"\n"
-msgstr ""
 #. TRANSLATORS: def File.rm_rf!(path)
-#: lib/file.ex:907 
+#: lib/file.ex:908 
 msgid ""
 "Same as `rm_rf/1` but raises `File.Error` in case of failures,\n"
 "otherwise the list of files or directories removed.\n"
 msgstr ""
 #. TRANSLATORS: def File.rename(source, destination)
-#: lib/file.ex:452 
+#: lib/file.ex:453 
 msgid ""
 "Renames the `source` file to `destination` file.  It can be used to move files\n"
 "(and directories) between directories.  If moving a file, you must fully\n"
@@ -688,15 +666,37 @@ msgid ""
 "    # Rename directory \"samples\" to \"tmp\"\n"
 "    File.rename \"samples\", \"tmp\"\n"
 msgstr ""
+#. TRANSLATORS: def File.write_stat!(path, stat, opts \\ [])
+#: lib/file.ex:349 
+msgid ""
+"Same as `write_stat/3` but raises an exception if it fails.\n"
+"Returns `:ok` otherwise.\n"
+msgstr ""
+#. TRANSLATORS: def File.mkdir(path)
+#: lib/file.ex:128 
+msgid ""
+"Tries to create the directory `path`. Missing parent directories are not created.\n"
+"Returns `:ok` if successful, or `{:error, reason}` if an error occurs.\n"
+"\n"
+"Typical error reasons are:\n"
+"\n"
+"  * `:eacces`  - missing search or write permissions for the parent\n"
+"    directories of `path`\n"
+"  * `:eexist`  - there is already a file or directory named `path`\n"
+"  * `:enoent`  - a component of `path` does not exist\n"
+"  * `:enospc`  - there is a no space left on the device\n"
+"  * `:enotdir` - a component of `path` is not a directory;\n"
+"    on some platforms, `:enoent` is returned instead\n"
+msgstr ""
 #. TRANSLATORS: def File.open!(path, modes, function)
-#: lib/file.ex:1051 
+#: lib/file.ex:1052 
 msgid ""
 "Same as `open/3` but raises an error if file could not be opened.\n"
 "\n"
 "Returns the function result otherwise.\n"
 msgstr ""
 #. TRANSLATORS: def File.rm(path)
-#: lib/file.ex:718 
+#: lib/file.ex:719 
 msgid ""
 "Tries to delete the file `path`.\n"
 "\n"
@@ -737,7 +737,7 @@ msgid ""
 "`{:error, :enotsup}`.\n"
 msgstr ""
 #. TRANSLATORS: def File.cwd()
-#: lib/file.ex:1065 
+#: lib/file.ex:1066 
 msgid ""
 "Gets the current working directory.\n"
 "\n"
@@ -747,13 +747,13 @@ msgid ""
 "of success, `{:error, reason}` otherwise.\n"
 msgstr ""
 #. TRANSLATORS: def File.cp!(source, destination, callback \\ fn _, _ -> true end)
-#: lib/file.ex:514 
+#: lib/file.ex:515 
 msgid ""
 "The same as `cp/3`, but raises `File.CopyError` if it fails.\n"
 "Returns `:ok` otherwise.\n"
 msgstr ""
 #. TRANSLATORS: def File.cd(path)
-#: lib/file.ex:1102 
+#: lib/file.ex:1103 
 msgid ""
 "Sets the current working directory.\n"
 "\n"

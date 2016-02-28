@@ -10,13 +10,24 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
+#. TRANSLATORS: def System.delete_env(varname)
+#: lib/system.ex:319
+msgid ""
+"Deletes an environment variable.\n"
+"\n"
+"Removes the variable `varname` from the environment.\n"
+msgstr ""
+"環境変数を削除します。\n"
+"\n"
+"環境から変数`varname`を取り除きます。\n"
+
 #. TRANSLATORS: def System.compiled_endianness()
-#: lib/system.ex:57
+#: lib/system.ex:53
 msgid "Returns the endianness the system was compiled with.\n"
 msgstr "システムがコンパイルされたエンディアンを返します。\n"
 
 #. TRANSLATORS: def System.build_info()
-#: lib/system.ex:73
+#: lib/system.ex:69
 msgid ""
 "Elixir build information.\n"
 "\n"
@@ -28,19 +39,8 @@ msgstr ""
 "キーワードリストとして、Elixirバージョン、git short revision hash \n"
 "および、コンパイル日時を返します。\n"
 
-#. TRANSLATORS: def System.delete_env(varname)
-#: lib/system.ex:307
-msgid ""
-"Deletes an environment variable.\n"
-"\n"
-"Removes the variable `varname` from the environment.\n"
-msgstr ""
-"環境変数を削除します。\n"
-"\n"
-"環境から変数`varname`を取り除きます。\n"
-
 #. TRANSLATORS: def System.at_exit(fun)
-#: lib/system.ex:210
+#: lib/system.ex:222
 msgid ""
 "Registers a program exit handler function.\n"
 "\n"
@@ -67,7 +67,7 @@ msgstr ""
 "関数は引数としてexitステータスコードを受け取らなくてはなりません。\n"
 
 #. TRANSLATORS: def System.cmd(command, args, opts \\ [])
-#: lib/system.ex:370
+#: lib/system.ex:382
 msgid ""
 "Executes the given `command` with `args`.\n"
 "\n"
@@ -217,7 +217,7 @@ msgstr ""
 "を、チェックしてください。\n"
 
 #. TRANSLATORS: def System.get_pid()
-#: lib/system.ex:274
+#: lib/system.ex:286
 msgid ""
 "Erlang VM process identifier.\n"
 "\n"
@@ -237,7 +237,7 @@ msgstr ""
 "を参照してください。\n"
 
 #. TRANSLATORS: def System.tmp_dir()
-#: lib/system.ex:156
+#: lib/system.ex:168
 msgid ""
 "Writable temporary directory.\n"
 "\n"
@@ -265,19 +265,8 @@ msgstr ""
 "\n"
 "上の全てが書込み不可だった場合、`nil`を返します。\n"
 
-#. TRANSLATORS: def System.version()
-#: lib/system.ex:65
-msgid ""
-"Elixir version information.\n"
-"\n"
-"Returns Elixir's version as binary.\n"
-msgstr ""
-"Elixirバージョン情報です。\n"
-"\n"
-"バイナリとしてElixirのバージョンを返します。\n"
-
 #. TRANSLATORS: def System.get_env()
-#: lib/system.ex:244
+#: lib/system.ex:256
 msgid ""
 "System environment variables.\n"
 "\n"
@@ -289,8 +278,19 @@ msgstr ""
 "全ての環境変数のリストを返します。それぞれの変数は`{name, value}`タプル\n"
 "で、`name`と`value`はどちらも文字列として与えられます。\n"
 
+#. TRANSLATORS: def System.version()
+#: lib/system.ex:61
+msgid ""
+"Elixir version information.\n"
+"\n"
+"Returns Elixir's version as binary.\n"
+msgstr ""
+"Elixirバージョン情報です。\n"
+"\n"
+"バイナリとしてElixirのバージョンを返します。\n"
+
 #. TRANSLATORS: def System.time_offset(unit)
-#: lib/system.ex:599
+#: lib/system.ex:611
 msgid ""
 "Returns the current time offset between the Erlang monotonic time and the\n"
 "Erlang system time.\n"
@@ -319,7 +319,7 @@ msgstr ""
 "コンパイラにより、`:erlang.time_offset/1`にインライン化されます。\n"
 
 #. TRANSLATORS: def System.tmp_dir!()
-#: lib/system.ex:178
+#: lib/system.ex:190
 msgid ""
 "Writable temporary directory, exception on error.\n"
 "\n"
@@ -343,7 +343,7 @@ msgstr ""
 "へのアクセスを提供します。\n"
 
 #. TRANSLATORS: def System.user_home!()
-#: lib/system.ex:145
+#: lib/system.ex:157
 msgid ""
 "User home directory, exception on error.\n"
 "\n"
@@ -357,7 +357,7 @@ msgstr ""
 "わりに`RuntimeError`を上げます。\n"
 
 #. TRANSLATORS: def System.argv(args)
-#: lib/system.ex:93
+#: lib/system.ex:105
 msgid ""
 "Modifies command line arguments.\n"
 "\n"
@@ -370,7 +370,7 @@ msgstr ""
 "以前のargv情報は全て破壊されますので、注意して使用してください。\n"
 
 #. TRANSLATORS: def System.monotonic_time(unit)
-#: lib/system.ex:531
+#: lib/system.ex:543
 msgid ""
 "Returns the current monotonic time in the given time unit.\n"
 "\n"
@@ -390,7 +390,7 @@ msgstr ""
 "コンパイラにより `:erlang.monotonic_time/1`にインライン化されます。\n"
 
 #. TRANSLATORS: def System.find_executable(program)
-#: lib/system.ex:227
+#: lib/system.ex:239
 msgid ""
 "Locates an executable on the system.\n"
 "\n"
@@ -409,7 +409,7 @@ msgstr ""
 "ファイルを探します。\n"
 
 #. TRANSLATORS: def System.unique_integer(modifiers \\ [])
-#: lib/system.ex:618
+#: lib/system.ex:630
 msgid ""
 "Generates and returns an integer that is unique in the current runtime\n"
 "instance.\n"
@@ -460,7 +460,7 @@ msgstr ""
 "コンパイラにより`:erlang.unique_integer/1`にインライン化されます。\n"
 
 #. TRANSLATORS: def System.argv()
-#: lib/system.ex:83
+#: lib/system.ex:95
 msgid ""
 "Lists command line arguments.\n"
 "\n"
@@ -471,7 +471,7 @@ msgstr ""
 "プログラムに渡された、コマンドライン引数のリストを返します。\n"
 
 #. TRANSLATORS: def System.cwd()
-#: lib/system.ex:104
+#: lib/system.ex:116
 msgid ""
 "Current working directory.\n"
 "\n"
@@ -484,7 +484,7 @@ msgstr ""
 "もしそれが利用できないなら、`nil`を返します。\n"
 
 #. TRANSLATORS: def System.convert_time_unit(time, from_unit, to_unit)
-#: lib/system.ex:573
+#: lib/system.ex:585
 msgid ""
 "Converts `time` from time unit `from_unit` to time unit `to_unit`. The "
 "result\n"
@@ -498,7 +498,7 @@ msgstr ""
 "コンパイラにより`:erlang.convert_time_unit/3`へインライン化されます。\n"
 
 #. TRANSLATORS: def System.system_time()
-#: lib/system.ex:545
+#: lib/system.ex:557
 msgid ""
 "Returns the current system time in the `:native` time unit.\n"
 "\n"
@@ -518,7 +518,7 @@ msgstr ""
 "コンパイラにより `:erlang.system_time/0` にインライン化されます。\n"
 
 #. TRANSLATORS: def System.halt(status \\ 0)
-#: lib/system.ex:331
+#: lib/system.ex:343
 msgid ""
 "Halts the Erlang runtime system.\n"
 "\n"
@@ -577,7 +577,7 @@ msgstr ""
 "\n"
 
 #. TRANSLATORS: def System.system_time(unit)
-#: lib/system.ex:559
+#: lib/system.ex:571
 msgid ""
 "Returns the current system time in the given time unit.\n"
 "\n"
@@ -597,7 +597,7 @@ msgstr ""
 "コンパイラにより `:erlang.system_time/1` にインライン化されます。\n"
 
 #. TRANSLATORS: def System.put_env(enum)
-#: lib/system.ex:296
+#: lib/system.ex:308
 msgid ""
 "Sets multiple environment variables.\n"
 "\n"
@@ -610,7 +610,7 @@ msgstr ""
 "新しい値をセットします。\n"
 
 #. TRANSLATORS: def System.stacktrace()
-#: lib/system.ex:318
+#: lib/system.ex:330
 msgid ""
 "Last exception stacktrace.\n"
 "\n"
@@ -628,23 +628,12 @@ msgstr ""
 "コンパイラにより`:erlang.get_stacktrace/0`にインライン化されます。\n"
 
 #. TRANSLATORS: def System.endianness()
-#: lib/system.ex:50
+#: lib/system.ex:46
 msgid "Returns the endianness.\n"
 msgstr "エンディアンを返します。\n"
 
-#. TRANSLATORS: def System.user_home()
-#: lib/system.ex:136
-msgid ""
-"User home directory.\n"
-"\n"
-"Returns the user home directory (platform independent).\n"
-msgstr ""
-"ユーザホームディレクトリです。\n"
-"\n"
-"(プラットフォーム非依存の)ユーザホームディレクトリを返します。\n"
-
 #. TRANSLATORS: def System.put_env(varname, value)
-#: lib/system.ex:285
+#: lib/system.ex:297
 msgid ""
 "Sets an environment variable value.\n"
 "\n"
@@ -654,8 +643,19 @@ msgstr ""
 "\n"
 "環境変数`varname`に新しい`value`をセットします。\n"
 
+#. TRANSLATORS: def System.user_home()
+#: lib/system.ex:148
+msgid ""
+"User home directory.\n"
+"\n"
+"Returns the user home directory (platform independent).\n"
+msgstr ""
+"ユーザホームディレクトリです。\n"
+"\n"
+"(プラットフォーム非依存の)ユーザホームディレクトリを返します。\n"
+
 #. TRANSLATORS: def System.cwd!()
-#: lib/system.ex:126
+#: lib/system.ex:138
 msgid ""
 "Current working directory, exception on error.\n"
 "\n"
@@ -667,7 +667,7 @@ msgstr ""
 "す。\n"
 
 #. TRANSLATORS: def System.get_env(varname)
-#: lib/system.ex:259
+#: lib/system.ex:271
 msgid ""
 "Environment variable value.\n"
 "\n"
@@ -681,7 +681,7 @@ msgstr ""
 "環境変数が定義されていないなら、`nil`を返します。\n"
 
 #. TRANSLATORS: def System.monotonic_time()
-#: lib/system.ex:514
+#: lib/system.ex:526
 msgid ""
 "Returns the current monotonic time in the `:native` time unit.\n"
 "\n"
@@ -706,7 +706,7 @@ msgstr ""
 "コンパイラにより、`:erlang.monotonic_time/0`にインライン化されます。\n"
 
 #. TRANSLATORS: def System.time_offset()
-#: lib/system.ex:584
+#: lib/system.ex:596
 msgid ""
 "Returns the current time offset between the Erlang monotonic time and the\n"
 "Erlang system time.\n"

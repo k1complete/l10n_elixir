@@ -105,15 +105,6 @@ msgstr ""
 "    @macrocallback add(number, number) :: Macro.t\n"
 "\n"
 
-#. TRANSLATORS: def Kernel.Typespec.defines_callback?(module, name, arity)
-#: lib/kernel/typespec.ex:133
-msgid ""
-"Returns `true` if the current module defines a callback.\n"
-"This function is only available for modules being compiled.\n"
-msgstr ""
-"現在のモジュールがコールバックを定義していれば、`true`を返します。\n"
-"この関数はコンパイルしているモジュールにのみ有効です。\n"
-
 #. TRANSLATORS: def Kernel.Typespec.type_to_ast(type)
 #: lib/kernel/typespec.ex:192
 msgid "Converts a type clause back to Elixir AST.\n"
@@ -137,6 +128,15 @@ msgstr ""
 "\n"
 "モジュールは実行時システムによって配置された対応するbeamファイルを\n"
 "持っていなければなりません。\n"
+
+#. TRANSLATORS: def Kernel.Typespec.defines_callback?(module, name, arity)
+#: lib/kernel/typespec.ex:133
+msgid ""
+"Returns `true` if the current module defines a callback.\n"
+"This function is only available for modules being compiled.\n"
+msgstr ""
+"現在のモジュールがコールバックを定義していれば、`true`を返します。\n"
+"この関数はコンパイルしているモジュールにのみ有効です。\n"
 
 #. TRANSLATORS: def Kernel.Typespec.define_type(kind, expr, doc \\ nil, env)
 #: lib/kernel/typespec.ex:95
