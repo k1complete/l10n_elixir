@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: l 10n_elixir\n"
-"PO-Revision-Date: 2016-02-20 16:26+0900\n"
+"PO-Revision-Date: 2016-02-28 22:35+0900\n"
 "Last-Translator: 小田 照敬 <k-1@air13.local>\n"
 "Language-Team: Japanese <translation-team-ja@lists.sourceforge.net>\n"
 "Language: ja\n"
@@ -46,6 +46,8 @@ msgid ""
 "  * https://help.github.com/articles/markdown-basics/\n"
 "  * https://help.github.com/articles/github-flavored-markdown/"
 msgstr ""
+"  * https://help.github.com/articles/markdown-basics/\n"
+"  * https://help.github.com/articles/github-flavored-markdown/"
 
 #: deps/elixir/lib/elixir/pages/Writing Documentation.md:12
 msgid "## Module Attributes"
