@@ -59,6 +59,7 @@ defmodule L10nElixir.Mixfile do
      source_beam: sr,
      source_ref: sref,
      extras: [
+              "pages/Naming Conventions.md",
               "pages/Typespecs.md",
               "pages/Writing Documentation.md"
              ],

@@ -1,0 +1,281 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: l 10n_elixir\n"
+"PO-Revision-Date: 2016-03-06 14:58+0900\n"
+"Last-Translator: 小田 照敬 <EMAIL@ADDRESS>\n"
+"Language-Team: Japanese\n"
+"Language: ja\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: deps/elixir/lib/elixir/pages/Naming Conventions.md:1
+msgid "# Naming Conventions"
+msgstr "# Naming Conventions"
+
+#: deps/elixir/lib/elixir/pages/Naming Conventions.md:3
+msgid ""
+"This document covers some naming conventions in Elixir code, from casing to "
+"punctuation characters."
+msgstr ""
+"このドキュメントは、ケーシングから文字の句読点までのElixirコードでのい\n"
+"くつかの命名規則についてカバーしています。"
+
+#: deps/elixir/lib/elixir/pages/Naming Conventions.md:5
+msgid "## Casing"
+msgstr "## Casing"
+
+#: deps/elixir/lib/elixir/pages/Naming Conventions.md:7
+msgid ""
+"Elixir developers must use `snake_case` when defining variables, function "
+"names, module attributes, etc:"
+msgstr ""
+"Elixir開発者は変数、関数名、モジュールアトリビュートなどの定義をすると\n"
+"きは、`snake_case`を使わなければなりません:"
+
+#: deps/elixir/lib/elixir/pages/Naming Conventions.md:12
+msgid ""
+"Aliases, commonly used as module names, are an exception as they must be "
+"capitalized and written in `CamelCase`, like `OptionParser`. For aliases, "
+"capital letters are kept in acronyms, like `ExUnit.CaptureIO` or `Mix.SCM`."
+msgstr ""
+"一般にモジュールとして使われるエリアスは例外で、`OptionParser`のように、大\n"
+"文字から始めた`CamelCase`で書かなければなりません。エリアスでは\n"
+"`ExUnit.CaptureIO`や`Mix.SCM`のように、頭文字の大文字は保存されます。"
+
+#: deps/elixir/lib/elixir/pages/Naming Conventions.md:14
+msgid ""
+"Atoms can be written either in `:snake_case` or `:CamelCase`, although the "
+"convention is to use the snake case version throughout Elixir."
+msgstr ""
+"アトムは、`:snake_case`や`:CamelCase`のどちらでも畫いてよいですが、\n"
+"Elixirのバージョンを全体を通してsnake caseが規約です。"
+
+#: deps/elixir/lib/elixir/pages/Naming Conventions.md:16
+msgid ""
+"Generally speaking, filenames follow the `snake_case` convention of the "
+"module they define. For example, `MyApp` should be defined inside the "
+"`my_app.ex` file. However, this is only a convention. At the end of the day, "
+"any filename can be used as they do not affect the compiled code in any way."
+msgstr ""
+"一般的に言って、ファイル名は定義されたモジュールの`snake_case`が規約で\n"
+"す。例えば、`MyApp`は`my_app.ex`ファイルの中で定義されるべきです。しか\n"
+"しながら、これはただの規約です。要するに、どんなファイル名を使っても、\n"
+"如何なる影響もコンパイルされるコードに影響を与えることはありません。"
+
+#: deps/elixir/lib/elixir/pages/Naming Conventions.md:18
+msgid "## Underscore (_foo)"
+msgstr "## Underscore (_foo)"
+
+#: deps/elixir/lib/elixir/pages/Naming Conventions.md:20
+msgid "Elixir relies on underscores in different situations."
+msgstr "Elixirは異るシチュエーションでアンダースコアに依存します。"
+
+#: deps/elixir/lib/elixir/pages/Naming Conventions.md:22
+msgid ""
+"For example, a value that is not meant to be used must be assigned to `_` or "
+"to a variable starting with underscore:"
+msgstr ""
+"例えば、使われないことを意味する値は、`_`または、アンダースコア\n"
+"で始まる変数へ代入されなければなりません:"
+
+#: deps/elixir/lib/elixir/pages/Naming Conventions.md:26
+msgid ""
+"Function names may also start with an underscore. Such functions are never "
+"imported by default:"
+msgstr ""
+"関数名もアンダースコアで始まるかもしれません。そういう関数は\n"
+"デフォルトでは決してimportされません:"
+
+#: deps/elixir/lib/elixir/pages/Naming Conventions.md:38
+msgid ""
+"Due to this property, Elixir relies on functions starting with underscore to "
+"attach compile-time metadata to modules. Such functions are most often in "
+"the `__foo__` format. For example, every module in Elixir has an `__info__` "
+"function:"
+msgstr ""
+"この特性のために、Elixirはコンパイル時メタデータをモジュールにアタッチ\n"
+"するためにアンダースコアで始まる関数に依存します。そんな関数はしばしば\n"
+"`__foo__`フォーマットです。例えば、Elixirのそれぞれのモジュールは\n"
+"`__info__`関数を持っています:"
+
+#: deps/elixir/lib/elixir/pages/Naming Conventions.md:43
+msgid ""
+"Elixir also includes 4 special variables that follow the double underscore "
+"format. These forms retrieve compile-time information about the current "
+"environment: `__MODULE__`, `__DIR__`, `__ENV__` and `__CALLER__`."
+msgstr ""
+"Elixirは下記のダブルアンダースコアフォーマットの4つのスペシャル変数も含\n"
+"みます。それらは現在の環境についてのコンパイル時情報を取得します:\n"
+"`__MODULE__`, `__DIR__`, `__ENV__` そして `__CALLER__`。"
+
+#: deps/elixir/lib/elixir/pages/Naming Conventions.md:45
+msgid "## Trailing bang (foo!)"
+msgstr "## Trailing bang (foo!)"
+
+#: deps/elixir/lib/elixir/pages/Naming Conventions.md:47
+msgid ""
+"A trailing bang (exclamation mark) signifies a function or macro where "
+"failure cases raise an exception."
+msgstr ""
+"bang(感嘆符)で終わるのは、関数あるいはマクロが失敗したときに例外を上げ\n"
+"ることを意味します。"
+
+#: deps/elixir/lib/elixir/pages/Naming Conventions.md:49
+msgid ""
+"Many functions come in pairs, such as `File.read/1` and `File.read!/1`. "
+"`File.read/1` will return a success or failure tuple, whereas `File.read!/1` "
+"will return a plain value or else raise an exception:"
+msgstr ""
+"`File.read/1`と`File.read!/1`のように、多くの関数はペアをなしています。\n"
+"`File.read/1`は成功か失敗のタプルを返しますが、`File.read!/1`は\n"
+"プレインな値か、例外を上げます:"
+
+#: deps/elixir/lib/elixir/pages/Naming Conventions.md:61
+msgid ""
+"The version without `!` is preferred when you want to handle different "
+"outcomes using pattern matching:"
+msgstr ""
+"`!`なしのバージョンは、パターンマッチを使って異る結果を取り扱いたいとき\n"
+"に好まれます:"
+
+#: deps/elixir/lib/elixir/pages/Naming Conventions.md:68
+msgid ""
+"However, if you expect the outcome to always to be successful (e.g. if you "
+"expect the file always to exist), the bang variation can be more convenient "
+"and will raise a more helpful error message (than a failed pattern match) on "
+"failure."
+msgstr ""
+"しかしながら、もし常に成功するべきと結果を期待しているなら(例えば常にファ\n"
+"イルが存在していると期待しているなら)、bangバージョンはより便利で、失敗\n"
+"時に(パターンマッチの失敗)より役に立つエラーメッセージが上ります。"
+
+#: deps/elixir/lib/elixir/pages/Naming Conventions.md:70
+msgid ""
+"More examples of paired functions: `Base.decode16/2` and `Base.decode16!/2`, "
+"`File.cwd/0` and `File.cwd!/0`"
+msgstr ""
+"ペアの関数のさらなる例: `Base.decode16/2` と `Base.decode16!/2`、\n"
+"`File.cwd/0` と `File.cwd!/0`"
+
+#: deps/elixir/lib/elixir/pages/Naming Conventions.md:72
+msgid ""
+"There are also some non-paired functions, with no non-bang variant. The bang "
+"still signifies that it will raise an exception on failure. Examples: `Mix."
+"Config.validate!/1`, `Protocol.assert_protocol!/1`"
+msgstr ""
+"bang無しとペアになっていない関数も幾つかあります。ここでもbangは失敗時\n"
+"に例外を上げることを示します。例えば: `Mix.Config.validate!/1`、\n"
+"`Protocol.assert_protocol!/1`"
+
+#: deps/elixir/lib/elixir/pages/Naming Conventions.md:74
+msgid ""
+"In macro code, the bang on `Kernel.alias!/1` and `Kernel.var!/2` signifies "
+"that [macro hygiene](http://elixir-lang.org/getting-started/meta/macros."
+"html#macros-hygiene) is set aside."
+msgstr ""
+"マクロコードの`Kernel.alias!/1`と`Kernel.var!/2`のbangは[macro\n"
+"hygiene](http://elixir-lang.org/getting-started/meta/macros.html#macros-hygiene)\n"
+"を破棄することを示します。"
+
+#: deps/elixir/lib/elixir/pages/Naming Conventions.md:76
+msgid "## Trailing question mark (foo?)"
+msgstr "## Trailing question mark (foo?)"
+
+#: deps/elixir/lib/elixir/pages/Naming Conventions.md:78
+msgid ""
+"Functions that return a boolean are named with a trailing question mark."
+msgstr "booleanを返す関数は疑問符を後につけて名付けられます。"
+
+#: deps/elixir/lib/elixir/pages/Naming Conventions.md:80
+msgid "Examples: `Keyword.keyword?/1`, `Mix.debug?/0`, `String.contains?/2`"
+msgstr "Examples: `Keyword.keyword?/1`, `Mix.debug?/0`, `String.contains?/2`"
+
+#: deps/elixir/lib/elixir/pages/Naming Conventions.md:82
+msgid ""
+"However, functions that return booleans and are valid in guards follow "
+"another convention, described next."
+msgstr ""
+"しかしながら、booleanを返しガード節で有効な関数は、次に説明する、もう一\n"
+"つの規約に従います。"
+
+#: deps/elixir/lib/elixir/pages/Naming Conventions.md:84
+msgid "## is_ prefix (is_foo)"
+msgstr "## is_ prefix (is_foo)"
+
+#: deps/elixir/lib/elixir/pages/Naming Conventions.md:86
+msgid ""
+"Type checks and other boolean checks that are allowed in guard clauses are "
+"named with an `is_` prefix."
+msgstr ""
+"ガード節で使えるタイプチェックとその他の真偽チェックは、`is_`プレフィッ\n"
+"クスをつけて名付けられます。"
+
+#: deps/elixir/lib/elixir/pages/Naming Conventions.md:88
+msgid "Examples: `Integer.is_even/1`, `Kernel.is_list/1`"
+msgstr "Examples: `Integer.is_even/1`, `Kernel.is_list/1`"
+
+#: deps/elixir/lib/elixir/pages/Naming Conventions.md:90
+msgid ""
+"These functions and macros follow the Erlang convention of an `is_` prefix, "
+"instead of a trailing question mark, precisely to indicate that they are "
+"allowed in guard clauses."
+msgstr ""
+"これらの関数とマクロは、疑問符で終わる規約にかわり、それらがガード節で\n"
+"使えることを明確に示すために、Erlangの`is_`プレフィックス規約に従います。"
+
+#: deps/elixir/lib/elixir/pages/Naming Conventions.md:92
+msgid ""
+"Note that type checks that are not valid in guard clauses do not follow this "
+"convention. Examples: `Keyword.keyword?/1`, `Regex.regex?/1`"
+msgstr ""
+"ガード節で有効でないタイプチェックはこの規約に従わないことに注意してく\n"
+"ださい。 Examples: `Keyword.keyword?/1`, `Regex.regex?/1`"
+
+#: deps/elixir/lib/elixir/pages/Naming Conventions.md:94
+msgid "## Special names"
+msgstr "## Special names"
+
+#: deps/elixir/lib/elixir/pages/Naming Conventions.md:96
+msgid ""
+"Some names have specific meaning in Elixir. We detail those cases below."
+msgstr "いくつかの名前はElixirで特別な意味を持ちます。それらを以下に示します。"
+
+#: deps/elixir/lib/elixir/pages/Naming Conventions.md:98
+msgid "### length and size"
+msgstr "### length and size"
+
+#: deps/elixir/lib/elixir/pages/Naming Conventions.md:100
+msgid ""
+"When you see `size` in a function name, it means the operation runs in "
+"constant time (also written as \"O(1) time\") because the size is stored "
+"alongside the data structure."
+msgstr ""
+"関数名で`size`を見付けたとき、定数時間(あるいは\"O(1)時間\")でその操作が\n"
+"行われることを意味します。sizeはデータ構造に格納されているからです。"
+
+#: deps/elixir/lib/elixir/pages/Naming Conventions.md:102
+msgid "Examples: `Kernel.map_size/1`, `Kernel.tuple_size/1`"
+msgstr "Examples: `Kernel.map_size/1`, `Kernel.tuple_size/1`"
+
+#: deps/elixir/lib/elixir/pages/Naming Conventions.md:104
+msgid ""
+"When you see `length`, the operation runs in linear time (\"O(n) time\") "
+"because the entire data structure has to be traversed."
+msgstr ""
+"`length`を見付けたとき、線形時間(\"O(n)時間\")でその操作が行われます。\n"
+"データ構造全体を走査する必要があるからです。"
+
+#: deps/elixir/lib/elixir/pages/Naming Conventions.md:106
+msgid "Examples: `Kernel.length/1`, `String.length/1`"
+msgstr "Examples: `Kernel.length/1`, `String.length/1`"
+
+#: deps/elixir/lib/elixir/pages/Naming Conventions.md:108
+msgid ""
+"In other words, `size` functions will take the same amount of time whether "
+"the data structure is tiny or huge. `length` functions will take more time "
+"as the data structure grows in size.\n"
+msgstr ""
+"言い替えると、`size`関数はデータ構造が小くても巨大でも同じ時間が掛りま\n"
+"す。`length`関数はデータ構造の大きさが大きくなるとより時間がかかります。\n"
