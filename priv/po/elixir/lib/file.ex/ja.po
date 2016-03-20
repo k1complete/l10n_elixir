@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: l 10n_elixir\n"
-"PO-Revision-Date: 2015-12-13 19:12+0900\n"
+"PO-Revision-Date: 2016-03-20 23:32+0900\n"
 "Last-Translator: 小田 照敬 <EMAIL@ADDRESS>\n"
 "Language-Team: Japanese\n"
 "Language: ja\n"
@@ -378,7 +378,7 @@ msgid ""
 "throws `File.Error` if an error is returned.\n"
 msgstr ""
 "`stat/2`と同じですが、もしエラーが帰って来たら`File.Stat`を直接返さず、\n"
-"`File.Errorを投げます。\n"
+"`File.Error`を投げます。\n"
 
 #. TRANSLATORS: def File.read(path)
 #: lib/file.ex:213
@@ -961,7 +961,7 @@ msgid ""
 "throws `File.Error` if an error is returned.\n"
 msgstr ""
 "`stat/2`と同じですが、もしエラーが帰って来たら`File.Stat`を\n"
-"直接返さず、`File.Errorを投げます。\n"
+"直接返さず、`File.Error`を投げます。\n"
 
 #. TRANSLATORS: def File.rmdir!(path)
 #: lib/file.ex:806
