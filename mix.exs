@@ -77,7 +77,7 @@ defmodule L10nElixir.Mixfile do
     [docs_all: &docs_all/1]
   end
   def docs_all(_) do
-    apps = ["l10n_iex", "l10n_ex_unit"]
+    apps = ["l10n_iex", "l10n_ex_unit", "l10n_eex"]
     locale = Regex.replace(~r/(..).*/, System.get_env("LANG"), "\\1")
     Enum.map apps,
     fn(app) ->
@@ -90,10 +90,9 @@ defmodule L10nElixir.Mixfile do
       b = Regex.replace(~r/^l10n_(.*)/, app, "\\1")
         |> String.to_atom 
       :ok = Application.load(b)
+#      IO.inspect [{b, Application.spec(b)}]
       b = Application.spec(b)
-        |> Keyword.get(:mod)
-        |> elem(0)
-        |> Module.split
+        |> Keyword.get(:modules)
         |> hd
         |> Module.concat(nil)
       l10napp = update_in(l10napp, 
@@ -125,7 +124,8 @@ defmodule L10nElixir.Mixfile do
      {:exgettext, github: "k1complete/exgettext"},
 	   {:l10n_iex,  github: "k1complete/l10n_iex"},
 #      compile: "mix do deps.get, deps.compile, compile, docs" },
-	   {:l10n_ex_unit,  github: "k1complete/l10n_ex_unit"}
+	   {:l10n_ex_unit,  github: "k1complete/l10n_ex_unit"},
+	   {:l10n_eex,  github: "k1complete/l10n_eex"}
 #      compile: "mix do deps.get, deps.compile, compile, docs" }
 #	    compile: "mix do deps.get, deps.compile; mix; mix l10n.msgfmt"}
     ]
