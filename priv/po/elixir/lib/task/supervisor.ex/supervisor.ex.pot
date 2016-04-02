@@ -1,5 +1,5 @@
 #. TRANSLATORS: def Task.Supervisor.start_child(supervisor, fun)
-#: lib/task/supervisor.ex:137 
+#: lib/task/supervisor.ex:127 
 msgid ""
 "Starts a task as a child of the given `supervisor`.\n"
 "\n"
@@ -31,29 +31,12 @@ msgid ""
 "\n"
 msgstr ""
 #. TRANSLATORS: def Task.Supervisor.terminate_child(supervisor, pid)
-#: lib/task/supervisor.ex:121 
+#: lib/task/supervisor.ex:110 
 msgid ""
 "Terminates the child with the given `pid`.\n"
 msgstr ""
-#. TRANSLATORS: Elixir.Task.Supervisor Summary
-#: lib/task/supervisor.ex:2 
-msgid ""
-"A task supervisor.\n"
-"\n"
-"This module defines a supervisor which can be used to dynamically\n"
-"supervise tasks. Behind the scenes, this module is implemented as a\n"
-"`:simple_one_for_one` supervisor where the workers are temporary\n"
-"(i.e. they are not restarted after they die).\n"
-"\n"
-"See the `Task` module for more information.\n"
-"\n"
-"## Name Registration\n"
-"\n"
-"A `Task.Supervisor` is bound to the same name registration rules as a\n"
-"`GenServer`. Read more about them in the `GenServer` docs.\n"
-msgstr ""
 #. TRANSLATORS: def Task.Supervisor.async_nolink(supervisor, fun)
-#: lib/task/supervisor.ex:77 
+#: lib/task/supervisor.ex:71 
 msgid ""
 "Starts a task that can be awaited on.\n"
 "\n"
@@ -77,12 +60,29 @@ msgid ""
 "terminates normally, the reason in the `:DOWN` message will be `:normal`.\n"
 msgstr ""
 #. TRANSLATORS: def Task.Supervisor.start_child(supervisor, module, fun, args)
-#: lib/task/supervisor.ex:150 
+#: lib/task/supervisor.ex:140 
 msgid ""
 "Starts a task as a child of the given `supervisor`.\n"
 "\n"
 "Similar to `start_child/2` except the task is specified\n"
 "by the given `module`, `fun` and `args`.\n"
+msgstr ""
+#. TRANSLATORS: Elixir.Task.Supervisor Summary
+#: lib/task/supervisor.ex:2 
+msgid ""
+"A task supervisor.\n"
+"\n"
+"This module defines a supervisor which can be used to dynamically\n"
+"supervise tasks. Behind the scenes, this module is implemented as a\n"
+"`:simple_one_for_one` supervisor where the workers are temporary\n"
+"(i.e. they are not restarted after they die).\n"
+"\n"
+"See the `Task` module for more information.\n"
+"\n"
+"## Name Registration\n"
+"\n"
+"A `Task.Supervisor` is bound to the same name registration rules as a\n"
+"`GenServer`. Read more about them in the `GenServer` docs.\n"
 msgstr ""
 #. TRANSLATORS: def Task.Supervisor.async(supervisor, module, fun, args)
 #: lib/task/supervisor.ex:59 
@@ -94,7 +94,7 @@ msgid ""
 "more information and `async_nolink/2` for a non-linked variant.\n"
 msgstr ""
 #. TRANSLATORS: def Task.Supervisor.async_nolink(supervisor, module, fun, args)
-#: lib/task/supervisor.ex:104 
+#: lib/task/supervisor.ex:98 
 msgid ""
 "Starts a task that can be awaited on.\n"
 "\n"
@@ -103,7 +103,7 @@ msgid ""
 "more information.\n"
 msgstr ""
 #. TRANSLATORS: def Task.Supervisor.children(supervisor)
-#: lib/task/supervisor.ex:129 
+#: lib/task/supervisor.ex:118 
 msgid ""
 "Returns all children pids.\n"
 msgstr ""

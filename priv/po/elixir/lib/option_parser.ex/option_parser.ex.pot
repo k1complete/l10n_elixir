@@ -19,11 +19,6 @@ msgid ""
 "\n"
 "  * `{:error, rest}` - there are no switches at the top of the given argv\n"
 msgstr ""
-#. TRANSLATORS: Elixir.OptionParser Summary
-#: lib/option_parser.ex:2 
-msgid ""
-"This module contains functions to parse command line options.\n"
-msgstr ""
 #. TRANSLATORS: def OptionParser.parse_head(argv, opts \\ [])
 #: lib/option_parser.ex:120 
 msgid ""
@@ -40,6 +35,11 @@ msgid ""
 "    iex> OptionParser.parse_head([\"--verbose\", \"--source\", \"lib\", \"test/enum_test.exs\", \"--unlock\"])\n"
 "    {[verbose: true, source: \"lib\"], [\"test/enum_test.exs\", \"--unlock\"], []}\n"
 "\n"
+msgstr ""
+#. TRANSLATORS: Elixir.OptionParser Summary
+#: lib/option_parser.ex:2 
+msgid ""
+"This module contains functions to parse command line options.\n"
 msgstr ""
 #. TRANSLATORS: def OptionParser.to_argv(enum)
 #: lib/option_parser.ex:241 
@@ -58,6 +58,19 @@ msgid ""
 "    iex>  OptionParser.to_argv([bool: true, bool: false, discarded: nil])\n"
 "    [\"--bool\", \"--no-bool\"]\n"
 "\n"
+msgstr ""
+#. TRANSLATORS: def OptionParser.split(string)
+#: lib/option_parser.ex:271 
+msgid ""
+"Splits a string into argv chunks.\n"
+"\n"
+"## Examples\n"
+"\n"
+"    iex> OptionParser.split(\"foo bar\")\n"
+"    [\"foo\", \"bar\"]\n"
+"\n"
+"    iex> OptionParser.split(\"foo \\\"bar baz\\\"\")\n"
+"    [\"foo\", \"bar baz\"]\n"
 msgstr ""
 #. TRANSLATORS: def OptionParser.parse(argv, opts \\ [])
 #: lib/option_parser.ex:11 
@@ -164,17 +177,4 @@ msgid ""
 "    iex> OptionParser.parse([\"-d\"], aliases: [d: :debug])\n"
 "    {[debug: true], [], []}\n"
 "\n"
-msgstr ""
-#. TRANSLATORS: def OptionParser.split(string)
-#: lib/option_parser.ex:271 
-msgid ""
-"Splits a string into argv chunks.\n"
-"\n"
-"## Examples\n"
-"\n"
-"    iex> OptionParser.split(\"foo bar\")\n"
-"    [\"foo\", \"bar\"]\n"
-"\n"
-"    iex> OptionParser.split(\"foo \\\"bar baz\\\"\")\n"
-"    [\"foo\", \"bar baz\"]\n"
 msgstr ""

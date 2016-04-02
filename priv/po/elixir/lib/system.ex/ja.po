@@ -10,17 +10,6 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
-#. TRANSLATORS: def System.delete_env(varname)
-#: lib/system.ex:319
-msgid ""
-"Deletes an environment variable.\n"
-"\n"
-"Removes the variable `varname` from the environment.\n"
-msgstr ""
-"環境変数を削除します。\n"
-"\n"
-"環境から変数`varname`を取り除きます。\n"
-
 #. TRANSLATORS: def System.compiled_endianness()
 #: lib/system.ex:53
 msgid "Returns the endianness the system was compiled with.\n"
@@ -38,6 +27,17 @@ msgstr ""
 "\n"
 "キーワードリストとして、Elixirバージョン、git short revision hash \n"
 "および、コンパイル日時を返します。\n"
+
+#. TRANSLATORS: def System.delete_env(varname)
+#: lib/system.ex:319
+msgid ""
+"Deletes an environment variable.\n"
+"\n"
+"Removes the variable `varname` from the environment.\n"
+msgstr ""
+"環境変数を削除します。\n"
+"\n"
+"環境から変数`varname`を取り除きます。\n"
 
 #. TRANSLATORS: def System.at_exit(fun)
 #: lib/system.ex:222
@@ -236,6 +236,17 @@ msgstr ""
 "[`:os.getpid/0`](http://www.erlang.org/doc/man/os.html#getpid-0)\n"
 "を参照してください。\n"
 
+#. TRANSLATORS: def System.version()
+#: lib/system.ex:61
+msgid ""
+"Elixir version information.\n"
+"\n"
+"Returns Elixir's version as binary.\n"
+msgstr ""
+"Elixirバージョン情報です。\n"
+"\n"
+"バイナリとしてElixirのバージョンを返します。\n"
+
 #. TRANSLATORS: def System.tmp_dir()
 #: lib/system.ex:168
 msgid ""
@@ -278,17 +289,6 @@ msgstr ""
 "全ての環境変数のリストを返します。それぞれの変数は`{name, value}`タプル\n"
 "で、`name`と`value`はどちらも文字列として与えられます。\n"
 
-#. TRANSLATORS: def System.version()
-#: lib/system.ex:61
-msgid ""
-"Elixir version information.\n"
-"\n"
-"Returns Elixir's version as binary.\n"
-msgstr ""
-"Elixirバージョン情報です。\n"
-"\n"
-"バイナリとしてElixirのバージョンを返します。\n"
-
 #. TRANSLATORS: def System.time_offset(unit)
 #: lib/system.ex:611
 msgid ""
@@ -318,19 +318,6 @@ msgstr ""
 "\n"
 "コンパイラにより、`:erlang.time_offset/1`にインライン化されます。\n"
 
-#. TRANSLATORS: def System.tmp_dir!()
-#: lib/system.ex:190
-msgid ""
-"Writable temporary directory, exception on error.\n"
-"\n"
-"Same as `tmp_dir/0` but raises `RuntimeError`\n"
-"instead of returning `nil` if no temp dir is set.\n"
-msgstr ""
-"書き込み可能なテンポラリディレクトリ、エラーで例外\n"
-"\n"
-"`tmp_dir/0`と同じですが、もしテンポラリディレクトリが\n"
-"無い場合、`nil`を返すかわりに、`RuntimeError`を上げます。\n"
-
 #. TRANSLATORS: Elixir.System Summary
 #: lib/system.ex:2
 msgid ""
@@ -341,20 +328,6 @@ msgstr ""
 "SystemモジュールはVMにより使用、維持される変数、\n"
 "VMまたはホストシステムへの直接の相互作用をする関数\n"
 "へのアクセスを提供します。\n"
-
-#. TRANSLATORS: def System.user_home!()
-#: lib/system.ex:157
-msgid ""
-"User home directory, exception on error.\n"
-"\n"
-"Same as `user_home/0` but raises `RuntimeError`\n"
-"instead of returning `nil` if no user home is set.\n"
-msgstr ""
-"ユーザホームディレクトリを返し、エラー時に例外を生成します。\n"
-"\n"
-"`user_home/0`と同じですが、\n"
-"もしユーザホームがセットされていない場合、`nil`を返すか\n"
-"わりに`RuntimeError`を上げます。\n"
 
 #. TRANSLATORS: def System.argv(args)
 #: lib/system.ex:105
@@ -368,45 +341,6 @@ msgstr ""
 "\n"
 "コマンドライン引数のリストを変更します。\n"
 "以前のargv情報は全て破壊されますので、注意して使用してください。\n"
-
-#. TRANSLATORS: def System.monotonic_time(unit)
-#: lib/system.ex:543
-msgid ""
-"Returns the current monotonic time in the given time unit.\n"
-"\n"
-"For more information, see the [chapter on time and time\n"
-"correction](http://www.erlang.org/doc/apps/erts/time_correction.html) in "
-"the\n"
-"Erlang docs.\n"
-"\n"
-"Inlined by the compiler into `:erlang.monotonic_time/1`.\n"
-msgstr ""
-"与えられた時間unitでの現在のmonotonic timeを返します。\n"
-"\n"
-"詳細は、Erlang文書 [chapter on time and time\n"
-"correction](http://www.erlang.org/doc/apps/erts/time_correction.html) \n"
-"を参照してください。\n"
-"\n"
-"コンパイラにより `:erlang.monotonic_time/1`にインライン化されます。\n"
-
-#. TRANSLATORS: def System.find_executable(program)
-#: lib/system.ex:239
-msgid ""
-"Locates an executable on the system.\n"
-"\n"
-"This function looks up an executable program given\n"
-"its name using the environment variable PATH on Unix\n"
-"and Windows. It also considers the proper executable\n"
-"extension for each OS, so for Windows it will try to\n"
-"lookup files with `.com`, `.cmd` or similar extensions.\n"
-msgstr ""
-"システム上の実行ファイルの場所を探します。\n"
-"\n"
-"この関数は、UnixやWindowsでの環境変数PATHを使い、\n"
-"与えられた名前の実行可能プログラムを見付けます。\n"
-"それぞれのOS毎に適当な実行可能拡張子を考慮するので、\n"
-"Windowsでは`.com`、`.cmd`または類似した拡張子で\n"
-"ファイルを探します。\n"
 
 #. TRANSLATORS: def System.unique_integer(modifiers \\ [])
 #: lib/system.ex:630
@@ -459,6 +393,72 @@ msgstr ""
 "\n"
 "コンパイラにより`:erlang.unique_integer/1`にインライン化されます。\n"
 
+#. TRANSLATORS: def System.monotonic_time(unit)
+#: lib/system.ex:543
+msgid ""
+"Returns the current monotonic time in the given time unit.\n"
+"\n"
+"For more information, see the [chapter on time and time\n"
+"correction](http://www.erlang.org/doc/apps/erts/time_correction.html) in "
+"the\n"
+"Erlang docs.\n"
+"\n"
+"Inlined by the compiler into `:erlang.monotonic_time/1`.\n"
+msgstr ""
+"与えられた時間unitでの現在のmonotonic timeを返します。\n"
+"\n"
+"詳細は、Erlang文書 [chapter on time and time\n"
+"correction](http://www.erlang.org/doc/apps/erts/time_correction.html) \n"
+"を参照してください。\n"
+"\n"
+"コンパイラにより `:erlang.monotonic_time/1`にインライン化されます。\n"
+
+#. TRANSLATORS: def System.tmp_dir!()
+#: lib/system.ex:190
+msgid ""
+"Writable temporary directory, exception on error.\n"
+"\n"
+"Same as `tmp_dir/0` but raises `RuntimeError`\n"
+"instead of returning `nil` if no temp dir is set.\n"
+msgstr ""
+"書き込み可能なテンポラリディレクトリ、エラーで例外\n"
+"\n"
+"`tmp_dir/0`と同じですが、もしテンポラリディレクトリが\n"
+"無い場合、`nil`を返すかわりに、`RuntimeError`を上げます。\n"
+
+#. TRANSLATORS: def System.user_home!()
+#: lib/system.ex:157
+msgid ""
+"User home directory, exception on error.\n"
+"\n"
+"Same as `user_home/0` but raises `RuntimeError`\n"
+"instead of returning `nil` if no user home is set.\n"
+msgstr ""
+"ユーザホームディレクトリを返し、エラー時に例外を生成します。\n"
+"\n"
+"`user_home/0`と同じですが、\n"
+"もしユーザホームがセットされていない場合、`nil`を返すか\n"
+"わりに`RuntimeError`を上げます。\n"
+
+#. TRANSLATORS: def System.find_executable(program)
+#: lib/system.ex:239
+msgid ""
+"Locates an executable on the system.\n"
+"\n"
+"This function looks up an executable program given\n"
+"its name using the environment variable PATH on Unix\n"
+"and Windows. It also considers the proper executable\n"
+"extension for each OS, so for Windows it will try to\n"
+"lookup files with `.com`, `.cmd` or similar extensions.\n"
+msgstr ""
+"システム上の実行ファイルの場所を探します。\n"
+"\n"
+"この関数は、UnixやWindowsでの環境変数PATHを使い、\n"
+"与えられた名前の実行可能プログラムを見付けます。\n"
+"それぞれのOS毎に適当な実行可能拡張子を考慮するので、\n"
+"Windowsでは`.com`、`.cmd`または類似した拡張子で\n"
+"ファイルを探します。\n"
+
 #. TRANSLATORS: def System.argv()
 #: lib/system.ex:95
 msgid ""
@@ -496,26 +496,6 @@ msgstr ""
 "結果はfloor関数によって丸められます。\n"
 "\n"
 "コンパイラにより`:erlang.convert_time_unit/3`へインライン化されます。\n"
-
-#. TRANSLATORS: def System.system_time()
-#: lib/system.ex:557
-msgid ""
-"Returns the current system time in the `:native` time unit.\n"
-"\n"
-"For more information, see the [chapter on time and time\n"
-"correction](http://www.erlang.org/doc/apps/erts/time_correction.html) in "
-"the\n"
-"Erlang docs.\n"
-"\n"
-"Inlined by the compiler into `:erlang.system_time/0`.\n"
-msgstr ""
-"`:native`時間単位での現在のsystem timeを返します。\n"
-"\n"
-"詳細は、Erlang文書 [chapter on time and time\n"
-"correction](http://www.erlang.org/doc/apps/erts/time_correction.html) \n"
-"を参照してください。\n"
-"\n"
-"コンパイラにより `:erlang.system_time/0` にインライン化されます。\n"
 
 #. TRANSLATORS: def System.halt(status \\ 0)
 #: lib/system.ex:343
@@ -576,39 +556,6 @@ msgstr ""
 "    System.halt(:abort)\n"
 "\n"
 
-#. TRANSLATORS: def System.system_time(unit)
-#: lib/system.ex:571
-msgid ""
-"Returns the current system time in the given time unit.\n"
-"\n"
-"For more information, see the [chapter on time and time\n"
-"correction](http://www.erlang.org/doc/apps/erts/time_correction.html) in "
-"the\n"
-"Erlang docs.\n"
-"\n"
-"Inlined by the compiler into `:erlang.system_time/1`.\n"
-msgstr ""
-"与えらえれた時間単位での現在のsystem timeを返します。\n"
-"\n"
-"詳細は、Erlang文書 [chapter on time and time\n"
-"correction](http://www.erlang.org/doc/apps/erts/time_correction.html) \n"
-"を参照してください。\n"
-"\n"
-"コンパイラにより `:erlang.system_time/1` にインライン化されます。\n"
-
-#. TRANSLATORS: def System.put_env(enum)
-#: lib/system.ex:308
-msgid ""
-"Sets multiple environment variables.\n"
-"\n"
-"Sets a new value for each environment variable corresponding\n"
-"to each key in `dict`.\n"
-msgstr ""
-"複数の環境変数をセットします。\n"
-"\n"
-"`dict`の中のそれぞれのキーに一致しているそれぞれの環境変数に\n"
-"新しい値をセットします。\n"
-
 #. TRANSLATORS: def System.stacktrace()
 #: lib/system.ex:330
 msgid ""
@@ -631,6 +578,19 @@ msgstr ""
 #: lib/system.ex:46
 msgid "Returns the endianness.\n"
 msgstr "エンディアンを返します。\n"
+
+#. TRANSLATORS: def System.put_env(enum)
+#: lib/system.ex:308
+msgid ""
+"Sets multiple environment variables.\n"
+"\n"
+"Sets a new value for each environment variable corresponding\n"
+"to each key in `dict`.\n"
+msgstr ""
+"複数の環境変数をセットします。\n"
+"\n"
+"`dict`の中のそれぞれのキーに一致しているそれぞれの環境変数に\n"
+"新しい値をセットします。\n"
 
 #. TRANSLATORS: def System.put_env(varname, value)
 #: lib/system.ex:297
@@ -704,6 +664,46 @@ msgstr ""
 "time_correction.html) を参照してください。\n"
 "\n"
 "コンパイラにより、`:erlang.monotonic_time/0`にインライン化されます。\n"
+
+#. TRANSLATORS: def System.system_time()
+#: lib/system.ex:557
+msgid ""
+"Returns the current system time in the `:native` time unit.\n"
+"\n"
+"For more information, see the [chapter on time and time\n"
+"correction](http://www.erlang.org/doc/apps/erts/time_correction.html) in "
+"the\n"
+"Erlang docs.\n"
+"\n"
+"Inlined by the compiler into `:erlang.system_time/0`.\n"
+msgstr ""
+"`:native`時間単位での現在のsystem timeを返します。\n"
+"\n"
+"詳細は、Erlang文書 [chapter on time and time\n"
+"correction](http://www.erlang.org/doc/apps/erts/time_correction.html) \n"
+"を参照してください。\n"
+"\n"
+"コンパイラにより `:erlang.system_time/0` にインライン化されます。\n"
+
+#. TRANSLATORS: def System.system_time(unit)
+#: lib/system.ex:571
+msgid ""
+"Returns the current system time in the given time unit.\n"
+"\n"
+"For more information, see the [chapter on time and time\n"
+"correction](http://www.erlang.org/doc/apps/erts/time_correction.html) in "
+"the\n"
+"Erlang docs.\n"
+"\n"
+"Inlined by the compiler into `:erlang.system_time/1`.\n"
+msgstr ""
+"与えらえれた時間単位での現在のsystem timeを返します。\n"
+"\n"
+"詳細は、Erlang文書 [chapter on time and time\n"
+"correction](http://www.erlang.org/doc/apps/erts/time_correction.html) \n"
+"を参照してください。\n"
+"\n"
+"コンパイラにより `:erlang.system_time/1` にインライン化されます。\n"
 
 #. TRANSLATORS: def System.time_offset()
 #: lib/system.ex:596

@@ -1,3 +1,21 @@
+#. TRANSLATORS: def Node.monitor(node, flag)
+#: lib/node.ex:84 
+msgid ""
+"Monitors the status of the node.\n"
+"\n"
+"If `flag` is `true`, monitoring is turned on.\n"
+"If `flag` is `false`, monitoring is turned off.\n"
+"\n"
+"For more information, see\n"
+"[`:erlang.monitor_node/2`](http://www.erlang.org/doc/man/erlang.html#monitor_node-2).\n"
+msgstr ""
+#. TRANSLATORS: def Node.get_cookie()
+#: lib/node.ex:259 
+msgid ""
+"Returns the magic cookie of the local node.\n"
+"\n"
+"Returns the cookie if the node is alive, otherwise `:nocookie`.\n"
+msgstr ""
 #. TRANSLATORS: def Node.list(args)
 #: lib/node.ex:69 
 msgid ""
@@ -19,24 +37,6 @@ msgid ""
 "\n"
 "This function will raise `FunctionClauseError` if the given `node` is not alive.\n"
 msgstr ""
-#. TRANSLATORS: def Node.get_cookie()
-#: lib/node.ex:259 
-msgid ""
-"Returns the magic cookie of the local node.\n"
-"\n"
-"Returns the cookie if the node is alive, otherwise `:nocookie`.\n"
-msgstr ""
-#. TRANSLATORS: def Node.monitor(node, flag)
-#: lib/node.ex:84 
-msgid ""
-"Monitors the status of the node.\n"
-"\n"
-"If `flag` is `true`, monitoring is turned on.\n"
-"If `flag` is `false`, monitoring is turned off.\n"
-"\n"
-"For more information, see\n"
-"[`:erlang.monitor_node/2`](http://www.erlang.org/doc/man/erlang.html#monitor_node-2).\n"
-msgstr ""
 #. TRANSLATORS: def Node.start(name, type \\ :longnames, tick_time \\ 15000)
 #: lib/node.ex:13 
 msgid ""
@@ -44,6 +44,17 @@ msgid ""
 "\n"
 "This functionality starts the `:net_kernel` and other\n"
 "related processes.\n"
+msgstr ""
+#. TRANSLATORS: def Node.spawn_link(node, fun)
+#: lib/node.ex:218 
+msgid ""
+"Returns the pid of a new linked process started by the application of `fun` on `node`.\n"
+"\n"
+"A link is created between the calling process and the new process, atomically.\n"
+"If `node` does not exist, a useless pid is returned (and due to the link, an exit\n"
+"signal with exit reason `:noconnection` will be received).\n"
+"\n"
+"Inlined by the compiler.\n"
 msgstr ""
 #. TRANSLATORS: def Node.disconnect(node)
 #: lib/node.ex:126 
@@ -58,17 +69,6 @@ msgid ""
 "For more information, see\n"
 "[`:erlang.disconnect_node/1`](http://www.erlang.org/doc/man/erlang.html#disconnect_node-1).\n"
 msgstr ""
-#. TRANSLATORS: def Node.spawn_link(node, fun)
-#: lib/node.ex:218 
-msgid ""
-"Returns the pid of a new linked process started by the application of `fun` on `node`.\n"
-"\n"
-"A link is created between the calling process and the new process, atomically.\n"
-"If `node` does not exist, a useless pid is returned (and due to the link, an exit\n"
-"signal with exit reason `:noconnection` will be received).\n"
-"\n"
-"Inlined by the compiler.\n"
-msgstr ""
 #. TRANSLATORS: def Node.monitor(node, flag, options)
 #: lib/node.ex:98 
 msgid ""
@@ -77,6 +77,40 @@ msgid ""
 "\n"
 "For more information, see\n"
 "[`:erlang.monitor_node/3`](http://www.erlang.org/doc/man/erlang.html#monitor_node-3).\n"
+msgstr ""
+#. TRANSLATORS: def Node.spawn(node, fun)
+#: lib/node.ex:156 
+msgid ""
+"Returns the pid of a new process started by the application of `fun`\n"
+"on `node`. If `node` does not exist, a useless pid is returned.\n"
+"\n"
+"For the list of available options, see\n"
+"[`:erlang.spawn/2`](http://www.erlang.org/doc/man/erlang.html#spawn-2).\n"
+"\n"
+"Inlined by the compiler.\n"
+msgstr ""
+#. TRANSLATORS: def Node.spawn(node, module, fun, args, opts)
+#: lib/node.ex:202 
+msgid ""
+"Returns the pid of a new process started by the application of\n"
+"`module.function(args)` on `node`.\n"
+"\n"
+"If `node` does not exist, a useless pid is returned.\n"
+"\n"
+"For the list of available options, see\n"
+"[`:erlang.spawn/5`](http://www.erlang.org/doc/man/erlang.html#spawn_opt-5).\n"
+"\n"
+"Inlined by the compiler.\n"
+msgstr ""
+#. TRANSLATORS: Elixir.Node Summary
+#: lib/node.ex:2 
+msgid ""
+"Functions related to VM nodes.\n"
+"\n"
+"Some of the functions in this module are inlined by the compiler,\n"
+"similar to functions in the `Kernel` module and they are explicitly\n"
+"marked in their docs as \"inlined by the compiler\". For more information\n"
+"about inlined functions, check out the `Kernel` module.\n"
 msgstr ""
 #. TRANSLATORS: def Node.list()
 #: lib/node.ex:58 
@@ -99,16 +133,6 @@ msgid ""
 "\n"
 "Inlined by the compiler.\n"
 msgstr ""
-#. TRANSLATORS: Elixir.Node Summary
-#: lib/node.ex:2 
-msgid ""
-"Functions related to VM nodes.\n"
-"\n"
-"Some of the functions in this module are inlined by the compiler,\n"
-"similar to functions in the `Kernel` module and they are explicitly\n"
-"marked in their docs as \"inlined by the compiler\". For more information\n"
-"about inlined functions, check out the `Kernel` module.\n"
-msgstr ""
 #. TRANSLATORS: def Node.stop()
 #: lib/node.ex:25 
 msgid ""
@@ -118,19 +142,6 @@ msgid ""
 "Only possible when the node was started with `Node.start/3`, otherwise\n"
 "returns `{:error, :not_allowed}`. Returns `{:error, :not_found}` if the\n"
 "local node is not alive.\n"
-msgstr ""
-#. TRANSLATORS: def Node.spawn(node, module, fun, args, opts)
-#: lib/node.ex:202 
-msgid ""
-"Returns the pid of a new process started by the application of\n"
-"`module.function(args)` on `node`.\n"
-"\n"
-"If `node` does not exist, a useless pid is returned.\n"
-"\n"
-"For the list of available options, see\n"
-"[`:erlang.spawn/5`](http://www.erlang.org/doc/man/erlang.html#spawn_opt-5).\n"
-"\n"
-"Inlined by the compiler.\n"
 msgstr ""
 #. TRANSLATORS: def Node.ping(node)
 #: lib/node.ex:110 
@@ -187,17 +198,6 @@ msgid ""
 "\n"
 "For more information, see\n"
 "[`:erlang.connect_node/1`](http://www.erlang.org/doc/man/net_kernel.html#connect_node-1).\n"
-msgstr ""
-#. TRANSLATORS: def Node.spawn(node, fun)
-#: lib/node.ex:156 
-msgid ""
-"Returns the pid of a new process started by the application of `fun`\n"
-"on `node`. If `node` does not exist, a useless pid is returned.\n"
-"\n"
-"For the list of available options, see\n"
-"[`:erlang.spawn/2`](http://www.erlang.org/doc/man/erlang.html#spawn-2).\n"
-"\n"
-"Inlined by the compiler.\n"
 msgstr ""
 #. TRANSLATORS: def Node.self()
 #: lib/node.ex:38 

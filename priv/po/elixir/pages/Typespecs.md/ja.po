@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: l 10n_elixir\n"
-"PO-Revision-Date: 2016-02-28 15:38+0900\n"
+"PO-Revision-Date: 2016-04-02 22:55+0900\n"
 "Last-Translator: 小田 照敬 <EMAIL@ADDRESS>\n"
 "Language-Team: Japanese\n"
 "Language: ja\n"
@@ -124,7 +124,9 @@ msgid ""
 "`no_return()`           | `none()`\n"
 "`fun()`                 | `(... -> any)`\n"
 "`struct()`              | `%{__struct__: atom()}`\n"
-"`as_boolean(t)`         | `t`"
+"`as_boolean(t)`         | `t`\n"
+"`keyword()`             | `[{atom(), any()}]`\n"
+"`keyword(t)`            | `[{atom(), t}]`"
 msgstr ""
 "Built-in type           | Defined as\n"
 ":---------------------- | :---------\n"
@@ -150,13 +152,15 @@ msgstr ""
 "`no_return()`           | `none()`\n"
 "`fun()`                 | `(... -> any)`\n"
 "`struct()`              | `%{__struct__: atom()}`\n"
-"`as_boolean(t)`         | `t`"
+"`as_boolean(t)`         | `t`\n"
+"`keyword()`             | `[{atom(), any()}]`\n"
+"`keyword(t)`            | `[{atom(), t}]`"
 
-#: deps/elixir/lib/elixir/pages/Typespecs.md:103
+#: deps/elixir/lib/elixir/pages/Typespecs.md:105
 msgid "### Remote types"
 msgstr "### Remote types"
 
-#: deps/elixir/lib/elixir/pages/Typespecs.md:105
+#: deps/elixir/lib/elixir/pages/Typespecs.md:107
 msgid ""
 "Any module is also able to define its own type and the modules in Elixir are "
 "no exception. For example, a string is `String.t`, a range is `Range.t`, any "
@@ -166,11 +170,11 @@ msgstr ""
 "Elixirのモジュールも例外ではありません。例えば、文字列は`String.t`、\n"
 "rangeは`Range.t`、任意のenumerableは`Enum.t`などとなります。"
 
-#: deps/elixir/lib/elixir/pages/Typespecs.md:107
+#: deps/elixir/lib/elixir/pages/Typespecs.md:109
 msgid "## Defining a type"
 msgstr "## Defining a type"
 
-#: deps/elixir/lib/elixir/pages/Typespecs.md:113
+#: deps/elixir/lib/elixir/pages/Typespecs.md:115
 msgid ""
 "A type defined with `@typep` is private. An opaque type, defined with "
 "`@opaque` is a type where the internal structure of the type will not be "
@@ -180,7 +184,7 @@ msgstr ""
 "定義されたopaqueタイプはタイプの内部構造が不可視となりますが、\n"
 "タイプはパブリックのままです。"
 
-#: deps/elixir/lib/elixir/pages/Typespecs.md:115
+#: deps/elixir/lib/elixir/pages/Typespecs.md:117
 msgid ""
 "Types can be parameterized by defining variables as parameters, these "
 "variables can then be used to define the type."
@@ -188,11 +192,11 @@ msgstr ""
 "変数はタイプを定義するために使うことができ、タイプは、変数を\n"
 "使ってパラメタ化することもできます。"
 
-#: deps/elixir/lib/elixir/pages/Typespecs.md:119
+#: deps/elixir/lib/elixir/pages/Typespecs.md:121
 msgid "## Defining a specification"
 msgstr "## Defining a specification"
 
-#: deps/elixir/lib/elixir/pages/Typespecs.md:125
+#: deps/elixir/lib/elixir/pages/Typespecs.md:127
 msgid ""
 "Callbacks are used to define the callbacks functions of behaviours (see "
 "`Behaviour`)."
@@ -200,7 +204,7 @@ msgstr ""
 "callbacksはビヘイビアのコールバック関数を定義するために使われます\n"
 "(`Behaviour`を参照してください)。"
 
-#: deps/elixir/lib/elixir/pages/Typespecs.md:127
+#: deps/elixir/lib/elixir/pages/Typespecs.md:129
 msgid ""
 "Guards can be used to restrict type variables given as arguments to the "
 "function."
@@ -208,19 +212,19 @@ msgstr ""
 "Guardsは関数の引数として与えられる変数の型を制限するために\n"
 "使うことができます。"
 
-#: deps/elixir/lib/elixir/pages/Typespecs.md:131
+#: deps/elixir/lib/elixir/pages/Typespecs.md:133
 msgid "Type variables with no restriction can also be defined."
 msgstr "タイプ変数は制限なしで定義することもできます。"
 
-#: deps/elixir/lib/elixir/pages/Typespecs.md:135
+#: deps/elixir/lib/elixir/pages/Typespecs.md:137
 msgid "Specifications can be overloaded just like ordinary functions."
 msgstr "specificationは普通の関数のようにオーバーロードすることが出来ます。"
 
-#: deps/elixir/lib/elixir/pages/Typespecs.md:140
+#: deps/elixir/lib/elixir/pages/Typespecs.md:142
 msgid "## Notes"
 msgstr "## Notes"
 
-#: deps/elixir/lib/elixir/pages/Typespecs.md:142
+#: deps/elixir/lib/elixir/pages/Typespecs.md:144
 msgid ""
 "Elixir discourages the use of type `string` as it might be confused with "
 "binaries which are referred to as \"strings\" in Elixir (as opposed to "
@@ -235,10 +239,20 @@ msgstr ""
 "があります。もし`string`を使用したらコンパイラから警告を受けるで\n"
 "しょう。"
 
-#: deps/elixir/lib/elixir/pages/Typespecs.md:144
+#: deps/elixir/lib/elixir/pages/Typespecs.md:146
 msgid ""
 "If you want to refer to the \"string\" type (the one operated on by "
-"functions in the `String` module), use `String.t` type instead.\n"
+"functions in the `String` module), use `String.t` type instead."
 msgstr ""
 "もし(`String`モジュールの関数により操作される)\"string\"タイプを\n"
-"参照したいなら、`String.t`タイプを代りに使ってください。\n"
+"好むなら、`String.t`タイプを代りに使ってください。"
+
+#: deps/elixir/lib/elixir/pages/Typespecs.md:148
+msgid ""
+"In map and struct type declarations such as `%{key: value}` or `%Struct{key: "
+"value}`, the key-value pair type information is not used by the current "
+"version of dialyzer.\n"
+msgstr ""
+"`%{key: value}`や`%Struct{key: value}`のようなマップと構造\n"
+"体の型の宣言で、key-valueペア型情報は現在のバージョンの\n"
+"dialyzerでは使用されません。\n"

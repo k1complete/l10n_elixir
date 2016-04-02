@@ -10,11 +10,6 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
-#. TRANSLATORS: Elixir.Kernel.ParallelCompiler Summary
-#: lib/kernel/parallel_compiler.ex:2
-msgid "A module responsible for compiling files in parallel.\n"
-msgstr "並列にファイルをコンパイルすることに責任を持つモジュールです。\n"
-
 #. TRANSLATORS: def Kernel.ParallelCompiler.files_to_path(files, path, options \\ [])
 #: lib/kernel/parallel_compiler.ex:39
 msgid ""
@@ -23,6 +18,11 @@ msgid ""
 msgstr ""
 "与えられたパスで与えられたファイルをコンパイルします。\n"
 "詳細は `files/2` を参照してください。\n"
+
+#. TRANSLATORS: Elixir.Kernel.ParallelCompiler Summary
+#: lib/kernel/parallel_compiler.ex:2
+msgid "A module responsible for compiling files in parallel.\n"
+msgstr "並列にファイルをコンパイルすることに責任を持つモジュールです。\n"
 
 #. TRANSLATORS: def Kernel.ParallelCompiler.files(files, options \\ [])
 #: lib/kernel/parallel_compiler.ex:6

@@ -3,9 +3,9 @@
 msgid ""
 "Encodes an enumerable into a query string.\n"
 "\n"
-"Takes an enumerable (containing a sequence of two-item tuples)\n"
-"and returns a string of the form \"key1=value1&key2=value2...\" where\n"
-"keys and values are URL encoded as per `encode/2`.\n"
+"Takes an enumerable (containing a sequence of two-element tuples)\n"
+"and returns a string in the form of `key1=value1&key2=value2...` where\n"
+"keys and values are URL encoded as per `encode_www_form/1`.\n"
 "\n"
 "Keys and values can be any term that implements the `String.Chars`\n"
 "protocol, except lists which are explicitly forbidden.\n"
@@ -16,6 +16,10 @@ msgid ""
 "    iex> URI.encode_query(hd)\n"
 "    \"bar=2&foo=1\"\n"
 "\n"
+"    iex> query = %{\"key\" => \"value with spaces\"}\n"
+"    iex> URI.encode_query(query)\n"
+"    \"key=value+with+spaces\"\n"
+"\n"
 msgstr ""
 #. TRANSLATORS: Elixir.URI Summary
 #: lib/uri.ex:2 
@@ -23,7 +27,7 @@ msgid ""
 "Utilities for working with and creating URIs.\n"
 msgstr ""
 #. TRANSLATORS: def URI.to_string(uri)
-#: lib/uri.ex:367 
+#: lib/uri.ex:371 
 msgid ""
 "Converts the URI to string.\n"
 "\n"
@@ -31,7 +35,7 @@ msgid ""
 "    \"http://google.com\"\n"
 msgstr ""
 #. TRANSLATORS: def URI.char_unreserved?(c)
-#: lib/uri.ex:168 
+#: lib/uri.ex:172 
 msgid ""
 "Checks if the character is a \"unreserved\" character in a URI.\n"
 "\n"
@@ -55,7 +59,7 @@ msgid ""
 "\n"
 msgstr ""
 #. TRANSLATORS: def URI.encode_www_form(str)
-#: lib/uri.ex:204 
+#: lib/uri.ex:208 
 msgid ""
 "Encodes a string as \"x-www-form-urlencoded\".\n"
 "\n"
@@ -66,7 +70,7 @@ msgid ""
 "\n"
 msgstr ""
 #. TRANSLATORS: def URI.char_unescaped?(c)
-#: lib/uri.ex:180 
+#: lib/uri.ex:184 
 msgid ""
 "Checks if the character is allowed unescaped in a URI.\n"
 "\n"
@@ -74,11 +78,11 @@ msgid ""
 "reserved and unreserved characters are kept unescaped.\n"
 msgstr ""
 #. TRANSLATORS: def URI.decode_query(q, map \\ %{})
-#: lib/uri.ex:63 
+#: lib/uri.ex:67 
 msgid ""
 "Decodes a query string into a map.\n"
 "\n"
-"Given a query string of the form \"key1=value1&key2=value2...\", produces a\n"
+"Given a query string of the form of `key1=value1&key2=value2...`, produces a\n"
 "map with one entry for each key-value pair. Each key and value will be a\n"
 "binary. Keys and values will be percent-unescaped.\n"
 "\n"
@@ -90,17 +94,8 @@ msgid ""
 "    %{\"bar\" => \"2\", \"foo\" => \"1\"}\n"
 "\n"
 msgstr ""
-#. TRANSLATORS: def URI.default_port(scheme, port)
-#: lib/uri.ex:33 
-msgid ""
-"Registers a scheme with a default port.\n"
-"\n"
-"It is recommended for this function to be invoked in your\n"
-"application start callback in case you want to register\n"
-"new URIs.\n"
-msgstr ""
 #. TRANSLATORS: def URI.query_decoder(q)
-#: lib/uri.ex:110 
+#: lib/uri.ex:114 
 msgid ""
 "Returns an iterator function over the query string that decodes\n"
 "the query string in steps.\n"
@@ -112,7 +107,7 @@ msgid ""
 "\n"
 msgstr ""
 #. TRANSLATORS: def URI.parse(uri)
-#: lib/uri.ex:284 
+#: lib/uri.ex:288 
 msgid ""
 "Parses a well-formed URI reference into its components.\n"
 "\n"
@@ -147,14 +142,14 @@ msgid ""
 "\n"
 msgstr ""
 #. TRANSLATORS: def URI.char_reserved?(c)
-#: lib/uri.ex:159 
+#: lib/uri.ex:163 
 msgid ""
 "Checks if the character is a \"reserved\" character in a URI.\n"
 "\n"
 "Reserved characters are specified in [RFC3986, section 2.2](http://tools.ietf.org/html/rfc3986#section-2.2).\n"
 msgstr ""
 #. TRANSLATORS: def URI.decode(uri)
-#: lib/uri.ex:233 
+#: lib/uri.ex:237 
 msgid ""
 "Percent-unescapes a URI.\n"
 "\n"
@@ -165,7 +160,7 @@ msgid ""
 "\n"
 msgstr ""
 #. TRANSLATORS: def URI.decode_www_form(str)
-#: lib/uri.ex:249 
+#: lib/uri.ex:253 
 msgid ""
 "Decodes a string as \"x-www-form-urlencoded\".\n"
 "\n"
@@ -176,7 +171,7 @@ msgid ""
 "\n"
 msgstr ""
 #. TRANSLATORS: def URI.encode(str, predicate \\ &char_unescaped?/1)
-#: lib/uri.ex:190 
+#: lib/uri.ex:194 
 msgid ""
 "Percent-escapes a URI.\n"
 "Accepts `predicate` function as an argument to specify if char can be left as is.\n"
@@ -186,4 +181,13 @@ msgid ""
 "    iex> URI.encode(\"ftp://s-ite.tld/?value=put it+й\")\n"
 "    \"ftp://s-ite.tld/?value=put%20it+%D0%B9\"\n"
 "\n"
+msgstr ""
+#. TRANSLATORS: def URI.default_port(scheme, port)
+#: lib/uri.ex:33 
+msgid ""
+"Registers a scheme with a default port.\n"
+"\n"
+"It is recommended for this function to be invoked in your\n"
+"application start callback in case you want to register\n"
+"new URIs.\n"
 msgstr ""

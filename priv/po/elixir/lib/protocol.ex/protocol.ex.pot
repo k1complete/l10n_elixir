@@ -1,3 +1,10 @@
+#. TRANSLATORS: def Protocol.assert_protocol!(module)
+#: lib/protocol.ex:56 
+msgid ""
+"Checks if the given module is loaded and is protocol.\n"
+"\n"
+"Returns `:ok` if so, otherwise raises `ArgumentError`.\n"
+msgstr ""
 #. TRANSLATORS: Elixir.Protocol Summary
 #: lib/protocol.ex:2 
 msgid ""
@@ -9,12 +16,7 @@ msgid ""
 "Checks if the given module is loaded and is an implementation\n"
 "of the given protocol.\n"
 "\n"
-"Returns `:ok` if so, otherwise raises ArgumentError.\n"
-msgstr ""
-#. TRANSLATORS: defmacro Protocol.derive(protocol, module, options \\ [])
-#: lib/protocol.ex:117 
-msgid ""
-"Derives the `protocol` for `module` with the given options.\n"
+"Returns `:ok` if so, otherwise raises `ArgumentError`.\n"
 msgstr ""
 #. TRANSLATORS: defmacro Protocol.def(signature)
 #: lib/protocol.ex:6 
@@ -24,6 +26,11 @@ msgid ""
 "Protocols do not allow functions to be defined directly, instead, the\n"
 "regular `Kernel.def/*` macros are replaced by this macro which\n"
 "defines the protocol functions with the appropriate callbacks.\n"
+msgstr ""
+#. TRANSLATORS: defmacro Protocol.derive(protocol, module, options \\ [])
+#: lib/protocol.ex:117 
+msgid ""
+"Derives the `protocol` for `module` with the given options.\n"
 msgstr ""
 #. TRANSLATORS: def Protocol.extract_impls(protocol, paths)
 #: lib/protocol.ex:158 
@@ -46,12 +53,10 @@ msgid ""
 "    true\n"
 "\n"
 msgstr ""
-#. TRANSLATORS: def Protocol.assert_protocol!(module)
-#: lib/protocol.ex:56 
+#. TRANSLATORS: def Protocol.consolidated?(protocol)
+#: lib/protocol.ex:220 
 msgid ""
-"Checks if the given module is loaded and is protocol.\n"
-"\n"
-"Returns `:ok` if so, otherwise raises ArgumentError.\n"
+"Returns `true` if the protocol was consolidated.\n"
 msgstr ""
 #. TRANSLATORS: def Protocol.extract_protocols(paths)
 #: lib/protocol.ex:129 
@@ -72,11 +77,6 @@ msgid ""
 "    iex> Enumerable in mods\n"
 "    true\n"
 "\n"
-msgstr ""
-#. TRANSLATORS: def Protocol.consolidated?(protocol)
-#: lib/protocol.ex:220 
-msgid ""
-"Returns `true` if the protocol was consolidated.\n"
 msgstr ""
 #. TRANSLATORS: def Protocol.consolidate(protocol, types)
 #: lib/protocol.ex:228 

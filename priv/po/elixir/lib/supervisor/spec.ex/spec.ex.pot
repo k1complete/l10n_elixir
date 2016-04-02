@@ -1,5 +1,5 @@
 #. TRANSLATORS: def Supervisor.Spec.worker(module, args, options \\ [])
-#: lib/supervisor/spec.ex:186 
+#: lib/supervisor/spec.ex:188 
 msgid ""
 "Defines the given `module` as a worker which will be started\n"
 "with the given arguments.\n"
@@ -131,10 +131,25 @@ msgid ""
 "    within the specified time (in milliseconds), the child process is\n"
 "    unconditionally terminated using `Process.exit(child, :kill)`.\n"
 msgstr ""
-#. TRANSLATORS: @type restart
-#: lib/supervisor/spec.ex:107 
+#. TRANSLATORS: def Supervisor.Spec.supervisor(module, args, options \\ [])
+#: lib/supervisor/spec.ex:212 
 msgid ""
-"Supported restart values"
+"Defines the given `module` as a supervisor which will be started\n"
+"with the given arguments.\n"
+"\n"
+"    supervisor ExUnit.Runner, [], restart: :permanent\n"
+"\n"
+"By default, the function `start_link` is invoked on the given\n"
+"module. Overall, the default values for the options are:\n"
+"\n"
+"    [id: module,\n"
+"     function: :start_link,\n"
+"     restart: :permanent,\n"
+"     shutdown: :infinity,\n"
+"     modules: [module]]\n"
+"\n"
+"Check `Supervisor.Spec` module docs for more information on\n"
+"the options.\n"
 msgstr ""
 #. TRANSLATORS: def Supervisor.Spec.supervise(children, options)
 #: lib/supervisor/spec.ex:130 
@@ -185,23 +200,8 @@ msgstr ""
 msgid ""
 "Supported id values"
 msgstr ""
-#. TRANSLATORS: def Supervisor.Spec.supervisor(module, args, options \\ [])
-#: lib/supervisor/spec.ex:210 
+#. TRANSLATORS: @type restart
+#: lib/supervisor/spec.ex:107 
 msgid ""
-"Defines the given `module` as a supervisor which will be started\n"
-"with the given arguments.\n"
-"\n"
-"    supervisor ExUnit.Runner, [], restart: :permanent\n"
-"\n"
-"By default, the function `start_link` is invoked on the given\n"
-"module. Overall, the default values for the options are:\n"
-"\n"
-"    [id: module,\n"
-"     function: :start_link,\n"
-"     restart: :permanent,\n"
-"     shutdown: :infinity,\n"
-"     modules: [module]]\n"
-"\n"
-"Check `Supervisor.Spec` module docs for more information on\n"
-"the options.\n"
+"Supported restart values"
 msgstr ""

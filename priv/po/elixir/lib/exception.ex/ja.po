@@ -156,6 +156,11 @@ msgstr ""
 "外と一致したスタックトレースを返さないならば、空のスタックトレース\n"
 "`[]`が使われなければならない。\n"
 
+#. TRANSLATORS: def Exception.message(exception)
+#: lib/exception.ex:44
+msgid "Gets the message for an `exception`.\n"
+msgstr "`exception`のメッセージを取得します。\n"
+
 #. TRANSLATORS: def Exception.format_fa(fun, arity)
 #: lib/exception.ex:392
 msgid ""
@@ -195,11 +200,6 @@ msgstr ""
 "\n"
 "しかし、`{:EXIT, pid}`はスタックトレースを生成しない(それらはスタックト\n"
 "レースのないメッセージとして取り出されます)ことに、注意してください。\n"
-
-#. TRANSLATORS: def Exception.message(exception)
-#: lib/exception.ex:44
-msgid "Gets the message for an `exception`.\n"
-msgstr "`exception`のメッセージを取得します。\n"
 
 #. TRANSLATORS: Elixir.Exception Summary
 #: lib/exception.ex:2

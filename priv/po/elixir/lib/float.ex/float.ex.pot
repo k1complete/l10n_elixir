@@ -1,5 +1,5 @@
 #. TRANSLATORS: def Float.to_char_list(float, options)
-#: lib/float.ex:186 
+#: lib/float.ex:189 
 msgid ""
 "Returns a list which corresponds to the text representation\n"
 "of the given float.\n"
@@ -17,27 +17,8 @@ msgid ""
 "    '7.1'\n"
 "\n"
 msgstr ""
-#. TRANSLATORS: def Float.to_string(float, options)
-#: lib/float.ex:225 
-msgid ""
-"Returns a binary which corresponds to the text representation\n"
-"of `float`.\n"
-"\n"
-"## Options\n"
-"\n"
-"  * `:decimals`   - number of decimal points to show\n"
-"  * `:scientific` - number of decimal points to show, in scientific format\n"
-"  * `:compact`    - when `true`, use the most compact representation (ignored\n"
-"    with the `scientific` option)\n"
-"\n"
-"## Examples\n"
-"\n"
-"    iex> Float.to_string 7.1, [decimals: 2, compact: true]\n"
-"    \"7.1\"\n"
-"\n"
-msgstr ""
 #. TRANSLATORS: def Float.to_string(float)
-#: lib/float.ex:208 
+#: lib/float.ex:211 
 msgid ""
 "Returns a binary which corresponds to the text representation\n"
 "of the given float.\n"
@@ -51,7 +32,7 @@ msgid ""
 "\n"
 msgstr ""
 #. TRANSLATORS: def Float.to_char_list(float)
-#: lib/float.ex:170 
+#: lib/float.ex:173 
 msgid ""
 "Returns a char list which corresponds to the text representation of the given float.\n"
 "\n"
@@ -114,6 +95,28 @@ msgstr ""
 msgid ""
 "Functions for working with floating point numbers.\n"
 msgstr ""
+#. TRANSLATORS: def Float.to_string(float, options)
+#: lib/float.ex:228 
+msgid ""
+"Returns a binary which corresponds to the text representation\n"
+"of `float`.\n"
+"\n"
+"## Options\n"
+"\n"
+"  * `:decimals`   - number of decimal points to show\n"
+"  * `:scientific` - number of decimal points to show, in scientific format\n"
+"  * `:compact`    - when `true`, use the most compact representation (ignored\n"
+"    with the `scientific` option)\n"
+"\n"
+"## Examples\n"
+"\n"
+"    iex> Float.to_string 7.1, [decimals: 2, compact: true]\n"
+"    \"7.1\"\n"
+"\n"
+"    iex> Float.to_string 7.1, [decimals: 2, compact: false]\n"
+"    \"7.10\"\n"
+"\n"
+msgstr ""
 #. TRANSLATORS: def Float.round(number, precision \\ 0)
 #: lib/float.ex:136 
 msgid ""
@@ -138,13 +141,16 @@ msgid ""
 "    iex> Float.round(-5.5675, 3)\n"
 "    -5.568\n"
 "\n"
+"    iex> Float.round(-5.5675)\n"
+"    -6.0\n"
+"\n"
 msgstr ""
 #. TRANSLATORS: def Float.parse(binary)
 #: lib/float.ex:8 
 msgid ""
 "Parses a binary into a float.\n"
 "\n"
-"If successful, returns a tuple of the form `{float, remainder_of_binary}`;\n"
+"If successful, returns a tuple in the form of `{float, remainder_of_binary}`;\n"
 "when the binary cannot be coerced into a valid float, the atom `:error` is\n"
 "returned.\n"
 "\n"

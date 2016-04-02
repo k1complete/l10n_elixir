@@ -148,7 +148,8 @@ msgstr ""
 "\n"
 "    defmodule MyRec do\n"
 "      require Record\n"
-"      Record.defrecord :my_rec, Record.extract(...) |> Keyword.merge(fun_field: &__MODULE__.foo/2)\n"
+"      Record.defrecord :my_rec, Record.extract(...) |> Keyword."
+"merge(fun_field: &__MODULE__.foo/2)\n"
 "      def foo(bar, baz), do: IO.inspect({bar, baz})\n"
 "    end\n"
 
@@ -189,11 +190,6 @@ msgstr ""
 "     uid: :undefined, gid: :undefined]\n"
 "\n"
 
-#. TRANSLATORS: defmacro Record.defrecordp(name, tag \\ nil, kv)
-#: lib/record.ex:215
-msgid "Same as `defrecord/3` but generates private macros.\n"
-msgstr "`defrecord/3`と同じですが、プライベートマクロを生成します。\n"
-
 #. TRANSLATORS: defmacro Record.is_record(data, kind)
 #: lib/record.ex:72
 msgid ""
@@ -219,26 +215,10 @@ msgstr ""
 "    true\n"
 "\n"
 
-#. TRANSLATORS: def Record.extract_all(opts)
-#: lib/record.ex:59
-msgid ""
-"Extracts all records information from an Erlang file.\n"
-"\n"
-"Returns a keyword list containing extracted record names as keys, and\n"
-"lists of tuples describing the fields as values. It expects a named\n"
-"argument :from or :from_lib, which correspond to *include* or\n"
-"*include_lib* attribute from Erlang modules, respectively.\n"
-"\n"
-msgstr ""
-"Erlangファイルからレコード情報を全て抽出します。\n"
-"\n"
-"キーとして抽出されたレコード名で、値として\n"
-"フィールドを記述したタプルのリストとなる、\n"
-"キーワードリストを返します。\n"
-"Erlangモジュールからの *include* あるいは\n"
-"*include_lib* 属性に由来する、 名前付き引数 :from または \n"
-":from_lib を期待します。\n"
-"\n"
+#. TRANSLATORS: defmacro Record.defrecordp(name, tag \\ nil, kv)
+#: lib/record.ex:215
+msgid "Same as `defrecord/3` but generates private macros.\n"
+msgstr "`defrecord/3`と同じですが、プライベートマクロを生成します。\n"
 
 #. TRANSLATORS: Elixir.Record Summary
 #: lib/record.ex:2
@@ -310,6 +290,27 @@ msgstr ""
 "      @type user :: record(:user, name: String.t, age: integer)\n"
 "      # expands to: \"@type user :: {:user, String.t, integer}\"\n"
 "    end\n"
+
+#. TRANSLATORS: def Record.extract_all(opts)
+#: lib/record.ex:59
+msgid ""
+"Extracts all records information from an Erlang file.\n"
+"\n"
+"Returns a keyword list containing extracted record names as keys, and\n"
+"lists of tuples describing the fields as values. It expects a named\n"
+"argument :from or :from_lib, which correspond to *include* or\n"
+"*include_lib* attribute from Erlang modules, respectively.\n"
+"\n"
+msgstr ""
+"Erlangファイルからレコード情報を全て抽出します。\n"
+"\n"
+"キーとして抽出されたレコード名で、値として\n"
+"フィールドを記述したタプルのリストとなる、\n"
+"キーワードリストを返します。\n"
+"Erlangモジュールからの *include* あるいは\n"
+"*include_lib* 属性に由来する、 名前付き引数 :from または \n"
+":from_lib を期待します。\n"
+"\n"
 
 #. TRANSLATORS: defmacro Record.is_record(data)
 #: lib/record.ex:100

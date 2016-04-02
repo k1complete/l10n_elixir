@@ -11,12 +11,12 @@ msgstr ""
 "Plural-Forms: nplurals=1; plural=0;\n"
 
 #. TRANSLATORS: def Access.fetch(container, key)
-#: lib/access.ex:127
+#: lib/access.ex:128
 msgid "Fetches the container's value for the given key.\n"
 msgstr "与えられたキーに対するコンテナの値を取得します。\n"
 
 #. TRANSLATORS: def Access.get_and_update(container, key, fun)
-#: lib/access.ex:171
+#: lib/access.ex:172
 msgid ""
 "Gets and updates the container's value for the given key, in a single pass.\n"
 "\n"
@@ -41,7 +41,7 @@ msgstr ""
 "二つめの要素は、`fun`から返された値で更新されたコンテナです。\n"
 
 #. TRANSLATORS: def Access.get(container, key, default \\ nil)
-#: lib/access.ex:160
+#: lib/access.ex:161
 msgid "Gets the container's value for the given key.\n"
 msgstr "与えられたキーに対するコンテナの値を取得します。\n"
 

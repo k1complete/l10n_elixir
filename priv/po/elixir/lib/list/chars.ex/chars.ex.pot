@@ -1,8 +1,3 @@
-#. TRANSLATORS: def List.Chars.BitString.to_char_list(thing)
-#: lib/list/chars.ex:20 
-msgid ""
-"Returns the given binary converted to a char list.\n"
-msgstr ""
 #. TRANSLATORS: Elixir.List.Chars Summary
 #: lib/list/chars.ex:2 
 msgid ""
@@ -13,4 +8,9 @@ msgid ""
 "\n"
 "The `to_char_list` function automatically imported\n"
 "by Kernel invokes this protocol.\n"
+msgstr ""
+#. TRANSLATORS: def List.Chars.BitString.to_char_list(thing)
+#: lib/list/chars.ex:20 
+msgid ""
+"Returns the given binary converted to a char list.\n"
 msgstr ""

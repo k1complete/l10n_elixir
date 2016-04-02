@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: l 10n_elixir\n"
-"PO-Revision-Date: 2016-02-29 23:01+0900\n"
+"PO-Revision-Date: 2016-04-02 23:10+0900\n"
 "Last-Translator: 小田 照敬 <k-1@air13.local>\n"
 "Language-Team: Japanese <translation-team-ja@lists.sourceforge.net>\n"
 "Language: ja\n"
@@ -88,15 +88,15 @@ msgstr ""
 
 #: deps/elixir/lib/elixir/pages/Writing Documentation.md:47
 msgid ""
-"The compiler will infer this argument as `hash_dict`. Sometimes the "
-"inference will be suboptimal, specially if the function contains multiple "
-"clauses with the argument matching on different values each time. You can "
-"specify the proper names for documentation by using a bodyless clause:"
+"The compiler will infer this argument as `map`. Sometimes the inference will "
+"be suboptimal, specially if the function contains multiple clauses with the "
+"argument matching on different values each time. You can specify the proper "
+"names for documentation by using a bodyless clause:"
 msgstr ""
-"コンパイラはこの引数を`hash_dict`として推論します。特に、関数がそれぞれ\n"
-"異る値をマッチングする引数をもつ複数の節を含むと、ときどき推論が最適状\n"
-"態に及ばないかもしれません。本体無しの節を使うことで、ドキュメンテーショ\n"
-"ンのための妥当な名前を指定することができます:"
+"コンパイラはこの引数を`map`として推論します。特に、関数がそれぞれ異る値\n"
+"をマッチングする引数をもつ複数の節を含むと、ときどき推論が最適状態に及\n"
+"ばないかもしれません。本体無しの節を使うことで、ドキュメンテーションの\n"
+"ための妥当な名前を指定することができます:"
 
 #: deps/elixir/lib/elixir/pages/Writing Documentation.md:51
 msgid "## Recommendations"
@@ -143,17 +143,28 @@ msgstr ""
 
 #: deps/elixir/lib/elixir/pages/Writing Documentation.md:59
 msgid ""
-"  * When using headings, always start from the second heading by using `##`. "
-"The first heading is reserved to the module or function name itself."
+"  * When the documentation has multiple sections, always start the section "
+"heading by using `##`. The first heading is reserved to the module or "
+"function name itself."
 msgstr ""
 "  * もし見出しを使うなら、常に`##`を使って2番目の見出しから始めてくださ\n"
 "    い。最初の見出しはモジュールや関数名のために予約されています。"
 
 #: deps/elixir/lib/elixir/pages/Writing Documentation.md:61
+msgid ""
+"  * When documenting a function with multiple clauses, the documentation "
+"must be placed before the first clause. Documentation is always per function "
+"and not per clause."
+msgstr ""
+"  * 複数の節を持つ関数を文書化するとき、ドキュメンテーションは\n"
+"    最初の節に置かれなければならない。ドキュメンテーションは\n"
+"    常に関数毎であり、節毎ではありません。"
+
+#: deps/elixir/lib/elixir/pages/Writing Documentation.md:63
 msgid "## Doctests"
 msgstr "## Doctests"
 
-#: deps/elixir/lib/elixir/pages/Writing Documentation.md:63
+#: deps/elixir/lib/elixir/pages/Writing Documentation.md:65
 msgid ""
 "We recommend developers to include examples in their documentation, often "
 "under its own `## Examples` heading. To ensure examples do not get out of "
@@ -169,7 +180,7 @@ msgstr ""
 "ションから`iex>`で始まるコードサンプルをパースすることで動作します。こ\n"
 "れについての詳細は`ExUnit.DocTest`を読んでください。"
 
-#: deps/elixir/lib/elixir/pages/Writing Documentation.md:65
+#: deps/elixir/lib/elixir/pages/Writing Documentation.md:67
 msgid ""
 "Notice doctests have limitations. When you cannot doctest a function, "
 "because it relies on state or side-effects, we recommend developers to "
@@ -179,79 +190,24 @@ msgstr ""
 "関数のdoctestが出来無いときは、`iex>`プロンプトなしで直接例を含める\n"
 "ことを推奨します。"
 
-#: deps/elixir/lib/elixir/pages/Writing Documentation.md:67
-msgid "## Privacy"
-msgstr "## Privacy"
-
 #: deps/elixir/lib/elixir/pages/Writing Documentation.md:69
-msgid ""
-"Elixir allows developers to hide both modules and functions from the "
-"documentation by setting the doc attribute to false:"
-msgstr ""
-"docアトリビュートをfalseにセットすることで、モジュールと関数の両方をド\n"
-"キュメンテーションから隠すことをElixirはデベロッパに許します:"
-
-#: deps/elixir/lib/elixir/pages/Writing Documentation.md:79
-msgid ""
-"Notice that, although developers can add `@doc false` to functions, it does "
-"not make the function private:"
-msgstr ""
-"デベロッパが`@doc false`を関数に追加しても、関数がプライベートには\n"
-"ならないことに注意してください。"
-
-#: deps/elixir/lib/elixir/pages/Writing Documentation.md:86
-msgid ""
-"The function above can still be invoked as `MyApp.Sample.add(1, 2)`. Not "
-"only that, if the `MyApp.Sample` is imported, the `add/2` function will also "
-"be imported into the caller. For those reasons, be cautious when adding "
-"`@doc false` to functions, instead prefer one of:"
-msgstr ""
-"上の関数はまだ`MyApp.Sample.add(1, 2)`として呼び出すことができます。そ\n"
-"れだけでなく、もし`MyApp.Sample`がimportされていたら、`add/2`関数もまた\n"
-"呼出し側へインポートされるでしょう。それらの理由のために、関数へ`@doc\n"
-"false`を追加するときは注意して、代りに次の何れかを選んでください:"
-
-#: deps/elixir/lib/elixir/pages/Writing Documentation.md:88
-msgid ""
-"  * Move the undocumented function to a module with `@moduledoc false`, like "
-"`MyApp.Hidden`, ensuring the function won't be accidentally exposed or "
-"imported. In fact, you can use `@moduledoc false` to hide a whole module and "
-"still document each function with `@doc`. Tools will still ignore the module."
-msgstr ""
-"  * プライベート関数を`MyApp.Hidden`のような、偶然に公開されたりインポー\n"
-"    トされたりしないことを確実にする`@moduledoc false`のモジュールへ移\n"
-"    動してください。実際、モジュール全体を隠し、各関数のドキュメントに\n"
-"    は`@doc`をつけたままにするために、`@moduledoc false`を使うことがで\n"
-"    きます。ツールはモジュールを無視します。"
-
-#: deps/elixir/lib/elixir/pages/Writing Documentation.md:90
-msgid ""
-"  * Start the function name with underscores, for example, `__add__/2`, and "
-"add `@doc false`. The compiler does not import functions with underscore and "
-"the underscore will hint users to be wary of using then."
-msgstr ""
-"  * 関数名を`__add__/2`のような、アンダースコアで始めて、`@doc false`を\n"
-"    加えてください。コンパイラはアンダースコアで始まる関数をimportせず、\n"
-"    アンダースコアはユーザにそれを使うことに慎重であるように伝えます。"
-
-#: deps/elixir/lib/elixir/pages/Writing Documentation.md:92
 msgid "## Documentation != Comments"
 msgstr "## Documentation != Comments"
 
-#: deps/elixir/lib/elixir/pages/Writing Documentation.md:94
+#: deps/elixir/lib/elixir/pages/Writing Documentation.md:71
 msgid ""
 "Elixir treats documentation and code comments as different concepts. "
-"Documentation are for users of your API, be it your co-worker or your future "
-"self. Modules and functions must always be documented if they are part of "
-"your application public interface (API)."
+"Documentation are for users of your Application Programming Interface (API), "
+"be it your co-worker or your future self. Modules and functions must always "
+"be documented if they are part of your API."
 msgstr ""
 "Elixirはドキュメンテーションとコードコメントとを異った概念として扱いま\n"
-"す。ドキュメンテーションはあなたのAPIのユーザ、あなたの共同作業者、そし\n"
-"て未来のあなた自身のためです。モジュールと関数はあなたのアプリケーショ\n"
-"ンの公開インタフェース(API)の一部であるかぎり、常にドキュメント化されな\n"
-"ければなりません。"
+"す。ドキュメンテーションはあなたのApplication Programming\n"
+"Interface(API)のユーザ、あなたの共同作業者、そして未来のあなた自身のた\n"
+"めです。モジュールと関数はあなたのAPIの一部であるかぎり、常にドキュメン\n"
+"ト化されなければなりません。"
 
-#: deps/elixir/lib/elixir/pages/Writing Documentation.md:96
+#: deps/elixir/lib/elixir/pages/Writing Documentation.md:73
 msgid ""
 "Code comments are for developers reading the code. They are useful to mark "
 "improvements, leave notes for developers reading the code (for example, you "
@@ -262,17 +218,90 @@ msgstr ""
 "バグのために関数を呼ばないことに決めたなどの)ノートを残すためなどに役に\n"
 "立ちます。"
 
-#: deps/elixir/lib/elixir/pages/Writing Documentation.md:98
+#: deps/elixir/lib/elixir/pages/Writing Documentation.md:75
 msgid "In other words, documentation is required, code comments are optional."
 msgstr ""
 "言い替えると、ドキュメンテーションは必要とされ、コードコメントはオプショ\n"
 "ンです。"
 
-#: deps/elixir/lib/elixir/pages/Writing Documentation.md:100
+#: deps/elixir/lib/elixir/pages/Writing Documentation.md:77
+msgid "## Privacy"
+msgstr "## Privacy"
+
+#: deps/elixir/lib/elixir/pages/Writing Documentation.md:79
+msgid ""
+"Elixir does not allow developers to document private functions. That's "
+"because private functions only exist inside the module that define them and "
+"cannot be accessed externally."
+msgstr ""
+"Elixirはプライベート関数へのドキュメントを許していません。\n"
+"それは、プライベート関数は定義されたモジュールの内部でのみ存在し、\n"
+"外部からアクセスされることは有り得ないからです。"
+
+#: deps/elixir/lib/elixir/pages/Writing Documentation.md:81
+msgid ""
+"Luckily, Elixir allows developers to hide modules and functions from the "
+"documentation. For example, one common practice for documenting internal "
+"behaviour is to set the `@moduledoc` attribute to false while documenting "
+"each function:"
+msgstr ""
+"幸運にも、モジュールと関数の両方をドキュメンテーションから隠すことを\n"
+"Elixirはデベロッパに許します。例えば、内部の振る舞いを文書化する\n"
+"一つのプラクティスは、それぞれの関数を文書化し、`@moduledoc`\n"
+"アトリビュートをfalseにセットすることです:"
+
+#: deps/elixir/lib/elixir/pages/Writing Documentation.md:94
+msgid ""
+"Similarly, developers can add `@doc false` to functions they do not want to "
+"publicly expose:"
+msgstr ""
+"同様に、関数を公開したくない場合に、デベロッパが`@doc\n"
+"false`を関数に追加しできます:"
+
+#: deps/elixir/lib/elixir/pages/Writing Documentation.md:101
+msgid ""
+"However keep in mind adding `@doc false` does not make the function private. "
+"The function above can still be invoked as `MyApp.Sample.add(1, 2)`. Not "
+"only that, if the `MyApp.Sample` is imported, the `add/2` function will also "
+"be imported into the caller. For those reasons, be cautious when adding "
+"`@doc false` to functions, instead prefer one of:"
+msgstr ""
+"しかしながら、`@doc false`を追加しても、関数はプライベート\n"
+"にならないことに注意してください。上の関数はまだ\n"
+"`MyApp.Sample.add(1, 2)`として呼び出すことができます。それ\n"
+"だけでなく、もし`MyApp.Sample`がimportされていたら、\n"
+"`add/2`関数もまた呼出し側へインポートされるでしょう。それら\n"
+"の理由のために、関数へ`@doc false`を追加するときは注意して、\n"
+"代りに次の何れかを選んでください:"
+
+#: deps/elixir/lib/elixir/pages/Writing Documentation.md:103
+msgid ""
+"  * Move the undocumented function to a module with `@moduledoc false`, like "
+"`MyApp.Hidden`, ensuring the function won't be accidentally exposed or "
+"imported. Remember you can use `@moduledoc false` to hide a whole module and "
+"still document each function with `@doc`. Tools will still ignore the module."
+msgstr ""
+"  * プライベート関数を`MyApp.Hidden`のような、偶然に公開されたりインポー\n"
+"    トされたりしないことを確実にする`@moduledoc false`のモジュールへ移\n"
+"    動してください。実際、モジュール全体を隠し、各関数のドキュメントに\n"
+"    は`@doc`をつけたままにするために、`@moduledoc false`を使うことがで\n"
+"    きます。ツールはモジュールを無視します。"
+
+#: deps/elixir/lib/elixir/pages/Writing Documentation.md:105
+msgid ""
+"  * Start the function name with underscores, for example, `__add__/2`, and "
+"add `@doc false`. The compiler does not import functions with underscore and "
+"the underscore will hint of its intended private usage."
+msgstr ""
+"  * 関数名を`__add__/2`のような、アンダースコアで始めて、`@doc false`を\n"
+"    加えてください。コンパイラはアンダースコアで始まる関数をimportせず、\n"
+"    アンダースコアはユーザにそれを使うことに慎重であるように伝えます。"
+
+#: deps/elixir/lib/elixir/pages/Writing Documentation.md:107
 msgid "## Code.get_docs/2"
 msgstr "## Code.get_docs/2"
 
-#: deps/elixir/lib/elixir/pages/Writing Documentation.md:102
+#: deps/elixir/lib/elixir/pages/Writing Documentation.md:109
 msgid ""
 "Elixir stores documentation inside pre-defined chunks in the bytecode. It "
 "can be accessed from Elixir by using the `Code.get_docs/2` function. This "

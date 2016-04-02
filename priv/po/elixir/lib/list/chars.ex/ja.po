@@ -10,11 +10,6 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
-#. TRANSLATORS: def List.Chars.BitString.to_char_list(thing)
-#: lib/list/chars.ex:20
-msgid "Returns the given binary converted to a char list.\n"
-msgstr "与えられたバイナリを文字のリストに変換したものを返します。\n"
-
 #. TRANSLATORS: Elixir.List.Chars Summary
 #: lib/list/chars.ex:2
 msgid ""
@@ -31,3 +26,8 @@ msgstr ""
 "\n"
 "`to_char_list`関数は自動的にカーネルによってインポートされ、このプロト\n"
 "コルが実行します。\n"
+
+#. TRANSLATORS: def List.Chars.BitString.to_char_list(thing)
+#: lib/list/chars.ex:20
+msgid "Returns the given binary converted to a char list.\n"
+msgstr "与えられたバイナリを文字のリストに変換したものを返します。\n"

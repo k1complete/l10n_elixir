@@ -88,6 +88,11 @@ msgid ""
 "not return the stacktrace corresponding to the exception\n"
 "an empty stacktrace, `[]`, must be used.\n"
 msgstr ""
+#. TRANSLATORS: def Exception.message(exception)
+#: lib/exception.ex:44 
+msgid ""
+"Gets the message for an `exception`.\n"
+msgstr ""
 #. TRANSLATORS: def Exception.format_fa(fun, arity)
 #: lib/exception.ex:392 
 msgid ""
@@ -110,11 +115,6 @@ msgid ""
 "\n"
 "Note that `{:EXIT, pid}` do not generate a stacktrace though\n"
 "(as they are retrieved as messages without stacktraces).\n"
-msgstr ""
-#. TRANSLATORS: def Exception.message(exception)
-#: lib/exception.ex:44 
-msgid ""
-"Gets the message for an `exception`.\n"
 msgstr ""
 #. TRANSLATORS: Elixir.Exception Summary
 #: lib/exception.ex:2 

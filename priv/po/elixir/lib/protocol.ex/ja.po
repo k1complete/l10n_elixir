@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: l 10n_elixir\n"
-"PO-Revision-Date: 2015-12-10 22:26+0900\n"
+"PO-Revision-Date: 2016-04-02 20:12+0900\n"
 "Last-Translator: 小田 照敬 <EMAIL@ADDRESS>\n"
 "Language-Team: Japanese\n"
 "Language: ja\n"
@@ -9,6 +9,17 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
+
+#. TRANSLATORS: def Protocol.assert_protocol!(module)
+#: lib/protocol.ex:56
+msgid ""
+"Checks if the given module is loaded and is protocol.\n"
+"\n"
+"Returns `:ok` if so, otherwise raises `ArgumentError`.\n"
+msgstr ""
+"与えられたモジュールがロードされ、プロトコルかどうかをチェックします。\n"
+"\n"
+"もしそうなら`:ok`を返し、さもなくば`ArgumentError`を上げます。\n"
 
 #. TRANSLATORS: Elixir.Protocol Summary
 #: lib/protocol.ex:2
@@ -21,17 +32,12 @@ msgid ""
 "Checks if the given module is loaded and is an implementation\n"
 "of the given protocol.\n"
 "\n"
-"Returns `:ok` if so, otherwise raises ArgumentError.\n"
+"Returns `:ok` if so, otherwise raises `ArgumentError`.\n"
 msgstr ""
 "与えられたモジュールがロードされ、与えられたプロトコルを\n"
 "実装しているかチェックします。\n"
 "\n"
-"もしそうなら`:ok`を返し、さもなくばArgumentErrorを上げます。\n"
-
-#. TRANSLATORS: defmacro Protocol.derive(protocol, module, options \\ [])
-#: lib/protocol.ex:117
-msgid "Derives the `protocol` for `module` with the given options.\n"
-msgstr "与えられたオプションで、`module`のために`protocol`を導出します。\n"
+"もしそうなら`:ok`を返し、さもなくば`ArgumentError`を上げます。\n"
 
 #. TRANSLATORS: defmacro Protocol.def(signature)
 #: lib/protocol.ex:6
@@ -47,6 +53,11 @@ msgstr ""
 "プロトコルは関数を直接定義することは許されていません。代りに、\n"
 "適切なコールバックでプロトコル関数を定義するこのマクロと、\n"
 "標準の`Kernel.def/*`マクロが取り替えられます。\n"
+
+#. TRANSLATORS: defmacro Protocol.derive(protocol, module, options \\ [])
+#: lib/protocol.ex:117
+msgid "Derives the `protocol` for `module` with the given options.\n"
+msgstr "与えられたオプションで、`module`のために`protocol`を導出します。\n"
 
 #. TRANSLATORS: def Protocol.extract_impls(protocol, paths)
 #: lib/protocol.ex:158
@@ -86,16 +97,10 @@ msgstr ""
 "    true\n"
 "\n"
 
-#. TRANSLATORS: def Protocol.assert_protocol!(module)
-#: lib/protocol.ex:56
-msgid ""
-"Checks if the given module is loaded and is protocol.\n"
-"\n"
-"Returns `:ok` if so, otherwise raises ArgumentError.\n"
-msgstr ""
-"与えられたモジュールがロードされ、プロトコルかどうかをチェックします。\n"
-"\n"
-"もしそうなら`:ok`を返し、さもなくばArgumentErrorを上げます。\n"
+#. TRANSLATORS: def Protocol.consolidated?(protocol)
+#: lib/protocol.ex:220
+msgid "Returns `true` if the protocol was consolidated.\n"
+msgstr "プロトコルが統合(consolidate)されていれば`true`を返します。\n"
 
 #. TRANSLATORS: def Protocol.extract_protocols(paths)
 #: lib/protocol.ex:129
@@ -132,11 +137,6 @@ msgstr ""
 "    iex> Enumerable in mods\n"
 "    true\n"
 "\n"
-
-#. TRANSLATORS: def Protocol.consolidated?(protocol)
-#: lib/protocol.ex:220
-msgid "Returns `true` if the protocol was consolidated.\n"
-msgstr "プロトコルが統合(consolidate)されていれば`true`を返します。\n"
 
 #. TRANSLATORS: def Protocol.consolidate(protocol, types)
 #: lib/protocol.ex:228

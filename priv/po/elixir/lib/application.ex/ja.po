@@ -10,6 +10,11 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
+#. TRANSLATORS: def Application.app_dir(app, path)
+#: lib/application.ex:376
+msgid "Returns the given path inside `app_dir/1`.\n"
+msgstr "`app_dir/1`の内側に与えられたパスを追加して返します。\n"
+
 #. TRANSLATORS: def Application.fetch_env(app, key)
 #: lib/application.ex:182
 msgid ""
@@ -21,13 +26,6 @@ msgstr ""
 "`app`の環境の`key`に対応する値を返します。\n"
 "\n"
 "もしconfigurationパラメータが存在しない場合、`:error`を返します。\n"
-
-#. TRANSLATORS: def Application.loaded_applications()
-#: lib/application.ex:392
-msgid ""
-"Returns a list with information about the applications which have been "
-"loaded.\n"
-msgstr "ロードされたアプリケーションについての情報をリストで返します。\n"
 
 #. TRANSLATORS: def Application.put_env(app, key, value, opts \\ [])
 #: lib/application.ex:211
@@ -69,66 +67,12 @@ msgstr ""
 "永続化された値はアプリケーションがロードされ、アプリケーションがリロー\n"
 "ドされた後も定着することを意味します。\n"
 
-#. TRANSLATORS: def Application.app_dir(app, path)
-#: lib/application.ex:376
-msgid "Returns the given path inside `app_dir/1`.\n"
-msgstr "`app_dir/1`の内側に与えられたパスを追加して返します。\n"
-
-#. TRANSLATORS: def Application.unload(app)
-#: lib/application.ex:333
+#. TRANSLATORS: def Application.loaded_applications()
+#: lib/application.ex:395
 msgid ""
-"Unloads the given `app`.\n"
-"\n"
-"It will also unload all `:included_applications`.\n"
-"Note that the function does not purge the application modules.\n"
-msgstr ""
-"与えられた`app`をアンロードします。\n"
-"\n"
-"それは`:included_applications`全てをもアンロードします。\n"
-"関数はアプリケーションモジュールをパージしないことに\n"
-"注意してください。\n"
-
-#. TRANSLATORS: def Application.spec(app)
-#: lib/application.ex:115
-msgid ""
-"Returns the spec for `app`.\n"
-"\n"
-"The following keys are returned:\n"
-"\n"
-"  * :description\n"
-"  * :id\n"
-"  * :vsn\n"
-"  * :modules\n"
-"  * :maxP\n"
-"  * :maxT\n"
-"  * :registered\n"
-"  * :included_applications\n"
-"  * :applications\n"
-"  * :mod\n"
-"  * :start_phases\n"
-"\n"
-"Note the environment is not returned as it can be accessed via\n"
-"`fetch_env/2`. Returns `nil` if the application is not loaded.\n"
-msgstr ""
-"`app`のspecを返します。\n"
-"\n"
-"以下のキーを返します:\n"
-"\n"
-"  * :description\n"
-"  * :id\n"
-"  * :vsn\n"
-"  * :modules\n"
-"  * :maxP\n"
-"  * :maxT\n"
-"  * :registered\n"
-"  * :included_applications\n"
-"  * :applications\n"
-"  * :mod\n"
-"  * :start_phases\n"
-"\n"
-"`fetch_env/2` を通してアクセスできるので、environmentは\n"
-"返されない点に注意してください。アプリケーションが\n"
-"ロードされていない時、`nil`を返します。\n"
+"Returns a list with information about the applications which have been "
+"loaded.\n"
+msgstr "ロードされたアプリケーションについての情報をリストで返します。\n"
 
 #. TRANSLATORS: Elixir.Application Summary
 #: lib/application.ex:2
@@ -344,7 +288,7 @@ msgstr ""
 "\n"
 
 #. TRANSLATORS: def Application.format_error(reason)
-#: lib/application.ex:400
+#: lib/application.ex:403
 msgid ""
 "Formats the error reason returned by `start/2`,\n"
 "`ensure_started/2`, `stop/1`, `load/1` and `unload/1`,\n"
@@ -468,6 +412,20 @@ msgstr ""
 "き、reasonが`:normal`ではなく、`:shutdown`にセットされるからからである\n"
 "ことに注意してください。\n"
 
+#. TRANSLATORS: def Application.unload(app)
+#: lib/application.ex:333
+msgid ""
+"Unloads the given `app`.\n"
+"\n"
+"It will also unload all `:included_applications`.\n"
+"Note that the function does not purge the application modules.\n"
+msgstr ""
+"与えられた`app`をアンロードします。\n"
+"\n"
+"それは`:included_applications`全てをもアンロードします。\n"
+"関数はアプリケーションモジュールをパージしないことに\n"
+"注意してください。\n"
+
 #. TRANSLATORS: def Application.fetch_env!(app, key)
 #: lib/application.ex:195
 msgid ""
@@ -480,8 +438,50 @@ msgstr ""
 "もし指定されたconfigurationパラメータが存在しない場合、\n"
 "`ArgumentError`を上げます。\n"
 
+#. TRANSLATORS: def Application.spec(app)
+#: lib/application.ex:115
+msgid ""
+"Returns the spec for `app`.\n"
+"\n"
+"The following keys are returned:\n"
+"\n"
+"  * :description\n"
+"  * :id\n"
+"  * :vsn\n"
+"  * :modules\n"
+"  * :maxP\n"
+"  * :maxT\n"
+"  * :registered\n"
+"  * :included_applications\n"
+"  * :applications\n"
+"  * :mod\n"
+"  * :start_phases\n"
+"\n"
+"Note the environment is not returned as it can be accessed via\n"
+"`fetch_env/2`. Returns `nil` if the application is not loaded.\n"
+msgstr ""
+"`app`のspecを返します。\n"
+"\n"
+"以下のキーを返します:\n"
+"\n"
+"  * :description\n"
+"  * :id\n"
+"  * :vsn\n"
+"  * :modules\n"
+"  * :maxP\n"
+"  * :maxT\n"
+"  * :registered\n"
+"  * :included_applications\n"
+"  * :applications\n"
+"  * :mod\n"
+"  * :start_phases\n"
+"\n"
+"`fetch_env/2` を通してアクセスできるので、environmentは\n"
+"返されない点に注意してください。アプリケーションが\n"
+"ロードされていない時、`nil`を返します。\n"
+
 #. TRANSLATORS: def Application.started_applications(timeout \\ 5000)
-#: lib/application.ex:384
+#: lib/application.ex:387
 msgid ""
 "Returns a list with information about the applications which are currently "
 "running.\n"
@@ -575,21 +575,6 @@ msgstr ""
 "上げます。アプリケーションがロードされていないなら、`nil`を\n"
 "返します。\n"
 
-#. TRANSLATORS: def Application.ensure_all_started(app, type \\ :temporary)
-#: lib/application.ex:258
-msgid ""
-"Ensures the given `app` and its applications are started.\n"
-"\n"
-"Same as `start/2` but also starts the applications listed under\n"
-"`:applications` in the `.app` file in case they were not previously\n"
-"started.\n"
-msgstr ""
-"与えられた`app`とそれが依存しているアプリケーションが開始していることを\n"
-"確実にします。\n"
-"\n"
-"`start/2`と同じですが、`.app`ファイルに`:applications`でリストされている\n"
-"アプリケーションも、まだ開始していない場合には、開始します。\n"
-
 #. TRANSLATORS: def Application.load(app)
 #: lib/application.ex:319
 msgid ""
@@ -608,3 +593,18 @@ msgstr ""
 "\n"
 "ロードするアプリケーションは開始しませんし、モジュールのロードもしませ\n"
 "んが、その環境をロードします。\n"
+
+#. TRANSLATORS: def Application.ensure_all_started(app, type \\ :temporary)
+#: lib/application.ex:258
+msgid ""
+"Ensures the given `app` and its applications are started.\n"
+"\n"
+"Same as `start/2` but also starts the applications listed under\n"
+"`:applications` in the `.app` file in case they were not previously\n"
+"started.\n"
+msgstr ""
+"与えられた`app`とそれが依存しているアプリケーションが開始していることを\n"
+"確実にします。\n"
+"\n"
+"`start/2`と同じですが、`.app`ファイルに`:applications`でリストされている\n"
+"アプリケーションも、まだ開始していない場合には、開始します。\n"

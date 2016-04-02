@@ -10,7 +10,30 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
-#. TRANSLATORS: def MapSet.new(enumerable)
+#. TRANSLATORS: def MapSet.member?(map_set, value)
+#: lib/map_set.ex:213
+msgid ""
+"Checks if `set` contains `value`.\n"
+"\n"
+"## Examples\n"
+"\n"
+"    iex> MapSet.member?(MapSet.new([1, 2, 3]), 2)\n"
+"    true\n"
+"    iex> MapSet.member?(MapSet.new([1, 2, 3]), 4)\n"
+"    false\n"
+"\n"
+msgstr ""
+"`set`が`value`を含んでいるかをチェックします。\n"
+"\n"
+"## Examples\n"
+"\n"
+"    iex> MapSet.member?(MapSet.new([1, 2, 3]), 2)\n"
+"    true\n"
+"    iex> MapSet.member?(MapSet.new([1, 2, 3]), 4)\n"
+"    false\n"
+"\n"
+
+#. TRANSLATORS: def MapSet.new(mapset)
 #: lib/map_set.ex:28
 msgid ""
 "Creates a set from an enumerable.\n"
@@ -34,7 +57,7 @@ msgstr ""
 "\n"
 
 #. TRANSLATORS: def MapSet.put(set, value)
-#: lib/map_set.ex:178
+#: lib/map_set.ex:229
 msgid ""
 "Inserts `value` into `set` if `set` doesn't already contain it.\n"
 "\n"
@@ -56,31 +79,8 @@ msgstr ""
 "    #MapSet<[1, 2, 3, 4]>\n"
 "\n"
 
-#. TRANSLATORS: def MapSet.member?(map_set, value)
-#: lib/map_set.ex:162
-msgid ""
-"Checks if `set` contains `value`.\n"
-"\n"
-"## Examples\n"
-"\n"
-"    iex> MapSet.member?(MapSet.new([1, 2, 3]), 2)\n"
-"    true\n"
-"    iex> MapSet.member?(MapSet.new([1, 2, 3]), 4)\n"
-"    false\n"
-"\n"
-msgstr ""
-"`set`が`value`を含んでいるかをチェックします。\n"
-"\n"
-"## Examples\n"
-"\n"
-"    iex> MapSet.member?(MapSet.new([1, 2, 3]), 2)\n"
-"    true\n"
-"    iex> MapSet.member?(MapSet.new([1, 2, 3]), 4)\n"
-"    false\n"
-"\n"
-
 #. TRANSLATORS: def MapSet.intersection(map_set1, map_set2)
-#: lib/map_set.ex:137
+#: lib/map_set.ex:194
 msgid ""
 "Returns a set containing only members that `set1` and `set2` have in "
 "common.\n"
@@ -106,7 +106,7 @@ msgstr ""
 "\n"
 
 #. TRANSLATORS: def MapSet.equal?(map_set1, map_set2)
-#: lib/map_set.ex:119
+#: lib/map_set.ex:176
 msgid ""
 "Checks if two sets are equal.\n"
 "\n"
@@ -132,60 +132,27 @@ msgstr ""
 "    false\n"
 "\n"
 
-#. TRANSLATORS: def MapSet.disjoint?(map_set1, map_set2)
-#: lib/map_set.ex:94
+#. TRANSLATORS: def MapSet.size(map_set)
+#: lib/map_set.ex:245
 msgid ""
-"Checks if `set1` and `set2` have no members in common.\n"
+"Returns the number of elements in `set`.\n"
 "\n"
 "## Examples\n"
 "\n"
-"    iex> MapSet.disjoint?(MapSet.new([1, 2]), MapSet.new([3, 4]))\n"
-"    true\n"
-"    iex> MapSet.disjoint?(MapSet.new([1, 2]), MapSet.new([2, 3]))\n"
-"    false\n"
+"    iex> MapSet.size(MapSet.new([1, 2, 3]))\n"
+"    3\n"
 "\n"
 msgstr ""
-"`set1`と`set2`が共通の要素を持っていないことをチェックします。\n"
+"`set`の要素の数を返します。\n"
 "\n"
 "## Examples\n"
 "\n"
-"    iex> MapSet.disjoint?(MapSet.new([1, 2]), MapSet.new([3, 4]))\n"
-"    true\n"
-"    iex> MapSet.disjoint?(MapSet.new([1, 2]), MapSet.new([2, 3]))\n"
-"    false\n"
-"\n"
-
-#. TRANSLATORS: def MapSet.delete(set, term)
-#: lib/map_set.ex:58
-msgid ""
-"Deletes `value` from `set`.\n"
-"\n"
-"Returns a new set which is a copy of `set` but without `value`.\n"
-"\n"
-"## Examples\n"
-"\n"
-"    iex> set = MapSet.new([1, 2, 3])\n"
-"    iex> MapSet.delete(set, 4)\n"
-"    #MapSet<[1, 2, 3]>\n"
-"    iex> MapSet.delete(set, 2)\n"
-"    #MapSet<[1, 3]>\n"
-"\n"
-msgstr ""
-"`set`から`value`を削除します。\n"
-"\n"
-"`value`を削除した`set`の新しいコピーを返します。\n"
-"\n"
-"## Examples\n"
-"\n"
-"    iex> set = MapSet.new([1, 2, 3])\n"
-"    iex> MapSet.delete(set, 4)\n"
-"    #MapSet<[1, 2, 3]>\n"
-"    iex> MapSet.delete(set, 2)\n"
-"    #MapSet<[1, 3]>\n"
+"    iex> MapSet.size(MapSet.new([1, 2, 3]))\n"
+"    3\n"
 "\n"
 
 #. TRANSLATORS: def MapSet.subset?(map_set1, map_set2)
-#: lib/map_set.ex:208
+#: lib/map_set.ex:259
 msgid ""
 "Checks if `set1`'s members are all contained in `set2`.\n"
 "\n"
@@ -211,27 +178,8 @@ msgstr ""
 "    false\n"
 "\n"
 
-#. TRANSLATORS: def MapSet.size(map_set)
-#: lib/map_set.ex:194
-msgid ""
-"Returns the number of elements in `set`.\n"
-"\n"
-"## Examples\n"
-"\n"
-"    iex> MapSet.size(MapSet.new([1, 2, 3]))\n"
-"    3\n"
-"\n"
-msgstr ""
-"`set`の要素の数を返します。\n"
-"\n"
-"## Examples\n"
-"\n"
-"    iex> MapSet.size(MapSet.new([1, 2, 3]))\n"
-"    3\n"
-"\n"
-
 #. TRANSLATORS: def MapSet.union(map_set1, map_set2)
-#: lib/map_set.ex:252
+#: lib/map_set.ex:306
 msgid ""
 "Returns a set containing all members of `set1` and `set2`.\n"
 "\n"
@@ -250,7 +198,7 @@ msgstr ""
 "\n"
 
 #. TRANSLATORS: def MapSet.difference(map_set1, map_set2)
-#: lib/map_set.ex:77
+#: lib/map_set.ex:106
 msgid ""
 "Returns a set that is `set1` without the members of `set2`.\n"
 "\n"
@@ -269,7 +217,7 @@ msgstr ""
 "\n"
 
 #. TRANSLATORS: def MapSet.new(enumerable, transform)
-#: lib/map_set.ex:44
+#: lib/map_set.ex:50
 msgid ""
 "Creates a mapset from an enumerable via the transformation function.\n"
 "\n"
@@ -307,8 +255,60 @@ msgstr ""
 "アクセスは出来無いことに注意してください。\n"
 "その代わり、このモジュールの関数を使ってください。\n"
 
+#. TRANSLATORS: def MapSet.disjoint?(map_set1, map_set2)
+#: lib/map_set.ex:146
+msgid ""
+"Checks if `set1` and `set2` have no members in common.\n"
+"\n"
+"## Examples\n"
+"\n"
+"    iex> MapSet.disjoint?(MapSet.new([1, 2]), MapSet.new([3, 4]))\n"
+"    true\n"
+"    iex> MapSet.disjoint?(MapSet.new([1, 2]), MapSet.new([2, 3]))\n"
+"    false\n"
+"\n"
+msgstr ""
+"`set1`と`set2`が共通の要素を持っていないことをチェックします。\n"
+"\n"
+"## Examples\n"
+"\n"
+"    iex> MapSet.disjoint?(MapSet.new([1, 2]), MapSet.new([3, 4]))\n"
+"    true\n"
+"    iex> MapSet.disjoint?(MapSet.new([1, 2]), MapSet.new([2, 3]))\n"
+"    false\n"
+"\n"
+
+#. TRANSLATORS: def MapSet.delete(set, term)
+#: lib/map_set.ex:87
+msgid ""
+"Deletes `value` from `set`.\n"
+"\n"
+"Returns a new set which is a copy of `set` but without `value`.\n"
+"\n"
+"## Examples\n"
+"\n"
+"    iex> set = MapSet.new([1, 2, 3])\n"
+"    iex> MapSet.delete(set, 4)\n"
+"    #MapSet<[1, 2, 3]>\n"
+"    iex> MapSet.delete(set, 2)\n"
+"    #MapSet<[1, 3]>\n"
+"\n"
+msgstr ""
+"`set`から`value`を削除します。\n"
+"\n"
+"`value`を削除した`set`の新しいコピーを返します。\n"
+"\n"
+"## Examples\n"
+"\n"
+"    iex> set = MapSet.new([1, 2, 3])\n"
+"    iex> MapSet.delete(set, 4)\n"
+"    #MapSet<[1, 2, 3]>\n"
+"    iex> MapSet.delete(set, 2)\n"
+"    #MapSet<[1, 3]>\n"
+"\n"
+
 #. TRANSLATORS: def MapSet.to_list(map_set)
-#: lib/map_set.ex:238
+#: lib/map_set.ex:292
 msgid ""
 "Converts `set` to a list.\n"
 "\n"

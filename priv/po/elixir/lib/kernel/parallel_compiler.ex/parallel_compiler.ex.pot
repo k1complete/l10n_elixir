@@ -1,13 +1,13 @@
-#. TRANSLATORS: Elixir.Kernel.ParallelCompiler Summary
-#: lib/kernel/parallel_compiler.ex:2 
-msgid ""
-"A module responsible for compiling files in parallel.\n"
-msgstr ""
 #. TRANSLATORS: def Kernel.ParallelCompiler.files_to_path(files, path, options \\ [])
 #: lib/kernel/parallel_compiler.ex:39 
 msgid ""
 "Compiles the given files to the given path.\n"
 "Read `files/2` for more information.\n"
+msgstr ""
+#. TRANSLATORS: Elixir.Kernel.ParallelCompiler Summary
+#: lib/kernel/parallel_compiler.ex:2 
+msgid ""
+"A module responsible for compiling files in parallel.\n"
 msgstr ""
 #. TRANSLATORS: def Kernel.ParallelCompiler.files(files, options \\ [])
 #: lib/kernel/parallel_compiler.ex:6 

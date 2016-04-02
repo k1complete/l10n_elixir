@@ -49,11 +49,6 @@ msgstr ""
 "\n"
 "  * `{:error, rest}` - 与えられたargvにスイッチがありません\n"
 
-#. TRANSLATORS: Elixir.OptionParser Summary
-#: lib/option_parser.ex:2
-msgid "This module contains functions to parse command line options.\n"
-msgstr "このモジュールはコマンドライン引数をパースするための関数を含みます。\n"
-
 #. TRANSLATORS: def OptionParser.parse_head(argv, opts \\ [])
 #: lib/option_parser.ex:120
 msgid ""
@@ -91,6 +86,11 @@ msgstr ""
 "\"], []}\n"
 "\n"
 
+#. TRANSLATORS: Elixir.OptionParser Summary
+#: lib/option_parser.ex:2
+msgid "This module contains functions to parse command line options.\n"
+msgstr "このモジュールはコマンドライン引数をパースするための関数を含みます。\n"
+
 #. TRANSLATORS: def OptionParser.to_argv(enum)
 #: lib/option_parser.ex:241
 msgid ""
@@ -123,6 +123,29 @@ msgstr ""
 "    iex>  OptionParser.to_argv([bool: true, bool: false, discarded: nil])\n"
 "    [\"--bool\", \"--no-bool\"]\n"
 "\n"
+
+#. TRANSLATORS: def OptionParser.split(string)
+#: lib/option_parser.ex:271
+msgid ""
+"Splits a string into argv chunks.\n"
+"\n"
+"## Examples\n"
+"\n"
+"    iex> OptionParser.split(\"foo bar\")\n"
+"    [\"foo\", \"bar\"]\n"
+"\n"
+"    iex> OptionParser.split(\"foo \\\"bar baz\\\"\")\n"
+"    [\"foo\", \"bar baz\"]\n"
+msgstr ""
+"文字列を引数の塊に分割します。\n"
+"\n"
+"## 例\n"
+"\n"
+"    iex> OptionParser.split(\"foo bar\")\n"
+"    [\"foo\", \"bar\"]\n"
+"\n"
+"    iex> OptionParser.split(\"foo \\\"bar baz\\\"\")\n"
+"    [\"foo\", \"bar baz\"]\n"
 
 #. TRANSLATORS: def OptionParser.parse(argv, opts \\ [])
 #: lib/option_parser.ex:11
@@ -354,26 +377,3 @@ msgstr ""
 "    iex> OptionParser.parse([\"-d\"], aliases: [d: :debug])\n"
 "    {[debug: true], [], []}\n"
 "\n"
-
-#. TRANSLATORS: def OptionParser.split(string)
-#: lib/option_parser.ex:271
-msgid ""
-"Splits a string into argv chunks.\n"
-"\n"
-"## Examples\n"
-"\n"
-"    iex> OptionParser.split(\"foo bar\")\n"
-"    [\"foo\", \"bar\"]\n"
-"\n"
-"    iex> OptionParser.split(\"foo \\\"bar baz\\\"\")\n"
-"    [\"foo\", \"bar baz\"]\n"
-msgstr ""
-"文字列を引数の塊に分割します。\n"
-"\n"
-"## 例\n"
-"\n"
-"    iex> OptionParser.split(\"foo bar\")\n"
-"    [\"foo\", \"bar\"]\n"
-"\n"
-"    iex> OptionParser.split(\"foo \\\"bar baz\\\"\")\n"
-"    [\"foo\", \"bar baz\"]\n"

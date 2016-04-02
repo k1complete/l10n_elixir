@@ -72,60 +72,66 @@ msgid ""
 "`no_return()`           | `none()`\n"
 "`fun()`                 | `(... -> any)`\n"
 "`struct()`              | `%{__struct__: atom()}`\n"
-"`as_boolean(t)`         | `t`"
-msgstr ""
-
-#: deps/elixir/lib/elixir/pages/Typespecs.md:103
-msgid "### Remote types"
+"`as_boolean(t)`         | `t`\n"
+"`keyword()`             | `[{atom(), any()}]`\n"
+"`keyword(t)`            | `[{atom(), t}]`"
 msgstr ""
 
 #: deps/elixir/lib/elixir/pages/Typespecs.md:105
-msgid "Any module is also able to define its own type and the modules in Elixir are no exception. For example, a string is `String.t`, a range is `Range.t`, any enumerable can be `Enum.t` and so on."
+msgid "### Remote types"
 msgstr ""
 
 #: deps/elixir/lib/elixir/pages/Typespecs.md:107
+msgid "Any module is also able to define its own type and the modules in Elixir are no exception. For example, a string is `String.t`, a range is `Range.t`, any enumerable can be `Enum.t` and so on."
+msgstr ""
+
+#: deps/elixir/lib/elixir/pages/Typespecs.md:109
 msgid "## Defining a type"
 msgstr ""
 
-#: deps/elixir/lib/elixir/pages/Typespecs.md:113
+#: deps/elixir/lib/elixir/pages/Typespecs.md:115
 msgid "A type defined with `@typep` is private. An opaque type, defined with `@opaque` is a type where the internal structure of the type will not be visible, but the type is still public."
 msgstr ""
 
-#: deps/elixir/lib/elixir/pages/Typespecs.md:115
+#: deps/elixir/lib/elixir/pages/Typespecs.md:117
 msgid "Types can be parameterized by defining variables as parameters, these variables can then be used to define the type."
 msgstr ""
 
-#: deps/elixir/lib/elixir/pages/Typespecs.md:119
+#: deps/elixir/lib/elixir/pages/Typespecs.md:121
 msgid "## Defining a specification"
 msgstr ""
 
-#: deps/elixir/lib/elixir/pages/Typespecs.md:125
+#: deps/elixir/lib/elixir/pages/Typespecs.md:127
 msgid "Callbacks are used to define the callbacks functions of behaviours (see `Behaviour`)."
 msgstr ""
 
-#: deps/elixir/lib/elixir/pages/Typespecs.md:127
+#: deps/elixir/lib/elixir/pages/Typespecs.md:129
 msgid "Guards can be used to restrict type variables given as arguments to the function."
 msgstr ""
 
-#: deps/elixir/lib/elixir/pages/Typespecs.md:131
+#: deps/elixir/lib/elixir/pages/Typespecs.md:133
 msgid "Type variables with no restriction can also be defined."
 msgstr ""
 
-#: deps/elixir/lib/elixir/pages/Typespecs.md:135
+#: deps/elixir/lib/elixir/pages/Typespecs.md:137
 msgid "Specifications can be overloaded just like ordinary functions."
 msgstr ""
 
-#: deps/elixir/lib/elixir/pages/Typespecs.md:140
+#: deps/elixir/lib/elixir/pages/Typespecs.md:142
 msgid "## Notes"
 msgstr ""
 
-#: deps/elixir/lib/elixir/pages/Typespecs.md:142
+#: deps/elixir/lib/elixir/pages/Typespecs.md:144
 msgid "Elixir discourages the use of type `string` as it might be confused with binaries which are referred to as \"strings\" in Elixir (as opposed to character lists). In order to use the type that is called `string` in Erlang, one has to use the `char_list` type which is a synonym for `string`. If you use `string`, you'll get a warning from the compiler."
 msgstr ""
 
-#: deps/elixir/lib/elixir/pages/Typespecs.md:144
+#: deps/elixir/lib/elixir/pages/Typespecs.md:146
+msgid "If you want to refer to the \"string\" type (the one operated on by functions in the `String` module), use `String.t` type instead."
+msgstr ""
+
+#: deps/elixir/lib/elixir/pages/Typespecs.md:148
 msgid ""
-"If you want to refer to the \"string\" type (the one operated on by functions in the `String` module), use `String.t` type instead.\n"
+"In map and struct type declarations such as `%{key: value}` or `%Struct{key: value}`, the key-value pair type information is not used by the current version of dialyzer.\n"
 ""
 msgstr ""
 
