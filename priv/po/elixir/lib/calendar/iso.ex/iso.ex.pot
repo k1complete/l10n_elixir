@@ -1,0 +1,11 @@
+#. TRANSLATORS: Elixir.Calendar.ISO Summary
+#: lib/calendar/iso.ex:2 
+msgid ""
+"A calendar implentation that follows to ISO8601.\n"
+"\n"
+"This calendar implements the proleptic Gregorian calendar and\n"
+"is therefore compatible with the calendar used in most countries\n"
+"today. The proleptic means the Gregorian rules for leap years are\n"
+"applied for all time, consequently the dates give different results\n"
+"before the year 1583 from when the Gregorian calendar was adopted.\n"
+msgstr ""

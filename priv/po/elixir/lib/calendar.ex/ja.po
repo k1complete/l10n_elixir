@@ -1,0 +1,123 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: l 10n_elixir\n"
+"PO-Revision-Date: 2016-04-02 10:57+0900\n"
+"Last-Translator: 小田 照敬 <EMAIL@ADDRESS>\n"
+"Language-Team: Japanese\n"
+"Language: ja\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#. TRANSLATORS: Elixir.Calendar Summary
+#: lib/calendar.ex:2
+msgid ""
+"This module defines the responsibilities for working with\n"
+"calendars, dates, times and datetimes in Elixir.\n"
+"\n"
+"Currently it defines types but may define the calendar\n"
+"behaviour in future versions. For the actual date, time\n"
+"and datetime structures, see `Date`, `Time`, `NaiveDateTime`\n"
+"and `DateTime`.\n"
+"\n"
+"Note the year, month, day, etc designations are over specified\n"
+"(i.e. an integer instead of 1..12 for months) because different\n"
+"calendars may have a different number of numbers and so on.\n"
+msgstr ""
+"このモジュールはElixirでのカレンダ、日付、時刻、日時について\n"
+"動作する責任を定義します。\n"
+"\n"
+"現在、タイプを定義するが、将来のバージョンでは\n"
+"カレンダのビヘイビアを定義するかもしれません。\n"
+"実際の日付、時刻、日時の構造体は、`Date`、`Time`、\n"
+"`NaiveDateTime`と`DateTime`です。\n"
+"\n"
+"\n"
+"異るカレンダは年月日の数が異ったり、その他もろもろ違いが\n"
+"あるので、年、月、日などは特定の呼称(すなわち、月における\n"
+"1..12の数値の代わり)があるかもしれないことに注意してくだ\n"
+"さい\n"
+
+#. TRANSLATORS: @type time_zone
+#: lib/calendar.ex:27
+msgid "The timezone ID according to Unicode's CLDR"
+msgstr "UnicodeのCLDRによるタイムゾーンID"
+
+#. TRANSLATORS: @type utc_offset
+#: lib/calendar.ex:33
+msgid "The timezone UTC offset in seconds"
+msgstr "タイムゾーンの秒でのUTCからのオフセット"
+
+#. TRANSLATORS: Elixir.NaiveDateTime Summary
+#: lib/calendar.ex:79
+msgid ""
+"A naive datetime implementation (without a time zone).\n"
+"\n"
+"The naive bit implies this datetime representation does\n"
+"not have a timezone. This means the datetime may not\n"
+"actually exist in certain areas in the world even though\n"
+"it is valid.\n"
+"\n"
+"For example, when daylight saving changes are applied\n"
+"by a region, the clock typically moves forward or backward\n"
+"by one hour. This means certain datetimes never occur or\n"
+"may occur more than once. Since `NaiveDateTime` is not\n"
+"validated against a timezone, such errors would go unnoticed.\n"
+msgstr ""
+"ナイーヴなdatetime実装(タイムゾーンなし)です。\n"
+"\n"
+"ナイーヴというのはこのdatetime実装がタイムゾーン表現\n"
+"を持たないことを意味します。たとえそれが有効であると\n"
+"してもdatetimeが実世界の特定の地域の中に存在しないか\n"
+"もしれないことを意味します。\n"
+"\n"
+"例えば、夏時間が地域によって適用される時、時刻は一般\n"
+"的には一時間前か後ろに動きます。これは、特定の日時が\n"
+"決して起こらないか、一度ならず起こる場合があることを\n"
+"意味します。`NaiveDateTime`はタイムゾーンに対して確認\n"
+"しないので、そのようなエラーは気づかれずに行きます。\n"
+
+#. TRANSLATORS: @type zone_abbr
+#: lib/calendar.ex:30
+msgid "The timezone abbreviation"
+msgstr "タイムゾーンの略称"
+
+#. TRANSLATORS: Elixir.DateTime Summary
+#: lib/calendar.ex:100
+msgid ""
+"A datetime implementation with a time zone.\n"
+"\n"
+"This datetime can be seen as a ephemeral snapshot\n"
+"of a datetime at a given timezone. For such purposes,\n"
+"it also includes both UTC and Standard offsets, as\n"
+"well as the zone abbreviation field used exclusively\n"
+"for formatting purposes.\n"
+msgstr ""
+"タイムゾーン付のdatetime実装です。\n"
+"\n"
+"このdatetimeは特定のタイムゾーンの日時の束の間の\n"
+"スナップショットとして見做されます。そのような目\n"
+"的のために、UTCと書式化目的のためだけに使われる\n"
+"ゾーンの略称としての標準のオフセットの両方を含み\n"
+"ます。\n"
+
+#. TRANSLATORS: @type calendar
+#: lib/calendar.ex:24
+msgid "A calendar implementation"
+msgstr "カレンダ実装"
+
+#. TRANSLATORS: Elixir.Time Summary
+#: lib/calendar.ex:70
+msgid "A time implementation.\n"
+msgstr "時刻実装です。\n"
+
+#. TRANSLATORS: @type std_offset
+#: lib/calendar.ex:36
+msgid "The timezone standard offset in seconds (not zero in summer times)"
+msgstr "タイムゾーンの秒での標準オフセット(夏時間ではゼロでない)"
+
+#. TRANSLATORS: Elixir.Date Summary
+#: lib/calendar.ex:61
+msgid "A date implementation.\n"
+msgstr "日付実装です。\n"

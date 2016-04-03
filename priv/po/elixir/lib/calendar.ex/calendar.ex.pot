@@ -1,0 +1,77 @@
+#. TRANSLATORS: Elixir.Calendar Summary
+#: lib/calendar.ex:2 
+msgid ""
+"This module defines the responsibilities for working with\n"
+"calendars, dates, times and datetimes in Elixir.\n"
+"\n"
+"Currently it defines types but may define the calendar\n"
+"behaviour in future versions. For the actual date, time\n"
+"and datetime structures, see `Date`, `Time`, `NaiveDateTime`\n"
+"and `DateTime`.\n"
+"\n"
+"Note the year, month, day, etc designations are over specified\n"
+"(i.e. an integer instead of 1..12 for months) because different\n"
+"calendars may have a different number of numbers and so on.\n"
+msgstr ""
+#. TRANSLATORS: @type time_zone
+#: lib/calendar.ex:27 
+msgid ""
+"The timezone ID according to Unicode's CLDR"
+msgstr ""
+#. TRANSLATORS: @type utc_offset
+#: lib/calendar.ex:33 
+msgid ""
+"The timezone UTC offset in seconds"
+msgstr ""
+#. TRANSLATORS: Elixir.NaiveDateTime Summary
+#: lib/calendar.ex:79 
+msgid ""
+"A naive datetime implementation (without a time zone).\n"
+"\n"
+"The naive bit implies this datetime representation does\n"
+"not have a timezone. This means the datetime may not\n"
+"actually exist in certain areas in the world even though\n"
+"it is valid.\n"
+"\n"
+"For example, when daylight saving changes are applied\n"
+"by a region, the clock typically moves forward or backward\n"
+"by one hour. This means certain datetimes never occur or\n"
+"may occur more than once. Since `NaiveDateTime` is not\n"
+"validated against a timezone, such errors would go unnoticed.\n"
+msgstr ""
+#. TRANSLATORS: @type zone_abbr
+#: lib/calendar.ex:30 
+msgid ""
+"The timezone abbreviation"
+msgstr ""
+#. TRANSLATORS: Elixir.DateTime Summary
+#: lib/calendar.ex:100 
+msgid ""
+"A datetime implementation with a time zone.\n"
+"\n"
+"This datetime can be seen as a ephemeral snapshot\n"
+"of a datetime at a given timezone. For such purposes,\n"
+"it also includes both UTC and Standard offsets, as\n"
+"well as the zone abbreviation field used exclusively\n"
+"for formatting purposes.\n"
+msgstr ""
+#. TRANSLATORS: @type calendar
+#: lib/calendar.ex:24 
+msgid ""
+"A calendar implementation"
+msgstr ""
+#. TRANSLATORS: Elixir.Time Summary
+#: lib/calendar.ex:70 
+msgid ""
+"A time implementation.\n"
+msgstr ""
+#. TRANSLATORS: @type std_offset
+#: lib/calendar.ex:36 
+msgid ""
+"The timezone standard offset in seconds (not zero in summer times)"
+msgstr ""
+#. TRANSLATORS: Elixir.Date Summary
+#: lib/calendar.ex:61 
+msgid ""
+"A date implementation.\n"
+msgstr ""
